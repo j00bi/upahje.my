@@ -8,7 +8,7 @@ This project uses a multi-agent development workflow for maximum speed and quali
 |---------|--------------------------------------|-------------------------------------------|----------------------------------|
 | Hermes  | Orchestration, architecture, reviews | Project lead, task assignment, final decisions | Scoring & selection              |
 | Codex   | Heavy implementation, complex logic  | Backend, matching, payments, core flows   | Generate 3–5 implementation variants |
-| Grok    | Fast UI/UX iteration, creative code  | Onboarding, talent cards, mobile-first, dashboards | **Main Best-of-N generator**     |
+| Grok    | Head of Product for UpahJe.Ai + Creative/UI Lead + Best-of-N Owner | Product direction & execution for UpahJe.Ai, UI/UX, Best-of-N generator, POC experiments, directing sub-agent swarm for the AI side | **Main Best-of-N generator** (also acts as de-facto PM for UpahJe.Ai when Hermes is occupied with the main marketplace) |
 | Pi      | Research & light tasks               | Competitor analysis, legal, content       | Not used                         |
 
 ## Best-of-N Pattern (Standard Practice)
@@ -61,3 +61,9 @@ Then commit the update in `/home/husni/memory-wiki`.
 - Trust & safety before scale (MyKad, reviews, escrow)
 - PWA first, native apps only after PMF
 - Use Best-of-N aggressively on UI and user-facing flows
+
+## Current Operating Mode (2026-05-17)
+
+- **Codex** is the Tech Lead (backend, infrastructure, auth, payments, Prisma).
+- **Grok** is acting as **Head of Product for UpahJe.Ai + Creative/UI Lead + Best-of-N Owner**, and is running the UpahJe.Ai POC experiments (including the first real single-task workflow mapping with the Product Demo Video) while Hermes is deep in the main UpahJe.my marketplace.
+- Sub-agent swarm is active to support coordination, tracking, and workflow execution.
