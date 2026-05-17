@@ -10,6 +10,8 @@ interface TalentCardProps {
   categories: string[]
   score?: number
   verified?: boolean
+  averageRating?: number | null
+  reviewCount?: number
   onContact?: () => void
   onViewProfile?: () => void
 }
@@ -23,6 +25,8 @@ export function TalentCard({
   categories,
   score,
   verified,
+  averageRating,
+  reviewCount,
   onContact,
   onViewProfile,
 }: TalentCardProps) {
@@ -64,6 +68,18 @@ export function TalentCard({
           <div className="font-medium">{availability}</div>
         </div>
       </div>
+
+      {averageRating !== undefined && (
+        <div className="mb-4 flex items-center gap-2">
+          <div className="flex text-amber-500">
+            {'★'.repeat(Math.round(averageRating || 0))}
+            {'☆'.repeat(5 - Math.round(averageRating || 0))}
+          </div>
+          <span className="text-sm text-gray-600">
+            {averageRating?.toFixed(1)} ({reviewCount || 0} reviews)
+          </span>
+        </div>
+      )}
 
       <div className="flex gap-2">
         {onViewProfile ? (
