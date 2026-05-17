@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { TECHNICAL_CATEGORIES, LABOUR_CATEGORIES } from '@/lib/domain'
+import { CategoryPicker } from '../shared'
+import { LABOUR_CATEGORIES, TECHNICAL_CATEGORIES } from '@/lib/domain'
 import type { EmployerOnboardingData } from '../shared'
 
 interface EmployerOnboardingSimpleProps {
@@ -54,28 +55,17 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
         <div>
           <h3 className="font-semibold text-xl mb-2">What kind of work do you usually need?</h3>
           <p className="text-sm text-gray-600 mb-4">Select all that apply. We will show you the right talent pool.</p>
-          <div className="space-y-6">
-            <div>
-              <div className="text-sm font-medium mb-2 text-gray-500">Labour / Physical work</div>
-              <div className="grid grid-cols-2 gap-2">
-                {LABOUR_CATEGORIES.map(c => (
-                  <button key={c.id} onClick={() => toggleCategory(c.id, 'LABOUR')} className={`p-3 border rounded-2xl text-sm flex gap-2 ${data.labourCategories?.includes(c.id) ? 'bg-blue-600 text-white' : ''}`}>
-                    {c.emoji} {c.name}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div>
-              <div className="text-sm font-medium mb-2 text-gray-500">Technical / Digital work</div>
-              <div className="grid grid-cols-2 gap-2">
-                {TECHNICAL_CATEGORIES.map(c => (
-                  <button key={c.id} onClick={() => toggleCategory(c.id, 'TECHNICAL')} className={`p-3 border rounded-2xl text-sm flex gap-2 ${data.techCategories?.includes(c.id) ? 'bg-blue-600 text-white' : ''}`}>
-                    {c.emoji} {c.name}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
+          <CategoryPicker
+            track="BOTH"
+            selected={[...(data.labourCategories || []), ...(data.techCategories || [])]}
+            onChange={(sel) => {
+              const labourIds = sel.filter(id => LABOUR_CATEGORIES.some(c => c.id === id))
+              const techIds = sel.filter(id => TECHNICAL_CATEGORIES.some(c => c.id === id))
+              update('labourCategories', labourIds)
+              update('techCategories', techIds)
+            }}
+            max={8}
+          />
         </div>
       )}
 

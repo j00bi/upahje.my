@@ -1,147 +1,150 @@
 # UpahJe.my Project Status
 
-**Last Updated:** 2026-05-17 13:14 MYT
-**Tracker:** Hermes (dedicated progress monitor)
-**Project Phase:** Phase 0 - Foundation (Week 0)
+**Last Updated:** 2026-05-17 (Milestone Tracker full sweep)
+**Tracker:** Milestone Tracker (sub-agent of Hermes) — monitoring TASKS.md / KANBAN.md / STATUS.md / WORKING.md + code reality + git
+**Project Phase:** Phase 1 Complete → Phase 2 In Progress (Best-of-N Onboarding delivered; Marketplace foundations live)
 
 ## Current Status
 
 ### Project Overview
-- **Name:** UpahJe.my (Malaysian dual-track freelance marketplace)
+- **Name:** UpahJe.my (Malaysian dual-track freelance marketplace — Labour + Technical talent tracks)
 - **Location:** /home/husni/projects/upahje-my
-- **Status:** Just kicked off - initialization in progress
-- **Next Action:** Complete Phase 0 foundation setup
+- **Status:** Rapid progress via Best-of-N + multi-agent (Grok UI lead, Codex backend). Phase 0 foundation advanced in code; **Phase 1 Onboarding (all Best-of-N) ACHIEVED**; Phase 2 Core Marketplace started (public profiles + job board live in demo).
+- **Next Action:** Hermes winner selection for onboarding variants; complete Phase 0 wiring (real auth/DB); continue Phase 2 data integration + messaging.
+- **Key Wins:** 10+ distinct onboarding variants (4 Labour + 3 Technical + 3 Employer) all live with switchable previews in OnboardingFlow. Shared components adopted. Real /talent/[slug] + /jobs pages.
 
 ### Active Agents
-| Agent | Role | Status | Current Task |
-|-------|------|--------|--------------|
-| Hermes | Orchestrator | Active | Project lead, task assignment, final decisions |
-| Codex | Implementation | Active | Backend, matching, payments, core flows |
-| Grok | UI/UX + Best-of-N | Active | Onboarding, talent cards, mobile-first, dashboards |
-| Pi | Research | Idle | Competitor analysis, legal, content (not yet assigned) |
+| Agent | Role | Status | Current Focus |
+|-------|------|--------|---------------|
+| Hermes | Orchestrator | Active | Milestone decisions, winner selection, priorities |
+| Codex | Implementation (backend) | Active | Auth/Prisma/Supabase wiring, matching, job flows, dirty work in progress |
+| Grok | UI/UX + Best-of-N generator | Active (long-running) | Onboarding variants + shared adoption (Task 1.4 done), talent profiles, dashboards |
+| Milestone Tracker | Milestone monitoring + doc sync | Active | Full sweeps vs plan, STATUS/KANBAN updates, agent-truth on shifts |
+| Grok Nudger (Accountability Pusher) | Focus enforcement + nudges | Active | UI lane discipline, doc freshness, proactive pushes |
 
-### Phase 0: Foundation (This Week) - IN PROGRESS
-**Owner:** Hermes (coordination) + Codex (implementation)
+### Phase 0: Foundation — IN PROGRESS (Advanced, ~70%)
+**Owner:** Hermes + Codex (primary impl) + Grok (shells)
 
-#### Tasks Status:
-- [ ] Initialize full Next.js 14 + TypeScript + Tailwind + shadcn/ui + Prisma + Supabase
-  - ✅ Next.js 14 initialized (package.json shows next@16.2.6)
-  - ✅ TypeScript configured
-  - ✅ Tailwind CSS configured
-  - ❌ shadcn/ui NOT installed
-  - ❌ Prisma NOT installed
-  - ❌ Supabase NOT configured
-- [ ] Set up Supabase project, auth, and first schema migrations
-  - ❌ NOT started
-- [ ] Create `lib/supabase` and `prisma/schema.prisma` with core models
-  - ❌ NOT started
-- [ ] Configure NextAuth.js with Google + Email
-  - ❌ NOT started
-- [ ] Set up folder structure and shared types
-  - ❌ NOT started
+#### Reality vs Plan (TASKS.md)
+- ✅ Initialize full Next.js 16 + TypeScript + Tailwind v4 + (glass/rounded UI patterns; shadcn/ui NOT installed)
+- ✅ lib/supabase.ts + @supabase/supabase-js client
+- ✅ prisma/schema.prisma with core models: User, Account, Session, Profile, Talent (with Track + categories join), Employer, Job, Review, Category + enums
+- ✅ lib/prisma.ts singleton
+- ✅ lib/auth.ts + NextAuth v5 (Google + Email providers, graceful if no creds; JWT sessions)
+- ✅ app/auth/signin, middleware (matcher for /dashboard but currently passthrough — needs enforcement)
+- ✅ (app) protected layout with dashboard shells (employer dashboard, job board links)
+- ✅ Basic folder structure, lib/domain.ts (local types mirroring Prisma where needed)
+- ❌ Real Supabase project + envs + migrations not connected (uses .env.example only)
+- ❌ Full sign-up → profile creation flow wired to Prisma/Supabase (demo alerts only)
+- ❌ shadcn/ui components (using custom Tailwind + glassmorphism)
 
-**Verification:** Can sign up and see a protected dashboard.
-**Current Blocker:** Need to install dependencies and configure Supabase/Prisma
+**Verification:** "Can sign up and see a protected dashboard" — **Partial**. Dashboard shells + SignOut + links exist; auth providers configured but not enforced in middleware; no live DB. Demoable in dev with warnings.
 
-### Phase 1: Onboarding System (Best-of-N Priority) - NOT STARTED
-**Owner:** Grok (primary) + Codex (integration support)
+**Current Blockers:** Environment secrets, `prisma migrate` + seed, full auth callback wiring to create Profile/Talent/Employer, build stability (some bus errors noted in history).
+**Git note:** Some auth/middleware tweaks in working tree (unrelated to UI).
 
-#### Task 1.1 — Labour Onboarding Flow (Best-of-N)
-- **Status:** NOT STARTED
-- **Best-of-N:** 4 versions required (A: Stepper, B: Card-based, C: Chat-style, D: Hybrid)
-- **Requirements:** MyKad upload, location, categories, rate, availability, bio
-- **Deliverable:** 4 separate components in `/components/onboarding/labour/`
+### Phase 1: Onboarding System (Best-of-N Priority) — ✅ ACHIEVED
+**Owner:** Grok (primary) + Codex (types/lint support) + Hermes (selection pending)
 
-### Phase 2: Core Marketplace - NOT STARTED
-### Phase 3: Trust & Payments - NOT STARTED
+#### Task 1.1 — Labour Onboarding Flow (Best-of-N: 4 versions) — COMPLETE
+- All 4 live and selectable in `/onboarding` via OnboardingFlow.tsx preview grid:
+  - **A: LabourOnboardingStepper** — Classic 7-step wizard
+  - **B: LabourOnboardingCards** — Progressive visual cards
+  - **C: LabourOnboardingChat** — Conversational (fake messages)
+  - **D: LabourOnboardingHybrid** — Quick-start + later deep
+- All collect: name/phone, MyKadUpload, location, multi-select LABOUR_CATEGORIES (10), rate/availability, bio + trust/safety microcopy. Mobile-first.
+- **Recent:** Adoption of shared CategoryPicker complete (see Task 1.4)
 
-## Files Created/Modified
+#### Task 1.2 — Technical Talent Onboarding (Best-of-N: 3 versions) — COMPLETE
+- All 3 live in preview:
+  - **A: TechnicalOnboardingStepper**
+  - **B: TechnicalOnboardingShowcase** (accordion)
+  - **C: TechnicalOnboardingProForm** (live sidebar preview)
+- Focus: portfolio, TECHNICAL_CATEGORIES multi-select, TECHNICAL_RATE_TIERS, suggested certs, professional tone.
 
-### Key Files
-- `/home/husni/projects/upahje-my/AGENTS.md` - Agent collaboration guide
-- `/home/husni/projects/upahje-my/TASKS.md` - Initial task breakdown
-- `/home/husni/projects/upahje-my/STATUS.md` - This file (new)
+#### Task 1.3 — Employer Onboarding (Best-of-N: 3 versions) — COMPLETE
+- All 3 live:
+  - **E1: EmployerOnboardingSimple** — 3-step wizard
+  - **E2: EmployerOnboardingVisual** — Category-first visual
+  - **E3: EmployerOnboardingPostFirst** — Ultra-minimal post-job-first
+- Short flows, company + hiring needs + categories (BOTH tracks).
 
-### Project Structure
-```
-/home/husni/projects/upahje-my/
-├── app/
-│   ├── layout.tsx (default Next.js)
-│   ├── page.tsx (default Next.js)
-│   └── globals.css
-├── public/
-├── node_modules/
-├── package.json (Next.js 14 base)
-├── tsconfig.json
-├── next.config.ts
-├── tailwind.config.js (if exists)
-├── AGENTS.md
-├── TASKS.md
-└── STATUS.md (new)
-```
+#### Task 1.4 — Shared Components — ✅ COMPLETE (as of latest Grok work)
+- Created: `components/onboarding/shared/` 
+  - CategoryPicker.tsx (supports 'LABOUR' | 'TECHNICAL' | 'BOTH' — extended for Employers)
+  - RateTierSelector.tsx
+  - TalentProfilePreview.tsx (extracted + used in Phase 2)
+  - types.ts + barrel index
+- **Adoption:** 
+  - Labour variants (Stepper, Cards, Hybrid) refactored to use shared picker (dupe removal)
+  - Employer Visual + Simple refactored to shared (BOTH mode)
+  - Technical already aligned
+- RoleSelector, TrackSelector, MyKadUpload, OnboardingFlow progress stepper also shared.
+- **Status:** Duplication eliminated in visual flows. Chat variant left conversational (text-parsed categories).
 
-## Git Status
-- **Branch:** master (no commits yet)
-- **Untracked files:** 11 files (all project files)
-- **Next:** Initial commit after Phase 0 setup
+**Best-of-N Status:** All variants delivered and demoable. **Winner selection pending** (Hermes + Grok). No /variants folder yet. Live preview switcher in OnboardingFlow is excellent for evaluation.
+
+**From WORKING.md agent-truth:** Multiple "done" entries confirm full Phase 1 delivery + shared adoption (last: Grok 2026-05-17 14:48 "Task 1.4 completed").
+
+### Phase 2: Core Marketplace — IN PROGRESS (~35-45%)
+**Owner:** Grok (UI profiles + cards) + Codex (jobs + matching + recent additions)
+
+#### Shipped:
+- ✅ Public Talent Profile: `/talent/[slug]/page.tsx` — fully functional demo (2 profiles: Labour + Technical). Uses TalentProfilePreview (variant="full"), trust signals (MyKad, certs), reviews, similar talents, sticky "Hubungi Talent" CTA. Strong Phase 2 foundation.
+- ✅ Job Board: `/jobs` — filterable listing (track, category, location, search) powered by lib/mockJobs.ts + JobCard. Modern UI.
+- ✅ Job matches view: `/jobs/[jobId]/matches` (recent Codex commit)
+- ✅ Basic deterministic matching: `lib/matching.ts` (Layer 1 scorer with reasons)
+- ✅ Supporting: components/jobs/JobCard.tsx, JobPostForm.tsx; components/talent/TalentCard.tsx; lib/mockTalents.ts (untracked)
+- ✅ Onboarding data models feed naturally into profiles.
+
+#### Remaining (from TASKS):
+- [ ] In-app messaging (Supabase Realtime)
+- [ ] Full job detail page + contact flow (placeholders exist)
+- [ ] Real data (replace mocks), talent listing / discovery beyond single slug, employer job posting wired
+- [ ] Basic "Cari Upah" search + talent matching in UI
+
+**Recent git:** "feat: Add talent matching results page and mock talent data", "feat: Create basic Job Board..."
+
+### Phase 3: Trust & Payments — NOT STARTED
+- Billplz FPX + escrow, MyKad verification (beyond upload), two-way reviews (demo only), disputes.
+
+## Files / Git Reality (current sweep)
+- Clean docs (STATUS, KANBAN, TASKS) were stale — now refreshed by Milestone Tracker.
+- **Working tree dirty (preserve unrelated):** 
+  - Modified: onboarding/employer/*Simple+Visual, shared/CategoryPicker, lib/auth.ts, middleware.ts
+  - Untracked: app/jobs/[jobId]/ (matches), lib/mockTalents.ts, GROK_PUSHER_NUDGE.md (nudger artifact)
+- Last commits: matching results + job board feats + onboarding WIPs + foundation.
+- **Recommendation:** Commit UI adoption + Codex marketplace work soon; keep branches small.
 
 ## Blockers & Dependencies
+1. **Phase 0 completion** — envs + Prisma migration + real auth guard + profile creation endpoint.
+2. **Winner selection** — Hermes to pick 1 Labour + 1 Technical + 1 Employer variant; archive others.
+3. **Data layer** — Move from mocks + demo alerts to Supabase/Prisma writes.
+4. Build/runtime stability in current env.
 
-### Immediate Blockers
-1. **Supabase Configuration** - Need to create Supabase project and get credentials
-2. **Prisma Setup** - Need to install and configure Prisma with Supabase
-3. **shadcn/ui Installation** - Need to initialize shadcn/ui components
-4. **Auth Setup** - Need to configure NextAuth.js with providers
+## Best-of-N & UI Tracking
+- Labour: 4 variants (A/B/C/D) — all high quality, mobile-first, trust-focused. Selection needed.
+- Technical: 3 (A/B/C) — pro tone, portfolio emphasis.
+- Employer: 3 (E1/E2/E3) — short & efficient.
+- Shared foundation solid for future reuse (talent cards, dashboards).
 
-### Dependencies
-- Supabase account/project
-- Prisma CLI
-- shadcn/ui CLI
-- NextAuth.js configuration
+## Next Actions (Milestone Tracker Recommendation)
+**Immediate:**
+1. Hermes: Review live OnboardingFlow previews + pick winners for Phase 1 lock-in.
+2. Codex: Finish Phase 0 (auth enforcement, DB connect, seed data).
+3. Grok: Continue Phase 2 (TalentCard improvements, job detail shell, public discovery).
 
-## Best-of-N Tracking
+**Short-term:**
+- Update TASKS.md with completion dates.
+- Wire first real profile creation from a winning onboarding variant.
+- Add Realtime messaging stub for Phase 2.
 
-### Task 1.1 (Labour Onboarding) - Planned
-- **Version A:** Stepper (traditional wizard, 6-7 steps)
-- **Version B:** Card-based progressive disclosure
-- **Version C:** Chat-style conversational onboarding
-- **Version D:** Hybrid (quick start + deep profile later)
+## Agent Truth Updates (this sweep)
+- Milestone Tracker performed full code+docs+git+WORKING.md sweep.
+- Detected: Phase 1 **achieved** (docs claimed NOT STARTED); Phase 2 **in progress** (profiles + jobs live); Phase 0 advanced.
+- Action: Refreshed STATUS.md + KANBAN.md to reality; logged via agent-truth.
 
-**Selection Criteria:** Mobile-first, clear progress, trust/safety micro-copy
-
-## Next Actions
-
-### Immediate (Today)
-1. Install dependencies: `npm install @prisma/client prisma @supabase/supabase-js next-auth`
-2. Initialize shadcn/ui: `npx shadcn@latest init`
-3. Create Supabase project and get credentials
-4. Configure Prisma with Supabase connection
-5. Set up basic folder structure
-
-### Short-term (This Week)
-1. Complete Phase 0 foundation
-2. Begin Task 1.1 Best-of-N generation (Grok)
-3. Set up agent-truth updates after each task
-
-## Agent Truth Updates
-
-### Recent Updates
-- **2026-05-17 13:14** - Hermes: Started dedicated tracking for UpahJe.my project
-  - Status: Project kickoff complete, Phase 0 in progress
-  - Path: /home/husni/projects/upahje-my
-  - Next: Complete foundation setup
-
-### Update Protocol
-After each meaningful change, run:
-```bash
-agent-truth "<AgentName>" "<status>" "<path>" "<what changed; next action>"
-```
-
-## Project Principles (from AGENTS.md)
-- Depth over breadth in early phases (KL/Selangor first)
-- Trust & safety before scale (MyKad, reviews, escrow)
-- PWA first, native apps only after PMF
-- Use Best-of-N aggressively on UI and user-facing flows
+**Project Principles upheld:** Best-of-N used heavily on onboarding; depth on KL/Selangor dual-track; trust signals early (MyKad, reviews, verification in profiles).
 
 ---
-*Tracker: Hermes | Updated: 2026-05-17 13:14 MYT*
+*Milestone Tracker | Synced to WORKING.md + project docs | 2026-05-17*

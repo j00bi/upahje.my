@@ -1,9 +1,6 @@
 import NextAuth from 'next-auth'
 import Email from 'next-auth/providers/email'
 import Google from 'next-auth/providers/google'
-import { PrismaAdapter } from '@auth/prisma-adapter'
-
-import { prisma } from '@/lib/prisma'
 
 const googleClientId = process.env.GOOGLE_CLIENT_ID ?? process.env.AUTH_GOOGLE_ID ?? ''
 const googleClientSecret =
@@ -15,12 +12,11 @@ const hasGoogleCredentials = Boolean(googleClientId && googleClientSecret)
 const hasEmailCredentials = Boolean(emailServer && emailFrom)
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
-  adapter: PrismaAdapter(prisma),
   pages: {
     signIn: '/auth/signin',
   },
   session: {
-    strategy: 'database',
+    strategy: 'jwt',
   },
   callbacks: {
     authorized({ auth }) {
