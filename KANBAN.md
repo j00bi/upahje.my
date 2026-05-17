@@ -14,9 +14,9 @@
 - [ ] Basic protected route + dashboard layout
 
 ### Phase 1 — Onboarding (Best-of-N)
-- [ ] **Grok:** Labour Onboarding — 4 versions (Best-of-N)
-- [ ] **Grok:** Technical Talent Onboarding — 3 versions
-- [ ] **Grok:** Employer Onboarding — 3 versions
+- [x] **Grok:** Labour Onboarding — 4 versions (Best-of-N) ✅ live preview
+- [ ] **Grok (sub-agent):** Technical Talent Onboarding — 3 versions (in parallel)
+- [x] **Grok:** Employer Onboarding — 3 versions (Best-of-N) ✅ live preview
 - [ ] Shared category picker + role selector components
 
 ---
@@ -28,7 +28,9 @@
 | Task | Agent | Status | Branch | Started |
 |------|-------|--------|--------|---------|
 | Phase 0 Foundation (Supabase + Prisma + Auth) | Codex | Not started | `foundation/supabase-prisma-auth` | - |
-| Labour Onboarding Best-of-N (4 versions) | Grok | Not started | `onboarding/labour-best-of-n` | - |
+| Labour Onboarding Best-of-N (4 versions) | Grok | ✅ Done (live in flow) | `onboarding/labour-best-of-n` | - |
+| Employer Onboarding Best-of-N (3 versions) | Grok | ✅ Done (live in flow) | - | - |
+| Technical Talent Onboarding Best-of-N (3 versions) | Grok (sub-agent) | In Progress (parallel) | - | - |
 
 ---
 
