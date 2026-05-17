@@ -99,16 +99,11 @@ export function LabourOnboardingCards({ onComplete, onBack }: LabourOnboardingCa
 
                   {sec.id === 'what' && (
                     <div className="pt-2">
-                      <div className="grid grid-cols-2 gap-2.5">
-                        {LABOUR_CATEGORIES.map(c => {
-                          const sel = (data.categories || []).includes(c.id)
-                          return (
-                            <button key={c.id} onClick={() => toggleCat(c.id)} className={`px-4 py-3 rounded-2xl border flex gap-2 text-sm items-center transition ${sel ? 'bg-green-600 text-white border-green-600' : 'hover:bg-gray-50'}`}>
-                              <span>{c.emoji}</span> <span className="font-medium text-left leading-none pt-0.5">{c.name}</span>
-                            </button>
-                          )
-                        })}
-                      </div>
+                      <CategoryPicker
+                        track="LABOUR"
+                        selected={data.categories || []}
+                        onChange={(sel) => update('categories', sel as LabourCategoryId[])}
+                      />
                     </div>
                   )}
 
