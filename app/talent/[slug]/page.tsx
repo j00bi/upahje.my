@@ -1,15 +1,12 @@
 import { notFound } from 'next/navigation'
+import { TalentCard } from '@/components/talent/TalentCard'
 import { TalentProfilePreview } from '@/components/onboarding/shared/TalentProfilePreview'
+import { prisma } from '@/lib/prisma'
+import { getReviewsForUser, getAverageRating } from '@/lib/reviews'
 
 type DemoCategory = {
   emoji: string
   name: string
-}
-
-type DemoReview = {
-  rating: number
-  comment: string
-  from: string
 }
 
 type DemoProfile = {
@@ -24,7 +21,8 @@ type DemoProfile = {
   myKadVerified?: boolean
   portfolio?: string[]
   certs?: string[]
-  reviews?: DemoReview[]
+  userId?: string
+  reviews?: { rating: number; comment: string; from: string }[]
 }
 
 type DemoProfiles = Record<string, DemoProfile>
@@ -47,10 +45,7 @@ const DEMO_PROFILES: DemoProfiles = {
     myKadVerified: true,
     portfolio: [],
     certs: ['Bomba Safety Certified'],
-    reviews: [
-      { rating: 5, comment: 'Very reliable and thorough. Will hire again.', from: 'Mrs. Tan, Bangsar' },
-      { rating: 4, comment: 'Good work, came exactly on time.', from: 'Encik Rahman' },
-    ],
+    userId: 'user-1',
   },
   'siti-nur': {
     name: 'Siti Nur Aisyah',
@@ -66,17 +61,30 @@ const DEMO_PROFILES: DemoProfiles = {
     verified: true,
     portfolio: ['https://github.com/sitinur', 'https://sitinur.design'],
     certs: ['Figma Certified', 'Google Analytics', 'AWS Certified'],
-    reviews: [
-      { rating: 5, comment: 'Delivered our new marketing site in 3 weeks. Beautiful work.', from: 'Founder, KopiCo' },
-    ],
+    userId: 'user-2',
   },
 }
 
-export default function TalentProfilePage({ params }: { params: { slug: string } }) {
+export default async function TalentProfilePage({ params }: { params: { slug: string } }) {
   const profile = DEMO_PROFILES[params.slug]
 
   if (!profile) {
     notFound()
+  }
+
+  // Fetch real reviews from database if userId is available
+  let reviews: { rating: number; comment?: string; fromUser: { name?: string } }[] = []
+  let averageRating: number | null = null
+
+  if (profile.userId) {
+    try {
+      reviews = await getReviewsForUser(profile.userId)
+      averageRating = await getAverageRating(profile.userId)
+    } catch (error) {
+      console.error('Error fetching reviews:', error)
+      // Fall back to demo data if database fetch fails
+      reviews = []
+    }
   }
 
   const isLabour = profile.track === 'LABOUR'
@@ -124,7 +132,7 @@ export default function TalentProfilePage({ params }: { params: { slug: string }
                 </div>
               </div>
             )}
-            {profile.certs?.length > 0 && (
+            {profile.certs && profile.certs.length > 0 && (
               <div>
                 <div className="font-medium mb-1">Professional Credentials</div>
                 <div className="flex flex-wrap gap-1">
@@ -138,23 +146,81 @@ export default function TalentProfilePage({ params }: { params: { slug: string }
         </div>
 
         {/* Reviews */}
-        {profile.reviews?.length > 0 && (
+        {reviews.length > 0 && (
           <div className="bg-white border rounded-3xl p-6 mb-8">
-            <h3 className="font-semibold mb-4">Reviews from clients</h3>
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="font-semibold">Reviews from clients</h3>
+              {averageRating !== null && (
+                <div className="flex items-center gap-2">
+                  <div className="flex text-amber-500">
+                    {'★'.repeat(Math.round(averageRating))}
+                    {'☆'.repeat(5 - Math.round(averageRating))}
+                  </div>
+                  <span className="text-sm text-gray-600">
+                    {averageRating.toFixed(1)} ({reviews.length} reviews)
+                  </span>
+                </div>
+              )}
+            </div>
             <div className="space-y-5">
-              {profile.reviews.map((r, i) => (
+              {reviews.map((r, i) => (
                 <div key={i} className="border-l-2 pl-4 border-gray-200">
                   <div className="flex text-amber-500 mb-1">
                     {'★'.repeat(r.rating)}
                   </div>
-                  <div className="text-gray-700">{r.comment}</div>
-                  <div className="text-xs text-gray-500 mt-1">— {r.from}</div>
+                  {r.comment && (
+                    <div className="text-gray-700">{r.comment}</div>
+                  )}
+                  <div className="text-xs text-gray-500 mt-1">
+                    — {r.fromUser?.name || 'Anonymous'}
+                  </div>
                 </div>
               ))}
             </div>
             <div className="text-xs text-gray-500 mt-4">All reviews are from verified completed jobs on UpahJe.</div>
           </div>
         )}
+
+        {/* Similar Talents - using improved TalentCard (Track A) */}
+        <div className="mb-8">
+          <div className="flex items-center justify-between mb-3 px-1">
+            <h3 className="font-semibold">Similar talents nearby</h3>
+            <button className="text-xs text-blue-600 hover:underline">See all →</button>
+          </div>
+          <div className="grid md:grid-cols-3 gap-4">
+            <TalentCard
+              name="Rina binti Hassan"
+              track="LABOUR"
+              location="Subang Jaya"
+              rate="RM 40–55 / job"
+              availability="Flexible"
+              categories={["Rumah & Taman", "Cucian & Dobi"]}
+              verified
+              reviewCount={18}
+              averageRating={4.5}
+            />
+            <TalentCard
+              name="Kumar a/l Raj"
+              track="LABOUR"
+              location="Cheras"
+              rate="RM 45–60 / job"
+              availability="Weekdays"
+              categories={["Baik Pulih Kenderaan", "Elektrik & Plumbing"]}
+              reviewCount={7}
+              averageRating={4.2}
+            />
+            <TalentCard
+              name="Siti Aminah"
+              track="LABOUR"
+              location="Ampang"
+              rate="RM 35–50 / job"
+              availability="Weekends"
+              categories={["Masakan & Katering", "Jagaan & Teman"]}
+              reviewCount={23}
+              averageRating={4.8}
+            />
+          </div>
+        </div>
 
         {/* CTA */}
         <div className="sticky bottom-4 bg-white border rounded-3xl p-5 shadow flex items-center justify-between gap-4">
