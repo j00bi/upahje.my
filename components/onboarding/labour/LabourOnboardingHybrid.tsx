@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { type LabourCategoryId } from '@/lib/domain'
 import { MyKadUpload } from '../MyKadUpload'
 import { Zap, Clock, ArrowRight } from 'lucide-react'
 import type { LabourOnboardingData } from '../shared'

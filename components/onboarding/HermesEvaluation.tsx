@@ -13,11 +13,7 @@
  * - Summary table at the bottom
  */
 
-interface HermesEvaluationProps {
-  onWinnersSelected?: (winners: { labour: string; technical: string; employer: string }) => void
-}
-
-export function HermesEvaluation({ onWinnersSelected }: HermesEvaluationProps) {
+export function HermesEvaluation() {
   return (
     <div className="border border-amber-200 bg-amber-50/50 rounded-3xl p-6">
       <div className="flex items-center gap-2 mb-4">

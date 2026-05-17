@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 import { TalentCard } from '@/components/talent/TalentCard'
 import { TalentProfilePreview } from '@/components/onboarding/shared/TalentProfilePreview'
-import { prisma } from '@/lib/prisma'
 import { getReviewsForUser, getAverageRating } from '@/lib/reviews'
 
 type DemoCategory = {
