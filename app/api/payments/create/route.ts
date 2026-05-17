@@ -1,8 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { createBillplzBill, getBillplzCollectionId } from '@/lib/payments'
 
 export async function POST(request: NextRequest) {
   try {
+    const { createBillplzBill, getBillplzCollectionId } = await import('@/lib/payments')
+
     const body = await request.json()
     const { jobId, amount, customerName, customerEmail } = body
 

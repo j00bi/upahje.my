@@ -1,7 +1,6 @@
 import { notFound } from 'next/navigation'
 import { TalentCard } from '@/components/talent/TalentCard'
 import { TalentProfilePreview } from '@/components/onboarding/shared/TalentProfilePreview'
-import { getReviewsForUser, getAverageRating } from '@/lib/reviews'
 
 type DemoCategory = {
   emoji: string
@@ -72,20 +71,10 @@ export default async function TalentProfilePage({ params }: { params: Promise<{ 
     notFound()
   }
 
-  // Fetch real reviews from database if userId is available
-  let reviews: { rating: number; comment?: string | null; fromUser: { name?: string | null } }[] = []
-  let averageRating: number | null = null
-
-  if (profile.userId) {
-    try {
-      reviews = await getReviewsForUser(profile.userId)
-      averageRating = await getAverageRating(profile.userId)
-    } catch (error) {
-      console.error('Error fetching reviews:', error)
-      // Fall back to demo data if database fetch fails
-      reviews = []
-    }
-  }
+  // Demo-only page shell: keep review data static so build-time page collection
+  // does not touch the Prisma-backed reviews table.
+  const reviews: { rating: number; comment?: string | null; fromUser: { name?: string | null } }[] = []
+  const averageRating = null as number | null
 
   const isLabour = profile.track === 'LABOUR'
 

@@ -1,8 +1,9 @@
 import { NextResponse } from 'next/server'
-import { prisma } from '@/lib/prisma'
 
 export async function POST(request: Request) {
   try {
+    const { prisma } = await import('@/lib/prisma')
+
     // Get the raw body for signature verification
     const rawBody = await request.text()
     

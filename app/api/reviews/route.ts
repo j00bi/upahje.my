@@ -1,9 +1,12 @@
 import { NextResponse } from 'next/server'
-import { auth } from '@/lib/auth'
-import { createReview } from '@/lib/reviews'
 
 export async function POST(request: Request) {
   try {
+    const [{ auth }, { createReview }] = await Promise.all([
+      import('@/lib/auth'),
+      import('@/lib/reviews'),
+    ])
+
     const session = await auth()
     
     if (!session?.user?.id) {
