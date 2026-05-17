@@ -15,9 +15,9 @@
 
 ## 🔄 In Progress / Next
 
-- [ ] Seed sample jobs for demo purposes
-- [ ] Add real employer association when posting jobs
-- [ ] Improve JobCard to show employer info
+- [x] Seed sample jobs for demo purposes (realistic LABOUR + TECHNICAL jobs)
+- [x] Real employer association in job posting (fetchOrCreateEmployer implemented in PostJobForm)
+- [x] Improve JobCard to show employer info
 - [ ] Add apply/contact functionality
 - [ ] Set up custom domain (upahje.my)
 

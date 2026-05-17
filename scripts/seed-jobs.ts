@@ -49,14 +49,14 @@ async function seedJobs() {
     }
   ]
 
-  const { data, error } = await supabase.from('Job').insert(sampleJobs) as any
+  const { error } = await supabase.from('Job').insert(sampleJobs)
 
   if (error) {
     console.error('Error seeding jobs:', error.message)
     process.exit(1)
   }
 
-  console.log(`Successfully seeded ${data?.length || 0} sample jobs!`)
+  console.log(`Successfully seeded ${sampleJobs.length} sample jobs!`)
   console.log('You can now view them on the jobs page.')
 }
 
