@@ -32,6 +32,7 @@ export default function EmployerDashboard() {
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             <JobCard
+              id="job-1"
               title="Need grass cutter this weekend"
               category="Rumah & Taman"
               location="Ampang, KL"
@@ -40,11 +41,12 @@ export default function EmployerDashboard() {
               postedDate="2 days ago"
             />
             <JobCard
+              id="job-2"
               title="Weekly house cleaning"
               category="Cucian & Dobi"
               location="Bangsar, KL"
               budget="RM 150 / visit"
-              status="Matched"
+              status="IN_PROGRESS"
               postedDate="1 week ago"
             />
           </div>
