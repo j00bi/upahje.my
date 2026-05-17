@@ -1,9 +1,10 @@
 'use client'
 
+import { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { signIn } from 'next-auth/react'
 
-export default function SignInPage() {
+function SignInContent() {
   const searchParams = useSearchParams()
   const callbackUrl = searchParams.get('callbackUrl') ?? '/dashboard'
   const canUseGoogle = Boolean(
@@ -79,16 +80,28 @@ export default function SignInPage() {
         <div className="mt-6 text-center text-xs sm:text-sm text-gray-500">
           <p>
             By signing in, you agree to our{' '}
-            <a href="#" className="text-emerald-600 hover:text-emerald-500">
+            <a href="/terms" className="text-emerald-600 hover:text-emerald-500">
               Terms of Service
             </a>{' '}
             and{' '}
-            <a href="#" className="text-emerald-600 hover:text-emerald-500">
+            <a href="/privacy" className="text-emerald-600 hover:text-emerald-500">
               Privacy Policy
             </a>
           </p>
         </div>
       </div>
     </div>
+  )
+}
+
+export default function SignInPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
+        <div className="animate-pulse text-gray-400">Loading...</div>
+      </div>
+    }>
+      <SignInContent />
+    </Suspense>
   )
 }
