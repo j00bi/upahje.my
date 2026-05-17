@@ -9,7 +9,7 @@ export async function getJobs(limit = 20) {
       id,
       title,
       description,
-      budget,
+      rate,
       location,
       track,
       status,

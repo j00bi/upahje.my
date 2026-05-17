@@ -13,9 +13,10 @@ export default function PostJobForm() {
   const [formData, setFormData] = useState({
     title: '',
     description: '',
-    budget: '',
+    rate: '',
     location: '',
     track: 'LABOUR',
+    categoryId: 'cm1234567890', // placeholder - should come from DB in real app
   })
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -26,13 +27,17 @@ export default function PostJobForm() {
     try {
       const supabase = createClient()
 
+      // For now, we use a placeholder employerId
+      // In a real app, this would come from the logged-in user's Employer record
       const { error: insertError } = await supabase.from('Job').insert({
         title: formData.title,
         description: formData.description,
-        budget: parseInt(formData.budget),
+        rate: formData.rate,
         location: formData.location,
         track: formData.track,
+        categoryId: formData.categoryId,
         status: 'OPEN',
+        employerId: 'cm_placeholder_employer', // Will be replaced with real logic
       })
 
       if (insertError) {
@@ -85,11 +90,12 @@ export default function PostJobForm() {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div>
-          <label className="block text-sm font-medium mb-1">Budget (RM)</label>
+          <label className="block text-sm font-medium mb-1">Rate / Budget</label>
           <input
-            type="number"
-            value={formData.budget}
-            onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
+            type="text"
+            value={formData.rate}
+            onChange={(e) => setFormData({ ...formData, rate: e.target.value })}
+            placeholder="RM 80-120 or RM 150/day"
             className="w-full rounded-xl border border-slate-300 px-4 py-2.5"
             required
           />
@@ -101,7 +107,7 @@ export default function PostJobForm() {
             value={formData.location}
             onChange={(e) => setFormData({ ...formData, location: e.target.value })}
             className="w-full rounded-xl border border-slate-300 px-4 py-2.5"
-            placeholder="Kuala Lumpur"
+            placeholder="Ampang, KL"
             required
           />
         </div>
