@@ -1,6 +1,7 @@
 import { JobCard } from '@/components/jobs/JobCard'
 import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation'
+import Link from 'next/link'
 
 export default async function EmployerDashboard() {
   const session = await auth()
@@ -24,9 +25,12 @@ export default async function EmployerDashboard() {
               This shell is intentionally lightweight until auth and matching are wired in.
             </p>
           </div>
-          <button className="inline-flex h-11 items-center justify-center rounded-full bg-emerald-700 px-5 text-sm font-semibold text-white transition hover:bg-emerald-800">
+          <Link 
+            href="/jobs/post"
+            className="inline-flex h-11 items-center justify-center rounded-full bg-emerald-700 px-5 text-sm font-semibold text-white transition hover:bg-emerald-800"
+          >
             Post New Job
-          </button>
+          </Link>
         </div>
       </section>
 
