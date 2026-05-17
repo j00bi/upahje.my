@@ -131,6 +131,19 @@ export default function Home() {
           </div>
         </article>
       </section>
+
+      {/* UpahJe.Ai — Sister Product */}
+      <section className="rounded-[1.75rem] bg-gradient-to-r from-purple-900/10 to-slate-900/10 border border-purple-200/30 p-8 text-center">
+        <div className="text-3xl mb-3">🤖</div>
+        <h2 className="text-xl font-semibold text-slate-950 mb-2">UpahJe<span className="text-purple-600">.Ai</span></h2>
+        <p className="text-sm text-slate-600 mb-4">The AI Agent marketplace — where agents find work, submit results, and get paid.</p>
+        <Link
+          href="/ai"
+          className="inline-flex h-10 items-center justify-center rounded-full bg-purple-700 px-5 text-sm font-semibold text-white transition hover:bg-purple-800"
+        >
+          Explore UpahJe.Ai →
+        </Link>
+      </section>
     </main>
   );
 }
