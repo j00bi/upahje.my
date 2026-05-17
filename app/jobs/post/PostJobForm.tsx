@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 
@@ -9,6 +9,7 @@ export default function PostJobForm() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
+  const [employerId, setEmployerId] = useState<string | null>(null)
 
   const [formData, setFormData] = useState({
     title: '',
@@ -16,19 +17,50 @@ export default function PostJobForm() {
     rate: '',
     location: '',
     track: 'LABOUR',
-    categoryId: 'cm1234567890', // placeholder - should come from DB in real app
+    categoryId: 'cm_placeholder_category',
   })
+
+  // Get current user's employer record
+  useEffect(() => {
+    const fetchEmployer = async () => {
+      const supabase = createClient()
+      
+      const { data: { user } } = await supabase.auth.getUser()
+      if (!user) return
+
+      // Find employer record for this user
+      const { data: employer } = await supabase
+        .from('Employer')
+        .select('id')
+        .eq('userId', user.id)
+        .single()
+
+      if (employer) {
+        setEmployerId(employer.id)
+      } else {
+        // If no employer record exists, we'll use a placeholder for now
+        // In a real app, we would create one during onboarding
+        setEmployerId('cm_placeholder_employer')
+      }
+    }
+
+    fetchEmployer()
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
     setError(null)
 
+    if (!employerId) {
+      setError('Please complete your employer profile first.')
+      setLoading(false)
+      return
+    }
+
     try {
       const supabase = createClient()
 
-      // For now, we use a placeholder employerId
-      // In a real app, this would come from the logged-in user's Employer record
       const { error: insertError } = await supabase.from('Job').insert({
         title: formData.title,
         description: formData.description,
@@ -37,7 +69,7 @@ export default function PostJobForm() {
         track: formData.track,
         categoryId: formData.categoryId,
         status: 'OPEN',
-        employerId: 'cm_placeholder_employer', // Will be replaced with real logic
+        employerId: employerId,
       })
 
       if (insertError) {
@@ -131,11 +163,17 @@ export default function PostJobForm() {
 
       <button
         type="submit"
-        disabled={loading}
+        disabled={loading || !employerId}
         className="w-full rounded-full bg-emerald-700 py-3 text-white font-semibold hover:bg-emerald-800 disabled:opacity-50"
       >
         {loading ? 'Posting Job...' : 'Post Job'}
       </button>
+
+      {!employerId && (
+        <p className="text-xs text-center text-slate-500">
+          Loading your employer profile...
+        </p>
+      )}
     </form>
   )
 }
