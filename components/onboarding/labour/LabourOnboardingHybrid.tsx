@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import type { LabourCategoryId } from '@/lib/domain'
-import { CategoryPicker } from '../shared'
+import { type LabourCategoryId } from '@/lib/domain'
 import { MyKadUpload } from '../MyKadUpload'
+import { CategoryPicker } from '../shared'
 import { Zap, Clock, ArrowRight } from 'lucide-react'
 import type { LabourOnboardingData } from '../shared'
 
@@ -18,8 +18,6 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
 
   const update = <K extends keyof LabourOnboardingData>(k: K, v: LabourOnboardingData[K]) =>
     setData(d => ({ ...d, [k]: v }))
-
-
 
   // Quick path: only 4 fields then "go live"
   if (mode === 'quick') {
@@ -49,7 +47,14 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
           <div>
             <div className="uppercase text-[10px] tracking-[1px] text-gray-500 mb-2">4. One service you do well</div>
             <div className="flex flex-wrap gap-2">
-              {LABOUR_CATEGORIES.slice(0,6).map(c => (
+              {[
+                {id:'rumah-taman', emoji:'🏠', name:'Rumah'},
+                {id:'cucian', emoji:'👕', name:'Cucian'},
+                {id:'masakan', emoji:'🍳', name:'Masakan'},
+                {id:'kereta', emoji:'🔧', name:'Kereta'},
+                {id:'elektrik', emoji:'⚡', name:'Elektrik'},
+                {id:'foto', emoji:'📷', name:'Foto'}
+              ].map(c => (
                 <button key={c.id} onClick={() => update('categories', [c.id])} className={`text-sm px-4 py-1.5 rounded-2xl border ${data.categories?.[0]===c.id ? 'bg-green-600 text-white' : ''}`}>{c.emoji} {c.name}</button>
               ))}
             </div>
@@ -64,27 +69,23 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
           <button onClick={onBack} className="py-3.5 border rounded-2xl">Back</button>
           <button 
             onClick={() => { 
-              // promote to full mode or finish quick
-              if (data.fullName && data.phone) {
-                onComplete?.({ ...data, quickStart: true })
-              } else {
-                setMode('full')
-              }
+              if (data.fullName && data.phone) onComplete?.({ ...data, quickStart: true })
+              else setMode('full')
             }}
             disabled={!data.fullName || !data.phone}
-            className="py-3.5 bg-green-600 text-white rounded-2xl font-medium flex items-center justify-center gap-2 disabled:bg-gray-300"
+            className="py-3.5 bg-green-600 text-white font-medium rounded-2xl flex items-center justify-center gap-2 disabled:bg-gray-300"
           >
             Go live now <ArrowRight className="w-4 h-4" />
           </button>
         </div>
 
         <button onClick={() => setMode('full')} className="text-xs text-gray-500 underline mt-4 block mx-auto">Or fill the full profile now instead</button>
-        <p className="text-center text-[10px] text-gray-400 mt-3">Version D — Hybrid (quick start first, deep profile optional)</p>
+        <p className="text-center text-[10px] text-gray-400 mt-3">Version D — Hybrid (quick start + deep profile later)</p>
       </div>
     )
   }
 
-  // Full mode (same as a simplified stepper)
+  // Full mode
   return (
     <div className="max-w-xl mx-auto">
       <div className="mb-4 flex justify-between text-sm">
@@ -109,9 +110,11 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
         <div>
           <div className="font-medium mb-2 text-sm text-gray-500">Location & categories (pick 3+)</div>
           <input placeholder="Area" className="w-full border px-4 py-3 rounded-2xl mb-3" value={data.location||''} onChange={e=>update('location',e.target.value)} />
-          <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm">
-            {LABOUR_CATEGORIES.map(c => <button key={c.id} onClick={() => toggleCat(c.id)} className={`p-2 border rounded-xl ${data.categories?.includes(c.id)?'bg-green-600 text-white':''}`}>{c.emoji} {c.name.split(' ')[0]}</button>)}
-          </div>
+          <CategoryPicker
+            track="LABOUR"
+            selected={data.categories || []}
+            onChange={(sel) => update('categories', sel as LabourCategoryId[])}
+          />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

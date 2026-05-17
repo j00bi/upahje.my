@@ -11,20 +11,38 @@ const googleClientSecret =
 
 const emailServer = process.env.EMAIL_SERVER ?? process.env.AUTH_EMAIL_SERVER ?? ''
 const emailFrom = process.env.EMAIL_FROM ?? process.env.AUTH_EMAIL_FROM ?? ''
+const hasGoogleCredentials = Boolean(googleClientId && googleClientSecret)
+const hasEmailCredentials = Boolean(emailServer && emailFrom)
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   adapter: PrismaAdapter(prisma),
+  pages: {
+    signIn: '/auth/signin',
+  },
   session: {
     strategy: 'database',
   },
+  callbacks: {
+    authorized({ auth }) {
+      return !!auth
+    },
+  },
   providers: [
-    Google({
-      clientId: googleClientId,
-      clientSecret: googleClientSecret,
-    }),
-    Email({
-      server: emailServer,
-      from: emailFrom,
-    }),
+    ...(hasGoogleCredentials
+      ? [
+          Google({
+            clientId: googleClientId,
+            clientSecret: googleClientSecret,
+          }),
+        ]
+      : []),
+    ...(hasEmailCredentials
+      ? [
+          Email({
+            server: emailServer,
+            from: emailFrom,
+          }),
+        ]
+      : []),
   ],
 })

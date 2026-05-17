@@ -156,6 +156,30 @@ export default function TalentProfilePage({ params }: { params: { slug: string }
           </div>
         )}
 
+        {/* Similar talents (demo) */}
+        <div className="mb-12">
+          <h3 className="font-semibold mb-4 px-1">Similar talents in {profile.location.split(',')[0]}</h3>
+          <div className="grid md:grid-cols-2 gap-4">
+            {/* Fake similar cards for demo feel */}
+            <div className="border rounded-3xl p-4 bg-white text-sm">
+              <div className="font-medium">Rina binti Hassan</div>
+              <div className="text-gray-500 text-xs mb-2">Subang Jaya • Flexible</div>
+              <div className="text-xs bg-gray-100 inline px-2 py-0.5 rounded">🏠 Rumah & Taman</div>
+              <div className="mt-3 text-right">
+                <button className="text-xs px-3 py-1 border rounded-full">View</button>
+              </div>
+            </div>
+            <div className="border rounded-3xl p-4 bg-white text-sm">
+              <div className="font-medium">Kumar a/l Raj</div>
+              <div className="text-gray-500 text-xs mb-2">Cheras • Weekdays</div>
+              <div className="text-xs bg-gray-100 inline px-2 py-0.5 rounded">👕 Cucian & Dobi</div>
+              <div className="mt-3 text-right">
+                <button className="text-xs px-3 py-1 border rounded-full">View</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* CTA */}
         <div className="sticky bottom-4 bg-white border rounded-3xl p-5 shadow flex items-center justify-between gap-4">
           <div>
