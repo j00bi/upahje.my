@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { LABOUR_CATEGORIES, type LabourCategoryId } from '@/lib/domain'
+import type { LabourCategoryId } from '@/lib/domain'
+import { CategoryPicker } from '../shared'
 import { MyKadUpload } from '../MyKadUpload'
 import { Zap, Clock, ArrowRight } from 'lucide-react'
 import type { LabourOnboardingData } from '../shared'
@@ -18,10 +19,7 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
   const update = <K extends keyof LabourOnboardingData>(k: K, v: LabourOnboardingData[K]) =>
     setData(d => ({ ...d, [k]: v }))
 
-  const toggleCat = (id: LabourCategoryId) => {
-    const cur = data.categories || []
-    update('categories', cur.includes(id) ? cur.filter((x: string) => x !== id) : [...cur, id])
-  }
+
 
   // Quick path: only 4 fields then "go live"
   if (mode === 'quick') {
