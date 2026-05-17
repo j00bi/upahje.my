@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/next"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ],
+  "env": {
+    "NEXT_PUBLIC_SUPABASE_URL": "@upahje-my-supabase-url",
+    "NEXT_PUBLIC_SUPABASE_ANON_KEY": "@upahje-my-supabase-anon-key",
+    "SUPABASE_SERVICE_ROLE_KEY": "@upahje-my-supabase-service-role-key",
+    "DATABASE_URL": "@upahje-my-database-url",
+    "NEXTAUTH_SECRET": "@upahje-my-nextauth-secret",
+    "NEXTAUTH_URL": "@upahje-my-nextauth-url"
+  }
+}
