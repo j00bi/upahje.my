@@ -1,9 +1,12 @@
 import { NextResponse } from 'next/server'
-import { holdPayment } from '@/lib/escrow'
-import { prisma } from '@/lib/prisma'
 
 export async function POST(request: Request) {
   try {
+    const [{ holdPayment }, { prisma }] = await Promise.all([
+      import('@/lib/escrow'),
+      import('@/lib/prisma'),
+    ])
+
     const { jobId, amount, billplzTransactionId } = await request.json()
 
     if (!jobId || !amount) {

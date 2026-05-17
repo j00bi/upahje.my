@@ -1,6 +1,4 @@
-import Link from 'next/link'
-
-import { SignOutButton } from '@/components/auth/SignOutButton'
+import NavBar from '@/components/layout/NavBar'
 
 export default function AppLayout({
   children,
@@ -8,39 +6,9 @@ export default function AppLayout({
   children: React.ReactNode
 }>) {
   return (
-    <div className="min-h-screen">
-      <header className="border-b border-white/60 bg-white/70 backdrop-blur">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-900">
-              UpahJe.my
-            </div>
-            <div className="text-sm text-slate-600">Protected dashboard area</div>
-          </div>
-          <div className="flex items-center gap-3">
-            <Link
-              href="/"
-              className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50"
-            >
-              Home
-            </Link>
-            <Link
-              href="/jobs"
-              className="rounded-full border border-slate-300 bg-white px-4 py-2 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50"
-            >
-              Job Board
-            </Link>
-            <Link
-              href="/dashboard/employer"
-              className="rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800"
-            >
-              Employer Dashboard
-            </Link>
-            <SignOutButton />
-          </div>
-        </div>
-      </header>
-      {children}
+    <div className="min-h-screen flex flex-col max-w-full overflow-x-hidden">
+      <NavBar />
+      <main className="flex-1">{children}</main>
     </div>
   )
 }

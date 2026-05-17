@@ -20,12 +20,6 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
   const update = <K extends keyof EmployerOnboardingData>(k: K, v: EmployerOnboardingData[K]) =>
     setData(d => ({ ...d, [k]: v }))
 
-  const toggleCategory = (id: string, track: 'LABOUR' | 'TECHNICAL') => {
-    const key = track === 'LABOUR' ? 'labourCategories' : 'techCategories'
-    const cur = data[key] || []
-    update(key, cur.includes(id) ? cur.filter((x: string) => x !== id) : [...cur, id])
-  }
-
   const next = () => step < 3 ? setStep(step + 1) : onComplete?.(data)
   const back = () => step > 1 ? setStep(step - 1) : onBack?.()
 

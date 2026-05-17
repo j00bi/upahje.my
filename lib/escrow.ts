@@ -6,8 +6,8 @@ export interface EscrowTransaction {
   amount: number
   status: 'HELD' | 'RELEASED' | 'CANCELLED'
   createdAt: Date
-  releasedAt?: Date
-  cancelledAt?: Date
+  releasedAt?: Date | null
+  cancelledAt?: Date | null
 }
 
 export async function holdPayment(jobId: string, amount: number): Promise<EscrowTransaction> {

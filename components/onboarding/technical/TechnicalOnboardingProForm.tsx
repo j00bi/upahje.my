@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { TECHNICAL_CATEGORIES, TECHNICAL_RATE_TIERS, SUGGESTED_CERTS } from '@/lib/domain'
+import { TECHNICAL_CATEGORIES, TECHNICAL_RATE_TIERS, SUGGESTED_CERTS, type TechnicalCategoryId } from '@/lib/domain'
 import { CategoryPicker, TalentProfilePreview } from '../shared'
 import { Award, Check } from 'lucide-react'
 import type { TechnicalOnboardingData } from '../shared'
@@ -43,11 +43,21 @@ export function TechnicalOnboardingProForm({ onComplete, onBack }: TechnicalOnbo
     setCustomCertInput('')
   }
 
+  const toggleCert = (cert: string) => {
+    const current = data.certifications || []
+    update('certifications', current.includes(cert) ? current.filter((x: string) => x !== cert) : [...current, cert])
+  }
+
   const selectedTier = TECHNICAL_RATE_TIERS.find(t => t.id === data.rateTier)
   const canPublish = data.fullName && data.phone && (data.portfolioLinks?.length || 0) >= 1 && (data.skills?.length || 0) >= 1 && data.rateTier
 
   const previewName = data.fullName || 'Your Name'
-  const previewSkills = (data.skills || []).map((id: string) => TECHNICAL_CATEGORIES.find(c => c.id === id)?.name).filter(Boolean)
+  const previewSkills = (data.skills || [])
+    .map((id): string | undefined => TECHNICAL_CATEGORIES.find(c => c.id === id)?.name)
+    .filter((name): name is string => typeof name === 'string')
+  const selectedCategories = (data.skills || [])
+    .map((id): (typeof TECHNICAL_CATEGORIES)[number] | undefined => TECHNICAL_CATEGORIES.find(c => c.id === id))
+    .filter((item): item is (typeof TECHNICAL_CATEGORIES)[number] => Boolean(item))
   const previewRate = selectedTier ? `${selectedTier.label} • ${selectedTier.range}` : 'Select a tier'
 
   return (
@@ -93,7 +103,7 @@ export function TechnicalOnboardingProForm({ onComplete, onBack }: TechnicalOnbo
             <CategoryPicker
               track="TECHNICAL"
               selected={data.skills || []}
-              onChange={(sel) => update('skills', sel)}
+              onChange={(sel) => update('skills', sel as TechnicalCategoryId[])}
               max={7}
             />
           </div>
@@ -117,10 +127,10 @@ export function TechnicalOnboardingProForm({ onComplete, onBack }: TechnicalOnbo
             <div>
               <div className="uppercase tracking-widest text-[10px] text-violet-600 mb-2 font-medium flex items-center gap-2">5. Certifications <Award className="w-3.5 h-3.5" /></div>
               <div className="flex flex-wrap gap-2 mb-3">
-                {SUGGESTED_CERTS.map(c => {
-                  const sel = (data.certifications || []).includes(c)
-                  return <button key={c} onClick={() => toggleCert(c)} className={`text-xs px-3 py-1 rounded-full border transition ${sel ? 'bg-violet-700 text-white border-violet-700' : 'border-gray-300 hover:bg-violet-50'}`}>{c}</button>
-                })}
+              {SUGGESTED_CERTS.map(c => {
+                const sel = (data.certifications || []).includes(c)
+                return <button key={c} onClick={() => toggleCert(c)} className={`text-xs px-3 py-1 rounded-full border transition ${sel ? 'bg-violet-700 text-white border-violet-700' : 'border-gray-300 hover:bg-violet-50'}`}>{c}</button>
+              })}
               </div>
               <div className="flex gap-2">
                 <input value={customCertInput} onChange={e=>setCustomCertInput(e.target.value)} onKeyDown={e=>e.key==='Enter'&&addCustomCert()} placeholder="Add custom certification" className="flex-1 text-sm border rounded-2xl px-4 py-2" />
@@ -140,18 +150,18 @@ export function TechnicalOnboardingProForm({ onComplete, onBack }: TechnicalOnbo
           <div className="sticky top-6">
             <div className="uppercase tracking-[1px] text-[10px] text-violet-500 mb-2 font-semibold pl-1">LIVE PREVIEW — What employers will see</div>
             
-            <TalentProfilePreview
-              name={previewName}
-              location="Malaysia"
-              track="TECHNICAL"
-              rate={previewRate}
-              availability={data.availability}
-              bio={data.bio}
-              skills={previewSkills}
-              categories={(data.skills || []).map((id: string) => TECHNICAL_CATEGORIES.find(c => c.id === id)).filter(Boolean)}
-              portfolio={data.portfolioLinks || []}
-              certs={data.certifications || []}
-            />
+              <TalentProfilePreview
+                name={previewName}
+                location="Malaysia"
+                track="TECHNICAL"
+                rate={previewRate}
+                availability={data.availability}
+                bio={data.bio}
+                skills={previewSkills}
+                categories={selectedCategories.map(({ emoji, name }) => ({ emoji, name }))}
+                portfolio={data.portfolioLinks || []}
+                certs={data.certifications || []}
+              />
 
             <div className="text-[10px] text-center text-gray-500 mt-3">Live preview. This will become the public talent profile.</div>
           </div>

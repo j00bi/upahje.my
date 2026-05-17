@@ -5,7 +5,6 @@ generator client {
 
 datasource db {
   provider  = "postgresql"
-  url       = env("DATABASE_URL")
 }
 
 model User {
@@ -21,6 +20,8 @@ model User {
   profile       Profile?
   talent        Talent?
   employer      Employer?
+  reviewsWritten Review[] @relation("ReviewFromUser")
+  reviewsReceived Review[] @relation("ReviewToUser")
 }
 
 model Account {
@@ -83,6 +84,7 @@ model Talent {
   user     User       @relation(fields: [userId], references: [id], onDelete: Cascade)
   categories TalentCategory[]
   jobs     Job[]
+  escrowTransactions EscrowTransaction[]
 }
 
 enum Track {
@@ -107,11 +109,12 @@ model Employer {
 
   user User @relation(fields: [userId], references: [id], onDelete: Cascade)
   jobs Job[]
+  escrowTransactions EscrowTransaction[]
 }
 
 model Category {
   id        String   @id @default(cuid())
-  name      String
+  name      String   @unique
   track     Track
   emoji     String?
   talents   TalentCategory[]
@@ -134,6 +137,8 @@ model Job {
   talent   Talent?  @relation(fields: [talentId], references: [id])
   category Category @relation(fields: [categoryId], references: [id])
   categoryId String
+  escrowTransactions EscrowTransaction[]
+  payments Payment[]
 }
 
 enum JobStatus {
@@ -152,6 +157,9 @@ model Review {
   fromUserId String
   toUserId   String
   createdAt DateTime @default(now())
+
+  fromUser User @relation("ReviewFromUser", fields: [fromUserId], references: [id])
+  toUser   User @relation("ReviewToUser", fields: [toUserId], references: [id])
 }
 
 model EscrowTransaction {

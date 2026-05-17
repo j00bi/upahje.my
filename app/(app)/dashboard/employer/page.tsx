@@ -2,14 +2,14 @@ import { JobCard } from '@/components/jobs/JobCard'
 
 export default function EmployerDashboard() {
   return (
-    <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-6 px-4 py-6 sm:px-6 lg:px-8">
-      <section className="glass rounded-[2rem] p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+    <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-4 sm:gap-6 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
+      <section className="glass rounded-[2rem] p-5 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-2">
             <span className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-900">
               Employer dashboard
             </span>
-            <h1 className="text-3xl font-semibold tracking-tight text-slate-950">
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-slate-950">
               Post jobs, review matches, and keep the trust layer visible.
             </h1>
             <p className="text-sm leading-6 text-slate-600">
@@ -23,7 +23,7 @@ export default function EmployerDashboard() {
       </section>
 
       <section className="grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
-        <article className="glass rounded-[1.75rem] p-6">
+        <article className="glass rounded-[1.75rem] p-5 sm:p-6">
           <div className="mb-4 flex items-center justify-between">
             <div>
               <h2 className="text-lg font-semibold text-slate-950">Your Active Jobs</h2>
@@ -52,7 +52,7 @@ export default function EmployerDashboard() {
           </div>
         </article>
 
-        <aside className="glass rounded-[1.75rem] p-6">
+        <aside className="glass rounded-[1.75rem] p-5 sm:p-6">
           <h2 className="text-lg font-semibold text-slate-950">Recent Matches</h2>
           <p className="mt-2 text-sm leading-6 text-slate-600">
             Matched talents will appear here once the matching layer is connected.

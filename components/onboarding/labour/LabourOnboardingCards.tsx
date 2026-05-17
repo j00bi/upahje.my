@@ -37,7 +37,7 @@ export function LabourOnboardingCards({ onComplete, onBack }: LabourOnboardingCa
 
 
 
-  const canFinish = data.fullName && data.phone && data.location && (data.categories?.length > 0)
+  const canFinish = data.fullName && data.phone && data.location && ((data.categories?.length ?? 0) > 0)
 
   return (
     <div className="max-w-2xl mx-auto">
@@ -53,7 +53,7 @@ export function LabourOnboardingCards({ onComplete, onBack }: LabourOnboardingCa
             (sec.id === 'basics' && data.fullName && data.phone) ||
             (sec.id === 'verify' && data.myKadUploaded) ||
             (sec.id === 'where' && data.location) ||
-            (sec.id === 'what' && data.categories?.length > 0) ||
+            (sec.id === 'what' && (data.categories?.length ?? 0) > 0) ||
             (sec.id === 'price' && data.rate && data.availability) ||
             (sec.id === 'story' && data.bio)
 

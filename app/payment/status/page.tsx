@@ -83,36 +83,36 @@ export default function PaymentStatusPage() {
   const content = getStatusContent()
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-12 px-4">
+    <div className="min-h-screen bg-gray-50 flex items-center justify-center py-8 px-4">
       <div className="max-w-md w-full">
         {/* Status Card */}
-        <div className={`bg-white rounded-lg shadow-sm p-8 border ${content.borderColor}`}>
+        <div className={`bg-white rounded-lg shadow-sm p-6 sm:p-8 border ${content.borderColor}`}>
           {/* Icon */}
           <div className={`text-center mb-6`}>
-            <div className={`inline-flex items-center justify-center w-16 h-16 rounded-full ${content.bgColor} ${content.color} text-2xl font-bold`}>
+            <div className={`inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full ${content.bgColor} ${content.color} text-xl sm:text-2xl font-bold`}>
               {content.icon}
             </div>
           </div>
 
           {/* Title */}
-          <h1 className={`text-xl font-bold text-center mb-4 ${content.color}`}>
+          <h1 className={`text-lg sm:text-xl font-bold text-center mb-4 ${content.color}`}>
             {content.title}
           </h1>
 
           {/* Message */}
-          <p className="text-gray-600 text-center mb-6">
+          <p className="text-gray-600 text-center mb-6 text-sm sm:text-base">
             {content.message}
           </p>
 
           {/* Payment Details (if available) */}
           {billId && (
             <div className="bg-gray-50 rounded-lg p-4 mb-6">
-              <div className="flex justify-between text-sm">
+              <div className="flex justify-between text-xs sm:text-sm">
                 <span className="text-gray-600">Reference ID:</span>
                 <span className="font-mono text-gray-800">{billId}</span>
               </div>
               {amount && (
-                <div className="flex justify-between text-sm mt-2">
+                <div className="flex justify-between text-xs sm:text-sm mt-2">
                   <span className="text-gray-600">Amount:</span>
                   <span className="font-medium text-gray-800">RM {amount.toFixed(2)}</span>
                 </div>
@@ -124,7 +124,7 @@ export default function PaymentStatusPage() {
           <div className="space-y-3">
             <button
               onClick={handleContinue}
-              className="w-full py-3 px-4 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors"
+              className="w-full py-3 px-4 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors text-sm"
             >
               Continue Browsing Jobs
             </button>
@@ -132,7 +132,7 @@ export default function PaymentStatusPage() {
             {status === 'success' && (
               <button
                 onClick={() => router.push('/dashboard')}
-                className="w-full py-3 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors"
+                className="w-full py-3 px-4 bg-gray-100 text-gray-700 rounded-lg font-medium hover:bg-gray-200 transition-colors text-sm"
               >
                 View My Dashboard
               </button>
@@ -140,7 +140,7 @@ export default function PaymentStatusPage() {
           </div>
 
           {/* Help Text */}
-          <p className="text-center text-sm text-gray-500 mt-6">
+          <p className="text-center text-xs sm:text-sm text-gray-500 mt-6">
             Need help?{' '}
             <a href="/support" className="text-emerald-600 hover:text-emerald-700">
               Contact Support

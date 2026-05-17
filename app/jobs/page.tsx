@@ -9,6 +9,7 @@ export default function JobsPage() {
   const [selectedCategory, setSelectedCategory] = useState('All Categories')
   const [selectedLocation, setSelectedLocation] = useState('All Locations')
   const [searchQuery, setSearchQuery] = useState('')
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
   // Filter jobs based on selected filters
   const filteredJobs = mockJobs.filter((job) => {
@@ -35,14 +36,14 @@ export default function JobsPage() {
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-          <h1 className="text-2xl font-bold text-gray-900">Job Board</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Job Board</h1>
           <p className="mt-1 text-sm text-gray-500">Find your next opportunity</p>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+      <main className="max-w-7xl mx-auto px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
         {/* Search and Filters */}
-        <div className="bg-white rounded-lg shadow-sm p-4 mb-6">
+        <div className="bg-white rounded-lg shadow-sm p-4 mb-4 sm:mb-6">
           {/* Search Bar */}
           <div className="mb-4">
             <input
@@ -50,19 +51,30 @@ export default function JobsPage() {
               placeholder="Search jobs..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+              className="w-full px-4 py-3 sm:py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
             />
           </div>
 
+          {/* Mobile Filter Toggle */}
+          <button
+            onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
+            className="md:hidden w-full flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+            {mobileFiltersOpen ? 'Hide Filters' : 'Show Filters'}
+          </button>
+
           {/* Filters */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 ${mobileFiltersOpen ? 'block' : 'hidden md:grid'}`}>
             {/* Track Filter */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Track</label>
               <select
                 value={selectedTrack}
                 onChange={(e) => setSelectedTrack(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
               >
                 {tracks.map((track) => (
                   <option key={track} value={track}>
@@ -78,7 +90,7 @@ export default function JobsPage() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
               >
                 {categories.map((category) => (
                   <option key={category} value={category}>
@@ -94,7 +106,7 @@ export default function JobsPage() {
               <select
                 value={selectedLocation}
                 onChange={(e) => setSelectedLocation(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
               >
                 {locations.map((location) => (
                   <option key={location} value={location}>
@@ -117,6 +129,7 @@ export default function JobsPage() {
             {filteredJobs.map((job) => (
               <JobCard
                 key={job.id}
+                id={job.id}
                 title={job.title}
                 category={job.category}
                 location={job.location}

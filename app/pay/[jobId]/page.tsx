@@ -38,12 +38,11 @@ const mockJob: Job = {
   requirements: ['Own tools preferred', 'Reliable', 'Can start immediately']
 }
 
-export default function PayPage({ params }: { params: { jobId: string } }) {
+export default function PayPage() {
   const router = useRouter()
   const [isProcessing, setIsProcessing] = useState(false)
   const [error, setError] = useState('')
 
-  // In production, fetch job data based on params.jobId
   const job = mockJob
 
   // Parse budget to get amount (extract first number from "RM 150 - 200")
@@ -78,7 +77,6 @@ export default function PayPage({ params }: { params: { jobId: string } }) {
         throw new Error(data.error || 'Failed to create payment')
       }
 
-      // Redirect to Billplz payment page
       if (data.paymentUrl) {
         window.location.href = data.paymentUrl
       }

@@ -4,7 +4,7 @@ export interface Review {
   id: string
   jobId: string
   rating: number
-  comment?: string
+  comment?: string | null
   fromUserId: string
   toUserId: string
   createdAt: Date
@@ -12,8 +12,8 @@ export interface Review {
 
 export interface ReviewWithUser extends Review {
   fromUser: {
-    name?: string
-    image?: string
+    name?: string | null
+    image?: string | null
   }
 }
 
@@ -92,10 +92,10 @@ export async function getReviewsForUser(userId: string): Promise<ReviewWithUser[
     }
   })
 
-  return reviews.map(r => ({
+  return reviews.map((r: ReviewWithUser) => ({
     ...r,
     rating: r.rating,
-    comment: r.comment || undefined
+    comment: r.comment ?? undefined
   }))
 }
 

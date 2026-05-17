@@ -13,6 +13,11 @@ interface CategoryPickerProps {
 export function CategoryPicker({ track, selected, onChange, max = 6, label }: CategoryPickerProps) {
   const labourCats = LABOUR_CATEGORIES
   const techCats = TECHNICAL_CATEGORIES
+  type CategoryOption = {
+    id: string
+    emoji: string
+    name: string
+  }
 
   const isSelected = (id: string) => selected.includes(id)
 
@@ -25,7 +30,7 @@ export function CategoryPicker({ track, selected, onChange, max = 6, label }: Ca
     }
   }
 
-  const renderCategory = (cat: any, color: string) => {
+  const renderCategory = (cat: CategoryOption, color: 'green' | 'purple') => {
     const sel = isSelected(cat.id)
     return (
       <button

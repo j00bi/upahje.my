@@ -1,10 +1,13 @@
 import { NextResponse } from 'next/server'
-import { releasePayment } from '@/lib/escrow'
-import { prisma } from '@/lib/prisma'
-import { auth } from '@/lib/auth'
 
 export async function POST(request: Request) {
   try {
+    const [{ releasePayment }, { prisma }, { auth }] = await Promise.all([
+      import('@/lib/escrow'),
+      import('@/lib/prisma'),
+      import('@/lib/auth'),
+    ])
+
     const session = await auth()
     
     if (!session?.user?.email) {

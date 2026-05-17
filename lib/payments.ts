@@ -8,6 +8,46 @@ export interface BillplzPayment {
   reference?: string
 }
 
+export function getBillplzCollectionId(): string {
+  return process.env.BILLPLZ_COLLECTION_ID || process.env.BILLPLZ_COLLECTION || 'demo-collection'
+}
+
+export async function createBillplzBill({
+  collectionId,
+  name,
+  email,
+  amount,
+  callbackUrl,
+  description,
+  reference1,
+  reference2,
+}: {
+  collectionId: string
+  name: string
+  email: string
+  amount: number
+  callbackUrl: string
+  description: string
+  reference1: string
+  reference2?: string
+}): Promise<{ id: string; url: string }> {
+  const payment = await createBillplzPayment(reference1, amount, email, email)
+  const query = new URLSearchParams({
+    collectionId,
+    name,
+    email,
+    amount: String(amount),
+    description,
+    reference1,
+    ...(reference2 ? { reference2 } : {}),
+  })
+
+  return {
+    id: payment.id,
+    url: `${callbackUrl}?${query.toString()}`,
+  }
+}
+
 export async function createBillplzPayment(
   jobId: string,
   amount: number,

@@ -14,11 +14,6 @@ export function EmployerOnboardingVisual({ onComplete, onBack }: Props) {
   const update = <K extends keyof EmployerOnboardingData>(k: K, v: EmployerOnboardingData[K]) =>
     setData(d => ({ ...d, [k]: v }))
 
-  const toggle = (id: string) => {
-    const cur = data.needs || []
-    update('needs', cur.includes(id) ? cur.filter((x: string) => x !== id) : [...cur, id])
-  }
-
   return (
     <div className="max-w-2xl mx-auto">
       <div className="text-center mb-6">

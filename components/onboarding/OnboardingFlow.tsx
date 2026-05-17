@@ -54,7 +54,7 @@ export function OnboardingFlow() {
   const [step, setStep] = useState<Step>('role')
   const [role, setRole] = useState<'employer' | 'talent' | null>(null)
   const [track, setTrack] = useState<Track | null>(null)
-  const [selectedVariant, setSelectedVariant] = useState<LabourVariantId | TechnicalVariantId>('D')
+  const [selectedVariant, setSelectedVariant] = useState<LabourVariantId | TechnicalVariantId | null>('D')
   const [employerVariant, setEmployerVariant] = useState<EmployerVariantId | null>(null)
 
   const handleRoleSelect = (selectedRole: 'employer' | 'talent') => {

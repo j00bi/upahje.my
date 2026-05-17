@@ -20,6 +20,7 @@ export default function MatchesPage() {
   const [selectedRate, setSelectedRate] = useState('All Rates')
   const [selectedAvailability, setSelectedAvailability] = useState('All Availability')
   const [searchQuery, setSearchQuery] = useState('')
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
 
   // Calculate match scores for all talents
   const talentsWithScores = rankTalents(mockTalents, {
@@ -90,7 +91,7 @@ export default function MatchesPage() {
       {/* Header */}
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
               <button
                 onClick={() => router.push('/jobs')}
@@ -98,22 +99,22 @@ export default function MatchesPage() {
               >
                 ← Back to Jobs
               </button>
-              <h1 className="text-2xl font-bold text-gray-900">Talent Matches</h1>
+              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Talent Matches</h1>
               <p className="mt-1 text-sm text-gray-500">
                 Showing matched talents for: <span className="font-medium">{job.title}</span>
               </p>
             </div>
             <div className="text-right">
               <div className="text-sm text-gray-500">Location</div>
-              <div className="font-medium">{job.location}</div>
+              <div className="font-medium text-sm sm:text-base">{job.location}</div>
             </div>
           </div>
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 py-6 sm:px-6 lg:px-8">
+      <main className="max-w-7xl mx-auto px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
         {/* Filters */}
-        <div className="bg-white rounded-lg shadow-sm p-4 mb-6">
+        <div className="bg-white rounded-lg shadow-sm p-4 mb-4 sm:mb-6">
           {/* Search Bar */}
           <div className="mb-4">
             <input
@@ -121,19 +122,30 @@ export default function MatchesPage() {
               placeholder="Search talents by name or skill..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+              className="w-full px-4 py-3 sm:py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
             />
           </div>
 
+          {/* Mobile Filter Toggle */}
+          <button
+            onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
+            className="md:hidden w-full flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100"
+          >
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+            {mobileFiltersOpen ? 'Hide Filters' : 'Show Filters'}
+          </button>
+
           {/* Filters */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 ${mobileFiltersOpen ? 'block' : 'hidden md:grid'}`}>
             {/* Location Filter */}
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
               <select
                 value={selectedLocation}
                 onChange={(e) => setSelectedLocation(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
               >
                 {talentLocations.map((location) => (
                   <option key={location} value={location}>
@@ -149,7 +161,7 @@ export default function MatchesPage() {
               <select
                 value={selectedRate}
                 onChange={(e) => setSelectedRate(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
               >
                 {talentRates.map((rate) => (
                   <option key={rate} value={rate}>
@@ -165,7 +177,7 @@ export default function MatchesPage() {
               <select
                 value={selectedAvailability}
                 onChange={(e) => setSelectedAvailability(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
               >
                 {talentAvailability.map((availability) => (
                   <option key={availability} value={availability}>

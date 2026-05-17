@@ -64,15 +64,16 @@ const DEMO_PROFILES: DemoProfiles = {
   },
 }
 
-export default async function TalentProfilePage({ params }: { params: { slug: string } }) {
-  const profile = DEMO_PROFILES[params.slug]
+export default async function TalentProfilePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const profile = DEMO_PROFILES[slug]
 
   if (!profile) {
     notFound()
   }
 
   // Fetch real reviews from database if userId is available
-  let reviews: { rating: number; comment?: string; fromUser: { name?: string } }[] = []
+  let reviews: { rating: number; comment?: string | null; fromUser: { name?: string | null } }[] = []
   let averageRating: number | null = null
 
   if (profile.userId) {
@@ -90,20 +91,20 @@ export default async function TalentProfilePage({ params }: { params: { slug: st
 
   return (
     <div className="min-h-screen bg-zinc-50">
-      <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="max-w-4xl mx-auto px-4 py-6 sm:py-8">
         {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
           <div>
             <div className="text-sm text-gray-500">UpahJe.my / Talent</div>
-            <h1 className="text-3xl font-semibold tracking-tight">{profile.name}</h1>
+            <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight">{profile.name}</h1>
           </div>
-          <div className={`px-3 py-1 rounded-full text-xs font-medium ${isLabour ? 'bg-green-100 text-green-700' : 'bg-purple-100 text-purple-700'}`}>
+          <div className={`px-3 py-1 rounded-full text-xs font-medium w-fit ${isLabour ? 'bg-green-100 text-green-700' : 'bg-purple-100 text-purple-700'}`}>
             {isLabour ? 'Labour Talent' : 'Technical Talent'}
           </div>
         </div>
 
         {/* Main Profile Card using shared component */}
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           <TalentProfilePreview
             name={profile.name}
             location={profile.location}
@@ -119,7 +120,7 @@ export default async function TalentProfilePage({ params }: { params: { slug: st
         </div>
 
         {/* Trust & Verification */}
-        <div className="bg-white border rounded-3xl p-6 mb-8">
+        <div className="bg-white border rounded-3xl p-5 sm:p-6 mb-6 sm:mb-8">
           <h3 className="font-semibold mb-4">Trust & Verification</h3>
           <div className="grid sm:grid-cols-2 gap-4 text-sm">
             {profile.myKadVerified && (
@@ -146,7 +147,7 @@ export default async function TalentProfilePage({ params }: { params: { slug: st
 
         {/* Reviews */}
         {reviews.length > 0 && (
-          <div className="bg-white border rounded-3xl p-6 mb-8">
+          <div className="bg-white border rounded-3xl p-5 sm:p-6 mb-6 sm:mb-8">
             <div className="flex items-center justify-between mb-4">
               <h3 className="font-semibold">Reviews from clients</h3>
               {averageRating !== null && (
@@ -181,12 +182,12 @@ export default async function TalentProfilePage({ params }: { params: { slug: st
         )}
 
         {/* Similar Talents - using improved TalentCard (Track A) */}
-        <div className="mb-8">
+        <div className="mb-6 sm:mb-8">
           <div className="flex items-center justify-between mb-3 px-1">
             <h3 className="font-semibold">Similar talents nearby</h3>
             <button className="text-xs text-blue-600 hover:underline">See all →</button>
           </div>
-          <div className="grid md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <TalentCard
               name="Rina binti Hassan"
               track="LABOUR"
@@ -222,12 +223,12 @@ export default async function TalentProfilePage({ params }: { params: { slug: st
         </div>
 
         {/* CTA */}
-        <div className="sticky bottom-4 bg-white border rounded-3xl p-5 shadow flex items-center justify-between gap-4">
+        <div className="sticky bottom-4 bg-white border rounded-3xl p-4 sm:p-5 shadow flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <div className="font-semibold">Ready to work with {profile.name.split(' ')[0]}?</div>
             <div className="text-sm text-gray-600">Message to discuss your job details.</div>
           </div>
-          <button className={`px-8 py-3 rounded-2xl font-medium text-white ${isLabour ? 'bg-green-600' : 'bg-purple-600'}`}>
+          <button className={`w-full sm:w-auto px-6 sm:px-8 py-3 rounded-2xl font-medium text-white ${isLabour ? 'bg-green-600' : 'bg-purple-600'}`}>
             Hubungi Talent
           </button>
         </div>
