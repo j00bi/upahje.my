@@ -53,6 +53,12 @@ export default function Home() {
                 Start onboarding
               </Link>
               <Link
+                href="/jobs"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-slate-300 bg-white/90 px-5 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-white"
+              >
+                Browse jobs
+              </Link>
+              <Link
                 href="/dashboard/employer"
                 className="inline-flex h-12 items-center justify-center rounded-full border border-slate-300 bg-white/90 px-5 text-sm font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-white"
               >
