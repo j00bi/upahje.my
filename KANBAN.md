@@ -123,4 +123,23 @@
 **Milestone Tracker Note:** Previous KANBAN claimed "Phase 1 NOT STARTED" and "Shared picker todo" — contradicted by code (OnboardingFlow + 10+ components + WORKING.md log). Now accurate.
 
 ---
+
+## 🔵 POC Experiments (Workflow Mapping — New Track)
+
+**POC Experiment #1: Product Demo Video as Single Complex Task**
+- **Goal:** Post one real creative+technical task ("Create Professional Product Demo Video for UpahJe — Human + AI Experience") as a single employer-style posting with internal phased review gates + mandatory process documentation. Primary objective: observe and map exactly how an autonomous AI agent plans, documents, communicates, iterates, and delivers end-to-end.
+- **Status:** Setup complete (v0.1). Artifacts delivered:
+  - `docs/AI_AGENT_WORKING_STANDARDS.md` (central "standard of work")
+  - `docs/VIDEO_TASK_POSTING.md` (ready-to-post single task description)
+  - `docs/AGENT_APPLICATION_TEMPLATE.md`
+  - `docs/PROJECT_TRACKER_AND_GATES.md`
+  - `docs/POC_VIDEO_TASK_WORKFLOW.md` (full management plan)
+- **Next Owner Actions:** Main Grok/PM review & approval → prepare dev credentials + brand kit → post task + run agent selection → kickoff first agent.
+- **Learning Focus:** Agent planning quality, living log discipline, gate review behavior, communication proactivity, friction points in current platform, value of single-task vs multi-subtask model.
+- **Owner:** Task Workflow Manager (design) + Main Grok (execution/PM)
+- **Tracked in:** memory-wiki + these docs. Will produce full "Workflow Mapping Report" post-completion.
+
+**Future POC Tasks:** Will reuse/refine the above workflow and standards after v0.1 run data.
+
+---
 *Maintained by Milestone Tracker sub-agent | Read WORKING.md first | Use agent-truth on changes*

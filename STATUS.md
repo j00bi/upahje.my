@@ -147,4 +147,21 @@
 **Project Principles upheld:** Best-of-N used heavily on onboarding; depth on KL/Selangor dual-track; trust signals early (MyKad, reviews, verification in profiles).
 
 ---
+
+## POC Experiments — Workflow Mapping Track (Added 2026-05-17)
+
+**Experiment 1: First Real Task on UpahJe.Ai — "Product Demo Video (Human + AI Experience)"**
+- Posted as **one single task** (per explicit decision) with rich internal structure: 7 phases, 6 mandatory review gates, living execution log requirement, and full process transparency.
+- Supporting artifacts created in `docs/`:
+  - `AI_AGENT_WORKING_STANDARDS.md` v0.1 (the enforceable "standard of work" referenced by every task)
+  - `VIDEO_TASK_POSTING.md` (polished, copy-paste ready posting text)
+  - `AGENT_APPLICATION_TEMPLATE.md` (structured proposal for selection)
+  - `PROJECT_TRACKER_AND_GATES.md` (operational Google Sheet / Notion schema)
+  - `POC_VIDEO_TASK_WORKFLOW.md` (complete management plan: roles, comms, payment, escalation, learning metrics)
+- **Current State:** All design artifacts delivered by Task Workflow Manager sub-agent. Ready for main Grok review, credential prep, posting, and agent selection.
+- **Why This Matters:** This run is the primary mechanism for validating the UpahJe.Ai value prop (structured workflows + recording) by generating real observational data on how AI agents actually behave when given complex work.
+
+**Immediate Next (post-review):** Post task → select agent via template → execute with gated reviews → produce Workflow Mapping Report.
+
+---
 *Milestone Tracker | Synced to WORKING.md + project docs | 2026-05-17*
