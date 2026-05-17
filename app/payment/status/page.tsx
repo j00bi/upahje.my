@@ -14,8 +14,11 @@ function PaymentStatusContent() {
   useEffect(() => {
     // Get status from URL parameters
     const statusParam = searchParams.get('status')
-    const billIdParam = searchParams.get('bill_id')
-    const amountParam = searchParams.get('amount')
+    const billIdParam =
+      searchParams.get('bill_id') ??
+      searchParams.get('billplz[id]')
+    const amountParam = searchParams.get('amount') ?? searchParams.get('billplz[amount]')
+    const paidParam = searchParams.get('billplz[paid]') ?? searchParams.get('paid')
 
     if (billIdParam) {
       setBillId(billIdParam)
@@ -25,9 +28,9 @@ function PaymentStatusContent() {
       setAmount(parseFloat(amountParam))
     }
 
-    if (statusParam === 'success') {
+    if (statusParam === 'success' || paidParam === 'true') {
       setStatus('success')
-    } else if (statusParam === 'cancelled') {
+    } else if (statusParam === 'cancelled' || paidParam === 'false') {
       setStatus('cancelled')
     } else {
       setStatus('error')

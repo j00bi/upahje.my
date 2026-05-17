@@ -45,6 +45,7 @@ Create or update the `.env` file in your project root with the following variabl
 # Supabase Configuration
 NEXT_PUBLIC_SUPABASE_URL=https://xxxxxxxxxxxx.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your-publishable-key-here
 
 # Database (for Prisma)
 DATABASE_URL=postgresql://postgres:[YOUR-PASSWORD]@db.xxxxxxxxxxxxx.supabase.co:5432/postgres
@@ -57,6 +58,7 @@ NEXTAUTH_URL=http://localhost:3000
 BILLPLZ_API_KEY=your-billplz-api-key
 BILLPLZ_COLLECTION_ID=your-collection-id
 BILLPLZ_X_SIGNATURE_KEY=your-signature-key
+BILLPLZ_X_SIGNATURE=your-signature-key
 ```
 
 ### How to get Supabase URL and Anon Key

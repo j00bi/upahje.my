@@ -1,11 +1,19 @@
-# UpahJe Product Demo Video — Project Tracker & Review Gates Template
+# UpahJe Product Demo Video — LIVE Project Tracker & Review Gates (Operator-Maintained)
 
-**Purpose:** This document (or its equivalent in Google Sheets / Notion) is the single source of operational truth during execution. Both Owner and Agent update it in real time.
+**LIVE STATUS:** This is the **canonical live tracker** for the POC (2026-05-17+). Use as primary until Google Sheet/Notion is instantiated at kickoff (operator will copy/sync). Both Operator and (later) Agent update in real time. Main Grok reviews here before decisions.
 
-**Recommended Setup for POC:**
-- Copy this structure into a **Google Sheet** (or Notion database) with one tab per section.
-- Share with edit access to the selected agent + owner.
+**Purpose:** Single source of operational truth. Mirrors the Google Sheet schema exactly.
+
+**Current Overall Project Health:** 🟡 Pre-Posting (Operator active, artifacts ready, awaiting user "post now" greenlight). No agent selected yet.
+
+**Operator:** Video Task Operator (maintains daily, prepares all gate reviews for Grok).
+
+**Recommended Setup for POC (post-selection):**
+- Copy this structure into a **Google Sheet** (or Notion database) with one tab per section. Share edit access.
 - Agent maintains the "Execution Log" as a linked or embedded living document (Markdown preferred).
+- This MD file remains the source-of-truth backup + operator scratchpad.
+
+**Last Operator Sync:** 2026-05-17 — Initial population post full artifact review.
 
 ---
 
@@ -13,13 +21,13 @@
 
 | Phase | Gate | Status | Target Date | Actual Date | Deliverable Link(s) | Gate Package Link | Owner Feedback | Payment % | Notes |
 |-------|------|--------|-------------|-------------|---------------------|-------------------|----------------|-----------|-------|
-| 0     | 1    | Not Started | Day 1 | | Detailed Plan | | | 20% | Kickoff |
-| 1     | 2    | Not Started | | | Script + Storyboard + Shot List | | | 15% | |
-| 2     | 3    | Not Started | | | Human Demo Footage (raw + polished) | | | 15% | |
-| 3     | 4    | Not Started | | | AI Agent Demo Footage | | | 15% | |
-| 4     | 5    | Not Started | | | Remotion Animations + VO | | | 15% | |
-| 5     | 6    | Not Started | | | Rough Cut (full assembly) | | | 15% | |
-| 6     | Final | Not Started | | | Final Video + All Assets + Retrospective + Logs | | | 20% | Acceptance |
+| 0     | 1    | Ready for Posting | 2026-05-17 (post) | | Detailed Execution Plan (from template) | | | 20% | Kickoff — Operator active. Awaiting user greenlight to post task. |
+| 1     | 2    | Not Started | TBD (agent plan) | | Script + Storyboard + Shot List | | | 15% | |
+| 2     | 3    | Not Started | TBD | | Human Demo Footage (raw + polished) | | | 15% | |
+| 3     | 4    | Not Started | TBD | | AI Agent Demo Footage | | | 15% | |
+| 4     | 5    | Not Started | TBD | | Remotion Animations + VO | | | 15% | |
+| 5     | 6    | Not Started | TBD | | Rough Cut (full assembly) | | | 15% | |
+| 6     | Final | Not Started | TBD | | Final Video + All Assets + Retrospective + Logs | | | 20% | Acceptance |
 
 **Legend for Status:** Not Started | In Progress | Submitted for Review | Revise Needed | Approved | Blocked
 
@@ -119,6 +127,22 @@ This second table is gold for the POC learning goal.
 
 ---
 
-**Usage Rule:** The tracker must be the first thing the agent opens every day. Owner checks it before any review call or major decision.
+**Usage Rule:** The tracker must be the first thing the agent opens every day. Operator checks + updates it on every activation and before any Grok review. Owner (Grok) checks it before any review call or major decision.
 
 **At project close:** Freeze a snapshot + export to PDF/Markdown for the permanent case study in the UpahJe memory wiki.
+
+---
+
+## Operator Live Notes & Activity (Pre- & Post-Selection)
+
+**2026-05-17 (Initial Activation):**
+- Full artifact review complete (POC_VIDEO*, VIDEO_TASK_POSTING, AI_AGENT_WORKING_STANDARDS, AGENT_APPLICATION_TEMPLATE, this tracker, PROJECT_*, AGENTS.md (upahje), STATUS, KANBAN, WORKING.md, git statuses on upahje-my (dirty but unrelated payments work preserved) and memory-wiki (clean)).
+- Execution plan + role integration added to POC_VIDEO_TASK_WORKFLOW.md v0.2.
+- Master table initialized with Phase 0 "Ready for Posting".
+- Video Task Operator now primary owner of operational execution.
+- Next: Update STATUS + KANBAN to reflect operator takeover; run agent-truth + commit in memory-wiki; deliver detailed plan + status to user/main Grok; await explicit approval to prep credentials and post the task.
+- No agent or comms channel yet. All pre-posting.
+
+(Append new dated entries for every operator action, nudge, review prep, escalation, reflection. This section + POC plan section = persistent operator state between turns.)
+
+**Risks Currently Tracked:** None (pre-post). Will mirror Tab 5 once agent onboarded.

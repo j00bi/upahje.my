@@ -158,10 +158,10 @@
   - `AGENT_APPLICATION_TEMPLATE.md` (structured proposal for selection)
   - `PROJECT_TRACKER_AND_GATES.md` (operational Google Sheet / Notion schema)
   - `POC_VIDEO_TASK_WORKFLOW.md` (complete management plan: roles, comms, payment, escalation, learning metrics)
-- **Current State:** All design artifacts delivered by Task Workflow Manager sub-agent. Ready for main Grok review, credential prep, posting, and agent selection.
+- **Current State:** All design artifacts delivered by Task Workflow Manager sub-agent. **Video Task Operator (long-running sub-agent ID 019e354c-5778-71e2-ae78-078683a9e312) has completed full review of every artifact, updated POC workflow with detailed execution plan + "all" deliverables, promoted tracker to live, and is now the operational owner keeping the workflow running.** Pre-posting. Awaiting main Grok / user explicit "proceed to post" after reviewing the integrated plan in POC_VIDEO_TASK_WORKFLOW.md §11.
 - **Why This Matters:** This run is the primary mechanism for validating the UpahJe.Ai value prop (structured workflows + recording) by generating real observational data on how AI agents actually behave when given complex work.
 
-**Immediate Next (post-review):** Post task → select agent via template → execute with gated reviews → produce Workflow Mapping Report.
+**Immediate Next (post-user greenlight):** Operator coordinates credential prep → post task (exact copy from VIDEO_TASK_POSTING.md) → run selection via template → kickoff → gated execution with full logging → Workflow Mapping Report. Operator handles all nudges, gate prep, and coordination until final payment.
 
 ---
 *Milestone Tracker | Synced to WORKING.md + project docs | 2026-05-17*

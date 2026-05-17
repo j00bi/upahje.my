@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { UserNav } from "@/components/UserNav";
 
 const pillars = [
   {
@@ -29,6 +30,9 @@ export default function Home() {
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-6 px-4 py-4 sm:gap-8 sm:py-6 sm:px-6 lg:px-8">
       <section className="glass overflow-hidden rounded-[2rem] shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
+        <div className="flex justify-end px-4 pt-4 sm:px-6 lg:px-10">
+          <UserNav />
+        </div>
         <div className="grid gap-6 px-4 py-6 sm:gap-8 sm:px-6 sm:py-8 lg:grid-cols-[1.3fr_0.7fr] lg:px-10 lg:py-12">
           <div className="flex flex-col gap-4 sm:gap-6">
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-emerald-900">

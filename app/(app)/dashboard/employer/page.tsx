@@ -1,6 +1,14 @@
 import { JobCard } from '@/components/jobs/JobCard'
+import { auth } from '@/lib/auth'
+import { redirect } from 'next/navigation'
 
-export default function EmployerDashboard() {
+export default async function EmployerDashboard() {
+  const session = await auth()
+  
+  if (!session) {
+    redirect('/auth/signin?callbackUrl=/dashboard/employer')
+  }
+
   return (
     <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-4 sm:gap-6 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
       <section className="glass rounded-[2rem] p-5 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">

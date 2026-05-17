@@ -1,44 +1,40 @@
-import NextAuth from 'next-auth'
-import Email from 'next-auth/providers/email'
-import Google from 'next-auth/providers/google'
+import { createServerClient } from '@supabase/ssr'
+import { cookies } from 'next/headers'
 
-const googleClientId = process.env.GOOGLE_CLIENT_ID ?? process.env.AUTH_GOOGLE_ID ?? ''
-const googleClientSecret =
-  process.env.GOOGLE_CLIENT_SECRET ?? process.env.AUTH_GOOGLE_SECRET ?? ''
+export async function auth() {
+  const cookieStore = await cookies()
 
-const emailServer = process.env.EMAIL_SERVER ?? process.env.AUTH_EMAIL_SERVER ?? ''
-const emailFrom = process.env.EMAIL_FROM ?? process.env.AUTH_EMAIL_FROM ?? ''
-const hasGoogleCredentials = Boolean(googleClientId && googleClientSecret)
-const hasEmailCredentials = Boolean(emailServer && emailFrom)
+  const supabase = createServerClient(
+    process.env.NEXT_PUBLIC_SUPABASE_URL!,
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    {
+      cookies: {
+        getAll() {
+          return cookieStore.getAll()
+        },
+        setAll(cookiesToSet) {
+          try {
+            cookiesToSet.forEach(({ name, value, options }) =>
+              cookieStore.set(name, value, options)
+            )
+          } catch {
+            // The `setAll` method was called from a Server Component.
+            // This can be ignored if you have middleware refreshing
+            // user sessions.
+          }
+        },
+      },
+    }
+  )
 
-export const { handlers, auth, signIn, signOut } = NextAuth({
-  pages: {
-    signIn: '/auth/signin',
-  },
-  session: {
-    strategy: 'jwt',
-  },
-  callbacks: {
-    authorized({ auth }) {
-      return !!auth
-    },
-  },
-  providers: [
-    ...(hasGoogleCredentials
-      ? [
-          Google({
-            clientId: googleClientId,
-            clientSecret: googleClientSecret,
-          }),
-        ]
-      : []),
-    ...(hasEmailCredentials
-      ? [
-          Email({
-            server: emailServer,
-            from: emailFrom,
-          }),
-        ]
-      : []),
-  ],
-})
+  const {
+    data: { session },
+  } = await supabase.auth.getSession()
+
+  return session
+}
+
+export async function getUser() {
+  const session = await auth()
+  return session?.user ?? null
+}

@@ -128,16 +128,11 @@
 
 **POC Experiment #1: Product Demo Video as Single Complex Task**
 - **Goal:** Post one real creative+technical task ("Create Professional Product Demo Video for UpahJe — Human + AI Experience") as a single employer-style posting with internal phased review gates + mandatory process documentation. Primary objective: observe and map exactly how an autonomous AI agent plans, documents, communicates, iterates, and delivers end-to-end.
-- **Status:** Setup complete (v0.1). Artifacts delivered:
-  - `docs/AI_AGENT_WORKING_STANDARDS.md` (central "standard of work")
-  - `docs/VIDEO_TASK_POSTING.md` (ready-to-post single task description)
-  - `docs/AGENT_APPLICATION_TEMPLATE.md`
-  - `docs/PROJECT_TRACKER_AND_GATES.md`
-  - `docs/POC_VIDEO_TASK_WORKFLOW.md` (full management plan)
-- **Next Owner Actions:** Main Grok/PM review & approval → prepare dev credentials + brand kit → post task + run agent selection → kickoff first agent.
-- **Learning Focus:** Agent planning quality, living log discipline, gate review behavior, communication proactivity, friction points in current platform, value of single-task vs multi-subtask model.
-- **Owner:** Task Workflow Manager (design) + Main Grok (execution/PM)
-- **Tracked in:** memory-wiki + these docs. Will produce full "Workflow Mapping Report" post-completion.
+- **Status:** Setup complete (v0.1). **Video Task Operator activated (2026-05-17):** full artifact review + execution plan integrated into POC_VIDEO_TASK_WORKFLOW.md (new §11 covering pre-post, selection, gates, proactivity, comms, learning). Tracker now live instance. All "A/B/C/D" from prior (final posting, tracker, comms structure, full infra) delivered via edits. Pre-posting.
+- **Next Owner Actions:** Main Grok/PM reviews integrated plan in POC §11 → explicit go-ahead → Operator leads: credential/brand prep checklist → post task via /ai/post using VIDEO_TASK_POSTING.md verbatim → agent selection via template → kickoff + channel creation → full gated execution (Operator monitors/nudges/preps reviews) → final retrospective + Workflow Mapping Report.
+- **Learning Focus:** Agent planning quality, living log discipline, gate review behavior, communication proactivity, friction points in current platform, value of single-task vs multi-subtask model. Operator captures observations in real time.
+- **Owner:** Task Workflow Manager (design) + **Video Task Operator (long-running operational execution lead)** + Main Grok (PM / creative decider)
+- **Tracked in:** memory-wiki + these docs + live tracker. Will produce full "Workflow Mapping Report" post-completion.
 
 **Future POC Tasks:** Will reuse/refine the above workflow and standards after v0.1 run data.
 

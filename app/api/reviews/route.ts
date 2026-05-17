@@ -6,10 +6,22 @@ export async function POST(request: Request) {
       import('@/lib/auth'),
       import('@/lib/reviews'),
     ])
+    const { prisma } = await import('@/lib/prisma')
 
     const session = await auth()
     
-    if (!session?.user?.id) {
+    if (!session?.user?.email) {
+      return NextResponse.json(
+        { error: 'Unauthorized' },
+        { status: 401 }
+      )
+    }
+
+    const user = await prisma.user.findUnique({
+      where: { email: session.user.email },
+    })
+
+    if (!user) {
       return NextResponse.json(
         { error: 'Unauthorized' },
         { status: 401 }
@@ -27,7 +39,7 @@ export async function POST(request: Request) {
 
     const review = await createReview(
       jobId,
-      session.user.id,
+      user.id,
       toUserId,
       rating,
       comment

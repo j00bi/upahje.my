@@ -1,7 +1,7 @@
 # POC Video Task — End-to-End Management Workflow
-**Owner:** Task Workflow Manager (sub-agent) + Main Grok (PM / Task Owner)  
-**Version:** 0.1 — Initial for First Real UpahJe.Ai Task  
-**Date:** 2026-05-17  
+**Owner:** Task Workflow Manager (initial design) + Video Task Operator (long-running execution lead, ID 019e354c-5778-71e2-ae78-078683a9e312) + Main Grok (PM / final decider)  
+**Version:** 0.2 — Operator-activated with full execution plan  
+**Date:** 2026-05-17 (operator review & plan integration)  
 **Related Artifacts:**
 - `AI_AGENT_WORKING_STANDARDS.md` (v0.1)
 - `VIDEO_TASK_POSTING.md`
@@ -186,7 +186,120 @@ This is the foundation for making UpahJe.Ai not just a place to post tasks, but 
 
 ---
 
-**Prepared by:** Task Workflow Manager sub-agent  
-**Status:** Ready for main Grok / Hermes review and execution. 
+**Prepared by:** Task Workflow Manager sub-agent (v0.1 design)  
+**Operator Activation:** Video Task Operator (long-running) — full artifact review + execution plan integrated on 2026-05-17.  
+
+**Status:** Pre-posting complete. Operator now owns day-to-day lifecycle until final payment + retrospective. Ready for main Grok / user sign-off to proceed with credential prep, posting, and selection.
 
 All supporting files are in `/home/husni/projects/upahje-my/docs/`.
+
+---
+
+## 11. Video Task Operator — Execution Plan & Ongoing Management (Integrated 2026-05-17)
+
+**Role Summary (per user directive):**  
+I am the dedicated, long-running **Video Task Operator** sub-agent (spawned to keep the workflow alive and running until user explicitly ends the experiment). I own the **full lifecycle** of this single Product Demo Video task — from final prep/posting through agent selection, all 6 mandatory review gates, payment releases, to final delivery, retrospective, and Workflow Mapping Report. 
+
+I act as operational lead / single point of contact for the POC experiment, while deferring creative/product decisions to main Grok (Head of Product). I am proactive: monitor, nudge, prepare reviews, capture learnings in real time, and coordinate with the sub-agent swarm (Task Workflow Manager for handoff, Goal Agent, Hermes/Codex trackers, etc.).
+
+**Core Mandate:**  
+Keep the designed process (phased gates, living execution log, process docs, standards) running smoothly with zero friction for the selected agent and minimal load on main Grok. Produce high-fidelity observational data on real AI agent execution behavior.
+
+### 11.1 Immediate "All" Deliverables Completed (from prior discussion)
+- **A. Final clean posting package:** VIDEO_TASK_POSTING.md + AGENT_APPLICATION_TEMPLATE.md verified copy-paste ready, cross-linked to standards, consistent with workflow. No changes needed (polish was already high).
+- **B. Tracker setup:** PROJECT_TRACKER_AND_GATES.md promoted to **live local canonical tracker** (see edits below + Tab 1 populated with initial "Ready" state). In real run: agent + operator will sync this + copy to Google Sheet on kickoff. No external deps for POC start.
+- **C. Comms thread structure:** Defined below (11.3). Primary: dedicated Telegram supergroup or Discord private thread (name: `upahje-demo-video-poc-2026-05`). Backup: this repo's docs + operator log entries. Daily Pulse + Gate Package templates provided.
+- **D. All of the above + infrastructure:** This plan + operator log sections + credential checklist + escalation matrix + learning capture hooks now live in this single authoritative doc. Proactivity mechanisms (nudges, health checks) active.
+
+### 11.2 Detailed Lifecycle Phases (Operator-Owned)
+**Pre-Posting (Now — until user "go"):**
+- Artifacts audited (full review of POC_*, VIDEO_*, STANDARDS, TRACKER, TEMPLATE, AGENTS.md (project), STATUS.md, KANBAN.md, WORKING.md, git statuses).
+- This execution plan + status updates committed via edits + memory-wiki truth.
+- Prepare credential/asset handoff package (checklist in 11.5).
+- Confirm dev/staging UpahJe.my + UpahJe.Ai instances ready for live demos (coordinate with Codex if code changes needed; currently payments dirty but unrelated).
+- User (Grok) reviews this plan → explicit "post now" or iterate.
+
+**Application Window & Selection:**
+- Post via /ai/post form (using exact text from VIDEO_TASK_POSTING.md) + cross-post to agent communities (Discord #orchestrate, X, agent discords, etc.).
+- Collect proposals using template.
+- Evaluate rubric: plan realism (30%), doc habits (25%), Remotion/video evidence (25%), capacity (20%).
+- Select 1, notify, kickoff: standards confirmation, log location agreed, tracker initialized with agent name, comms channel created, first milestone dates locked.
+
+**Execution (Gates 1–6 + Daily Ops):**
+- Agent maintains Living Execution Log + updates tracker proactively.
+- Operator: 
+  - Daily health check (review tracker + any new log entries).
+  - If >24h no pulse: log nudge in operator notes + (real: message in thread).
+  - If >48h silence: escalate per standards (pause + notify Grok).
+  - Receive Gate Package → validate against checklist → prepare concise Review Memo for main Grok (include agent log excerpt, self-assess, risks).
+  - Facilitate Grok decision within 24-36h SLA.
+  - Record approval/feedback/payment in tracker + this log.
+  - Agent proceeds only on "Approved".
+- Payment: record manual release (reference, date, %). 50% at end only after assets verified usable.
+
+**Closeout & Learning:**
+- Final gate: collect all + retrospective from agent.
+- Operator + agent + Grok produce "Workflow Mapping Report" (observations on planning, logs, comms, friction, platform suggestions).
+- Archive: freeze tracker snapshot, move assets to permanent case study (memory-wiki or /docs/archive/).
+- Update WORKING.md + project STATUS/KANBAN with outcomes.
+- Decide v0.2 improvements or next POC task.
+
+### 11.3 Communication Protocol (Enforced — Operator Maintains)
+**Primary Channel Recommendation:** Dedicated Telegram supergroup "UpahJe Video POC — [AgentName]" or Discord private thread in #orchestrate or new channel. (Operator creates on kickoff; invite only agent + Grok + relevant sub-agents.)
+
+**Non-Negotiables (from workflow + standards):**
+- Agent Daily Pulse (even no-progress): 2-4 bullets: "What done / blockers / next / confidence".
+- Gate submissions: "Gate X Package Submitted. Review by [date]. Links: [tracker] [log] [assets]".
+- Operator/Grok: Acknowledge receipt <4h, full review feedback <36h.
+- All decisions summarized back to tracker within 1h of call.
+
+**Escalation Matrix (Operator First Responder):**
+1. Minor question → thread reply.
+2. Blocker/risk → operator flags in tracker "Risks & Blockers" tab + notifies Grok.
+3. Silence 24h → polite nudge from operator ("Daily pulse due? Anything I can unblock?").
+4. Silence 48h no notice → operator recommends pause to Grok + partial pay calc per standards.
+5. Quality issues after 2 revise cycles on same gate → operator prepares termination brief for Grok.
+
+**Templates (use in thread):**
+- Gate Package: See checklist in PROJECT_TRACKER...
+- Review Memo (operator → Grok): "Gate X Review for [Agent]. Status: [links]. Agent self-score: X/10. Key observations: [1-3 bullets from log]. Recommendation: [Approve / Revise specific 1,2,3 / Questions]. Proposed payment: Y%."
+
+### 11.4 Proactivity, Monitoring & Long-Running Mechanics
+- **Internal State:** This section + "Operator Activity Log" (appended below over time) + tracker = my persistent brain. Every turn I re-read them.
+- **Health Checks:** On every activation, run: (1) git status on upahje-my (preserve dirty), (2) read tracker + this doc + agent log, (3) todo list internal, (4) check for new proposals in comms (sim: manual).
+- **Nudges:** Proactive even when main Grok busy with UI/UX (GROK_GOALS.md lane).
+- **Coordination:** 
+  - Handoff from Task Workflow Manager: complete (this plan supersedes).
+  - With Goal Agent: respect Grok's current UI priorities (winner selection etc.); video POC is parallel experiment, not blocking.
+  - With Hermes/Codex: if posting requires API work or bot for comms, delegate via their channels.
+  - Update memory-wiki at every milestone using `agent-truth "Video Task Operator" "done|started|blocked" "..." "..."` then commit.
+- **Tools for POC:** Local MD files + (future) real Drive/Sheet/Telegram. No new code unless approved.
+- **Budget for Operator:** Generous turns until "user: experiment ends" or task final payment.
+
+### 11.5 Credentials & Assets Provision Checklist (Pre-Kickoff)
+Owner (Grok/Codex) to provide before selection:
+- [ ] Staging UpahJe.my login (employer + talent test accounts with seeded data for authentic demos).
+- [ ] UpahJe.Ai AI agent test accounts / API keys stubs for agent registration + task flows.
+- [ ] Brand kit: logo (SVG/PNG), primary/secondary colors (#hex), typography (font files or Google Fonts), tone guide.
+- [ ] Remotion starter template or blank project with UpahJe branding pre-applied (if available; else agent sets up).
+- [ ] Music/SFX: links to royalty-free or owned tracks.
+- [ ] 1Password/shared note for all above (revoke on close).
+- [ ] Any existing screen recordings or UI flow videos for reference (optional).
+
+Operator will create secure handoff note at kickoff and track access in tracker "Notes".
+
+### 11.6 Success Metrics for Operator
+- 0 missed gates or unapproved progress.
+- Agent produces high-quality living log (depth > template).
+- Main Grok intervention < 2h/week on ops (only creative).
+- Full retrospective + report delivered within 48h of final accept.
+- All learnings captured for v0.2 (friction in current /ai/post, escrow, comms, etc.).
+
+### 11.7 Operator Activity Log (Living — Append Here)
+- **2026-05-17  [current time] | Video Task Operator | started | /home/husni/projects/upahje-my/docs/POC_VIDEO_TASK_WORKFLOW.md + all artifacts | Full review of  POC/VIDEO/STANDARDS/TRACKER/TEMPLATE/AGENTS/STATUS/KANBAN/WORKING + git statuses complete. Version bumped, owner updated, this execution plan + "all" deliverables integrated. Next: edit tracker/status/kanban for live state, run agent-truth, propose to user, await "post" greenlight. | (initial activation)**
+
+(Will append real-time entries for pulses, gates, nudges, decisions, reflections throughout the experiment.)
+
+---
+
+*Video Task Operator — keeping the workflow alive and observable until complete.*
