@@ -1,4 +1,4 @@
-import * as Billplz from 'billplz';
+const Billplz = require('billplz');
 
 // Initialize Billplz client
 const billplz = new Billplz({
