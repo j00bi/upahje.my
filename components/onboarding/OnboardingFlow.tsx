@@ -16,6 +16,7 @@ import { TechnicalOnboardingProForm } from './technical/TechnicalOnboardingProFo
 import { EmployerOnboardingSimple } from './employer/EmployerOnboardingSimple'
 import { EmployerOnboardingVisual } from './employer/EmployerOnboardingVisual'
 import { EmployerOnboardingPostFirst } from './employer/EmployerOnboardingPostFirst'
+import { HermesEvaluation } from './HermesEvaluation'
 import type {
   EmployerOnboardingData,
   LabourOnboardingData,
@@ -53,7 +54,7 @@ export function OnboardingFlow() {
   const [step, setStep] = useState<Step>('role')
   const [role, setRole] = useState<'employer' | 'talent' | null>(null)
   const [track, setTrack] = useState<Track | null>(null)
-  const [selectedVariant, setSelectedVariant] = useState<LabourVariantId | TechnicalVariantId | null>(null)
+  const [selectedVariant, setSelectedVariant] = useState<LabourVariantId | TechnicalVariantId>('D')
   const [employerVariant, setEmployerVariant] = useState<EmployerVariantId | null>(null)
 
   const handleRoleSelect = (selectedRole: 'employer' | 'talent') => {
@@ -158,6 +159,12 @@ export function OnboardingFlow() {
               {selectedVariant === 'B' && <LabourOnboardingCards onComplete={handleProfileComplete} onBack={goBack} />}
               {selectedVariant === 'C' && <LabourOnboardingChat onComplete={handleProfileComplete} onBack={goBack} />}
               {selectedVariant === 'D' && <LabourOnboardingHybrid onComplete={handleProfileComplete} onBack={goBack} />}
+            </div>
+
+            {/* Hermes Evaluation Panel (Track B - parallel work) */}
+            <div className="mt-8 pt-6 border-t">
+              <div className="text-[10px] uppercase tracking-[1px] text-amber-600 font-medium mb-2">For Hermes — Evaluation Surface (Work in Progress)</div>
+              <HermesEvaluation />
             </div>
           </div>
         )}
