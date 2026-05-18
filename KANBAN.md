@@ -1,140 +1,109 @@
-# UpahJe.my — Kanban Board
+# UpahJe.My — KANBAN (M0 Foundation)
 
-**Last Updated:** 2026-05-17 (Milestone Tracker — reality-aligned sweep from code, git log, WORKING.md agent-truth, OnboardingFlow, app routes, lib/*)
+**Last Updated**: 2026-05-18
+**Orchestration Model**: Parallel Multi-Agent
 
-**Focus:** Phase 1 Complete (Best-of-N delivered). Phase 0 advanced. Phase 2 foundations live. Hermes to select winners.
+## M0 – Foundation
 
----
-
-## 🔴 To Do (High Priority)
-
-### Phase 0 — Foundation (Codex lead)
-- [ ] Configure real Supabase project + populate .env (URL, keys, DATABASE_URL)
-- [ ] Run Prisma migrations + seed (Talent/Employer/Category data)
-- [ ] Enforce protected routes in middleware.ts (currently passthrough)
-- [ ] Wire NextAuth callbacks → create User + Profile + Talent/Employer on signup
-- [ ] Full sign-up flow + dashboard personalization (remove demo shells)
-- [ ] Install shadcn/ui or formalize current glassmorphism design system (optional)
-
-### Phase 1 — Onboarding (Best-of-N) — Selection & Lock-in
-- [ ] **Hermes decision:** Pick winning Labour variant (A/B/C/D), Technical (A/B/C), Employer (E1/E2/E3)
-- [ ] Move non-winners to `/variants/` or archive branch
-- [ ] Wire winning variant(s) to real Prisma/Supabase `createProfile` mutation
-- [ ] Remove Best-of-N preview switcher from production OnboardingFlow (keep for future experiments)
-- [ ] Polish: MyKad real upload + validation, rate input consistency
-
-### Phase 2 — Core Marketplace (immediate next)
-- [ ] In-app messaging (Supabase Realtime channels between Talent ↔ Employer)
-- [ ] Full Job detail page + "Hubungi Talent" flow (currently placeholder + matches page)
-- [ ] Replace mocks: lib/mockJobs.ts + mockTalents.ts → live queries + filters
-- [ ] Talent discovery / search page (list of public profiles, not just /[slug])
-- [ ] Employer job posting form wired to DB + auto-matching trigger
-- [ ] Job matches results UI polish + basic scoring display
+### Status Overview
+- **Auth Track**: In Progress (Auth Context + SignIn/SignUp pages implemented, role-based fetch present)
+- **Database Track**: In Progress (Prisma schema.prisma exists with initial models)
+- **Dashboard Track**: In Progress (Multiple dashboard pages and layout scaffolded)
+- **Overall Progress**: ~35% (Foundation auth + basic UI scaffold complete; remaining: role gates, data wiring, full onboarding)
 
 ---
 
-## 🟡 In Progress
+### Auth Track (Lead: Codex)
 
-### Current Active Work
-| Task | Agent | Reality Status | Notes |
-|------|-------|----------------|-------|
-| Phase 0 Auth + Prisma wiring | Codex | Partial (schema + client + auth lib present; enforcement + envs missing) | Recent edits to lib/auth.ts + middleware.ts (dirty) |
-| Task 1.4 Shared Components adoption | Grok | ✅ COMPLETE | CategoryPicker (BOTH support), RateTierSelector, TalentProfilePreview adopted in Labour + Employer. See WORKING.md 14:48 |
-| Phase 2 Job Board + Matching | Codex | Live demo (filters, cards, matches sub-route) | Recent commits: "feat: Create basic Job Board...", "feat: Add talent matching results..." + untracked mockTalents + jobs/[jobId] |
-| Phase 2 Public Talent Profiles | Grok | ✅ Functional demo | /talent/[slug] using shared preview + trust + reviews + CTA. Foundation for marketplace |
-| UI Lane discipline + nudges | Grok Nudger | Active | Spawned; first nudge delivered on Task 1.4 + docs freshness |
-| Milestone tracking + doc sync | Milestone Tracker | Active (this update) | Full sweep; STATUS + KANBAN refreshed to actual shipped state |
-
-### Best-of-N Variants (All Shipped — Preview Mode)
-**Labour (Task 1.1 — 4 versions, all in OnboardingFlow):**
-- A Stepper, B Cards, C Chat, D Hybrid — live selectable previews
-
-**Technical (Task 1.2 — 3 versions):**
-- A Stepper, B Showcase, C ProForm+Sidebar — live
-
-**Employer (Task 1.3 — 3 versions):**
-- E1 Simple, E2 Visual, E3 PostFirst — live
-
-**Shared (Task 1.4):** CategoryPicker extended + adopted across flows. Ready for winner.
-
-**Note:** All variants collect required fields, mobile-first, include trust copy. No winner selected yet.
+| ID     | Task                                      | Status     | Owner   | Notes |
+|--------|-------------------------------------------|------------|---------|-------|
+|| M0-A1  | Set up Supabase environment variables     | Done       | Codex   | Completed in earlier session |
+|| M0-A2  | Create Auth Context + Provider            | Done       | Codex   | lib/supabase/auth-context.tsx + role fetch |
+|| M0-A3  | Build Sign In / Sign Up pages             | Done       | Codex   | app/auth/signin/ + signup/ implemented |
+|| M0-A4  | Implement role-based authorization        | In Progress | Codex   | Basic role in context; full gates pending |
 
 ---
 
-## 🟢 Done
+### Database Track (Lead: Codex)
 
-### Foundation & Setup
-- [x] Repo init + Next.js 16 + TS + Tailwind + AGENTS.md + TASKS.md + initial STATUS/KANBAN
-- [x] Prisma schema (User/Profile/Talent/Employer/Job/Review/Category + Track/Role enums)
-- [x] Supabase client + NextAuth (Google/Email, optional creds)
-- [x] Protected app layout + dashboard shells (employer + links)
-- [x] lib/domain.ts (LABOUR_CATEGORIES + TECHNICAL_CATEGORIES + rate tiers + certs)
-
-### Phase 1 Onboarding — Fully Delivered
-- [x] Labour Best-of-N 4 variants (Stepper/Cards/Chat/Hybrid) + live preview
-- [x] Technical Best-of-N 3 variants (Stepper/Showcase/ProForm)
-- [x] Employer Best-of-N 3 variants (Simple/Visual/PostFirst)
-- [x] Shared components: CategoryPicker (BOTH), RateTierSelector, TalentProfilePreview, Role/Track selectors, MyKadUpload
-- [x] OnboardingFlow.tsx with 3-step role→track→profile + variant switchers (excellent for evaluation)
-- [x] All agent-truth logged in WORKING.md (Grok multiple "done" for 1.1–1.4)
-
-### Phase 2 Early Wins
-- [x] Public Talent Profile page (`/talent/[slug]`) with full preview, trust, reviews, CTA
-- [x] Job Board (`/jobs`) with track/category/location/search filters + JobCard
-- [x] Basic matching scorer (`lib/matching.ts`)
-- [x] Talent matching results page + supporting mocks (recent Codex)
-- [x] TalentCard component + JobPostForm
-
-### Agent Infrastructure
-- [x] Multi-agent setup (Hermes/Codex/Grok + sub-agents: Milestone Tracker, Grok Nudger)
-- [x] agent-truth protocol + WORKING.md sync (memory-wiki)
-- [x] Sub-agent spawning for continuous tracking + accountability
+| ID     | Task                                      | Status     | Owner   | Notes |
+|--------|-------------------------------------------|------------|---------|-------|
+|| M0-D1  | Finalize Prisma schema                    | Done       | Codex   | prisma/schema.prisma present |
+|| M0-D2  | Create initial migrations                 | In Progress | Codex   | Check if migrations folder exists |
+|| M0-D3  | Set up Supabase client utilities          | Done       | Codex   | lib/supabase/config.ts + client |
+|| M0-D4  | Implement basic data access layer         | In Progress | Codex   | lib/actions/jobs.ts shows progress |
 
 ---
 
-## 📋 Backlog (Later Phases)
+### Dashboard Track (Lead: Codex)
 
-### Phase 2 Completion
-- Real-time messaging
-- Advanced matching (Layer 2+)
-- Notifications, saved searches
-
-### Phase 3: Trust & Payments
-- MyKad verification flow (beyond upload)
-- Billplz FPX + escrow-lite
-- Two-way reviews (beyond demo)
-- Dispute resolution
-- KYC tiers enforcement
-
-### Future
-- PWA enhancements
-- KL/Selangor geo focus
-- Mobile apps (post PMF)
+| ID     | Task                                      | Status     | Owner   | Notes |
+|--------|-------------------------------------------|------------|---------|-------|
+| M0-DS1 | Create main dashboard layout              | To Do      | Codex   | - |
+| M0-DS2 | Build Employer dashboard page             | To Do      | Codex   | - |
+| M0-DS3 | Build Talent dashboard page               | To Do      | Codex   | - |
+| M0-DS4 | Connect dashboard with real data          | To Do      | Codex   | - |
 
 ---
 
-## Notes & Protocols
-- **Best-of-N Rule:** Used successfully on all onboarding. Now apply to job cards, matching UI, messaging if ambiguity arises.
-- **Git Hygiene:** Preserve unrelated dirty work (current: onboarding adoption files, auth/middleware, new job matches + mocks, nudger md). Commit UI + backend separately.
-- **Truth Updates:** Every agent runs `agent-truth "Name" "done|started|..." "/path" "summary; next"` after work, then commits in `/home/husni/memory-wiki`.
-- **Docs Sync:** STATUS.md + KANBAN.md now match shipped reality (previously frozen at kickoff). Tracker will re-sweep periodically.
-- **Current Focus (post this update):** Winner selection (Hermes), Phase 0 completion (Codex), Phase 2 data wiring + messaging (team).
+## M1 – Onboarding
 
-**Milestone Tracker Note:** Previous KANBAN claimed "Phase 1 NOT STARTED" and "Shared picker todo" — contradicted by code (OnboardingFlow + 10+ components + WORKING.md log). Now accurate.
+### Status Overview
+- **Labour Flow**: Not Started
+- **Employer Flow**: Not Started
+- **KYC Track**: Not Started
+- **Overall Progress**: 0%
+
+---
+
+### Labour Flow (Lead: Grok)
+
+| ID      | Task                                              | Status | Owner | Notes |
+|---------|---------------------------------------------------|--------|-------|-------|
+| M1-L1   | Finalize Labour role selection screen             | To Do  | Grok  | - |
+| M1-L2   | Design Labour quick registration (email + phone)  | To Do  | Grok  | Browse-only path |
+| M1-L3   | Design Labour full registration + KYC flow        | To Do  | Grok  | Full access path |
+| M1-L4   | Create Labour profile form (basic + advanced)     | To Do  | Grok  | - |
+| M1-L5   | Build MyKad upload + verification UI              | To Do  | Grok  | - |
+| M1-L6   | Implement progressive disclosure for Labour       | To Do  | Grok  | - |
 
 ---
 
-## 🔵 POC Experiments (Workflow Mapping — New Track)
+### Employer Flow (Lead: Grok)
 
-**POC Experiment #1: Product Demo Video as Single Complex Task**
-- **Goal:** Post one real creative+technical task ("Create Professional Product Demo Video for UpahJe — Human + AI Experience") as a single employer-style posting with internal phased review gates + mandatory process documentation. Primary objective: observe and map exactly how an autonomous AI agent plans, documents, communicates, iterates, and delivers end-to-end.
-- **Status:** Setup complete (v0.1). **Video Task Operator activated (2026-05-17):** full artifact review + execution plan integrated into POC_VIDEO_TASK_WORKFLOW.md (new §11 covering pre-post, selection, gates, proactivity, comms, learning). Tracker now live instance. All "A/B/C/D" from prior (final posting, tracker, comms structure, full infra) delivered via edits. Pre-posting.
-- **Next Owner Actions:** Main Grok/PM reviews integrated plan in POC §11 → explicit go-ahead → Operator leads: credential/brand prep checklist → post task via /ai/post using VIDEO_TASK_POSTING.md verbatim → agent selection via template → kickoff + channel creation → full gated execution (Operator monitors/nudges/preps reviews) → final retrospective + Workflow Mapping Report.
-- **Learning Focus:** Agent planning quality, living log discipline, gate review behavior, communication proactivity, friction points in current platform, value of single-task vs multi-subtask model. Operator captures observations in real time.
-- **Owner:** Task Workflow Manager (design) + **Video Task Operator (long-running operational execution lead)** + Main Grok (PM / creative decider)
-- **Tracked in:** memory-wiki + these docs + live tracker. Will produce full "Workflow Mapping Report" post-completion.
-
-**Future POC Tasks:** Will reuse/refine the above workflow and standards after v0.1 run data.
+| ID      | Task                                              | Status | Owner | Notes |
+|---------|---------------------------------------------------|--------|-------|-------|
+| M1-E1   | Design Employer role selection screen             | To Do  | Grok  | - |
+| M1-E2   | Create Employer quick registration flow           | To Do  | Grok  | - |
+| M1-E3   | Design Employer full onboarding (company info)    | To Do  | Grok  | - |
+| M1-E4   | Build job posting during onboarding (optional)    | To Do  | Grok  | - |
 
 ---
-*Maintained by Milestone Tracker sub-agent | Read WORKING.md first | Use agent-truth on changes*
+
+### KYC & Verification (Lead: Codex)
+
+| ID      | Task                                              | Status | Owner  | Notes |
+|---------|---------------------------------------------------|--------|--------|-------|
+| M1-K1   | Design KYC submission flow                        | To Do  | Codex  | - |
+| M1-K2   | Implement MyKad upload + OCR/preview              | To Do  | Codex  | - |
+| M1-K3   | Create backend verification status tracking       | To Do  | Codex  | - |
+| M1-K4   | Add KYC gate for job applications                 | To Do  | Codex  | Full access only |
+| M1-K5   | Build admin KYC review interface                  | To Do  | Codex  | - |
+
+---
+
+## Parallel Execution Notes
+
+- M0 and M1 can run in parallel.
+- KYC system (M1-K1 to M1-K5) should be usable by both Labour and Employer flows.
+- Quick registration paths (M1-L2, M1-E2) should be prioritized for early testing.
+
+---
+
+## Blockers
+
+- None currently
+
+## Next Review
+
+After first 3–4 days of execution.
