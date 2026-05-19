@@ -20,10 +20,26 @@ export default async function CategoryPage({
     notFound()
   }
 
-  // Filter projects by this category's tags
+  // Map category slugs to portfolio project categories/tags to match
+  const categoryFilterMap: Record<string, string[]> = {
+    'photography': ['Wedding', 'Portrait', 'Pre-wedding', 'Event', 'Product', 'Creative', 'Pre-Wedding'],
+    'videography': [],
+    'content-creator': [],
+    'photo-editor': [],
+    'design': [],
+    'makeup-artist': [],
+    'wedding-planner': ['Wedding', 'Pre-wedding', 'Pre-Wedding'],
+  }
+
+  const matchingCategories = categoryFilterMap[slug] || []
+  
   const categoryProjects = portfolioProjects.filter((p) =>
-    p.tags.some((t) => t.toLowerCase().includes(category.id.toLowerCase())) ||
-    p.category.toLowerCase().includes(category.id.toLowerCase())
+    matchingCategories.length === 0
+      ? false
+      : matchingCategories.some((mc) =>
+          p.category.toLowerCase().includes(mc.toLowerCase()) ||
+          p.tags.some((t) => t.toLowerCase().includes(mc.toLowerCase()))
+        )
   )
 
   return (
