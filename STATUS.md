@@ -1,9 +1,10 @@
 # UpahJe.My — Project Status
 
 **Last Updated**: 2026-05-19
-**Current Phase**: M0 – Foundation + Onboarding Integration
-**Active Goal**: Drive M0 + Onboarding Integration to clean M2 handoff
-**Winner Selection**: Completed (see ONBOARDING-WINNER-SELECTION.md)
+**Current Phase**: M0–M1 (Foundation + Onboarding Integration)
+**Roadmap**: M0 to M7 active (see docs/M0-TO-M7-ROADMAP.md)
+**Overall Progress**: ~32%
+**Go-Live Target**: Late July – Early August 2026
 
 ## Overall Progress
 

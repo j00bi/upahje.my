@@ -1,9 +1,9 @@
 # UpahJe.My — KANBAN (M0 Foundation)
 
 **Last Updated**: 2026-05-19
-**Orchestration Model**: Parallel Multi-Agent
-**Active Goal**: Drive M0 + Onboarding Integration to clean M2 handoff
-**Winner Selection**: Completed — Labour D (Hybrid), Technical B+A mix, Employer E1 (see ONBOARDING-WINNER-SELECTION.md)
+**Roadmap**: M0–M7 active (see docs/M0-TO-M7-ROADMAP.md)
+**Overall Progress**: ~32%
+**Go-Live Target**: Late July – Early August 2026
 
 ## M0 – Foundation
 
