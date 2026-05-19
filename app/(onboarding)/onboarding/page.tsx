@@ -13,16 +13,14 @@ export default function OnboardingPage() {
               Start with role, then track, then the profile depth.
             </h1>
             <p className="max-w-xl text-sm leading-6 text-slate-600">
-              This shell is ready for the Best-of-N onboarding variants. The next
-              step is to replace the profile placeholder with the labour and
-              technical flows.
+              Choose your path — whether you're hiring or looking for work.
             </p>
 
             <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
               {[
-                'Role selection first',
-                'Track selection second',
-                'Profile capture last',
+                'Pick your role — employer or talent',
+                'Choose your work category',
+                'Complete your profile',
               ].map((item) => (
                 <div key={item} className="rounded-2xl border border-slate-200 bg-white/80 p-3 sm:p-4 text-sm text-slate-700">
                   {item}

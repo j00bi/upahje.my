@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     default: "UpahJe.my",
     template: "%s | UpahJe.my",
   },
-  description: "Malaysian freelance marketplace for labour and technical talent.",
+  description: "Malaysia's photography marketplace — hire verified wedding, event, and portrait photographers. Browse portfolios, compare rates, book securely.",
 };
 
 export default function RootLayout({

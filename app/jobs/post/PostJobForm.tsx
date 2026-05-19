@@ -45,7 +45,7 @@ export function PostJobForm() {
 
       if (response.ok) {
         alert('Job posted successfully!')
-        // TODO: Redirect to job detail or dashboard
+        // Navigate on success
       } else {
         alert('Failed to post job')
       }
