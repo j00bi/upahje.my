@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { CategoryNav } from "@/components/navigation/CategoryNav";
 import Footer from "@/components/layout/Footer";
 import { AuthProvider } from "@/lib/supabase/auth-context";
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
     default: "UpahJe.my",
     template: "%s | UpahJe.my",
   },
-  description: "Malaysia's photography marketplace — hire verified wedding, event, and portrait photographers. Browse portfolios, compare rates, book securely.",
+  description: "Malaysia's creative talent marketplace — hire photographers, videographers, content creators, and more. Browse verified portfolios, compare rates, book securely.",
 };
 
 export default function RootLayout({
@@ -17,10 +18,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
-      <body className="min-h-screen flex flex-col bg-[radial-gradient(circle_at_top,_rgba(34,197,94,0.12),_transparent_38%),linear-gradient(180deg,_#f8fafc_0%,_#eefdf5_100%)] text-slate-950 max-w-full overflow-x-hidden">
+    <html lang="en" className="h-full antialiased dark">
+      <body className="min-h-screen flex flex-col bg-[#0a0a0a] text-white max-w-full overflow-x-hidden">
         <AuthProvider>
-          {children}
+          <CategoryNav />
+          <main className="flex-1">
+            {children}
+          </main>
           <Footer />
         </AuthProvider>
       </body>
