@@ -4,7 +4,10 @@ const supabase = createClient()
 
 export async function signUpWithEmail(email: string, password: string, role?: string) {
   // Construct the callback URL with the role parameter
-  const callbackUrl = new URL(window.location.origin)
+  const origin =
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000')
+  const callbackUrl = new URL(origin)
   callbackUrl.pathname = '/auth/callback'
   if (role) {
     callbackUrl.searchParams.set('role', role)
