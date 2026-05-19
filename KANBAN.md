@@ -7,11 +7,11 @@
 ## M0 – Foundation
 
 ### Status Overview
-- **Auth Track**: Complete (Auth Context + SignIn/SignUp pages + Role-based middleware + Protected Routes & Security + Profile Creation on Signup)
-- **Database Track**: In Progress (Prisma schema.prisma exists with initial models)
-- **Dashboard Track**: In Progress (Multiple dashboard pages and layout scaffolded)
+- **Auth Track**: Complete (Auth context + sign-in/sign-up pages + auth-only middleware + protected routes + profile creation on signup)
+- **Database Track**: In Progress (Prisma schema validated locally; seed data exists; live DB push blocked by Supabase auth credentials)
+- **Dashboard Track**: In Progress (Role-aware dashboards present and compiling against real auth state)
 - **Job Posting Track**: Complete (Form connected to database, validation implemented, employerId properly resolved)
-- **Overall Progress**: ~70% (Auth track complete with full RBAC + security enhancements; Job Posting track complete; remaining: data wiring, full onboarding)
+- **Overall Progress**: ~85% (foundation mostly complete locally; live database sync remains the blocker)
 
 ---
 
@@ -33,9 +33,9 @@
 | ID     | Task                                      | Status     | Owner   | Notes |
 |--------|-------------------------------------------|------------|---------|-------|
 || M0-D1  | Finalize Prisma schema                    | Done       | Codex   | prisma/schema.prisma present |
-|| M0-D2  | Create initial migrations                 | In Progress | Codex   | Check if migrations folder exists |
+|| M0-D2  | Create initial migrations                 | In Progress | Codex   | Prisma diff validated locally; live push blocked by DATABASE_URL auth |
 || M0-D3  | Set up Supabase client utilities          | Done       | Codex   | lib/supabase/config.ts + client |
-|| M0-D4  | Implement basic data access layer         | In Progress | Codex   | lib/actions/jobs.ts shows progress |
+|| M0-D4  | Implement basic data access layer         | In Progress | Codex   | lib/actions/jobs.ts + onboarding persistence now wired |
 
 ---
 
@@ -43,20 +43,20 @@
 
 | ID     | Task                                      | Status     | Owner   | Notes |
 |--------|-------------------------------------------|------------|---------|-------|
-| M0-DS1 | Create main dashboard layout              | To Do      | Codex   | - |
-| M0-DS2 | Build Employer dashboard page             | To Do      | Codex   | - |
-| M0-DS3 | Build Talent dashboard page               | To Do      | Codex   | - |
-| M0-DS4 | Connect dashboard with real data          | To Do      | Codex   | - |
+| M0-DS1 | Create main dashboard layout              | Done       | Codex   | Role-aware layout now redirects off real auth state |
+| M0-DS2 | Build Employer dashboard page             | Done       | Codex   | Employer dashboard compiles and reads Prisma-backed data |
+| M0-DS3 | Build Talent dashboard page               | Done       | Codex   | Talent dashboard scaffold present |
+| M0-DS4 | Connect dashboard with real data          | In Progress | Codex   | Data wiring works locally but still needs live DB sync verification |
 
 ---
 
 ## M1 – Onboarding
 
 ### Status Overview
-- **Labour Flow**: Not Started
-- **Employer Flow**: Not Started
-- **KYC Track**: Not Started
-- **Overall Progress**: 0%
+- **Labour Flow**: In Progress
+- **Employer Flow**: In Progress
+- **KYC Track**: In Progress
+- **Overall Progress**: ~50%
 
 ---
 
@@ -64,7 +64,7 @@
 
 | ID      | Task                                              | Status | Owner | Notes |
 |---------|---------------------------------------------------|--------|-------|-------|
-| M1-L1   | Finalize Labour role selection screen             | To Do  | Grok  | - |
+| M1-L1   | Finalize Labour role selection screen             | In Progress | Grok  | Best-of-N variants present in live onboarding flow |
 | M1-L2   | Design Labour quick registration (email + phone)  | To Do  | Grok  | Browse-only path |
 | M1-L3   | Design Labour full registration + KYC flow        | To Do  | Grok  | Full access path |
 | M1-L4   | Create Labour profile form (basic + advanced)     | To Do  | Grok  | - |
@@ -77,7 +77,7 @@
 
 | ID      | Task                                              | Status | Owner | Notes |
 |---------|---------------------------------------------------|--------|-------|-------|
-| M1-E1   | Design Employer role selection screen             | To Do  | Grok  | - |
+| M1-E1   | Design Employer role selection screen             | In Progress | Grok  | Best-of-N employer variants present in live onboarding flow |
 | M1-E2   | Create Employer quick registration flow           | To Do  | Grok  | - |
 | M1-E3   | Design Employer full onboarding (company info)    | To Do  | Grok  | - |
 | M1-E4   | Build job posting during onboarding (optional)    | To Do  | Grok  | - |
@@ -88,7 +88,7 @@
 
 | ID      | Task                                              | Status | Owner  | Notes |
 |---------|---------------------------------------------------|--------|--------|-------|
-| M1-K1   | Design KYC submission flow                        | To Do  | Codex  | - |
+| M1-K1   | Design KYC submission flow                        | In Progress | Codex  | Onboarding completion path is wired; MyKad path still needs DB/verification finish |
 | M1-K2   | Implement MyKad upload + OCR/preview              | To Do  | Codex  | - |
 | M1-K3   | Create backend verification status tracking       | To Do  | Codex  | - |
 | M1-K4   | Add KYC gate for job applications                 | To Do  | Codex  | Full access only |
@@ -106,7 +106,7 @@
 
 ## Blockers
 
-- None currently
+- Live Supabase database sync is blocked by invalid `DATABASE_URL` credentials.
 
 ## Next Review
 

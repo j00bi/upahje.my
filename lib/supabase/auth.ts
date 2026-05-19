@@ -2,10 +2,20 @@ import { createClient } from './client'
 
 const supabase = createClient()
 
-export async function signUpWithEmail(email: string, password: string) {
+export async function signUpWithEmail(email: string, password: string, role?: string) {
+  // Construct the callback URL with the role parameter
+  const callbackUrl = new URL(window.location.origin)
+  callbackUrl.pathname = '/auth/callback'
+  if (role) {
+    callbackUrl.searchParams.set('role', role)
+  }
+
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
+    options: {
+      emailRedirectTo: callbackUrl.toString(),
+    },
   })
   return { data, error }
 }
