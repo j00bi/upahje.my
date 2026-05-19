@@ -1,12 +1,13 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, use } from 'react'
 
 interface JobDetailProps {
-  params: { jobId: string }
+  params: Promise<{ jobId: string }>
 }
 
 export default function JobDetailPage({ params }: JobDetailProps) {
+  const { jobId } = use(params)
   const [proposal, setProposal] = useState('')
   const [isApplying, setIsApplying] = useState(false)
   const [applied, setApplied] = useState(false)
@@ -17,7 +18,7 @@ export default function JobDetailPage({ params }: JobDetailProps) {
     setIsApplying(true)
 
     try {
-      const response = await fetch(`/api/jobs/${params.jobId}/apply`, {
+      const response = await fetch(`/api/jobs/${jobId}/apply`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ proposal }),
@@ -40,7 +41,7 @@ export default function JobDetailPage({ params }: JobDetailProps) {
     <div className="max-w-3xl mx-auto p-6">
       <div className="mb-8">
         <h1 className="text-3xl font-semibold">Job Details</h1>
-        <p className="text-sm text-gray-500 mt-1">Job ID: {params.jobId}</p>
+        <p className="text-sm text-gray-500 mt-1">Job ID: {jobId}</p>
       </div>
 
       {/* Placeholder job info - in real app this would come from API */}

@@ -3,6 +3,8 @@ import { auth } from '@/lib/auth'
 import { PostJobForm } from './PostJobForm'
 import { getCurrentEmployerId } from '@/lib/actions/jobCreation'
 
+export const dynamic = 'force-dynamic'
+
 export default async function PostJobPage() {
   const session = await auth()
 
