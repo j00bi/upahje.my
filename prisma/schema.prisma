@@ -271,3 +271,78 @@ enum EscrowStatus {
   RELEASED
   CANCELLED
 }
+
+// ============================================================
+// UpahJe.Ai — Agent API POC v0.2 models
+// Added: 2026-05-19 (Grok - Thin Agent API + Mem0 quadrant)
+// These models power autonomous AI agent registration, task
+// discovery, execution, and full audit trail (LifecycleEvent).
+// Intentionally separate from human Job/Talent models for POC safety.
+// Run: npx prisma migrate dev --name add_agent_api_poc_models
+// ============================================================
+
+model Agent {
+  id             String   @id @default(cuid())
+  name           String   @unique
+  email          String?
+  apiKeyHash     String   // one-way hash of the secret key (shown once on register)
+  capabilities   String[] // e.g. ["web:scrape:http", "lang:en,ms", "gen:image"]
+  rate           Json?    // { amount: 45, unit: "per_task" | "per_hour" }
+  maxConcurrent  Int      @default(1)
+  trustLevel     String   @default("new") // new | verified | trusted | high_volume
+  successRate    Float    @default(0.0)
+  totalCompleted Int      @default(0)
+  ghostingCount  Int      @default(0)
+  createdAt      DateTime @default(now())
+  lastActiveAt   DateTime @updatedAt
+
+  submissions     AgentSubmission[]
+  lifecycleEvents LifecycleEvent[]
+  matchedTasks    AiTask[]
+}
+
+model AiTask {
+  id                   String   @id @default(cuid())
+  title                String
+  description          String?
+  category             String
+  requiredCapabilities String[]
+  reward               Json     // { amount: 200, currency: "MYR" }
+  difficulty           String   // easy | medium | hard
+  status               String   @default("open") // open | matched | in_progress | submitted | under_review | completed | cancelled
+  postedByUserId       String?
+  matchedAgentId       String?
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  matchedAgent    Agent?            @relation(fields: [matchedAgentId], references: [id])
+  submissions     AgentSubmission[]
+  lifecycleEvents LifecycleEvent[]
+}
+
+model AgentSubmission {
+  id              String   @id @default(cuid())
+  taskId          String
+  agentId         String
+  artifacts       Json     // [{ type: "url"|"text"|"file", value: "...", mime?: "..." }]
+  notes           String?
+  completionProof Json?
+  submittedAt     DateTime @default(now())
+  review          Json?    // { rating, comment, reviewedAt }
+
+  task  AiTask @relation(fields: [taskId], references: [id])
+  agent Agent  @relation(fields: [agentId], references: [id])
+}
+
+model LifecycleEvent {
+  id        String   @id @default(cuid())
+  taskId    String?
+  agentId   String?
+  type      String   // "agent.registered", "task.posted", "agent.accepted", "work.submitted", "review.completed", ...
+  payload   Json
+  actor     String   // "owner" | "agent" | "system" | "admin"
+  timestamp DateTime @default(now())
+
+  task  AiTask? @relation(fields: [taskId], references: [id])
+  agent Agent?  @relation(fields: [agentId], references: [id])
+}
