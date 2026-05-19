@@ -2,17 +2,17 @@
 
 **Last Updated**: 2026-05-19
 **Roadmap**: M0–M7 active (see docs/M0-TO-M7-ROADMAP.md)
-**Overall Progress**: ~32%
+**Overall Progress**: ~34%
 **Go-Live Target**: Late July – Early August 2026
 
 ## M0 – Foundation
 
 ### Status Overview
 - **Auth Track**: Complete (Auth context + sign-in/sign-up pages + auth-only middleware + protected routes + profile creation on signup)
-- **Database Track**: In Progress (Prisma schema validated locally; seed data exists; live DB push blocked by Supabase auth credentials)
-- **Dashboard Track**: In Progress (Role-aware dashboards present and compiling against real auth state)
+- **Database Track**: In Progress (Prisma schema validated locally; seed data exists; live DB push reaches Supabase but fails with P1001 because the server is unreachable here)
+- **Dashboard Track**: In Progress (Role-aware dashboards present and compiling against real auth state; build/typecheck are green again)
 - **Job Posting Track**: Complete (Form connected to database, validation implemented, employerId properly resolved)
-- **Overall Progress**: ~85% (foundation mostly complete locally; live database sync remains the blocker)
+- **Overall Progress**: ~88% (foundation mostly complete locally; live database sync remains the blocker)
 
 ---
 
@@ -34,7 +34,7 @@
 | ID     | Task                                      | Status     | Owner   | Notes |
 |--------|-------------------------------------------|------------|---------|-------|
 || M0-D1  | Finalize Prisma schema                    | Done       | Codex   | prisma/schema.prisma present |
-|| M0-D2  | Create initial migrations                 | In Progress | Codex   | Prisma diff validated locally; seed aligned to current AiTask schema; live push blocked by DATABASE_URL auth |
+|| M0-D2  | Create initial migrations                 | In Progress | Codex   | Prisma diff validated locally; seed aligned to current AiTask schema; live push reaches Supabase but fails with P1001 connectivity |
 || M0-D3  | Set up Supabase client utilities          | Done       | Codex   | lib/supabase/config.ts + client |
 || M0-D4  | Implement basic data access layer         | In Progress | Codex   | lib/actions/jobs.ts + onboarding persistence wired; onboarding completion now uses the repo auth bridge and persists to Prisma models |
 
@@ -47,7 +47,7 @@
 | M0-DS1 | Create main dashboard layout              | Done       | Codex   | Role-aware layout now redirects off real auth state |
 | M0-DS2 | Build Employer dashboard page             | Done       | Codex   | Employer dashboard compiles and reads Prisma-backed data |
 | M0-DS3 | Build Talent dashboard page               | Done       | Codex   | Talent dashboard scaffold present |
-| M0-DS4 | Connect dashboard with real data          | In Progress | Codex   | Data wiring works locally; build is green, but live DB sync verification is still blocked |
+| M0-DS4 | Connect dashboard with real data          | In Progress | Codex   | Data wiring works locally; build and typecheck are green, but live DB sync verification is still blocked |
 
 ---
 
@@ -107,7 +107,7 @@
 
 ## Blockers
 
-- Live Supabase database sync is blocked by invalid `DATABASE_URL` credentials.
+- Live Supabase database sync is blocked by unreachable Supabase database connectivity from this environment.
 
 ## Next Review
 
