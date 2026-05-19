@@ -30,6 +30,7 @@
 
 ## Recent Activity
 
+- 2026-05-19: Removed stale NextAuth usage from onboarding completion, aligned AiTask seeding to the current Prisma schema, and fixed the last explicit `any` lint errors in task accept/submit routes; production build is green again
 - 2026-05-19: Wired onboarding completion to Prisma-backed profile/talent/employer writes, removed edge Prisma from middleware, fixed build/type errors, and validated the live app build
 - 2026-05-19: Prisma schema diff validated locally; live `prisma db push` blocked by Supabase auth credentials on `DATABASE_URL`
 - 2026-05-19: Updated tracking to reflect the actual codebase state after the auth/onboarding/database pass

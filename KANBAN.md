@@ -34,9 +34,9 @@
 | ID     | Task                                      | Status     | Owner   | Notes |
 |--------|-------------------------------------------|------------|---------|-------|
 || M0-D1  | Finalize Prisma schema                    | Done       | Codex   | prisma/schema.prisma present |
-|| M0-D2  | Create initial migrations                 | In Progress | Codex   | Prisma diff validated locally; live push blocked by DATABASE_URL auth |
+|| M0-D2  | Create initial migrations                 | In Progress | Codex   | Prisma diff validated locally; seed aligned to current AiTask schema; live push blocked by DATABASE_URL auth |
 || M0-D3  | Set up Supabase client utilities          | Done       | Codex   | lib/supabase/config.ts + client |
-|| M0-D4  | Implement basic data access layer         | In Progress | Codex   | lib/actions/jobs.ts + onboarding persistence now wired |
+|| M0-D4  | Implement basic data access layer         | In Progress | Codex   | lib/actions/jobs.ts + onboarding persistence wired; onboarding completion now uses the repo auth bridge and persists to Prisma models |
 
 ---
 
@@ -47,7 +47,7 @@
 | M0-DS1 | Create main dashboard layout              | Done       | Codex   | Role-aware layout now redirects off real auth state |
 | M0-DS2 | Build Employer dashboard page             | Done       | Codex   | Employer dashboard compiles and reads Prisma-backed data |
 | M0-DS3 | Build Talent dashboard page               | Done       | Codex   | Talent dashboard scaffold present |
-| M0-DS4 | Connect dashboard with real data          | In Progress | Codex   | Data wiring works locally but still needs live DB sync verification |
+| M0-DS4 | Connect dashboard with real data          | In Progress | Codex   | Data wiring works locally; build is green, but live DB sync verification is still blocked |
 
 ---
 

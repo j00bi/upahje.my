@@ -1,14 +1,12 @@
-import { NextRequest, NextResponse } from 'next/server'
-import { Role, Track } from '@prisma/client'
-import { auth, ensureLocalUser } from '@/lib/auth'
+import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { auth, ensureLocalUser } from '@/lib/auth'
+import { LABOUR_CATEGORIES, TECHNICAL_CATEGORIES } from '@/lib/domain'
+import type { Track } from '@prisma/client'
 
-type OnboardingRole = 'TALENT' | 'EMPLOYER'
-
-interface OnboardingPayload {
-  role: OnboardingRole
-  track?: Track | 'LABOUR' | 'TECHNICAL' | string
-  variant?: string | null
+type OnboardingPayload = {
+  role?: 'TALENT' | 'EMPLOYER'
+  track?: Track
   data?: {
     fullName?: string
     phone?: string
@@ -17,143 +15,120 @@ interface OnboardingPayload {
     rate?: string
     availability?: string
     categories?: string[]
-    skills?: string[]
-    portfolioLinks?: string[]
-    certifications?: string[]
+    labourCategories?: string[]
+    techCategories?: string[]
     company?: string
-    contactName?: string
-    contact?: string
-    email?: string
+    quickStart?: boolean
   }
 }
 
-function normalizeRole(role: unknown): OnboardingRole | null {
-  if (role === 'EMPLOYER' || role === 'TALENT') {
-    return role
-  }
+function resolveCategoryNames(payload: OnboardingPayload['data'], track: Track) {
+  const selected = payload?.categories ?? []
+  const explicit =
+    track === 'LABOUR'
+      ? payload?.labourCategories ?? []
+      : payload?.techCategories ?? []
 
-  if (role === 'employer') return 'EMPLOYER'
-  if (role === 'talent') return 'TALENT'
+  const ids = [...new Set([...selected, ...explicit])]
 
-  return null
+  const source = track === 'LABOUR' ? LABOUR_CATEGORIES : TECHNICAL_CATEGORIES
+  return ids
+    .map((id) => source.find((category) => category.id === id))
+    .filter((category): category is (typeof source)[number] => Boolean(category))
+    .map((category) => category.name)
 }
 
-function normalizeTrack(track: unknown): Track {
-  return track === 'TECHNICAL' ? 'TECHNICAL' : 'LABOUR'
-}
-
-export async function POST(request: NextRequest) {
+export async function POST(req: Request) {
   try {
     const session = await auth()
-    
-    if (!session?.user) {
-      return NextResponse.json(
-        { error: 'Unauthorized' },
-        { status: 401 }
-      )
+    if (!session?.user?.id) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
     const localUser = await ensureLocalUser(session.user)
-
-    const body = (await request.json()) as Partial<OnboardingPayload>
-    const role = normalizeRole(body.role)
-
-    if (!role) {
-      return NextResponse.json(
-        { error: 'Invalid role specified' },
-        { status: 400 }
-      )
-    }
-
+    const body = (await req.json()) as OnboardingPayload
+    const role = body.role ?? 'TALENT'
+    const track = body.track ?? 'TECHNICAL'
     const data = body.data ?? {}
-    const track = normalizeTrack(body.track)
 
-    const profile = await prisma.$transaction(async (tx) => {
-      const updatedProfile = await tx.profile.upsert({
+    const profile = await prisma.profile.upsert({
+      where: { userId: localUser.id },
+      update: {
+        role,
+        phone: data.phone || null,
+        state: data.location || null,
+        area: data.location || null,
+      },
+      create: {
+        userId: localUser.id,
+        role,
+        phone: data.phone || null,
+        state: data.location || null,
+        area: data.location || null,
+      },
+    })
+
+    if (role === 'TALENT') {
+      const talent = await prisma.talent.upsert({
         where: { userId: localUser.id },
+        update: {
+          track,
+          bio: data.bio || null,
+          rate: data.rate || null,
+          availability: data.availability || null,
+        },
         create: {
           userId: localUser.id,
-          role: role === 'EMPLOYER' ? Role.EMPLOYER : Role.TALENT,
-          phone: data.phone?.trim() || null,
-          area: data.location?.trim() || null,
-          state: data.location?.trim() || null,
-        },
-        update: {
-          role: role === 'EMPLOYER' ? Role.EMPLOYER : Role.TALENT,
-          phone: data.phone?.trim() || null,
-          area: data.location?.trim() || null,
-          state: data.location?.trim() || null,
+          track,
+          bio: data.bio || null,
+          rate: data.rate || null,
+          availability: data.availability || null,
         },
       })
 
-      if (role === 'TALENT') {
-        const talent = await tx.talent.upsert({
-          where: { userId: localUser.id },
-          create: {
-            userId: localUser.id,
+      const categoryNames = resolveCategoryNames(data, track)
+      if (categoryNames.length > 0) {
+        const categories = await prisma.category.findMany({
+          where: {
             track,
-            bio: data.bio?.trim() || null,
-            rate: data.rate?.trim() || null,
-            availability: data.availability?.trim() || null,
+            name: { in: categoryNames },
           },
-          update: {
-            track,
-            bio: data.bio?.trim() || null,
-            rate: data.rate?.trim() || null,
-            availability: data.availability?.trim() || null,
-          },
+          select: { id: true },
         })
 
-        if (Array.isArray(data.categories) && data.categories.length > 0) {
-          const validCategories = await tx.category.findMany({
-            where: {
-              id: { in: data.categories },
-              track,
-            },
-            select: { id: true },
-          })
+        await prisma.talentCategory.deleteMany({
+          where: { talentId: talent.id },
+        })
 
-          await tx.talentCategory.deleteMany({
-            where: { talentId: talent.id },
-          })
-
-          if (validCategories.length > 0) {
-            await tx.talentCategory.createMany({
-              data: validCategories.map((category) => ({
-                talentId: talent.id,
-                categoryId: category.id,
-              })),
-              skipDuplicates: true,
-            })
-          }
-        }
-      }
-
-      if (role === 'EMPLOYER') {
-        await tx.employer.upsert({
-          where: { userId: localUser.id },
-          create: {
-            userId: localUser.id,
-            company: data.company?.trim() || data.contactName?.trim() || data.contact?.trim() || null,
-          },
-          update: {
-            company: data.company?.trim() || data.contactName?.trim() || data.contact?.trim() || null,
-          },
+        await prisma.talentCategory.createMany({
+          data: categories.map((category) => ({
+            talentId: talent.id,
+            categoryId: category.id,
+          })),
+          skipDuplicates: true,
         })
       }
+    } else if (role === 'EMPLOYER') {
+      await prisma.employer.upsert({
+        where: { userId: localUser.id },
+        update: {
+          company: data.company || null,
+        },
+        create: {
+          userId: localUser.id,
+          company: data.company || null,
+        },
+      })
+    }
 
-      return updatedProfile
+    return NextResponse.json({
+      success: true,
+      profileId: profile.id,
+      role,
+      track,
     })
-
-    return NextResponse.json(
-      { success: true, role, profileId: profile.id },
-      { status: 200 }
-    )
   } catch (error) {
-    console.error('Onboarding completion error:', error)
-    return NextResponse.json(
-      { error: 'Failed to complete onboarding' },
-      { status: 500 }
-    )
+    console.error('Onboarding complete error:', error)
+    return NextResponse.json({ error: 'Failed to save profile' }, { status: 500 })
   }
 }
