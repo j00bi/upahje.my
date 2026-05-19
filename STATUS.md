@@ -1,9 +1,9 @@
 # UpahJe.My — Project Status
 
 **Last Updated**: 2026-05-19
-**Current Phase**: M0 – Foundation (Active Codex Goal)
-**Orchestration Model**: Parallel Multi-Agent
-**Active Goal**: Hermes orchestration goal active — Drive M0 + Onboarding Integration to clean M2 handoff
+**Current Phase**: M0 – Foundation + Onboarding Integration
+**Active Goal**: Drive M0 + Onboarding Integration to clean M2 handoff
+**Winner Selection**: Completed (see ONBOARDING-WINNER-SELECTION.md)
 
 ## Overall Progress
 

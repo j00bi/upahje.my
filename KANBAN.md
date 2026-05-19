@@ -2,7 +2,8 @@
 
 **Last Updated**: 2026-05-19
 **Orchestration Model**: Parallel Multi-Agent
-**Active Goal**: Hermes — Drive M0 + Onboarding Integration to clean M2 handoff (Codex executing full foundation goal)
+**Active Goal**: Drive M0 + Onboarding Integration to clean M2 handoff
+**Winner Selection**: Completed — Labour D (Hybrid), Technical B+A mix, Employer E1 (see ONBOARDING-WINNER-SELECTION.md)
 
 ## M0 – Foundation
 
