@@ -45,7 +45,7 @@ export function CategoryNav() {
           </Link>
           <Link
             href="/onboarding"
-            className="inline-flex h-8 items-center rounded-full bg-amber-500 px-4 text-xs font-semibold text-black transition-colors hover:bg-amber-400"
+            className="inline-flex h-8 items-center rounded-full bg-white px-4 text-xs font-semibold text-black transition-colors hover:bg-zinc-200"
           >
             Sign Up
           </Link>
@@ -97,7 +97,7 @@ export function CategoryNav() {
               <Link
                 href="/jobs"
                 onClick={() => setMobileMenuOpen(false)}
-                className="flex-1 rounded-xl bg-amber-500 py-2.5 text-center text-xs font-semibold text-black transition-colors hover:bg-amber-400"
+                className="flex-1 rounded-xl bg-white py-2.5 text-center text-xs font-semibold text-black transition-colors hover:bg-zinc-200"
               >
                 Browse Jobs
               </Link>

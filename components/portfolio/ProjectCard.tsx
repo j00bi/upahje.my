@@ -45,7 +45,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
                   e.stopPropagation()
                   setLiked(!liked)
                 }}
-                className="flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-sm px-3 py-1.5 text-xs font-medium text-white/90 hover:bg-amber-500/80 transition-colors"
+                className="flex items-center gap-1.5 rounded-full bg-black/60 backdrop-blur-sm px-3 py-1.5 text-xs font-medium text-white/90 hover:bg-white/20 transition-colors"
               >
                 <svg className={`w-3.5 h-3.5 ${liked ? 'text-amber-400 fill-amber-400' : ''}`} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
                   <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />

@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="space-y-3">
-            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-amber-500">
+            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-white">
               UpahJe.my
             </div>
             <p className="text-sm text-zinc-500">

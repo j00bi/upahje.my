@@ -21,16 +21,16 @@ export default function HomePage() {
     <div className="min-h-screen bg-gradient-to-b from-[#0a0a0a] via-[#141414] to-black text-white">
       {/* ─── Hero — Marketplace ─── */}
       <section className="relative overflow-hidden px-4 pt-20 pb-16 sm:px-6 sm:pt-28 lg:px-8">
-        <div className="pointer-events-none absolute -right-48 -top-48 h-[600px] w-[600px] rounded-full bg-amber-500/5 blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-amber-500/10 blur-3xl" />
+        <div className="absolute -right-48 -top-48 h-[600px] w-[600px] rounded-full bg-white/[0.02] blur-3xl pointer-events-none" />
+        <div className="absolute -bottom-40 -left-40 h-[500px] w-[500px] rounded-full bg-white/[0.03] blur-3xl pointer-events-none" />
 
         <div className="relative mx-auto max-w-5xl text-center">
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-amber-500/20 bg-amber-500/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-amber-400">
+          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-4 py-1.5 text-xs font-semibold tracking-wide text-zinc-300">
             🇲🇾 Malaysia's Creative Talent Marketplace
           </div>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             Find & Hire{' '}
-            <span className="text-amber-400">Creative Talent</span>{' '}
+            <span className="text-white">Creative Talent</span>{' '}
             in Malaysia
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-zinc-400">
@@ -40,7 +40,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/categories/photography"
-              className="inline-flex h-12 w-full items-center justify-center rounded-2xl bg-amber-500 px-8 text-sm font-semibold text-black shadow-sm transition-all hover:bg-amber-400 sm:w-auto"
+              className="inline-flex h-12 w-full items-center justify-center rounded-2xl bg-white px-8 text-sm font-semibold text-black shadow-sm transition-all hover:bg-zinc-200 sm:w-auto"
             >
               Browse Talent
             </Link>
@@ -69,7 +69,7 @@ export default function HomePage() {
             <Link
               key={cat.id}
               href={`/categories/${cat.slug}`}
-              className="group flex flex-col items-center gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-4 transition-all hover:border-amber-500/30 hover:bg-zinc-900 hover:shadow-lg hover:shadow-amber-500/5"
+              className="group flex flex-col items-center gap-2 rounded-2xl border border-zinc-800 bg-zinc-900/50 p-4 transition-all hover:border-white/10 hover:bg-zinc-900"
             >
               <span className="text-2xl transition-transform group-hover:scale-110">{cat.emoji}</span>
               <span className="text-xs font-medium text-zinc-400 group-hover:text-white transition-colors">{cat.name}</span>
@@ -86,7 +86,7 @@ export default function HomePage() {
             <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">Featured Talent</h2>
             <p className="mt-2 text-sm text-zinc-500">Top-rated creatives near you</p>
           </div>
-          <Link href="/categories/photography" className="hidden text-sm font-medium text-amber-400 hover:text-amber-300 sm:inline">
+          <Link href="/categories/photography" className="hidden text-sm font-medium text-zinc-300 hover:text-white sm:inline transition-colors">
             View all →
           </Link>
         </div>
@@ -95,7 +95,7 @@ export default function HomePage() {
             <Link
               key={t.name}
               href={`/talent/${t.slug}`}
-              className="group relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 transition-all hover:border-amber-500/30 hover:shadow-xl hover:shadow-amber-500/5"
+              className="group relative overflow-hidden rounded-3xl border border-zinc-800 bg-zinc-900 transition-all hover:border-white/10"
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <Image
@@ -113,12 +113,12 @@ export default function HomePage() {
                     <p className="text-xs text-zinc-400">{t.category} · {t.specialty}</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-sm font-medium text-amber-400">{t.rate}</div>
+                    <div className="text-sm font-medium text-white">{t.rate}</div>
                     <div className="text-xs text-zinc-500">{t.location}</div>
                   </div>
                 </div>
                 <div className="mt-2 flex items-center gap-2 text-xs text-zinc-400">
-                  <span className="text-amber-400">{'★'.repeat(Math.round(t.rating))}</span>
+                  <span className="text-zinc-300">{'★'.repeat(Math.round(t.rating))}</span>
                   <span>{t.rating} ({t.reviews} reviews)</span>
                 </div>
               </div>
@@ -139,12 +139,12 @@ export default function HomePage() {
           {howItWorks.map((step, i) => (
             <div
               key={step.title}
-              className="group rounded-3xl border border-zinc-800 bg-zinc-900/50 p-6 transition-all hover:border-amber-500/20 hover:bg-zinc-900"
+              className="group rounded-3xl border border-zinc-800 bg-zinc-900/50 p-6 transition-all hover:border-white/10 hover:bg-zinc-900"
             >
               <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-zinc-800 text-xl">
                 {step.icon}
               </div>
-              <div className="text-sm font-semibold tracking-wider text-amber-400">
+              <div className="text-sm font-semibold tracking-wider text-zinc-400">
                 0{i + 1}
               </div>
               <h3 className="mt-2 text-lg font-semibold text-white">{step.title}</h3>
@@ -154,7 +154,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ─── Portfolio Showcase — Behance-style ─── */}
+      {/* ─── Portfolio Showcase ─── */}
       <section className="mx-auto max-w-6xl px-4 pb-24 sm:px-6 lg:px-8">
         <PortfolioGrid
           projects={portfolioProjects.slice(0, 6)}
@@ -168,7 +168,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-3xl px-4 pb-24 sm:px-6 lg:px-8">
         <div className="rounded-3xl border border-zinc-800 bg-zinc-900/50 p-8 sm:p-12">
           <div className="mx-auto max-w-2xl text-center">
-            <div className="text-4xl text-amber-400">"</div>
+            <div className="text-4xl text-zinc-400">"</div>
             <p className="mt-2 text-lg leading-relaxed text-zinc-300">
               Found our wedding photographer on UpahJe in under a day. We viewed portfolios,
               compared packages, and booked Aina — she was amazing. The deposit via FPX
@@ -194,7 +194,7 @@ export default function HomePage() {
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/categories/photography"
-              className="inline-flex h-12 w-full items-center justify-center rounded-2xl bg-amber-500 px-8 text-sm font-semibold text-black shadow-sm transition-all hover:bg-amber-400 sm:w-auto"
+              className="inline-flex h-12 w-full items-center justify-center rounded-2xl bg-white px-8 text-sm font-semibold text-black shadow-sm transition-all hover:bg-zinc-200 sm:w-auto"
             >
               Browse Talent
             </Link>
