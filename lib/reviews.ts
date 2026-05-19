@@ -32,7 +32,10 @@ export async function createReview(
   // Check if job exists and is completed
   const job = await prisma.job.findUnique({
     where: { id: jobId },
-    include: { employer: true, talent: true }
+    include: {
+      employer: { include: { user: true } },
+      talent: { include: { user: true } },
+    },
   })
 
   if (!job) {
@@ -52,9 +55,14 @@ export async function createReview(
     throw new Error('Review already exists for this job')
   }
 
-  // Validate that fromUserId and toUserId are correct
-  const isEmployerReviewingTalent = job.employerId === fromUserId && job.talentId === toUserId
-  const isTalentReviewingEmployer = job.talentId === fromUserId && job.employerId === toUserId
+  // Validate participants using the correct IDs:
+  // - fromUserId / toUserId coming from the Supabase → local Prisma User bridge (User.id)
+  // - Job stores specialized Employer.id / Talent.id, which have .userId back to User
+  const employerUserId = job.employer?.userId
+  const talentUserId = job.talent?.userId
+
+  const isEmployerReviewingTalent = employerUserId === fromUserId && talentUserId === toUserId
+  const isTalentReviewingEmployer = talentUserId === fromUserId && employerUserId === toUserId
 
   if (!isEmployerReviewingTalent && !isTalentReviewingEmployer) {
     throw new Error('Invalid review participants')

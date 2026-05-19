@@ -76,14 +76,67 @@ export function OnboardingFlow() {
     }
   }
 
-  const handleProfileComplete = (profileData: LabourOnboardingData | TechnicalOnboardingData) => {
-    console.log('[Best-of-N] Labour profile completed via variant:', selectedVariant, profileData)
-    alert(`✅ Labour ${selectedVariant} variant captured!\n\nIn production this would create the Talent + Profile records via Prisma/Supabase and redirect to the dashboard.`)
+  const handleProfileComplete = async (profileData: LabourOnboardingData | TechnicalOnboardingData) => {
+    console.log('[Best-of-N] Profile completed via variant:', selectedVariant, profileData)
+
+    try {
+      const response = await fetch('/api/onboarding/complete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          role: role === 'employer' ? 'EMPLOYER' : 'TALENT',
+          track: track,
+          variant: selectedVariant,
+          data: profileData,
+        }),
+      })
+
+      if (response.ok) {
+        const result = await response.json()
+        console.log('Profile saved successfully:', result)
+
+        // Redirect based on role
+        if (role === 'employer') {
+          window.location.href = '/dashboard/employer'
+        } else {
+          window.location.href = '/dashboard/talent'
+        }
+      } else {
+        const error = await response.json()
+        alert(`Failed to save profile: ${error.error || 'Unknown error'}`)
+      }
+    } catch {
+      console.error('Error saving profile:')
+      alert('Something went wrong while saving your profile. Please try again.')
+    }
   }
 
-  const handleEmployerComplete = (empData: EmployerOnboardingData) => {
+  const handleEmployerComplete = async (empData: EmployerOnboardingData) => {
     console.log('[Best-of-N] Employer profile via', employerVariant, empData)
-    alert(`✅ Employer flow ${employerVariant} captured! Company: ${empData.company || empData.jobTitle}\n\nWould create Employer + first Job (if fast path) and go to dashboard.`)
+    
+    try {
+      // Save role to profile in database
+      const response = await fetch('/api/onboarding/complete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          role: 'EMPLOYER',
+          variant: employerVariant,
+          data: empData,
+        }),
+      })
+      
+      if (response.ok) {
+        alert(`✅ Employer flow ${employerVariant} captured! Company: ${empData.company || empData.jobTitle}\n\nRedirecting to dashboard...`)
+        window.location.href = '/dashboard/employer'
+      } else {
+        const error = await response.json()
+        alert(`Error: ${error.message || 'Failed to save profile'}`)
+      }
+    } catch {
+      console.error('Error saving profile:')
+      alert('An error occurred while saving your profile. Please try again.')
+    }
   }
 
   return (

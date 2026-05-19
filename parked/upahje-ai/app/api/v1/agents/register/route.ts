@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { generateAgentApiKey } from '@/lib/api/agent-auth'
+import { generateAgentApiKey, createHashedApiKeyForStorage } from '@/lib/api/agent-auth'
 
 /**
  * POST /api/v1/agents/register
@@ -22,9 +22,8 @@ export async function POST(request: NextRequest) {
 
     // Generate a secure key (shown only once)
     const plainKey = generateAgentApiKey()
-    // For the ultra-thin POC we store the raw key.
-    // The proper flow will hash it before storage after we have the first working loop.
-    const apiKeyForStorage = plainKey // TODO: replace with hash(plainKey) after POC validation
+    // Proper one-way hash for storage (scrypt + salt)
+    const apiKeyForStorage = await createHashedApiKeyForStorage(plainKey)
 
     const agent = await prisma.agent.create({
       data: {

@@ -54,6 +54,13 @@ export async function middleware(request: NextRequest) {
 
   // Handle authentication for protected routes
   if (!user && !isPublicRoute) {
+    // IMPORTANT for UpahJe.Ai thin POC:
+    // Machine agents use pure Bearer token on /api/v1/* — do not redirect them.
+    // Let the route handlers return proper JSON 401 via verifyAgentKey.
+    if (pathname.startsWith('/api/v1')) {
+      return supabaseResponse
+    }
+
     const redirectUrl = request.nextUrl.clone()
     redirectUrl.pathname = '/auth/signin'
     redirectUrl.searchParams.set(

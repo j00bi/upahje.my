@@ -1,10 +1,16 @@
-export function getSupabaseConfig() {
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
-  const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+import { getValidatedSupabaseConfig } from './config-validation'
 
-  if (!url || !key) {
-    throw new Error('Missing Supabase environment variables')
+export function getSupabaseConfig() {
+  const config = getValidatedSupabaseConfig()
+  return { url: config.url, key: config.anonKey }
+}
+
+export function getSupabaseAdminConfig() {
+  const config = getValidatedSupabaseConfig()
+  
+  if (!config.serviceRoleKey) {
+    throw new Error('Missing Supabase service role key (SUPABASE_SERVICE_ROLE_KEY)')
   }
 
-  return { url, key }
+  return { url: config.url, serviceRoleKey: config.serviceRoleKey }
 }

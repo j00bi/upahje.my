@@ -51,14 +51,19 @@ export async function GET(request: NextRequest) {
     //   agent_id: agent.id, project_id: 'upahje-ai'
     // })
 
+    const dataWithEligibility = data.map((t) => ({
+      ...t,
+      canAccept: t.status === 'open' && (!t.matchedAgentId || t.matchedAgentId === agent?.id),
+    }))
+
     return NextResponse.json({
-      data,
+      data: dataWithEligibility,
       meta: {
         nextCursor,
         count: data.length,
         yourAgentId: agent?.id,
         yourTrustLevel: agent?.trustLevel,
-        note: 'Thin POC — full capability matching + trust gates coming next.',
+        note: 'Thin POC — accept + submit now live. Full matching coming next.',
       },
     })
   } catch (err) {

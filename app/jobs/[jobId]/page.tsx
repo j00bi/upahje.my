@@ -1,73 +1,81 @@
-import Link from 'next/link'
-import { createClient } from '@/lib/supabase/server'
+'use client'
 
-export default async function JobDetailPage({ params }: { params: Promise<{ jobId: string }> }) {
-  const { jobId } = await params
-  const supabase = await createClient()
+import { useState } from 'react'
 
-  const { data: job } = await supabase
-    .from('Job')
-    .select(`
-      id,
-      title,
-      description,
-      rate,
-      location,
-      track,
-      status,
-      createdAt,
-      employer:Employer(
-        companyName,
-        user:User(name)
-      )
-    `)
-    .eq('id', jobId)
-    .single()
+interface JobDetailProps {
+  params: { jobId: string }
+}
 
-  if (!job) {
-    return (
-      <main className="mx-auto max-w-3xl px-4 py-12 text-center">
-        <h1 className="text-2xl font-semibold mb-4">Job not found</h1>
-        <Link href="/jobs" className="text-emerald-700 hover:underline">← Back to jobs</Link>
-      </main>
-    )
+export default function JobDetailPage({ params }: JobDetailProps) {
+  const [proposal, setProposal] = useState('')
+  const [isApplying, setIsApplying] = useState(false)
+  const [applied, setApplied] = useState(false)
+
+  const handleApply = async () => {
+    if (!proposal.trim()) return alert('Please write a short proposal')
+
+    setIsApplying(true)
+
+    try {
+      const response = await fetch(`/api/jobs/${params.jobId}/apply`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ proposal }),
+      })
+
+      if (response.ok) {
+        setApplied(true)
+        alert('Application submitted!')
+      } else {
+        alert('Failed to submit application')
+      }
+    } catch {
+      alert('Error submitting application')
+    } finally {
+      setIsApplying(false)
+    }
   }
 
   return (
-    <main className="mx-auto max-w-3xl px-4 py-12">
-      <div className="mb-6">
-        <Link href="/jobs" className="text-sm text-emerald-700 hover:underline">← Back to all jobs</Link>
+    <div className="max-w-3xl mx-auto p-6">
+      <div className="mb-8">
+        <h1 className="text-3xl font-semibold">Job Details</h1>
+        <p className="text-sm text-gray-500 mt-1">Job ID: {params.jobId}</p>
       </div>
 
-      <div className="rounded-2xl border border-slate-200 bg-white p-8">
-        <div className="mb-4 flex items-center gap-3">
-          <span className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-900">
-            {job.status}
-          </span>
-          <span className="text-sm text-slate-500">{job.track}</span>
-        </div>
-
-        <h1 className="text-3xl font-semibold tracking-tight mb-2">{job.title}</h1>
-        
-        <div className="flex items-center gap-4 text-sm text-slate-600 mb-6">
-          <span>{job.location}</span>
-          <span>•</span>
-          <span className="font-medium text-emerald-700">{job.rate}</span>
-        </div>
-
-        <div className="prose max-w-none text-slate-700 mb-8">
-          <p>{job.description || 'No description provided.'}</p>
-        </div>
-
-        <div className="pt-6 border-t flex flex-col sm:flex-row gap-3">
-          <button className="flex-1 rounded-full bg-emerald-700 py-3 text-white font-semibold hover:bg-emerald-800">
-            Contact Employer
-          </button>
-          <button className="flex-1 rounded-full border border-slate-300 py-3 font-semibold hover:bg-slate-50">
-            Save for Later
-          </button>
+      {/* Placeholder job info - in real app this would come from API */}
+      <div className="border rounded-3xl p-8 mb-8">
+        <h2 className="text-2xl font-semibold mb-4">Job Title</h2>
+        <div className="space-y-4 text-gray-700">
+          <p><strong>Location:</strong> Kajang, Selangor</p>
+          <p><strong>Rate:</strong> RM 80 – 150</p>
+          <p><strong>Description:</strong> Looking for an experienced painter for a 3-bedroom house. Must have own tools and transport.</p>
         </div>
       </div>
-    </main>
+
+      {!applied ? (
+        <div className="border rounded-3xl p-8">
+          <h3 className="font-semibold mb-4">Apply for this job</h3>
+          <textarea
+            value={proposal}
+            onChange={(e) => setProposal(e.target.value)}
+            placeholder="Write a short proposal explaining why you're a good fit..."
+            className="w-full border rounded-2xl p-4 h-32 mb-4"
+          />
+          <button
+            onClick={handleApply}
+            disabled={isApplying || !proposal.trim()}
+            className="w-full py-4 bg-green-600 text-white font-semibold rounded-3xl disabled:bg-gray-300"
+          >
+            {isApplying ? 'Submitting...' : 'Submit Application'}
+          </button>
+        </div>
+      ) : (
+        <div className="text-center py-8 border rounded-3xl">
+          <p className="text-green-600 font-medium">Application submitted successfully!</p>
+          <p className="text-sm text-gray-600 mt-2">You can track status in your dashboard.</p>
+        </div>
+      )}
+    </div>
   )
 }

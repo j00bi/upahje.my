@@ -2,10 +2,16 @@ import { NextResponse } from 'next/server'
 
 export async function POST(request: Request) {
   try {
-    const [{ holdPayment }, { prisma }] = await Promise.all([
+    const [{ holdPayment }, { prisma }, { auth }] = await Promise.all([
       import('@/lib/escrow'),
       import('@/lib/prisma'),
+      import('@/lib/auth'),
     ])
+
+    const session = await auth()
+    if (!session?.user?.email) {
+      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+    }
 
     const { jobId, amount, billplzTransactionId } = await request.json()
 
@@ -19,7 +25,14 @@ export async function POST(request: Request) {
     // Verify the job exists and is in MATCHED status
     const job = await prisma.job.findUnique({
       where: { id: jobId },
-      include: { employer: true, talent: true }
+      include: {
+        employer: {
+          include: {
+            user: true,
+          },
+        },
+        talent: true,
+      }
     })
 
     if (!job) {
@@ -33,6 +46,13 @@ export async function POST(request: Request) {
       return NextResponse.json(
         { error: `Cannot hold payment for job in status: ${job.status}` },
         { status: 400 }
+      )
+    }
+
+    if (job.employer.user.email !== session.user.email) {
+      return NextResponse.json(
+        { error: 'Only the employer can hold payment for this job' },
+        { status: 403 }
       )
     }
 

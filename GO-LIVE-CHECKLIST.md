@@ -49,9 +49,8 @@
 - [ ] `BILLPLZ_SANDBOX` - Set to `false` for production
 
 ### Supabase Production Setup
-- [ ] Create Supabase production project (separate from dev)
-- [ ] Run `npx prisma db push` to sync schema
-- [ ] Enable Row Level Security (RLS) on all tables
+- [x] Enable Row Level Security (RLS) on all tables (migration applied successfully)
+- [ ] Verify RLS policies are active via SQL query
 - [ ] Configure database backups (automatic with Supabase)
 
 ### Domain Configuration

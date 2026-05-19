@@ -34,6 +34,7 @@ If you already have a Supabase project, proceed to Step 2.
    postgresql://postgres:[YOUR-PASSWORD]@db.xxxxxxxxxxxxx.supabase.co:5432/postgres
    ```
 5. **Important**: Replace `[YOUR-PASSWORD]` with your actual database password
+6. For production, switch `DATABASE_URL` to the limited app role or pooler URL once RLS is enabled. Keep the direct `postgres` string out of the app path.
 
 ## Step 3: Configure Environment Variables
 
@@ -48,7 +49,11 @@ NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key-here
 NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=your-publishable-key-here
 
 # Database (for Prisma)
-DATABASE_URL=postgresql://postgres:[YOUR-PASSWORD]@db.xxxxxxxxxxxxx.supabase.co:5432/postgres
+# Use a limited app role / pooled connection here once the security baseline is applied.
+DATABASE_URL=postgresql://app_user:[YOUR-PASSWORD]@db.xxxxxxxxxxxxx.supabase.co:5432/postgres
+
+# Optional direct connection for maintenance or migrations
+DIRECT_URL=postgresql://postgres:[YOUR-PASSWORD]@db.xxxxxxxxxxxxx.supabase.co:5432/postgres
 
 # NextAuth Configuration
 NEXTAUTH_SECRET=your-nextauth-secret-here
@@ -163,6 +168,7 @@ After successful database connection:
 - Keep your database password secure
 - Use environment variables for all sensitive data
 - In production, use Supabase's built-in Row Level Security (RLS)
+- Keep `SUPABASE_SERVICE_ROLE_KEY` server-side only and route admin work through a dedicated admin client
 
 ## Files Modified/Created
 

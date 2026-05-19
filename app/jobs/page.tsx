@@ -1,109 +1,89 @@
-import { JobCard } from '@/components/jobs/JobCard'
-import { JobFilters } from '@/components/jobs/JobFilters'
-import { getJobs, getCategories, getLocations, JobFilters as JobFiltersType } from '@/lib/actions/jobs'
+'use client'
+
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
-export default async function JobsPage({ searchParams }: { searchParams: Promise<{ [key: string]: string | string[] | undefined }> }) {
-  const params = await searchParams
-  const filters: JobFiltersType = {
-    search: typeof params.search === 'string' ? params.search : undefined,
-    category: typeof params.category === 'string' ? params.category : undefined,
-    location: typeof params.location === 'string' ? params.location : undefined,
-    track: params.track === 'LABOUR' || params.track === 'TECHNICAL' ? params.track : undefined,
-  }
+interface Job {
+  id: string
+  title: string
+  description: string
+  categories: string[]
+  location: string
+  rateMin: number | null
+  rateMax: number | null
+  createdAt: string
+}
 
-  const [jobs, categories, locations] = await Promise.all([
-    getJobs(filters),
-    getCategories(),
-    getLocations(),
-  ])
+export default function JobsPage() {
+  const [jobs, setJobs] = useState<Job[]>([])
+  const [loading, setLoading] = useState(true)
 
-  const getEmployer = (
-    employer: { company?: string }[] | { company?: string } | null | undefined
-  ) => {
-    if (!employer) {
-      return undefined
-    }
+  useEffect(() => {
+    fetch('/api/jobs')
+      .then(res => res.json())
+      .then(data => {
+        setJobs(data)
+        setLoading(false)
+      })
+      .catch(() => setLoading(false))
+  }, [])
 
-    return Array.isArray(employer) ? employer[0] : employer
+  if (loading) {
+    return <div className="p-8 text-center">Loading jobs...</div>
   }
 
   return (
-    <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      {/* Header */}
-      <div className="mb-8 flex items-center justify-between">
-        <div>
-          <h1 className="text-3xl font-semibold tracking-tight">Browse Jobs</h1>
-          <p className="mt-1 text-slate-600">
-            {jobs.length} {jobs.length === 1 ? 'opportunity' : 'opportunities'} available
-          </p>
-        </div>
-        <Link 
-          href="/jobs/post" 
-          className="rounded-full bg-emerald-700 px-5 py-2 text-sm font-semibold text-white hover:bg-emerald-800 transition"
+    <div className="max-w-5xl mx-auto p-6">
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-semibold">Available Jobs</h1>
+        <Link
+          href="/jobs/post"
+          className="px-5 py-2.5 bg-green-600 text-white rounded-2xl text-sm font-medium"
         >
           Post a Job
         </Link>
       </div>
 
-      {/* Filters */}
-      <div className="mb-8">
-        <JobFilters 
-          categories={categories}
-          locations={locations}
-          initialFilters={filters}
-          onFilterChange={() => {
-            // In a real app, this would update the URL params
-            // For now, we'll rely on server-side filtering
-          }}
-        />
-      </div>
-
-      {/* Jobs Grid */}
       {jobs.length === 0 ? (
-        <div className="rounded-2xl border border-slate-200 bg-white p-8 text-center">
-          <div className="mx-auto mb-4 h-16 w-16 rounded-full bg-slate-100 flex items-center justify-center">
-            <svg className="h-8 w-8 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-          </div>
-          <h3 className="text-lg font-medium text-slate-900 mb-1">No jobs found</h3>
-          <p className="text-slate-600 mb-4">Try adjusting your filters or search terms</p>
-          <Link 
-            href="/jobs/post" 
-            className="inline-block rounded-full bg-emerald-700 px-5 py-2 text-sm font-semibold text-white hover:bg-emerald-800 transition"
-          >
-            Post the first job
-          </Link>
+        <div className="text-center py-12 text-gray-500">
+          No jobs available right now.
         </div>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {jobs.map((job) => {
-            const category = Array.isArray(job.category) ? job.category[0] : job.category
-            const employer = getEmployer(job.employer)
-            const transformedJob = {
-              id: job.id,
-              title: job.title,
-              category: category?.name || job.track || 'General',
-              categoryEmoji: category?.emoji,
-              location: job.location || 'Malaysia',
-              budget: job.rate ? String(job.rate) : 'Contact for rate',
-              status: job.status,
-              postedDate: job.createdAt 
-                ? new Date(job.createdAt).toLocaleDateString('en-MY', { month: 'short', day: 'numeric' })
-                : 'Recently',
-              employerName: employer?.company || undefined,
-              skills: job.description ? job.description.split(',').slice(0, 3).map((s: string) => s.trim()) : [],
-              isEscrowProtected: true, // Assuming all jobs are escrow protected
-            }
-            return (
-              <a key={job.id} href={`/jobs/${job.id}`} className="block hover:opacity-95 transition">
-                <JobCard {...transformedJob} />
-              </a>
-            )
-          })}
+        <div className="grid gap-4">
+          {jobs.map(job => (
+            <Link
+              key={job.id} 
+              href={`/jobs/${job.id}`}
+              className="block border rounded-3xl p-6 hover:border-green-600 transition-all"
+            >
+              <div className="flex justify-between items-start">
+                <div>
+                  <h3 className="font-semibold text-xl">{job.title}</h3>
+                  <p className="text-sm text-gray-600 mt-1">{job.location}</p>
+                </div>
+                <div className="text-right text-sm">
+                  {job.rateMin && job.rateMax && (
+                    <span className="font-medium">RM {job.rateMin}–{job.rateMax}</span>
+                  )}
+                </div>
+              </div>
+
+              <p className="mt-4 text-gray-700 line-clamp-2">{job.description}</p>
+
+              <div className="mt-4 flex flex-wrap gap-2">
+                {job.categories?.slice(0, 4).map((cat, i) => (
+                  <span 
+                    key={i} 
+                    className="text-xs px-3 py-1 bg-gray-100 rounded-full"
+                  >
+                    {cat}
+                  </span>
+                ))}
+              </div>
+            </Link>
+          ))}
         </div>
       )}
-    </main>
+    </div>
   )
 }

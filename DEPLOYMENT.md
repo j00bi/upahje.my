@@ -21,7 +21,8 @@ Add these variables in Vercel Dashboard → Project Settings → Environment Var
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon public key | Supabase Dashboard → Project Settings → API |
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Supabase publishable key alias | Supabase Dashboard → Project Settings → API |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key | Supabase Dashboard → Project Settings → API |
-| `DATABASE_URL` | PostgreSQL connection string | Supabase Dashboard → Database → Connection String |
+| `DATABASE_URL` | PostgreSQL connection string for the limited app role | Supabase Dashboard → Database → Connection String / pooled endpoint |
+| `DIRECT_URL` | Optional direct admin connection string for migrations/maintenance | Supabase Dashboard → Database → Connection String |
 | `NEXTAUTH_SECRET` | Random secure string | Generate with: `openssl rand -base64 32` |
 | `NEXTAUTH_URL` | Your production domain | e.g., `https://upahje.my` |
 
@@ -60,7 +61,8 @@ Add these variables in Vercel Dashboard → Project Settings → Environment Var
 2. Scroll to **Connection string**
 3. Copy the **URI** connection string
 4. Replace `[YOUR-PASSWORD]` with your actual database password
-5. This goes in `DATABASE_URL`
+5. This goes in `DIRECT_URL` only if you need a direct maintenance path
+6. Put the limited app-role or pooler URL in `DATABASE_URL`
 
 ### 2.4 Push Database Schema
 Run these commands locally to set up your database:
@@ -78,6 +80,7 @@ For production security, enable RLS on your Supabase tables:
 2. Select each table
 3. Click **Authentication** tab
 4. Enable RLS and configure policies
+5. Apply the staged baseline in `supabase/migrations/20260517_security_baseline.sql`
 
 ## Step 3: Billplz Setup (Malaysian Payments)
 
@@ -196,9 +199,10 @@ NEXTAUTH_URL=https://upahje.my
 
 ## Security Checklist
 
-- [ ] `SUPABASE_SERVICE_ROLE_KEY` is set (never expose publicly)
+- [ ] `SUPABASE_SERVICE_ROLE_KEY` is set and only consumed by server-side admin code
 - [ ] `NEXTAUTH_SECRET` is a strong random string
 - [ ] Row Level Security enabled on Supabase tables
+- [ ] `DATABASE_URL` points at the limited app role, not `postgres`
 - [ ] `.env.local` is in `.gitignore`
 - [ ] Billplz sandbox mode is `false` in production
 - [ ] HTTPS enforced on production domain

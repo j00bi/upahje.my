@@ -16,12 +16,54 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
     labourCategories: [],
     techCategories: [],
   })
+  const [errors, setErrors] = useState<Record<string, string>>({})
 
-  const update = <K extends keyof EmployerOnboardingData>(k: K, v: EmployerOnboardingData[K]) =>
+  const update = <K extends keyof EmployerOnboardingData>(k: K, v: EmployerOnboardingData[K]) => {
     setData(d => ({ ...d, [k]: v }))
+    // Clear error when user starts typing
+    if (errors[k]) {
+      setErrors(prev => {
+        const newErrors = { ...prev }
+        delete newErrors[k]
+        return newErrors
+      })
+    }
+  }
 
-  const next = () => step < 3 ? setStep(step + 1) : onComplete?.(data)
-  const back = () => step > 1 ? setStep(step - 1) : onBack?.()
+  const validateStep = (currentStep: number): boolean => {
+    const newErrors: Record<string, string> = {}
+
+    if (currentStep === 1) {
+      if (!data.company?.trim()) newErrors.company = 'Company name is required'
+      if (!data.contactName?.trim()) newErrors.contactName = 'Contact name is required'
+      if (!data.email?.trim()) {
+        newErrors.email = 'Business email is required'
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+        newErrors.email = 'Please enter a valid email address'
+      }
+    }
+
+    setErrors(newErrors)
+    return Object.keys(newErrors).length === 0
+  }
+
+  const next = () => {
+    if (!validateStep(step)) return
+    if (step < 3) {
+      setStep(step + 1)
+    } else {
+      onComplete?.(data)
+    }
+  }
+
+  const back = () => {
+    setErrors({})
+    if (step > 1) {
+      setStep(step - 1)
+    } else {
+      onBack?.()
+    }
+  }
 
   return (
     <div className="max-w-xl mx-auto">
@@ -39,9 +81,34 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
             <h3 className="font-semibold text-xl mb-1">Tell us about your company</h3>
             <p className="text-sm text-gray-600">This helps talents know who they&apos;re working with.</p>
           </div>
-          <input placeholder="Company name" className="w-full border rounded-2xl px-5 py-3.5 text-lg" value={data.company || ''} onChange={e => update('company', e.target.value)} />
-          <input placeholder="Your name / PIC" className="w-full border rounded-2xl px-5 py-3.5" value={data.contactName || ''} onChange={e => update('contactName', e.target.value)} />
-          <input placeholder="Business email" type="email" className="w-full border rounded-2xl px-5 py-3.5" value={data.email || ''} onChange={e => update('email', e.target.value)} />
+          <div>
+            <input
+              placeholder="Company name"
+              className={`w-full border rounded-2xl px-5 py-3.5 text-lg ${errors.company ? 'border-red-500' : ''}`}
+              value={data.company || ''}
+              onChange={e => update('company', e.target.value)}
+            />
+            {errors.company && <p className="text-red-500 text-sm mt-1 ml-1">{errors.company}</p>}
+          </div>
+          <div>
+            <input
+              placeholder="Your name / PIC"
+              className={`w-full border rounded-2xl px-5 py-3.5 ${errors.contactName ? 'border-red-500' : ''}`}
+              value={data.contactName || ''}
+              onChange={e => update('contactName', e.target.value)}
+            />
+            {errors.contactName && <p className="text-red-500 text-sm mt-1 ml-1">{errors.contactName}</p>}
+          </div>
+          <div>
+            <input
+              placeholder="Business email"
+              type="email"
+              className={`w-full border rounded-2xl px-5 py-3.5 ${errors.email ? 'border-red-500' : ''}`}
+              value={data.email || ''}
+              onChange={e => update('email', e.target.value)}
+            />
+            {errors.email && <p className="text-red-500 text-sm mt-1 ml-1">{errors.email}</p>}
+          </div>
         </div>
       )}
 
@@ -83,7 +150,11 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
 
       <div className="flex gap-3 mt-8">
         <button onClick={back} className="flex-1 py-3 border rounded-2xl">Back</button>
-        <button onClick={next} disabled={step===1 && !data.company} className="flex-1 py-3 bg-blue-600 text-white font-medium rounded-2xl disabled:bg-gray-300">
+        <button 
+          onClick={next} 
+          disabled={step === 1 && (!data.company || !data.contactName || !data.email)}
+          className="flex-1 py-3 bg-blue-600 text-white font-medium rounded-2xl disabled:bg-gray-300 disabled:cursor-not-allowed"
+        >
           {step === 3 ? 'Create Employer Account' : 'Continue'}
         </button>
       </div>

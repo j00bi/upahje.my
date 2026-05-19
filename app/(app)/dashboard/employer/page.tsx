@@ -1,6 +1,7 @@
-import { JobCard } from '@/components/jobs/JobCard'
-import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation'
+import { auth, getUserWithRole } from '@/lib/auth'
+import { prisma } from '@/lib/prisma'
+import { JobCard } from '@/components/jobs/JobCard'
 import Link from 'next/link'
 
 export default async function EmployerDashboard() {
@@ -10,8 +11,32 @@ export default async function EmployerDashboard() {
     redirect('/auth/signin?callbackUrl=/dashboard/employer')
   }
 
+  // Fetch employer data and jobs
+  const { user } = await getUserWithRole()
+
+  if (!user) {
+    redirect('/onboarding')
+  }
+
+  const employer = await prisma.employer.findUnique({
+    where: { userId: user.id },
+    include: {
+      jobs: {
+        include: {
+          category: true,
+          talent: true,
+        },
+        orderBy: { createdAt: 'desc' },
+      },
+    },
+  })
+
+  if (!employer) {
+    redirect('/onboarding')
+  }
+
   return (
-    <main className="mx-auto flex w-full max-w-7xl flex-1 flex-col gap-4 sm:gap-6 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
+    <div className="space-y-6">
       <section className="glass rounded-[2rem] p-5 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-2">
@@ -22,7 +47,7 @@ export default async function EmployerDashboard() {
               Post jobs, review matches, and keep the trust layer visible.
             </h1>
             <p className="text-sm leading-6 text-slate-600">
-              This shell is intentionally lightweight until auth and matching are wired in.
+              Manage your job postings and track talent matches.
             </p>
           </div>
           <Link 
@@ -43,24 +68,30 @@ export default async function EmployerDashboard() {
             </div>
           </div>
           <div className="grid gap-4 md:grid-cols-2">
-            <JobCard
-              id="job-1"
-              title="Need grass cutter this weekend"
-              category="Rumah & Taman"
-              location="Ampang, KL"
-              budget="RM 80 - 120"
-              status="Open"
-              postedDate="2 days ago"
-            />
-            <JobCard
-              id="job-2"
-              title="Weekly house cleaning"
-              category="Cucian & Dobi"
-              location="Bangsar, KL"
-              budget="RM 150 / visit"
-              status="IN_PROGRESS"
-              postedDate="1 week ago"
-            />
+            {employer.jobs.length > 0 ? (
+              employer.jobs.map((job) => (
+                <JobCard
+                  key={job.id}
+                  id={job.id}
+                  title={job.title}
+                  category={job.category?.name || 'Uncategorized'}
+                  location={job.location || 'Not specified'}
+                  budget={job.rate || 'Negotiable'}
+                  status={job.status}
+                  postedDate={new Date(job.createdAt).toLocaleDateString()}
+                />
+              ))
+            ) : (
+              <div className="col-span-2 text-center py-8 text-slate-500">
+                <p>No jobs posted yet.</p>
+                <Link 
+                  href="/jobs/post"
+                  className="text-emerald-600 hover:text-emerald-700 font-medium mt-2 inline-block"
+                >
+                  Post your first job →
+                </Link>
+              </div>
+            )}
           </div>
         </article>
 
@@ -82,6 +113,6 @@ export default async function EmployerDashboard() {
           </div>
         </aside>
       </section>
-    </main>
+    </div>
   )
 }
