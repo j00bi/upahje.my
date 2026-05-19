@@ -111,7 +111,7 @@ export function validateJobCreation(data: unknown): ValidationResult<JobCreation
   const posting = validateJobPosting(input)
 
   if (!posting.success) {
-    return posting
+    return { success: false as const, error: (posting as any).error }
   }
 
   const employerId = getString(input.employerId)

@@ -51,7 +51,7 @@ export default async function TalentDashboard() {
     where: {
       status: 'OPEN',
       categoryId: {
-        in: talent.categories.map((tc) => tc.categoryId),
+        in: talent.categories.map((tc: { categoryId: string }) => tc.categoryId),
       },
       talentId: null,
     },

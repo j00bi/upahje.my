@@ -71,7 +71,7 @@ export default async function EmployerDashboard() {
           </div>
           <div className="grid gap-4 md:grid-cols-2">
             {employer.jobs.length > 0 ? (
-              employer.jobs.map((job) => (
+              employer.jobs.map((job: any) => (
                 <JobCard
                   key={job.id}
                   id={job.id}
