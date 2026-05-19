@@ -1,14 +1,15 @@
 # UpahJe.My — Project Status
 
-**Last Updated**: 2026-05-18
-**Current Phase**: M0 – Foundation
+**Last Updated**: 2026-05-19
+**Current Phase**: M0 – Foundation (Active Codex Goal)
 **Orchestration Model**: Parallel Multi-Agent
+**Active Goal**: Hermes orchestration goal active — Drive M0 + Onboarding Integration to clean M2 handoff
 
 ## Overall Progress
 
 | Milestone | Status       | Progress | Lead Agent(s)     |
 |-----------|--------------|----------|-------------------|
-| M0        | In Progress  | ~40%     | Codex             |
+| M0        | In Progress  | ~60%     | Codex             |
 | M1        | In Progress  | ~15%     | Grok + Codex      |
 | M2        | Not Started  | 0%       | Codex + Grok      |
 | M3        | Not Started  | 0%       | Codex             |
@@ -17,9 +18,9 @@
 ## Current Focus
 
 **M0 – Foundation** (Parallel Tracks) — Mostly scaffolded
-- Auth System: Core context + pages complete
+- Auth System: Core context + pages complete, role-based middleware implemented, **Track 3 & 4 completed**
 - Database / Prisma: Schema ready, actions emerging
-- Dashboard Layout: Multiple role-based dashboards present
+- Dashboard Layout: Multiple role-based dashboards present, role-aware navigation
 
 **M1 – Onboarding** — Early progress
 - OnboardingFlow component exists

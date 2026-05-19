@@ -1,26 +1,30 @@
 # UpahJe.My — KANBAN (M0 Foundation)
 
-**Last Updated**: 2026-05-18
+**Last Updated**: 2026-05-19
 **Orchestration Model**: Parallel Multi-Agent
+**Active Goal**: Hermes — Drive M0 + Onboarding Integration to clean M2 handoff (Codex executing full foundation goal)
 
 ## M0 – Foundation
 
 ### Status Overview
-- **Auth Track**: In Progress (Auth Context + SignIn/SignUp pages implemented, role-based fetch present)
+- **Auth Track**: Complete (Auth Context + SignIn/SignUp pages + Role-based middleware + Protected Routes & Security + Profile Creation on Signup)
 - **Database Track**: In Progress (Prisma schema.prisma exists with initial models)
 - **Dashboard Track**: In Progress (Multiple dashboard pages and layout scaffolded)
-- **Overall Progress**: ~35% (Foundation auth + basic UI scaffold complete; remaining: role gates, data wiring, full onboarding)
+- **Job Posting Track**: Complete (Form connected to database, validation implemented, employerId properly resolved)
+- **Overall Progress**: ~70% (Auth track complete with full RBAC + security enhancements; Job Posting track complete; remaining: data wiring, full onboarding)
 
 ---
 
 ### Auth Track (Lead: Codex)
 
-| ID     | Task                                      | Status     | Owner   | Notes |
-|--------|-------------------------------------------|------------|---------|-------|
-|| M0-A1  | Set up Supabase environment variables     | Done       | Codex   | Completed in earlier session |
-|| M0-A2  | Create Auth Context + Provider            | Done       | Codex   | lib/supabase/auth-context.tsx + role fetch |
-|| M0-A3  | Build Sign In / Sign Up pages             | Done       | Codex   | app/auth/signin/ + signup/ implemented |
-|| M0-A4  | Implement role-based authorization        | In Progress | Codex   | Basic role in context; full gates pending |
+|| ID     | Task                                      | Status     | Owner   | Notes ||
+||--------|-------------------------------------------|------------|---------|-------||
+|| M0-A1  | Set up Supabase environment variables     | Done       | Codex   | Completed in earlier session ||
+|| M0-A2  | Create Auth Context + Provider            | Done       | Codex   | lib/supabase/auth-context.tsx + role fetch ||
+|| M0-A3  | Build Sign In / Sign Up pages             | Done       | Codex   | app/auth/signin/ + signup/ implemented ||
+|| M0-A4  | Implement role-based authorization        | Done       | Codex   | Full middleware, guards, and validation implemented ||
+|| M0-A5  | **Track 3: Protected Routes & Security**  | Done       | Codex   | Enhanced middleware, onboarding protection, webhook public routes ||
+|| M0-A6  | **Track 4: Profile Creation on Signup**   | Done       | Codex   | Automatic profile creation with role via callback URL ||
 
 ---
 
