@@ -1,1 +1,1 @@
-export { CategoryNav } from './CategoryNav'
+export { default as CategoryNav } from './CategoryNav'

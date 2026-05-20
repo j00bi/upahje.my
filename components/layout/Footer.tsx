@@ -1,101 +1,81 @@
-'use client'
-
 import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-zinc-800 bg-[#0a0a0a]">
-      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    <footer className="footer">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Brand */}
-          <div className="space-y-3">
-            <div className="text-sm font-semibold uppercase tracking-[0.18em] text-white">
+          <div>
+            <h3 className="font-display-md mb-4" style={{ color: 'var(--color-primary)' }}>
               UpahJe.my
-            </div>
-            <p className="text-sm text-zinc-500">
-              Malaysia&apos;s creative talent marketplace — hiring photographers, videographers, content creators, and more.
+            </h3>
+            <p className="text-sm mb-4" style={{ color: 'var(--color-canvas-soft)' }}>
+              Malaysia's creative marketplace. Connect with talented professionals for all your creative needs.
             </p>
+            <div className="flex gap-3">
+              {['IG', 'FB', 'TW'].map((social) => (
+                <button
+                  key={social}
+                  className="px-3 py-1 rounded-full text-xs font-semibold"
+                  style={{ backgroundColor: 'var(--color-canvas-soft)', color: 'var(--color-ink)' }}
+                >
+                  {social}
+                </button>
+              ))}
+            </div>
           </div>
 
-          {/* Creative Categories */}
-          <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-white">Creative</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/categories/photography" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors">
-                  📸 Photography
-                </Link>
-              </li>
-              <li>
-                <Link href="/categories/videography" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors">
-                  🎥 Videography
-                </Link>
-              </li>
-              <li>
-                <Link href="/categories/content-creator" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors">
-                  📱 Content Creator
-                </Link>
-              </li>
-              <li>
-                <Link href="/categories/photo-editor" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors">
-                  ✨ Photo Editor
-                </Link>
-              </li>
+          {/* For Clients */}
+          <div>
+            <h4 className="font-semibold mb-4" style={{ color: 'var(--color-canvas)' }}>
+              For Clients
+            </h4>
+            <ul className="space-y-2 text-sm" style={{ color: 'var(--color-canvas-soft)' }}>
+              <li><Link href="/jobs" className="hover:underline">Find Talent</Link></li>
+              <li><Link href="/categories" className="hover:underline">Browse Categories</Link></li>
+              <li><Link href="/pricing" className="hover:underline">Pricing</Link></li>
+              <li><Link href="/how-it-works" className="hover:underline">How It Works</Link></li>
             </ul>
           </div>
 
-          {/* Platform */}
-          <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-white">Platform</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/jobs" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors">
-                  Browse Jobs
-                </Link>
-              </li>
-              <li>
-                <Link href="/onboarding" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors">
-                  Get Started
-                </Link>
-              </li>
-              <li>
-                <Link href="/jobs/post" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors">
-                  Post a Job
-                </Link>
-              </li>
+          {/* For Talent */}
+          <div>
+            <h4 className="font-semibold mb-4" style={{ color: 'var(--color-canvas)' }}>
+              For Talent
+            </h4>
+            <ul className="space-y-2 text-sm" style={{ color: 'var(--color-canvas-soft)' }}>
+              <li><Link href="/jobs" className="hover:underline">Find Work</Link></li>
+              <li><Link href="/talent" className="hover:underline">Create Profile</Link></li>
+              <li><Link href="/resources" className="hover:underline">Resources</Link></li>
+              <li><Link href="/success-stories" className="hover:underline">Success Stories</Link></li>
             </ul>
           </div>
 
-          {/* Contact */}
-          <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-white">Contact</h3>
-            <ul className="space-y-2">
-              <li>
-                <a href="mailto:support@upahje.my" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors">
-                  support@upahje.my
-                </a>
-              </li>
-              <li className="text-sm text-zinc-600">
-                Kuala Lumpur, Malaysia
-              </li>
-              <li>
-                <Link href="/privacy" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="text-sm text-zinc-500 hover:text-amber-400 transition-colors">
-                  Terms of Service
-                </Link>
-              </li>
+          {/* Categories */}
+          <div>
+            <h4 className="font-semibold mb-4" style={{ color: 'var(--color-canvas)' }}>
+              Categories
+            </h4>
+            <ul className="space-y-2 text-sm" style={{ color: 'var(--color-canvas-soft)' }}>
+              <li><Link href="/categories/photography" className="hover:underline">📷 Photography</Link></li>
+              <li><Link href="/categories/videography" className="hover:underline">🎬 Videography</Link></li>
+              <li><Link href="/categories/content-creator" className="hover:underline">✍️ Content Creator</Link></li>
+              <li><Link href="/categories/graphic-design" className="hover:underline">🖼️ Graphic Design</Link></li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 border-t border-zinc-800 pt-8">
-          <p className="text-center text-xs text-zinc-600">
-            © {new Date().getFullYear()} UpahJe.my. All rights reserved. Registered in Malaysia.
+        {/* Bottom bar */}
+        <div className="pt-8 border-t flex justify-between items-center flex-wrap gap-4" style={{ borderColor: 'rgba(232, 235, 230, 0.2)' }}>
+          <p className="text-sm" style={{ color: 'var(--color-canvas-soft)' }}>
+            © 2026 UpahJe.my. All rights reserved.
           </p>
+          <div className="flex gap-6 text-sm" style={{ color: 'var(--color-canvas-soft)' }}>
+            <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
+            <Link href="/terms" className="hover:underline">Terms of Service</Link>
+            <Link href="/contact" className="hover:underline">Contact</Link>
+          </div>
         </div>
       </div>
     </footer>

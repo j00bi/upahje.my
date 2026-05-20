@@ -38,9 +38,9 @@ export function PortfolioGrid({
       {/* Header */}
       {title && (
         <div className="mb-3">
-          <h2 className="text-xl font-bold text-white sm:text-2xl">{title}</h2>
+          <h2 className="text-xl font-bold text-ink sm:text-2xl">{title}</h2>
           {subtitle && (
-            <p className="mt-1 text-sm text-zinc-500">{subtitle}</p>
+            <p className="mt-1 text-sm text-mute">{subtitle}</p>
           )}
         </div>
       )}
@@ -54,8 +54,8 @@ export function PortfolioGrid({
               onClick={() => setActiveCategory(cat)}
               className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-all duration-200 ${
                 activeCategory === cat
-                  ? 'bg-white text-black'
-                  : 'bg-zinc-800 text-zinc-400 hover:bg-zinc-700 hover:text-white'
+                  ? 'bg-primary text-ink'
+                  : 'bg-canvas-soft text-body hover:bg-primary-pale hover:text-ink'
               }`}
             >
               {cat === 'All' ? `All (${projects.length})` : cat}
@@ -75,8 +75,8 @@ export function PortfolioGrid({
       {filteredProjects.length === 0 && (
         <div className="flex flex-col items-center justify-center py-16 text-center">
           <div className="mb-4 text-4xl">📭</div>
-          <p className="text-sm font-medium text-zinc-400">No projects yet</p>
-          <p className="mt-1 text-xs text-zinc-600">
+          <p className="text-sm font-medium text-mute">No projects yet</p>
+          <p className="mt-1 text-xs text-mute">
             Projects in &ldquo;{activeCategory}&rdquo; will appear here.
           </p>
         </div>
@@ -87,17 +87,17 @@ export function PortfolioGrid({
         <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
           {Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="mb-5 animate-pulse break-inside-avoid">
-              <div className="rounded-2xl bg-zinc-900 border border-zinc-800 overflow-hidden">
-                <div className={`bg-zinc-800 ${i % 3 === 0 ? 'aspect-[4/3]' : i % 3 === 1 ? 'aspect-square' : 'aspect-[3/4]'}`} />
+              <div className="rounded-2xl bg-canvas border border-ink/10 overflow-hidden">
+                <div className={`bg-canvas-soft ${i % 3 === 0 ? 'aspect-[4/3]' : i % 3 === 1 ? 'aspect-square' : 'aspect-[3/4]'}`} />
                 <div className="p-4 space-y-3">
-                  <div className="h-4 w-3/4 rounded bg-zinc-800" />
+                  <div className="h-4 w-3/4 rounded bg-canvas-soft" />
                   <div className="flex gap-2">
-                    <div className="h-5 w-5 rounded-full bg-zinc-800" />
-                    <div className="h-3 w-24 rounded bg-zinc-800" />
+                    <div className="h-5 w-5 rounded-full bg-canvas-soft" />
+                    <div className="h-3 w-24 rounded bg-canvas-soft" />
                   </div>
                   <div className="flex gap-1.5">
-                    <div className="h-4 w-14 rounded-full bg-zinc-800" />
-                    <div className="h-4 w-16 rounded-full bg-zinc-800" />
+                    <div className="h-4 w-14 rounded-full bg-canvas-soft" />
+                    <div className="h-4 w-16 rounded-full bg-canvas-soft" />
                   </div>
                 </div>
               </div>
