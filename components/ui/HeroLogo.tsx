@@ -21,7 +21,7 @@ export default function HeroLogo() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-white transition-opacity duration-1000 ${
+      className={`fixed inset-0 z-[100] flex flex-col items-center justify-center bg-stone-100 transition-opacity duration-1000 ${
         fadeOut ? 'opacity-0' : 'opacity-100'
       }`}
     >
@@ -35,7 +35,7 @@ export default function HeroLogo() {
       />
       {/* Show tagline once animation is close to done */}
       <p
-        className={`mt-6 text-base md:text-lg text-center text-gray-500 transition-opacity duration-700 ${
+        className={`mt-6 text-base md:text-lg text-center text-stone-500 transition-opacity duration-700 ${
           fadeOut ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ fontFamily: 'Inter, system-ui, sans-serif' }}

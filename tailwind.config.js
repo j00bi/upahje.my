@@ -22,7 +22,7 @@ module.exports = {
 
         // Surfaces
         canvas: '#ffffff',
-        'canvas-soft': '#e8ebe6',
+        'canvas-soft': '#F5F5F4',
         'canvas-warm': '#f5f3ee',
 
         // Text

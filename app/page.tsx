@@ -62,7 +62,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* ─────────────── HERO ─────────────── */}
-      <section className="hero-band" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
+      <section className="hero-band" style={{ backgroundColor: '#F5F5F4' }}>
         <div className="max-w-7xl mx-auto">
           <div className="max-w-3xl">
             <p className="section-label mb-4" style={{ color: 'var(--color-green-mid)' }}>
