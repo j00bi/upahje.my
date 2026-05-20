@@ -4,8 +4,8 @@ import CategoryNav from '@/components/navigation/CategoryNav'
 import HeroLogo from '@/components/ui/HeroLogo'
 
 export const metadata: Metadata = {
-  title: 'UpahJe.my — Malaysia\'s Freelance & Labour Marketplace',
-  description: 'Hire verified freelancers and workers across every category — from web dev to photography, electrical work to admin support. Upah sesiapa. Untuk apa sahaja.',
+  title: 'UpahJe.my — Malaysia\'s Local Hiring Platform',
+  description: 'Hire trusted local help in Malaysia. Post a job, compare verified workers, and pay safely after the work is done.',
 }
 
 export default function RootLayout({

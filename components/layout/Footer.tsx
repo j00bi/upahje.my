@@ -46,23 +46,14 @@ export default function Footer() {
               UpahJe.my
             </div>
             <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Malaysia&apos;s freelance and labour marketplace — connect with verified
-              talent across every category. From web development to photography,
-              we make hiring simple and secure.
+              Malaysia&apos;s local hiring platform for trusted work — connect with verified
+              workers across events, home services, creative projects, and more.
             </p>
-            <div className="flex gap-3">
-              {['IG', 'FB', 'TW', 'LI'].map((s) => (
-                <span
-                  key={s}
-                  className="w-9 h-9 rounded-lg flex items-center justify-center text-xs font-semibold"
-                  style={{
-                    backgroundColor: 'rgba(255,255,255,0.06)',
-                    color: 'rgba(255,255,255,0.5)',
-                  }}
-                >
-                  {s}
-                </span>
-              ))}
+            <div className="flex gap-4 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+              <a href="#" className="hover:text-white transition-colors">Instagram</a>
+              <a href="#" className="hover:text-white transition-colors">Facebook</a>
+              <a href="#" className="hover:text-white transition-colors">TikTok</a>
+              <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
             </div>
           </div>
 

@@ -2,14 +2,12 @@ import Link from 'next/link'
 import Footer from '@/components/layout/Footer'
 
 const categories = [
-  { label: 'Web Development', icon: '🖥️', slug: 'web-development', count: 312 },
-  { label: 'Design & Creative', icon: '🎨', slug: 'design-creative', count: 524 },
-  { label: 'Labour & General Work', icon: '🔧', slug: 'labour-general', count: 187 },
-  { label: 'Electrical & Trade', icon: '⚡', slug: 'electrical-trade', count: 143 },
-  { label: 'Admin & Data Entry', icon: '📊', slug: 'admin-data', count: 256 },
-  { label: 'Content & Marketing', icon: '📱', slug: 'content-marketing', count: 398 },
-  { label: 'Photography', icon: '📸', slug: 'photography', count: 267, badge: 'Gallery' },
-  { label: 'Videography', icon: '🎬', slug: 'videography', count: 198, badge: 'Gallery' },
+  'Photography',
+  'Videography',
+  'Home Services',
+  'Electrical & Trade',
+  'Admin Support',
+  'Web & Design',
 ]
 
 const talentProfiles = [
@@ -38,16 +36,22 @@ const talentProfiles = [
 const steps = [
   {
     num: '01', title: 'Post What You Need',
-    desc: 'Describe your project — from website development to event photography. Set your budget and timeline in minutes.',
+    desc: 'Describe your project — from event shoots to home repairs. Set your budget and timeline in minutes, free.',
   },
   {
     num: '02', title: 'Compare & Connect',
-    desc: 'Browse proposals, check portfolios, read reviews, and message talent directly. No commitment until you\'re ready.',
+    desc: 'Browse proposals, check portfolios and reviews, and message workers directly. No commitment until you\'re ready.',
   },
   {
     num: '03', title: 'Pay When It\'s Done',
-    desc: 'Pay via FPX or DuitNow. Funds are held securely in escrow and released only when you approve the work.',
+    desc: 'Pay via FPX or DuitNow. Funds are held in escrow and released only after you approve the work.',
   },
+]
+
+const trustItems = [
+  { title: 'Verified profiles', desc: 'Workers can show ID, skills, reviews, and portfolio.' },
+  { title: 'Escrow-ready', desc: 'Clients approve work before payment is released.' },
+  { title: 'Malaysia-first', desc: 'Built around local jobs, local pricing, and local trust.' },
 ]
 
 const galleryCovers = [
@@ -62,80 +66,60 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* ─────────────── HERO ─────────────── */}
-      <section className="hero-band" style={{ backgroundColor: '#F5F5F4' }}>
-        <div className="max-w-7xl mx-auto">
-          <div className="max-w-3xl">
-            <p className="section-label mb-4" style={{ color: 'var(--color-green-mid)' }}>
-              Malaysia's Freelance &amp; Labour Marketplace
-            </p>
-            <h1 className="font-display-mega mb-6" style={{ color: 'var(--color-ink-deep)' }}>
-              Upah sesiapa.<br />Untuk apa sahaja.
-            </h1>
-            <p className="text-lg md:text-xl mb-10" style={{ color: 'var(--color-body)', maxWidth: 560 }}>
-              Hire verified freelancers and workers across every category — from web dev to photography, electrical work to admin support.
-            </p>
+      <section className="text-center py-24 md:py-32 px-6" style={{ backgroundColor: '#F5F5F4' }}>
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+            Hire trusted local help.
+            <span className="block text-emerald-700">Pay only when it&apos;s done.</span>
+          </h1>
 
-            {/* Search-style CTA */}
-            <div
-              className="flex items-center gap-3 p-2 rounded-2xl mb-10 max-w-xl"
-              style={{
-                backgroundColor: 'var(--color-canvas)',
-                border: '1px solid rgba(14, 15, 12, 0.08)',
-                boxShadow: '0 4px 24px rgba(14, 15, 12, 0.06)',
-              }}
+          <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl" style={{ color: 'var(--color-body)' }}>
+            UpahJe.my helps Malaysians find verified freelancers and workers for events,
+            home services, admin work, creative projects, and more.
+          </p>
+
+          <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
+            <Link
+              href="/jobs/post"
+              className="inline-flex items-center justify-center bg-green-700 hover:bg-green-800 text-white font-semibold text-base px-8 py-4 rounded-full transition-all"
             >
-              <span className="pl-4" style={{ color: 'var(--color-mute)', fontSize: '1.25rem' }}>🔍</span>
-              <input
-                type="text"
-                placeholder="What do you need done?"
-                className="flex-1 bg-transparent border-none outline-none text-base"
-                style={{ color: 'var(--color-ink)' }}
-                readOnly
-              />
-              <Link
-                href="/jobs/post"
-                className="btn-primary whitespace-nowrap"
-                style={{ borderRadius: 12 }}
-              >
-                Post a Job — Free
-              </Link>
-            </div>
+              Post a Job
+            </Link>
+            <Link
+              href="/auth/signup"
+              className="inline-flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 text-neutral-800 font-semibold text-base px-8 py-4 rounded-full transition-all"
+            >
+              Join as Worker
+            </Link>
           </div>
 
-          {/* Category Pills — broad marketplace */}
-          <div className="flex flex-wrap gap-2.5 mt-2">
-            {categories.map((cat) => (
+          {/* Category Pills */}
+          <div className="mt-12 flex flex-wrap justify-center gap-3">
+            {categories.map((item) => (
               <Link
-                key={cat.slug}
-                href={`/categories/${cat.slug}`}
-                className="category-pill"
+                key={item}
+                href={`/categories/${item.toLowerCase().replace(/[ &]+/g, '-')}`}
+                className="rounded-full border border-neutral-200 bg-white px-5 py-2.5 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all"
               >
-                <span>{cat.icon}</span>
-                <span>{cat.label}</span>
-                {cat.badge && (
-                  <span className="category-pill-badge">{cat.badge}</span>
-                )}
+                {item}
               </Link>
             ))}
           </div>
 
-          {/* Trust stats row */}
-          <div
-            className="flex flex-wrap items-center gap-8 mt-10 pt-8 border-t"
-            style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}
-          >
+          {/* Trust indicators */}
+          <div className="mt-12 flex flex-wrap justify-center gap-x-10 gap-y-4">
             {[
-              { label: 'Active Freelancers', value: '2,500+' },
-              { label: 'Jobs Completed', value: '1,847' },
-              { label: 'Avg. Response Time', value: '2 hours' },
-              { label: 'Payment Protection', value: 'Escrow' },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <div className="font-bold text-lg" style={{ color: 'var(--color-ink-deep)' }}>
-                  {stat.value}
+              { value: 'Early Access', label: 'Now Open' },
+              { value: 'Verified', label: 'Worker Profiles' },
+              { value: 'Escrow', label: 'Payment Protection' },
+              { value: 'Local', label: 'Malaysia First' },
+            ].map((item) => (
+              <div key={item.label}>
+                <div className="font-bold text-base" style={{ color: 'var(--color-ink-deep)' }}>
+                  {item.value}
                 </div>
-                <div className="text-sm" style={{ color: 'var(--color-mute)' }}>
-                  {stat.label}
+                <div className="text-sm text-neutral-500">
+                  {item.label}
                 </div>
               </div>
             ))}
@@ -155,21 +139,19 @@ export default function Home() {
                 Showcase your work.<br />Stand out from the crowd.
               </h2>
               <p className="text-base md:text-lg mb-6" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                The only Malaysian marketplace with a built-in portfolio gallery. 
-                Creatives can showcase their best work, and clients can browse visual 
-                proof of quality before they hire. No other platform has this.
+                Browse real work before you hire — from event shoots to design,
+                repairs, and freelance projects.
               </p>
               <div className="flex gap-4 flex-wrap">
                 <Link href="/talent" className="btn-primary">
                   Browse Portfolios
                 </Link>
                 <Link href="/auth/signup" className="btn-secondary-inverse">
-                  I'm a Creative — Join Free
+                  Join as Creative
                 </Link>
               </div>
             </div>
 
-            {/* Gallery preview grid */}
             <div className="gallery-showcase">
               {galleryCovers.map((item) => (
                 <div key={item.label} className="gallery-item">
@@ -250,9 +232,7 @@ export default function Home() {
                 style={{ textDecoration: 'none' }}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div
-                    className="talent-avatar-placeholder"
-                  >
+                  <div className="talent-avatar-placeholder">
                     {talent.fallback}
                   </div>
                   <div>
@@ -286,30 +266,35 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─────────────── STATS BAND ─────────────── */}
-      <section
-        className="py-12"
-        style={{ backgroundColor: 'var(--color-green-forest)' }}
-      >
-        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {[
-            { value: '2,500+', label: 'Freelancers' },
-            { value: '1,847', label: 'Jobs Done' },
-            { value: '98%', label: 'Satisfaction' },
-            { value: 'RM 0', label: 'Platform Fees' },
-          ].map((stat) => (
-            <div key={stat.label}>
+      {/* ─────────────── TRUST & SAFETY ─────────────── */}
+      <section className="py-24 px-6" style={{ backgroundColor: 'var(--color-green-deep)' }}>
+        <div className="max-w-6xl mx-auto">
+          <p className="font-medium text-sm tracking-widest uppercase" style={{ color: 'var(--color-primary)' }}>
+            Trust &amp; Safety
+          </p>
+          <h2 className="mt-3 text-3xl md:text-4xl font-bold" style={{ color: 'var(--color-canvas)' }}>
+            Designed to reduce ghosting, scams, and bad hires.
+          </h2>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {trustItems.map((item) => (
               <div
-                className="font-display-lg mb-1"
-                style={{ color: 'var(--color-primary)' }}
+                key={item.title}
+                className="rounded-3xl p-6 border"
+                style={{
+                  backgroundColor: 'rgba(255,255,255,0.05)',
+                  borderColor: 'rgba(255,255,255,0.1)',
+                }}
               >
-                {stat.value}
+                <h3 className="font-semibold text-xl" style={{ color: 'var(--color-canvas)' }}>
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                  {item.desc}
+                </p>
               </div>
-              <div style={{ color: 'rgba(255,255,255,0.6)' }}>
-                {stat.label}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
@@ -320,14 +305,14 @@ export default function Home() {
             Ready to get started?
           </h2>
           <p className="text-base md:text-lg mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
-            Join thousands of Malaysians hiring and earning on UpahJe.my
+            Post a job or join as a worker — it&apos;s free to start.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link href="/jobs/post" className="btn-primary text-base px-8 py-4">
-              Post a Job — Free
+              Post a Job
             </Link>
             <Link href="/auth/signup" className="btn-secondary-inverse text-base px-8 py-4">
-              I'm a Freelancer
+              Join as Worker
             </Link>
           </div>
         </div>
