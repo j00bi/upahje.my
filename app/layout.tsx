@@ -14,8 +14,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="bg-[#f9f9f9] text-neutral-900">
+    <html lang="en" className="bg-[#f8f8f8]">
+      <body className="bg-[#f8f8f8] text-neutral-900">
         <IntroAnimation />
         <CategoryNav />
         <main>{children}</main>
