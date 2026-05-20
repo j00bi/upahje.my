@@ -1,80 +1,106 @@
 import Link from 'next/link'
 
+const footerSections = [
+  {
+    heading: 'For Clients',
+    links: [
+      { href: '/talent', label: 'Find Talent' },
+      { href: '/categories', label: 'Browse Categories' },
+      { href: '/jobs/post', label: 'Post a Job' },
+      { href: '/#how-it-works', label: 'How It Works' },
+    ],
+  },
+  {
+    heading: 'For Talent',
+    links: [
+      { href: '/jobs', label: 'Find Work' },
+      { href: '/auth/signup', label: 'Create Profile' },
+      { href: '/talent', label: 'Portfolio Gallery' },
+      { href: '/resources', label: 'Resources' },
+    ],
+  },
+  {
+    heading: 'Categories',
+    links: [
+      { href: '/categories/photography', label: 'Photography' },
+      { href: '/categories/videography', label: 'Videography' },
+      { href: '/categories/web-development', label: 'Web Development' },
+      { href: '/categories/design-creative', label: 'Design & Creative' },
+      { href: '/categories/labour-general', label: 'Labour & Trade' },
+      { href: '/categories/admin-data', label: 'Admin & Data' },
+    ],
+  },
+]
+
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="font-display-md mb-4" style={{ color: 'var(--color-primary)' }}>
+            <div
+              className="text-lg font-bold tracking-tight mb-4"
+              style={{ color: 'var(--color-canvas)' }}
+            >
               UpahJe.my
-            </h3>
-            <p className="text-sm mb-4" style={{ color: 'var(--color-canvas-soft)' }}>
-              Malaysia's creative marketplace. Connect with talented professionals for all your creative needs.
+            </div>
+            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
+              Malaysia&apos;s freelance and labour marketplace — connect with verified
+              talent across every category. From web development to photography,
+              we make hiring simple and secure.
             </p>
             <div className="flex gap-3">
-              {['IG', 'FB', 'TW'].map((social) => (
-                <button
-                  key={social}
-                  className="px-3 py-1 rounded-full text-xs font-semibold"
-                  style={{ backgroundColor: 'var(--color-canvas-soft)', color: 'var(--color-ink)' }}
+              {['IG', 'FB', 'TW', 'LI'].map((s) => (
+                <span
+                  key={s}
+                  className="w-9 h-9 rounded-lg flex items-center justify-center text-xs font-semibold"
+                  style={{
+                    backgroundColor: 'rgba(255,255,255,0.06)',
+                    color: 'rgba(255,255,255,0.5)',
+                  }}
                 >
-                  {social}
-                </button>
+                  {s}
+                </span>
               ))}
             </div>
           </div>
 
-          {/* For Clients */}
-          <div>
-            <h4 className="font-semibold mb-4" style={{ color: 'var(--color-canvas)' }}>
-              For Clients
-            </h4>
-            <ul className="space-y-2 text-sm" style={{ color: 'var(--color-canvas-soft)' }}>
-              <li><Link href="/jobs" className="hover:underline">Find Talent</Link></li>
-              <li><Link href="/categories" className="hover:underline">Browse Categories</Link></li>
-              <li><Link href="/pricing" className="hover:underline">Pricing</Link></li>
-              <li><Link href="/how-it-works" className="hover:underline">How It Works</Link></li>
-            </ul>
-          </div>
-
-          {/* For Talent */}
-          <div>
-            <h4 className="font-semibold mb-4" style={{ color: 'var(--color-canvas)' }}>
-              For Talent
-            </h4>
-            <ul className="space-y-2 text-sm" style={{ color: 'var(--color-canvas-soft)' }}>
-              <li><Link href="/jobs" className="hover:underline">Find Work</Link></li>
-              <li><Link href="/talent" className="hover:underline">Create Profile</Link></li>
-              <li><Link href="/resources" className="hover:underline">Resources</Link></li>
-              <li><Link href="/success-stories" className="hover:underline">Success Stories</Link></li>
-            </ul>
-          </div>
-
-          {/* Categories */}
-          <div>
-            <h4 className="font-semibold mb-4" style={{ color: 'var(--color-canvas)' }}>
-              Categories
-            </h4>
-            <ul className="space-y-2 text-sm" style={{ color: 'var(--color-canvas-soft)' }}>
-              <li><Link href="/categories/photography" className="hover:underline">📷 Photography</Link></li>
-              <li><Link href="/categories/videography" className="hover:underline">🎬 Videography</Link></li>
-              <li><Link href="/categories/content-creator" className="hover:underline">✍️ Content Creator</Link></li>
-              <li><Link href="/categories/graphic-design" className="hover:underline">🖼️ Graphic Design</Link></li>
-            </ul>
-          </div>
+          {/* Link Sections */}
+          {footerSections.map((section) => (
+            <div key={section.heading}>
+              <div className="footer-heading">{section.heading}</div>
+              <ul className="space-y-3">
+                {section.links.map((link) => (
+                  <li key={link.href}>
+                    <Link href={link.href} className="footer-link text-sm">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
         {/* Bottom bar */}
-        <div className="pt-8 border-t flex justify-between items-center flex-wrap gap-4" style={{ borderColor: 'rgba(232, 235, 230, 0.2)' }}>
-          <p className="text-sm" style={{ color: 'var(--color-canvas-soft)' }}>
-            © 2026 UpahJe.my. All rights reserved.
-          </p>
-          <div className="flex gap-6 text-sm" style={{ color: 'var(--color-canvas-soft)' }}>
-            <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
-            <Link href="/terms" className="hover:underline">Terms of Service</Link>
-            <Link href="/contact" className="hover:underline">Contact</Link>
+        <div
+          className="pt-8 mt-8 border-t flex flex-col sm:flex-row justify-between gap-4"
+          style={{ borderColor: 'rgba(255,255,255,0.08)' }}
+        >
+          <div className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            © {new Date().getFullYear()} UpahJe.my. All rights reserved.
+          </div>
+          <div className="flex gap-6">
+            <Link href="/privacy" className="text-xs footer-link">
+              Privacy Policy
+            </Link>
+            <Link href="/terms" className="text-xs footer-link">
+              Terms of Service
+            </Link>
+            <Link href="mailto:support@upahje.my" className="text-xs footer-link">
+              Contact
+            </Link>
           </div>
         </div>
       </div>

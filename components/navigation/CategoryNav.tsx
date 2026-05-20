@@ -1,71 +1,112 @@
-import Link from 'next/link'
+'use client'
 
-const categories = [
-  { slug: 'photography', label: 'Photography', emoji: '📷' },
-  { slug: 'videography', label: 'Videography', emoji: '🎬' },
-  { slug: 'content-creator', label: 'Content Creator', emoji: '✍️' },
-  { slug: 'photo-editor', label: 'Photo Editor', emoji: '🎨' },
-  { slug: 'graphic-design', label: 'Graphic Design', emoji: '🖼️' },
-  { slug: 'makeup-artist', label: 'Makeup Artist', emoji: '💄' },
-  { slug: 'wedding-planner', label: 'Wedding Planner', emoji: '💒' },
+import Link from 'next/link'
+import { useState } from 'react'
+
+const navLinks = [
+  { href: '/talent', label: 'Browse' },
+  { href: '/categories', label: 'Categories' },
+  { href: '/#how-it-works', label: 'How It Works' },
 ]
 
 export default function CategoryNav() {
+  const [mobileOpen, setMobileOpen] = useState(false)
+
   return (
-    <div 
-      className="sticky top-0 z-40 border-b"
-      style={{ 
-        backgroundColor: 'var(--color-canvas)',
-        borderColor: 'var(--color-canvas-soft)'
-      }}
-    >
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-14">
-          {/* Left: Logo */}
-          <Link href="/" className="font-display-md flex-shrink-0" style={{ color: 'var(--color-ink)' }}>
-            UpahJe.my
-          </Link>
+    <nav className="nav-bar">
+      <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
+        {/* Logo */}
+        <Link
+          href="/"
+          className="text-xl font-bold tracking-tight"
+          style={{ color: 'var(--color-canvas)' }}
+        >
+          UpahJe.my
+        </Link>
 
-          {/* Center: Category Pills */}
-          <div className="hidden lg:flex items-center gap-2 overflow-x-auto">
-            {categories.map((cat) => (
-              <Link
-                key={cat.slug}
-                href={`/categories/${cat.slug}`}
-                className="filter-tab whitespace-nowrap"
-              >
-                {cat.emoji} {cat.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Right: Auth */}
-          <div className="flex items-center gap-3">
-            <Link href="/jobs" className="nav-link hidden sm:block">Find Work</Link>
-            <Link href="/talent" className="nav-link hidden sm:block">Find Talent</Link>
-            <Link href="/auth/login" className="nav-link">Sign In</Link>
-            <button 
-              className="btn-primary text-sm py-2 px-4"
-              style={{ backgroundColor: 'var(--color-primary)', color: 'var(--color-ink)' }}
-            >
-              Get Started
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile: Horizontal scroll categories */}
-        <div className="lg:hidden flex gap-2 pb-3 overflow-x-auto">
-          {categories.map((cat) => (
+        {/* Desktop Links */}
+        <div className="hidden md:flex items-center gap-8">
+          {navLinks.map((link) => (
             <Link
-              key={cat.slug}
-              href={`/categories/${cat.slug}`}
-              className="filter-tab whitespace-nowrap text-xs py-1 px-3"
+              key={link.href}
+              href={link.href}
+              className="nav-link"
             >
-              {cat.emoji} {cat.label}
+              {link.label}
             </Link>
           ))}
         </div>
+
+        {/* Desktop Auth */}
+        <div className="hidden md:flex items-center gap-4">
+          <Link href="/auth/login" className="nav-link">
+            Sign In
+          </Link>
+          <Link href="/auth/signup" className="cta-nav">
+            Get Started
+          </Link>
+        </div>
+
+        {/* Mobile Toggle */}
+        <button
+          className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg"
+          style={{ color: 'var(--color-canvas)' }}
+          onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle navigation"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+            {mobileOpen ? (
+              <path d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
       </div>
-    </div>
+
+      {/* Mobile Menu */}
+      {mobileOpen && (
+        <div
+          className="md:hidden border-t pb-4 pt-2"
+          style={{
+            borderColor: 'rgba(255,255,255,0.08)',
+            backgroundColor: 'var(--color-green-forest)',
+          }}
+        >
+          {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="block px-4 py-3 nav-link text-base"
+              onClick={() => setMobileOpen(false)}
+            >
+              {link.label}
+            </Link>
+          ))}
+          <div className="flex gap-3 px-4 pt-3">
+            <Link
+              href="/auth/login"
+              className="flex-1 text-center py-2 rounded-lg text-sm font-medium"
+              style={{
+                color: 'var(--color-canvas)',
+                border: '1px solid rgba(255,255,255,0.2)',
+              }}
+            >
+              Sign In
+            </Link>
+            <Link
+              href="/auth/signup"
+              className="flex-1 text-center py-2 rounded-lg text-sm font-semibold"
+              style={{
+                backgroundColor: 'var(--color-primary)',
+                color: 'var(--color-ink-deep)',
+              }}
+            >
+              Get Started
+            </Link>
+          </div>
+        </div>
+      )}
+    </nav>
   )
 }

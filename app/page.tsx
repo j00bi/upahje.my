@@ -1,268 +1,339 @@
 import Link from 'next/link'
 import Footer from '@/components/layout/Footer'
-import CategoryNav from '@/components/navigation/CategoryNav'
+
+const categories = [
+  { label: 'Web Development', icon: '🖥️', slug: 'web-development', count: 312 },
+  { label: 'Design & Creative', icon: '🎨', slug: 'design-creative', count: 524 },
+  { label: 'Labour & General Work', icon: '🔧', slug: 'labour-general', count: 187 },
+  { label: 'Electrical & Trade', icon: '⚡', slug: 'electrical-trade', count: 143 },
+  { label: 'Admin & Data Entry', icon: '📊', slug: 'admin-data', count: 256 },
+  { label: 'Content & Marketing', icon: '📱', slug: 'content-marketing', count: 398 },
+  { label: 'Photography', icon: '📸', slug: 'photography', count: 267, badge: 'Gallery' },
+  { label: 'Videography', icon: '🎬', slug: 'videography', count: 198, badge: 'Gallery' },
+]
+
+const talentProfiles = [
+  {
+    name: 'Aina Razali', role: 'Photographer', location: 'Kuala Lumpur',
+    rate: 'RM 800/day', rating: 4.9, reviews: 24,
+    avatar: '/avatars/aina.jpg', fallback: 'AR',
+  },
+  {
+    name: 'Danial Harith', role: 'Videographer', location: 'Petaling Jaya',
+    rate: 'RM 1,200/day', rating: 4.8, reviews: 18,
+    avatar: '/avatars/danial.jpg', fallback: 'DH',
+  },
+  {
+    name: 'Sharifah Nur', role: 'Content Creator', location: 'Shah Alam',
+    rate: 'RM 600/day', rating: 4.9, reviews: 31,
+    avatar: '/avatars/sharifah.jpg', fallback: 'SN',
+  },
+  {
+    name: 'Amir Hakim', role: 'Web Developer', location: 'Cyberjaya',
+    rate: 'RM 1,500/day', rating: 4.7, reviews: 42,
+    avatar: '/avatars/amir.jpg', fallback: 'AH',
+  },
+]
+
+const steps = [
+  {
+    num: '01', title: 'Post What You Need',
+    desc: 'Describe your project — from website development to event photography. Set your budget and timeline in minutes.',
+  },
+  {
+    num: '02', title: 'Compare & Connect',
+    desc: 'Browse proposals, check portfolios, read reviews, and message talent directly. No commitment until you\'re ready.',
+  },
+  {
+    num: '03', title: 'Pay When It\'s Done',
+    desc: 'Pay via FPX or DuitNow. Funds are held securely in escrow and released only when you approve the work.',
+  },
+]
+
+const galleryCovers = [
+  { initials: 'WN', label: 'Wedding' },
+  { initials: 'CH', label: 'Corporate' },
+  { initials: 'EP', label: 'Event' },
+  { initials: 'PP', label: 'Portrait' },
+  { initials: 'PD', label: 'Product' },
+]
 
 export default function Home() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
-      {/* Navigation */}
-      <nav className="nav-bar" style={{ backgroundColor: 'var(--color-canvas)' }}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold" style={{ color: 'var(--color-ink)' }}>
-            UpahJe.my
-          </Link>
-          <div className="flex items-center gap-6">
-            <Link href="/jobs" className="nav-link">Find Work</Link>
-            <Link href="/talent" className="nav-link">Find Talent</Link>
-            <Link href="/categories" className="nav-link">Categories</Link>
-            <Link href="/auth/login" className="nav-link">Sign In</Link>
-            <button className="btn-primary">Get Started</button>
+    <div className="min-h-screen">
+      {/* ─────────────── HERO ─────────────── */}
+      <section className="hero-band" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl">
+            <p className="section-label mb-4" style={{ color: 'var(--color-green-mid)' }}>
+              Malaysia's Freelance &amp; Labour Marketplace
+            </p>
+            <h1 className="font-display-mega mb-6" style={{ color: 'var(--color-ink-deep)' }}>
+              Upah sesiapa.<br />Untuk apa sahaja.
+            </h1>
+            <p className="text-lg md:text-xl mb-10" style={{ color: 'var(--color-body)', maxWidth: 560 }}>
+              Hire verified freelancers and workers across every category — from web dev to photography, electrical work to admin support.
+            </p>
+
+            {/* Search-style CTA */}
+            <div
+              className="flex items-center gap-3 p-2 rounded-2xl mb-10 max-w-xl"
+              style={{
+                backgroundColor: 'var(--color-canvas)',
+                border: '1px solid rgba(14, 15, 12, 0.08)',
+                boxShadow: '0 4px 24px rgba(14, 15, 12, 0.06)',
+              }}
+            >
+              <span className="pl-4" style={{ color: 'var(--color-mute)', fontSize: '1.25rem' }}>🔍</span>
+              <input
+                type="text"
+                placeholder="What do you need done?"
+                className="flex-1 bg-transparent border-none outline-none text-base"
+                style={{ color: 'var(--color-ink)' }}
+                readOnly
+              />
+              <Link
+                href="/jobs/post"
+                className="btn-primary whitespace-nowrap"
+                style={{ borderRadius: 12 }}
+              >
+                Post a Job — Free
+              </Link>
+            </div>
+          </div>
+
+          {/* Category Pills — broad marketplace */}
+          <div className="flex flex-wrap gap-2.5 mt-2">
+            {categories.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/categories/${cat.slug}`}
+                className="category-pill"
+              >
+                <span>{cat.icon}</span>
+                <span>{cat.label}</span>
+                {cat.badge && (
+                  <span className="category-pill-badge">{cat.badge}</span>
+                )}
+              </Link>
+            ))}
+          </div>
+
+          {/* Trust stats row */}
+          <div
+            className="flex flex-wrap items-center gap-8 mt-10 pt-8 border-t"
+            style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}
+          >
+            {[
+              { label: 'Active Freelancers', value: '2,500+' },
+              { label: 'Jobs Completed', value: '1,847' },
+              { label: 'Avg. Response Time', value: '2 hours' },
+              { label: 'Payment Protection', value: 'Escrow' },
+            ].map((stat) => (
+              <div key={stat.label}>
+                <div className="font-bold text-lg" style={{ color: 'var(--color-ink-deep)' }}>
+                  {stat.value}
+                </div>
+                <div className="text-sm" style={{ color: 'var(--color-mute)' }}>
+                  {stat.label}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </nav>
+      </section>
 
-      {/* Category Navigation */}
-      <div className="border-b" style={{ backgroundColor: 'var(--color-canvas)', borderColor: 'var(--color-canvas-soft)' }}>
-        <div className="max-w-7xl mx-auto px-4 py-3 flex gap-3 overflow-x-auto">
-          <Link href="/categories/photography" className="filter-tab whitespace-nowrap">📷 Photography</Link>
-          <Link href="/categories/videography" className="filter-tab whitespace-nowrap">🎬 Videography</Link>
-          <Link href="/categories/content-creator" className="filter-tab whitespace-nowrap">✍️ Content Creator</Link>
-          <Link href="/categories/photo-editor" className="filter-tab whitespace-nowrap">🎨 Photo Editor</Link>
-          <Link href="/categories/graphic-design" className="filter-tab whitespace-nowrap">🖼️ Graphic Design</Link>
-          <Link href="/categories/makeup-artist" className="filter-tab whitespace-nowrap">💄 Makeup Artist</Link>
-          <Link href="/categories/wedding-planner" className="filter-tab whitespace-nowrap">💒 Wedding Planner</Link>
-        </div>
-      </div>
-
-      {/* Hero Band */}
-      <section className="hero-band">
+      {/* ─────────────── GALLERY CALLOUT ─────────────── */}
+      <section className="hero-band-green">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Hero Content */}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-sm font-semibold tracking-wide uppercase mb-4" style={{ color: 'var(--color-body)' }}>
-                Malaysia's Creative Marketplace
+              <p className="section-label mb-3" style={{ color: 'var(--color-primary)' }}>
+                Built-in Portfolio
               </p>
-              <h1 className="font-display-mega mb-6" style={{ color: 'var(--color-ink)' }}>
-                Find the perfect<br />creative talent.
-              </h1>
-              <p className="text-xl mb-8" style={{ color: 'var(--color-body)' }}>
-                Connect with photographers, videographers, designers, and more. 
-                Post a job, browse portfolios, hire with confidence.
+              <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-canvas)' }}>
+                Showcase your work.<br />Stand out from the crowd.
+              </h2>
+              <p className="text-base md:text-lg mb-6" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                The only Malaysian marketplace with a built-in portfolio gallery. 
+                Creatives can showcase their best work, and clients can browse visual 
+                proof of quality before they hire. No other platform has this.
               </p>
               <div className="flex gap-4 flex-wrap">
-                <button className="btn-primary text-lg px-8 py-4">
-                  Post a Job — It's Free
-                </button>
-                <button className="btn-secondary text-lg px-8 py-4">
-                  Browse Talent
-                </button>
+                <Link href="/talent" className="btn-primary">
+                  Browse Portfolios
+                </Link>
+                <Link href="/auth/signup" className="btn-secondary-inverse">
+                  I'm a Creative — Join Free
+                </Link>
               </div>
-              <div className="mt-8 flex items-center gap-6">
-                <div className="flex -space-x-2">
-                  {['A', 'B', 'C', 'D', 'E'].map((initial, i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 rounded-full flex items-center justify-center text-sm font-semibold"
-                      style={{ 
-                        backgroundColor: ['#9fe870', '#ffc091', '#38c8ff', '#c5edab', '#ffd11a'][i],
-                        color: 'var(--color-ink)',
-                        border: '2px solid var(--color-canvas-soft)'
-                      }}
-                    >
-                      {initial}
-                    </div>
-                  ))}
+            </div>
+
+            {/* Gallery preview grid */}
+            <div className="gallery-showcase">
+              {galleryCovers.map((item) => (
+                <div key={item.label} className="gallery-item">
+                  <div
+                    className="w-full h-full flex items-center justify-center text-lg font-bold"
+                    style={{
+                      background: `linear-gradient(135deg, var(--color-green-forest), var(--color-green-mid))`,
+                      color: 'var(--color-primary)',
+                    }}
+                  >
+                    {item.initials}
+                  </div>
+                  <div className="gallery-item-overlay">
+                    <span className="text-sm font-medium" style={{ color: 'var(--color-canvas)' }}>
+                      {item.label}
+                    </span>
+                  </div>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ─────────────── HOW IT WORKS ─────────────── */}
+      <section id="how-it-works" className="content-band">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
+              How It Works
+            </p>
+            <h2 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>
+              Get it done in three steps
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+            {steps.map((step, i) => (
+              <div key={step.num} className={`${i < steps.length - 1 ? 'step-connector' : ''} text-center`}>
+                <div className="flex justify-center mb-6">
+                  <div className="step-number">{step.num}</div>
+                </div>
+                <h3 className="font-display-md mb-3" style={{ color: 'var(--color-ink-deep)' }}>
+                  {step.title}
+                </h3>
                 <p style={{ color: 'var(--color-body)' }}>
-                  <span className="font-semibold" style={{ color: 'var(--color-ink)' }}>2,500+</span> creative professionals
+                  {step.desc}
                 </p>
               </div>
-            </div>
-
-            {/* Currency Converter Card - repurposed as Job Stats Card */}
-            <div className="card-content shadow-elevated" style={{ border: '1px solid var(--color-ink)' }}>
-              <h3 className="font-display-md mb-6" style={{ color: 'var(--color-ink)' }}>
-                Quick Job Stats
-              </h3>
-              <div className="space-y-4">
-                <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'var(--color-canvas-soft)' }}>
-                  <span style={{ color: 'var(--color-body)' }}>Active Jobs</span>
-                  <span className="font-display-sm" style={{ color: 'var(--color-ink)' }}>248</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'var(--color-canvas-soft)' }}>
-                  <span style={{ color: 'var(--color-body)' }}>Posted Today</span>
-                  <span className="font-display-sm" style={{ color: 'var(--color-ink)' }}>12</span>
-                </div>
-                <div className="flex justify-between items-center py-3 border-b" style={{ borderColor: 'var(--color-canvas-soft)' }}>
-                  <span style={{ color: 'var(--color-body)' }}>Avg. Response Time</span>
-                  <span className="font-display-sm" style={{ color: 'var(--color-positive)' }}>2 hours</span>
-                </div>
-                <div className="flex justify-between items-center py-3">
-                  <span style={{ color: 'var(--color-body)' }}>Completed Projects</span>
-                  <span className="font-display-sm" style={{ color: 'var(--color-ink)' }}>1,847</span>
-                </div>
-              </div>
-              <Link href="/jobs" className="btn-primary w-full mt-6 text-center block">
-                View All Jobs
-              </Link>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Categories Section */}
-      <section className="content-band">
+      {/* ─────────────── FEATURED TALENT ─────────────── */}
+      <section className="content-band-soft">
         <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-end mb-8">
+          <div className="flex justify-between items-end mb-10">
             <div>
-              <h2 className="font-display-xl mb-2" style={{ color: 'var(--color-ink)' }}>
-                Explore Categories
-              </h2>
-              <p style={{ color: 'var(--color-body)' }}>
-                Find talent across 7 creative verticals
+              <p className="section-label mb-2" style={{ color: 'var(--color-green-mid)' }}>
+                Top Talent
               </p>
+              <h2 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>
+                Featured freelancers
+              </h2>
             </div>
-            <Link href="/categories" className="btn-tertiary">
-              View All Categories
+            <Link href="/talent" className="btn-tertiary hidden sm:inline-flex">
+              View All →
             </Link>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              { emoji: '📷', name: 'Photography', count: 423, desc: 'Events, portraits, products' },
-              { emoji: '🎬', name: 'Videography', count: 287, desc: 'Events, ads, social content' },
-              { emoji: '✍️', name: 'Content Creator', count: 356, desc: 'Blog, social, copywriting' },
-              { emoji: '🎨', name: 'Photo Editor', count: 198, desc: 'Retouching, color grading' },
-              { emoji: '🖼️', name: 'Graphic Design', count: 412, desc: 'Branding, logos, print' },
-              { emoji: '💄', name: 'Makeup Artist', count: 156, desc: 'Events, bridal, studio' },
-              { emoji: '💒', name: 'Wedding Planner', count: 89, desc: 'Coordination, styling' },
-            ].map((cat) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {talentProfiles.map((talent) => (
               <Link
-                key={cat.name}
-                href={`/categories/${cat.name.toLowerCase().replace(' ', '-')}`}
-                className="card-feature-sage p-6 hover:shadow-elevated transition-all group"
+                key={talent.name}
+                href={`/talent/${talent.name.toLowerCase().replace(' ', '-')}`}
+                className="card-content block"
                 style={{ textDecoration: 'none' }}
               >
-                <span className="text-4xl mb-4 block">{cat.emoji}</span>
-                <h3 className="font-display-md mb-1" style={{ color: 'var(--color-ink)' }}>{cat.name}</h3>
-                <p className="text-sm mb-3" style={{ color: 'var(--color-body)' }}>{cat.desc}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-sm font-semibold" style={{ color: 'var(--color-primary-hover)' }}>
-                    {cat.count} talents
-                  </span>
-                  <span className="text-sm opacity-0 group-hover:opacity-100 transition-opacity" style={{ color: 'var(--color-ink)' }}>
-                    Browse →
+                <div className="flex items-center gap-3 mb-4">
+                  <div
+                    className="talent-avatar-placeholder"
+                  >
+                    {talent.fallback}
+                  </div>
+                  <div>
+                    <div className="font-semibold" style={{ color: 'var(--color-ink)' }}>
+                      {talent.name}
+                    </div>
+                    <div className="text-sm" style={{ color: 'var(--color-body)' }}>
+                      {talent.role}
+                    </div>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-sm mb-1">
+                  <span style={{ color: 'var(--color-mute)' }}>📍</span>
+                  <span style={{ color: 'var(--color-body)' }}>{talent.location}</span>
+                </div>
+                <div className="flex items-center justify-between mt-4 pt-4 border-t" style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}>
+                  <span className="badge badge-positive">★ {talent.rating} ({talent.reviews})</span>
+                  <span className="font-semibold" style={{ color: 'var(--color-ink-deep)' }}>
+                    {talent.rate}
                   </span>
                 </div>
               </Link>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Featured Talent Section */}
-      <section className="hero-band">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-end mb-8">
-            <div>
-              <h2 className="font-display-xl mb-2" style={{ color: 'var(--color-ink)' }}>
-                Featured Talent
-              </h2>
-              <p style={{ color: 'var(--color-body)' }}>
-                Top-rated professionals ready to help
-              </p>
-            </div>
-            <Link href="/talent" className="btn-tertiary">
-              View All Talent
+          <div className="text-center mt-8 sm:hidden">
+            <Link href="/talent" className="btn-tertiary inline-flex">
+              View All Talent →
             </Link>
           </div>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {[
-              { name: 'Aina Razali', role: 'Photographer', location: 'Kuala Lumpur', rate: 'RM 800/day', rating: 4.9, initials: 'AR', color: '#9fe870' },
-              { name: 'Danial Harith', role: 'Videographer', location: 'Petaling Jaya', rate: 'RM 1,200/day', rating: 4.8, initials: 'DH', color: '#ffc091' },
-              { name: 'Sharifah Nur', role: 'Content Creator', location: ' Shah Alam', rate: 'RM 600/day', rating: 4.9, initials: 'SN', color: '#38c8ff' },
-            ].map((talent) => (
-              <div key={talent.name} className="card-content hover:shadow-elevated transition-all">
-                <div className="flex items-start gap-4 mb-4">
-                  <div
-                    className="w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold"
-                    style={{ backgroundColor: talent.color, color: 'var(--color-ink)' }}
-                  >
-                    {talent.initials}
-                  </div>
-                  <div>
-                    <h3 className="font-display-sm" style={{ color: 'var(--color-ink)' }}>{talent.name}</h3>
-                    <p className="text-sm" style={{ color: 'var(--color-body)' }}>{talent.role}</p>
-                    <p className="text-xs" style={{ color: 'var(--color-mute)' }}>{talent.location}</p>
-                  </div>
-                </div>
-                <div className="flex items-center justify-between mb-4">
-                  <span className="badge-positive">★ {talent.rating}</span>
-                  <span className="font-semibold" style={{ color: 'var(--color-ink)' }}>{talent.rate}</span>
-                </div>
-                <button className="btn-secondary w-full">View Profile</button>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="content-band">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-ink)' }}>
-              How It Works
-            </h2>
-            <p className="text-lg" style={{ color: 'var(--color-body)' }}>
-              Get started in three simple steps
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { step: '01', title: 'Post Your Job', desc: 'Describe what you need — event coverage, brand photos, video content. Be specific about your budget and timeline.' },
-              { step: '02', title: 'Compare Proposals', desc: 'Receive quotes from verified professionals. Browse portfolios, check reviews, and message directly to clarify details.' },
-              { step: '03', title: 'Hire & Pay Securely', desc: 'Agree on terms, track progress, and release payment upon completion. Our escrow protects both parties.' },
-            ].map((item) => (
-              <div key={item.step} className="text-center">
-                <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4"
-                  style={{ backgroundColor: 'var(--color-primary)', color: 'var(--color-ink)' }}
-                >
-                  {item.step}
-                </div>
-                <h3 className="font-display-md mb-2" style={{ color: 'var(--color-ink)' }}>{item.title}</h3>
-                <p style={{ color: 'var(--color-body)' }}>{item.desc}</p>
+      {/* ─────────────── STATS BAND ─────────────── */}
+      <section
+        className="py-12"
+        style={{ backgroundColor: 'var(--color-green-forest)' }}
+      >
+        <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          {[
+            { value: '2,500+', label: 'Freelancers' },
+            { value: '1,847', label: 'Jobs Done' },
+            { value: '98%', label: 'Satisfaction' },
+            { value: 'RM 0', label: 'Platform Fees' },
+          ].map((stat) => (
+            <div key={stat.label}>
+              <div
+                className="font-display-lg mb-1"
+                style={{ color: 'var(--color-primary)' }}
+              >
+                {stat.value}
               </div>
-            ))}
-          </div>
+              <div style={{ color: 'rgba(255,255,255,0.6)' }}>
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Dark CTA Section */}
-      <section className="hero-band-dark">
+      {/* ─────────────── FINAL CTA ─────────────── */}
+      <section className="hero-band-green" style={{ padding: '100px 24px' }}>
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-primary)' }}>
+          <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-canvas)' }}>
             Ready to get started?
           </h2>
-          <p className="text-lg mb-8" style={{ color: 'var(--color-canvas-soft)' }}>
-            Join thousands of businesses and creatives using UpahJe.my
+          <p className="text-base md:text-lg mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
+            Join thousands of Malaysians hiring and earning on UpahJe.my
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <button className="btn-primary text-lg px-8 py-4" style={{ backgroundColor: 'var(--color-primary)', color: 'var(--color-ink)' }}>
+            <Link href="/jobs/post" className="btn-primary text-base px-8 py-4">
               Post a Job — Free
-            </button>
-            <button className="btn-secondary text-lg px-8 py-4" style={{ backgroundColor: 'transparent', border: '1px solid var(--color-primary)', color: 'var(--color-primary)' }}>
-              Learn More
-            </button>
+            </Link>
+            <Link href="/auth/signup" className="btn-secondary-inverse text-base px-8 py-4">
+              I'm a Freelancer
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
+      {/* ─────────────── FOOTER ─────────────── */}
       <Footer />
     </div>
   )

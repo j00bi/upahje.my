@@ -8,19 +8,26 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Wise Brand & Accent
+        // Green Brand Core
         primary: '#9fe870',
         'primary-hover': '#cdffad',
         'primary-neutral': '#c5edab',
         'primary-pale': '#e2f6d5',
 
+        // Deep Green — brand anchoring
+        'green-deep': '#0a2a12',
+        'green-forest': '#0d3b18',
+        'green-mid': '#1a6b2e',
+        'green-soft': '#e8f5e0',
+
         // Surfaces
         canvas: '#ffffff',
         'canvas-soft': '#e8ebe6',
+        'canvas-warm': '#f5f3ee',
 
         // Text
         ink: '#0e0f0c',
-        'ink-deep': '#163300',
+        'ink-deep': '#0a2a12',
         body: '#454745',
         mute: '#868685',
 
@@ -65,6 +72,7 @@ module.exports = {
       boxShadow: {
         'card': '0 0 0 1px rgba(14, 15, 12, 0.05)',
         'elevated': '0 4px 16px rgba(14, 15, 12, 0.08)',
+        'green-glow': '0 4px 24px rgba(159, 232, 112, 0.25)',
       },
     },
   },
