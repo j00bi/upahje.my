@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Footer from '@/components/layout/Footer'
+import LiveJobFeed from '@/components/ui/LiveJobFeed'
 
 const categories = [
   'Photography',
@@ -13,23 +14,19 @@ const categories = [
 const talentProfiles = [
   {
     name: 'Aina Razali', role: 'Photographer', location: 'Kuala Lumpur',
-    rate: 'RM 800/day', rating: 4.9, reviews: 24,
-    avatar: '/avatars/aina.jpg', fallback: 'AR',
+    rate: 'RM 800/day', rating: 4.9, reviews: 24, img: 1,
   },
   {
     name: 'Danial Harith', role: 'Videographer', location: 'Petaling Jaya',
-    rate: 'RM 1,200/day', rating: 4.8, reviews: 18,
-    avatar: '/avatars/danial.jpg', fallback: 'DH',
+    rate: 'RM 1,200/day', rating: 4.8, reviews: 18, img: 4,
   },
   {
     name: 'Sharifah Nur', role: 'Content Creator', location: 'Shah Alam',
-    rate: 'RM 600/day', rating: 4.9, reviews: 31,
-    avatar: '/avatars/sharifah.jpg', fallback: 'SN',
+    rate: 'RM 600/day', rating: 4.9, reviews: 31, img: 25,
   },
   {
     name: 'Amir Hakim', role: 'Web Developer', location: 'Cyberjaya',
-    rate: 'RM 1,500/day', rating: 4.7, reviews: 42,
-    avatar: '/avatars/amir.jpg', fallback: 'AH',
+    rate: 'RM 1,500/day', rating: 4.7, reviews: 42, img: 33,
   },
 ]
 
@@ -55,11 +52,11 @@ const trustItems = [
 ]
 
 const galleryCovers = [
-  { initials: 'WN', label: 'Wedding' },
-  { initials: 'CH', label: 'Corporate' },
-  { initials: 'EP', label: 'Event' },
-  { initials: 'PP', label: 'Portrait' },
-  { initials: 'PD', label: 'Product' },
+  { initials: 'WN', label: 'Wedding', img: 11 },
+  { initials: 'CH', label: 'Corporate', img: 12 },
+  { initials: 'EP', label: 'Event', img: 13 },
+  { initials: 'PP', label: 'Portrait', img: 14 },
+  { initials: 'PD', label: 'Product', img: 15 },
 ]
 
 export default function Home() {
@@ -73,7 +70,7 @@ export default function Home() {
             <span className="block text-emerald-700">Pay only when it&apos;s done.</span>
           </h1>
 
-          <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl" style={{ color: 'var(--color-body)' }}>
+          <p className="mt-6 max-w-xl mx-auto text-lg" style={{ color: 'var(--color-body)' }}>
             UpahJe.my helps Malaysians find verified freelancers and workers for events,
             home services, admin work, creative projects, and more.
           </p>
@@ -81,25 +78,25 @@ export default function Home() {
           <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
             <Link
               href="/jobs/post"
-              className="inline-flex items-center justify-center bg-green-700 hover:bg-green-800 text-white font-semibold text-base px-8 py-4 rounded-full transition-all"
+              className="inline-flex items-center justify-center bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-base px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
             >
               Post a Job
             </Link>
             <Link
               href="/auth/signup"
-              className="inline-flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 text-neutral-800 font-semibold text-base px-8 py-4 rounded-full transition-all"
+              className="inline-flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 text-neutral-800 font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5"
             >
-              Join as Worker
+              Browse Workers
             </Link>
           </div>
 
-          {/* Category Pills */}
+          {/* Category pills */}
           <div className="mt-12 flex flex-wrap justify-center gap-3">
             {categories.map((item) => (
               <Link
                 key={item}
                 href={`/categories/${item.toLowerCase().replace(/[ &]+/g, '-')}`}
-                className="rounded-full border border-neutral-200 bg-white px-5 py-2.5 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-emerald-200 transition-all"
+                className="rounded-full border border-neutral-200 bg-white px-5 py-2.5 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-emerald-200 hover:-translate-y-0.5 transition-all duration-200"
               >
                 {item}
               </Link>
@@ -118,67 +115,64 @@ export default function Home() {
                 <div className="font-bold text-base" style={{ color: 'var(--color-ink-deep)' }}>
                   {item.value}
                 </div>
-                <div className="text-sm text-neutral-500">
-                  {item.label}
-                </div>
+                <div className="text-sm text-neutral-500">{item.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ─────────────── GALLERY CALLOUT ─────────────── */}
-      <section className="hero-band-green">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+      {/* ─────────────── LIVE JOB FEED + GALLERY ─────────────── */}
+      <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            {/* Gallery */}
             <div>
-              <p className="section-label mb-3" style={{ color: 'var(--color-primary)' }}>
+              <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
                 Built-in Portfolio
               </p>
-              <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-canvas)' }}>
-                Showcase your work.<br />Stand out from the crowd.
+              <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-ink-deep)' }}>
+                Browse real work<br />before you hire.
               </h2>
-              <p className="text-base md:text-lg mb-6" style={{ color: 'rgba(255,255,255,0.7)' }}>
-                Browse real work before you hire — from event shoots to design,
-                repairs, and freelance projects.
+              <p className="max-w-md mb-6" style={{ color: 'var(--color-body)' }}>
+                From event shoots to design, repairs, and freelance projects — see what local workers have delivered.
               </p>
-              <div className="flex gap-4 flex-wrap">
-                <Link href="/talent" className="btn-primary">
-                  Browse Portfolios
-                </Link>
-                <Link href="/auth/signup" className="btn-secondary-inverse">
-                  Join as Creative
+              <div className="gallery-showcase">
+                {galleryCovers.map((item) => (
+                  <div key={item.label} className="gallery-item">
+                    <div
+                      className="w-full h-full flex items-center justify-center text-lg font-bold bg-cover bg-center"
+                      style={{
+                        backgroundImage: `url(https://i.pravatar.cc/200?img=${item.img})`,
+                      }}
+                    >
+                    </div>
+                    <div className="gallery-item-overlay">
+                      <span className="text-sm font-medium" style={{ color: 'var(--color-canvas)' }}>
+                        {item.label}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-6">
+                <Link href="/talent" className="font-semibold text-sm transition-all hover:gap-2 inline-flex items-center gap-1" style={{ color: 'var(--color-green-mid)' }}>
+                  Browse all portfolios →
                 </Link>
               </div>
             </div>
 
-            <div className="gallery-showcase">
-              {galleryCovers.map((item) => (
-                <div key={item.label} className="gallery-item">
-                  <div
-                    className="w-full h-full flex items-center justify-center text-lg font-bold"
-                    style={{
-                      background: `linear-gradient(135deg, var(--color-green-forest), var(--color-green-mid))`,
-                      color: 'var(--color-primary)',
-                    }}
-                  >
-                    {item.initials}
-                  </div>
-                  <div className="gallery-item-overlay">
-                    <span className="text-sm font-medium" style={{ color: 'var(--color-canvas)' }}>
-                      {item.label}
-                    </span>
-                  </div>
-                </div>
-              ))}
+            {/* Live Feed */}
+            <div>
+              <LiveJobFeed />
             </div>
           </div>
         </div>
       </section>
 
       {/* ─────────────── HOW IT WORKS ─────────────── */}
-      <section id="how-it-works" className="content-band">
-        <div className="max-w-7xl mx-auto">
+      <section id="how-it-works" className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas)' }}>
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
               How It Works
@@ -197,7 +191,7 @@ export default function Home() {
                 <h3 className="font-display-md mb-3" style={{ color: 'var(--color-ink-deep)' }}>
                   {step.title}
                 </h3>
-                <p style={{ color: 'var(--color-body)' }}>
+                <p className="max-w-xs mx-auto" style={{ color: 'var(--color-body)' }}>
                   {step.desc}
                 </p>
               </div>
@@ -207,20 +201,15 @@ export default function Home() {
       </section>
 
       {/* ─────────────── FEATURED TALENT ─────────────── */}
-      <section className="content-band-soft">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex justify-between items-end mb-10">
-            <div>
-              <p className="section-label mb-2" style={{ color: 'var(--color-green-mid)' }}>
-                Top Talent
-              </p>
-              <h2 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>
-                Featured freelancers
-              </h2>
-            </div>
-            <Link href="/talent" className="btn-tertiary hidden sm:inline-flex">
-              View All →
-            </Link>
+      <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-10">
+            <p className="section-label mb-2" style={{ color: 'var(--color-green-mid)' }}>
+              Top Talent
+            </p>
+            <h2 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>
+              Featured freelancers
+            </h2>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -228,29 +217,34 @@ export default function Home() {
               <Link
                 key={talent.name}
                 href={`/talent/${talent.name.toLowerCase().replace(' ', '-')}`}
-                className="card-content block"
-                style={{ textDecoration: 'none' }}
+                className="block p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
+                style={{
+                  textDecoration: 'none',
+                  backgroundColor: 'var(--color-canvas)',
+                  border: '1px solid rgba(14, 15, 12, 0.06)',
+                }}
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="talent-avatar-placeholder">
-                    {talent.fallback}
-                  </div>
+                  <div
+                    className="w-11 h-11 rounded-full bg-cover bg-center flex-shrink-0"
+                    style={{ backgroundImage: `url(https://i.pravatar.cc/88?img=${talent.img})` }}
+                  />
                   <div>
-                    <div className="font-semibold" style={{ color: 'var(--color-ink)' }}>
+                    <div className="font-semibold text-sm" style={{ color: 'var(--color-ink)' }}>
                       {talent.name}
                     </div>
-                    <div className="text-sm" style={{ color: 'var(--color-body)' }}>
+                    <div className="text-xs" style={{ color: 'var(--color-body)' }}>
                       {talent.role}
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-sm mb-1">
+                <div className="flex items-center gap-1.5 text-xs mb-3">
                   <span style={{ color: 'var(--color-mute)' }}>📍</span>
                   <span style={{ color: 'var(--color-body)' }}>{talent.location}</span>
                 </div>
-                <div className="flex items-center justify-between mt-4 pt-4 border-t" style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}>
-                  <span className="badge badge-positive">★ {talent.rating} ({talent.reviews})</span>
-                  <span className="font-semibold" style={{ color: 'var(--color-ink-deep)' }}>
+                <div className="flex items-center justify-between pt-3 border-t" style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}>
+                  <span className="badge badge-positive text-xs">★ {talent.rating} ({talent.reviews})</span>
+                  <span className="font-semibold text-sm" style={{ color: 'var(--color-ink-deep)' }}>
                     {talent.rate}
                   </span>
                 </div>
@@ -258,9 +252,9 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-8 sm:hidden">
-            <Link href="/talent" className="btn-tertiary inline-flex">
-              View All Talent →
+          <div className="text-center mt-8">
+            <Link href="/talent" className="font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" style={{ color: 'var(--color-green-mid)' }}>
+              View all talent →
             </Link>
           </div>
         </div>
@@ -269,31 +263,52 @@ export default function Home() {
       {/* ─────────────── TRUST & SAFETY ─────────────── */}
       <section className="py-24 px-6" style={{ backgroundColor: 'var(--color-green-deep)' }}>
         <div className="max-w-6xl mx-auto">
-          <p className="font-medium text-sm tracking-widest uppercase" style={{ color: 'var(--color-primary)' }}>
-            Trust &amp; Safety
-          </p>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold" style={{ color: 'var(--color-canvas)' }}>
-            Designed to reduce ghosting, scams, and bad hires.
-          </h2>
-
-          <div className="mt-10 grid gap-6 md:grid-cols-3">
-            {trustItems.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-3xl p-6 border"
-                style={{
-                  backgroundColor: 'rgba(255,255,255,0.05)',
-                  borderColor: 'rgba(255,255,255,0.1)',
-                }}
-              >
-                <h3 className="font-semibold text-xl" style={{ color: 'var(--color-canvas)' }}>
-                  {item.title}
-                </h3>
-                <p className="mt-3 text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>
-                  {item.desc}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="font-medium text-sm tracking-widest uppercase" style={{ color: 'var(--color-primary)' }}>
+                Trust &amp; Safety
+              </p>
+              <h2 className="mt-3 text-3xl md:text-4xl font-bold" style={{ color: 'var(--color-canvas)' }}>
+                Designed to reduce ghosting, scams, and bad hires.
+              </h2>
+              <div className="mt-8 space-y-5">
+                {trustItems.map((item) => (
+                  <div key={item.title}>
+                    <h3 className="font-semibold text-lg" style={{ color: 'var(--color-canvas)' }}>
+                      {item.title}
+                    </h3>
+                    <p className="mt-1 text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                      {item.desc}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div
+              className="rounded-3xl p-8 border hidden md:block"
+              style={{
+                backgroundColor: 'rgba(255,255,255,0.03)',
+                borderColor: 'rgba(255,255,255,0.08)',
+              }}
+            >
+              <div className="text-center">
+                <div className="flex justify-center -space-x-2 mb-4">
+                  {[16, 17, 18, 19, 20].map((i) => (
+                    <div
+                      key={i}
+                      className="w-10 h-10 rounded-full border-2 border-green-deep bg-cover bg-center"
+                      style={{ backgroundImage: `url(https://i.pravatar.cc/80?img=${i})` }}
+                    />
+                  ))}
+                </div>
+                <p className="text-sm font-medium" style={{ color: 'var(--color-canvas)' }}>
+                  Trusted by early users across Malaysia
+                </p>
+                <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                  Verified profiles · Escrow protection · Local support
                 </p>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -304,11 +319,11 @@ export default function Home() {
           <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-canvas)' }}>
             Ready to get started?
           </h2>
-          <p className="text-base md:text-lg mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
+          <p className="max-w-md mx-auto mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
             Post a job or join as a worker — it&apos;s free to start.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/jobs/post" className="btn-primary text-base px-8 py-4">
+            <Link href="/jobs/post" className="inline-flex items-center justify-center bg-emerald-500 hover:bg-emerald-400 text-green-deep font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
               Post a Job
             </Link>
             <Link href="/auth/signup" className="btn-secondary-inverse text-base px-8 py-4">
@@ -318,7 +333,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─────────────── FOOTER ─────────────── */}
       <Footer />
     </div>
   )

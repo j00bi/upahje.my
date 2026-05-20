@@ -42,7 +42,7 @@ export default function CategoryNav() {
           <Link href="/auth/login" className="nav-link">
             Sign In
           </Link>
-          <Link href="/auth/signup" className="cta-nav">
+          <Link href="/auth/signup" className="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-5 py-2 rounded-lg transition-all">
             Get Started
           </Link>
         </div>
