@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import CategoryNav from '@/components/navigation/CategoryNav'
-import HeroLogo from '@/components/ui/HeroLogo'
+import IntroAnimation from '@/components/ui/IntroAnimation'
 
 export const metadata: Metadata = {
   title: 'UpahJe.my — Malaysia\'s Local Hiring Platform',
@@ -15,8 +15,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
-        <HeroLogo />
+      <body className="bg-[#f5f5f4] text-neutral-900">
+        <IntroAnimation />
         <CategoryNav />
         <main>{children}</main>
       </body>
