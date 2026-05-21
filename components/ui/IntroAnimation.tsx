@@ -20,7 +20,7 @@ export default function IntroAnimation() {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#f8f8f8]">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-white">
       <video
         src="/upahje-logo-animation.mp4"
         autoPlay
