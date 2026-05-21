@@ -6,6 +6,8 @@ import { TalentCard } from '@/components/talent/TalentCard'
 import { rankTalents } from '@/lib/matching'
 import { mockTalents, talentLocations, talentRates, talentAvailability } from '@/lib/mockTalents'
 import { mockJobs } from '@/lib/mockJobs'
+import { slugify } from '@/lib/slug'
+import { TALENT_PROFILE_BY_SLUG } from '@/data/talentProfiles'
 
 export default function MatchesPage() {
   const params = useParams()
@@ -67,7 +69,8 @@ export default function MatchesPage() {
 
   // Handle view profile
   const handleViewProfile = (talentName: string) => {
-    router.push(`/talent/${talentName.toLowerCase().replace(/\s+/g, '-')}`)
+    const slug = slugify(talentName)
+    router.push(TALENT_PROFILE_BY_SLUG[slug] ? `/talent/${slug}` : '/talent')
   }
 
   if (!job) {

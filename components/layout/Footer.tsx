@@ -1,4 +1,12 @@
 import Link from 'next/link'
+import { MARKETPLACE_CATEGORIES } from '@/lib/categories'
+
+const footerCategories = MARKETPLACE_CATEGORIES.filter((category) =>
+  ['photography', 'videography', 'home-services', 'electrical-trade', 'admin-support', 'web-design'].includes(category.slug),
+).map((category) => ({
+  href: `/categories/${category.slug}`,
+  label: category.name,
+}))
 
 const footerSections = [
   {
@@ -16,19 +24,12 @@ const footerSections = [
       { href: '/jobs', label: 'Find Work' },
       { href: '/auth/signup', label: 'Create Profile' },
       { href: '/talent', label: 'Portfolio Gallery' },
-      { href: '/resources', label: 'Resources' },
+      { href: '/#how-it-works', label: 'How It Works' },
     ],
   },
   {
     heading: 'Categories',
-    links: [
-      { href: '/categories/photography', label: 'Photography' },
-      { href: '/categories/videography', label: 'Videography' },
-      { href: '/categories/web-development', label: 'Web Development' },
-      { href: '/categories/design-creative', label: 'Design & Creative' },
-      { href: '/categories/labour-general', label: 'Labour & Trade' },
-      { href: '/categories/admin-data', label: 'Admin & Data' },
-    ],
+    links: footerCategories,
   },
 ]
 

@@ -39,7 +39,7 @@ export default function CategoryNav() {
 
         {/* Desktop Auth */}
         <div className="hidden md:flex items-center gap-4">
-          <Link href="/auth/login" className="nav-link">
+          <Link href="/auth/signin" className="nav-link">
             Sign In
           </Link>
           <Link href="/auth/signup" className="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-5 py-2 rounded-lg transition-all">
@@ -85,7 +85,7 @@ export default function CategoryNav() {
           ))}
           <div className="flex gap-3 px-4 pt-3">
             <Link
-              href="/auth/login"
+              href="/auth/signin"
               className="flex-1 text-center py-2 rounded-lg text-sm font-medium"
               style={{
                 color: 'var(--color-canvas)',

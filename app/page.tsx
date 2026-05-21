@@ -1,34 +1,14 @@
 import Link from 'next/link'
 import Footer from '@/components/layout/Footer'
 import LiveJobFeed from '@/components/ui/LiveJobFeed'
+import FadeUp from '@/components/motion/FadeUp'
+import { StaggerContainer, StaggerItem } from '@/components/motion/Stagger'
+import { MARKETPLACE_CATEGORIES } from '@/lib/categories'
+import { FEATURED_TALENTS } from '@/data/talentProfiles'
 
-const categories = [
-  'Photography',
-  'Videography',
-  'Home Services',
-  'Electrical & Trade',
-  'Admin Support',
-  'Web & Design',
-]
-
-const talentProfiles = [
-  {
-    name: 'Aina Razali', role: 'Photographer', location: 'Kuala Lumpur',
-    rate: 'RM 800/day', rating: 4.9, reviews: 24, img: 1,
-  },
-  {
-    name: 'Danial Harith', role: 'Videographer', location: 'Petaling Jaya',
-    rate: 'RM 1,200/day', rating: 4.8, reviews: 18, img: 4,
-  },
-  {
-    name: 'Sharifah Nur', role: 'Content Creator', location: 'Shah Alam',
-    rate: 'RM 600/day', rating: 4.9, reviews: 31, img: 25,
-  },
-  {
-    name: 'Amir Hakim', role: 'Web Developer', location: 'Cyberjaya',
-    rate: 'RM 1,500/day', rating: 4.7, reviews: 42, img: 33,
-  },
-]
+const featuredCategories = MARKETPLACE_CATEGORIES.filter((category) =>
+  ['photography', 'videography', 'home-services', 'electrical-trade', 'admin-support', 'web-design'].includes(category.slug),
+)
 
 const steps = [
   {
@@ -65,46 +45,54 @@ export default function Home() {
       {/* ─────────────── HERO ─────────────── */}
       <section className="text-center py-24 md:py-32 px-6 bg-[#f8f8f8]">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-            Hire trusted local help.
-            <span className="block text-emerald-700">Pay only when it&apos;s done.</span>
-          </h1>
+          <FadeUp distance={30} duration={0.6}>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
+              Hire trusted local help.
+              <span className="block text-emerald-700">Pay only when it&apos;s done.</span>
+            </h1>
+          </FadeUp>
 
-          <p className="mt-6 max-w-xl mx-auto text-lg" style={{ color: 'var(--color-body)' }}>
-            UpahJe.my helps Malaysians find verified freelancers and workers for events,
-            home services, admin work, creative projects, and more.
-          </p>
+          <FadeUp delay={0.15} distance={20}>
+            <p className="mt-6 max-w-xl mx-auto text-lg" style={{ color: 'var(--color-body)' }}>
+              UpahJe.my helps Malaysians find verified freelancers and workers for events,
+              home services, admin work, creative projects, and more.
+            </p>
+          </FadeUp>
 
-          <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
-            <Link
-              href="/jobs/post"
-              className="inline-flex items-center justify-center bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-base px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
-            >
-              Post a Job
-            </Link>
-            <Link
-              href="/auth/signup"
-              className="inline-flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 text-neutral-800 font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5"
-            >
-              Browse Workers
-            </Link>
-          </div>
+          <FadeUp delay={0.25} distance={20}>
+            <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
+              <Link
+                href="/jobs/post"
+                className="inline-flex items-center justify-center bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-base px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+              >
+                Post a Job
+              </Link>
+              <Link
+                href="/talent"
+                className="inline-flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 text-neutral-800 font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5"
+              >
+                Browse Workers
+              </Link>
+            </div>
+          </FadeUp>
 
           {/* Category pills */}
-          <div className="mt-12 flex flex-wrap justify-center gap-3">
-            {categories.map((item) => (
-              <Link
-                key={item}
-                href={`/categories/${item.toLowerCase().replace(/[ &]+/g, '-')}`}
-                className="rounded-full border border-neutral-200 bg-white px-5 py-2.5 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-emerald-200 hover:-translate-y-0.5 transition-all duration-200"
-              >
-                {item}
-              </Link>
+          <StaggerContainer className="mt-12 flex flex-wrap justify-center gap-3">
+            {featuredCategories.map((category) => (
+              <StaggerItem key={category.slug}>
+                <Link
+                  href={`/categories/${category.slug}`}
+                  className="block rounded-full border border-neutral-200 bg-white px-5 py-2.5 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-emerald-200 hover:-translate-y-0.5 transition-all duration-200"
+                >
+                  {category.name}
+                </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           {/* Trust indicators */}
-          <div className="mt-12 flex flex-wrap justify-center gap-x-10 gap-y-4">
+          <FadeUp delay={0.35} distance={15}>
+            <div className="mt-12 flex flex-wrap justify-center gap-x-10 gap-y-4">
             {[
               { value: 'Early Access', label: 'Now Open' },
               { value: 'Verified', label: 'Worker Profiles' },
@@ -119,10 +107,12 @@ export default function Home() {
               </div>
             ))}
           </div>
+          </FadeUp>
         </div>
       </section>
 
       {/* ─────────────── LIVE JOB FEED + GALLERY ─────────────── */}
+      <FadeUp distance={24}>
       <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
@@ -137,9 +127,9 @@ export default function Home() {
               <p className="max-w-md mb-6" style={{ color: 'var(--color-body)' }}>
                 From event shoots to design, repairs, and freelance projects — see what local workers have delivered.
               </p>
-              <div className="gallery-showcase">
+              <StaggerContainer className="gallery-showcase">
                 {galleryCovers.map((item) => (
-                  <div key={item.label} className="gallery-item">
+                  <StaggerItem key={item.label} className="gallery-item">
                     <div
                       className="w-full h-full flex items-center justify-center text-lg font-bold bg-cover bg-center"
                       style={{
@@ -152,9 +142,9 @@ export default function Home() {
                         {item.label}
                       </span>
                     </div>
-                  </div>
+                  </StaggerItem>
                 ))}
-              </div>
+              </StaggerContainer>
               <div className="mt-6">
                 <Link href="/talent" className="font-semibold text-sm transition-all hover:gap-2 inline-flex items-center gap-1" style={{ color: 'var(--color-green-mid)' }}>
                   Browse all portfolios →
@@ -169,8 +159,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </FadeUp>
 
       {/* ─────────────── HOW IT WORKS ─────────────── */}
+      <FadeUp distance={24}>
       <section id="how-it-works" className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
@@ -182,25 +174,29 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <StaggerContainer className="grid md:grid-cols-3 gap-8 md:gap-12">
             {steps.map((step, i) => (
-              <div key={step.num} className={`${i < steps.length - 1 ? 'step-connector' : ''} text-center`}>
-                <div className="flex justify-center mb-6">
-                  <div className="step-number">{step.num}</div>
+              <StaggerItem key={step.num}>
+                <div className={`${i < steps.length - 1 ? 'step-connector' : ''} text-center`}>
+                  <div className="flex justify-center mb-6">
+                    <div className="step-number">{step.num}</div>
+                  </div>
+                  <h3 className="font-display-md mb-3" style={{ color: 'var(--color-ink-deep)' }}>
+                    {step.title}
+                  </h3>
+                  <p className="max-w-xs mx-auto" style={{ color: 'var(--color-body)' }}>
+                    {step.desc}
+                  </p>
                 </div>
-                <h3 className="font-display-md mb-3" style={{ color: 'var(--color-ink-deep)' }}>
-                  {step.title}
-                </h3>
-                <p className="max-w-xs mx-auto" style={{ color: 'var(--color-body)' }}>
-                  {step.desc}
-                </p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
+      </FadeUp>
 
       {/* ─────────────── FEATURED TALENT ─────────────── */}
+      <FadeUp distance={24}>
       <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="mb-10">
@@ -212,11 +208,11 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {talentProfiles.map((talent) => (
+          <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {FEATURED_TALENTS.map((talent) => (
+              <StaggerItem key={talent.name}>
               <Link
-                key={talent.name}
-                href={`/talent/${talent.name.toLowerCase().replace(' ', '-')}`}
+                href={`/talent/${talent.slug}`}
                 className="block p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl"
                 style={{
                   textDecoration: 'none',
@@ -227,7 +223,7 @@ export default function Home() {
                 <div className="flex items-center gap-3 mb-4">
                   <div
                     className="w-11 h-11 rounded-full bg-cover bg-center flex-shrink-0"
-                    style={{ backgroundImage: `url(https://i.pravatar.cc/88?img=${talent.img})` }}
+                    style={{ backgroundImage: `url(https://i.pravatar.cc/88?img=${talent.avatarImg})` }}
                   />
                   <div>
                     <div className="font-semibold text-sm" style={{ color: 'var(--color-ink)' }}>
@@ -243,14 +239,15 @@ export default function Home() {
                   <span style={{ color: 'var(--color-body)' }}>{talent.location}</span>
                 </div>
                 <div className="flex items-center justify-between pt-3 border-t" style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}>
-                  <span className="badge badge-positive text-xs">★ {talent.rating} ({talent.reviews})</span>
+                  <span className="badge badge-positive text-xs">★ {talent.rating} ({talent.reviewCount})</span>
                   <span className="font-semibold text-sm" style={{ color: 'var(--color-ink-deep)' }}>
                     {talent.rate}
                   </span>
                 </div>
               </Link>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
 
           <div className="text-center mt-8">
             <Link href="/talent" className="font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" style={{ color: 'var(--color-green-mid)' }}>
@@ -259,8 +256,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </FadeUp>
 
       {/* ─────────────── TRUST & SAFETY ─────────────── */}
+      <FadeUp distance={24}>
       <section className="py-24 px-6" style={{ backgroundColor: 'var(--color-green-deep)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -312,8 +311,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </FadeUp>
 
       {/* ─────────────── FINAL CTA ─────────────── */}
+      <FadeUp distance={24}>
       <section className="hero-band-green" style={{ padding: '100px 24px' }}>
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-canvas)' }}>
@@ -332,6 +333,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </FadeUp>
 
       <Footer />
     </div>

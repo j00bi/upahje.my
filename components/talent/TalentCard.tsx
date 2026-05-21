@@ -1,5 +1,6 @@
 import type { Track } from "@/lib/domain"
 import Link from 'next/link'
+import { slugify } from '@/lib/slug'
 
 interface TalentCardProps {
   name: string
@@ -91,7 +92,7 @@ export function TalentCard({
           </button>
         ) : (
           <Link
-            href={`/talent/${name.toLowerCase().replace(/\s+/g, '-')}`}
+            href={`/talent/${slugify(name)}`}
             className="flex-1 py-2.5 text-sm border rounded-2xl font-medium hover:bg-gray-50 transition text-center"
           >
             View Profile
