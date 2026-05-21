@@ -43,7 +43,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* ─────────────── HERO ─────────────── */}
-      <section className="text-center py-24 md:py-32 px-6 bg-[#f8f8f8]">
+      <section className="text-center py-24 md:py-32 px-6 bg-[var(--color-canvas-soft)]">
         <div className="max-w-4xl mx-auto">
           <FadeUp distance={30} duration={0.6}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">

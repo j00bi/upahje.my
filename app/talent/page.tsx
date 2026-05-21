@@ -4,7 +4,7 @@ import { TALENT_PROFILES } from '@/data/talentProfiles'
 
 export default function TalentIndexPage() {
   return (
-    <div className="min-h-screen bg-[#f8f8f8]">
+    <div className="min-h-screen bg-[var(--color-canvas-soft)]">
       <section className="px-6 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">

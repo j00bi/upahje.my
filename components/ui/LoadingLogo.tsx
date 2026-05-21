@@ -1,6 +1,6 @@
 export function LoadingLogo() {
   return (
-    <div className="flex items-center justify-center bg-white">
+    <div className="flex items-center justify-center bg-[var(--color-canvas-soft)]">
       <video
         src="/upahje-logo-animation.mp4"
         autoPlay

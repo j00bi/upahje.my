@@ -4,7 +4,7 @@ import { MARKETPLACE_CATEGORIES } from '@/lib/categories'
 
 export default function CategoriesIndexPage() {
   return (
-    <div className="min-h-screen bg-[#f8f8f8]">
+    <div className="min-h-screen bg-[var(--color-canvas-soft)]">
       <section className="px-6 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-2xl">
