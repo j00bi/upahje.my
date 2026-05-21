@@ -1,0 +1,196 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String    @id @default(cuid())
+  email           String    @unique
+  name            String?
+  image           String?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  accounts        Account[]
+  employer        Employer?
+  profile         Profile?
+  reviewsWritten  Review[]  @relation("ReviewFromUser")
+  reviewsReceived Review[]  @relation("ReviewToUser")
+  sessions        Session[]
+  talent          Talent?
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Profile {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  role      Role     @default(TALENT)
+  phone     String?
+  state     String?
+  area      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Talent {
+  id                 String              @id @default(cuid())
+  userId             String              @unique
+  track              Track
+  bio                String?
+  rate               String?
+  availability       String?
+  kycTier            Int                 @default(0)
+  verified           Boolean             @default(false)
+  createdAt          DateTime            @default(now())
+  escrowTransactions EscrowTransaction[]
+  jobs               Job[]
+  user               User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  categories         TalentCategory[]
+}
+
+model TalentCategory {
+  talentId   String
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
+  talent     Talent   @relation(fields: [talentId], references: [id])
+
+  @@id([talentId, categoryId])
+}
+
+model Employer {
+  id                 String              @id @default(cuid())
+  userId             String              @unique
+  company            String?
+  createdAt          DateTime            @default(now())
+  user               User                @relation(fields: [userId], references: [id], onDelete: Cascade)
+  escrowTransactions EscrowTransaction[]
+  jobs               Job[]
+}
+
+model Category {
+  id      String           @id @default(cuid())
+  name    String           @unique
+  track   Track
+  emoji   String?
+  jobs    Job[]
+  talents TalentCategory[]
+}
+
+model Job {
+  id                 String              @id @default(cuid())
+  title              String
+  description        String?
+  track              Track
+  rate               String?
+  location           String?
+  status             JobStatus           @default(OPEN)
+  employerId         String
+  talentId           String?
+  createdAt          DateTime            @default(now())
+  categoryId         String
+  escrowTransactions EscrowTransaction[]
+  category           Category            @relation(fields: [categoryId], references: [id])
+  employer           Employer            @relation(fields: [employerId], references: [id])
+  talent             Talent?             @relation(fields: [talentId], references: [id])
+  payments           Payment[]
+}
+
+model Review {
+  id         String   @id @default(cuid())
+  jobId      String   @unique
+  rating     Int
+  comment    String?
+  fromUserId String
+  toUserId   String
+  createdAt  DateTime @default(now())
+  fromUser   User     @relation("ReviewFromUser", fields: [fromUserId], references: [id])
+  toUser     User     @relation("ReviewToUser", fields: [toUserId], references: [id])
+}
+
+model EscrowTransaction {
+  id                   String       @id @default(cuid())
+  jobId                String
+  amount               Float
+  status               EscrowStatus @default(HELD)
+  employerId           String
+  talentId             String
+  billplzTransactionId String?
+  createdAt            DateTime     @default(now())
+  releasedAt           DateTime?
+  cancelledAt          DateTime?
+  employer             Employer     @relation(fields: [employerId], references: [id])
+  job                  Job          @relation(fields: [jobId], references: [id])
+  talent               Talent       @relation(fields: [talentId], references: [id])
+
+  @@index([jobId])
+  @@index([employerId])
+  @@index([talentId])
+}
+
+model Payment {
+  id            String    @id @default(cuid())
+  jobId         String
+  amount        Float
+  status        String
+  employerEmail String
+  talentEmail   String
+  paidAt        DateTime?
+  createdAt     DateTime  @default(now())
+  job           Job       @relation(fields: [jobId], references: [id])
+
+  @@index([jobId])
+}
+
+enum Role {
+  TALENT
+  EMPLOYER
+  ADMIN
+}
+
+enum Track {
+  LABOUR
+  TECHNICAL
+}
+
+enum JobStatus {
+  OPEN
+  MATCHED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum EscrowStatus {
+  HELD
+  RELEASED
+  CANCELLED
+}

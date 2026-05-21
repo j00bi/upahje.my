@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
+  <!-- U Shape Container -->
+  <path d="M40 60 C40 30 60 20 80 20 L80 100 C80 115 90 125 100 125 C110 125 120 115 120 100 L120 20 C140 20 160 30 160 60 L160 140 C160 180 135 200 100 200 C65 200 40 180 40 140 Z" fill="#166345"/>
+  <!-- Handshake Lines -->
+  <path d="M65 95 C65 85 72 78 82 78 L85 78 L100 90 L115 78 L118 78 C128 78 135 85 135 95 C135 102 130 108 124 110 L124 115 C124 120 120 124 115 124 L112 124 C110 128 106 130 102 130 L98 130 C94 130 90 128 88 124 L85 124 C80 124 76 120 76 115 L76 110 C70 108 65 102 65 95 Z" fill="#ffffff" opacity="0.95"/>
+  <!-- Hand details -->
+  <path d="M85 90 L100 102 L115 90" stroke="#166345" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M90 105 L100 112 L110 105" stroke="#166345" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <!-- Thumb left -->
+  <path d="M82 85 C78 88 78 94 82 98" stroke="#166345" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- Thumb right -->
+  <path d="M118 85 C122 88 122 94 118 98" stroke="#166345" stroke-width="2" stroke-linecap="round" fill="none"/>
+</svg>
