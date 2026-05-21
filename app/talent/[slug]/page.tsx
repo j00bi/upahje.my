@@ -1,15 +1,25 @@
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import { TalentCard } from '@/components/talent/TalentCard'
 import { TalentProfilePreview } from '@/components/onboarding/shared/TalentProfilePreview'
 import { PortfolioGrid } from '@/components/portfolio'
 import { portfolioProjects } from '@/data/portfolioProjects'
 import { TALENT_PROFILE_BY_SLUG } from '@/data/talentProfiles'
 
+const TALENT_ALIASES: Record<string, string> = {
+  'aina-razali': 'aina-photography',
+  'danial-harith': 'danial-studio',
+  'sharifah-nur': 'sharifah-lens',
+}
+
 export default async function TalentProfilePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params
   const profile = TALENT_PROFILE_BY_SLUG[slug]
 
   if (!profile) {
+    const alias = TALENT_ALIASES[slug]
+    if (alias) {
+      redirect(`/talent/${alias}`)
+    }
     notFound()
   }
 

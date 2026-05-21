@@ -1,8 +1,15 @@
-import { notFound } from 'next/navigation'
+import { notFound, redirect } from 'next/navigation'
 import Link from 'next/link'
 import { getCategoryBySlug, MARKETPLACE_CATEGORIES } from '@/lib/categories'
 import { portfolioProjects } from '@/data/portfolioProjects'
 import { PortfolioGrid } from '@/components/portfolio'
+
+const CATEGORY_ALIASES: Record<string, string> = {
+  'web-development': 'web-design',
+  'design-creative': 'design',
+  'labour-general': 'home-services',
+  'admin-data': 'admin-support',
+}
 
 export async function generateStaticParams() {
   return MARKETPLACE_CATEGORIES.map((cat) => ({ slug: cat.slug }))
@@ -17,6 +24,10 @@ export default async function CategoryPage({
   const category = getCategoryBySlug(slug)
 
   if (!category) {
+    const alias = CATEGORY_ALIASES[slug]
+    if (alias) {
+      redirect(`/categories/${alias}`)
+    }
     notFound()
   }
 
