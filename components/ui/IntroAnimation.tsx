@@ -20,13 +20,14 @@ export default function IntroAnimation() {
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-[var(--color-canvas-soft)]">
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center"
+      style={{ backgroundColor: '#f9f9f9' }}>
       <video
         src="/upahje-logo-animation.mp4"
         autoPlay
         muted
         playsInline
-        className="w-56 h-56 object-contain mix-blend-multiply"
+        className="w-56 h-56 object-contain"
         onEnded={() => setShow(false)}
       />
     </div>
