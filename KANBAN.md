@@ -1,18 +1,19 @@
-# UpahJe.My — KANBAN (M0 Foundation)
+# UpahJe.My — KANBAN (M0 Foundation + M2 Marketplace Frontend)
 
-**Last Updated**: 2026-05-19
+**Last Updated**: 2026-05-21
 **Roadmap**: M0–M7 active (see docs/M0-TO-M7-ROADMAP.md)
-**Overall Progress**: ~40%
+**Overall Progress**: ~50%
 **Go-Live Target**: Late July – Early August 2026
+**Deployed**: upahje-my.vercel.app
 
 ## M0 – Foundation
 
 ### Status Overview
 - **Auth Track**: Complete (Auth context + sign-in/sign-up pages + auth-only middleware + protected routes + profile creation on signup)
 - **Database Track**: Complete (Prisma schema validated locally; seed data exists; live DB push reaches Supabase and reports the schema is in sync)
-- **Dashboard Track**: Complete (Role-aware dashboards present and compiling against real auth state; build/typecheck are green again)
+- **Dashboard Track**: Complete (Role-aware dashboards present and compiling against real auth state; build/typecheck are green)
 - **Job Posting Track**: Complete (Form connected to database, validation implemented, employerId properly resolved)
-- **Overall Progress**: ~88% (foundation mostly complete locally; live database sync remains the blocker)
+- **Overall Progress**: 100%
 
 ---
 
@@ -47,7 +48,7 @@
 | M0-DS1 | Create main dashboard layout              | Done       | Codex   | Role-aware layout now redirects off real auth state |
 | M0-DS2 | Build Employer dashboard page             | Done       | Codex   | Employer dashboard compiles and reads Prisma-backed data |
 | M0-DS3 | Build Talent dashboard page               | Done       | Codex   | Talent dashboard scaffold present |
-| M0-DS4 | Connect dashboard with real data          | In Progress | Codex   | Data wiring works locally; build and typecheck are green, but live DB sync verification is still blocked |
+| M0-DS4 | Connect dashboard with real data          | Done       | Codex   | Data wiring works; live DB sync verified against Supabase |
 
 ---
 
@@ -97,9 +98,37 @@
 
 ---
 
+## M2 – Marketplace Frontend (May 20 push)
+
+### Status Overview
+- **Homepage**: Complete (broad marketplace positioning, intro animation, green brand, 8 categories, step connectors, LiveJobFeed, trust section)
+- **Portfolio System**: Complete (Behance/Figma-inspired project cards, grid, detail pages, 9 mock projects)
+- **Category Pages**: Complete (7 categories with slug-based routing)
+- **Visual Identity**: Complete (neutral #f8f8f8 scheme, video backgrounds, green brand)
+- **Overall Progress**: ~25% (pages exist, live DB wiring pending for dynamic content)
+
+---
+
+| ID     | Task                                                | Status     | Owner  | Notes |
+|--------|-----------------------------------------------------|------------|--------|-------|
+| M2-H1  | Design & build marketplace homepage                 | Done       | Hermes | Broad positioning: "Upah sesiapa. Untuk apa sahaja." 8 categories, green brand |
+| M2-H2  | Build intro animation (first-session only)          | Done       | Hermes | LoadingLogo + mix-blend-multiply + MP4/WebM fallback |
+| M2-H3  | Implement LiveJobFeed component                     | Done       | Hermes | Real avatars (pravatar), stronger hovers, trust section flip |
+| M2-H4  | Build category pages with slug routing              | Done       | Hermes | 7 category pages; app/categories/[slug]/ |
+| M2-H5  | Build portfolio system (Behance/Figma style)        | Done       | Hermes | ProjectCard, PortfolioGrid, detail pages, 9 mock projects |
+| M2-H6  | Implement video backgrounds                         | Done       | Hermes | MP4 + WebM fallback for hero/intro |
+| M2-H7  | Unify colour scheme                                 | Done       | Hermes | Neutral #f8f8f8 bg, no orange/amber, green brand |
+| M2-H8  | Wire categories with live Prisma data               | To Do      | TBD   | Currently static/content-based |
+| M2-H9  | Build vertical landing pages for all categories     | In Progress | Hermes | 7 done, more verticals pending |
+| M2-H10 | Implement job discovery + search                    | To Do      | TBD   | - |
+| M2-H11 | Build job listing detail pages                      | To Do      | TBD   | - |
+
+---
+
 ## Parallel Execution Notes
 
 - M0 and M1 can run in parallel.
+- M2 frontend is largely independent of M1 backend wiring.
 - KYC system (M1-K1 to M1-K5) should be usable by both Labour and Employer flows.
 - Quick registration paths (M1-L2, M1-E2) should be prioritized for early testing.
 
@@ -107,8 +136,8 @@
 
 ## Blockers
 
-- No active blockers
+- No active blockers. Supabase live DB connectivity resolved.
 
 ## Next Review
 
-After first 3–4 days of execution.
+After next milestone check-in.
