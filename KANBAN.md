@@ -1,6 +1,6 @@
 # UpahJe.My — KANBAN (M0 Foundation + M2 Marketplace Frontend)
 
-**Last Updated**: 2026-05-21
+**Last Updated**: 2026-05-22
 **Roadmap**: M0–M7 active (see docs/M0-TO-M7-ROADMAP.md)
 **Overall Progress**: ~50%
 **Go-Live Target**: Late July – Early August 2026
@@ -58,7 +58,7 @@
 - **Labour Flow**: In Progress
 - **Employer Flow**: In Progress
 - **KYC Track**: In Progress
-- **Overall Progress**: ~50%
+- **Overall Progress**: ~65%
 
 ---
 
@@ -91,10 +91,10 @@
 | ID      | Task                                              | Status | Owner  | Notes |
 |---------|---------------------------------------------------|--------|--------|-------|
 | M1-K1   | Design KYC submission flow                        | In Progress | Codex  | Onboarding completion path is wired; MyKad path still needs DB/verification finish |
-| M1-K2   | Implement MyKad upload + OCR/preview              | To Do  | Codex  | - |
-| M1-K3   | Create backend verification status tracking       | To Do  | Codex  | - |
-| M1-K4   | Add KYC gate for job applications                 | To Do  | Codex  | Full access only |
-| M1-K5   | Build admin KYC review interface                  | To Do  | Codex  | - |
+| M1-K2   | Implement MyKad upload + OCR/preview              | In Progress | Codex  | Upload/status tracking live; OCR/preview still missing |
+| M1-K3   | Create backend verification status tracking       | In Progress | Codex  | Profile kycStatus/kycFileUrl persisted; admin can verify/reject |
+| M1-K4   | Add KYC gate for job applications                 | In Progress | Codex  | Full access only; apply route blocks unverified users |
+| M1-K5   | Build admin KYC review interface                  | Done       | Codex  | /admin/kyc page + list/patch APIs live |
 
 ---
 
@@ -103,9 +103,9 @@
 ### Status Overview
 - **Homepage**: Complete (broad marketplace positioning, intro animation, green brand, 8 categories, step connectors, LiveJobFeed, trust section)
 - **Portfolio System**: Complete (Behance/Figma-inspired project cards, grid, detail pages, 9 mock projects)
-- **Category Pages**: Complete (7 categories with slug-based routing)
-- **Visual Identity**: Complete (neutral #f8f8f8 scheme, video backgrounds, green brand)
-- **Overall Progress**: ~25% (pages exist, live DB wiring pending for dynamic content)
+- **Category Pages**: In progress (live Prisma-backed jobs for mapped verticals, slug-based routing)
+- **Visual Identity**: Complete (neutral #f8f8f8 / #f9f9f9 scheme, video backgrounds, green brand)
+- **Overall Progress**: ~45% (pages exist, live DB wiring landed for the main discovery paths)
 
 ---
 
@@ -118,10 +118,10 @@
 | M2-H5  | Build portfolio system (Behance/Figma style)        | Done       | Hermes | ProjectCard, PortfolioGrid, detail pages, 9 mock projects |
 | M2-H6  | Implement video backgrounds                         | Done       | Hermes | MP4 + WebM fallback for hero/intro |
 | M2-H7  | Unify colour scheme                                 | Done       | Hermes | Neutral #f8f8f8 bg, no orange/amber, green brand |
-| M2-H8  | Wire categories with live Prisma data               | To Do      | TBD   | Currently static/content-based |
+| M2-H8  | Wire categories with live Prisma data               | Done       | Hermes | Category pages query live Prisma jobs for mapped verticals |
 | M2-H9  | Build vertical landing pages for all categories     | In Progress | Hermes | 7 done, more verticals pending |
-| M2-H10 | Implement job discovery + search                    | To Do      | TBD   | - |
-| M2-H11 | Build job listing detail pages                      | To Do      | TBD   | - |
+| M2-H10 | Implement job discovery + search                    | Done       | Hermes | /jobs reads query-string filters; nav search routes into it |
+| M2-H11 | Build job listing detail pages                      | Done       | Hermes | Live /jobs/[jobId] page + apply CTA wired to job APIs |
 
 ---
 
