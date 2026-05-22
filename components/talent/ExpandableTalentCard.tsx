@@ -22,9 +22,9 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
   }, [expanded])
 
   return (
-    <div
+      <div
       className={`rounded-2xl border border-neutral-200 bg-white transition-all duration-300 ${
-        expanded ? 'shadow-lg border-emerald-300' : 'hover:border-emerald-200 hover:shadow-md'
+        expanded ? 'shadow-lg border-green-mid/40' : 'hover:border-green-mid/20 hover:shadow-md'
       }`}
     >
       {/* Collapsed card */}
@@ -46,9 +46,9 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
                 <p className="mt-0.5 text-xs text-neutral-500">{talent.location}</p>
               </div>
               <div className="flex flex-col items-end shrink-0">
-                <span className="font-semibold text-emerald-700 text-sm">{talent.rate}</span>
+                <span className="font-semibold text-green-mid text-sm">{talent.rate}</span>
                 {talent.verified && (
-                  <span className="text-xs text-emerald-600 mt-0.5">✓ Verified</span>
+                  <span className="text-xs text-green-mid/70 mt-0.5">✓ Verified</span>
                 )}
               </div>
             </div>
@@ -107,7 +107,7 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
                 <div className="text-xs text-slate-500 uppercase tracking-wide mb-0.5">Certifications</div>
                 <div className="flex flex-wrap gap-1 mt-1">
                   {talent.certs.map((c, i) => (
-                    <span key={i} className="text-[11px] bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded">{c}</span>
+                    <span key={i} className="text-[11px] bg-green-soft text-green-mid px-1.5 py-0.5 rounded">{c}</span>
                   ))}
                 </div>
               </div>
@@ -116,7 +116,7 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
 
           <button
             onClick={() => router.push(`/talent/${talent.slug}`)}
-            className="mt-4 w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm rounded-2xl transition"
+            className="mt-4 w-full py-3 bg-green-mid hover:bg-green-deep text-white font-medium text-sm rounded-2xl transition"
           >
             View Full Profile
           </button>

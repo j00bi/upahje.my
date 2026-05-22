@@ -226,7 +226,7 @@ export default function Home() {
             Cari orang, setuju harga, bayar bila siap. Daftar percuma.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/jobs/post" className="inline-flex items-center justify-center bg-emerald-500 hover:bg-emerald-400 text-green-deep font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+            <Link href="/jobs/post" className="inline-flex items-center justify-center bg-green-mid hover:bg-green-deep text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
               Post Kerja
             </Link>
             <Link href="/auth/signup" className="btn-secondary-inverse text-base px-8 py-4">

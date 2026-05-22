@@ -140,8 +140,8 @@ function AuthContent() {
                   onClick={() => setRole('employer')}
                   className={`rounded-md border px-4 py-3 text-left transition ${
                     role === 'employer'
-                      ? 'border-emerald-600 bg-emerald-50 text-emerald-800'
-                      : 'border-neutral-200 bg-white text-neutral-700 hover:border-emerald-300'
+                      ? 'border-green-mid bg-green-soft text-green-mid'
+                      : 'border-neutral-200 bg-white text-neutral-700 hover:border-green-mid/40'
                   }`}
                 >
                   <span className="block text-sm font-semibold">Employer</span>
@@ -152,8 +152,8 @@ function AuthContent() {
                   onClick={() => setRole('talent')}
                   className={`rounded-md border px-4 py-3 text-left transition ${
                     role === 'talent'
-                      ? 'border-emerald-600 bg-emerald-50 text-emerald-800'
-                      : 'border-neutral-200 bg-white text-neutral-700 hover:border-emerald-300'
+                      ? 'border-green-mid bg-green-soft text-green-mid'
+                      : 'border-neutral-200 bg-white text-neutral-700 hover:border-green-mid/40'
                   }`}
                 >
                   <span className="block text-sm font-semibold">Talent</span>
@@ -205,7 +205,7 @@ function AuthContent() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+                className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-green-mid focus:outline-none focus:ring-1 focus:ring-green-mid"
                 placeholder="you@example.com"
               />
             </div>
@@ -222,7 +222,7 @@ function AuthContent() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+                className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-green-mid focus:outline-none focus:ring-1 focus:ring-green-mid"
                 placeholder="Password"
               />
             </div>
@@ -240,7 +240,7 @@ function AuthContent() {
                   required
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+                  className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-green-mid focus:outline-none focus:ring-1 focus:ring-green-mid"
                   placeholder="Password"
                 />
               </div>
@@ -249,7 +249,7 @@ function AuthContent() {
             <button
               type="submit"
               disabled={loading || oauthLoading}
-              className="flex w-full justify-center rounded-md border border-transparent bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-emerald-800 disabled:cursor-not-allowed disabled:opacity-60"
+              className="flex w-full justify-center rounded-md border border-transparent bg-green-mid px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-green-deep disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading ? 'Processing...' : isSignup ? 'Create account' : 'Sign in'}
             </button>
@@ -259,7 +259,7 @@ function AuthContent() {
             <button
               type="button"
               onClick={toggleMode}
-              className="text-sm font-medium text-emerald-700 hover:text-emerald-800"
+              className="text-sm font-medium text-green-mid hover:text-green-deep"
             >
               {isSignup ? 'Already have an account? Sign in' : 'Need an account? Register'}
             </button>
@@ -267,11 +267,11 @@ function AuthContent() {
 
           <p className="mt-6 text-center text-xs text-neutral-500">
             By continuing, you agree to the{' '}
-            <Link href="/terms" className="text-emerald-700 hover:text-emerald-800">
+            <Link href="/terms" className="text-green-mid hover:text-green-deep">
               Terms
             </Link>{' '}
             and{' '}
-            <Link href="/privacy" className="text-emerald-700 hover:text-emerald-800">
+            <Link href="/privacy" className="text-green-mid hover:text-green-deep">
               Privacy Policy
             </Link>
             .

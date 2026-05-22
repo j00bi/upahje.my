@@ -12,8 +12,8 @@ export default function LiveJobFeed() {
     <div className="space-y-3">
       <div className="flex items-center gap-2 mb-4">
         <span className="relative flex h-2.5 w-2.5">
-          <span className="absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-30" />
-          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
+          <span className="absolute inline-flex h-full w-full rounded-full bg-green-mid/30" />
+          <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-mid" />
         </span>
         <span className="text-xs font-semibold tracking-wider uppercase" style={{ color: 'var(--color-mute)' }}>
           Live Activity

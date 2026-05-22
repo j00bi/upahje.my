@@ -17,7 +17,7 @@ module.exports = {
         // Deep Green — brand anchoring
         'green-deep': '#0a2a12',
         'green-forest': '#0d3b18',
-        'green-mid': '#1a6b2e',
+        'green-mid': '#166345',
         'green-soft': '#e8f5e0',
 
         // Surfaces

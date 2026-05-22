@@ -41,7 +41,7 @@ export function TalentCard({
         <div>
           <div className="font-semibold text-lg flex items-center gap-2">
             {name}
-            {verified && <span className="text-emerald-500 text-xs">✓</span>}
+            {verified && <span className="text-green-mid text-xs">✓</span>}
           </div>
           <div className="text-sm text-gray-500">{location}</div>
         </div>

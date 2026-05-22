@@ -34,7 +34,7 @@ export default function HeroNew() {
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight">
           <span className="text-neutral-950">Nak </span>
-          <span className="text-emerald-700">
+          <span className="text-green-mid">
             <NakWordTicker />
           </span>
         </h1>
@@ -56,11 +56,11 @@ export default function HeroNew() {
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="Cari servis… contoh: photographer, plumber, runner"
-              className="w-full border-2 border-neutral-200 bg-white rounded-2xl pl-5 pr-14 py-4 text-base focus:outline-none focus:border-emerald-500 focus:ring-4 focus:ring-emerald-100 transition"
+              className="w-full border-2 border-neutral-200 bg-white rounded-2xl pl-5 pr-14 py-4 text-base focus:outline-none focus:border-green-mid focus:ring-4 focus:ring-green-soft transition"
             />
             <button
               type="submit"
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl px-4 py-2.5 text-sm font-semibold transition"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-green-mid hover:bg-green-deep text-white rounded-xl px-4 py-2.5 text-sm font-semibold transition"
             >
               Cari
             </button>
@@ -74,7 +74,7 @@ export default function HeroNew() {
             <button
               key={p.label}
               onClick={() => router.push(p.href)}
-              className="text-xs bg-white border border-neutral-200 hover:border-emerald-300 hover:bg-emerald-50 text-neutral-600 px-3 py-1.5 rounded-full transition"
+              className="text-xs bg-white border border-neutral-200 hover:border-green-mid/40 hover:bg-green-soft text-neutral-600 px-3 py-1.5 rounded-full transition"
             >
               {p.label}
             </button>
@@ -85,7 +85,7 @@ export default function HeroNew() {
         <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
           <button
             onClick={handleSearch}
-            className="inline-flex items-center justify-center bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-base px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
+            className="inline-flex items-center justify-center bg-green-mid hover:bg-green-deep text-white font-semibold text-base px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
           >
             Cari Servis
           </button>

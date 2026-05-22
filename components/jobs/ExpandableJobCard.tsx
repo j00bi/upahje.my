@@ -40,7 +40,7 @@ export function ExpandableJobCard({ job }: ExpandableJobCardProps) {
   return (
     <div
       className={`bg-white border border-slate-200 rounded-3xl transition-all duration-300 ${
-        expanded ? 'shadow-lg border-emerald-300' : 'hover:border-emerald-300 hover:shadow-md'
+        expanded ? 'shadow-lg border-green-mid/40' : 'hover:border-green-mid/30 hover:shadow-md'
       }`}
     >
       {/* Clickable collapsed card */}
@@ -72,7 +72,7 @@ export function ExpandableJobCard({ job }: ExpandableJobCardProps) {
               {job.employer?.company && (
                 <span className="hidden sm:inline">{job.employer.company}</span>
               )}
-              <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${job.track === 'LABOUR' ? 'bg-emerald-100 text-emerald-700' : 'bg-purple-100 text-purple-700'}`}>
+              <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${job.track === 'LABOUR' ? 'bg-green-soft text-green-mid' : 'bg-purple-100 text-purple-700'}`}>
                 {job.track === 'LABOUR' ? '🛠️ Labour' : '💻 Technical'}
               </span>
             </div>
@@ -82,7 +82,7 @@ export function ExpandableJobCard({ job }: ExpandableJobCardProps) {
           </div>
           <div className="text-right shrink-0">
             {job.rate && (
-              <div className="font-semibold text-emerald-700">{job.rate}</div>
+              <div className="font-semibold text-green-mid">{job.rate}</div>
             )}
             <div className="text-xs text-slate-400 mt-1">
               {new Date(job.createdAt).toLocaleDateString('ms-MY', { day: 'numeric', month: 'short' })}
@@ -119,9 +119,9 @@ export function ExpandableJobCard({ job }: ExpandableJobCardProps) {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
             {job.rate && (
-              <div className="bg-emerald-50 rounded-2xl p-3">
-                <div className="text-xs text-emerald-600 font-medium uppercase tracking-wide mb-0.5">Budget</div>
-                <div className="font-semibold text-emerald-800 text-sm">{job.rate}</div>
+              <div className="bg-green-soft rounded-2xl p-3">
+                <div className="text-xs text-green-mid font-medium uppercase tracking-wide mb-0.5">Budget</div>
+                <div className="font-semibold text-green-deep text-sm">{job.rate}</div>
               </div>
             )}
             {job.location && (
@@ -143,7 +143,7 @@ export function ExpandableJobCard({ job }: ExpandableJobCardProps) {
           <div className="flex gap-3">
             <button
               onClick={() => router.push(`/jobs/${job.id}`)}
-              className="flex-1 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium text-sm rounded-2xl transition"
+              className="flex-1 py-3 bg-green-mid hover:bg-green-deep text-white font-medium text-sm rounded-2xl transition"
             >
               View Full Details
             </button>
