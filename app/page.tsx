@@ -4,12 +4,8 @@ import LiveJobFeed from '@/components/ui/LiveJobFeed'
 import FadeUp from '@/components/motion/FadeUp'
 import HeroNew from '@/components/ui/HeroNew'
 import { StaggerContainer, StaggerItem } from '@/components/motion/Stagger'
-import { MARKETPLACE_CATEGORIES } from '@/lib/categories'
+import { getActiveCategories, getCategoriesByCluster, MARKETPLACE_CATEGORIES } from '@/lib/categories'
 import { FEATURED_TALENTS } from '@/data/talentProfiles'
-
-const featuredCategories = MARKETPLACE_CATEGORIES.filter((category) =>
-  ['photography', 'videography', 'home-services', 'electrical-trade', 'admin-support', 'web-design'].includes(category.slug),
-)
 
 const steps = [
   {
@@ -33,14 +29,119 @@ const trustItems = [
 ]
 
 export default function Home() {
+  const activeCats = getActiveCategories()
+  const eventCats = getCategoriesByCluster('events')
+
   return (
     <div className="min-h-screen">
-      {/* ─────────────── HERO ─────────────── */}
+      {/* ────────────────── HERO ────────────────── */}
       <HeroNew />
 
-      {/* ─────────────── LIVE JOB FEED + GALLERY ─────────────── */}
+      {/* ────────────────── APA NAK SETTLE? ────────────────── */}
+      <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas)' }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
+              Apa Nak Settle?
+            </p>
+            <h2 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>
+              Pilih apa yang nak dibuat
+            </h2>
+          </div>
+
+          <StaggerContainer className="grid md:grid-cols-3 gap-5">
+            {activeCats.map((cat) => (
+              <StaggerItem key={cat.slug}>
+                <Link
+                  href={`/categories/${cat.slug}`}
+                  className="block rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-lg text-center"
+                >
+                  <div className="text-4xl mb-4">{cat.emoji}</div>
+                  <h3 className="text-xl font-bold mb-2" style={{ color: 'var(--color-ink-deep)' }}>
+                    {cat.problemPhrase}
+                  </h3>
+                  <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--color-body)' }}>
+                    {cat.description}
+                  </p>
+                  <span className="badge badge-positive text-xs">
+                    {cat.talentCount} talent sedia
+                  </span>
+                </Link>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          <div className="text-center mt-6">
+            <Link
+              href="/categories"
+              className="font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all"
+              style={{ color: 'var(--color-green-mid)' }}
+            >
+              See all categories →
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ────────────────── EVENTS CLUSTER ────────────────── */}
+      {eventCats.filter((c) => c.talentCount > 0).length > 0 && (
+        <FadeUp distance={24}>
+        <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
+                Ada Majlis Nak Cover?
+              </p>
+              <h2 className="font-display-xl mb-3" style={{ color: 'var(--color-ink-deep)' }}>
+                Event & Wedding Services
+              </h2>
+              <p className="max-w-md mx-auto text-sm" style={{ color: 'var(--color-body)' }}>
+                Dari pre-wedding sampai hari besar — semua dalam satu ekosistem.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {eventCats.map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={`/categories/${cat.slug}`}
+                  className={`group rounded-2xl border p-6 transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg ${
+                    cat.talentCount > 0
+                      ? 'border-emerald-200 bg-white hover:border-emerald-300'
+                      : 'border-dashed border-neutral-300 bg-neutral-50 hover:border-neutral-400'
+                  }`}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl">{cat.emoji}</div>
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between">
+                        <h3 className={`font-bold ${cat.talentCount > 0 ? 'text-neutral-950' : 'text-neutral-500'}`}>
+                          {cat.problemPhrase}
+                        </h3>
+                        {cat.talentCount > 0 ? (
+                          <span className="badge badge-positive text-xs">{cat.talentCount} sedia</span>
+                        ) : (
+                          <span className="text-xs px-2.5 py-1 rounded-full border border-dashed border-neutral-300 text-neutral-400">
+                            Coming soon
+                          </span>
+                        )}
+                      </div>
+                      <p className={`text-sm mt-1 leading-relaxed ${cat.talentCount > 0 ? 'text-neutral-600' : 'text-neutral-400'}`}>
+                        {cat.description}
+                      </p>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+        </FadeUp>
+      )}
+
+      {/* ────────────────── LIVE JOB FEED + GALLERY ────────────────── */}
       <FadeUp distance={24}>
-      <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
+      <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
 
@@ -69,9 +170,9 @@ export default function Home() {
       </section>
       </FadeUp>
 
-      {/* ─────────────── HOW IT WORKS ─────────────── */}
+      {/* ────────────────── HOW IT WORKS ────────────────── */}
       <FadeUp distance={24}>
-      <section id="how-it-works" className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas)' }}>
+      <section id="how-it-works" className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
@@ -103,9 +204,9 @@ export default function Home() {
       </section>
       </FadeUp>
 
-      {/* ─────────────── FEATURED TALENT ─────────────── */}
+      {/* ────────────────── FEATURED TALENT ────────────────── */}
       <FadeUp distance={24}>
-      <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
+      <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="mb-10">
             <p className="section-label mb-2" style={{ color: 'var(--color-green-mid)' }}>
@@ -170,7 +271,7 @@ export default function Home() {
       </section>
       </FadeUp>
 
-      {/* ─────────────── TRUST & SAFETY ─────────────── */}
+      {/* ────────────────── TRUST & SAFETY ────────────────── */}
       <FadeUp distance={24}>
       <section className="py-24 px-6" style={{ backgroundColor: 'var(--color-green-deep)' }}>
         <div className="max-w-6xl mx-auto">
@@ -215,7 +316,7 @@ export default function Home() {
       </section>
       </FadeUp>
 
-      {/* ─────────────── FINAL CTA ─────────────── */}
+      {/* ────────────────── FINAL CTA ────────────────── */}
       <FadeUp distance={24}>
       <section className="hero-band-green" style={{ padding: '100px 24px' }}>
         <div className="max-w-7xl mx-auto text-center">
