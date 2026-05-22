@@ -6,10 +6,11 @@ import { LABOUR_CATEGORIES, TECHNICAL_CATEGORIES } from '@/lib/domain'
 import type { Track } from '@/lib/domain'
 
 interface PostJobFormProps {
+  session?: { user: { id: string } } | null
   onSuccess?: (jobId: string) => void
 }
 
-export function PostJobForm({ onSuccess }: PostJobFormProps) {
+export function PostJobForm({ session, onSuccess }: PostJobFormProps) {
   const router = useRouter()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -31,6 +32,13 @@ export function PostJobForm({ onSuccess }: PostJobFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!isValid) return
+
+    // If not authenticated, redirect to sign-in preserving form intent
+    if (!session) {
+      sessionStorage.setItem('pendingJobPost', JSON.stringify(form))
+      router.push('/auth/signin?callbackUrl=/jobs/post')
+      return
+    }
 
     setLoading(true)
     setError(null)
@@ -60,6 +68,10 @@ export function PostJobForm({ onSuccess }: PostJobFormProps) {
       if (res.ok) {
         onSuccess?.(data.jobId)
         router.push(`/jobs/${data.jobId}`)
+      } else if (res.status === 401) {
+        // Token expired or session lost
+        sessionStorage.setItem('pendingJobPost', JSON.stringify(form))
+        router.push('/auth/signin?callbackUrl=/jobs/post')
       } else {
         setError(data.error ?? 'Failed to post job. Please try again.')
       }
@@ -196,7 +208,7 @@ form.track === t
       </button>
 
       <p className="text-center text-xs text-slate-400">
-        Your job will be visible to talents immediately after posting.
+        {session ? 'Your job will be visible immediately after posting.' : 'You\'ll be asked to sign in before we post your job.'}
       </p>
     </form>
   )

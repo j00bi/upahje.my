@@ -1,107 +1,32 @@
-'use client'
-
-import { useState, useEffect } from 'react'
+import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { use } from 'react'
+import { auth } from '@/lib/auth'
+import { prisma } from '@/lib/prisma'
+import { ApplySection } from './ApplySection'
 
-interface JobDetailProps {
+export const dynamic = 'force-dynamic'
+
+export default async function JobDetailPage({
+  params,
+}: {
   params: Promise<{ jobId: string }>
-}
+}) {
+  const { jobId } = await params
+  const session = await auth()
 
-interface Job {
-  id: string
-  title: string
-  description: string | null
-  rate: string | null
-  location: string | null
-  track: string
-  status: string
-  createdAt: string
-  employer: {
-    id: string
-    company: string | null
-    user: { id: string; name: string | null; email: string }
-  }
-  category: { id: string; name: string; emoji: string | null } | null
-}
+  const job = await prisma.job.findUnique({
+    where: { id: jobId },
+    include: {
+      employer: {
+        include: {
+          user: { select: { id: true, name: true, email: true } },
+        },
+      },
+      category: { select: { id: true, name: true, emoji: true } },
+    },
+  })
 
-export default function JobDetailPage({ params }: JobDetailProps) {
-  const { jobId } = use(params)
-  const [job, setJob] = useState<Job | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [notFound, setNotFound] = useState(false)
-  const [proposal, setProposal] = useState('')
-  const [isApplying, setIsApplying] = useState(false)
-  const [applied, setApplied] = useState(false)
-  const [applyError, setApplyError] = useState<string | null>(null)
-
-  useEffect(() => {
-    fetch(`/api/jobs/${jobId}`)
-      .then(r => {
-        if (r.status === 404) { setNotFound(true); return null }
-        return r.json()
-      })
-      .then(data => {
-        if (data) setJob(data)
-        setLoading(false)
-      })
-      .catch(() => setLoading(false))
-  }, [jobId])
-
-  const handleApply = async () => {
-    if (!proposal.trim()) {
-      setApplyError('Please write a short proposal first.')
-      return
-    }
-
-    setIsApplying(true)
-    setApplyError(null)
-
-    try {
-      const res = await fetch(`/api/jobs/${jobId}/apply`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ proposal }),
-      })
-
-      if (res.ok) {
-        setApplied(true)
-      } else {
-        const data = await res.json()
-        setApplyError(data.error ?? 'Failed to submit application.')
-      }
-    } catch {
-      setApplyError('Something went wrong. Please try again.')
-    } finally {
-      setIsApplying(false)
-    }
-  }
-
-  if (loading) {
-    return (
-      <div className="min-h-screen bg-[#f8f8f8] flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-8 h-8 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
-          <p className="text-slate-500 text-sm">Loading job...</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (notFound || !job) {
-    return (
-      <div className="min-h-screen bg-[#f8f8f8] flex items-center justify-center">
-        <div className="text-center">
-          <div className="text-6xl mb-4">🔍</div>
-          <h2 className="text-2xl font-semibold text-slate-700 mb-2">Job not found</h2>
-          <p className="text-slate-500 mb-6">This job may have been filled or removed.</p>
-          <Link href="/jobs" className="px-6 py-2.5 bg-emerald-600 text-white rounded-2xl text-sm font-medium">
-            Browse all jobs
-          </Link>
-        </div>
-      </div>
-    )
-  }
+  if (!job) notFound()
 
   const postedDate = new Date(job.createdAt).toLocaleDateString('ms-MY', {
     day: 'numeric', month: 'long', year: 'numeric'
@@ -124,7 +49,6 @@ export default function JobDetailPage({ params }: JobDetailProps) {
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-6">
         {/* Main card */}
         <div className="bg-white border border-slate-200 rounded-3xl p-8">
-          {/* Category + track */}
           <div className="flex items-center gap-2 mb-4">
             {job.category && (
               <span className="text-sm bg-slate-100 text-slate-600 px-3 py-1 rounded-full">
@@ -182,42 +106,8 @@ export default function JobDetailPage({ params }: JobDetailProps) {
           )}
         </div>
 
-        {/* Apply card */}
-        <div className="bg-white border border-slate-200 rounded-3xl p-8">
-          {!applied ? (
-            <>
-              <h3 className="font-semibold text-lg text-slate-800 mb-4">Apply for this job</h3>
-              <textarea
-                value={proposal}
-                onChange={e => setProposal(e.target.value)}
-                placeholder="Write a short proposal explaining why you're a good fit for this job..."
-                className="w-full border border-slate-200 rounded-2xl p-4 h-32 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none"
-              />
-              {applyError && (
-                <p className="mt-2 text-sm text-red-600">{applyError}</p>
-              )}
-              <button
-                onClick={handleApply}
-                disabled={isApplying || !proposal.trim()}
-                className="mt-4 w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-2xl transition disabled:bg-slate-300 disabled:cursor-not-allowed"
-              >
-                {isApplying ? 'Submitting...' : 'Submit Application'}
-              </button>
-              <p className="mt-3 text-center text-xs text-slate-400">
-                By applying, you agree to our Terms of Service. We'll notify the employer.
-              </p>
-            </>
-          ) : (
-            <div className="text-center py-6">
-              <div className="text-5xl mb-4">✅</div>
-              <h3 className="text-xl font-semibold text-emerald-700 mb-2">Application submitted!</h3>
-              <p className="text-slate-600 text-sm mb-4">The employer will review your proposal and get in touch.</p>
-              <Link href="/dashboard/talent" className="text-emerald-600 text-sm font-medium hover:underline">
-                View your applications →
-              </Link>
-            </div>
-          )}
-        </div>
+        {/* Apply section — client component */}
+        <ApplySection jobId={jobId} userId={session?.user?.id} />
       </div>
     </div>
   )
