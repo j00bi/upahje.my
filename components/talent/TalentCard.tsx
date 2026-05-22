@@ -33,6 +33,7 @@ export function TalentCard({
 }: TalentCardProps) {
   const isLabour = track === 'LABOUR'
   const accent = isLabour ? 'green' : 'purple'
+  const hasReviews = averageRating !== undefined && averageRating !== null && averageRating > 0
 
   return (
     <div className="group border rounded-3xl p-5 hover:shadow-lg transition-all bg-white active:scale-[0.985]">
@@ -72,13 +73,19 @@ export function TalentCard({
 
       {averageRating !== undefined && (
         <div className="mb-4 flex items-center gap-2">
-          <div className="flex text-amber-500">
-            {'★'.repeat(Math.round(averageRating || 0))}
-            {'☆'.repeat(5 - Math.round(averageRating || 0))}
-          </div>
-          <span className="text-sm text-gray-600">
-            {averageRating?.toFixed(1)} ({reviewCount || 0} reviews)
-          </span>
+          {hasReviews ? (
+            <>
+              <div className="flex text-amber-500">
+                {'★'.repeat(Math.round(averageRating || 0))}
+                {'☆'.repeat(5 - Math.round(averageRating || 0))}
+              </div>
+              <span className="text-sm text-gray-600">
+                {averageRating?.toFixed(1)} ({reviewCount || 0} reviews)
+              </span>
+            </>
+          ) : (
+            <span className="text-xs text-gray-400">New to UpahJe</span>
+          )}
         </div>
       )}
 

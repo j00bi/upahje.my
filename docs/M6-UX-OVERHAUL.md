@@ -71,4 +71,5 @@ M1 (Onboarding) and M2 (Jobs infrastructure) are deployed. The site has the righ
 | P5 | Provider cards | 1 session | Next |
 | P6 | Visual hierarchy | 1 session | Final |
 
-**Next Action**: Start P0 — rotating hero + search bar.
+**Completed**: P0 (Hero + Search Bar), P1 (SSR fix + login wall removal)
+**Next**: P2 — Trust & Credibility

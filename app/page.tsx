@@ -147,7 +147,11 @@ export default function Home() {
                   <span style={{ color: 'var(--color-body)' }}>{talent.location}</span>
                 </div>
                 <div className="flex items-center justify-between pt-3 border-t" style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}>
-                  <span className="badge badge-positive text-xs">★ {talent.rating} ({talent.reviewCount})</span>
+                  {talent.rating > 0 ? (
+                    <span className="badge badge-positive text-xs">★ {talent.rating} ({talent.reviewCount})</span>
+                  ) : (
+                    <span className="text-xs" style={{ color: 'var(--color-mute)' }}>New to UpahJe</span>
+                  )}
                   <span className="font-semibold text-sm" style={{ color: 'var(--color-ink-deep)' }}>
                     {talent.rate}
                   </span>
@@ -192,29 +196,19 @@ export default function Home() {
               </div>
             </div>
             <div
-              className="rounded-3xl p-8 border hidden md:block"
+              className="rounded-3xl p-8 border flex flex-col items-center justify-center text-center hidden md:block"
               style={{
                 backgroundColor: 'rgba(255,255,255,0.03)',
                 borderColor: 'rgba(255,255,255,0.08)',
               }}
             >
-              <div className="text-center">
-                <div className="flex justify-center -space-x-2 mb-4">
-                  {[16, 17, 18, 19, 20].map((i) => (
-                    <div
-                      key={i}
-                      className="w-10 h-10 rounded-full border-2 border-green-deep bg-cover bg-center"
-                      style={{ backgroundImage: `url(https://i.pravatar.cc/80?img=${i})` }}
-                    />
-                  ))}
-                </div>
-                <p className="text-sm font-medium" style={{ color: 'var(--color-canvas)' }}>
-                  Trusted by early users across Malaysia
-                </p>
-                <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>
-                  Verified profiles · Escrow protection · Local support
-                </p>
-              </div>
+              <div className="text-4xl mb-4">🔒</div>
+              <p className="text-sm font-medium" style={{ color: 'var(--color-canvas)' }}>
+                Your money is safe with escrow
+              </p>
+              <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>
+                Verified profiles · Escrow protection · Local support
+              </p>
             </div>
           </div>
         </div>

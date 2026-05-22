@@ -62,9 +62,13 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
             </div>
 
             <div className="mt-3 flex items-center justify-between border-t border-neutral-100 pt-3">
-              <span className="text-sm font-medium text-neutral-600">
-                ★ {talent.rating} ({talent.reviewCount})
-              </span>
+              {talent.rating > 0 ? (
+                <span className="text-sm font-medium text-neutral-600">
+                  ★ {talent.rating} ({talent.reviewCount})
+                </span>
+              ) : (
+                <span className="text-sm text-neutral-400">New to UpahJe</span>
+              )}
               <svg
                 className={`w-4 h-4 text-neutral-400 transition-transform duration-200 ${expanded ? 'rotate-180' : ''}`}
                 fill="none"
