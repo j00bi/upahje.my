@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Footer from '@/components/layout/Footer'
 import LiveJobFeed from '@/components/ui/LiveJobFeed'
 import FadeUp from '@/components/motion/FadeUp'
+import HeroNew from '@/components/ui/HeroNew'
 import { StaggerContainer, StaggerItem } from '@/components/motion/Stagger'
 import { MARKETPLACE_CATEGORIES } from '@/lib/categories'
 import { FEATURED_TALENTS } from '@/data/talentProfiles'
@@ -31,94 +32,18 @@ const trustItems = [
   { title: 'Malaysia-first', desc: 'Built around local jobs, local pricing, and local trust.' },
 ]
 
-const galleryCovers = [
-  { initials: 'WN', label: 'Wedding', img: 11 },
-  { initials: 'CH', label: 'Corporate', img: 12 },
-  { initials: 'EP', label: 'Event', img: 13 },
-  { initials: 'PP', label: 'Portrait', img: 14 },
-  { initials: 'PD', label: 'Product', img: 15 },
-]
-
 export default function Home() {
   return (
     <div className="min-h-screen">
       {/* ─────────────── HERO ─────────────── */}
-      <section className="text-center py-24 md:py-32 px-6 bg-[var(--color-canvas-soft)]">
-        <div className="max-w-4xl mx-auto">
-          <FadeUp distance={30} duration={0.6}>
-            <h1 className="text-5xl font-bold leading-tight text-neutral-950 sm:text-6xl">
-              UpahJe.my
-              <span className="mt-3 block text-3xl font-semibold text-emerald-700 sm:text-4xl">
-                Hire trusted local help. Pay when it&apos;s done.
-              </span>
-            </h1>
-          </FadeUp>
-
-          <FadeUp delay={0.15} distance={20}>
-            <p className="mt-6 max-w-xl mx-auto text-lg" style={{ color: 'var(--color-body)' }}>
-              UpahJe.my helps Malaysians find verified freelancers and workers for events,
-              home services, admin work, creative projects, and more.
-            </p>
-          </FadeUp>
-
-          <FadeUp delay={0.25} distance={20}>
-            <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
-              <Link
-                href="/jobs/post"
-                className="inline-flex items-center justify-center bg-emerald-700 hover:bg-emerald-800 text-white font-semibold text-base px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
-              >
-                Post a Job
-              </Link>
-              <Link
-                href="/auth/signup"
-                className="inline-flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 text-neutral-800 font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5"
-              >
-                Register
-              </Link>
-            </div>
-          </FadeUp>
-
-          {/* Category pills */}
-          <StaggerContainer className="mt-12 flex flex-wrap justify-center gap-3">
-            {featuredCategories.map((category) => (
-              <StaggerItem key={category.slug}>
-                <Link
-                  href={`/categories/${category.slug}`}
-                  className="block rounded-full border border-neutral-200 bg-white px-5 py-2.5 text-sm text-neutral-700 shadow-sm hover:shadow-md hover:border-emerald-200 hover:-translate-y-0.5 transition-all duration-200"
-                >
-                  {category.name}
-                </Link>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-
-          {/* Trust indicators */}
-          <FadeUp delay={0.35} distance={15}>
-            <div className="mt-12 flex flex-wrap justify-center gap-x-10 gap-y-4">
-            {[
-              { value: 'Early Access', label: 'Now Open' },
-              { value: 'Verified', label: 'Worker Profiles' },
-              { value: 'Escrow', label: 'Payment Protection' },
-              { value: 'Local', label: 'Malaysia First' },
-            ].map((item) => (
-              <div key={item.label}>
-                <div className="font-bold text-base" style={{ color: 'var(--color-ink-deep)' }}>
-                  {item.value}
-                </div>
-                <div className="text-sm text-neutral-500">{item.label}</div>
-              </div>
-            ))}
-          </div>
-          </FadeUp>
-        </div>
-      </section>
+      <HeroNew />
 
       {/* ─────────────── LIVE JOB FEED + GALLERY ─────────────── */}
       <FadeUp distance={24}>
       <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-start">
-            {/* Gallery */}
+
             <div>
               <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
                 Built-in Portfolio
@@ -129,24 +54,6 @@ export default function Home() {
               <p className="max-w-md mb-6" style={{ color: 'var(--color-body)' }}>
                 From event shoots to design, repairs, and freelance projects — see what local workers have delivered.
               </p>
-              <StaggerContainer className="gallery-showcase">
-                {galleryCovers.map((item) => (
-                  <StaggerItem key={item.label} className="gallery-item">
-                    <div
-                      className="w-full h-full flex items-center justify-center text-lg font-bold bg-cover bg-center"
-                      style={{
-                        backgroundImage: `url(https://i.pravatar.cc/200?img=${item.img})`,
-                      }}
-                    >
-                    </div>
-                    <div className="gallery-item-overlay">
-                      <span className="text-sm font-medium" style={{ color: 'var(--color-canvas)' }}>
-                        {item.label}
-                      </span>
-                    </div>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
               <div className="mt-6">
                 <Link href="/talent" className="font-semibold text-sm transition-all hover:gap-2 inline-flex items-center gap-1" style={{ color: 'var(--color-green-mid)' }}>
                   Browse all portfolios →
@@ -154,7 +61,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Live Feed */}
             <div>
               <LiveJobFeed />
             </div>
@@ -169,24 +75,24 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
-              How It Works
+              Cara UpahJe
             </p>
             <h2 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>
-              Get it done in three steps
+              Cerita apa yang anda perlukan
             </h2>
           </div>
 
-          <StaggerContainer className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <StaggerContainer className="grid md:grid-cols-4 gap-6 md:gap-8">
             {steps.map((step, i) => (
               <StaggerItem key={step.num}>
                 <div className={`${i < steps.length - 1 ? 'step-connector' : ''} text-center`}>
-                  <div className="flex justify-center mb-6">
+                  <div className="flex justify-center mb-4">
                     <div className="step-number">{step.num}</div>
                   </div>
-                  <h3 className="font-display-md mb-3" style={{ color: 'var(--color-ink-deep)' }}>
+                  <h3 className="font-display-sm mb-2" style={{ color: 'var(--color-ink-deep)' }}>
                     {step.title}
                   </h3>
-                  <p className="max-w-xs mx-auto" style={{ color: 'var(--color-body)' }}>
+                  <p className="max-w-xs mx-auto text-sm" style={{ color: 'var(--color-body)' }}>
                     {step.desc}
                   </p>
                 </div>
@@ -270,7 +176,7 @@ export default function Home() {
                 Trust &amp; Safety
               </p>
               <h2 className="mt-3 text-3xl md:text-4xl font-bold" style={{ color: 'var(--color-canvas)' }}>
-                Designed to reduce ghosting, scams, and bad hires.
+                Dibina untuk kurangkan ghosting, scam, dan hirup tenung.
               </h2>
               <div className="mt-8 space-y-5">
                 {trustItems.map((item) => (
@@ -320,17 +226,17 @@ export default function Home() {
       <section className="hero-band-green" style={{ padding: '100px 24px' }}>
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-canvas)' }}>
-            Ready to get started?
+            Nak settle kerja? UpahJe.
           </h2>
           <p className="max-w-md mx-auto mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
-            Post a job or join as a worker — it&apos;s free to start.
+            Cari orang, setuju harga, bayar bila siap. Daftar percuma.
           </p>
           <div className="flex gap-4 justify-center flex-wrap">
             <Link href="/jobs/post" className="inline-flex items-center justify-center bg-emerald-500 hover:bg-emerald-400 text-green-deep font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
-              Post a Job
+              Post Kerja
             </Link>
             <Link href="/auth/signup" className="btn-secondary-inverse text-base px-8 py-4">
-              Join as Worker
+              Cari Upah
             </Link>
           </div>
         </div>
