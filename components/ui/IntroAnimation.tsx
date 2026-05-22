@@ -9,20 +9,29 @@ export default function IntroAnimation() {
     const hasSeenIntro = sessionStorage.getItem("upahje-intro-seen");
 
     if (hasSeenIntro) {
+      document.documentElement.removeAttribute('data-intro');
       setShow(false);
       return;
     }
 
     sessionStorage.setItem("upahje-intro-seen", "true");
 
-    const timer = setTimeout(() => setShow(false), 2800);
-    return () => clearTimeout(timer);
+    const timer = setTimeout(() => {
+      document.documentElement.removeAttribute('data-intro');
+      setShow(false);
+    }, 2800);
+
+    return () => {
+      clearTimeout(timer);
+      document.documentElement.removeAttribute('data-intro');
+    };
   }, []);
 
   if (!show) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center"
+    <div
+      className="fixed inset-0 z-[9999] flex items-center justify-center"
       style={{
         backgroundColor: '#f9f9f9',
         position: 'fixed',
@@ -34,14 +43,18 @@ export default function IntroAnimation() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-      }}>
+      }}
+    >
       <video
         src="/upahje-logo-animation.mp4"
         autoPlay
         muted
         playsInline
         className="w-56 h-56 object-contain"
-        onEnded={() => setShow(false)}
+        onEnded={() => {
+          document.documentElement.removeAttribute('data-intro');
+          setShow(false);
+        }}
       />
     </div>
   );

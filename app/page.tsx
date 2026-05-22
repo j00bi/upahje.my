@@ -176,7 +176,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="font-medium text-sm tracking-widest uppercase" style={{ color: 'var(--color-primary)' }}>
+              <p className="font-medium text-sm tracking-widest uppercase" style={{ color: 'var(--color-green-soft)' }}>
                 Trust &amp; Safety
               </p>
               <h2 className="mt-3 text-3xl md:text-4xl font-bold" style={{ color: 'var(--color-canvas)' }}>

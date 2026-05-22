@@ -70,7 +70,7 @@ export default function CategoryNav() {
           </Link>
           <Link
             href="/auth/signup"
-            className="inline-flex items-center justify-center rounded-md bg-[var(--color-primary)] px-4 py-2 text-sm font-semibold text-[var(--color-ink-deep)] transition-all hover:bg-[var(--color-primary-hover)]"
+            className="inline-flex items-center justify-center rounded-md border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-white/10"
           >
             Register
           </Link>
@@ -129,8 +129,7 @@ export default function CategoryNav() {
             </Link>
             <Link
               href="/auth/signup"
-              className="flex-1 rounded-md py-2 text-center text-sm font-semibold"
-              style={{ backgroundColor: 'var(--color-primary)', color: 'var(--color-ink-deep)' }}
+              className="flex-1 rounded-md border border-white/30 py-2 text-center text-sm font-semibold text-white hover:bg-white/10"
               onClick={() => setMobileOpen(false)}
             >
               Register
