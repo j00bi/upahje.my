@@ -3,6 +3,7 @@ import { Sora, DM_Sans } from 'next/font/google'
 import './globals.css'
 import CategoryNav from '@/components/navigation/CategoryNav'
 import IntroAnimation from '@/components/ui/IntroAnimation'
+import { AuthProvider } from '@/lib/supabase/auth-context'
 
 const sora = Sora({
   subsets: ['latin'],
@@ -41,11 +42,13 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-[var(--color-canvas-soft)] text-neutral-900">
-        <IntroAnimation />
-        <div id="page-content">
-          <CategoryNav />
-          <main>{children}</main>
-        </div>
+        <AuthProvider>
+          <IntroAnimation />
+          <div id="page-content">
+            <CategoryNav />
+            <main>{children}</main>
+          </div>
+        </AuthProvider>
       </body>
     </html>
   )

@@ -4,11 +4,12 @@ import Link from 'next/link'
 import { Suspense, useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { signInWithEmail, signInWithOAuth } from '@/lib/supabase/auth'
+import { normalizeInternalRedirect } from '@/lib/auth-redirect'
 
 function SignInContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
-  const callbackUrl = searchParams.get('callbackUrl') ?? '/dashboard'
+  const callbackUrl = normalizeInternalRedirect(searchParams.get('callbackUrl'), '/dashboard')
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')

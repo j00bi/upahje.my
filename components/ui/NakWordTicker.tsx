@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react'
 
-const WORDS = ['Kahwin?', 'Paip Tersumbat?', 'Shoot Produk?', 'Pindah Rumah?', 'Nak Tutor?', 'Nak Runner?']
+const WORDS = ['Kahwin?', 'Paip Tersumbat?', 'Shoot Produk?', 'Pindah Rumah?', 'Tutor Anak?', 'Runner?']
 const DURATION = 2800
 
 export function NakWordTicker() {

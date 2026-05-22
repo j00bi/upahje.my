@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Suspense, useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
 import { signInWithEmail, signInWithOAuth, signUpWithEmail } from '@/lib/supabase/auth'
+import { normalizeInternalRedirect, normalizeRegistrationRole } from '@/lib/auth-redirect'
 
 type AuthMode = 'signin' | 'signup'
 type RegistrationRole = 'employer' | 'talent'
@@ -11,14 +12,15 @@ type RegistrationRole = 'employer' | 'talent'
 function AuthContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
-  const callbackUrl = searchParams.get('callbackUrl') ?? '/dashboard'
+  const callbackUrl = normalizeInternalRedirect(searchParams.get('callbackUrl'), '/dashboard')
   const initialMode = searchParams.get('mode') === 'signin' ? 'signin' : 'signup'
+  const initialRole = normalizeRegistrationRole(searchParams.get('role'))
 
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
   const [authMode, setAuthMode] = useState<AuthMode>(initialMode)
-  const [role, setRole] = useState<RegistrationRole | null>(null)
+  const [role, setRole] = useState<RegistrationRole | null>(initialRole)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
   const [oauthLoading, setOauthLoading] = useState(false)

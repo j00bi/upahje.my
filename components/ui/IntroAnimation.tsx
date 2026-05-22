@@ -33,7 +33,7 @@ export default function IntroAnimation() {
     <div
       className="fixed inset-0 z-[9999] flex items-center justify-center"
       style={{
-        backgroundColor: '#f9f9f9',
+        backgroundColor: '#ffffff',
         position: 'fixed',
         top: 0,
         left: 0,

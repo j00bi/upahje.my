@@ -38,13 +38,13 @@ export default function HeroNew() {
           </span>
         </h1>
 
-        <p className="mt-2 text-2xl sm:text-3xl font-semibold text-neutral-800">
-          UpahJe.
+        <p className="mt-3 text-2xl sm:text-3xl font-semibold text-neutral-800">
+          Cari orang local yang boleh settle.
         </p>
 
         {/* Subtitle */}
         <p className="mt-4 max-w-lg mx-auto text-base" style={{ color: 'var(--color-body)' }}>
-          Cari local helper, freelancer, dan service provider trusted dekat Malaysia.
+          Post kerja, banding profile verified, dan bayar dengan lebih selamat bila kerja siap.
         </p>
 
         {/* Search bar */}
@@ -99,7 +99,7 @@ export default function HeroNew() {
             Cari Servis
           </button>
           <Link
-            href="/auth/signup"
+            href="/auth/signup?role=talent"
             className="inline-flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 text-neutral-800 font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5"
           >
             Jadi Freelancer

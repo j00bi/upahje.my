@@ -3,14 +3,18 @@ import { createServerClient } from '@supabase/ssr'
 import { getSupabaseConfig } from '@/lib/supabase/config'
 import { ensureLocalUser } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import {
+  normalizeInternalRedirect,
+  toProfileRole,
+} from '@/lib/auth-redirect'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
   const code = searchParams.get('code')
   const token_hash = searchParams.get('token_hash')
   const type = searchParams.get('type')
-  const next = searchParams.get('next') ?? '/dashboard'
-  const selectedRole = searchParams.get('role')
+  const next = normalizeInternalRedirect(searchParams.get('next'), '/dashboard')
+  const selectedRole = toProfileRole(searchParams.get('role'))
   type CookieOption = Parameters<NextResponse['cookies']['set']>[2]
   const pendingCookies: Array<{ name: string; value: string; options?: CookieOption }> = []
 
@@ -43,7 +47,7 @@ export async function GET(request: NextRequest) {
 
     if (!error && data?.user) {
       const localUser = await ensureLocalUser(data.user)
-      const userRole = selectedRole ?? data.user.user_metadata?.role
+      const userRole = selectedRole ?? toProfileRole(data.user.user_metadata?.role)
       let redirectTarget = new URL(next, request.url)
 
       try {
@@ -55,15 +59,13 @@ export async function GET(request: NextRequest) {
           await prisma.profile.create({
             data: {
               userId: localUser.id,
-              role: userRole === 'employer' || userRole === 'EMPLOYER'
-                ? 'EMPLOYER'
-                : 'TALENT',
+              role: userRole,
             },
           })
         }
 
         if (!existingProfile && userRole) {
-          const redirectPath = userRole === 'employer' || userRole === 'EMPLOYER'
+          const redirectPath = userRole === 'EMPLOYER'
             ? '/dashboard/employer'
             : '/dashboard/talent'
 
