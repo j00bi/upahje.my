@@ -66,7 +66,6 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
           <button onClick={onBack} className="py-3.5 border rounded-2xl">Back</button>
           <button 
             onClick={() => { 
-              // promote to full mode or finish quick
               if (data.fullName && data.phone) {
                 onComplete?.({ ...data, quickStart: true })
               } else {
@@ -74,14 +73,13 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
               }
             }}
             disabled={!data.fullName || !data.phone}
-            className="py-3.5 bg-green-600 text-white rounded-2xl font-medium flex items-center justify-center gap-2 disabled:bg-gray-300"
+            className="py-3.5 bg-green-mid text-white rounded-2xl font-medium flex items-center justify-center gap-2 disabled:bg-gray-300"
           >
             Go live now <ArrowRight className="w-4 h-4" />
           </button>
         </div>
 
         <button onClick={() => setMode('full')} className="text-xs text-gray-500 underline mt-4 block mx-auto">Or fill the full profile now instead</button>
-        <p className="text-center text-[10px] text-gray-400 mt-3">Version D — Hybrid (quick start first, deep profile optional)</p>
       </div>
     )
   }
@@ -138,8 +136,7 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
         </div>
       </div>
 
-      <button onClick={() => onComplete?.(data)} className="mt-6 w-full py-4 bg-emerald-600 text-white font-semibold rounded-3xl">Create my full profile</button>
-      <p className="text-center text-[10px] text-gray-400 mt-3">Version D — Hybrid (quick start + deep profile later)</p>
+      <button onClick={() => onComplete?.(data)} className="mt-6 w-full py-4 bg-green-mid text-white font-semibold rounded-3xl">Create my full profile</button>
     </div>
   )
 }
