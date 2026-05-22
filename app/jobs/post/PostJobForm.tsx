@@ -82,11 +82,9 @@ export function PostJobForm({ onSuccess }: PostJobFormProps) {
             type="button"
             onClick={() => update('track', t)}
             className={`flex-1 py-3 rounded-2xl border-2 text-sm font-medium transition ${
-              form.track === t
-                ? t === 'LABOUR'
-                  ? 'border-emerald-600 bg-emerald-50 text-emerald-800'
-                  : 'border-purple-600 bg-purple-50 text-purple-800'
-                : 'border-slate-200 bg-white text-slate-500 hover:border-slate-300'
+form.track === t
+                    ? 'border-emerald-600 bg-emerald-50 text-emerald-800'
+                    : 'border-slate-200 bg-white text-slate-500 hover:border-slate-300'
             }`}
           >
             {t === 'LABOUR' ? '🛠️ Labour' : '💻 Technical'}

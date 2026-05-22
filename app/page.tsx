@@ -46,9 +46,11 @@ export default function Home() {
       <section className="text-center py-24 md:py-32 px-6 bg-[var(--color-canvas-soft)]">
         <div className="max-w-4xl mx-auto">
           <FadeUp distance={30} duration={0.6}>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight">
-              Hire trusted local help.
-              <span className="block text-emerald-700">Pay only when it&apos;s done.</span>
+            <h1 className="text-5xl font-bold leading-tight text-neutral-950 sm:text-6xl">
+              UpahJe.my
+              <span className="mt-3 block text-3xl font-semibold text-emerald-700 sm:text-4xl">
+                Hire trusted local help. Pay when it&apos;s done.
+              </span>
             </h1>
           </FadeUp>
 
@@ -68,10 +70,10 @@ export default function Home() {
                 Post a Job
               </Link>
               <Link
-                href="/talent"
+                href="/auth/signup"
                 className="inline-flex items-center justify-center border-2 border-neutral-300 hover:border-neutral-400 text-neutral-800 font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5"
               >
-                Browse Workers
+                Register
               </Link>
             </div>
           </FadeUp>

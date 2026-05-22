@@ -1,46 +1,52 @@
 'use client'
 
+import Link from 'next/link'
 import { Suspense, useState } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
-import { signUpWithEmail, signInWithEmail } from '@/lib/supabase/auth'
+import { signInWithEmail, signInWithOAuth, signUpWithEmail } from '@/lib/supabase/auth'
 
 type AuthMode = 'signin' | 'signup'
+type RegistrationRole = 'employer' | 'talent'
 
 function AuthContent() {
   const searchParams = useSearchParams()
   const router = useRouter()
   const callbackUrl = searchParams.get('callbackUrl') ?? '/dashboard'
-  
+  const initialMode = searchParams.get('mode') === 'signin' ? 'signin' : 'signup'
+
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [confirmPassword, setConfirmPassword] = useState('')
-  const [authMode, setAuthMode] = useState<AuthMode>('signin')
-  const [role, setRole] = useState<'employer' | 'talent' | null>(null)
+  const [authMode, setAuthMode] = useState<AuthMode>(initialMode)
+  const [role, setRole] = useState<RegistrationRole | null>(null)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
+  const [oauthLoading, setOauthLoading] = useState(false)
   const [success, setSuccess] = useState<string | null>(null)
+
+  const isSignup = authMode === 'signup'
 
   const validateForm = () => {
     if (!email || !password) {
-      setError('Please fill in all required fields')
+      setError('Please fill in all required fields.')
       return false
     }
-    
-    if (authMode === 'signup' && password !== confirmPassword) {
-      setError('Passwords do not match')
+
+    if (isSignup && !role) {
+      setError('Please select Employer or Talent.')
       return false
     }
-    
-    if (authMode === 'signup' && password.length < 6) {
-      setError('Password must be at least 6 characters')
+
+    if (isSignup && password !== confirmPassword) {
+      setError('Passwords do not match.')
       return false
     }
-    
-    if (authMode === 'signup' && !role) {
-      setError('Please select a role (Employer or Talent)')
+
+    if (isSignup && password.length < 6) {
+      setError('Password must be at least 6 characters.')
       return false
     }
-    
+
     return true
   }
 
@@ -48,18 +54,18 @@ function AuthContent() {
     e.preventDefault()
     setError(null)
     setSuccess(null)
-    
+
     if (!validateForm()) return
-    
+
     setLoading(true)
 
     try {
-      if (authMode === 'signup') {
-        const { error } = await signUpWithEmail(email, password, role || undefined)
+      if (isSignup) {
+        const { error } = await signUpWithEmail(email, password, role ?? undefined)
         if (error) {
           setError(error.message)
         } else {
-          setSuccess('Sign up successful! Please check your email to confirm your account.')
+          setSuccess('Registration started. Check your email to confirm the account.')
         }
       } else {
         const { error } = await signInWithEmail(email, password)
@@ -70,175 +76,205 @@ function AuthContent() {
         }
       }
     } catch (err) {
-      setError('An unexpected error occurred')
+      setError('An unexpected error occurred. Please try again.')
       console.error('Auth error:', err)
     } finally {
       setLoading(false)
     }
   }
 
+  const handleGoogleAuth = async () => {
+    setError(null)
+    setSuccess(null)
+
+    if (isSignup && !role) {
+      setError('Please select Employer or Talent before using Google registration.')
+      return
+    }
+
+    setOauthLoading(true)
+
+    try {
+      const { error } = await signInWithOAuth('google', {
+        role: isSignup ? role ?? undefined : undefined,
+        callbackUrl,
+      })
+      if (error) {
+        setError(error.message)
+        setOauthLoading(false)
+      }
+    } catch (err) {
+      setError('Unable to start Google authentication. Please try again.')
+      setOauthLoading(false)
+      console.error('Google auth error:', err)
+    }
+  }
+
   const toggleMode = () => {
-    setAuthMode(prev => prev === 'signin' ? 'signup' : 'signin')
+    setAuthMode((prev) => (prev === 'signin' ? 'signup' : 'signin'))
     setError(null)
     setSuccess(null)
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-12">
-      <div className="max-w-md w-full space-y-6 sm:space-y-8 p-6 sm:p-8 bg-white rounded-xl shadow-lg">
-        <div>
-          <h2 className="mt-6 text-center text-2xl sm:text-3xl font-extrabold text-gray-900">
-            {authMode === 'signup' ? 'Create your UpahJe.my account' : 'Sign in to UpahJe.my'}
-          </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            {authMode === 'signup' 
-              ? 'Join Malaysia\'s trusted freelance marketplace' 
-              : 'Welcome back! Sign in to continue'}
-          </p>
-        </div>
-        
-        <form onSubmit={handleSubmit} className="mt-6 space-y-4">
-          {error && (
-            <div className="rounded-lg bg-red-50 p-4 text-sm text-red-800 border border-red-200">
-              {error}
-            </div>
-          )}
-          {success && (
-            <div className="rounded-lg bg-green-50 p-4 text-sm text-green-800 border border-green-200">
-              {success}
-            </div>
-          )}
-          
-          {/* Role Selection (Sign Up Only) */}
-          {authMode === 'signup' && (
-            <div className="space-y-3">
-              <label className="block text-sm font-medium text-gray-700">
-                I want to join as:
-              </label>
+    <div className="min-h-screen bg-[var(--color-canvas-soft)] px-4 py-12">
+      <div className="mx-auto flex min-h-[calc(100vh-6rem)] max-w-md items-center">
+        <div className="w-full rounded-lg border border-neutral-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="text-center">
+            <h1 className="text-3xl font-bold leading-tight text-neutral-950">
+              {isSignup ? 'Register for UpahJe.my' : 'Welcome Back'}
+            </h1>
+            <p className="mt-2 text-sm text-neutral-600">
+              {isSignup
+                ? 'Create an employer or talent profile.'
+                : 'Sign in to continue to your dashboard.'}
+            </p>
+          </div>
+
+          {isSignup && (
+            <div className="mt-6 space-y-3">
+              <label className="block text-sm font-medium text-neutral-700">Register as</label>
               <div className="grid grid-cols-2 gap-3">
                 <button
                   type="button"
                   onClick={() => setRole('employer')}
-                  className={`p-4 rounded-xl border-2 text-center transition-all ${
+                  className={`rounded-md border px-4 py-3 text-left transition ${
                     role === 'employer'
-                      ? 'border-emerald-500 bg-emerald-50 text-emerald-700'
-                      : 'border-gray-200 hover:border-emerald-300'
+                      ? 'border-emerald-600 bg-emerald-50 text-emerald-800'
+                      : 'border-neutral-200 bg-white text-neutral-700 hover:border-emerald-300'
                   }`}
                 >
-                  <div className="text-2xl mb-1">🏢</div>
-                  <div className="font-semibold">Employer</div>
-                  <div className="text-xs text-gray-500">Hire talent</div>
+                  <span className="block text-sm font-semibold">Employer</span>
+                  <span className="mt-1 block text-xs text-neutral-500">Post jobs</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => setRole('talent')}
-                  className={`p-4 rounded-xl border-2 text-center transition-all ${
+                  className={`rounded-md border px-4 py-3 text-left transition ${
                     role === 'talent'
-                      ? 'border-blue-500 bg-blue-50 text-blue-700'
-                      : 'border-gray-200 hover:border-blue-300'
+                      ? 'border-emerald-600 bg-emerald-50 text-emerald-800'
+                      : 'border-neutral-200 bg-white text-neutral-700 hover:border-emerald-300'
                   }`}
                 >
-                  <div className="text-2xl mb-1">👷</div>
-                  <div className="font-semibold">Talent</div>
-                  <div className="text-xs text-gray-500">Find work</div>
+                  <span className="block text-sm font-semibold">Talent</span>
+                  <span className="mt-1 block text-xs text-neutral-500">Find work</span>
                 </button>
               </div>
             </div>
           )}
-          
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              Email address
-            </label>
-            <input
-              id="email"
-              name="email"
-              type="email"
-              autoComplete="email"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
-              placeholder="you@example.com"
-            />
+
+          <button
+            type="button"
+            onClick={handleGoogleAuth}
+            disabled={oauthLoading || loading}
+            className="mt-6 flex w-full items-center justify-center gap-3 rounded-md border border-neutral-300 bg-white px-4 py-2.5 text-sm font-semibold text-neutral-800 transition hover:bg-neutral-50 disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            <span className="flex h-5 w-5 items-center justify-center rounded-full border border-neutral-300 text-xs font-bold">
+              G
+            </span>
+            {oauthLoading ? 'Opening Google...' : isSignup ? 'Register with Google' : 'Continue with Google'}
+          </button>
+
+          <div className="my-6 flex items-center gap-3">
+            <div className="h-px flex-1 bg-neutral-200" />
+            <span className="text-xs font-medium uppercase tracking-wide text-neutral-400">or email</span>
+            <div className="h-px flex-1 bg-neutral-200" />
           </div>
-          
-          <div>
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-              Password
-            </label>
-            <input
-              id="password"
-              name="password"
-              type="password"
-              autoComplete="current-password"
-              required
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
-              placeholder="••••••••"
-            />
-          </div>
-          
-          {authMode === 'signup' && (
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {error && (
+              <div className="rounded-md border border-red-200 bg-red-50 p-3 text-sm text-red-800">
+                {error}
+              </div>
+            )}
+            {success && (
+              <div className="rounded-md border border-green-200 bg-green-50 p-3 text-sm text-green-800">
+                {success}
+              </div>
+            )}
+
             <div>
-              <label htmlFor="confirmPassword" className="block text-sm font-medium text-gray-700">
-                Confirm Password
+              <label htmlFor="email" className="block text-sm font-medium text-neutral-700">
+                Email address
               </label>
               <input
-                id="confirmPassword"
-                name="confirmPassword"
-                type="password"
-                autoComplete="new-password"
+                id="email"
+                name="email"
+                type="email"
+                autoComplete="email"
                 required
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-emerald-500 focus:outline-none focus:ring-1 focus:ring-emerald-500"
-                placeholder="••••••••"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+                placeholder="you@example.com"
               />
             </div>
-          )}
-          
-          <button
-            type="submit"
-            disabled={loading}
-            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-emerald-600 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-          >
-            {loading ? (
-              <span className="flex items-center">
-                <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Processing...
-              </span>
-            ) : (
-              authMode === 'signup' ? 'Create Account' : 'Sign In'
-            )}
-          </button>
-        </form>
-        
-        <div className="mt-4 text-center">
-          <button
-            onClick={toggleMode}
-            className="text-sm text-emerald-600 hover:text-emerald-500 font-medium"
-          >
-            {authMode === 'signup' 
-              ? 'Already have an account? Sign in' 
-              : "Don't have an account? Sign up"}
-          </button>
-        </div>
 
-        <div className="mt-6 text-center text-xs sm:text-sm text-gray-500">
-          <p>
-            By {authMode === 'signup' ? 'signing up' : 'signing in'}, you agree to our{' '}
-            <a href="/terms" className="text-emerald-600 hover:text-emerald-500">
-              Terms of Service
-            </a>{' '}
+            <div>
+              <label htmlFor="password" className="block text-sm font-medium text-neutral-700">
+                Password
+              </label>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete={isSignup ? 'new-password' : 'current-password'}
+                required
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+                placeholder="Password"
+              />
+            </div>
+
+            {isSignup && (
+              <div>
+                <label htmlFor="confirmPassword" className="block text-sm font-medium text-neutral-700">
+                  Confirm password
+                </label>
+                <input
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  type="password"
+                  autoComplete="new-password"
+                  required
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-emerald-600 focus:outline-none focus:ring-1 focus:ring-emerald-600"
+                  placeholder="Password"
+                />
+              </div>
+            )}
+
+            <button
+              type="submit"
+              disabled={loading || oauthLoading}
+              className="flex w-full justify-center rounded-md border border-transparent bg-emerald-700 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-emerald-800 disabled:cursor-not-allowed disabled:opacity-60"
+            >
+              {loading ? 'Processing...' : isSignup ? 'Create account' : 'Sign in'}
+            </button>
+          </form>
+
+          <div className="mt-5 text-center">
+            <button
+              type="button"
+              onClick={toggleMode}
+              className="text-sm font-medium text-emerald-700 hover:text-emerald-800"
+            >
+              {isSignup ? 'Already have an account? Sign in' : 'Need an account? Register'}
+            </button>
+          </div>
+
+          <p className="mt-6 text-center text-xs text-neutral-500">
+            By continuing, you agree to the{' '}
+            <Link href="/terms" className="text-emerald-700 hover:text-emerald-800">
+              Terms
+            </Link>{' '}
             and{' '}
-            <a href="/privacy" className="text-emerald-600 hover:text-emerald-500">
+            <Link href="/privacy" className="text-emerald-700 hover:text-emerald-800">
               Privacy Policy
-            </a>
+            </Link>
+            .
           </p>
         </div>
       </div>
@@ -248,11 +284,13 @@ function AuthContent() {
 
 export default function AuthPage() {
   return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-        <div className="animate-pulse text-gray-400">Loading...</div>
-      </div>
-    }>
+    <Suspense
+      fallback={
+        <div className="flex min-h-screen items-center justify-center bg-[var(--color-canvas-soft)] px-4">
+          <div className="animate-pulse text-neutral-400">Loading...</div>
+        </div>
+      }
+    >
       <AuthContent />
     </Suspense>
   )

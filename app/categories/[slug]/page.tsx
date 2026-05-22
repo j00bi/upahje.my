@@ -171,7 +171,7 @@ export default async function CategoryPage({
                       {job.employer?.company && (
                         <span>{job.employer.company}</span>
                       )}
-                      <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${job.track === 'LABOUR' ? 'bg-amber-100 text-amber-700' : 'bg-purple-100 text-purple-700'}`}>
+                      <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${job.track === 'LABOUR' ? 'bg-emerald-100 text-emerald-700' : 'bg-purple-100 text-purple-700'}`}>
                         {job.track === 'LABOUR' ? '🛠️ Labour' : '💻 Technical'}
                       </span>
                     </div>

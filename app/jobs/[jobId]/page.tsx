@@ -131,7 +131,7 @@ export default function JobDetailPage({ params }: JobDetailProps) {
                 {job.category.emoji} {job.category.name}
               </span>
             )}
-            <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${job.track === 'LABOUR' ? 'bg-amber-100 text-amber-700' : 'bg-purple-100 text-purple-700'}`}>
+            <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${job.track === 'LABOUR' ? 'bg-emerald-100 text-emerald-700' : 'bg-purple-100 text-purple-700'}`}>
               {job.track === 'LABOUR' ? '🛠️ Labour' : '💻 Technical'}
             </span>
             <span className={`text-xs px-2.5 py-1 rounded-full font-medium ml-auto ${job.status === 'OPEN' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-600'}`}>

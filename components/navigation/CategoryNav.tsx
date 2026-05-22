@@ -3,12 +3,13 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { Menu, Search, X } from 'lucide-react'
 
 const CATEGORY_LINKS = [
-  { href: '/jobs?track=LABOUR', label: 'Labour', emoji: '🛠️' },
-  { href: '/jobs?track=TECHNICAL', label: 'Technical', emoji: '💻' },
-  { href: '/categories/photography', label: 'Photography', emoji: '📸' },
-  { href: '/categories/home-services', label: 'Home Services', emoji: '🏠' },
+  { href: '/jobs', label: 'Jobs' },
+  { href: '/talent', label: 'Talent' },
+  { href: '/categories', label: 'Categories' },
+  { href: '/categories/home-services', label: 'Home Services' },
 ]
 
 export default function CategoryNav() {
@@ -25,47 +26,39 @@ export default function CategoryNav() {
 
   return (
     <nav className="nav-bar">
-      <div className="max-w-7xl mx-auto flex items-center justify-between h-16 gap-4">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4">
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-bold tracking-tight shrink-0"
+          className="shrink-0 text-xl font-bold"
           style={{ color: 'var(--color-canvas)' }}
         >
           UpahJe.my
         </Link>
 
         {/* Desktop: search bar */}
-        <form onSubmit={handleSearch} className="hidden md:flex flex-1 max-w-sm items-center">
+        <form onSubmit={handleSearch} className="hidden max-w-sm flex-1 items-center lg:flex">
           <div className="relative w-full">
             <input
               type="text"
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="Search jobs..."
-              className="w-full bg-white/10 border border-white/20 rounded-lg pl-9 pr-4 py-2 text-sm text-white placeholder:text-white/50 focus:outline-none focus:bg-white/15 focus:border-white/30 transition"
+              className="w-full rounded-md border border-white/20 bg-white/10 py-2 pl-9 pr-4 text-sm text-white transition placeholder:text-white/50 focus:border-white/30 focus:bg-white/15 focus:outline-none"
             />
-            <svg
-              className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-white/50"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/50" />
           </div>
         </form>
 
         {/* Desktop: category links */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden items-center gap-5 md:flex">
           {CATEGORY_LINKS.map(link => (
             <Link
               key={link.href}
               href={link.href}
               className="nav-link text-sm"
             >
-              <span>{link.emoji}</span>
-              <span className="ml-1">{link.label}</span>
+              {link.label}
             </Link>
           ))}
         </div>
@@ -76,34 +69,28 @@ export default function CategoryNav() {
             Sign In
           </Link>
           <Link
-            href="/onboarding"
-            className="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-all"
+            href="/auth/signup"
+            className="inline-flex items-center justify-center rounded-md bg-[var(--color-primary)] px-4 py-2 text-sm font-semibold text-[var(--color-ink-deep)] transition-all hover:bg-[var(--color-primary-hover)]"
           >
-            Get Started
+            Register
           </Link>
         </div>
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg"
+          className="flex h-10 w-10 items-center justify-center rounded-md md:hidden"
           style={{ color: 'var(--color-canvas)' }}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
         >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            {mobileOpen ? (
-              <path d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
+          {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
         <div
-          className="md:hidden border-t pb-4 pt-3 px-4"
+          className="border-t px-4 pb-4 pt-3 md:hidden"
           style={{
             borderColor: 'rgba(255,255,255,0.08)',
             backgroundColor: 'var(--color-green-forest)',
@@ -116,7 +103,7 @@ export default function CategoryNav() {
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="Search jobs..."
-              className="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-2.5 text-sm text-white placeholder:text-white/50 focus:outline-none focus:bg-white/15"
+              className="w-full rounded-md border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/50 focus:bg-white/15 focus:outline-none"
             />
           </form>
 
@@ -124,30 +111,29 @@ export default function CategoryNav() {
             <Link
               key={link.href}
               href={link.href}
-              className="block px-3 py-2.5 nav-link text-sm"
+              className="nav-link block px-3 py-2.5 text-sm"
               onClick={() => setMobileOpen(false)}
             >
-              <span>{link.emoji}</span>
-              <span className="ml-2">{link.label}</span>
+              {link.label}
             </Link>
           ))}
 
           <div className="flex gap-3 mt-4 pt-3 border-t border-white/10">
             <Link
               href="/auth/signin"
-              className="flex-1 text-center py-2 rounded-lg text-sm font-medium border border-white/20"
+              className="flex-1 rounded-md border border-white/20 py-2 text-center text-sm font-medium"
               style={{ color: 'var(--color-canvas)' }}
               onClick={() => setMobileOpen(false)}
             >
               Sign In
             </Link>
             <Link
-              href="/onboarding"
-              className="flex-1 text-center py-2 rounded-lg text-sm font-semibold"
+              href="/auth/signup"
+              className="flex-1 rounded-md py-2 text-center text-sm font-semibold"
               style={{ backgroundColor: 'var(--color-primary)', color: 'var(--color-ink-deep)' }}
               onClick={() => setMobileOpen(false)}
             >
-              Get Started
+              Register
             </Link>
           </div>
         </div>
