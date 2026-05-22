@@ -83,6 +83,28 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ────────────────── STATS BAR ────────────────── */}
+      <section className="py-12 px-6 border-y border-neutral-100" style={{ backgroundColor: 'var(--color-canvas)' }}>
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="stat-item">
+            <div className="stat-number">3</div>
+            <div className="stat-label">Active Categories</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">5+</div>
+            <div className="stat-label">Verified Talent</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">RM0</div>
+            <div className="stat-label">Platform Fee for Clients</div>
+          </div>
+          <div className="stat-item">
+            <div className="stat-number">🇲🇾</div>
+            <div className="stat-label">100% Malaysia</div>
+          </div>
+        </div>
+      </section>
+
       {/* ────────────────── EVENTS CLUSTER ────────────────── */}
       {eventCats.filter((c) => c.talentCount > 0).length > 0 && (
         <FadeUp distance={24}>
@@ -235,8 +257,9 @@ export default function Home() {
                     style={{ backgroundImage: `url(https://i.pravatar.cc/88?img=${talent.avatarImg})` }}
                   />
                   <div>
-                    <div className="font-semibold text-sm" style={{ color: 'var(--color-ink)' }}>
+                    <div className="font-semibold text-sm flex items-center gap-1.5" style={{ color: 'var(--color-ink)' }}>
                       {talent.name}
+                      {talent.verified && <span className="badge badge-verified text-[9px] leading-none">✓</span>}
                     </div>
                     <div className="text-xs" style={{ color: 'var(--color-body)' }}>
                       {talent.role}
@@ -244,16 +267,25 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-center gap-1.5 text-xs mb-3">
-                  <span style={{ color: 'var(--color-mute)' }}>📍</span>
+                  <span>📍</span>
                   <span style={{ color: 'var(--color-body)' }}>{talent.location}</span>
                 </div>
+                {talent.availability && (
+                  <div className="flex items-center gap-1.5 text-xs mb-3">
+                    <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: talent.availability.toLowerCase().includes('week') ? 'var(--color-teal-mid)' : 'var(--color-amber-mid)' }} />
+                    <span style={{ color: 'var(--color-body)' }}>{talent.availability}</span>
+                  </div>
+                )}
                 <div className="flex items-center justify-between pt-3 border-t" style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}>
                   {talent.rating > 0 ? (
-                    <span className="badge badge-positive text-xs">★ {talent.rating} ({talent.reviewCount})</span>
+                    <span className="text-xs flex items-center gap-1" style={{ color: 'var(--color-ink)' }}>
+                      <span className="text-amber-500">★</span> {talent.rating}
+                      <span style={{ color: 'var(--color-mute)' }}>({talent.reviewCount})</span>
+                    </span>
                   ) : (
                     <span className="text-xs" style={{ color: 'var(--color-mute)' }}>New to UpahJe</span>
                   )}
-                  <span className="font-semibold text-sm" style={{ color: 'var(--color-ink-deep)' }}>
+                  <span className="font-semibold text-sm" style={{ color: 'var(--color-teal-deep)' }}>
                     {talent.rate}
                   </span>
                 </div>
@@ -266,6 +298,62 @@ export default function Home() {
             <Link href="/talent" className="font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all" style={{ color: 'var(--color-green-mid)' }}>
               View all talent →
             </Link>
+          </div>
+        </div>
+      </section>
+      </FadeUp>
+
+      {/* ────────────────── TESTIMONIALS ────────────────── */}
+      <FadeUp distance={24}>
+      <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
+              Testimoni
+            </p>
+            <h2 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>
+              Apa orang kata pasal UpahJe
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5">
+            {[
+              {
+                quote: 'First time using this platform and the whole process was so smooth. Found a great photographer for my wedding within a day.',
+                name: 'Sarah Kamarudin',
+                role: 'Bride, KL',
+                emoji: '👰',
+              },
+              {
+                quote: 'I was skeptical about escrow at first, but it actually saved me. Paid only after the videographer delivered. No more ghosting.',
+                name: 'Ahmad Rosli',
+                role: 'Small Business Owner',
+                emoji: '💼',
+              },
+              {
+                quote: 'Sebagai freelancer, I love that clients can see my portfolio before hiring. No more wasting time explaining my work.',
+                name: 'Aina Razali',
+                role: 'Photographer',
+                emoji: '📸',
+              },
+            ].map((t) => (
+              <div key={t.name} className="testimonial-card">
+                <div className="text-2xl mb-3">{t.emoji}</div>
+                <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--color-body)' }}>
+                  &ldquo;{t.quote}&rdquo;
+                </p>
+                <div className="flex items-center gap-3 pt-3 border-t" style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}>
+                  <div
+                    className="w-9 h-9 rounded-full bg-cover bg-center"
+                    style={{ backgroundImage: `url(https://i.pravatar.cc/64?img=${['2', '5', '1'][Math.floor(Math.random() * 3)]})` }}
+                  />
+                  <div>
+                    <div className="text-sm font-semibold" style={{ color: 'var(--color-ink)' }}>{t.name}</div>
+                    <div className="text-xs" style={{ color: 'var(--color-mute)' }}>{t.role}</div>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

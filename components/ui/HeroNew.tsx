@@ -25,10 +25,9 @@ export default function HeroNew() {
 
   return (
     <section className="relative overflow-hidden py-28 md:py-36 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
-      {/* Subtle pattern */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: 'radial-gradient(circle at 25% 50%, #0a2a12 0%, transparent 50%)',
-      }} />
+      {/* Gradient mesh */}
+      <div className="gradient-mesh" />
+      <div className="gradient-mesh-center" />
 
       <div className="relative max-w-3xl mx-auto text-center">
         {/* Heading */}

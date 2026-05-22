@@ -51,10 +51,10 @@ export default function Footer() {
               workers across events, home services, creative projects, and more.
             </p>
             <div className="flex gap-4 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
-              <a href="#" className="hover:text-white transition-colors">Instagram</a>
-              <a href="#" className="hover:text-white transition-colors">Facebook</a>
-              <a href="#" className="hover:text-white transition-colors">TikTok</a>
-              <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
+              <a href="https://instagram.com/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+              <a href="https://facebook.com/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Facebook</a>
+              <a href="https://tiktok.com/@upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">TikTok</a>
+              <a href="https://linkedin.com/company/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
             </div>
           </div>
 
@@ -84,14 +84,20 @@ export default function Footer() {
             © {new Date().getFullYear()} UpahJe.my. All rights reserved.
           </div>
           <div className="flex gap-6">
+            <Link href="/about" className="text-xs footer-link">
+              About
+            </Link>
+            <Link href="/faq" className="text-xs footer-link">
+              FAQ
+            </Link>
+            <Link href="/contact" className="text-xs footer-link">
+              Contact
+            </Link>
             <Link href="/privacy" className="text-xs footer-link">
-              Privacy Policy
+              Privacy
             </Link>
             <Link href="/terms" className="text-xs footer-link">
-              Terms of Service
-            </Link>
-            <Link href="mailto:support@upahje.my" className="text-xs footer-link">
-              Contact
+              Terms
             </Link>
           </div>
         </div>
