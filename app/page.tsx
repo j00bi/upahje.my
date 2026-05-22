@@ -326,14 +326,29 @@ export default function Home() {
           <p className="max-w-md mx-auto mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
             Cari orang, setuju harga, bayar bila siap. Daftar percuma.
           </p>
+
+          {/* Audience split labels */}
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <span className="text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full bg-white/10 text-white/80 border border-white/20">
+              Untuk Yang Nak Upah
+            </span>
+            <span className="text-xs text-white/40">·</span>
+            <span className="text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full bg-white/10 text-white/80 border border-white/20">
+              Untuk Yang Nak Cari Upah
+            </span>
+          </div>
+
           <div className="flex gap-4 justify-center flex-wrap">
             <Link href="/jobs/post" className="inline-flex items-center justify-center bg-green-mid hover:bg-green-deep text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
               Post Kerja
             </Link>
             <Link href="/auth/signup" className="btn-secondary-inverse text-base px-8 py-4">
-              Cari Upah
+              Jadi Freelancer
             </Link>
           </div>
+          <p className="mt-4 text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
+            Perlukan servis? Post kerja. Nak cari pendapatan? Daftar freelancer.
+          </p>
         </div>
       </section>
       </FadeUp>

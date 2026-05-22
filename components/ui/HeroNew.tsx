@@ -81,8 +81,18 @@ export default function HeroNew() {
           ))}
         </div>
 
+        {/* Audience labels */}
+        <div className="mt-10 flex items-center justify-center gap-4">
+          <span className="text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full bg-emerald-100 text-emerald-800">
+            Nak Upah Orang
+          </span>
+          <span className="text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full bg-amber-100 text-amber-800">
+            Nak Cari Upah
+          </span>
+        </div>
+
         {/* CTA row */}
-        <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
+        <div className="mt-3 flex items-center justify-center gap-4 flex-wrap">
           <button
             onClick={handleSearch}
             className="inline-flex items-center justify-center bg-green-mid hover:bg-green-deep text-white font-semibold text-base px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl"
