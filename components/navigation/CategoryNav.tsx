@@ -9,10 +9,10 @@ import { getDashboardPath } from '@/lib/auth-redirect'
 import { useAuth } from '@/lib/supabase/auth-context'
 
 const CATEGORY_LINKS = [
-  { href: '/jobs', label: 'Browse Jobs' },
-  { href: '/talent', label: 'Hire Talent' },
-  { href: '/categories', label: 'Categories' },
-  { href: '/jobs/post', label: 'Post Job' },
+  { href: '/jobs', label: 'Cari Kerja' },
+  { href: '/talent', label: 'Upah Talent' },
+  { href: '/categories', label: 'Kategori' },
+  { href: '/jobs/post', label: 'Post Kerja' },
 ]
 
 export default function CategoryNav() {
@@ -54,7 +54,7 @@ export default function CategoryNav() {
               type="text"
               value={search}
               onChange={e => setSearch(e.target.value)}
-              placeholder="Search jobs..."
+              placeholder="Cari kerja..."
               className="w-full rounded-md border border-white/20 bg-white/10 py-2 pl-9 pr-4 text-sm text-white transition placeholder:text-white/50 focus:border-white/30 focus:bg-white/15 focus:outline-none"
             />
             <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/50" />
@@ -130,7 +130,7 @@ export default function CategoryNav() {
               type="text"
               value={search}
               onChange={e => setSearch(e.target.value)}
-              placeholder="Search jobs..."
+              placeholder="Cari kerja..."
               className="w-full rounded-md border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/50 focus:bg-white/15 focus:outline-none"
             />
           </form>

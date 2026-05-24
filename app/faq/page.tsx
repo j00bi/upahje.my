@@ -28,7 +28,7 @@ const faqs = [
   },
   {
     q: 'Apa jadi kalau kerja tak siap atau tak memuaskan?',
-    a: 'Jika kerja tak siap ikut persetujuan, client boleh lodge dispute. Pasukan UpahJe akan mediate dan memastikan penyelesaian yang adil untuk kedua-dua pihak.',
+    a: 'Jika kerja tak siap ikut persetujuan, client boleh lodge dispute dalam masa 7 hari selepas tarikh akhir. Pasukan UpahJe akan merespon dalam 24 jam dan mediate penyelesaian dalam 3-7 hari bekerja. Kami akan pastikan penyelesaian yang adil untuk kedua-dua pihak.',
   },
   {
     q: 'Macam mana cara pembayaran?',
@@ -49,7 +49,7 @@ export default function FAQPage() {
     <div className="min-h-screen bg-[var(--color-canvas-soft)]">
       <section className="px-6 py-20 md:py-28">
         <div className="mx-auto max-w-3xl">
-          <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
+          <p className="section-label mb-3" style={{ color: 'var(--color-teal-mid)' }}>
             FAQ
           </p>
           <h1 className="font-display-xl mb-4" style={{ color: 'var(--color-ink-deep)' }}>
@@ -57,7 +57,7 @@ export default function FAQPage() {
           </h1>
           <p className="text-base mb-10" style={{ color: 'var(--color-body)' }}>
             Segala yang anda perlu tahu pasal UpahJe. Tak puas hati?{' '}
-            <Link href="/contact" className="underline font-medium" style={{ color: 'var(--color-green-mid)' }}>
+            <Link href="/contact" className="underline font-medium" style={{ color: 'var(--color-teal-mid)' }}>
               Contact kami
             </Link>
             .
@@ -67,9 +67,9 @@ export default function FAQPage() {
             {faqs.map((faq, i) => (
               <details
                 key={i}
-                className="group rounded-2xl border border-neutral-200 bg-white transition-all duration-200 open:border-emerald-200 open:shadow-sm"
+                className="group rounded-2xl border border-neutral-200 bg-white transition-all duration-200 open:border-teal-200 open:shadow-sm"
               >
-                <summary className="flex items-center justify-between cursor-pointer list-none px-6 py-4 text-sm font-semibold text-neutral-900 hover:text-emerald-800 transition-colors">
+                <summary className="flex items-center justify-between cursor-pointer list-none px-6 py-4 text-sm font-semibold text-neutral-900 hover:text-teal-800 transition-colors">
                   {faq.q}
                   <span className="text-neutral-400 group-open:rotate-180 transition-transform text-lg leading-none">
                     ▾

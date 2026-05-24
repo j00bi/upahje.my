@@ -109,9 +109,9 @@ export default function Home() {
       >
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { number: '3', label: 'Active Categories' },
-            { number: '5+', label: 'Verified Talent' },
-            { number: 'RM0', label: 'Platform Fee' },
+            { number: '3', label: 'Kategori Aktif' },
+            { number: '5+', label: 'Talent Sedia' },
+            { number: 'RM0', label: 'Yuran Platform' },
             { number: '🇲🇾', label: '100% Malaysia' },
           ].map((stat, i) => (
             <div key={stat.label} className="text-center">
@@ -190,8 +190,8 @@ export default function Home() {
                           href="/auth/signup?role=talent"
                           className="text-xs font-medium px-3 py-1 rounded-full transition-colors duration-200"
                           style={{
-                            backgroundColor: 'rgba(245, 158, 11, 0.1)',
-                            color: 'var(--color-amber-deep)',
+                            backgroundColor: 'rgba(245, 158, 11, 0.15)',
+                            color: '#92400e',
                           }}
                         >
                           + Notify me
@@ -388,7 +388,7 @@ export default function Home() {
                 role: 'Freelancer, KL',
                 emoji: '📸',
               },
-            ].map((t) => (
+            ].map((t, i) => (
               <div key={t.name} className="testimonial-card">
                 <div className="text-2xl mb-3">{t.emoji}</div>
                 <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--color-body)' }}>
@@ -397,7 +397,7 @@ export default function Home() {
                 <div className="flex items-center gap-3 pt-3 border-t" style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}>
                   <div
                     className="w-9 h-9 rounded-full bg-cover bg-center"
-                    style={{ backgroundImage: `url(https://i.pravatar.cc/64?img=${['2', '5', '1'][Math.floor(Math.random() * 3)]})` }}
+                    style={{ backgroundImage: `url(https://i.pravatar.cc/64?img=${['2', '5', '1'][i]})` }}
                   />
                   <div>
                     <div className="text-sm font-semibold" style={{ color: 'var(--color-ink)' }}>{t.name}</div>

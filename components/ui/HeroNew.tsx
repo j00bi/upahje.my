@@ -76,8 +76,8 @@ export default function HeroNew() {
             <span>Nak </span>
             <span
               style={{
-                color: 'var(--color-amber-mid)',
-                textShadow: '0 0 40px rgba(245, 158, 11, 0.15)',
+                color: '#d97706',
+                textShadow: '0 0 40px rgba(217, 119, 6, 0.15)',
               }}
             >
               <NakWordTicker />
@@ -120,7 +120,7 @@ export default function HeroNew() {
               type="text"
               value={search}
               onChange={e => setSearch(e.target.value)}
-              placeholder="Cari servis… contoh: photographer, plumber, runner"
+              placeholder="Cari servis… contoh: photographer, videographer, cleaner, web dev"
               className="w-full bg-white rounded-2xl pl-6 pr-24 py-5 text-lg border-2 border-neutral-200 focus:border-teal-mid focus:outline-none focus:ring-0 transition-all duration-300 placeholder:text-neutral-400"
               style={{ fontSize: '1.125rem' }}
             />
@@ -207,7 +207,7 @@ export default function HeroNew() {
             className="text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full"
             style={{
               backgroundColor: 'rgba(245, 158, 11, 0.1)',
-              color: 'var(--color-amber-deep)',
+              color: '#92400e',
               letterSpacing: '0.06em',
             }}
           >
@@ -274,7 +274,7 @@ export default function HeroNew() {
           }}
         >
           {[
-            { icon: '✓', label: 'MyKad Verified' },
+            { icon: '✓', label: 'ID Verified' },
             { icon: '🛡', label: 'Escrow Protected' },
             { icon: 'RM0', label: 'Platform Fee' },
           ].map(item => (

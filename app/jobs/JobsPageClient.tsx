@@ -99,16 +99,16 @@ export default function JobsPageClient() {
         <div className="max-w-5xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center mb-4">
             <div>
-              <h1 className="text-2xl font-semibold text-slate-900">Browse Jobs</h1>
+              <h1 className="text-2xl font-semibold text-slate-900">Cari Kerja</h1>
               <p className="text-sm text-slate-500 mt-0.5">
-                {loading ? 'Searching...' : `${jobs.length} job${jobs.length !== 1 ? 's' : ''} available`}
+                {loading ? 'Mencari...' : `${jobs.length} kerja dijumpai`}
               </p>
             </div>
             <Link
               href="/jobs/post"
-              className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl text-sm font-medium transition"
+              className="px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-2xl text-sm font-medium transition"
             >
-              + Post a Job
+              + Post Kerja
             </Link>
           </div>
 
@@ -126,15 +126,23 @@ export default function JobsPageClient() {
       <div className="max-w-5xl mx-auto px-4 py-8">
         {jobs.length === 0 && !loading ? (
           <div className="text-center py-20">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-slate-700 mb-2">No jobs found</h3>
-            <p className="text-slate-500 mb-6">Try adjusting your filters or search terms.</p>
-            <button
-              onClick={() => setFilters({})}
-              className="px-6 py-2.5 border border-slate-300 rounded-2xl text-sm font-medium hover:bg-slate-50 transition"
-            >
-              Clear all filters
-            </button>
+            <div className="text-6xl mb-4">📭</div>
+            <h3 className="text-xl font-semibold text-slate-700 mb-2">Belum ada kerja lagi</h3>
+            <p className="text-slate-500 mb-2">Jadi yang pertama — post kerja dan dapatkan talent dalam masa 24 jam.</p>
+            <div className="flex justify-center gap-3 mt-6">
+              <Link
+                href="/jobs/post"
+                className="px-6 py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-2xl text-sm font-medium transition"
+              >
+                + Post Kerja
+              </Link>
+              <button
+                onClick={() => setFilters({})}
+                className="px-6 py-2.5 border border-slate-300 rounded-2xl text-sm font-medium hover:bg-slate-50 transition"
+              >
+                Semua filter
+              </button>
+            </div>
           </div>
         ) : (
           <div className="space-y-3">

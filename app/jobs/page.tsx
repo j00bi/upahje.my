@@ -7,8 +7,8 @@ export default function JobsPage() {
       fallback={
         <div className="min-h-screen bg-[#f8f8f8] flex items-center justify-center">
           <div className="text-center">
-            <div className="w-8 h-8 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
-            <p className="text-slate-500 text-sm">Loading jobs...</p>
+            <div className="w-8 h-8 border-2 border-teal-600 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+            <p className="text-slate-500 text-sm">Mencari kerja...</p>
           </div>
         </div>
       }

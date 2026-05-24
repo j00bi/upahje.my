@@ -10,25 +10,25 @@ const footerCategories = MARKETPLACE_CATEGORIES.filter((category) =>
 
 const footerSections = [
   {
-    heading: 'For Clients',
+    heading: 'Untuk Client',
     links: [
-      { href: '/talent', label: 'Find Talent' },
-      { href: '/categories', label: 'Browse Categories' },
-      { href: '/jobs/post', label: 'Post a Job' },
-      { href: '/#how-it-works', label: 'How It Works' },
+      { href: '/talent', label: 'Cari Talent' },
+      { href: '/categories', label: 'Semua Kategori' },
+      { href: '/jobs/post', label: 'Post Kerja' },
+      { href: '/#how-it-works', label: 'Macam Mana' },
     ],
   },
   {
-    heading: 'For Talent',
+    heading: 'Untuk Talent',
     links: [
-      { href: '/jobs', label: 'Find Work' },
-      { href: '/auth/signup', label: 'Create Profile' },
-      { href: '/talent', label: 'Portfolio Gallery' },
-      { href: '/#how-it-works', label: 'How It Works' },
+      { href: '/jobs', label: 'Cari Kerja' },
+      { href: '/auth/signup', label: 'Buat Profil' },
+      { href: '/talent', label: 'Galeri Portfolio' },
+      { href: '/#how-it-works', label: 'Macam Mana' },
     ],
   },
   {
-    heading: 'Categories',
+    heading: 'Kategori',
     links: footerCategories,
   },
 ]
