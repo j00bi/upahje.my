@@ -42,7 +42,7 @@ export default async function EmployerDashboard() {
       <section className="glass rounded-[2rem] p-5 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-2">
-            <span className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-900">
+            <span className="inline-flex rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-teal-900">
               Employer dashboard
             </span>
             <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-slate-950">
@@ -88,7 +88,7 @@ export default async function EmployerDashboard() {
                 <p>No jobs posted yet.</p>
                 <Link 
                   href="/jobs/post"
-                  className="text-emerald-600 hover:text-emerald-700 font-medium mt-2 inline-block"
+                  className="text-teal-600 hover:text-teal-700 font-medium mt-2 inline-block"
                 >
                   Post your first job →
                 </Link>

@@ -13,7 +13,7 @@ export default function AdminPage() {
             <Link
               key={item.href}
               href={item.href}
-              className="bg-white border border-slate-200 rounded-3xl p-6 flex items-center gap-4 hover:border-emerald-400 hover:shadow-md transition-all"
+              className="bg-white border border-slate-200 rounded-3xl p-6 flex items-center gap-4 hover:border-teal-400 hover:shadow-md transition-all"
             >
               <span className="text-4xl">{item.emoji}</span>
               <div>

@@ -6,7 +6,7 @@ export default function OnboardingPage() {
       <section className="glass rounded-[2rem] p-4 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
         <div className="grid gap-4 sm:gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className="space-y-3 sm:space-y-4">
-            <span className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-900">
+            <span className="inline-flex rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-teal-900">
               Onboarding
             </span>
             <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-slate-950">

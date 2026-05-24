@@ -93,7 +93,7 @@ export default function PayPage() {
         <div className="mb-6">
           <button
             onClick={() => router.back()}
-            className="text-emerald-600 hover:text-emerald-700 mb-4 inline-flex items-center"
+            className="text-teal-600 hover:text-teal-700 mb-4 inline-flex items-center"
           >
             ← Back to job
           </button>
@@ -158,7 +158,7 @@ export default function PayPage() {
           className={`w-full py-3 px-4 rounded-lg font-medium text-white transition-colors ${
             isProcessing
               ? 'bg-gray-400 cursor-not-allowed'
-              : 'bg-emerald-600 hover:bg-emerald-700'
+              : 'bg-teal-600 hover:bg-teal-700'
           }`}
         >
           {isProcessing ? 'Processing...' : 'Pay Now with FPX'}

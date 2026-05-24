@@ -49,9 +49,9 @@ function PaymentStatusContent() {
           icon: '✓',
           title: 'Payment Successful!',
           message: 'Your payment has been processed successfully. You will receive a confirmation email shortly.',
-          color: 'text-emerald-600',
-          bgColor: 'bg-emerald-50',
-          borderColor: 'border-emerald-200',
+          color: 'text-teal-600',
+          bgColor: 'bg-teal-50',
+          borderColor: 'border-teal-200',
         }
       case 'cancelled':
         return {
@@ -145,7 +145,7 @@ function PaymentStatusContent() {
           {/* Help Text */}
           <p className="text-center text-xs sm:text-sm text-gray-500 mt-6">
             Need help?{' '}
-            <a href="/support" className="text-emerald-600 hover:text-emerald-700">
+            <a href="/support" className="text-teal-600 hover:text-emerald-700">
               Contact Support
             </a>
           </p>
