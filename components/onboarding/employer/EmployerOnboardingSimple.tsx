@@ -58,7 +58,7 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
 
   const next = () => {
     if (!validateStep(step)) return
-    if (step < 3) {
+    if (step < 4) {
       setStep(step + 1)
     } else {
       onComplete?.(data)
@@ -130,15 +130,15 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
     )
   }
 
-  // Full path: 3-step form
+  // Full path: 4-step form (step 4 = optional job posting)
   return (
     <div className="max-w-xl mx-auto">
       <div className="mb-6">
         <div className="flex justify-between text-xs text-slate-500 mb-1 font-bold">
           <div>Employer • Full Setup</div>
-          <div>Step {step}/3</div>
+          <div>Step {step}/4</div>
         </div>
-        <div className="h-1 bg-gray-200 rounded"><div className="h-1 bg-green-mid rounded" style={{width: `${(step/3)*100}%`}} /></div>
+        <div className="h-1 bg-gray-200 rounded"><div className="h-1 bg-green-mid rounded" style={{width: `${(step/4)*100}%`}} /></div>
       </div>
 
       {step === 1 && (
@@ -234,6 +234,64 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
         </div>
       )}
 
+      {step === 4 && (
+        <div className="space-y-5">
+          <div className="flex items-center gap-3">
+            <div className="flex-1">
+              <h3 className="font-black text-xl">Post your first job?</h3>
+              <p className="text-sm text-slate-600 font-medium mt-1">Skip this and do it later from your dashboard.</p>
+            </div>
+            <span className="text-xs bg-green-soft text-green-forest px-3 py-1 rounded-full font-bold">Optional</span>
+          </div>
+
+          <div>
+            <label className="text-xs text-slate-500 mb-1 font-bold block">Job title</label>
+            <input
+              placeholder="e.g. Cleaner needed in Cheras"
+              className="w-full border rounded-2xl px-5 py-3.5 font-bold"
+              value={data.jobTitle || ''}
+              onChange={e => update('jobTitle', e.target.value)}
+            />
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="text-xs text-slate-500 mb-1 font-bold block">Budget</label>
+              <input
+                placeholder="RM 200–400"
+                className="w-full border rounded-2xl px-5 py-3 font-bold"
+                value={data.budget || ''}
+                onChange={e => update('budget', e.target.value)}
+              />
+            </div>
+            <div>
+              <label className="text-xs text-slate-500 mb-1 font-bold block">When needed</label>
+              <select
+                className="w-full border rounded-2xl px-5 py-3 font-bold text-sm"
+                value={data.when || ''}
+                onChange={e => update('when', e.target.value)}
+              >
+                <option value="">Select...</option>
+                <option>This week</option>
+                <option>Next week</option>
+                <option>This month</option>
+                <option>Flexible</option>
+              </select>
+            </div>
+          </div>
+
+          <label className="flex items-center gap-3 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={data.fastPost || false}
+              onChange={e => update('fastPost', e.target.checked)}
+              className="w-5 h-5 accent-green-mid rounded"
+            />
+            <span className="text-sm font-bold text-slate-700">Post to all matching categories at once</span>
+          </label>
+        </div>
+      )}
+
       <div className="flex gap-3 mt-8">
         <button onClick={back} className="flex-1 py-3 border rounded-2xl font-bold">Back</button>
         <button
@@ -241,10 +299,14 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
           disabled={step === 1 && (!data.company || !data.contactName)}
           className="flex-1 py-3 bg-green-mid text-white font-black rounded-2xl disabled:bg-gray-300 disabled:cursor-not-allowed"
         >
-          {step === 3 ? 'Create Employer Account' : 'Continue'}
+          {step === 4 && data.jobTitle
+            ? 'Create Account & Post Job'
+            : step === 3 && !data.jobTitle
+              ? 'Create Employer Account'
+              : 'Continue'}
         </button>
       </div>
-      <p className="text-center text-[10px] text-slate-400 mt-3 font-bold">Step 3 of 3 — You're ready to hire</p>
+      <p className="text-center text-[10px] text-slate-400 mt-3 font-bold">Step {data.jobTitle ? 4 : 3} of 4 — You're ready to hire</p>
     </div>
   )
 }
