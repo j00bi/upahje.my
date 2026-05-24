@@ -12,7 +12,7 @@ function ClusterSection({ cluster, label }: { cluster: CategoryCluster; label: s
 
   return (
     <section>
-      <h2 className="font-semibold text-sm tracking-widest uppercase mb-4" style={{ color: 'var(--color-green-mid)' }}>
+      <h2 className="font-semibold text-sm tracking-widest uppercase mb-4" style={{ color: 'var(--color-teal-mid)' }}>
         {label}
       </h2>
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -24,7 +24,7 @@ function ClusterSection({ cluster, label }: { cluster: CategoryCluster; label: s
             <Link
               key={category.slug}
               href={`/categories/${category.slug}`}
-              className="group block rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-emerald-200 hover:shadow-lg"
+              className="group block rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-200 hover:-translate-y-0.5 hover:border-teal-200 hover:shadow-lg"
             >
               <div className="text-3xl mb-3">{category.emoji}</div>
               <h3 className="text-xl font-bold mb-1" style={{ color: 'var(--color-ink-deep)' }}>
@@ -68,7 +68,7 @@ function ComingSoonSection() {
           <Link
             key={category.slug}
             href={`/categories/${category.slug}`}
-            className="inline-flex items-center gap-2 rounded-full border border-dashed border-neutral-300 px-4 py-2 text-sm transition-all hover:border-emerald-300 hover:bg-emerald-50 hover:text-emerald-800"
+            className="inline-flex items-center gap-2 rounded-full border border-dashed border-neutral-300 px-4 py-2 text-sm transition-all hover:border-teal-300 hover:bg-teal-50 hover:text-teal-800"
             style={{ color: 'var(--color-body)' }}
           >
             <span>{category.emoji}</span>
@@ -90,7 +90,7 @@ export default function CategoriesIndexPage() {
       <section className="px-6 py-16 md:py-20">
         <div className="mx-auto max-w-6xl">
           <div className="max-w-2xl">
-            <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
+            <p className="section-label mb-3" style={{ color: 'var(--color-teal-mid)' }}>
               Ada Apa Hari Ni?
             </p>
             <h1 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>

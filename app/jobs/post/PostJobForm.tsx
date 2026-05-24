@@ -95,7 +95,7 @@ export function PostJobForm({ session, onSuccess }: PostJobFormProps) {
             onClick={() => update('track', t)}
             className={`flex-1 py-3 rounded-2xl border-2 text-sm font-medium transition ${
 form.track === t
-                    ? 'border-emerald-600 bg-emerald-50 text-emerald-800'
+                    ? 'border-teal-600 bg-teal-50 text-teal-800'
                     : 'border-slate-200 bg-white text-slate-500 hover:border-slate-300'
             }`}
           >
@@ -112,7 +112,7 @@ form.track === t
           value={form.title}
           onChange={e => update('title', e.target.value)}
           placeholder="e.g. Need grass cutter this Saturday"
-          className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+          className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
           maxLength={120}
           required
         />
@@ -129,7 +129,7 @@ form.track === t
               onClick={() => update('categoryId', cat.id)}
               className={`p-3 rounded-2xl border text-sm text-left transition ${
                 form.categoryId === cat.id
-                  ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-medium'
+                  ? 'border-teal-500 bg-teal-50 text-teal-800 font-medium'
                   : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300'
               }`}
             >
@@ -148,7 +148,7 @@ form.track === t
           value={form.location}
           onChange={e => update('location', e.target.value)}
           placeholder="e.g. Kajang, Selangor"
-          className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+          className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
           required
         />
       </div>
@@ -164,7 +164,7 @@ form.track === t
               onChange={e => update('rateMin', e.target.value)}
               placeholder="Min"
               min="0"
-              className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+              className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
             />
           </div>
           <div>
@@ -174,7 +174,7 @@ form.track === t
               onChange={e => update('rateMax', e.target.value)}
               placeholder="Max"
               min="0"
-              className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+              className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
             />
           </div>
         </div>
@@ -187,7 +187,7 @@ form.track === t
           value={form.description}
           onChange={e => update('description', e.target.value)}
           placeholder="Describe the job, requirements, what's included, any special notes..."
-          className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm h-28 resize-none focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+          className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm h-28 resize-none focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
           maxLength={1000}
         />
         <p className="mt-1 text-xs text-slate-400 text-right">{form.description.length}/1000</p>
@@ -202,7 +202,7 @@ form.track === t
       <button
         type="submit"
         disabled={!isValid || loading}
-        className="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-2xl transition disabled:bg-slate-300 disabled:cursor-not-allowed"
+        className="w-full py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-2xl transition disabled:bg-slate-300 disabled:cursor-not-allowed"
       >
         {loading ? 'Posting...' : 'Post Job'}
       </button>

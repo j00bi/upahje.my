@@ -11,7 +11,7 @@ export default function PrivacyPolicy() {
       <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/" className="text-emerald-700 hover:text-emerald-800 text-sm font-medium mb-4 inline-block">
+          <Link href="/" className="text-teal-700 hover:text-teal-800 text-sm font-medium mb-4 inline-block">
             ← Back to home
           </Link>
           <h1 className="text-3xl sm:text-4xl font-bold text-slate-950 mb-4">Privacy Policy</h1>
@@ -133,7 +133,7 @@ export default function PrivacyPolicy() {
             </ul>
             <p className="text-slate-700 leading-relaxed mt-4">
               To exercise these rights, please contact us at{' '}
-              <a href="mailto:privacy@upahje.my" className="text-emerald-700 hover:text-emerald-800">
+              <a href="mailto:privacy@upahje.my" className="text-teal-700 hover:text-teal-800">
                 privacy@upahje.my
               </a>
               . We will respond to your request within 21 days as required by PDPA.
@@ -223,7 +223,7 @@ export default function PrivacyPolicy() {
             <div className="bg-slate-100 rounded-lg p-4 space-y-2">
               <p className="text-slate-700">
                 <strong>Email:</strong>{' '}
-                <a href="mailto:privacy@upahje.my" className="text-emerald-700 hover:text-emerald-800">
+                <a href="mailto:privacy@upahje.my" className="text-teal-700 hover:text-teal-800">
                   privacy@upahje.my
                 </a>
               </p>

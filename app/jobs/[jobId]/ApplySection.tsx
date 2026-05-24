@@ -62,7 +62,7 @@ export function ApplySection({ jobId, userId }: ApplySectionProps) {
             value={proposal}
             onChange={e => setProposal(e.target.value)}
             placeholder="Write a short proposal explaining why you're a good fit for this job..."
-            className="w-full border border-slate-200 rounded-2xl p-4 h-32 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none"
+            className="w-full border border-slate-200 rounded-2xl p-4 h-32 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent resize-none"
           />
           {applyError && (
             <p className="mt-2 text-sm text-red-600">{applyError}</p>
@@ -70,7 +70,7 @@ export function ApplySection({ jobId, userId }: ApplySectionProps) {
           <button
             onClick={handleApply}
             disabled={isApplying || !proposal.trim()}
-            className="mt-4 w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-2xl transition disabled:bg-slate-300 disabled:cursor-not-allowed"
+            className="mt-4 w-full py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-2xl transition disabled:bg-slate-300 disabled:cursor-not-allowed"
           >
             {isApplying
               ? 'Submitting...'
@@ -89,9 +89,9 @@ export function ApplySection({ jobId, userId }: ApplySectionProps) {
       ) : (
         <div className="text-center py-6">
           <div className="text-5xl mb-4">✅</div>
-          <h3 className="text-xl font-semibold text-emerald-700 mb-2">Application submitted!</h3>
+          <h3 className="text-xl font-semibold text-teal-700 mb-2">Application submitted!</h3>
           <p className="text-slate-600 text-sm mb-4">The employer will review your proposal and get in touch.</p>
-          <Link href="/dashboard/talent" className="text-emerald-600 text-sm font-medium hover:underline">
+          <Link href="/dashboard/talent" className="text-teal-600 text-sm font-medium hover:underline">
             View your applications →
           </Link>
         </div>

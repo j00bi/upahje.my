@@ -37,7 +37,7 @@ export default async function JobDetailPage({
       {/* Back nav */}
       <div className="bg-white border-b border-slate-200 sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-4 py-3">
-          <Link href="/jobs" className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-emerald-600 transition">
+          <Link href="/jobs" className="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-teal-600 transition">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
@@ -55,10 +55,10 @@ export default async function JobDetailPage({
                 {job.category.emoji} {job.category.name}
               </span>
             )}
-            <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${job.track === 'LABOUR' ? 'bg-emerald-100 text-emerald-700' : 'bg-purple-100 text-purple-700'}`}>
+            <span className={`text-xs px-2.5 py-1 rounded-full font-medium ${job.track === 'LABOUR' ? 'bg-teal-100 text-teal-700' : 'bg-purple-100 text-purple-700'}`}>
               {job.track === 'LABOUR' ? '🛠️ Labour' : '💻 Technical'}
             </span>
-            <span className={`text-xs px-2.5 py-1 rounded-full font-medium ml-auto ${job.status === 'OPEN' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-600'}`}>
+            <span className={`text-xs px-2.5 py-1 rounded-full font-medium ml-auto ${job.status === 'OPEN' ? 'bg-teal-100 text-teal-700' : 'bg-slate-100 text-slate-600'}`}>
               {job.status}
             </span>
           </div>
@@ -67,9 +67,9 @@ export default async function JobDetailPage({
 
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
             {job.rate && (
-              <div className="bg-emerald-50 rounded-2xl p-4">
-                <div className="text-xs text-emerald-600 font-medium uppercase tracking-wide mb-1">Budget</div>
-                <div className="font-semibold text-emerald-800">{job.rate}</div>
+              <div className="bg-teal-50 rounded-2xl p-4">
+                <div className="text-xs text-teal-600 font-medium uppercase tracking-wide mb-1">Budget</div>
+                <div className="font-semibold text-teal-800">{job.rate}</div>
               </div>
             )}
             {job.location && (
@@ -95,7 +95,7 @@ export default async function JobDetailPage({
             <div className="mt-6 pt-6 border-t border-slate-100">
               <h3 className="font-semibold text-slate-800 mb-2">About the employer</h3>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-semibold">
+                <div className="w-10 h-10 bg-teal-100 rounded-full flex items-center justify-center text-teal-700 font-semibold">
                   {(job.employer.company || job.employer.user.name || 'E')[0].toUpperCase()}
                 </div>
                 <div>

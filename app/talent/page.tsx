@@ -10,7 +10,7 @@ export default function TalentIndexPage() {
         <div className="mx-auto max-w-6xl">
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
-              <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
+              <p className="section-label mb-3" style={{ color: 'var(--color-teal-mid)' }}>
                 Talent
               </p>
               <h1 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>
@@ -25,7 +25,7 @@ export default function TalentIndexPage() {
             </div>
             <Link
               href="/jobs/post"
-              className="inline-flex w-fit items-center justify-center rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-emerald-800"
+              className="inline-flex w-fit items-center justify-center rounded-full bg-teal-700 px-6 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-teal-800"
             >
               Post a Job
             </Link>

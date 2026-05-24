@@ -80,7 +80,7 @@ export default function MatchesPage() {
           <h2 className="text-xl font-semibold text-gray-700">Job not found</h2>
           <button
             onClick={() => router.push('/jobs')}
-            className="mt-4 text-emerald-600 hover:text-emerald-700"
+            className="mt-4 text-teal-600 hover:text-teal-700"
           >
             Back to Job Board
           </button>
@@ -98,7 +98,7 @@ export default function MatchesPage() {
             <div>
               <button
                 onClick={() => router.push('/jobs')}
-                className="text-emerald-600 hover:text-emerald-700 text-sm mb-2"
+                className="text-teal-600 hover:text-teal-700 text-sm mb-2"
               >
                 ← Back to Jobs
               </button>
@@ -125,7 +125,7 @@ export default function MatchesPage() {
               placeholder="Search talents by name or skill..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-3 sm:py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+              className="w-full px-4 py-3 sm:py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-sm"
             />
           </div>
 
@@ -148,7 +148,7 @@ export default function MatchesPage() {
               <select
                 value={selectedLocation}
                 onChange={(e) => setSelectedLocation(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-sm"
               >
                 {talentLocations.map((location) => (
                   <option key={location} value={location}>
@@ -164,7 +164,7 @@ export default function MatchesPage() {
               <select
                 value={selectedRate}
                 onChange={(e) => setSelectedRate(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-sm"
               >
                 {talentRates.map((rate) => (
                   <option key={rate} value={rate}>
@@ -180,7 +180,7 @@ export default function MatchesPage() {
               <select
                 value={selectedAvailability}
                 onChange={(e) => setSelectedAvailability(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 text-sm"
               >
                 {talentAvailability.map((availability) => (
                   <option key={availability} value={availability}>
@@ -231,7 +231,7 @@ export default function MatchesPage() {
                 setSelectedAvailability('All Availability')
                 setSearchQuery('')
               }}
-              className="mt-4 text-emerald-600 hover:text-emerald-700 font-medium"
+              className="mt-4 text-teal-600 hover:text-teal-700 font-medium"
             >
               Clear all filters
             </button>
