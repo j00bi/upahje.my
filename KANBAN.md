@@ -1,8 +1,8 @@
-# UpahJe.My — KANBAN (M0 Foundation + M2 Marketplace Frontend)
+# UpahJe.My — KANBAN (M0 Foundation + M2 Marketplace + M3 Applications)
 
 **Last Updated**: 2026-05-24
 **Roadmap**: M0–M7 active (see docs/M0-TO-M7-ROADMAP.md)
-**Overall Progress**: ~58%
+**Overall Progress**: ~64%
 **Go-Live Target**: Late July – Early August 2026
 **Deployed**: upahje-my.vercel.app
 
@@ -122,6 +122,30 @@
 | M2-H9  | Build vertical landing pages for all categories     | In Progress | Hermes | 7 done, more verticals pending |
 | M2-H10 | Implement job discovery + search                    | Done       | Hermes | /jobs reads query-string filters; nav search routes into it |
 | M2-H11 | Build job listing detail pages                      | Done       | Hermes | Live /jobs/[jobId] page + apply CTA wired to job APIs |
+
+---
+
+## M3 – Applications & Matching
+
+### Status Overview
+- **Apply Flow**: In Progress (pending applications now persist instead of directly matching)
+- **Talent Application Tracking**: In Progress (`/dashboard/talent/applications` lists and withdraws proposals)
+- **Employer Review**: In Progress (`/dashboard/employer/applications` and `/dashboard/employer/jobs` can review, reject, and accept)
+- **Matching State**: Partial (accepting a proposal assigns `Job.talentId`, marks job `MATCHED`, and rejects other pending/reviewed applications)
+- **Overall Progress**: ~35%
+
+---
+
+| ID     | Task                                      | Status      | Owner | Notes |
+|--------|-------------------------------------------|-------------|-------|-------|
+| M3-A1  | Add application data model to Prisma      | Done        | Codex | `Application` model added; migration aligns initial table to app model |
+| M3-A2  | Persist job applications                  | Done        | Codex | `/api/jobs/[jobId]/apply` creates pending proposals and blocks duplicates |
+| M3-A3  | Preserve KYC gate for applications        | Done        | Codex | Labour applicants need `SUBMITTED` or `VERIFIED` KYC status |
+| M3-A4  | Talent application tracking page          | Done        | Codex | `/dashboard/talent/applications` lists and withdraws applications |
+| M3-A5  | Employer application review page          | Done        | Codex | `/dashboard/employer/applications` lists proposals with accept/reject actions |
+| M3-A6  | Employer job-level applications page      | Done        | Codex | `/dashboard/employer/jobs` groups proposals by posted job |
+| M3-A7  | Accepted-job project/contact handoff      | Pending     | Codex | Needs post-match project/contact workflow after `MATCHED` |
+| M3-A8  | Live Supabase migration + smoke test      | Pending     | Codex | Apply migration and test employer/talent end-to-end on live DB |
 
 ---
 

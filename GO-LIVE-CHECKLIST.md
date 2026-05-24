@@ -12,6 +12,9 @@
 - [x] Job detail page fetches and displays real data
 - [x] Build passes cleanly
 - [x] Mobile responsive (previous pass)
+- [x] Talent applications persist as reviewable proposals
+- [x] Talent application dashboard exists
+- [x] Employer proposal review exists
 - [ ] Limited database role configured for production
 - [ ] RLS baseline applied in Supabase
 - [ ] Dedicated Supabase admin client is used only server-side
@@ -21,7 +24,8 @@
 - [x] Seed sample jobs for demo purposes (realistic LABOUR + TECHNICAL jobs)
 - [x] Real employer association in job posting (fetchOrCreateEmployer implemented in PostJobForm)
 - [x] Improve JobCard to show employer info
-- [ ] Add apply/contact functionality
+- [x] Add apply functionality
+- [ ] Add contact handoff after accepted application
 - [ ] Set up custom domain (upahje.my)
 
 ## 🚀 Deployment
@@ -59,16 +63,20 @@
 - [ ] Update `NEXTAUTH_URL` to production domain
 
 ### Pre-Deployment Checklist
-- [ ] Run `npm run build` locally to verify (✅ PASSED)
+- [x] Run production build locally to verify (`NODE_ENV=production npm run build` ✅ PASSED)
+- [x] Run TypeScript check (`npx tsc --noEmit` ✅ PASSED)
+- [ ] Fix `npm run lint` script/tooling; it currently opens Next's ESLint setup prompt because ESLint is not installed/configured for that command
 - [ ] Verify all environment variables are set
 - [ ] Test authentication locally with production-like env vars
 - [ ] Check database connection string format
+- [ ] Apply `20260524_application_relations` migration to Supabase
 - [ ] Review security checklist below
 
 ### Post-Deployment Verification
 - [ ] Visit production domain
 - [ ] Test user registration and login
 - [ ] Test job posting flow (as employer)
+- [ ] Test application submit/review/accept flow with separate talent and employer accounts
 - [ ] Test job browsing and details
 - [ ] Verify Supabase data is accessible
 - [ ] Check Vercel logs for errors
@@ -89,6 +97,7 @@
 - Browse live jobs
 - Post new jobs (authenticated)
 - View job details
+- Submit, track, review, reject, withdraw, and accept job applications
 
 **Last Updated**: May 2026
 **Branch**: master
@@ -96,7 +105,7 @@
 
 ## Notes
 
-- Job posting currently uses placeholder employerId and categoryId
-- Real employer association requires user profile / employer record creation flow
+- Job posting uses resolved employer/category records
+- Application acceptance currently handles matching state; contact handoff after acceptance is still pending
 - Sample data can be added manually via Supabase dashboard or Prisma Studio
 - Security baseline scaffold lives in `supabase/migrations/20260517_security_baseline.sql`
