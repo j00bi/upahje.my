@@ -1,389 +1,327 @@
----
-version: alpha
-name: UpahJe.my
-description: Malaysia's creative talent marketplace — hire photographers, videographers, content creators, and more. Browse verified portfolios, compare rates, book securely.
-colors:
-  primary: "#9fe870"
-  primary-active: "#cdffad"
-  primary-neutral: "#c5edab"
-  primary-pale: "#e2f6d5"
-  canvas: "#ffffff"
-  canvas-soft: "#e8ebe6"
-  ink: "#0e0f0c"
-  ink-deep: "#163300"
-  body: "#454745"
-  mute: "#868685"
-  positive: "#2ead4b"
-  positive-deep: "#054d28"
-  warning: "#ffd11a"
-  warning-deep: "#b86700"
-  warning-content: "#4a3b1c"
-  negative: "#d03238"
-  negative-deep: "#a72027"
-  negative-darkest: "#a7000d"
-  negative-bg: "#320707"
-  accent-orange: "#ffc091"
-  accent-cyan: "#38c8ff"
-typography:
-  display-mega:
-    fontFamily: Inter
-    fontSize: "126px"
-    fontWeight: 900
-    lineHeight: "107.1px"
-    letterSpacing: "0"
-  display-xxl:
-    fontFamily: Inter
-    fontSize: "96px"
-    fontWeight: 900
-    lineHeight: "81.6px"
-    letterSpacing: "0"
-  display-xl:
-    fontFamily: Inter
-    fontSize: "64px"
-    fontWeight: 900
-    lineHeight: "54.4px"
-    letterSpacing: "0"
-  display-lg:
-    fontFamily: Inter
-    fontSize: "47px"
-    fontWeight: 400
-    lineHeight: "70.5px"
-    letterSpacing: "-0.108px"
-  display-md:
-    fontFamily: Inter
-    fontSize: "40px"
-    fontWeight: 900
-    lineHeight: "34px"
-    letterSpacing: "0"
-  display-sm:
-    fontFamily: Inter
-    fontSize: "32px"
-    fontWeight: 600
-    lineHeight: "38.4px"
-    letterSpacing: "-0.96px"
-  display-xs:
-    fontFamily: Inter
-    fontSize: "24px"
-    fontWeight: 600
-    lineHeight: "31.2px"
-    letterSpacing: "-0.48px"
-  body-lg:
-    fontFamily: Inter
-    fontSize: "20px"
-    fontWeight: 400
-    lineHeight: "30px"
-    letterSpacing: "0"
-  body-md:
-    fontFamily: Inter
-    fontSize: "16px"
-    fontWeight: 400
-    lineHeight: "24px"
-    letterSpacing: "0"
-  body-md-strong:
-    fontFamily: Inter
-    fontSize: "16px"
-    fontWeight: 600
-    lineHeight: "24px"
-    letterSpacing: "0"
-  body-sm:
-    fontFamily: Inter
-    fontSize: "14px"
-    fontWeight: 400
-    lineHeight: "20px"
-    letterSpacing: "0"
-  body-sm-strong:
-    fontFamily: Inter
-    fontSize: "14px"
-    fontWeight: 600
-    lineHeight: "20px"
-    letterSpacing: "0"
-  caption:
-    fontFamily: Inter
-    fontSize: "12px"
-    fontWeight: 400
-    lineHeight: "16px"
-    letterSpacing: "0"
-  button-md:
-    fontFamily: Inter
-    fontSize: "16px"
-    fontWeight: 600
-    lineHeight: "24px"
-    letterSpacing: "0"
-rounded:
-  none: "0px"
-  sm: "8px"
-  md: "12px"
-  lg: "16px"
-  xl: "24px"
-  pill: "9999px"
-  full: "9999px"
-spacing:
-  xxs: "2px"
-  xs: "4px"
-  sm: "8px"
-  md: "12px"
-  lg: "16px"
-  xl: "24px"
-  2xl: "32px"
-  3xl: "48px"
-components:
-  button-primary:
-    backgroundColor: "{colors.primary}"
-    textColor: "#000000"
-    rounded: "{rounded.xl}"
-    padding: "12px 24px"
-  button-primary-hover:
-    backgroundColor: "{colors.primary-active}"
-    textColor: "#000000"
-    rounded: "{rounded.xl}"
-    padding: "12px 24px"
-  button-secondary:
-    backgroundColor: "{colors.canvas-soft}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.xl}"
-    padding: "12px 24px"
-  button-tertiary:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.xl}"
-    padding: "12px 24px"
-  card-content:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.xl}"
-    padding: "24px"
-  card-feature-sage:
-    backgroundColor: "{colors.canvas-soft}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.xl}"
-    padding: "24px"
-  card-feature-green:
-    backgroundColor: "{colors.primary-pale}"
-    textColor: "{colors.ink}"
-    rounded: "{rounded.xl}"
-    padding: "24px"
-  card-feature-dark:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.primary}"
-    rounded: "{rounded.xl}"
-    padding: "24px"
-  nav-bar:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    padding: "12px 24px"
-  nav-link:
-    textColor: "{colors.ink}"
-    typography: "{typography.body-sm-strong}"
-  footer:
-    backgroundColor: "{colors.ink}"
-    textColor: "{colors.canvas-soft}"
-    padding: "48px 24px"
-  hero-band:
-    backgroundColor: "{colors.canvas-soft}"
-    textColor: "{colors.ink}"
-    padding: "48px 24px"
-  content-band:
-    backgroundColor: "{colors.canvas}"
-    textColor: "{colors.ink}"
-    padding: "48px 24px"
+# UpahJe.my — Design Specification
+# Generated via /impeccable document workflow
+# Date: 2026-05-24
+
 ---
 
-## Overview
+## 1. Concept & Vision
 
-UpahJe.my is Malaysia's creative talent marketplace. The brand identity is inspired by Wise's clean, friendly fintech aesthetic — using a single lime-green accent against a sage-tinted canvas, with generous whitespace and pill-shaped UI elements.
+**What it does:** Malaysia's local hiring platform — connects people who need services (photography, home repair, tutoring, errands) with verified local freelancers.
 
-**Key Characteristics:**
-- A single lime-green CTA accent `{colors.primary}` (`#9fe870`) — the brand's universal primary action color. No second accent.
-- Two-face display typography — Inter (weight 900 for hero, weight 600 for sub-display) for all text.
-- `{rounded.xl}` 24 px is the canonical card and button radius. Generous, friendly.
-- Sage-tinted canvas `{colors.canvas-soft}` (`#e8ebe6`) is the brand's hero surface; white `{colors.canvas}` is reserved for cards within the sage band.
-- A full semantic palette: positive green family, warning yellow family, negative red family — each documented with content / hover / active variants for in-product use.
+**What it feels like:** Trustworthy, warm, distinctly Malaysian. Like asking a neighbor who happens to be a pro. Not a cold corporate job board — a community marketplace with real people and real accountability.
 
-## Colors
+**Brand Personality:** Friendly but professional. Confident but not aggressive. Local-first, verified, secure.
 
-### Brand & Accent
-- **Wise Green** (`{colors.primary}` — `#9fe870`): The brand's universal CTA color. Every primary button, every "Send money" pill, the brand's logo accent.
-- **Wise Green Hover** (`{colors.primary-active}` — `#cdffad`): The lighter green for active state.
-- **Wise Green Neutral** (`{colors.primary-neutral}` — `#c5edab`): A mid-saturation green used as a neutral active fill.
-- **Wise Green Pale** (`{colors.primary-pale}` — `#e2f6d5`): The lightest green for soft surface tints / badge backgrounds.
+---
 
-### Surface
-- **Canvas** (`{colors.canvas}` — `#ffffff`): Pure white for card interiors.
-- **Canvas Soft** (`{colors.canvas-soft}` — `#e8ebe6`): The sage-tinted page background. Defining mood of the brand.
+## 2. Design Language
 
-### Text
-- **Ink** (`{colors.ink}` — `#0e0f0c`): Near-black with a hint of olive warmth — the brand's default text and headings color.
-- **Ink Deep** (`{colors.ink-deep}` — `#163300`): A deep forest-green ink used on positive-state surfaces.
-- **Body** (`{colors.body}` — `#454745`): Secondary body text.
-- **Mute** (`{colors.mute}` — `#868685`): Lowest-priority text — captions, placeholder, fine print.
+### Aesthetic Direction
+**Reference:** Warm Southeast Asian marketplace meets modern SaaS — think Carousell meets Fiverr but with higher trust signals. Clean but not sterile. Uses vernacular Malaysian language as a differentiator.
 
-### Semantic
-- **Positive** (`{colors.positive}` — `#2ead4b`): Success indicator.
-- **Positive Deep** (`{colors.positive-deep}` — `#054d28`): Pressed positive state.
-- **Warning** (`{colors.warning}` — `#ffd11a`): Caution indicator.
-- **Warning Deep** (`{colors.warning-deep}` — `#b86700`): Pressed warning.
-- **Warning Content** (`{colors.warning-content}` — `#4a3b1c`): Text on warning surfaces.
-- **Negative** (`{colors.negative}` — `#d03238`): Destructive / error red.
-- **Negative Deep** (`{colors.negative-deep}` — `#a72027`): Pressed destructive.
-- **Negative Darkest** (`{colors.negative-darkest}` — `#a7000d`): Highest-emphasis destructive text.
-- **Negative Bg** (`{colors.negative-bg}` — `#320707`): Dark maroon for destructive callout backgrounds.
+### Color Palette
 
-### Brand Accent — Tertiary
-- **Accent Orange** (`{colors.accent-orange}` — `#ffc091`): Bright peach used inside illustrative content / pricing cards.
-- **Accent Cyan** (`{colors.accent-cyan}` — `#38c8ff`): Bright sky-blue used as a tertiary illustration accent.
+```
+Primary (Teal) — Trust & Security
+  --color-teal-deep:   #0f766e   (headers, primary buttons)
+  --color-teal-mid:     #14b8a6   (links, active states)
+  --color-teal-soft:    #ccfbf1   (backgrounds, badges)
+  --color-teal-pale:    #f0fdfa   (section backgrounds)
 
-## Typography
+Accent (Amber) — Warmth & Urgency
+  --color-amber-deep:   #b45309   (secondary buttons, emphasis)
+  --color-amber-mid:    #f59e0b   (CTAs, highlights, ticker)
+  --color-amber-soft:   #fef3c7   (callout backgrounds)
+  --color-amber-pale:   #fffbeb   (subtle highlights)
 
-### Font Family
-**Inter** — used for all text, loaded with `font-feature-settings: "calt"` for contextual alternates.
+Neutral
+  --color-canvas:       #ffffff   (primary background)
+  --color-canvas-soft:  #f9f9f9   (section backgrounds)
+  --color-canvas-warm:  #f5f3ee   (warm sections)
+  --color-ink:          #0e0f0c   (headings)
+  --color-body:         #454745   (body text)
+  --color-mute:         #868685   (captions, meta)
 
-### Hierarchy
-| Token | Size | Weight | Line Height | Letter Spacing | Use |
-|---|---|---|---|---|---|
-| `{typography.display-mega}` | 126px | 900 | 107.1px | 0 | Hero stencil at maximum scale. |
-| `{typography.display-xxl}` | 96px | 900 | 81.6px | 0 | Sub-hero scale. |
-| `{typography.display-xl}` | 64px | 900 | 54.4px | 0 | Standard hero headline. |
-| `{typography.display-lg}` | 47px | 400 | 70.5px | -0.108px | Lighter sub-display. |
-| `{typography.display-md}` | 40px | 900 | 34px | 0 | Section / card headlines. |
-| `{typography.display-sm}` | 32px | 600 | 38.4px | -0.96px | Inter-rendered section headings. |
-| `{typography.display-xs}` | 24px | 600 | 31.2px | -0.48px | Sub-section displays. |
-| `{typography.body-lg}` | 20px | 400 | 30px | 0 | Lead paragraphs. |
-| `{typography.body-md}` | 16px | 400 | 24px | 0 | Default body. |
-| `{typography.body-md-strong}` | 16px | 600 | 24px | 0 | Bold inline body. |
-| `{typography.body-sm}` | 14px | 400 | 20px | 0 | Secondary body. |
-| `{typography.body-sm-strong}` | 14px | 600 | 20px | 0 | Bold caption / nav-link. |
-| `{typography.caption}` | 12px | 400 | 16px | 0 | Fine print. |
-| `{typography.button-md}` | 16px | 600 | 24px | 0 | Button label. |
+Semantic
+  --color-positive:     #2ead4b   (success, verified)
+  --color-warning:      #ffd11a   (warnings)
+  --color-negative:     #d03238   (errors, destructive)
+```
 
-### Principles
-- **Weight 900 for hero, weight 600 for everything else.** The brand's display ceiling is full-black weight; everything below is semibold.
-- **Inter for all text.** Consistent typography family.
+### Typography
 
-## Layout
+**Font Stack:**
+- Display: `var(--font-sora)` — headings, hero text
+- Body: `var(--font-dm-sans)` — body, UI elements
+- Fallback: `system-ui, -apple-system, sans-serif`
 
-### Spacing System
-- **Base unit**: 4 px.
-- **Tokens**: `{spacing.xxs}` 2 px — `{spacing.xs}` 4 px — `{spacing.sm}` 8 px — `{spacing.md}` 12 px — `{spacing.lg}` 16 px — `{spacing.xl}` 24 px — `{spacing.2xl}` 32 px — `{spacing.3xl}` 48 px.
-- **Section padding**: bands use `{spacing.3xl}` 48 px top/bottom on desktop.
-- **Card interior**: cards at `{spacing.xl}` 24 px.
+**Type Scale (Major Third — 1.250 ratio):**
+```
+Display:   clamp(2.5rem, 6vw, 4.5rem)  — Hero headlines
+H1:        clamp(2rem, 4vw, 3rem)       — Section headers
+H2:        clamp(1.5rem, 3vw, 2rem)     — Subsection headers
+H3:        clamp(1.25rem, 2vw, 1.5rem)  — Card titles
+Body:      1rem (16px)                  — Paragraph text
+Small:     0.875rem (14px)              — Captions, meta
+Caption:   0.75rem (12px)              — Badges, timestamps
+```
 
-### Grid & Container
-- Marketing container centres at ~1200 px.
-- Hero: split layout (headline left, currency-converter card right) at desktop; stacked at mobile.
-- Feature grids: 2-up / 3-up at desktop.
+**Usage Rules:**
+- H1-H3: font-display-mega with Sora
+- Body: DM Sans, line-height 1.6 for readability
+- Headlines: tight letter-spacing (-0.02em)
+- Body: normal letter-spacing, generous line-height
+
+### Spatial System
+
+**Base unit:** 4px
+**Scale:** 4, 8, 12, 16, 24, 32, 48, 64, 96, 128
+
+**Component Spacing:**
+- Card padding: 24px
+- Section padding: 64px vertical (mobile: 48px)
+- Grid gap: 24px (cards), 16px (buttons)
+- Input padding: 12px 16px
+
+### Motion Philosophy
+
+**Principles:**
+- Purposeful, not decorative
+- Motion reveals hierarchy and guides attention
+- Fast enough to feel snappy, slow enough to be noticed
+
+**Standard Durations:**
+- Micro (hover, toggle): 150ms
+- Standard (fade, slide): 300ms
+- Entrance (page elements): 400-600ms
+- Stagger delay: 100ms between items
+
+**Patterns:**
+- FadeUp: translateY(20px) → translateY(0), opacity 0 → 1
+- Stagger: sequential reveal with 100ms delay
+- Hover: scale(1.02), subtle shadow lift
+- Page transitions: fade only (no slide on mobile)
+
+### Visual Assets
+
+**Icons:** Emoji-first for emotional resonance (📸 🏠 💻 🎥 💄 💍). Add Icon components for UI controls.
+
+**Images:** Real portfolio photos from talent. No stock photography.
+
+**Decorative:** Gradient mesh on hero, subtle grain texture on canvas-warm sections.
+
+---
+
+## 3. Layout & Structure
+
+### Page Architecture
+
+```
+Header (sticky)
+  ├── Logo + Nav
+  ├── Search (compact)
+  └── Auth buttons
+
+Main Content
+  ├── Hero Section (full viewport height)
+  ├── Categories Grid
+  ├── How It Works (3 steps)
+  ├── Featured Talent
+  ├── Trust & Safety
+  └── Final CTA
+
+Footer
+  ├── Links (About, FAQ, Privacy, Terms)
+  ├── Social (Instagram, TikTok, Facebook)
+  └── Copyright
+```
+
+### Grid System
+
+**Container:** max-width 1280px, centered, 24px horizontal padding
+
+**Breakpoints:**
+- Mobile: < 640px (1 column)
+- Tablet: 640-1024px (2 columns)
+- Desktop: > 1024px (3-4 columns)
 
 ### Responsive Strategy
 
-#### Breakpoints
-| Name | Width | Key Changes |
-|---|---|---|
-| Mobile | < 768px | Hero stacks; converter card full-width below headline; grids 1-up. |
-| Tablet | 768–1023px | Grids 2-up. |
-| Desktop | = 1024px | Hero split; full grids. |
+- Mobile-first implementation
+- Hero: stacked layout on mobile, side-by-side on desktop
+- Cards: 1 col → 2 col → 3-4 col
+- Typography: fluid with clamp()
 
-#### Touch Targets
-Buttons render ~48 px tall (12 vertical padding + 24 line). WCAG AAA at all widths.
+---
 
-#### Image Behavior
-Photography is sparse; the brand prefers illustrative SVGs and product mockups inside cards. Country flag thumbnails appear inside currency rows.
+## 4. Features & Interactions
 
-## Elevation & Depth
+### Primary Features
 
-| Level | Treatment | Use |
-|---|---|---|
-| Level 0 — Flat | No shadow, no border. | Default. |
-| Level 1 — Hairline on Dark | 1 px solid `{colors.ink}` border. | Tertiary outline buttons, form inputs. |
-| Level 2 — Soft Card | Implicit Level 0 white card sitting on sage canvas — the surface contrast IS the elevation. | Cards on the sage hero band. |
+1. **Search-First** — Search bar prominently placed, instant results
+2. **Category Browsing** — Problem-based categories (not skill-based)
+3. **Talent Cards** — Portfolio preview, verified badge, price, location
+4. **Escrow Payments** — Secure payment with fund release on approval
+5. **Trust Verification** — MyKad verification, portfolio review
 
-The brand uses surface contrast (`{colors.canvas-soft}` background vs `{colors.canvas}` cards) as the primary elevation cue.
+### Interaction Details
 
-## Shapes
+**Search Input:**
+- Placeholder: "Cari servis… contoh: photographer, plumber"
+- On focus: border color changes to teal-mid
+- On submit: triggers search results page
+- No results: empty state with suggestions
 
-### Border Radius Scale
-| Token | Value | Use |
-|---|---|---|
-| `{rounded.none}` | 0px | Full-bleed bands. |
-| `{rounded.sm}` | 8px | Inline pills, small badges. |
-| `{rounded.md}` | 12px | Form inputs, smaller chrome. |
-| `{rounded.lg}` | 16px | Mid-size cards. |
-| `{rounded.xl}` | 24px | The brand's canonical button + card radius. |
-| `{rounded.pill}` | 9999px | Status pills and full-radius accents. |
-| `{rounded.full}` | 9999px | Circular icon containers. |
+**Category Cards:**
+- Default: subtle shadow, rounded corners
+- Hover: scale(1.02), shadow lift, teal border
+- Click: navigate to category page
 
-## Components
+**Talent Cards:**
+- Default: flat card with info
+- Hover: shadow lift, slight scale
+- Verified badge: green checkmark
+- Price: prominently displayed in amber
 
-### Buttons
+**CTAs:**
+- Primary (Cari Servis): teal background, white text, hover darkens
+- Secondary (Jadi Freelancer): teal outline, teal text, hover fills
+- Disabled: 50% opacity, cursor not-allowed
 
-**`button-primary`** — the lime-green CTA pill.
-- Background `{colors.primary}`, text black, label `{typography.button-md}`, padding `{spacing.md} {spacing.xl}`, shape `{rounded.xl}` 24 px.
+**Error States:**
+- Red border on invalid inputs
+- Error message below input in negative color
+- Toast notifications for async errors
 
-**`button-secondary`** — the sage-tinted secondary.
-- Background `{colors.canvas-soft}`, text `{colors.ink}`, same typography / padding / shape.
+**Empty States:**
+- Illustrated placeholder (emoji-based)
+- Helpful message + CTA to resolve
 
-**`button-tertiary`** — the white outline tertiary.
-- Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.ink}` border, same typography / padding / shape.
+---
 
-**`button-icon-circular`** — the circular icon button.
-- Background `{colors.canvas}`, ink icon, shape `{rounded.full}`.
-
-### Cards & Containers
-
-**`card-content`** — the default white card.
-- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.xl}`, shape `{rounded.xl}`. No border, sits on sage canvas.
-
-**`card-feature-sage`** — the sage-tinted feature card.
-- Background `{colors.canvas-soft}`, text `{colors.ink}`, padding `{spacing.xl}`, shape `{rounded.xl}`.
-
-**`card-feature-green`** — the soft-green feature card.
-- Background `{colors.primary-pale}`, text `{colors.ink}`, padding `{spacing.xl}`, shape `{rounded.xl}`.
-
-**`card-feature-dark`** — the polarity-flipped dark card with green text.
-- Background `{colors.ink}`, text `{colors.primary}` (Wise green!), padding `{spacing.xl}`, shape `{rounded.xl}`. Used for promotional moments.
-
-### Inputs & Forms
-
-**`text-input`** — the canonical text input.
-- Background `{colors.canvas}`, text `{colors.ink}`, 1 px solid `{colors.ink}` border, body in `{typography.body-md}`, padding `{spacing.md} {spacing.lg}`, shape `{rounded.md}`.
+## 5. Component Inventory
 
 ### Navigation
+- **Logo:** UpahJe.my text with teal color
+- **Nav links:** Home, Browse Jobs, Hire Talent, Categories, Post Job
+- **Auth:** Sign in (text link), Register (teal button)
 
-**`nav-bar`** — the sticky top nav.
-- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.md} {spacing.xl}`.
+### Hero Section
+- **Ticker:** Rotating Malaysian phrases in amber
+- **Headline:** Problem-based question in display font
+- **Search bar:** Large input with search button
+- **Popular tags:** Pill buttons below search
 
-**`nav-link`** — link items inside nav.
-- Text `{colors.ink}`, set in `{typography.body-sm-strong}`.
+### Category Cards
+- **Icon:** Large emoji (📸 🏠 💻)
+- **Title:** H3, ink color
+- **Description:** Body text, muted
+- **Count:** Small text, teal soft badge
 
-**`footer`** — the dark footer band.
-- Background `{colors.ink}`, text `{colors.canvas-soft}`, padding `{spacing.3xl} {spacing.xl}`. Body in `{typography.body-sm}`.
+### Talent Cards
+- **Name:** H4, bold
+- **Role:** Body text, muted
+- **Location:** Small, with 📍 emoji
+- **Availability:** Small text
+- **Price:** Amber, bold
+- **Badge:** Verified (green checkmark) or New (teal badge)
+- **Status:** New to UpahJe or has jobs completed
 
-### Signature Components
+### Testimonial Section
+- **Quote:** Large text, italic
+- **Attribution:** Name + role below
+- **Decorative:** Emoji icon for type (👰 💼)
 
-**`hero-band`** — the sage-canvas hero band.
-- Background `{colors.canvas-soft}`, text `{colors.ink}`, padding `{spacing.3xl} {spacing.xl}`. Headline in `{typography.display-mega}` (Inter weight 900).
+### Footer
+- **Links:** Organized in columns
+- **Social icons:** Instagram, TikTok, Facebook
+- **Copyright:** Muted text
 
-**`hero-band-dark`** — the polarity-flipped dark hero.
-- Background `{colors.ink}`, text `{colors.primary}` (Wise green headline on near-black!), same padding / scale.
+---
 
-**`content-band`** — the white content band that follows hero.
-- Background `{colors.canvas}`, text `{colors.ink}`, padding `{spacing.3xl} {spacing.xl}`. Section headline in `{typography.display-md}`.
+## 6. Technical Approach
 
-**`badge-positive`** — the positive status pill.
-- Background `{colors.primary-pale}`, text `{colors.positive-deep}`, body in `{typography.body-sm-strong}`, padding `{spacing.xs} {spacing.md}`, shape `{rounded.pill}`.
+### Framework
+- **Next.js 14** with App Router
+- **TypeScript** for type safety
+- **Tailwind CSS** for styling
+- **Motion** (motion.dev) for animations
 
-**`badge-negative`** — the negative status pill.
-- Background `{colors.negative-bg}`, text white, body in `{typography.body-sm-strong}`, padding `{spacing.xs} {spacing.md}`, shape `{rounded.pill}`.
+### Component Architecture
+```
+app/
+├── components/
+│   ├── ui/           # Reusable UI primitives
+│   ├── layout/       # Header, Footer, Container
+│   ├── sections/     # Page sections (Hero, Categories, etc.)
+│   └── variants/     # Design variants for A/B testing
+```
 
-## Do's and Don'ts
+### Design Tokens
+All tokens defined in `globals.css` as CSS custom properties under `:root`.
 
-### Do
-- Reserve `{colors.primary}` Wise green for every primary CTA. The lime-green pill IS the brand's conversion signature.
-- Set hero headlines in `{typography.display-mega}` / `{typography.display-xl}` Inter weight 900. Never lighter.
-- Use `{rounded.xl}` 24 px for buttons and cards. The generous radius is the brand's friendliness signature.
-- Cycle page surfaces in `{colors.canvas-soft}` sage canvas ? `{colors.canvas}` white cards. Surface contrast carries elevation.
-- Use the full semantic palette (positive / warning / negative) for in-product status — never repurpose Wise green as success indicator since it IS the brand CTA.
+### Animation Components
+- `FadeUp.tsx` — Scroll-triggered fade + translate animation
+- `Stagger.tsx` — Container for staggered reveal animations
 
-### Don't
-- Don't introduce a second brand accent. Wise green is the sole identity colour.
-- Don't render the hero in weight 700 or lighter. The brand's display weight is 900.
-- Don't render CTAs as sharp rectangles. The 24 px pill geometry is non-negotiable.
-- Don't pair the green CTA with a green background. The brand always sits Wise green on neutral surfaces (sage / white / ink).
+---
+
+## 7. Pages
+
+### Homepage
+- Hero with search
+- Problem-based categories
+- How it works (3 steps)
+- Featured talent
+- Testimonials
+- Trust signals
+- Final CTA
+
+### Category Pages
+- Category header with description
+- Talent grid
+- Filter sidebar
+
+### Talent Profile
+- Portfolio gallery
+- Bio and skills
+- Reviews
+- Availability
+- Contact CTA
+
+### Job Posting
+- Multi-step form
+- Category selection
+- Budget and timeline
+- Description
+
+### Dashboard
+- For employers: posted jobs, hired talent, payments
+- For talent: proposals, active jobs, earnings
+
+---
+
+## 8. Quality Checklist
+
+### Design
+- [ ] All text legible (WCAG AA contrast)
+- [ ] Touch targets min 44px
+- [ ] Consistent spacing (4px grid)
+- [ ] Typography hierarchy clear
+- [ ] Color not sole indicator of state
+
+### Interaction
+- [ ] All buttons have hover/focus states
+- [ ] Form validation with clear errors
+- [ ] Loading states for async operations
+- [ ] Empty states for lists with no content
+
+### Performance
+- [ ] LCP < 2.5s
+- [ ] CLS < 0.1
+- [ ] No layout shift on load
+- [ ] Images lazy-loaded
+
+---
+
+*This spec is generated and maintained by Hermes Agent. Update when design decisions change.*

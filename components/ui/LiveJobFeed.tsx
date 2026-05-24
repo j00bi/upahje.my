@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 /**
  * LiveJobFeed — shows recent activity on the marketplace.
  *
@@ -27,13 +29,23 @@ export default function LiveJobFeed() {
           border: '1px solid rgba(14, 15, 12, 0.05)',
         }}
       >
-        <div className="text-3xl mb-3">🫗</div>
-        <p className="text-sm font-medium mb-1" style={{ color: 'var(--color-ink)' }}>
+        <div className="text-4xl mb-4" role="img" aria-label="No activity">📭</div>
+        <p className="text-sm font-semibold mb-2" style={{ color: 'var(--color-ink)' }}>
           No recent activity yet
         </p>
-        <p className="text-xs max-w-[200px]" style={{ color: 'var(--color-mute)' }}>
+        <p className="text-xs max-w-[200px] mb-4" style={{ color: 'var(--color-mute)' }}>
           Activity will appear here once users start posting and completing jobs.
         </p>
+        <Link
+          href="/jobs/post"
+          className="text-xs font-medium px-4 py-2 rounded-full transition"
+          style={{
+            backgroundColor: 'var(--color-teal-soft)',
+            color: 'var(--color-teal-deep)',
+          }}
+        >
+          Post the first job →
+        </Link>
       </div>
     </div>
   )
