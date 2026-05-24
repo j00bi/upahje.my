@@ -207,7 +207,7 @@ function AuthContent() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-green-mid focus:outline-none focus:ring-1 focus:ring-green-mid"
+                className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
                 placeholder="you@example.com"
               />
             </div>
@@ -224,7 +224,7 @@ function AuthContent() {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-green-mid focus:outline-none focus:ring-1 focus:ring-green-mid"
+                className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
                 placeholder="Password"
               />
             </div>
@@ -242,7 +242,7 @@ function AuthContent() {
                   required
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
-                  className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-green-mid focus:outline-none focus:ring-1 focus:ring-green-mid"
+                  className="mt-1 block w-full rounded-md border border-neutral-300 px-3 py-2 text-sm shadow-sm focus:border-teal-600 focus:outline-none focus:ring-1 focus:ring-teal-600"
                   placeholder="Password"
                 />
               </div>
@@ -251,7 +251,7 @@ function AuthContent() {
             <button
               type="submit"
               disabled={loading || oauthLoading}
-              className="flex w-full justify-center rounded-md border border-transparent bg-green-mid px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-green-deep disabled:cursor-not-allowed disabled:opacity-60"
+              className="flex w-full justify-center rounded-md border border-transparent bg-teal-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-teal-700 disabled:cursor-not-allowed disabled:opacity-60"
             >
               {loading ? 'Processing...' : isSignup ? 'Create account' : 'Sign in'}
             </button>
@@ -261,7 +261,7 @@ function AuthContent() {
             <button
               type="button"
               onClick={toggleMode}
-              className="text-sm font-medium text-green-mid hover:text-green-deep"
+              className="text-sm font-medium text-teal-600 hover:text-teal-700"
             >
               {isSignup ? 'Already have an account? Sign in' : 'Need an account? Register'}
             </button>
@@ -269,11 +269,11 @@ function AuthContent() {
 
           <p className="mt-6 text-center text-xs text-neutral-500">
             By continuing, you agree to the{' '}
-            <Link href="/terms" className="text-green-mid hover:text-green-deep">
+            <Link href="/terms" className="text-teal-600 hover:text-teal-700">
               Terms
             </Link>{' '}
             and{' '}
-            <Link href="/privacy" className="text-green-mid hover:text-green-deep">
+            <Link href="/privacy" className="text-teal-600 hover:text-teal-700">
               Privacy Policy
             </Link>
             .

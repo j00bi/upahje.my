@@ -30,7 +30,7 @@ export function TalentProfilePreview({
   variant = 'full',
 }: TalentProfilePreviewProps) {
   const isLabour = track === 'LABOUR'
-  const accent = isLabour ? 'green' : 'purple'
+  const accent = isLabour ? 'teal' : 'amber'
 
   return (
     <div className={`border rounded-3xl overflow-hidden bg-white ${variant === 'compact' ? 'text-sm' : ''}`}>
@@ -115,7 +115,7 @@ export function TalentProfilePreview({
         </div>
       </div>
 
-      <div className={`px-5 py-3 bg-gray-50 text-[10px] text-gray-500 border-t flex items-center gap-2 ${isLabour ? 'text-green-700' : 'text-purple-700'}`}>
+      <div className={`px-5 py-3 bg-gray-50 text-[10px] text-gray-500 border-t flex items-center gap-2 ${isLabour ? 'text-teal-700' : 'text-amber-700'}`}>
         {isLabour ? 'Labour Talent' : 'Technical Talent'} • Profile preview
       </div>
     </div>

@@ -17,14 +17,14 @@ export function RateTierSelector({ selected, onChange }: RateTierSelectorProps) 
             key={tier.id}
             type="button"
             onClick={() => onChange(tier.id)}
-            className={`text-left p-4 rounded-2xl border-2 transition ${isSel ? 'border-purple-600 bg-purple-50' : 'border-gray-200 hover:border-purple-200'}`}
+            className={`text-left p-4 rounded-2xl border-2 transition ${isSel ? 'border-teal-600 bg-teal-50' : 'border-gray-200 hover:border-teal-300'}`}
           >
             <div className="flex justify-between items-baseline">
               <div>
                 <div className="font-semibold">{tier.label}</div>
                 <div className="text-xs text-gray-500">{tier.desc}</div>
               </div>
-              <div className="font-mono text-sm text-purple-700">{tier.range}</div>
+              <div className="font-mono text-sm text-teal-700">{tier.range}</div>
             </div>
           </button>
         )

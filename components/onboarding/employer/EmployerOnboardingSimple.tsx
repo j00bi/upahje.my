@@ -72,7 +72,7 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
           <div>Employer • Quick Setup</div>
           <div>Step {step}/3</div>
         </div>
-        <div className="h-1 bg-gray-200 rounded"><div className="h-1 bg-green-mid rounded" style={{width: `${(step/3)*100}%`}} /></div>
+        <div className="h-1 bg-gray-200 rounded"><div className="h-1 bg-teal-600 rounded" style={{width: `${(step/3)*100}%`}} /></div>
       </div>
 
       {step === 1 && (
@@ -153,7 +153,7 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
         <button 
           onClick={next} 
           disabled={step === 1 && (!data.company || !data.contactName || !data.email)}
-          className="flex-1 py-3 bg-green-mid text-white font-medium rounded-2xl disabled:bg-gray-300 disabled:cursor-not-allowed"
+          className="flex-1 py-3 bg-teal-600 text-white font-medium rounded-2xl disabled:bg-gray-300 disabled:cursor-not-allowed"
         >
           {step === 3 ? 'Create Employer Account' : 'Continue'}
         </button>

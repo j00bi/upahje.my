@@ -72,7 +72,7 @@ export default async function TalentDashboard() {
       <section className="glass rounded-[2rem] p-5 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
         <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
           <div className="space-y-2">
-            <span className="inline-flex rounded-full bg-blue-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-blue-900">
+            <span className="inline-flex rounded-full bg-teal-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-teal-900">
               Talent dashboard
             </span>
             <h1 className="text-xl sm:text-2xl lg:text-3xl font-semibold tracking-tight text-slate-950">
@@ -84,7 +84,7 @@ export default async function TalentDashboard() {
           </div>
           <Link 
             href="/talent/profile"
-            className="inline-flex h-11 items-center justify-center rounded-full bg-blue-700 px-5 text-sm font-semibold text-white transition hover:bg-blue-800"
+            className="inline-flex h-11 items-center justify-center rounded-full bg-teal-600 px-5 text-sm font-semibold text-white transition hover:bg-teal-700"
           >
             Edit Profile
           </Link>
@@ -118,7 +118,7 @@ export default async function TalentDashboard() {
                 <p>No available jobs matching your categories.</p>
                 <Link 
                   href="/jobs"
-                  className="text-blue-600 hover:text-blue-700 font-medium mt-2 inline-block"
+                  className="text-teal-600 hover:text-teal-700 font-medium mt-2 inline-block"
                 >
                   Browse all jobs →
                 </Link>

@@ -22,13 +22,13 @@ export function RoleSelector({ onSelect }: RoleSelectorProps) {
         onClick={() => handleSelect('employer')}
         className={`p-6 rounded-xl border-2 text-left transition-all ${
           selected === 'employer'
-            ? 'border-blue-600 bg-blue-50'
-            : 'border-gray-200 hover:border-gray-300'
+            ? 'border-amber-500 bg-amber-50'
+            : 'border-slate-200 hover:border-amber-300'
         }`}
       >
         <div className="text-3xl mb-3">🏢</div>
         <div className="font-semibold text-lg">Employer / Client</div>
-        <div className="text-sm text-gray-600 mt-1">
+        <div className="text-sm text-slate-600 mt-1">
           I need to hire talent for jobs and services
         </div>
       </button>
@@ -38,13 +38,13 @@ export function RoleSelector({ onSelect }: RoleSelectorProps) {
         onClick={() => handleSelect('talent')}
         className={`p-6 rounded-xl border-2 text-left transition-all ${
           selected === 'talent'
-            ? 'border-green-600 bg-green-50'
-            : 'border-gray-200 hover:border-gray-300'
+            ? 'border-teal-600 bg-teal-50'
+            : 'border-slate-200 hover:border-teal-300'
         }`}
       >
         <div className="text-3xl mb-3">👷</div>
         <div className="font-semibold text-lg">Talent / Freelancer</div>
-        <div className="text-sm text-gray-600 mt-1">
+        <div className="text-sm text-slate-600 mt-1">
           I want to offer my services and find work
         </div>
       </button>

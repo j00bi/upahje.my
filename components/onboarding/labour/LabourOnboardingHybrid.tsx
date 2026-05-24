@@ -28,7 +28,7 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
     return (
       <div className="max-w-lg mx-auto">
         <div className="text-center mb-6">
-          <div className="inline-flex items-center gap-1.5 bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-medium mb-3">
+          <div className="inline-flex items-center gap-1.5 bg-teal-100 text-teal-800 px-3 py-1 rounded-full text-xs font-medium mb-3">
             <Zap className="w-3.5 h-3.5" /> QUICK START
           </div>
           <h2 className="text-2xl font-semibold">Get visible in 60 seconds</h2>
@@ -52,7 +52,7 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
             <div className="uppercase text-[10px] tracking-[1px] text-gray-500 mb-2">4. One service you do well</div>
             <div className="flex flex-wrap gap-2">
               {LABOUR_CATEGORIES.slice(0,6).map(c => (
-                <button key={c.id} onClick={() => update('categories', [c.id])} className={`text-sm px-4 py-1.5 rounded-2xl border ${data.categories?.[0]===c.id ? 'bg-green-600 text-white' : ''}`}>{c.emoji} {c.name}</button>
+                <button key={c.id} onClick={() => update('categories', [c.id])} className={`text-sm px-4 py-1.5 rounded-2xl border ${data.categories?.[0]===c.id ? 'bg-teal-600 text-white' : ''}`}>{c.emoji} {c.name}</button>
               ))}
             </div>
           </div>
@@ -73,7 +73,7 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
               }
             }}
             disabled={!data.fullName || !data.phone}
-            className="py-3.5 bg-green-mid text-white rounded-2xl font-medium flex items-center justify-center gap-2 disabled:bg-gray-300"
+            className="py-3.5 bg-teal-600 text-white rounded-2xl font-medium flex items-center justify-center gap-2 disabled:bg-gray-300"
           >
             Go live now <ArrowRight className="w-4 h-4" />
           </button>
@@ -89,7 +89,7 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
     <div className="max-w-xl mx-auto">
       <div className="mb-4 flex justify-between text-sm">
         <div>Full profile mode</div>
-        <button onClick={() => setMode('quick')} className="text-green-700">← Switch to quick start</button>
+        <button onClick={() => setMode('quick')} className="text-teal-600">← Switch to quick start</button>
       </div>
 
       <div className="space-y-8 bg-white p-8 rounded-3xl border">
@@ -110,7 +110,7 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
           <div className="font-medium mb-2 text-sm text-gray-500">Location & categories (pick 3+)</div>
           <input placeholder="Area" className="w-full border px-4 py-3 rounded-2xl mb-3" value={data.location||''} onChange={e=>update('location',e.target.value)} />
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-2 text-sm">
-            {LABOUR_CATEGORIES.map(c => <button key={c.id} onClick={() => toggleCat(c.id)} className={`p-2 border rounded-xl ${data.categories?.includes(c.id)?'bg-green-600 text-white':''}`}>{c.emoji} {c.name.split(' ')[0]}</button>)}
+            {LABOUR_CATEGORIES.map(c => <button key={c.id} onClick={() => toggleCat(c.id)} className={`p-2 border rounded-xl ${data.categories?.includes(c.id)?'bg-teal-600 text-white':''}`}>{c.emoji} {c.name.split(' ')[0]}</button>)}
           </div>
         </div>
 
@@ -136,7 +136,7 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
         </div>
       </div>
 
-      <button onClick={() => onComplete?.(data)} className="mt-6 w-full py-4 bg-green-mid text-white font-semibold rounded-3xl">Create my full profile</button>
+      <button onClick={() => onComplete?.(data)} className="mt-6 w-full py-4 bg-teal-600 text-white font-semibold rounded-3xl">Create my full profile</button>
     </div>
   )
 }

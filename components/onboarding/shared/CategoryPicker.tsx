@@ -1,6 +1,6 @@
 'use client'
 
-import { LABOUR_CATEGORIES, TECHNICAL_CATEGORIES, type LabourCategoryId, type TechnicalCategoryId } from '@/lib/domain'
+import { LABOUR_CATEGORIES, TECHNICAL_CATEGORIES } from '@/lib/domain'
 
 interface CategoryPickerProps {
   track: 'LABOUR' | 'TECHNICAL' | 'BOTH'
@@ -10,77 +10,56 @@ interface CategoryPickerProps {
   label?: string
 }
 
-export function CategoryPicker({ track, selected, onChange, max = 6, label }: CategoryPickerProps) {
-  const labourCats = LABOUR_CATEGORIES
-  const techCats = TECHNICAL_CATEGORIES
-  type CategoryOption = {
-    id: string
-    emoji: string
-    name: string
-  }
-
-  const isSelected = (id: string) => selected.includes(id)
+export function CategoryPicker({ track, selected, onChange, max = 10 }: CategoryPickerProps) {
+  const categories =
+    track === 'BOTH'
+      ? [...LABOUR_CATEGORIES.map(c => ({ ...c, group: 'Labour' as const })), ...TECHNICAL_CATEGORIES.map(c => ({ ...c, group: 'Technical' as const }))]
+      : track === 'LABOUR'
+        ? LABOUR_CATEGORIES.map(c => ({ ...c, group: 'Labour' as const }))
+        : TECHNICAL_CATEGORIES.map(c => ({ ...c, group: 'Technical' as const }))
 
   const toggle = (id: string) => {
-    if (isSelected(id)) {
-      onChange(selected.filter(s => s !== id))
-    } else {
-      if (selected.length >= max) return
+    if (selected.includes(id)) {
+      onChange(selected.filter(x => x !== id))
+    } else if (selected.length < max) {
       onChange([...selected, id])
     }
   }
 
-  const renderCategory = (cat: CategoryOption, color: 'green' | 'purple') => {
-    const sel = isSelected(cat.id)
-    return (
-      <button
-        key={cat.id}
-        type="button"
-        onClick={() => toggle(cat.id)}
-        disabled={!sel && selected.length >= max}
-        className={`flex items-center gap-3 p-3 rounded-2xl border-2 text-left transition-all active:scale-[0.985] text-sm ${
-          sel 
-            ? `border-${color}-600 bg-${color}-50` 
-            : 'border-gray-200 hover:border-gray-300 disabled:opacity-50'
-        }`}
-      >
-        <span className="text-2xl">{cat.emoji}</span>
-        <span className="font-medium leading-tight">{cat.name}</span>
-      </button>
-    )
-  }
+  const isFull = selected.length >= max
 
   return (
-    <div>
-      {label && <div className="text-sm font-medium text-gray-600 mb-2">{label}</div>}
-
-      {track === 'BOTH' ? (
-        <div className="space-y-4">
-          <div>
-            <div className="text-xs uppercase tracking-widest text-green-600 mb-2 font-medium">Labour / Physical</div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-              {labourCats.map(cat => renderCategory(cat, 'green'))}
-            </div>
-          </div>
-          <div>
-            <div className="text-xs uppercase tracking-widest text-purple-600 mb-2 font-medium">Technical / Digital</div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-              {techCats.map(cat => renderCategory(cat, 'purple'))}
-            </div>
-          </div>
-        </div>
-      ) : (
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
-          {(track === 'LABOUR' ? labourCats : techCats).map(cat => 
-            renderCategory(cat, track === 'LABOUR' ? 'green' : 'purple')
-          )}
-        </div>
-      )}
-      <div className="text-[11px] text-gray-500 mt-2">
-        {selected.length} / {max} selected {max < 10 && '(max recommended)'}
+    <div className="space-y-3">
+      <div className="flex flex-wrap gap-2.5">
+        {categories.map(cat => {
+          const sel = selected.includes(cat.id)
+          return (
+            <button
+              key={cat.id}
+              onClick={() => toggle(cat.id)}
+              disabled={!sel && isFull}
+              className={`inline-flex items-center gap-1.5 px-3.5 py-2 rounded-2xl border text-sm transition ${
+                sel
+                  ? 'bg-teal-600 text-white border-teal-600'
+                  : 'bg-white text-slate-700 border-slate-200 hover:border-teal-300 hover:bg-teal-50/50'
+              } disabled:opacity-40 disabled:cursor-not-allowed`}
+            >
+              <span>{cat.emoji}</span>
+              <span className="whitespace-nowrap">{cat.name}</span>
+            </button>
+          )
+        })}
+      </div>
+      <div className="flex justify-between text-xs text-slate-500">
+        <span>
+          {track === 'BOTH' && 'Labour + Technical categories'}
+          {track === 'LABOUR' && 'Labour service categories'}
+          {track === 'TECHNICAL' && 'Technical skill categories'}
+        </span>
+        <span>
+          {selected.length}/{max}
+        </span>
       </div>
     </div>
   )
 }
-
-export type { LabourCategoryId, TechnicalCategoryId }
