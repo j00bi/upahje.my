@@ -64,7 +64,11 @@ export async function GET(request: NextRequest) {
           })
         }
 
-        if (!existingProfile && userRole) {
+        // Prefer the caller-specified redirect (e.g. back to a job page),
+        // fall back to role-based dashboard, then to onboarding.
+        if (next && next !== '/dashboard') {
+          redirectTarget = new URL(next, request.url)
+        } else if (!existingProfile && userRole) {
           const redirectPath = userRole === 'EMPLOYER'
             ? '/dashboard/employer'
             : '/dashboard/talent'
