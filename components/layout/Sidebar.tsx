@@ -28,8 +28,8 @@ const employerNavItems = [
     icon: Briefcase,
   },
   {
-    title: 'Find Talents',
-    href: '/dashboard/employer/talents',
+    title: 'Applications',
+    href: '/dashboard/employer/applications',
     icon: Users,
   },
   {

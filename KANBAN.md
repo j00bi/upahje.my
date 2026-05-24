@@ -1,8 +1,8 @@
-# UpahJe.My — KANBAN (M0 Foundation + M2 Marketplace Frontend)
+# UpahJe.My — KANBAN (M0 Foundation + M2 Marketplace + M3 Applications)
 
-**Last Updated**: 2026-05-22
+**Last Updated**: 2026-05-24
 **Roadmap**: M0–M7 active (see docs/M0-TO-M7-ROADMAP.md)
-**Overall Progress**: ~50%
+**Overall Progress**: ~64%
 **Go-Live Target**: Late July – Early August 2026
 **Deployed**: upahje-my.vercel.app
 
@@ -55,10 +55,10 @@
 ## M1 – Onboarding
 
 ### Status Overview
-- **Labour Flow**: In Progress
-- **Employer Flow**: In Progress
-- **KYC Track**: In Progress
-- **Overall Progress**: ~65%
+- **Labour Flow**: Complete
+- **Employer Flow**: Complete
+- **KYC Track**: Complete
+- **Overall Progress**: 100%
 
 ---
 
@@ -66,12 +66,12 @@
 
 | ID      | Task                                              | Status | Owner  | Notes |
 |---------|---------------------------------------------------|--------|--------|-------|
-| M1-L1   | Finalize Labour role selection screen             | In Progress | Hermes | Best-of-N variants present in live onboarding flow |
-| M1-L2   | Design Labour quick registration (email + phone)  | To Do  | Hermes | Browse-only path |
-| M1-L3   | Design Labour full registration + KYC flow        | To Do  | Hermes | Full access path |
-| M1-L4   | Create Labour profile form (basic + advanced)     | To Do  | Hermes | - |
-| M1-L5   | Build MyKad upload + verification UI              | Done   | Codex  | Component exists; needs wiring into onboarding |
-| M1-L6   | Implement progressive disclosure for Labour       | To Do  | Hermes | - |
+| M1-L1   | Finalize Labour role selection screen             | Done   | Hermes | RoleSelector amber/teal colors, track split |
+| M1-L2   | Design Labour quick registration (email + phone)  | Done   | Hermes | Browse-only path + sessionStorage proposal restore |
+| M1-L3   | Design Labour full registration + KYC flow        | Done   | Hermes | MyKadUpload in all 4 onboarding variants |
+| M1-L4   | Create Labour profile form (basic + advanced)     | Done   | Hermes | Accordion UI, /api/profile/talent CRUD |
+| M1-L5   | Build MyKad upload + verification UI              | Done   | Codex  | Works in Stepper, Hybrid, Chat, Cards |
+| M1-L6   | Implement progressive disclosure for Labour       | Done   | Hermes | Quick (browse) → Full (KYC+profile) flow |
 
 ---
 
@@ -80,21 +80,21 @@
 | ID      | Task                                              | Status | Owner  | Notes |
 |---------|---------------------------------------------------|--------|--------|-------|
 | M1-E1   | Design Employer role selection screen             | Done   | Codex  | Employer variants present in live onboarding flow |
-| M1-E2   | Create Employer quick registration flow           | To Do  | Hermes | - |
-| M1-E3   | Design Employer full onboarding (company info)    | To Do  | Hermes | - |
-| M1-E4   | Build job posting during onboarding (optional)    | To Do  | Hermes | - |
+| M1-E2   | Create Employer quick registration flow           | Done   | Hermes | Zap/quick-start mode: company + name only |
+| M1-E3   | Design Employer full onboarding (company info)    | Done   | Hermes | Location, industry, companySize, volume fields |
+| M1-E4   | Build job posting during onboarding (optional)    | Done   | Hermes | Step 4 with jobTitle, budget, timeline, fastPost |
 
 ---
 
-### KYC & Verification (Lead: Codex)
+### KYC & Verification (Lead: Hermes — took over from Codex)
 
 | ID      | Task                                              | Status | Owner  | Notes |
 |---------|---------------------------------------------------|--------|--------|-------|
-| M1-K1   | Design KYC submission flow                        | In Progress | Codex  | Onboarding completion path is wired; MyKad path still needs DB/verification finish |
-| M1-K2   | Implement MyKad upload + OCR/preview              | In Progress | Codex  | Upload/status tracking live; OCR/preview still missing |
-| M1-K3   | Create backend verification status tracking       | In Progress | Codex  | Profile kycStatus/kycFileUrl persisted; admin can verify/reject |
-| M1-K4   | Add KYC gate for job applications                 | In Progress | Codex  | Full access only; apply route blocks unverified users |
-| M1-K5   | Build admin KYC review interface                  | Done       | Codex  | /admin/kyc page + list/patch APIs live |
+| M1-K1   | Design KYC submission flow                        | Done   | Hermes | MyKadUpload in all labour onboarding flows |
+| M1-K2   | Implement MyKad upload + preview                  | Done   | Hermes | Upload to /uploads/mykad/, inline preview link |
+| M1-K3   | Create backend verification status tracking       | Done   | Codex  | kycStatus/kycFileUrl on Profile, API returns status |
+| M1-K4   | Add KYC gate for job applications                 | Done   | Hermes | Apply API checks kycStatus, returns KYC_REQUIRED |
+| M1-K5   | Build admin KYC review interface                  | Done   | Codex  | /admin/kyc page + list/patch APIs live |
 
 ---
 
@@ -122,6 +122,30 @@
 | M2-H9  | Build vertical landing pages for all categories     | In Progress | Hermes | 7 done, more verticals pending |
 | M2-H10 | Implement job discovery + search                    | Done       | Hermes | /jobs reads query-string filters; nav search routes into it |
 | M2-H11 | Build job listing detail pages                      | Done       | Hermes | Live /jobs/[jobId] page + apply CTA wired to job APIs |
+
+---
+
+## M3 – Applications & Matching
+
+### Status Overview
+- **Apply Flow**: In Progress (pending applications now persist instead of directly matching)
+- **Talent Application Tracking**: In Progress (`/dashboard/talent/applications` lists and withdraws proposals)
+- **Employer Review**: In Progress (`/dashboard/employer/applications` and `/dashboard/employer/jobs` can review, reject, and accept)
+- **Matching State**: Partial (accepting a proposal assigns `Job.talentId`, marks job `MATCHED`, and rejects other pending/reviewed applications)
+- **Overall Progress**: ~35%
+
+---
+
+| ID     | Task                                      | Status      | Owner | Notes |
+|--------|-------------------------------------------|-------------|-------|-------|
+| M3-A1  | Add application data model to Prisma      | Done        | Codex | `Application` model added; migration aligns initial table to app model |
+| M3-A2  | Persist job applications                  | Done        | Codex | `/api/jobs/[jobId]/apply` creates pending proposals and blocks duplicates |
+| M3-A3  | Preserve KYC gate for applications        | Done        | Codex | Labour applicants need `SUBMITTED` or `VERIFIED` KYC status |
+| M3-A4  | Talent application tracking page          | Done        | Codex | `/dashboard/talent/applications` lists and withdraws applications |
+| M3-A5  | Employer application review page          | Done        | Codex | `/dashboard/employer/applications` lists proposals with accept/reject actions |
+| M3-A6  | Employer job-level applications page      | Done        | Codex | `/dashboard/employer/jobs` groups proposals by posted job |
+| M3-A7  | Accepted-job project/contact handoff      | Pending     | Codex | Needs post-match project/contact workflow after `MATCHED` |
+| M3-A8  | Live Supabase migration + smoke test      | Pending     | Codex | Apply migration and test employer/talent end-to-end on live DB |
 
 ---
 

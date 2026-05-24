@@ -82,12 +82,20 @@ export default async function TalentDashboard() {
               Browse available jobs and apply to opportunities that fit your expertise.
             </p>
           </div>
-          <Link 
-            href="/talent/profile"
-            className="inline-flex h-11 items-center justify-center rounded-full bg-teal-600 px-5 text-sm font-semibold text-white transition hover:bg-teal-700"
-          >
-            Edit Profile
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link 
+              href="/talent/profile"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-teal-600 px-5 text-sm font-semibold text-white transition hover:bg-teal-700"
+            >
+              Edit Profile
+            </Link>
+            <Link 
+              href="/dashboard/talent/applications"
+              className="inline-flex h-11 items-center justify-center rounded-full bg-white border border-teal-600 px-5 text-sm font-semibold text-teal-700 transition hover:bg-teal-50"
+            >
+              My Applications
+            </Link>
+          </div>
         </div>
       </section>
 

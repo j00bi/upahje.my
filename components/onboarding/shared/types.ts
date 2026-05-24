@@ -36,6 +36,9 @@ export interface EmployerOnboardingData {
   contactName?: string
   contact?: string
   email?: string
+  location?: string
+  industry?: string
+  companySize?: string
   labourCategories?: string[]
   techCategories?: string[]
   needs?: string[]

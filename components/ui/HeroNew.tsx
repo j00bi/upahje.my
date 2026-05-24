@@ -2,25 +2,20 @@
 
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
-import { useState, useEffect } from 'react'
-import { NakWordTicker } from './NakWordTicker'
+import { useState } from 'react'
+import { ArrowRight, BriefcaseBusiness, CheckCircle2, Search, ShieldCheck, UserRound } from 'lucide-react'
+import { HeroTicker } from './HeroTicker'
 
 const POPULAR = [
-  { label: 'Wedding', href: '/categories/photography' },
-  { label: 'Paip', href: '/jobs?category=elektrik' },
-  { label: 'Cleaner', href: '/jobs?category=cucian' },
-  { label: 'Runner', href: '/jobs?category=angkat' },
-  { label: 'Photography', href: '/categories/photography' },
+  { label: 'Photographer', href: '/categories/photography' },
+  { label: 'Home repair', href: '/categories/home-services' },
+  { label: 'Web design', href: '/categories/web-design' },
+  { label: 'Admin help', href: '/categories/admin-support' },
 ]
 
 export default function HeroNew() {
   const router = useRouter()
   const [search, setSearch] = useState('')
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault()
@@ -30,263 +25,173 @@ export default function HeroNew() {
 
   return (
     <section
-      className="relative overflow-hidden py-24 md:py-32 px-6"
-      style={{ backgroundColor: 'var(--color-canvas-soft)' }}
+      className="relative overflow-hidden border-b px-4 py-10 sm:px-6 md:py-16"
+      style={{
+        backgroundColor: 'var(--color-canvas-soft)',
+        borderColor: 'rgba(14, 15, 12, 0.06)',
+      }}
     >
-      {/* Gradient mesh — richer gradient */}
-      <div
-        className="gradient-mesh"
-        style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(20, 184, 166, 0.12) 0%, transparent 70%)',
-        }}
-      />
-      <div className="gradient-mesh-center" />
-
-      <div className="relative max-w-4xl mx-auto text-center">
-
-        {/* Entrance animation */}
-        <div
-          className="transition-all duration-700 ease-out"
-          style={{
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(24px)',
-          }}
-        >
-          {/* Section label */}
+      <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div>
           <p
-            className="section-label mb-5 inline-flex items-center gap-2"
+            className="section-label mb-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em]"
             style={{ color: 'var(--color-teal-mid)' }}
           >
-            <span
-              className="inline-block w-2 h-2 rounded-full"
-              style={{ backgroundColor: 'var(--color-teal-mid)' }}
-            />
-            UpahJe.my — 100% Malaysia
+            Off-white marketplace, built on trust
           </p>
 
-          {/* Heading — TYPESET: proper font-display-mega, bolder size */}
           <h1
-            className="font-display-mega mb-4"
+            className="font-display-mega max-w-3xl flex flex-wrap items-baseline gap-x-4"
             style={{
               color: 'var(--color-ink)',
-              letterSpacing: '-0.03em',
               lineHeight: 1.05,
             }}
           >
-            <span>Nak </span>
-            <span
-              style={{
-                color: '#d97706',
-                textShadow: '0 0 40px rgba(217, 119, 6, 0.15)',
-              }}
-            >
-              <NakWordTicker />
-            </span>
+            <HeroTicker />
           </h1>
 
-          {/* Subheading — TYPESET: font-display-lg */}
           <p
-            className="font-display-lg mb-4"
+            className="mt-5 max-w-2xl text-base leading-7 md:text-lg"
             style={{
               color: 'var(--color-body)',
-              letterSpacing: '-0.01em',
             }}
           >
-            Cari orang local yang boleh settle.
+            UpahJe connects Malaysian clients with local labour, creatives, and technical talent.
+            Post a job, compare profiles, agree on scope, and move payment only when work is ready.
           </p>
 
-          {/* Body copy */}
-          <p
-            className="max-w-xl mx-auto mb-8 text-base leading-relaxed"
-            style={{ color: 'var(--color-mute)' }}
+          <form
+            onSubmit={handleSearch}
+            className="mt-8 max-w-2xl"
           >
-            Post kerja, banding profile verified, dan bayar dengan lebih selamat
-            bila kerja siap.
-          </p>
-        </div>
-
-        {/* Search bar — BOLDER: larger, stronger focus, glow effect */}
-        <form
-          onSubmit={handleSearch}
-          className="mt-2 max-w-2xl mx-auto"
-        >
-          <div
-            className="relative rounded-2xl transition-all duration-300"
-            style={{
-              boxShadow: '0 0 0 4px rgba(20, 184, 166, 0.08), 0 4px 24px rgba(0,0,0,0.06)',
-            }}
-          >
-            <input
-              type="text"
-              value={search}
-              onChange={e => setSearch(e.target.value)}
-              placeholder="Cari servis… contoh: photographer, videographer, cleaner, web dev"
-              className="w-full bg-white rounded-2xl pl-6 pr-24 py-5 text-lg border-2 border-neutral-200 focus:border-teal-mid focus:outline-none focus:ring-0 transition-all duration-300 placeholder:text-neutral-400"
-              style={{ fontSize: '1.125rem' }}
-            />
-            <button
-              type="submit"
-              className="absolute right-2 top-1/2 -translate-y-1/2 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-200 hover:scale-105"
-              style={{
-                backgroundColor: 'var(--color-teal-mid)',
-                fontSize: '0.95rem',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.backgroundColor = 'var(--color-teal-deep)'
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.backgroundColor = 'var(--color-teal-mid)'
-              }}
-            >
-              Cari
-            </button>
-          </div>
-        </form>
-
-        {/* Popular chips — COLORIZE: teal soft bg */}
-        <div
-          className="mt-5 flex flex-wrap justify-center gap-2"
-          style={{ animationDelay: '200ms' }}
-        >
-          <span
-            className="text-xs self-center font-medium"
-            style={{ color: 'var(--color-mute)' }}
-          >
-            Popular:
-          </span>
-          {POPULAR.map((p, i) => (
-            <button
-              key={p.label}
-              onClick={() => router.push(p.href)}
-              className="text-xs font-medium px-4 py-2 rounded-full border transition-all duration-200 hover:scale-105"
-              style={{
-                backgroundColor: 'var(--color-teal-soft)',
-                borderColor: 'transparent',
-                color: 'var(--color-teal-deep)',
-              }}
-              onMouseEnter={e => {
-                e.currentTarget.style.backgroundColor = 'var(--color-teal-mid)'
-                e.currentTarget.style.color = 'white'
-              }}
-              onMouseLeave={e => {
-                e.currentTarget.style.backgroundColor = 'var(--color-teal-soft)'
-                e.currentTarget.style.color = 'var(--color-teal-deep)'
-              }}
-            >
-              {p.label}
-            </button>
-          ))}
-        </div>
-
-        {/* Audience labels — BOLDER: more prominent */}
-        <div
-          className="mt-10 flex items-center justify-center gap-3"
-          style={{
-            animationDelay: '300ms',
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(16px)',
-            transition: 'all 0.6s ease-out',
-          }}
-        >
-          <span
-            className="text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full"
-            style={{
-              backgroundColor: 'rgba(20, 184, 166, 0.1)',
-              color: 'var(--color-teal-deep)',
-              letterSpacing: '0.06em',
-            }}
-          >
-            Nak Upah Orang
-          </span>
-          <span
-            className="text-neutral-300 text-sm font-medium"
-          >
-            /
-          </span>
-          <span
-            className="text-xs font-semibold tracking-wider uppercase px-4 py-2 rounded-full"
-            style={{
-              backgroundColor: 'rgba(245, 158, 11, 0.1)',
-              color: '#92400e',
-              letterSpacing: '0.06em',
-            }}
-          >
-            Nak Cari Upah
-          </span>
-        </div>
-
-        {/* CTA row — BOLDER: stronger buttons */}
-        <div
-          className="mt-6 flex items-center justify-center gap-4 flex-wrap"
-          style={{
-            animationDelay: '400ms',
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(16px)',
-            transition: 'all 0.6s ease-out',
-          }}
-        >
-          <button
-            onClick={handleSearch}
-            className="inline-flex items-center justify-center font-semibold text-base px-12 py-4 rounded-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-            style={{
-              backgroundColor: 'var(--color-teal-mid)',
-              color: 'white',
-              boxShadow: '0 4px 20px rgba(20, 184, 166, 0.3)',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.backgroundColor = 'var(--color-teal-deep)'
-              e.currentTarget.style.transform = 'translateY(-2px)'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.backgroundColor = 'var(--color-teal-mid)'
-              e.currentTarget.style.transform = 'translateY(0)'
-            }}
-          >
-            Cari Servis
-          </button>
-          <Link
-            href="/auth/signup?role=talent"
-            className="inline-flex items-center justify-center border-2 font-semibold text-base px-10 py-4 rounded-full transition-all duration-300 hover:-translate-y-1"
-            style={{
-              borderColor: 'var(--color-teal-mid)',
-              color: 'var(--color-teal-mid)',
-            }}
-            onMouseEnter={e => {
-              e.currentTarget.style.backgroundColor = 'var(--color-teal-mid)'
-              e.currentTarget.style.color = 'white'
-            }}
-            onMouseLeave={e => {
-              e.currentTarget.style.backgroundColor = 'transparent'
-              e.currentTarget.style.color = 'var(--color-teal-mid)'
-            }}
-          >
-            Jadi Freelancer
-          </Link>
-        </div>
-
-        {/* Trust signals */}
-        <div
-          className="mt-12 flex items-center justify-center gap-6 flex-wrap"
-          style={{
-            animationDelay: '500ms',
-            opacity: mounted ? 1 : 0,
-            transition: 'all 0.6s ease-out',
-          }}
-        >
-          {[
-            { icon: '✓', label: 'ID Verified' },
-            { icon: '🛡', label: 'Escrow Protected' },
-            { icon: 'RM0', label: 'Platform Fee' },
-          ].map(item => (
             <div
-              key={item.label}
-              className="flex items-center gap-2 text-xs font-medium"
+              className="flex flex-col gap-2 rounded-2xl border bg-white p-2 shadow-sm sm:flex-row"
+              style={{
+                borderColor: 'rgba(14, 15, 12, 0.08)',
+              }}
+            >
+              <div className="relative flex-1">
+                <Search className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-neutral-400" />
+                <input
+                  type="text"
+                  value={search}
+                  onChange={e => setSearch(e.target.value)}
+                  placeholder="Search photographer, cleaner, web dev..."
+                  className="min-h-[52px] w-full rounded-xl border border-transparent bg-white py-3 pl-12 pr-4 text-base outline-none transition focus:border-green-mid focus:bg-green-soft/30"
+                />
+              </div>
+              <button
+                type="submit"
+                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl px-6 text-sm font-black text-white transition hover:-translate-y-0.5"
+                style={{
+                  backgroundColor: 'var(--color-teal-mid)',
+                }}
+              >
+                Cari
+                <ArrowRight className="h-4 w-4" />
+              </button>
+            </div>
+          </form>
+
+          <div className="mt-4 flex flex-wrap gap-2">
+            <span
+              className="text-xs self-center font-medium"
               style={{ color: 'var(--color-mute)' }}
             >
-              <span>{item.icon}</span>
-              <span>{item.label}</span>
+              Popular:
+            </span>
+            {POPULAR.map((p) => (
+              <button
+                key={p.label}
+                onClick={() => router.push(p.href)}
+                className="rounded-full border px-3 py-1.5 text-xs font-semibold transition hover:-translate-y-0.5"
+                style={{
+                  backgroundColor: 'white',
+                  borderColor: 'rgba(15, 118, 110, 0.18)',
+                  color: 'var(--color-teal-deep)',
+                }}
+              >
+                {p.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/jobs/post"
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl px-6 text-sm font-black text-white transition hover:-translate-y-0.5"
+              style={{
+                backgroundColor: 'var(--color-teal-mid)',
+              }}
+            >
+              Post a job
+              <BriefcaseBusiness className="h-4 w-4" />
+            </Link>
+            <Link
+              href="/onboarding"
+              className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-xl border bg-white px-6 text-sm font-black transition hover:-translate-y-0.5"
+              style={{
+                borderColor: 'rgba(14, 15, 12, 0.1)',
+                color: 'var(--color-ink)',
+              }}
+            >
+              Create work profile
+              <UserRound className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+
+        <div className="space-y-4">
+          <div className="grid gap-3 sm:grid-cols-2">
+            <div className="rounded-2xl p-5" style={{ backgroundColor: 'var(--color-teal-pale)' }}>
+              <div className="mb-4 flex items-center gap-2 text-sm font-black" style={{ color: 'var(--color-teal-deep)' }}>
+                <BriefcaseBusiness className="h-4 w-4" />
+                For clients
+              </div>
+              <h2 className="text-2xl font-black tracking-normal" style={{ color: 'var(--color-ink)' }}>
+                Need work settled?
+              </h2>
+              <p className="mt-2 text-sm leading-6" style={{ color: 'var(--color-body)' }}>
+                Post scope, budget, and location. Shortlist people by service, area, rate, and profile depth.
+              </p>
+              <Link href="/jobs/post" className="mt-5 inline-flex items-center gap-2 text-sm font-bold" style={{ color: 'var(--color-teal-deep)' }}>
+                Start hiring <ArrowRight className="h-4 w-4" />
+              </Link>
             </div>
-          ))}
+
+            <div className="rounded-2xl p-5" style={{ backgroundColor: 'var(--color-amber-pale)' }}>
+              <div className="mb-4 flex items-center gap-2 text-sm font-black" style={{ color: 'var(--color-amber-deep)' }}>
+                <UserRound className="h-4 w-4" />
+                For workers
+              </div>
+              <h2 className="text-2xl font-black tracking-normal" style={{ color: 'var(--color-ink)' }}>
+                Want more jobs?
+              </h2>
+              <p className="mt-2 text-sm leading-6" style={{ color: 'var(--color-body)' }}>
+                Make a quick profile first, then add MyKad, rates, service areas, and portfolio details.
+              </p>
+              <Link href="/onboarding" className="mt-5 inline-flex items-center gap-2 text-sm font-bold" style={{ color: 'var(--color-amber-deep)' }}>
+                Join as talent <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+
+          <div className="grid gap-3 rounded-2xl bg-white p-4 sm:grid-cols-3">
+            {[
+              { icon: ShieldCheck, label: 'Verification flow ready' },
+              { icon: CheckCircle2, label: 'Escrow-ready jobs' },
+              { icon: BriefcaseBusiness, label: 'FPX + DuitNow' },
+            ].map(item => (
+              <div
+                key={item.label}
+                className="flex items-center gap-2 text-xs font-bold"
+                style={{ color: 'var(--color-mute)' }}
+              >
+                <item.icon className="h-4 w-4" style={{ color: 'var(--color-teal-mid)' }} />
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

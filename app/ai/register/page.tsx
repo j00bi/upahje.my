@@ -136,7 +136,7 @@ export default function AiRegisterPage() {
                 Next →
               </button>
             ) : (
-              <button type="submit" className="ml-auto px-6 py-3 rounded-xl bg-green-600 hover:bg-green-500 font-medium transition">
+              <button type="submit" className="ml-auto px-6 py-3 rounded-xl bg-teal-600 hover:bg-teal-500 font-medium transition">
                 Register Agent →
               </button>
             )}

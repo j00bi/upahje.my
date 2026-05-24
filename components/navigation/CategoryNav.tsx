@@ -40,10 +40,10 @@ export default function CategoryNav() {
     <nav className="nav-bar">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4">
         {/* Logo */}
-        <Link href="/" className="shrink-0" style={{ color: 'var(--color-canvas)' }}>
-          <span className="block text-lg font-bold leading-none tracking-tight">UpahJe.my</span>
-          <span className="mt-0.5 hidden text-[10px] font-medium uppercase tracking-[0.18em] text-white/45 sm:block">
-            Local work, verified
+        <Link href="/" className="shrink-0" style={{ color: 'var(--color-ink)' }}>
+          <span className="block text-lg font-black leading-none tracking-normal">UpahJe.my</span>
+          <span className="mt-0.5 hidden text-[10px] font-bold uppercase tracking-[0.14em] text-neutral-500 sm:block">
+            Local work, trusted
           </span>
         </Link>
 
@@ -55,9 +55,9 @@ export default function CategoryNav() {
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="Cari kerja..."
-              className="w-full rounded-md border border-white/20 bg-white/10 py-2 pl-9 pr-4 text-sm text-white transition placeholder:text-white/50 focus:border-white/30 focus:bg-white/15 focus:outline-none"
+              className="w-full rounded-md border border-neutral-200 bg-white py-2 pl-9 pr-4 text-sm text-neutral-900 transition placeholder:text-neutral-400 focus:border-blue-300 focus:outline-none"
             />
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/50" />
+            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-400" />
           </div>
         </form>
 
@@ -84,7 +84,7 @@ export default function CategoryNav() {
               <button
                 type="button"
                 onClick={handleSignOut}
-                className="inline-flex items-center justify-center rounded-md border border-white/30 px-4 py-2 text-sm font-semibold text-white transition-all hover:bg-white/10"
+                className="inline-flex items-center justify-center rounded-md border border-neutral-200 bg-white px-4 py-2 text-sm font-bold text-neutral-900 transition-all hover:border-neutral-300"
               >
                 Sign out
               </button>
@@ -96,7 +96,7 @@ export default function CategoryNav() {
               </Link>
               <Link
                 href="/auth/signup"
-                className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-green-forest transition-all hover:bg-white/90"
+                className="inline-flex items-center justify-center rounded-md bg-blue-600 px-4 py-2 text-sm font-bold text-white transition-all hover:bg-blue-700"
               >
                 Register
               </Link>
@@ -107,7 +107,7 @@ export default function CategoryNav() {
         {/* Mobile Toggle */}
         <button
           className="flex h-10 w-10 items-center justify-center rounded-md md:hidden"
-          style={{ color: 'var(--color-canvas)' }}
+          style={{ color: 'var(--color-ink)' }}
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle navigation"
         >
@@ -120,8 +120,8 @@ export default function CategoryNav() {
         <div
           className="border-t px-4 pb-4 pt-3 md:hidden"
           style={{
-            borderColor: 'rgba(255,255,255,0.08)',
-            backgroundColor: 'var(--color-green-forest)',
+            borderColor: 'rgba(17,17,17,0.08)',
+            backgroundColor: 'rgba(255,255,255,0.96)',
           }}
         >
           {/* Mobile search */}
@@ -131,7 +131,7 @@ export default function CategoryNav() {
               value={search}
               onChange={e => setSearch(e.target.value)}
               placeholder="Cari kerja..."
-              className="w-full rounded-md border border-white/20 bg-white/10 px-4 py-2.5 text-sm text-white placeholder:text-white/50 focus:bg-white/15 focus:outline-none"
+              className="w-full rounded-md border border-neutral-200 bg-white px-4 py-2.5 text-sm text-neutral-900 placeholder:text-neutral-400 focus:border-blue-300 focus:outline-none"
             />
           </form>
 
@@ -146,13 +146,13 @@ export default function CategoryNav() {
             </Link>
           ))}
 
-          <div className="mt-4 border-t border-white/10 pt-3">
+          <div className="mt-4 border-t border-neutral-200 pt-3">
             {loading ? null : user ? (
               <div className="flex gap-3">
                 <Link
                   href={dashboardHref}
-                  className="flex-1 rounded-md border border-white/20 py-2 text-center text-sm font-medium"
-                  style={{ color: 'var(--color-canvas)' }}
+                  className="flex-1 rounded-md border py-2 text-center text-sm font-bold"
+                  style={{ color: 'var(--color-ink)', borderColor: 'rgba(17,17,17,0.12)' }}
                   onClick={() => setMobileOpen(false)}
                 >
                   Dashboard
@@ -160,7 +160,7 @@ export default function CategoryNav() {
                 <button
                   type="button"
                   onClick={handleSignOut}
-                  className="flex-1 rounded-md border border-white/30 py-2 text-center text-sm font-semibold text-white hover:bg-white/10"
+                  className="flex-1 rounded-md border border-neutral-200 py-2 text-center text-sm font-bold text-neutral-900 hover:bg-neutral-50"
                 >
                   Sign out
                 </button>
@@ -169,15 +169,15 @@ export default function CategoryNav() {
               <div className="flex gap-3">
                 <Link
                   href="/auth/signin"
-                  className="flex-1 rounded-md border border-white/20 py-2 text-center text-sm font-medium"
-                  style={{ color: 'var(--color-canvas)' }}
+                  className="flex-1 rounded-md border py-2 text-center text-sm font-bold"
+                  style={{ color: 'var(--color-ink)', borderColor: 'rgba(17,17,17,0.12)' }}
                   onClick={() => setMobileOpen(false)}
                 >
                   Sign in
                 </Link>
                 <Link
                   href="/auth/signup"
-                  className="flex-1 rounded-md bg-white py-2 text-center text-sm font-semibold text-green-forest hover:bg-white/90"
+                  className="flex-1 rounded-md bg-blue-600 py-2 text-center text-sm font-bold text-white hover:bg-blue-700"
                   onClick={() => setMobileOpen(false)}
                 >
                   Register

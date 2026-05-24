@@ -22,8 +22,8 @@ export function RoleSelector({ onSelect }: RoleSelectorProps) {
         onClick={() => handleSelect('employer')}
         className={`p-6 rounded-xl border-2 text-left transition-all ${
           selected === 'employer'
-            ? 'border-amber-500 bg-amber-50'
-            : 'border-slate-200 hover:border-amber-300'
+            ? 'border-blue-600 bg-blue-50'
+            : 'border-slate-200 hover:border-blue-300'
         }`}
       >
         <div className="text-3xl mb-3">🏢</div>
@@ -38,8 +38,8 @@ export function RoleSelector({ onSelect }: RoleSelectorProps) {
         onClick={() => handleSelect('talent')}
         className={`p-6 rounded-xl border-2 text-left transition-all ${
           selected === 'talent'
-            ? 'border-teal-600 bg-teal-50'
-            : 'border-slate-200 hover:border-teal-300'
+            ? 'border-neutral-900 bg-neutral-50'
+            : 'border-slate-200 hover:border-neutral-400'
         }`}
       >
         <div className="text-3xl mb-3">👷</div>

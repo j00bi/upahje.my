@@ -4,21 +4,21 @@ import LiveJobFeed from '@/components/ui/LiveJobFeed'
 import FadeUp from '@/components/motion/FadeUp'
 import HeroNew from '@/components/ui/HeroNew'
 import { StaggerContainer, StaggerItem } from '@/components/motion/Stagger'
-import { getActiveCategories, getCategoriesByCluster, MARKETPLACE_CATEGORIES } from '@/lib/categories'
+import { getActiveCategories, getCategoriesByCluster } from '@/lib/categories'
 import { FEATURED_TALENTS } from '@/data/talentProfiles'
 
 const steps = [
   {
-    num: '01', title: 'Post What You Need',
-    desc: 'Describe your project — from event shoots to home repairs. Set your budget and timeline in minutes, free.',
+    num: '01', title: 'Post the job clearly',
+    desc: 'Describe the work, area, date, and budget so workers can decide fast.',
   },
   {
-    num: '02', title: 'Compare & Connect',
-    desc: 'Browse proposals, check portfolios and reviews, and message workers directly. No commitment until you\'re ready.',
+    num: '02', title: 'Compare real profiles',
+    desc: 'Shortlist by category, portfolio, location, verification state, and rate.',
   },
   {
-    num: '03', title: 'Pay When It\'s Done',
-    desc: 'Pay via FPX or DuitNow. Funds are held in escrow and released only after you approve the work.',
+    num: '03', title: 'Finish and release payment',
+    desc: 'Use the escrow-ready flow when the job is complete and approved.',
   },
 ]
 
@@ -31,6 +31,7 @@ const trustItems = [
 export default function Home() {
   const activeCats = getActiveCategories()
   const eventCats = getCategoriesByCluster('events')
+  const talentTotal = activeCats.reduce((sum, cat) => sum + cat.talentCount, 0)
 
   return (
     <div className="min-h-screen">
@@ -52,18 +53,19 @@ export default function Home() {
             </p>
           </div>
 
-          <StaggerContainer className="grid md:grid-cols-3 gap-5">
+          <StaggerContainer className="grid md:grid-cols-3 gap-4">
             {activeCats.map((cat) => (
               <StaggerItem key={cat.slug}>
                 <Link
                   href={`/categories/${cat.slug}`}
-                  className="block rounded-2xl border-2 border-transparent bg-white p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-mid/20 hover:border-teal-mid/30 group"
+                  className="block min-h-full rounded-2xl border bg-white p-6 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-mid/20"
+                  style={{ borderColor: 'rgba(14, 15, 12, 0.08)' }}
                 >
                   <div
-                    className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-5 transition-colors duration-300"
+                    className="mb-5 inline-flex h-12 w-12 items-center justify-center rounded-2xl transition-colors duration-300"
                     style={{ backgroundColor: 'var(--color-teal-soft)' }}
                   >
-                    <span className="text-3xl" role="img" aria-label={cat.problemPhrase}>{cat.emoji}</span>
+                    <span className="text-2xl" role="img" aria-label={cat.problemPhrase}>{cat.emoji}</span>
                   </div>
                   <h3 className="font-display-sm mb-3" style={{ color: 'var(--color-ink)' }}>
                     {cat.problemPhrase}
@@ -72,7 +74,7 @@ export default function Home() {
                     {cat.description}
                   </p>
                   <span
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full"
+                    className="inline-flex items-center gap-1.5 rounded-full px-3 py-1.5 text-xs font-semibold"
                     style={{
                       backgroundColor: 'var(--color-teal-soft)',
                       color: 'var(--color-teal-deep)',
@@ -109,10 +111,10 @@ export default function Home() {
       >
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { number: '3', label: 'Kategori Aktif' },
-            { number: '5+', label: 'Talent Sedia' },
-            { number: 'RM0', label: 'Yuran Platform' },
-            { number: '🇲🇾', label: '100% Malaysia' },
+            { number: String(activeCats.length), label: 'Kategori live' },
+            { number: `${talentTotal}+`, label: 'Profil seed' },
+            { number: '2', label: 'Laluan talent' },
+            { number: 'MY', label: 'Fokus Malaysia' },
           ].map((stat, i) => (
             <div key={stat.label} className="text-center">
               <div
@@ -186,16 +188,15 @@ export default function Home() {
                           {cat.talentCount} sedia
                         </span>
                       ) : (
-                        <Link
-                          href="/auth/signup?role=talent"
+                        <span
                           className="text-xs font-medium px-3 py-1 rounded-full transition-colors duration-200"
                           style={{
                             backgroundColor: 'rgba(245, 158, 11, 0.15)',
                             color: '#92400e',
                           }}
                         >
-                          + Notify me
-                        </Link>
+                          Opening soon
+                        </span>
                       )}
                     </div>
                     <p
@@ -213,7 +214,7 @@ export default function Home() {
         </FadeUp>
       )}
 
-      {/* ────────────────── LIVE JOB FEED + GALLERY ────────────────── */}
+      {/* ────────────────── MARKETPLACE READINESS ────────────────── */}
       <FadeUp distance={24}>
       <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas)' }}>
         <div className="max-w-6xl mx-auto">
@@ -221,17 +222,18 @@ export default function Home() {
 
             <div>
               <p className="section-label mb-3" style={{ color: 'var(--color-teal-mid)' }}>
-                Built-in Portfolio
+                Marketplace Flow
               </p>
               <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-ink)' }}>
-                Browse real work<br />before you hire.
+                Make the job easier<br />to judge before chat.
               </h2>
               <p className="max-w-md mb-6" style={{ color: 'var(--color-body)' }}>
-                From event shoots to design, repairs, and freelance projects — see what local workers have delivered.
+                The strongest path is not more marketing. It is clearer scopes, better worker profiles,
+                and fewer reasons for either side to guess.
               </p>
               <div className="mt-6">
                 <Link href="/talent" className="font-semibold text-sm transition-all hover:gap-2 inline-flex items-center gap-1" style={{ color: 'var(--color-teal-mid)' }}>
-                  Semua Portfolio →
+                  Browse talent →
                 </Link>
               </div>
             </div>
@@ -257,7 +259,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <StaggerContainer className="grid md:grid-cols-4 gap-6 md:gap-8">
+          <StaggerContainer className="grid md:grid-cols-3 gap-6 md:gap-8">
             {steps.map((step, i) => (
               <StaggerItem key={step.num}>
                 <div className={`${i < steps.length - 1 ? 'step-connector' : ''} text-center`}>
@@ -355,81 +357,25 @@ export default function Home() {
       </section>
       </FadeUp>
 
-      {/* ────────────────── TESTIMONIALS ────────────────── */}
-      <FadeUp distance={24}>
-      <section className="py-20 px-6" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <p className="section-label mb-3" style={{ color: 'var(--color-teal-mid)' }}>
-              Testimoni
-            </p>
-            <h2 className="font-display-xl" style={{ color: 'var(--color-ink)' }}>
-              Apa orang kata pasal UpahJe
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-5">
-            {[
-              {
-                quote: 'First time using this platform and the whole process was so smooth. Found a great photographer for my wedding within a day.',
-                name: 'Sarah Kamarudin',
-                role: 'Bride, KL',
-                emoji: '👰',
-              },
-              {
-                quote: 'I was skeptical about escrow at first, but it actually saved me. Paid only after the videographer delivered. No more ghosting.',
-                name: 'Ahmad Rosli',
-                role: 'Small Business Owner',
-                emoji: '💼',
-              },
-              {
-                quote: 'Sebagai freelancer, I love that clients can see my portfolio before hiring. No more wasting time explaining my work.',
-                name: 'Farah Zainal',
-                role: 'Freelancer, KL',
-                emoji: '📸',
-              },
-            ].map((t, i) => (
-              <div key={t.name} className="testimonial-card">
-                <div className="text-2xl mb-3">{t.emoji}</div>
-                <p className="text-sm leading-relaxed mb-5" style={{ color: 'var(--color-body)' }}>
-                  &ldquo;{t.quote}&rdquo;
-                </p>
-                <div className="flex items-center gap-3 pt-3 border-t" style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}>
-                  <div
-                    className="w-9 h-9 rounded-full bg-cover bg-center"
-                    style={{ backgroundImage: `url(https://i.pravatar.cc/64?img=${['2', '5', '1'][i]})` }}
-                  />
-                  <div>
-                    <div className="text-sm font-semibold" style={{ color: 'var(--color-ink)' }}>{t.name}</div>
-                    <div className="text-xs" style={{ color: 'var(--color-mute)' }}>{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      </FadeUp>
-
       {/* ────────────────── TRUST & SAFETY ────────────────── */}
       <FadeUp distance={24}>
-      <section className="py-24 px-6" style={{ backgroundColor: 'var(--color-teal-deep)' }}>
+      <section className="py-24 px-6" style={{ backgroundColor: 'var(--color-canvas-warm)' }}>
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="font-medium text-sm tracking-widest uppercase" style={{ color: 'var(--color-teal-soft)' }}>
+              <p className="font-black text-sm tracking-widest uppercase" style={{ color: 'var(--color-teal-mid)' }}>
                 Trust &amp; Safety
               </p>
-              <h2 className="mt-3 text-3xl md:text-4xl font-bold" style={{ color: 'var(--color-canvas)' }}>
-                Dibina untuk kurangkan ghosting, scam, dan hirup tenung.
+              <h2 className="mt-3 text-3xl md:text-5xl font-black" style={{ color: 'var(--color-ink)' }}>
+                Built to reduce ghosting, unclear scope, and payment disputes.
               </h2>
               <div className="mt-8 space-y-5">
                 {trustItems.map((item) => (
                   <div key={item.title}>
-                    <h3 className="font-semibold text-lg" style={{ color: 'var(--color-canvas)' }}>
+                    <h3 className="font-black text-lg" style={{ color: 'var(--color-ink)' }}>
                       {item.title}
                     </h3>
-                    <p className="mt-1 text-base" style={{ color: 'rgba(255,255,255,0.6)' }}>
+                    <p className="mt-1 text-base" style={{ color: 'var(--color-body)' }}>
                       {item.desc}
                     </p>
                   </div>
@@ -439,16 +385,16 @@ export default function Home() {
             <div
               className="rounded-3xl p-8 border flex flex-col items-center justify-center text-center hidden md:block"
               style={{
-                backgroundColor: 'rgba(255,255,255,0.03)',
-                borderColor: 'rgba(255,255,255,0.08)',
+                backgroundColor: 'white',
+                borderColor: 'rgba(17,17,17,0.08)',
               }}
             >
               <div className="text-4xl mb-4">🔒</div>
-              <p className="text-sm font-medium" style={{ color: 'var(--color-canvas)' }}>
-                Your money is safe with escrow
+              <p className="text-sm font-black" style={{ color: 'var(--color-ink)' }}>
+                Escrow-ready does not mean blind trust
               </p>
-              <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.5)' }}>
-                Verified profiles · Escrow protection · Local support
+              <p className="text-xs mt-1" style={{ color: 'var(--color-mute)' }}>
+                Profiles, scope, approval, and payment release need to line up.
               </p>
             </div>
           </div>
@@ -458,35 +404,24 @@ export default function Home() {
 
       {/* ────────────────── FINAL CTA ────────────────── */}
       <FadeUp distance={24}>
-      <section className="hero-band-green" style={{ padding: '100px 24px' }}>
+      <section className="border-t px-6 py-24" style={{ backgroundColor: 'var(--color-canvas)', borderColor: 'rgba(17,17,17,0.08)' }}>
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-canvas)' }}>
+          <h2 className="font-display-xl mb-4" style={{ color: 'var(--color-ink)' }}>
             Nak settle kerja? UpahJe.
           </h2>
-          <p className="max-w-md mx-auto mb-8" style={{ color: 'rgba(255,255,255,0.7)' }}>
+          <p className="max-w-md mx-auto mb-8" style={{ color: 'var(--color-body)' }}>
             Cari orang, setuju harga, bayar bila siap. Daftar percuma.
           </p>
 
-          {/* Audience split labels */}
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full bg-white/10 text-white/80 border border-white/20">
-              Untuk Yang Nak Upah
-            </span>
-            <span className="text-xs text-white/40">·</span>
-            <span className="text-xs font-medium tracking-wider uppercase px-3 py-1 rounded-full bg-white/10 text-white/80 border border-white/20">
-              Untuk Yang Nak Cari Upah
-            </span>
-          </div>
-
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/jobs/post" className="inline-flex items-center justify-center bg-teal-mid hover:bg-teal-deep text-white font-semibold text-base px-8 py-4 rounded-full transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+            <Link href="/jobs/post" className="inline-flex items-center justify-center text-white font-black text-base px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl" style={{ backgroundColor: 'var(--color-teal-mid)' }}>
               Post Kerja
             </Link>
-            <Link href="/auth/signup" className="btn-secondary-inverse text-base px-8 py-4">
+            <Link href="/onboarding" className="inline-flex items-center justify-center border bg-white text-neutral-950 font-black text-base px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5" style={{ borderColor: 'rgba(17,17,17,0.12)' }}>
               Jadi Freelancer
             </Link>
           </div>
-          <p className="mt-4 text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>
+          <p className="mt-4 text-xs" style={{ color: 'var(--color-mute)' }}>
             Perlukan servis? Post kerja. Nak cari pendapatan? Daftar freelancer.
           </p>
         </div>

@@ -1,9 +1,9 @@
 # UpahJe.My — Project Status
 
-**Last Updated**: 2026-05-22
-**Current Phase**: M1 (Onboarding/KYC) + M2 (Marketplace Discovery)
+**Last Updated**: 2026-05-24
+**Current Phase**: M2 (Marketplace Discovery) + M3 (Applications/Matching)
 **Roadmap**: M0 to M7 active (see docs/M0-TO-M7-ROADMAP.md)
-**Overall Progress**: ~58%
+**Overall Progress**: ~64%
 **Go-Live Target**: Late July – Early August 2026
 **Deployed**: upahje-my.vercel.app
 
@@ -12,9 +12,9 @@
 | Milestone | Status       | Progress | Lead Agent(s)     |
 |-----------|--------------|----------|-------------------|
 | M0        | Complete     | 100%     | Codex             |
-| M1        | In Progress  | ~65%     | Grok + Codex      |
+| M1        | Complete     | 100%     | Hermes + Codex    |
 | M2        | Partial      | ~45%     | Hermes + Codex    |
-| M3        | Not Started  | 0%       | Codex             |
+| M3        | In Progress  | ~35%     | Codex             |
 | M4        | Not Started  | 0%       | Grok + Codex      |
 
 ## Current Focus
@@ -25,7 +25,7 @@
 - Dashboard Layout: Multiple role-aware dashboards compiling against real auth state
 - Onboarding Integration: Best-of-N Labour / Technical / Employer flows persist through `/api/onboarding/complete`
 
-**M1 – Onboarding / KYC** — Meaningfully integrated
+**M1 – Onboarding / KYC** — Complete
 - OnboardingFlow writes to Prisma-backed profile records
 - Labour / Technical / Employer variant selection preserved through completion
 - MyKad upload/status tracking is live and admin review can verify/reject submissions
@@ -41,13 +41,23 @@
 - Video background support (MP4 + WebM fallback)
 - Neutral colour scheme (#f8f8f8 / #f9f9f9 unified backgrounds)
 
+**M3 – Matching / Applications** — In progress
+- `/api/jobs/[jobId]/apply` creates pending application records instead of directly matching jobs
+- Duplicate applications are blocked per job/talent pair
+- Labour applicants remain KYC-gated before applying
+- Talent can track and withdraw applications from `/dashboard/talent/applications`
+- Employers can review, reject, and accept applications from `/dashboard/employer/applications` and `/dashboard/employer/jobs`
+- Accepting an application moves the job to `MATCHED`, assigns `talentId`, and rejects other pending/reviewed proposals
+
 **Supabase / Prisma** — Green
 - Live `prisma db push` reports schema in sync
-- Prisma client regenerates cleanly
-- Build + lint + typecheck all pass
+- Prisma schema now includes `Application`; a migration aligns the initial application table with the app model
+- `NODE_ENV=production npm run build` and `npx tsc --noEmit` pass locally
+- `npm run lint` currently opens the legacy `next lint` setup prompt because ESLint is not installed/configured for that command
 
 ## Recent Activity
 
+- 2026-05-24: Added real M3 application workflow: pending proposals, talent tracking, employer review/accept/reject, and Prisma application schema/migration
 - 2026-05-20: Redesigned homepage — broad marketplace, green brand, single nav, gallery callout, 8 categories, step connectors. Deployed to upahje-my.vercel.app
 - 2026-05-20: Behance/Figma portfolio system built & deployed (ProjectCard, PortfolioGrid, project detail page, 9 mock projects)
 - 2026-05-22: M1 KYC review UI landed, category pages switched to live Prisma jobs, and jobs search now respects query-string navigation
@@ -62,14 +72,14 @@
 
 ## Next Actions
 
-1. Finish MyKad OCR/preview and tighten KYC review workflow
+1. Apply the new application migration to Supabase and smoke-test with one employer and one talent account
 2. Polish M2 discovery flow (more vertical mappings, quick filter chips, route-level URL sync)
-3. Start M3 Matching & Applications after onboarding/discovery is solid
-4. Implement trust & safety (reviews, escrow) for M4
+3. Continue M3 matching: employer shortlist views, talent notifications/contact handoff, and accepted-job project state
+4. Implement trust & safety essentials for M4: reviews shell, escrow/payments hardening, and RLS verification
 
 ## Blockers
 
-- No active blockers. Supabase live DB connectivity resolved.
+- No code blockers. Deployment still needs Supabase migration application and live auth/job/application smoke tests.
 
 ## Notes
 
