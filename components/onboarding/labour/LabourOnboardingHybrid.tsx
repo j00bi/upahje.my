@@ -134,6 +134,18 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
           <div className="text-sm text-gray-500 mb-1">Short bio (optional but recommended)</div>
           <textarea className="w-full border p-4 rounded-2xl h-20" placeholder="Reliable, own transport, 3 years experience..." value={data.bio||''} onChange={e=>update('bio',e.target.value)} />
         </div>
+
+        <div>
+          <div className="text-sm text-gray-500 mb-1">Portfolio links (optional)</div>
+          <div className="flex flex-wrap gap-2 mb-2">
+            <input
+              placeholder="https://..."
+              className="flex-1 border px-4 py-3 rounded-2xl text-sm"
+              value={(data.portfolioLinks || [])[0] || ''}
+              onChange={e => update('portfolioLinks', [e.target.value])}
+            />
+          </div>
+        </div>
       </div>
 
       <button onClick={() => onComplete?.(data)} className="mt-6 w-full py-4 bg-teal-600 text-white font-semibold rounded-3xl">Create my full profile</button>

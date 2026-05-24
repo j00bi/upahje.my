@@ -13,6 +13,7 @@ export interface LabourOnboardingData {
   rate?: string
   availability?: string
   bio?: string
+  portfolioLinks?: string[]
   quickStart?: boolean
 }
 
