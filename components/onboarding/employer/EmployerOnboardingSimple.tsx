@@ -306,7 +306,7 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
               : 'Continue'}
         </button>
       </div>
-      <p className="text-center text-[10px] text-slate-400 mt-3 font-bold">Step {data.jobTitle ? 4 : 3} of 4 — You're ready to hire</p>
+      <p className="text-center text-[10px] text-slate-400 mt-3 font-bold">Step {data.jobTitle ? 4 : 3} of 4 — You&apos;re ready to hire</p>
     </div>
   )
 }

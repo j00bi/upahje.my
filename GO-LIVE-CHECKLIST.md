@@ -65,7 +65,7 @@
 ### Pre-Deployment Checklist
 - [x] Run production build locally to verify (`NODE_ENV=production npm run build` ✅ PASSED)
 - [x] Run TypeScript check (`npx tsc --noEmit` ✅ PASSED)
-- [ ] Fix `npm run lint` script/tooling; it currently opens Next's ESLint setup prompt because ESLint is not installed/configured for that command
+- [x] Fix `npm run lint` script/tooling (`npm run lint` ✅ PASSED with warnings only)
 - [ ] Verify all environment variables are set
 - [ ] Test authentication locally with production-like env vars
 - [ ] Check database connection string format

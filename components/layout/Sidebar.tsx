@@ -7,9 +7,9 @@ import {
   LayoutDashboard, 
   Briefcase, 
   Users, 
-  Settings,
-  FolderKanban,
-  Shield
+  Shield,
+  UserRound,
+  PlusCircle,
 } from 'lucide-react'
 
 interface SidebarProps {
@@ -33,14 +33,9 @@ const employerNavItems = [
     icon: Users,
   },
   {
-    title: 'Projects',
-    href: '/dashboard/employer/projects',
-    icon: FolderKanban,
-  },
-  {
-    title: 'Settings',
-    href: '/dashboard/employer/settings',
-    icon: Settings,
+    title: 'Post Job',
+    href: '/jobs/post',
+    icon: PlusCircle,
   },
 ]
 
@@ -52,7 +47,7 @@ const talentNavItems = [
   },
   {
     title: 'Find Jobs',
-    href: '/dashboard/talent/jobs',
+    href: '/jobs',
     icon: Briefcase,
   },
   {
@@ -61,14 +56,9 @@ const talentNavItems = [
     icon: Users,
   },
   {
-    title: 'Projects',
-    href: '/dashboard/talent/projects',
-    icon: FolderKanban,
-  },
-  {
-    title: 'Settings',
-    href: '/dashboard/talent/settings',
-    icon: Settings,
+    title: 'Profile',
+    href: '/talent/profile',
+    icon: UserRound,
   },
 ]
 
@@ -79,19 +69,9 @@ const adminNavItems = [
     icon: LayoutDashboard,
   },
   {
-    title: 'Users',
-    href: '/admin/users',
-    icon: Users,
-  },
-  {
-    title: 'Jobs',
-    href: '/admin/jobs',
-    icon: Briefcase,
-  },
-  {
-    title: 'Settings',
-    href: '/admin/settings',
-    icon: Settings,
+    title: 'KYC Review',
+    href: '/admin/kyc',
+    icon: Shield,
   },
 ]
 

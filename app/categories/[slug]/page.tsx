@@ -242,7 +242,7 @@ export default async function CategoryPage({
       {/* ─── Footer ─── */}
       <footer className="border-t border-zinc-800 px-4 py-12 sm:px-6">
         <div className="mx-auto max-w-6xl text-center text-xs text-zinc-600">
-          © {new Date().getFullYear()} UpahJe.my — Malaysia's creative talent marketplace
+          © {new Date().getFullYear()} UpahJe.my — Malaysia&apos;s creative talent marketplace
         </div>
       </footer>
     </div>

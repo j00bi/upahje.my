@@ -52,12 +52,13 @@
 **Supabase / Prisma** — Green
 - Live `prisma db push` reports schema in sync
 - Prisma schema now includes `Application`; a migration aligns the initial application table with the app model
-- `NODE_ENV=production npm run build` and `npx tsc --noEmit` pass locally
-- `npm run lint` currently opens the legacy `next lint` setup prompt because ESLint is not installed/configured for that command
+- `npm run lint`, `npx tsc --noEmit`, and `NODE_ENV=production npm run build` pass locally
+- Cookie-backed API routes used by auth/KYC/applications are explicitly marked dynamic to avoid noisy static-generation probes
 
 ## Recent Activity
 
 - 2026-05-24: Added real M3 application workflow: pending proposals, talent tracking, employer review/accept/reject, and Prisma application schema/migration
+- 2026-05-24: Restored the lint gate with Next 14-compatible ESLint dependencies, fixed lint errors, removed dead dashboard sidebar links, and marked cookie-backed APIs dynamic
 - 2026-05-20: Redesigned homepage — broad marketplace, green brand, single nav, gallery callout, 8 categories, step connectors. Deployed to upahje-my.vercel.app
 - 2026-05-20: Behance/Figma portfolio system built & deployed (ProjectCard, PortfolioGrid, project detail page, 9 mock projects)
 - 2026-05-22: M1 KYC review UI landed, category pages switched to live Prisma jobs, and jobs search now respects query-string navigation

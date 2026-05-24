@@ -160,7 +160,7 @@
 
 ## Blockers
 
-- No active blockers. Supabase live DB connectivity resolved.
+- Current `DATABASE_URL` in `.env.local` fails Supabase authentication for Prisma migration status/deploy. Needs valid DB credentials before applying `20260524_application_relations`.
 
 ## Next Review
 
