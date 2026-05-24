@@ -8,23 +8,17 @@ html[data-intro='loading'] #page-content {
 }
 
 :root {
-  /* Light trust system — off-white surfaces with a bold blue accent */
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-primary-neutral: #3b82f6;
-  --color-primary-pale: #dbeafe;
+  /* Logo green — extracted from upahje-logo.svg #166345 */
+  --color-green-deep: #0f4d33;
+  --color-green-forest: #166345;
+  --color-green-mid: #1a7a4a;
+  --color-green-soft: #e8f5ee;
 
-  /* Neutral trust base */
-  --color-green-deep: #111827;
-  --color-green-forest: #1f2937;
-  --color-green-mid: #2563eb;
-  --color-green-soft: #eff6ff;
-
-  /* Blue scale — primary product accent */
-  --color-teal-deep: #1d4ed8;
-  --color-teal-mid: #2563eb;
-  --color-teal-soft: #dbeafe;
-  --color-teal-pale: #eff6ff;
+  /* Teal — warm green-blue derived from logo green */
+  --color-teal-deep: #0e5c44;
+  --color-teal-mid: #166345;
+  --color-teal-soft: #e0f0e8;
+  --color-teal-pale: #eff6f2;
 
   /* Amber scale — energy & urgency (CTAs) */
   --color-amber-deep: #b45309;
@@ -32,7 +26,7 @@ html[data-intro='loading'] #page-content {
   --color-amber-soft: #fef3c7;
   --color-amber-pale: #fffbeb;
 
-  /* Positive deep — needed by badge-positive */
+  /* Positive deep — matches logo green */
   --color-positive-deep: #166345;
 
   /* Surfaces */

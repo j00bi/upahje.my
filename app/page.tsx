@@ -413,19 +413,8 @@ export default function Home() {
             Cari orang, setuju harga, bayar bila siap. Daftar percuma.
           </p>
 
-          {/* Audience split labels */}
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="text-xs font-black tracking-wider uppercase px-3 py-1 rounded-full border" style={{ backgroundColor: 'var(--color-teal-pale)', borderColor: 'rgba(37,99,235,0.18)', color: 'var(--color-teal-deep)' }}>
-              Untuk Yang Nak Upah
-            </span>
-            <span className="text-xs text-neutral-300">·</span>
-            <span className="text-xs font-black tracking-wider uppercase px-3 py-1 rounded-full border" style={{ backgroundColor: 'var(--color-amber-pale)', borderColor: 'rgba(180,83,9,0.18)', color: 'var(--color-amber-deep)' }}>
-              Untuk Yang Nak Cari Upah
-            </span>
-          </div>
-
           <div className="flex gap-4 justify-center flex-wrap">
-            <Link href="/jobs/post" className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white font-black text-base px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
+            <Link href="/jobs/post" className="inline-flex items-center justify-center text-white font-black text-base px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl" style={{ backgroundColor: 'var(--color-teal-mid)' }}>
               Post Kerja
             </Link>
             <Link href="/onboarding" className="inline-flex items-center justify-center border bg-white text-neutral-950 font-black text-base px-8 py-4 rounded-xl transition-all duration-300 hover:-translate-y-0.5" style={{ borderColor: 'rgba(17,17,17,0.12)' }}>

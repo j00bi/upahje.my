@@ -3,7 +3,8 @@
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useState } from 'react'
-import { ArrowRight, BriefcaseBusiness, CheckCircle2, MapPin, Search, ShieldCheck, UserRound } from 'lucide-react'
+import { ArrowRight, BriefcaseBusiness, CheckCircle2, Search, ShieldCheck, UserRound } from 'lucide-react'
+import { HeroTicker } from './HeroTicker'
 
 const POPULAR = [
   { label: 'Photographer', href: '/categories/photography' },
@@ -33,24 +34,20 @@ export default function HeroNew() {
       <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
         <div>
           <p
-            className="section-label mb-4 inline-flex items-center gap-2"
+            className="section-label mb-4 inline-flex items-center gap-2 text-xs font-black uppercase tracking-[0.16em]"
             style={{ color: 'var(--color-teal-mid)' }}
           >
-            <span
-              className="inline-block h-2 w-2 rounded-full"
-              style={{ backgroundColor: 'var(--color-teal-mid)' }}
-            />
             Off-white marketplace, built on trust
           </p>
 
           <h1
-            className="font-display-mega max-w-3xl"
+            className="font-display-mega max-w-3xl flex flex-wrap items-baseline gap-x-4"
             style={{
               color: 'var(--color-ink)',
               lineHeight: 1.05,
             }}
           >
-            Hire local help. Find paid work. No fog.
+            <HeroTicker />
           </h1>
 
           <p
@@ -80,7 +77,7 @@ export default function HeroNew() {
                   value={search}
                   onChange={e => setSearch(e.target.value)}
                   placeholder="Search photographer, cleaner, web dev..."
-                  className="min-h-[52px] w-full rounded-xl border border-transparent bg-white py-3 pl-12 pr-4 text-base outline-none transition focus:border-blue-300 focus:bg-blue-50/30"
+                  className="min-h-[52px] w-full rounded-xl border border-transparent bg-white py-3 pl-12 pr-4 text-base outline-none transition focus:border-green-mid focus:bg-green-soft/30"
                 />
               </div>
               <button
@@ -181,9 +178,9 @@ export default function HeroNew() {
 
           <div className="grid gap-3 rounded-2xl bg-white p-4 sm:grid-cols-3">
             {[
-              { icon: MapPin, label: 'KL + Selangor first' },
               { icon: ShieldCheck, label: 'Verification flow ready' },
               { icon: CheckCircle2, label: 'Escrow-ready jobs' },
+              { icon: BriefcaseBusiness, label: 'FPX + DuitNow' },
             ].map(item => (
               <div
                 key={item.label}
