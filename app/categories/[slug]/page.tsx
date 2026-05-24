@@ -3,6 +3,8 @@ import Link from 'next/link'
 import { getCategoryBySlug, MARKETPLACE_CATEGORIES } from '@/lib/categories'
 import { prisma } from '@/lib/prisma'
 
+export const dynamic = 'force-dynamic'
+
 // Map category slugs to database category IDs
 const SLUG_TO_CATEGORY_ID: Record<string, string> = {
   'home-services': 'rumah-taman',
