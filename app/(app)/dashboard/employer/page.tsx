@@ -54,7 +54,7 @@ export default async function EmployerDashboard() {
           </div>
           <Link 
             href="/jobs/post"
-            className="inline-flex h-11 items-center justify-center rounded-full bg-emerald-700 px-5 text-sm font-semibold text-white transition hover:bg-emerald-800"
+            className="inline-flex h-11 items-center justify-center rounded-full bg-teal-700 px-5 text-sm font-semibold text-white transition hover:bg-teal-800"
           >
             Post New Job
           </Link>

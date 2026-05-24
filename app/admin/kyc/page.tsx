@@ -95,7 +95,7 @@ export default function AdminKYCMgmt() {
           </div>
         ) : loading ? (
           <div className="flex items-center justify-center py-20">
-            <div className="w-8 h-8 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin" />
+            <div className="w-8 h-8 border-2 border-green-mid border-t-transparent rounded-full animate-spin" />
           </div>
         ) : (
           <>
@@ -108,7 +108,7 @@ export default function AdminKYCMgmt() {
                   className={`px-4 py-2 rounded-xl text-sm font-medium transition ${
                     filter === f
                       ? f === 'SUBMITTED' ? 'bg-amber-500 text-white'
-                        : f === 'VERIFIED' ? 'bg-green-600 text-white'
+                        : f === 'VERIFIED' ? 'bg-green-mid text-white'
                           : f === 'REJECTED' ? 'bg-red-500 text-white'
                             : 'bg-slate-800 text-white'
                       : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-50'

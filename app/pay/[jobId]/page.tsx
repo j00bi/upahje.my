@@ -129,7 +129,7 @@ export default function PayPage() {
             <div className="border-t pt-3 mt-3">
               <div className="flex justify-between text-lg">
                 <span className="font-semibold">Amount to Pay:</span>
-                <span className="font-bold text-emerald-600">RM {amount}.00</span>
+                <span className="font-bold text-teal-600">RM {amount}.00</span>
               </div>
             </div>
           </div>

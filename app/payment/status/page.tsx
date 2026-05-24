@@ -127,7 +127,7 @@ function PaymentStatusContent() {
           <div className="space-y-3">
             <button
               onClick={handleContinue}
-              className="w-full py-3 px-4 bg-emerald-600 text-white rounded-lg font-medium hover:bg-emerald-700 transition-colors text-sm"
+              className="w-full py-3 px-4 bg-teal-600 text-white rounded-lg font-medium hover:bg-teal-700 transition-colors text-sm"
             >
               Continue Browsing Jobs
             </button>
@@ -145,7 +145,7 @@ function PaymentStatusContent() {
           {/* Help Text */}
           <p className="text-center text-xs sm:text-sm text-gray-500 mt-6">
             Need help?{' '}
-            <a href="/support" className="text-teal-600 hover:text-emerald-700">
+            <a href="/support" className="text-teal-600 hover:text-teal-700">
               Contact Support
             </a>
           </p>
