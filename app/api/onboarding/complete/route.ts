@@ -18,6 +18,9 @@ type OnboardingPayload = {
     labourCategories?: string[]
     techCategories?: string[]
     company?: string
+    contactName?: string
+    industry?: string
+    companySize?: string
     quickStart?: boolean
   }
 }
