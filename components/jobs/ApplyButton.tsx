@@ -31,8 +31,8 @@ export function ApplyButton({ jobId }: { jobId: string }) {
 
   if (status === 'success') {
     return (
-      <div className="flex-1 rounded-full bg-emerald-100 py-3 text-center text-emerald-700 font-semibold">
-        Application submitted!
+      <div className="flex-1 rounded-full bg-teal-100 py-3 text-center text-teal-700 font-semibold">
+        Permohonan dihantar!
       </div>
     )
   }
@@ -41,7 +41,7 @@ export function ApplyButton({ jobId }: { jobId: string }) {
     return (
       <button
         onClick={() => setIsOpen(true)}
-        className="flex-1 rounded-full bg-emerald-700 py-3 text-white font-semibold hover:bg-emerald-800"
+        className="flex-1 rounded-full bg-teal-700 py-3 text-white font-semibold hover:bg-teal-800"
       >
         Apply Now
       </button>
@@ -54,7 +54,7 @@ export function ApplyButton({ jobId }: { jobId: string }) {
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         placeholder="Write a short message to the employer..."
-        className="w-full rounded-xl border border-slate-300 p-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        className="w-full rounded-xl border border-slate-300 p-3 text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
         rows={4}
         required
       />
@@ -69,7 +69,7 @@ export function ApplyButton({ jobId }: { jobId: string }) {
         <button
           type="submit"
           disabled={isSubmitting}
-          className="flex-1 rounded-full bg-emerald-700 py-3 text-white font-semibold disabled:opacity-60"
+          className="flex-1 rounded-full bg-teal-700 py-3 text-white font-semibold disabled:opacity-60"
         >
           {isSubmitting ? 'Submitting...' : 'Submit Application'}
         </button>

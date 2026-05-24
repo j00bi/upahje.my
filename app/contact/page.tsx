@@ -16,7 +16,7 @@ export default function ContactPage() {
     <div className="min-h-screen bg-[var(--color-canvas-soft)]">
       <section className="px-6 py-20 md:py-28">
         <div className="mx-auto max-w-3xl">
-          <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
+          <p className="section-label mb-3" style={{ color: 'var(--color-teal-mid)' }}>
             Hubungi Kami
           </p>
           <h1 className="font-display-xl mb-4" style={{ color: 'var(--color-ink-deep)' }}>
@@ -42,7 +42,7 @@ export default function ContactPage() {
           </div>
 
           {submitted ? (
-            <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-8 text-center">
+            <div className="rounded-2xl border border-teal-200 bg-teal-50 p-8 text-center">
               <div className="text-4xl mb-4">✅</div>
               <h2 className="font-display-lg mb-2" style={{ color: 'var(--color-ink-deep)' }}>
                 Mesej diterima!
@@ -59,7 +59,7 @@ export default function ContactPage() {
                   <input
                     type="text"
                     required
-                    className="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-green-mid)] focus:ring-2 focus:ring-green-100"
+                    className="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-teal-mid)] focus:ring-2 focus:ring-teal-100"
                     placeholder="Nama awak"
                   />
                 </div>
@@ -68,7 +68,7 @@ export default function ContactPage() {
                   <input
                     type="email"
                     required
-                    className="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-green-mid)] focus:ring-2 focus:ring-green-100"
+                    className="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-teal-mid)] focus:ring-2 focus:ring-teal-100"
                     placeholder="email@example.com"
                   />
                 </div>
@@ -78,7 +78,7 @@ export default function ContactPage() {
                 <input
                   type="text"
                   required
-                  className="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-green-mid)] focus:ring-2 focus:ring-green-100"
+                  className="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-teal-mid)] focus:ring-2 focus:ring-teal-100"
                   placeholder="Apa pasal?"
                 />
               </div>
@@ -87,13 +87,13 @@ export default function ContactPage() {
                 <textarea
                   required
                   rows={5}
-                  className="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-green-mid)] focus:ring-2 focus:ring-green-100 resize-y"
+                  className="w-full border border-neutral-300 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-teal-mid)] focus:ring-2 focus:ring-teal-100 resize-y"
                   placeholder="Cerita kat kami..."
                 />
               </div>
               <button
                 type="submit"
-                className="w-full sm:w-auto inline-flex items-center justify-center bg-[var(--color-green-mid)] hover:bg-[var(--color-green-forest)] text-white font-semibold text-base px-8 py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
+                className="w-full sm:w-auto inline-flex items-center justify-center bg-[var(--color-teal-mid)] hover:bg-[var(--color-teal-deep)] text-white font-semibold text-base px-8 py-3.5 rounded-xl transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg"
               >
                 Hantar Mesej
               </button>

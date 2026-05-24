@@ -52,10 +52,10 @@ export function JobFilters({ onFilterChange, categories, locations, initialFilte
         </div>
         <input
           type="text"
-          placeholder="Search jobs: plumber, painting, wiring..."
+          placeholder="Cari kerja: plumber, wiring, cuci rumah..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition"
+          className="w-full pl-10 pr-4 py-3 border border-slate-200 rounded-xl bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent transition"
         />
         {search && (
           <button
@@ -80,7 +80,7 @@ export function JobFilters({ onFilterChange, categories, locations, initialFilte
           </svg>
           Filters
           {hasActiveFilters && (
-            <span className="bg-emerald-100 text-emerald-700 px-2 py-0.5 rounded-full text-xs">
+            <span className="bg-teal-100 text-teal-700 px-2 py-0.5 rounded-full text-xs">
               Active
             </span>
           )}
@@ -132,7 +132,7 @@ selectedTrack === 'LABOUR'
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full py-2 px-3 border border-slate-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full py-2 px-3 border border-slate-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
             >
               <option value="">All Categories</option>
               {categories.map((cat) => (
@@ -149,7 +149,7 @@ selectedTrack === 'LABOUR'
             <select
               value={selectedLocation}
               onChange={(e) => setSelectedLocation(e.target.value)}
-              className="w-full py-2 px-3 border border-slate-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="w-full py-2 px-3 border border-slate-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
             >
               <option value="">All Locations</option>
               {locations.map((loc) => (

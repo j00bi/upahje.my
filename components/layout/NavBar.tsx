@@ -12,10 +12,10 @@ export default function NavBar() {
       <div className="mx-auto flex max-w-full items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
         {/* Logo */}
         <div>
-          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-emerald-900">
+          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-teal-900">
             UpahJe.my
           </div>
-          <div className="text-xs text-slate-600 hidden sm:block">Protected dashboard area</div>
+          <div className="text-xs text-slate-600 hidden sm:block">Dashboard</div>
         </div>
         
         {/* Desktop Navigation */}
@@ -40,7 +40,7 @@ export default function NavBar() {
           </Link>
           <Link
             href="/dashboard/employer"
-            className="rounded-full bg-emerald-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-800 min-h-[44px] flex items-center"
+            className="rounded-full bg-teal-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-800 min-h-[44px] flex items-center"
           >
             Employer Dashboard
           </Link>
@@ -90,7 +90,7 @@ export default function NavBar() {
           </Link>
           <Link
             href="/dashboard/employer"
-            className="block rounded-lg bg-emerald-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800 text-center min-h-[44px] flex items-center justify-center"
+            className="block rounded-lg bg-teal-700 px-4 py-3 text-sm font-semibold text-white transition hover:bg-teal-800 text-center min-h-[44px] flex items-center justify-center"
             onClick={() => setMobileMenuOpen(false)}
           >
             Employer Dashboard

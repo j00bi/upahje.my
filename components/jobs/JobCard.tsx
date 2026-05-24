@@ -114,7 +114,7 @@ export function JobCard({
         {/* Header */}
         <div className="flex justify-between items-start mb-3">
           <div className="flex-1 min-w-0">
-            <h3 className="font-semibold text-lg text-slate-900 group-hover:text-emerald-700 transition line-clamp-2">
+            <h3 className="font-semibold text-lg text-slate-900 group-hover:text-teal-700 transition line-clamp-2">
               {title}
             </h3>
             {employerName && (
@@ -193,7 +193,7 @@ export function JobCard({
             )}
             <button
               onClick={onView}
-              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg transition"
+              className="px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white text-sm font-medium rounded-lg transition"
             >
               View Details
             </button>
@@ -205,7 +205,7 @@ export function JobCard({
           <div className="mt-4 pt-3 border-t border-slate-100 flex gap-2">
             <button
               onClick={() => setShowConfirmModal(true)}
-              className="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white py-2.5 rounded-lg text-sm font-medium transition"
+              className="flex-1 bg-teal-600 hover:bg-teal-700 text-white py-2.5 rounded-lg text-sm font-medium transition"
             >
               Confirm Completion
             </button>

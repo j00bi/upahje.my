@@ -6,7 +6,7 @@ export default function AboutPage() {
     <div className="min-h-screen bg-[var(--color-canvas-soft)]">
       <section className="px-6 py-20 md:py-28">
         <div className="mx-auto max-w-3xl">
-          <p className="section-label mb-3" style={{ color: 'var(--color-green-mid)' }}>
+          <p className="section-label mb-3" style={{ color: 'var(--color-teal-mid)' }}>
             Tentang Kami
           </p>
           <h1 className="font-display-xl mb-6" style={{ color: 'var(--color-ink-deep)' }}>
@@ -65,7 +65,7 @@ export default function AboutPage() {
           </p>
           <p className="text-sm" style={{ color: 'var(--color-mute)' }}>
             Have questions or feedback?{' '}
-            <Link href="/contact" className="font-semibold underline" style={{ color: 'var(--color-green-mid)' }}>
+            <Link href="/contact" className="font-semibold underline" style={{ color: 'var(--color-teal-mid)' }}>
               Get in touch
             </Link>
             .

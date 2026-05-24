@@ -95,7 +95,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 text-sm font-semibold transition-all duration-200 hover:gap-3"
               style={{ color: 'var(--color-teal-mid)' }}
             >
-              See all categories
+              Semua Kategori
               <span aria-hidden="true">→</span>
             </Link>
           </div>
@@ -231,7 +231,7 @@ export default function Home() {
               </p>
               <div className="mt-6">
                 <Link href="/talent" className="font-semibold text-sm transition-all hover:gap-2 inline-flex items-center gap-1" style={{ color: 'var(--color-teal-mid)' }}>
-                  Browse all portfolios →
+                  Semua Portfolio →
                 </Link>
               </div>
             </div>
