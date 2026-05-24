@@ -46,15 +46,15 @@ export default function Footer() {
             >
               UpahJe.my
             </div>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Malaysia&apos;s local hiring platform for trusted work — connect with verified
-              workers across events, home services, creative projects, and more.
+            <p className="text-sm leading-relaxed mb-6" style={{ color: 'var(--color-body)' }}>
+              Malaysia&apos;s local hiring platform for trusted work: labour, creative,
+              technical, and admin services with clearer profiles and safer payment flow.
             </p>
-            <div className="flex gap-4 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
-              <a href="https://instagram.com/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
-              <a href="https://facebook.com/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Facebook</a>
-              <a href="https://tiktok.com/@upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">TikTok</a>
-              <a href="https://linkedin.com/company/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+            <div className="flex gap-4 text-sm font-bold" style={{ color: 'var(--color-mute)' }}>
+              <a href="https://instagram.com/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">Instagram</a>
+              <a href="https://facebook.com/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">Facebook</a>
+              <a href="https://tiktok.com/@upahje" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">TikTok</a>
+              <a href="https://linkedin.com/company/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 transition-colors">LinkedIn</a>
             </div>
           </div>
 
@@ -78,9 +78,9 @@ export default function Footer() {
         {/* Bottom bar */}
         <div
           className="pt-8 mt-8 border-t flex flex-col sm:flex-row justify-between gap-4"
-          style={{ borderColor: 'rgba(255,255,255,0.08)' }}
+          style={{ borderColor: 'rgba(17,17,17,0.08)' }}
         >
-          <div className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
+          <div className="text-xs" style={{ color: 'var(--color-mute)' }}>
             © {new Date().getFullYear()} UpahJe.my. All rights reserved.
           </div>
           <div className="flex gap-6">

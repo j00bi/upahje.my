@@ -110,7 +110,7 @@ export function OnboardingFlow() {
               key={label}
               className={`flex flex-1 items-center gap-2 rounded-2xl border px-3 py-2 text-sm ${
                 current
-                  ? 'border-teal-500/30 bg-teal-50 text-teal-700'
+                  ? 'border-blue-500/30 bg-blue-50 text-blue-700'
                   : 'border-slate-200 bg-white text-slate-500'
               }`}
             >
@@ -132,7 +132,7 @@ export function OnboardingFlow() {
             <div className="grid grid-cols-2 gap-3">
               <button
                 onClick={() => handleTrackSelect('LABOUR')}
-                className="p-6 rounded-3xl border-2 text-left transition hover:border-teal-400 active:scale-[0.985] border-slate-200 hover:bg-teal-50"
+                className="p-6 rounded-3xl border-2 text-left transition hover:border-blue-400 active:scale-[0.985] border-slate-200 hover:bg-blue-50"
               >
                 <span className="text-3xl block mb-2">🛠️</span>
                 <div className="font-semibold">Labour</div>
@@ -140,7 +140,7 @@ export function OnboardingFlow() {
               </button>
               <button
                 onClick={() => handleTrackSelect('TECHNICAL')}
-                className="p-6 rounded-3xl border-2 text-left transition hover:border-violet-400 active:scale-[0.985] border-slate-200 hover:bg-violet-50"
+                className="p-6 rounded-3xl border-2 text-left transition hover:border-neutral-400 active:scale-[0.985] border-slate-200 hover:bg-neutral-50"
               >
                 <span className="text-3xl block mb-2">💻</span>
                 <div className="font-semibold">Technical</div>

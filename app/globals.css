@@ -8,23 +8,23 @@ html[data-intro='loading'] #page-content {
 }
 
 :root {
-  /* Green Brand Core — unified around brand green #166345 */
-  --color-primary: #166345;
-  --color-primary-hover: #0d3b18;
-  --color-primary-neutral: #2d8f5e;
-  --color-primary-pale: #e8f5e0;
+  /* Light trust system — off-white surfaces with a bold blue accent */
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-neutral: #3b82f6;
+  --color-primary-pale: #dbeafe;
 
-  /* Green scale — brand anchoring */
-  --color-green-deep: #0a2a12;
-  --color-green-forest: #0d3b18;
-  --color-green-mid: #166345;
-  --color-green-soft: #e8f5e0;
+  /* Neutral trust base */
+  --color-green-deep: #111827;
+  --color-green-forest: #1f2937;
+  --color-green-mid: #2563eb;
+  --color-green-soft: #eff6ff;
 
-  /* Teal scale — trust & security accent */
-  --color-teal-deep: #0f766e;
-  --color-teal-mid: #14b8a6;
-  --color-teal-soft: #ccfbf1;
-  --color-teal-pale: #f0fdfa;
+  /* Blue scale — primary product accent */
+  --color-teal-deep: #1d4ed8;
+  --color-teal-mid: #2563eb;
+  --color-teal-soft: #dbeafe;
+  --color-teal-pale: #eff6ff;
 
   /* Amber scale — energy & urgency (CTAs) */
   --color-amber-deep: #b45309;
@@ -37,14 +37,14 @@ html[data-intro='loading'] #page-content {
 
   /* Surfaces */
   --color-canvas: #ffffff;
-  --color-canvas-soft: #f9f9f9;
-  --color-canvas-warm: #f5f3ee;
+  --color-canvas-soft: #fbfaf7;
+  --color-canvas-warm: #f4f1ea;
 
   /* Text */
-  --color-ink: #0e0f0c;
-  --color-ink-deep: #0a2a12;
-  --color-body: #454745;
-  --color-mute: #868685;
+  --color-ink: #111111;
+  --color-ink-deep: #050505;
+  --color-body: #343434;
+  --color-mute: #737373;
 
   /* Semantic */
   --color-positive: #2ead4b;
@@ -79,40 +79,40 @@ body {
   font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: 1.05;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .font-display-xl {
   font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .font-display-lg {
   font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
   line-height: 1.2;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .font-display-md {
   font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
   font-size: 1.5rem;
   line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .font-display-sm {
   font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
   font-size: 1.25rem;
   line-height: 1.2;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-weight: 800;
+  letter-spacing: 0;
 }
 
 .section-label {
@@ -129,7 +129,7 @@ body {
 .btn-primary {
   @apply inline-flex items-center justify-center;
   background-color: var(--color-primary);
-  color: var(--color-ink-deep);
+  color: white;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.5;
@@ -206,17 +206,18 @@ body {
    =========================================== */
 
 .nav-bar {
-  background-color: var(--color-green-deep);
+  background-color: rgba(255, 255, 255, 0.86);
   padding: 0 24px;
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  backdrop-filter: blur(18px);
 }
 
 .nav-link {
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: 500;
+  color: var(--color-body);
+  font-weight: 700;
   font-size: 0.875rem;
   text-decoration: none;
   transition: color 0.15s ease;
@@ -224,7 +225,7 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--color-canvas);
+  color: var(--color-ink);
 }
 
 .nav-link.active {
@@ -482,21 +483,22 @@ body {
    =========================================== */
 
 .footer {
-  background-color: var(--color-green-deep);
-  color: rgba(255, 255, 255, 0.7);
+  background-color: var(--color-canvas-warm);
+  color: var(--color-body);
   padding: 64px 24px 32px;
   font-size: 0.875rem;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
 }
 
 .footer-heading {
-  color: var(--color-canvas);
-  font-weight: 600;
+  color: var(--color-ink);
+  font-weight: 800;
   font-size: 0.875rem;
   margin-bottom: 16px;
 }
 
 .footer-link {
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-body);
   text-decoration: none;
   transition: color 0.15s ease;
 }
