@@ -384,8 +384,8 @@ export default function Home() {
               },
               {
                 quote: 'Sebagai freelancer, I love that clients can see my portfolio before hiring. No more wasting time explaining my work.',
-                name: 'Aina Razali',
-                role: 'Photographer',
+                name: 'Farah Zainal',
+                role: 'Freelancer, KL',
                 emoji: '📸',
               },
             ].map((t) => (

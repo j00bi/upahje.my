@@ -296,7 +296,7 @@ body {
 }
 
 .hero-band-green {
-  background-color: var(--color-green-deep);
+  background-color: var(--color-teal-deep);
   color: var(--color-canvas);
   padding: 80px 24px;
   position: relative;
@@ -308,7 +308,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(ellipse at 20% 50%, rgba(22, 99, 69, 0.12) 0%, transparent 60%);
+  background-image: radial-gradient(ellipse at 20% 50%, rgba(20, 184, 166, 0.12) 0%, transparent 60%);
   pointer-events: none;
 }
 

@@ -32,7 +32,7 @@ const faqs = [
   },
   {
     q: 'Macam mana cara pembayaran?',
-    a: 'Kami support FPX dan DuitNow. Dana dipegang dalam escrow sehingga kerja diluluskan. Yuran platform akan ditolak daripada pembayaran sebelum dilepaskan kepada freelancer.',
+    a: 'Kami support FPX dan DuitNow. Dana dipegang dalam escrow sehingga kerja diluluskan. Untuk client — yuran platform adalah RM0. Yuran freelancer akan ditolak daripada pembayaran sebelum dilepaskan.',
   },
   {
     q: 'Adakah UpahJe available di seluruh Malaysia?',

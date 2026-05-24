@@ -76,9 +76,7 @@ export default function CategoryNav() {
 
         {/* Desktop Auth */}
         <div className="hidden md:flex items-center gap-3 shrink-0">
-          {loading ? (
-            <span className="text-sm text-white/45">Checking session...</span>
-          ) : user ? (
+          {loading ? null : user ? (
             <>
               <Link href={dashboardHref} className="nav-link text-sm">
                 Dashboard
@@ -149,9 +147,7 @@ export default function CategoryNav() {
           ))}
 
           <div className="mt-4 border-t border-white/10 pt-3">
-            {loading ? (
-              <span className="block py-2 text-sm text-white/45">Checking session...</span>
-            ) : user ? (
+            {loading ? null : user ? (
               <div className="flex gap-3">
                 <Link
                   href={dashboardHref}
