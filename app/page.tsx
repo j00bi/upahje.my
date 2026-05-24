@@ -57,14 +57,7 @@ export default function Home() {
               <StaggerItem key={cat.slug}>
                 <Link
                   href={`/categories/${cat.slug}`}
-                  className="block rounded-2xl border-2 border-transparent bg-white p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-teal-mid/30 group"
-                  style={{ boxShadow: '0 1px 3px rgba(0,0,0,0.04)' }}
-                  onMouseEnter={e => {
-                    e.currentTarget.style.boxShadow = '0 8px 32px rgba(20, 184, 166, 0.12)'
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.boxShadow = '0 1px 3px rgba(0,0,0,0.04)'
-                  }}
+                  className="block rounded-2xl border-2 border-transparent bg-white p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-mid/20 hover:border-teal-mid/30 group"
                 >
                   <div
                     className="inline-flex items-center justify-center w-16 h-16 rounded-2xl mb-5 transition-colors duration-300"
@@ -161,20 +154,10 @@ export default function Home() {
                 <Link
                   key={cat.slug}
                   href={`/categories/${cat.slug}`}
-                  className="group rounded-2xl border-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl flex items-start gap-5"
+                  className="group rounded-2xl border-2 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-teal-mid/20 flex items-start gap-5"
                   style={{
                     backgroundColor: cat.talentCount > 0 ? 'white' : 'var(--color-canvas-soft)',
                     borderColor: cat.talentCount > 0 ? 'rgba(20, 184, 166, 0.3)' : 'rgba(20, 184, 166, 0.1)',
-                  }}
-                  onMouseEnter={e => {
-                    if (cat.talentCount > 0) {
-                      e.currentTarget.style.borderColor = 'var(--color-teal-mid)'
-                      e.currentTarget.style.boxShadow = '0 8px 32px rgba(20, 184, 166, 0.12)'
-                    }
-                  }}
-                  onMouseLeave={e => {
-                    e.currentTarget.style.borderColor = cat.talentCount > 0 ? 'rgba(20, 184, 166, 0.3)' : 'rgba(20, 184, 166, 0.1)'
-                    e.currentTarget.style.boxShadow = 'none'
                   }}
                 >
                   <div
