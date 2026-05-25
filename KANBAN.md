@@ -1,8 +1,8 @@
 # UpahJe.My — KANBAN (M0 Foundation + M2 Marketplace + M3 Applications)
 
-**Last Updated**: 2026-05-24
+**Last Updated**: 2026-05-25
 **Roadmap**: M0–M7 active (see docs/M0-TO-M7-ROADMAP.md)
-**Overall Progress**: ~64%
+**Overall Progress**: ~66%
 **Go-Live Target**: Late July – Early August 2026
 **Deployed**: upahje-my.vercel.app
 
@@ -146,6 +146,7 @@
 | M3-A6  | Employer job-level applications page      | Done        | Codex | `/dashboard/employer/jobs` groups proposals by posted job |
 | M3-A7  | Accepted-job project/contact handoff      | Pending     | Codex | Needs post-match project/contact workflow after `MATCHED` |
 | M3-A8  | Live Supabase migration + smoke test      | Pending     | Codex | Apply migration and test employer/talent end-to-end on live DB |
+| M3-A9  | Production route smoke coverage           | Done        | Codex | `npm run smoke:routes` covers public routes, protected redirects, and unauthenticated auth/application/KYC APIs |
 
 ---
 

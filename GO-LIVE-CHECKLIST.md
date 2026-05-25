@@ -15,6 +15,7 @@
 - [x] Talent applications persist as reviewable proposals
 - [x] Talent application dashboard exists
 - [x] Employer proposal review exists
+- [x] Route smoke test covers public pages, protected redirects, and unauthenticated auth/application/KYC APIs
 - [ ] Limited database role configured for production
 - [ ] RLS baseline applied in Supabase
 - [ ] Dedicated Supabase admin client is used only server-side
@@ -66,6 +67,7 @@
 - [x] Run production build locally to verify (`NODE_ENV=production npm run build` ✅ PASSED)
 - [x] Run TypeScript check (`npx tsc --noEmit` ✅ PASSED)
 - [x] Fix `npm run lint` script/tooling (`npm run lint` ✅ PASSED with warnings only)
+- [x] Run route smoke test (`npm run smoke:routes` ✅ PASSED)
 - [ ] Verify all environment variables are set
 - [ ] Test authentication locally with production-like env vars
 - [ ] Check database connection string format
@@ -100,12 +102,15 @@
 - Submit, track, review, reject, withdraw, and accept job applications
 
 **Last Updated**: May 2026
-**Branch**: master
+**Branch**: deploy-main
 **Build**: ✅ Passing
+**Route Smoke**: ✅ Passing
 
 ## Notes
 
 - Job posting uses resolved employer/category records
+- Job posting page now requires an authenticated employer before rendering
 - Application acceptance currently handles matching state; contact handoff after acceptance is still pending
+- Current `.env.local` `DATABASE_URL` fails Supabase authentication, so the application migration still needs a refreshed connection string before live testing
 - Sample data can be added manually via Supabase dashboard or Prisma Studio
 - Security baseline scaffold lives in `supabase/migrations/20260517_security_baseline.sql`
