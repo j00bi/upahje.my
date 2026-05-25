@@ -40,6 +40,7 @@ export function JobFilters({ onFilterChange, categories, locations, initialFilte
   }
 
   const hasActiveFilters = search || selectedCategory || selectedLocation || selectedTrack
+  const quickCategoryChips = categories.slice(0, 5)
 
   return (
     <div className="space-y-4">
@@ -152,6 +153,9 @@ selectedTrack === 'LABOUR'
               className="w-full py-2 px-3 border border-slate-200 rounded-lg bg-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
             >
               <option value="">All Locations</option>
+              {locations.length === 0 && (
+                <option value="" disabled>No live locations yet</option>
+              )}
               {locations.map((loc) => (
                 <option key={loc} value={loc}>
                   {loc}
@@ -164,19 +168,40 @@ selectedTrack === 'LABOUR'
 
       {/* Quick Filter Chips */}
       <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide">
-        {[
-          { label: 'Nearby', value: 'nearby', icon: '📍' },
-          { label: 'Urgent', value: 'urgent', icon: '⚡' },
-          { label: 'Today', value: 'today', icon: '📅' },
-          { label: 'Under RM200', value: 'budget-200', icon: '💰' },
-          { label: 'Verified', value: 'verified', icon: '✓' },
-        ].map((chip) => (
+        <button
+          onClick={() => setSelectedTrack(selectedTrack === 'LABOUR' ? '' : 'LABOUR')}
+          className={`flex items-center gap-1 px-3 py-1.5 border rounded-full text-sm whitespace-nowrap transition ${
+            selectedTrack === 'LABOUR'
+              ? 'bg-emerald-50 border-emerald-300 text-emerald-800'
+              : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+          }`}
+        >
+          <span>🛠️</span>
+          <span>Labour</span>
+        </button>
+        <button
+          onClick={() => setSelectedTrack(selectedTrack === 'TECHNICAL' ? '' : 'TECHNICAL')}
+          className={`flex items-center gap-1 px-3 py-1.5 border rounded-full text-sm whitespace-nowrap transition ${
+            selectedTrack === 'TECHNICAL'
+              ? 'bg-purple-50 border-purple-300 text-purple-800'
+              : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+          }`}
+        >
+          <span>💻</span>
+          <span>Technical</span>
+        </button>
+        {quickCategoryChips.map((category) => (
           <button
-            key={chip.value}
-            className="flex items-center gap-1 px-3 py-1.5 bg-white border border-slate-200 rounded-full text-sm text-slate-600 whitespace-nowrap hover:bg-slate-50 transition"
+            key={category.id}
+            onClick={() => setSelectedCategory(selectedCategory === category.id ? '' : category.id)}
+            className={`flex items-center gap-1 px-3 py-1.5 border rounded-full text-sm whitespace-nowrap transition ${
+              selectedCategory === category.id
+                ? 'bg-teal-50 border-teal-300 text-teal-800'
+                : 'bg-white border-slate-200 text-slate-600 hover:bg-slate-50'
+            }`}
           >
-            <span>{chip.icon}</span>
-            <span>{chip.label}</span>
+            {category.emoji && <span>{category.emoji}</span>}
+            <span>{category.name}</span>
           </button>
         ))}
       </div>

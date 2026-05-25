@@ -10,6 +10,7 @@
 - [x] Jobs page shows live data from Supabase
 - [x] Job cards are clickable and link to real detail pages
 - [x] Job detail page fetches and displays real data
+- [x] Jobs API returns only live database jobs, with no sample fallback presented as marketplace traction
 - [x] Build passes cleanly
 - [x] Mobile responsive (previous pass)
 - [x] Talent applications persist as reviewable proposals
@@ -22,8 +23,9 @@
 
 ## 🔄 In Progress / Next
 
-- [x] Seed sample jobs for demo purposes (realistic LABOUR + TECHNICAL jobs)
-- [x] Real employer association in job posting (fetchOrCreateEmployer implemented in PostJobForm)
+- [x] Seed/reference category catalog for demo purposes
+- [x] Real employer association in job posting (shared Prisma auth bridge)
+- [x] Job creation resolves/upserts category IDs used by the posting form
 - [x] Improve JobCard to show employer info
 - [x] Add apply functionality
 - [ ] Add contact handoff after accepted application
@@ -110,6 +112,8 @@
 
 - Job posting uses resolved employer/category records
 - Job posting page now requires an authenticated employer before rendering
+- Jobs discovery filter changes sync to the URL and use real category/track shortcuts
+- The jobs API intentionally returns an empty list or error when live data is unavailable; it does not fabricate listings
 - Application acceptance currently handles matching state; contact handoff after acceptance is still pending
 - Current `.env.local` `DATABASE_URL` fails Supabase authentication, so the application migration still needs a refreshed connection string before live testing
 - Sample data can be added manually via Supabase dashboard or Prisma Studio

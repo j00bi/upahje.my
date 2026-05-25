@@ -1,6 +1,8 @@
-import { createClient } from '@/lib/supabase/server'
-import { auth } from '@/lib/auth'
+import { getUserWithRole } from '@/lib/auth'
+import { prisma } from '@/lib/prisma'
+import { LABOUR_CATEGORIES, TECHNICAL_CATEGORIES } from '@/lib/domain'
 import { validateJobPosting, getValidationErrors, JobPostingFormData } from '@/lib/validation/job'
+import type { Track } from '@prisma/client'
 
 /**
  * Server-side action to create a new job
@@ -18,29 +20,11 @@ export async function createJob(formData: JobPostingFormData) {
     }
   }
 
-  // Get the current user and their employer record
-  const session = await auth()
-  if (!session?.user?.id) {
+  const { user, employer } = await getUserWithRole()
+  if (!user) {
     return {
       success: false,
       error: 'Authentication required',
-    }
-  }
-
-  const supabase = await createClient()
-
-  // Find employer record for this user
-  const { data: employer, error: selectError } = await supabase
-    .from('Employer')
-    .select('id')
-    .eq('userId', session.user.id)
-    .single()
-
-  if (selectError && selectError.code !== 'PGRST116') {
-    console.error('Error fetching employer:', selectError)
-    return {
-      success: false,
-      error: 'Failed to retrieve employer profile',
     }
   }
 
@@ -51,34 +35,77 @@ export async function createJob(formData: JobPostingFormData) {
     }
   }
 
-  // Create the job
-  const { data: newJob, error: insertError } = await supabase
-    .from('Job')
-    .insert({
-      title: validation.data.title,
-      description: validation.data.description,
-      rate: validation.data.rate,
-      location: validation.data.location,
-      track: validation.data.track,
-      categoryId: validation.data.categoryId,
-      employerId: employer.id,
-      status: 'OPEN',
-    })
-    .select('id, title, description, rate, location, track, status, createdAt')
-    .single()
+  const category = await resolveJobCategory(validation.data.categoryId, validation.data.track)
+  if (!category) {
+    return {
+      success: false,
+      error: 'Selected category is not available',
+    }
+  }
 
-  if (insertError) {
-    console.error('Error creating job:', insertError)
+  try {
+    const newJob = await prisma.job.create({
+      data: {
+        title: validation.data.title,
+        description: validation.data.description,
+        rate: validation.data.rate,
+        location: validation.data.location,
+        track: validation.data.track,
+        categoryId: category.id,
+        employerId: employer.id,
+        status: 'OPEN',
+      },
+      select: {
+        id: true,
+        title: true,
+        description: true,
+        rate: true,
+        location: true,
+        track: true,
+        status: true,
+        createdAt: true,
+      },
+    })
+
+    return {
+      success: true,
+      job: newJob,
+    }
+  } catch (error) {
+    console.error('Error creating job:', error)
     return {
       success: false,
       error: 'Failed to create job. Please try again.',
     }
   }
+}
 
-  return {
-    success: true,
-    job: newJob,
-  }
+async function resolveJobCategory(categoryId: string, track: Track) {
+  const existingById = await prisma.category.findUnique({
+    where: { id: categoryId },
+  })
+
+  if (existingById) return existingById
+
+  const catalog = track === 'LABOUR' ? LABOUR_CATEGORIES : TECHNICAL_CATEGORIES
+  const catalogCategory = catalog.find((category) => category.id === categoryId)
+
+  if (!catalogCategory) return null
+
+  const existingByName = await prisma.category.findUnique({
+    where: { name: catalogCategory.name },
+  })
+
+  if (existingByName) return existingByName
+
+  return prisma.category.create({
+    data: {
+      id: catalogCategory.id,
+      name: catalogCategory.name,
+      track,
+      emoji: catalogCategory.emoji,
+    },
+  })
 }
 
 /**
@@ -86,53 +113,34 @@ export async function createJob(formData: JobPostingFormData) {
  * @returns Object with employerId or error
  */
 export async function getCurrentEmployerId() {
-  const session = await auth()
-  if (!session?.user?.id) {
+  const { user, employer } = await getUserWithRole()
+  if (!user) {
     return {
       success: false,
       error: 'Authentication required',
     }
   }
 
-  const supabase = await createClient()
-
-  // Find employer record for this user
-  const { data: employer, error: selectError } = await supabase
-    .from('Employer')
-    .select('id')
-    .eq('userId', session.user.id)
-    .single()
-
-  if (selectError && selectError.code !== 'PGRST116') {
-    console.error('Error fetching employer:', selectError)
-    return {
-      success: false,
-      error: 'Failed to retrieve employer profile',
-    }
-  }
-
   if (!employer) {
-    // Create employer record if it doesn't exist
-    const { data: newEmployer, error: insertError } = await supabase
-      .from('Employer')
-      .insert({
-        userId: session.user.id,
-        company: null,
+    try {
+      const newEmployer = await prisma.employer.create({
+        data: {
+          userId: user.id,
+          company: null,
+        },
+        select: { id: true },
       })
-      .select('id')
-      .single()
 
-    if (insertError) {
-      console.error('Error creating employer:', insertError)
+      return {
+        success: true,
+        employerId: newEmployer.id,
+      }
+    } catch (error) {
+      console.error('Error creating employer:', error)
       return {
         success: false,
         error: 'Failed to create employer profile',
       }
-    }
-
-    return {
-      success: true,
-      employerId: newEmployer.id,
     }
   }
 

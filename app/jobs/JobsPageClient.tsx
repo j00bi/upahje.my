@@ -1,10 +1,11 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useState, useCallback } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useEffect, useState, useCallback, useMemo } from 'react'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { JobFilters } from '@/components/jobs/JobFilters'
 import { ExpandableJobCard } from '@/components/jobs/ExpandableJobCard'
+import { LABOUR_CATEGORIES, TECHNICAL_CATEGORIES } from '@/lib/domain'
 import type { JobFilters as JobFiltersType } from '@/lib/actions/jobs'
 
 interface Job {
@@ -24,26 +25,15 @@ interface Job {
   category: { id: string; name: string; emoji: string | null } | null
 }
 
-interface Category { id: string; name: string; emoji: string | null; track: string }
+interface Category { id: string; name: string; emoji: string | null; track: 'LABOUR' | 'TECHNICAL' }
 
-const SAMPLE_CATEGORIES: Category[] = [
-  { id: 'rumah-taman', name: 'Rumah & Taman', emoji: '🏠', track: 'LABOUR' },
-  { id: 'haiwan', name: 'Haiwan Peliharaan', emoji: '🐾', track: 'LABOUR' },
-  { id: 'cucian', name: 'Cucian & Dobi', emoji: '👕', track: 'LABOUR' },
-  { id: 'angkat', name: 'Angkat & Hantar', emoji: '📦', track: 'LABOUR' },
-  { id: 'masakan', name: 'Masakan & Katering', emoji: '🍳', track: 'LABOUR' },
-  { id: 'design', name: 'Design & Kreatif', emoji: '🎨', track: 'TECHNICAL' },
-  { id: 'webdev', name: 'Web & App Dev', emoji: '💻', track: 'TECHNICAL' },
-  { id: 'marketing', name: 'Pemasaran Digital', emoji: '📣', track: 'TECHNICAL' },
-  { id: 'content', name: 'Kandungan & Penulisan', emoji: '✍️', track: 'TECHNICAL' },
+const DISCOVERY_CATEGORIES: Category[] = [
+  ...LABOUR_CATEGORIES.map((category) => ({ ...category, track: 'LABOUR' as const })),
+  ...TECHNICAL_CATEGORIES.map((category) => ({ ...category, track: 'TECHNICAL' as const })),
 ]
 
-const SAMPLE_LOCATIONS = [
-  'Kuala Lumpur', 'Petaling Jaya', 'Shah Alam', 'Kajang', 'Cheras',
-  'Ampang', 'KL Sentral', 'Penang', 'Johor Bahru',
-]
-
-function filtersFromSearchParams(searchParams: ReturnType<typeof useSearchParams>): JobFiltersType {
+function filtersFromQueryString(queryString: string): JobFiltersType {
+  const searchParams = new URLSearchParams(queryString)
   const track = searchParams.get('track')
   const status = searchParams.get('status')
 
@@ -57,17 +47,47 @@ function filtersFromSearchParams(searchParams: ReturnType<typeof useSearchParams
 }
 
 export default function JobsPageClient() {
+  const router = useRouter()
+  const pathname = usePathname()
   const searchParams = useSearchParams()
   const searchKey = searchParams.toString()
-  const initialFilters = filtersFromSearchParams(searchParams)
+  const initialFilters = useMemo(() => filtersFromQueryString(searchKey), [searchKey])
   const [jobs, setJobs] = useState<Job[]>([])
   const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
   const [filters, setFilters] = useState<JobFiltersType>(initialFilters)
-  const categories = SAMPLE_CATEGORIES
-  const [locations] = useState<string[]>(SAMPLE_LOCATIONS)
+  const categories = DISCOVERY_CATEGORIES
+  const locations = useMemo(() => {
+    const realLocations = jobs
+      .map((job) => job.location?.trim())
+      .filter((location): location is string => Boolean(location))
+
+    return [...new Set(realLocations)].sort((a, b) => a.localeCompare(b))
+  }, [jobs])
+  const hasActiveFilters = Boolean(filters.search || filters.category || filters.location || filters.track)
+
+  const writeFiltersToUrl = useCallback((nextFilters: JobFiltersType) => {
+    const params = new URLSearchParams()
+    if (nextFilters.search) params.set('search', nextFilters.search)
+    if (nextFilters.category) params.set('category', nextFilters.category)
+    if (nextFilters.location) params.set('location', nextFilters.location)
+    if (nextFilters.track) params.set('track', nextFilters.track)
+    if (nextFilters.status) params.set('status', nextFilters.status)
+
+    const nextQuery = params.toString()
+    if (nextQuery !== searchKey) {
+      router.replace(`${pathname}${nextQuery ? `?${nextQuery}` : ''}`, { scroll: false })
+    }
+  }, [pathname, router, searchKey])
+
+  const handleFilterChange = useCallback((nextFilters: JobFiltersType) => {
+    setFilters(nextFilters)
+    writeFiltersToUrl(nextFilters)
+  }, [writeFiltersToUrl])
 
   const fetchJobs = useCallback(async (f: JobFiltersType) => {
     setLoading(true)
+    setError(null)
     try {
       const params = new URLSearchParams()
       if (f.search) params.set('search', f.search)
@@ -77,10 +97,15 @@ export default function JobsPageClient() {
       if (f.status) params.set('status', f.status)
 
       const res = await fetch(`/api/jobs?${params.toString()}`)
+      if (!res.ok) {
+        throw new Error(`Job request failed with ${res.status}`)
+      }
+
       const data = await res.json()
       setJobs(Array.isArray(data) ? data : [])
     } catch {
       setJobs([])
+      setError('Unable to load live jobs right now. Try again in a moment.')
     } finally {
       setLoading(false)
     }
@@ -88,7 +113,7 @@ export default function JobsPageClient() {
 
   useEffect(() => {
     setFilters(initialFilters)
-  }, [searchKey])
+  }, [initialFilters])
 
   useEffect(() => { fetchJobs(filters) }, [filters, fetchJobs])
 
@@ -114,7 +139,7 @@ export default function JobsPageClient() {
 
           <JobFilters
             key={searchKey}
-            onFilterChange={setFilters}
+            onFilterChange={handleFilterChange}
             categories={categories}
             locations={locations}
             initialFilters={initialFilters}
@@ -124,11 +149,29 @@ export default function JobsPageClient() {
 
       {/* Job list */}
       <div className="max-w-5xl mx-auto px-4 py-8">
-        {jobs.length === 0 && !loading ? (
+        {error && !loading ? (
+          <div className="text-center py-20">
+            <div className="text-5xl mb-4">!</div>
+            <h3 className="text-xl font-semibold text-slate-700 mb-2">Jobs could not load</h3>
+            <p className="text-slate-500 mb-6">{error}</p>
+            <button
+              onClick={() => fetchJobs(filters)}
+              className="px-6 py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-2xl text-sm font-medium transition"
+            >
+              Retry
+            </button>
+          </div>
+        ) : jobs.length === 0 && !loading ? (
           <div className="text-center py-20">
             <div className="text-6xl mb-4">📭</div>
-            <h3 className="text-xl font-semibold text-slate-700 mb-2">Belum ada kerja lagi</h3>
-            <p className="text-slate-500 mb-2">Jadi yang pertama — post kerja dan dapatkan talent dalam masa 24 jam.</p>
+            <h3 className="text-xl font-semibold text-slate-700 mb-2">
+              {hasActiveFilters ? 'No matching jobs found' : 'No live jobs yet'}
+            </h3>
+            <p className="text-slate-500 mb-2">
+              {hasActiveFilters
+                ? 'Try a broader search or clear filters to see every open job.'
+                : 'The marketplace is ready, but no employer has posted a live job yet.'}
+            </p>
             <div className="flex justify-center gap-3 mt-6">
               <Link
                 href="/jobs/post"
@@ -137,10 +180,10 @@ export default function JobsPageClient() {
                 + Post Kerja
               </Link>
               <button
-                onClick={() => setFilters({})}
+                onClick={() => handleFilterChange({})}
                 className="px-6 py-2.5 border border-slate-300 rounded-2xl text-sm font-medium hover:bg-slate-50 transition"
               >
-                Semua filter
+                Clear filters
               </button>
             </div>
           </div>

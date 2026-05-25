@@ -2,7 +2,7 @@
 
 **Last Updated**: 2026-05-25
 **Roadmap**: M0–M7 active (see docs/M0-TO-M7-ROADMAP.md)
-**Overall Progress**: ~66%
+**Overall Progress**: ~68%
 **Go-Live Target**: Late July – Early August 2026
 **Deployed**: upahje-my.vercel.app
 
@@ -105,7 +105,7 @@
 - **Portfolio System**: Complete (Behance/Figma-inspired project cards, grid, detail pages, 9 mock projects)
 - **Category Pages**: In progress (live Prisma-backed jobs for mapped verticals, slug-based routing)
 - **Visual Identity**: Complete (neutral #f8f8f8 / #f9f9f9 scheme, video backgrounds, green brand)
-- **Overall Progress**: ~45% (pages exist, live DB wiring landed for the main discovery paths)
+- **Overall Progress**: ~55% (pages exist, live DB wiring landed for the main discovery paths, and `/jobs` no longer uses fake fallback listings)
 
 ---
 
@@ -120,8 +120,9 @@
 | M2-H7  | Unify colour scheme                                 | Done       | Hermes | Neutral #f8f8f8 bg, no orange/amber, green brand |
 | M2-H8  | Wire categories with live Prisma data               | Done       | Hermes | Category pages query live Prisma jobs for mapped verticals |
 | M2-H9  | Build vertical landing pages for all categories     | In Progress | Hermes | 7 done, more verticals pending |
-| M2-H10 | Implement job discovery + search                    | Done       | Hermes | /jobs reads query-string filters; nav search routes into it |
+| M2-H10 | Implement job discovery + search                    | Done       | Codex | `/jobs` reads and writes query-string filters; quick chips now apply real category/track filters |
 | M2-H11 | Build job listing detail pages                      | Done       | Hermes | Live /jobs/[jobId] page + apply CTA wired to job APIs |
+| M2-H12 | Remove fake job fallback                            | Done       | Codex | `/api/jobs` now returns only live DB rows or a real error; no sample listings are presented as traction |
 
 ---
 
@@ -147,6 +148,7 @@
 | M3-A7  | Accepted-job project/contact handoff      | Pending     | Codex | Needs post-match project/contact workflow after `MATCHED` |
 | M3-A8  | Live Supabase migration + smoke test      | Pending     | Codex | Apply migration and test employer/talent end-to-end on live DB |
 | M3-A9  | Production route smoke coverage           | Done        | Codex | `npm run smoke:routes` covers public routes, protected redirects, and unauthenticated auth/application/KYC APIs |
+| M3-A10 | Employer job creation category resolution | Done        | Codex | Posting uses Prisma auth bridge, selected track, required description, and resolves/upserts domain category IDs |
 
 ---
 

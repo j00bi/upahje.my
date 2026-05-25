@@ -3,7 +3,7 @@
 **Last Updated**: 2026-05-25
 **Current Phase**: M2 (Marketplace Discovery) + M3 (Applications/Matching)
 **Roadmap**: M0 to M7 active (see docs/M0-TO-M7-ROADMAP.md)
-**Overall Progress**: ~66%
+**Overall Progress**: ~68%
 **Go-Live Target**: Late July – Early August 2026
 **Deployed**: upahje-my.vercel.app
 
@@ -13,7 +13,7 @@
 |-----------|--------------|----------|-------------------|
 | M0        | Complete     | 100%     | Codex             |
 | M1        | Complete     | 100%     | Hermes + Codex    |
-| M2        | Partial      | ~45%     | Hermes + Codex    |
+| M2        | Partial      | ~55%     | Hermes + Codex    |
 | M3        | In Progress  | ~35%     | Codex             |
 | M4        | Not Started  | 0%       | Grok + Codex      |
 
@@ -37,6 +37,7 @@
 - LiveJobFeed with real avatars, stronger hovers, trust section flip
 - Category pages now query live Prisma jobs for mapped verticals
 - Jobs list and detail pages are live, including query-string search from the nav bar
+- `/jobs` filter changes now sync back to the URL, and empty/error states no longer present sample jobs as live work
 - Behance/Figma-inspired portfolio system with project cards, grid, detail pages, 9 mock projects
 - Video background support (MP4 + WebM fallback)
 - Neutral colour scheme (#f8f8f8 / #f9f9f9 unified backgrounds)
@@ -48,6 +49,7 @@
 - Talent can track and withdraw applications from `/dashboard/talent/applications`
 - Employers can review, reject, and accept applications from `/dashboard/employer/applications` and `/dashboard/employer/jobs`
 - Accepting an application moves the job to `MATCHED`, assigns `talentId`, and rejects other pending/reviewed proposals
+- Employer job creation uses the shared Prisma auth bridge, resolves/upserts marketplace categories, and respects the selected Labour/Technical track
 
 **Supabase / Prisma** — Partial
 - Previous live `prisma db push` reported schema in sync; current `.env.local` `DATABASE_URL` fails Supabase authentication and blocks migration deploy/status checks
@@ -55,9 +57,11 @@
 - `npm run lint`, `npx tsc --noEmit`, `NODE_ENV=production npm run build`, and `npm run smoke:routes` pass locally
 - Cookie-backed API routes used by auth/KYC/applications are explicitly marked dynamic to avoid noisy static-generation probes
 - `/jobs/post` now uses server-side auth + employer-role gating before rendering
+- `/api/jobs` returns only live database jobs; empty/error states no longer fall back to mock marketplace listings
 
 ## Recent Activity
 
+- 2026-05-25: Removed fake job fallback from `/api/jobs`, made `/jobs` filters URL-synced, replaced fake quick chips with real filters, and moved job creation onto Prisma category resolution
 - 2026-05-25: Added `npm run smoke:routes` production route smoke test and fixed `/jobs/post` so anonymous users are redirected before seeing the form
 - 2026-05-24: Added real M3 application workflow: pending proposals, talent tracking, employer review/accept/reject, and Prisma application schema/migration
 - 2026-05-24: Restored the lint gate with Next 14-compatible ESLint dependencies, fixed lint errors, removed dead dashboard sidebar links, and marked cookie-backed APIs dynamic
@@ -76,7 +80,7 @@
 ## Next Actions
 
 1. Refresh Supabase `DATABASE_URL`, apply the new application migration, and smoke-test with one employer and one talent account
-2. Polish M2 discovery flow (more vertical mappings, quick filter chips, route-level URL sync)
+2. Polish M2 discovery flow (more vertical mappings and category-page visual consistency)
 3. Continue M3 matching: employer shortlist views, talent notifications/contact handoff, and accepted-job project state
 4. Implement trust & safety essentials for M4: reviews shell, escrow/payments hardening, and RLS verification
 

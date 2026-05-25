@@ -27,7 +27,11 @@ export function PostJobForm({ session, onSuccess }: PostJobFormProps) {
 
   const update = (k: string, v: string) => setForm(f => ({ ...f, [k]: v }))
 
-  const isValid = form.title.trim().length >= 3 && form.categoryId && form.location.trim()
+  const isValid =
+    form.title.trim().length >= 3 &&
+    form.description.trim().length >= 10 &&
+    form.categoryId &&
+    form.location.trim()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -182,13 +186,14 @@ form.track === t
 
       {/* Description */}
       <div>
-        <label className="block text-sm font-medium text-slate-700 mb-1.5">Description (optional)</label>
+        <label className="block text-sm font-medium text-slate-700 mb-1.5">Description *</label>
         <textarea
           value={form.description}
           onChange={e => update('description', e.target.value)}
           placeholder="Describe the job, requirements, what's included, any special notes..."
           className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm h-28 resize-none focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-transparent"
           maxLength={1000}
+          required
         />
         <p className="mt-1 text-xs text-slate-400 text-right">{form.description.length}/1000</p>
       </div>
