@@ -29,7 +29,8 @@ export default function EmployerProposalsPage() {
   const [actionLoading, setActionLoading] = useState<string | null>(null)
   const [filter, setFilter] = useState<string>('ALL')
 
-  useEffect(() => {
+  const loadApplications = () => {
+    setLoading(true)
     fetch('/api/applications?role=employer')
       .then(r => r.json())
       .then(data => {
@@ -37,6 +38,10 @@ export default function EmployerProposalsPage() {
         setLoading(false)
       })
       .catch(() => setLoading(false))
+  }
+
+  useEffect(() => {
+    loadApplications()
   }, [])
 
   const handleAction = async (appId: string, action: 'accept' | 'reject') => {
@@ -48,10 +53,7 @@ export default function EmployerProposalsPage() {
         body: JSON.stringify({ action }),
       })
       if (res.ok) {
-        const data = await res.json()
-        setApplications(prev =>
-          prev.map(a => a.id === appId ? { ...a, status: action === 'accept' ? 'ACCEPTED' : 'REJECTED' } : a)
-        )
+        loadApplications()
       } else {
         const err = await res.json()
         alert(err.error || 'Action failed')
@@ -177,6 +179,23 @@ export default function EmployerProposalsPage() {
                       {app.proposal}
                     </p>
                   </details>
+
+                  {app.status === 'ACCEPTED' && (
+                    <div className="mt-3 rounded-2xl border border-teal-100 bg-teal-50 p-3">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-teal-800">
+                        Contact handoff
+                      </p>
+                      <p className="mt-1 text-sm text-slate-700">
+                        This proposal is accepted. Email the talent to arrange scope, schedule, and payment next steps.
+                      </p>
+                      <a
+                        href={`mailto:${app.talent.user.email}?subject=${encodeURIComponent(`UpahJe job: ${app.job.title}`)}`}
+                        className="mt-2 inline-flex rounded-full bg-teal-700 px-4 py-2 text-xs font-bold text-white hover:bg-teal-800"
+                      >
+                        Email {app.talent.user.email}
+                      </a>
+                    </div>
+                  )}
                 </div>
 
                 {/* Actions */}

@@ -2,7 +2,7 @@
 
 **Last Updated**: 2026-05-25
 **Roadmap**: M0–M7 active (see docs/M0-TO-M7-ROADMAP.md)
-**Overall Progress**: ~68%
+**Overall Progress**: ~70%
 **Go-Live Target**: Late July – Early August 2026
 **Deployed**: upahje-my.vercel.app
 
@@ -133,7 +133,7 @@
 - **Talent Application Tracking**: In Progress (`/dashboard/talent/applications` lists and withdraws proposals)
 - **Employer Review**: In Progress (`/dashboard/employer/applications` and `/dashboard/employer/jobs` can review, reject, and accept)
 - **Matching State**: Partial (accepting a proposal assigns `Job.talentId`, marks job `MATCHED`, and rejects other pending/reviewed applications)
-- **Overall Progress**: ~35%
+- **Overall Progress**: ~45%
 
 ---
 
@@ -145,7 +145,7 @@
 | M3-A4  | Talent application tracking page          | Done        | Codex | `/dashboard/talent/applications` lists and withdraws applications |
 | M3-A5  | Employer application review page          | Done        | Codex | `/dashboard/employer/applications` lists proposals with accept/reject actions |
 | M3-A6  | Employer job-level applications page      | Done        | Codex | `/dashboard/employer/jobs` groups proposals by posted job |
-| M3-A7  | Accepted-job project/contact handoff      | Pending     | Codex | Needs post-match project/contact workflow after `MATCHED` |
+| M3-A7  | Accepted-job project/contact handoff      | Done        | Codex | Accepted applications show real email handoff cards in employer and talent dashboards |
 | M3-A8  | Live Supabase migration + smoke test      | Pending     | Codex | Apply migration and test employer/talent end-to-end on live DB |
 | M3-A9  | Production route smoke coverage           | Done        | Codex | `npm run smoke:routes` covers public routes, protected redirects, and unauthenticated auth/application/KYC APIs |
 | M3-A10 | Employer job creation category resolution | Done        | Codex | Posting uses Prisma auth bridge, selected track, required description, and resolves/upserts domain category IDs |

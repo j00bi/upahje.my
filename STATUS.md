@@ -3,7 +3,7 @@
 **Last Updated**: 2026-05-25
 **Current Phase**: M2 (Marketplace Discovery) + M3 (Applications/Matching)
 **Roadmap**: M0 to M7 active (see docs/M0-TO-M7-ROADMAP.md)
-**Overall Progress**: ~68%
+**Overall Progress**: ~70%
 **Go-Live Target**: Late July – Early August 2026
 **Deployed**: upahje-my.vercel.app
 
@@ -14,7 +14,7 @@
 | M0        | Complete     | 100%     | Codex             |
 | M1        | Complete     | 100%     | Hermes + Codex    |
 | M2        | Partial      | ~55%     | Hermes + Codex    |
-| M3        | In Progress  | ~35%     | Codex             |
+| M3        | In Progress  | ~45%     | Codex             |
 | M4        | Not Started  | 0%       | Grok + Codex      |
 
 ## Current Focus
@@ -49,6 +49,7 @@
 - Talent can track and withdraw applications from `/dashboard/talent/applications`
 - Employers can review, reject, and accept applications from `/dashboard/employer/applications` and `/dashboard/employer/jobs`
 - Accepting an application moves the job to `MATCHED`, assigns `talentId`, and rejects other pending/reviewed proposals
+- Accepted applications now show a real email handoff for employer and talent dashboards; no fake chat/review claims are shown
 - Employer job creation uses the shared Prisma auth bridge, resolves/upserts marketplace categories, and respects the selected Labour/Technical track
 
 **Supabase / Prisma** — Partial
@@ -62,6 +63,7 @@
 ## Recent Activity
 
 - 2026-05-25: Removed fake job fallback from `/api/jobs`, made `/jobs` filters URL-synced, replaced fake quick chips with real filters, and moved job creation onto Prisma category resolution
+- 2026-05-25: Added accepted-application contact handoff cards to employer proposal/job views and talent application tracking
 - 2026-05-25: Added `npm run smoke:routes` production route smoke test and fixed `/jobs/post` so anonymous users are redirected before seeing the form
 - 2026-05-24: Added real M3 application workflow: pending proposals, talent tracking, employer review/accept/reject, and Prisma application schema/migration
 - 2026-05-24: Restored the lint gate with Next 14-compatible ESLint dependencies, fixed lint errors, removed dead dashboard sidebar links, and marked cookie-backed APIs dynamic
@@ -81,7 +83,7 @@
 
 1. Refresh Supabase `DATABASE_URL`, apply the new application migration, and smoke-test with one employer and one talent account
 2. Polish M2 discovery flow (more vertical mappings and category-page visual consistency)
-3. Continue M3 matching: employer shortlist views, talent notifications/contact handoff, and accepted-job project state
+3. Continue M3 matching: employer shortlist views, notification surfaces, and accepted-job project state
 4. Implement trust & safety essentials for M4: reviews shell, escrow/payments hardening, and RLS verification
 
 ## Blockers

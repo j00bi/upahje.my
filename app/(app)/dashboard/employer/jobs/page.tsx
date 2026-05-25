@@ -115,6 +115,22 @@ export default async function EmployerJobsPage() {
                             <p className="mt-1 text-sm text-slate-600">
                               {application.talent.track} · {application.talent.rate || 'Rate not set'} · {application.talent.availability || 'Availability not set'}
                             </p>
+                            {application.status === 'ACCEPTED' && (
+                              <div className="mt-3 rounded-2xl border border-teal-100 bg-teal-50 p-3">
+                                <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-teal-800">
+                                  Contact handoff
+                                </p>
+                                <p className="mt-1 text-sm text-slate-700">
+                                  This talent is matched to the job. Confirm details directly before work starts.
+                                </p>
+                                <a
+                                  href={`mailto:${application.talent.user.email}?subject=${encodeURIComponent(`UpahJe job: ${job.title}`)}`}
+                                  className="mt-2 inline-flex rounded-full bg-teal-700 px-4 py-2 text-xs font-bold text-white hover:bg-teal-800"
+                                >
+                                  Email {application.talent.user.email}
+                                </a>
+                              </div>
+                            )}
                           </div>
                           <ApplicationActions applicationId={application.id} currentStatus={application.status} jobStatus={job.status} />
                         </div>

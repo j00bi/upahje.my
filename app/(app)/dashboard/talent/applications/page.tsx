@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
 
 interface Application {
   id: string
@@ -27,7 +26,6 @@ const STATUS_STYLES: Record<string, string> = {
 }
 
 export default function TalentApplicationsPage() {
-  const router = useRouter()
   const [applications, setApplications] = useState<Application[]>([])
   const [loading, setLoading] = useState(true)
   const [withdrawing, setWithdrawing] = useState<string | null>(null)
@@ -135,6 +133,22 @@ export default function TalentApplicationsPage() {
                       {app.proposal}
                     </p>
                   </details>
+                  {app.status === 'ACCEPTED' && (
+                    <div className="mt-3 rounded-2xl border border-teal-100 bg-teal-50 p-3">
+                      <p className="text-[11px] font-bold uppercase tracking-[0.14em] text-teal-800">
+                        Contact handoff
+                      </p>
+                      <p className="mt-1 text-sm text-slate-700">
+                        Your application was accepted. Email the employer to confirm schedule, scope, and payment next steps.
+                      </p>
+                      <a
+                        href={`mailto:${app.job.employer.user.email}?subject=${encodeURIComponent(`UpahJe job: ${app.job.title}`)}`}
+                        className="mt-2 inline-flex rounded-full bg-teal-700 px-4 py-2 text-xs font-bold text-white hover:bg-teal-800"
+                      >
+                        Email {app.job.employer.user.email}
+                      </a>
+                    </div>
+                  )}
                 </div>
 
                 <div className="shrink-0 flex flex-col gap-2">
