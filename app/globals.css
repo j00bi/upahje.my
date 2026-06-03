@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Prevent FOUC — content is hidden until intro overlay mounts */
-html[data-intro='loading'] #page-content {
-  visibility: hidden;
-}
+/* Content is now always visible - splash is non-blocking */
+/* Keeping data-intro for potential future use */
+/* html[data-intro='loading'] #page-content { visibility: hidden; } */
 
 :root {
   /* Logo green — extracted from upahje-logo.svg #166345 */
