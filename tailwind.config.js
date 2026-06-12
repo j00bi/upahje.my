@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
+    './data/**/*.{ts,tsx}',
   ],
   theme: {
     extend: {
@@ -56,14 +56,14 @@ module.exports = {
         'full': '9999px',
       },
       spacing: {
-        'xxs': '2px',
-        'xs': '4px',
-        'sm': '8px',
-        'md': '12px',
-        'lg': '16px',
-        'xl': '24px',
-        '2xl': '32px',
-        '3xl': '48px',
+        'brand-xxs': '2px',
+        'brand-xs': '4px',
+        'brand-sm': '8px',
+        'brand-md': '12px',
+        'brand-lg': '16px',
+        'brand-xl': '24px',
+        'brand-2xl': '32px',
+        'brand-3xl': '48px',
       },
       fontFamily: {
         sans: ['var(--font-dm-sans)', 'system-ui', '-apple-system', 'sans-serif'],

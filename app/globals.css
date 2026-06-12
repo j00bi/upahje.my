@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Prevent FOUC — content is hidden until intro overlay mounts */
-html[data-intro='loading'] #page-content {
-  visibility: hidden;
-}
-
 :root {
   /* Green Brand Core — unified around brand green #166345 */
   --color-primary: #166345;
