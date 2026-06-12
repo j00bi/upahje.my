@@ -1,240 +1,131 @@
-'use client'
-
-import { useState } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import { notFound } from 'next/navigation'
+import { prisma } from '@/lib/prisma'
 import { TalentCard } from '@/components/talent/TalentCard'
 import { rankTalents } from '@/lib/matching'
-import { mockTalents, talentLocations, talentRates, talentAvailability } from '@/lib/mockTalents'
-import { mockJobs } from '@/lib/mockJobs'
-import { slugify } from '@/lib/slug'
-import { TALENT_PROFILE_BY_SLUG } from '@/data/talentProfiles'
+import { getAverageRating } from '@/lib/reviews'
+import Link from 'next/link'
 
-export default function MatchesPage() {
-  const params = useParams()
-  const router = useRouter()
-  const jobId = params.jobId as string
+export const dynamic = 'force-dynamic'
 
-  // Find the job
-  const job = mockJobs.find(j => j.id === jobId)
+interface Props {
+  params: { jobId: string }
+}
 
-  // Filter state
-  const [selectedLocation, setSelectedLocation] = useState('All Locations')
-  const [selectedRate, setSelectedRate] = useState('All Rates')
-  const [selectedAvailability, setSelectedAvailability] = useState('All Availability')
-  const [searchQuery, setSearchQuery] = useState('')
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-
-  // Calculate match scores for all talents
-  const talentsWithScores = rankTalents(mockTalents, {
-    jobCategory: job?.category || '',
-    jobLocation: job?.location || '',
+export default async function MatchesPage({ params }: Props) {
+  const job = await prisma.job.findUnique({
+    where: { id: params.jobId },
+    include: {
+      category: true,
+      employer: { include: { user: true } },
+    },
   })
-
-  // Filter talents based on selected filters
-  const filteredTalents = talentsWithScores.filter((talentScore) => {
-    const talent = mockTalents.find(t => t.id === talentScore.talentId)
-    if (!talent) return false
-
-    // Location filter
-    const matchesLocation = selectedLocation === 'All Locations' || 
-      talent.location.includes(selectedLocation.replace('All Locations', ''))
-
-    // Rate filter
-    let matchesRate = true
-    if (selectedRate !== 'All Rates') {
-      const rateValue = parseInt(talent.rate.match(/\d+/)?.[0] || '0')
-      if (selectedRate === 'Under RM 30/hour') matchesRate = rateValue < 30
-      else if (selectedRate === 'RM 30 - 50/hour') matchesRate = rateValue >= 30 && rateValue <= 50
-      else if (selectedRate === 'RM 50 - 100/hour') matchesRate = rateValue > 50 && rateValue <= 100
-      else if (selectedRate === 'RM 100+/hour') matchesRate = rateValue > 100
-    }
-
-    // Availability filter
-    const matchesAvailability = selectedAvailability === 'All Availability' || 
-      talent.availability === selectedAvailability
-
-    // Search query
-    const matchesSearch = searchQuery === '' || 
-      talent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      talent.categories.some(cat => cat.toLowerCase().includes(searchQuery.toLowerCase()))
-
-    return matchesLocation && matchesRate && matchesAvailability && matchesSearch
-  })
-
-  // Handle contact action
-  const handleContact = (talentName: string) => {
-    console.log('Contact talent:', talentName)
-    // In a real app, this would open a chat or contact modal
-  }
-
-  // Handle view profile
-  const handleViewProfile = (talentName: string) => {
-    const slug = slugify(talentName)
-    router.push(TALENT_PROFILE_BY_SLUG[slug] ? `/talent/${slug}` : '/talent')
-  }
 
   if (!job) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-xl font-semibold text-gray-700">Job not found</h2>
-          <button
-            onClick={() => router.push('/jobs')}
-            className="mt-4 text-emerald-600 hover:text-emerald-700"
-          >
-            Back to Job Board
-          </button>
-        </div>
-      </div>
-    )
+    notFound()
   }
 
+  // Fetch talents that have categories matching the job's category
+  const talents = await prisma.talent.findMany({
+    where: {
+      categories: {
+        some: { categoryId: job.categoryId },
+      },
+    },
+    include: {
+      user: true,
+      categories: { include: { category: true } },
+    },
+  })
+
+  // Calculate match scores
+  const talentsWithScores = rankTalents(
+    talents.map((t) => ({
+      id: t.id,
+      categories: t.categories.map((tc) => tc.category.name),
+      location: t.user.name ?? '',
+      rate: t.rate ?? '',
+      availability: t.availability ?? '',
+    })),
+    {
+      jobCategory: job.category?.name ?? '',
+      jobLocation: job.location ?? '',
+      jobBudget: job.rate ?? undefined,
+    }
+  )
+
+  // Get ratings for each talent
+  const talentRatings = await Promise.all(
+    talents.map(async (t) => ({
+      talentId: t.id,
+      rating: await getAverageRating(t.userId),
+    }))
+  )
+
+  const ratingsMap = new Map(talentRatings.map((r) => [r.talentId, r.rating]))
+
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--color-canvas-soft)' }}>
       {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div>
-              <button
-                onClick={() => router.push('/jobs')}
-                className="text-emerald-600 hover:text-emerald-700 text-sm mb-2"
-              >
-                ← Back to Jobs
-              </button>
-              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Talent Matches</h1>
-              <p className="mt-1 text-sm text-gray-500">
-                Showing matched talents for: <span className="font-medium">{job.title}</span>
-              </p>
-            </div>
-            <div className="text-right">
-              <div className="text-sm text-gray-500">Location</div>
-              <div className="font-medium text-sm sm:text-base">{job.location}</div>
-            </div>
-          </div>
+      <header className="border-b" style={{ backgroundColor: 'var(--color-canvas)', borderColor: 'rgba(14, 15, 12, 0.06)' }}>
+        <div className="max-w-6xl mx-auto px-6 py-6">
+          <Link
+            href="/jobs"
+            className="text-sm font-medium mb-3 inline-flex items-center gap-1 hover:gap-2 transition-all"
+            style={{ color: 'var(--color-green-mid)' }}
+          >
+            ← Back to Jobs
+          </Link>
+          <h1 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>
+            Talent Matches
+          </h1>
+          <p className="mt-1 text-sm" style={{ color: 'var(--color-body)' }}>
+            Showing matched talent for: <span className="font-semibold">{job.title}</span>
+          </p>
+          {job.location && (
+            <p className="mt-1 text-xs" style={{ color: 'var(--color-mute)' }}>
+              📍 {job.location}
+            </p>
+          )}
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
-        {/* Filters */}
-        <div className="bg-white rounded-lg shadow-sm p-4 mb-4 sm:mb-6">
-          {/* Search Bar */}
-          <div className="mb-4">
-            <input
-              type="text"
-              placeholder="Search talents by name or skill..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-3 sm:py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
-            />
-          </div>
+      <main className="max-w-6xl mx-auto px-6 py-8">
+        {/* Results summary */}
+        <p className="text-sm mb-6" style={{ color: 'var(--color-body)' }}>
+          {talentsWithScores.length} talent{talentsWithScores.length !== 1 ? 's' : ''} matched
+        </p>
 
-          {/* Mobile Filter Toggle */}
-          <button
-            onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
-            className="md:hidden w-full flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-            </svg>
-            {mobileFiltersOpen ? 'Hide Filters' : 'Show Filters'}
-          </button>
-
-          {/* Filters */}
-          <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 ${mobileFiltersOpen ? 'block' : 'hidden md:grid'}`}>
-            {/* Location Filter */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
-              <select
-                value={selectedLocation}
-                onChange={(e) => setSelectedLocation(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
-              >
-                {talentLocations.map((location) => (
-                  <option key={location} value={location}>
-                    {location}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Rate Filter */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Rate</label>
-              <select
-                value={selectedRate}
-                onChange={(e) => setSelectedRate(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
-              >
-                {talentRates.map((rate) => (
-                  <option key={rate} value={rate}>
-                    {rate}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Availability Filter */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Availability</label>
-              <select
-                value={selectedAvailability}
-                onChange={(e) => setSelectedAvailability(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
-              >
-                {talentAvailability.map((availability) => (
-                  <option key={availability} value={availability}>
-                    {availability}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-
-        {/* Results Count */}
-        <div className="mb-4 text-sm text-gray-600">
-          Showing {filteredTalents.length} of {talentsWithScores.length} matched talents
-        </div>
-
-        {/* Talent Grid */}
-        {filteredTalents.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredTalents.map((talentScore) => {
-              const talent = mockTalents.find(t => t.id === talentScore.talentId)
+        {talentsWithScores.length > 0 ? (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {talentsWithScores.map((scored) => {
+              const talent = talents.find((t) => t.id === scored.talentId)
               if (!talent) return null
 
               return (
                 <TalentCard
                   key={talent.id}
-                  name={talent.name}
-                  track={talent.track}
-                  location={talent.location}
-                  rate={talent.rate}
-                  availability={talent.availability}
-                  categories={talent.categories}
-                  score={talentScore.score}
+                  name={talent.user.name ?? 'Unnamed'}
+                  track={talent.track as any}
+                  location={talent.user.name ?? ''}
+                  rate={talent.rate ?? 'Negotiable'}
+                  availability={talent.availability ?? 'Flexible'}
+                  categories={talent.categories.map((tc) => tc.category.name)}
+                  score={scored.score}
                   verified={talent.verified}
-                  onContact={() => handleContact(talent.name)}
-                  onViewProfile={() => handleViewProfile(talent.name)}
+                  averageRating={ratingsMap.get(talent.id)}
                 />
               )
             })}
           </div>
         ) : (
-          <div className="text-center py-12">
-            <p className="text-gray-500">No talents found matching your criteria.</p>
-            <button
-              onClick={() => {
-                setSelectedLocation('All Locations')
-                setSelectedRate('All Rates')
-                setSelectedAvailability('All Availability')
-                setSearchQuery('')
-              }}
-              className="mt-4 text-emerald-600 hover:text-emerald-700 font-medium"
-            >
-              Clear all filters
-            </button>
+          <div className="text-center py-16 rounded-2xl" style={{ backgroundColor: 'var(--color-canvas)', border: '1px solid rgba(14, 15, 12, 0.06)' }}>
+            <div className="text-3xl mb-3">🔍</div>
+            <p className="font-semibold mb-1" style={{ color: 'var(--color-ink)' }}>
+              No matching talent yet
+            </p>
+            <p className="text-sm max-w-xs mx-auto" style={{ color: 'var(--color-mute)' }}>
+              Talent matching this job category will appear here once they register.
+            </p>
           </div>
         )}
       </main>

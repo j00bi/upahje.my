@@ -8,7 +8,6 @@ const DURATION = 2800
 export function NakWordTicker() {
   const indexRef = useRef(0)
   const tickerRef = useRef<HTMLSpanElement>(null)
-  const intervalRef = useRef<ReturnType<typeof setInterval>>()
   const rafRef = useRef<number>()
 
   useEffect(() => {

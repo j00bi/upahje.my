@@ -29,7 +29,7 @@ export default async function TalentProfilePage({ params }: { params: Promise<{ 
   const averageRating = null as number | null
 
   const isLabour = profile.track === 'LABOUR'
-  const isPhotography = profile.track === 'PHOTOGRAPHY'
+  const isCreative = profile.categories.some((c) => c.name.toLowerCase().includes('photo') || c.name.toLowerCase().includes('video'))
 
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
@@ -40,8 +40,8 @@ export default async function TalentProfilePage({ params }: { params: Promise<{ 
             <div className="text-sm text-zinc-500">UpahJe.my / Talent</div>
             <h1 className="text-2xl sm:text-3xl font-semibold tracking-tight text-white">{profile.name}</h1>
           </div>
-          <div className={`px-3 py-1 rounded-full text-xs font-medium w-fit ${isLabour ? 'bg-green-900/50 text-green-400' : isPhotography ? 'bg-amber-900/50 text-amber-400' : 'bg-purple-900/50 text-purple-400'}`}>
-            {isLabour ? 'Labour Talent' : isPhotography ? 'Photography Talent' : 'Technical Talent'}
+          <div className={`px-3 py-1 rounded-full text-xs font-medium w-fit ${isLabour ? 'bg-green-900/50 text-green-400' : isCreative ? 'bg-amber-900/50 text-amber-400' : 'bg-purple-900/50 text-purple-400'}`}>
+            {isLabour ? 'Labour Talent' : isCreative ? 'Creative Talent' : 'Technical Talent'}
           </div>
         </div>
 
@@ -88,7 +88,7 @@ export default async function TalentProfilePage({ params }: { params: Promise<{ 
         </div>
 
         {/* Portfolio — Behance-style Project Grid */}
-        {isPhotography && (
+        {isCreative && (
           <div className="bg-zinc-900/50 border border-zinc-800 rounded-3xl p-5 sm:p-6 mb-6 sm:mb-8">
             <PortfolioGrid
               projects={portfolioProjects.filter((p) => p.talentSlug === slug)}
@@ -184,7 +184,7 @@ export default async function TalentProfilePage({ params }: { params: Promise<{ 
             <div className="font-semibold text-white">Ready to work with {profile.name.split(' ')[0]}?</div>
             <div className="text-sm text-zinc-500">Message to discuss your job details.</div>
           </div>
-          <button className={`w-full sm:w-auto px-6 sm:px-8 py-3 rounded-2xl font-medium text-white transition-all hover:opacity-90 ${isLabour ? 'bg-green-600' : isPhotography ? 'bg-amber-500 text-black hover:bg-amber-400' : 'bg-purple-600'}`}>
+          <button className={`w-full sm:w-auto px-6 sm:px-8 py-3 rounded-2xl font-medium text-white transition-all hover:opacity-90 ${isLabour ? 'bg-green-600' : isCreative ? 'bg-amber-500 text-black hover:bg-amber-400' : 'bg-purple-600'}`}>
             Hubungi Talent
           </button>
         </div>

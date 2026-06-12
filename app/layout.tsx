@@ -31,16 +31,8 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${sora.variable} ${dmSans.variable} bg-[var(--color-canvas-soft)]`}
-      suppressHydrationWarning
     >
-      <head>
-        {/* Prevent flash of content behind intro overlay — runs before paint */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{document.documentElement.setAttribute('data-intro','loading')}catch(e){}})()`,
-          }}
-        />
-      </head>
+      <head />
       <body className="bg-[var(--color-canvas-soft)] text-neutral-900">
         <AuthProvider>
           <IntroAnimation />
