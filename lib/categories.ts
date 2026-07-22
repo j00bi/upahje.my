@@ -33,7 +33,7 @@ export const MARKETPLACE_CATEGORIES: Category[] = [
     nameMs: 'Videografi',
     emoji: '🎥',
     description: 'Cinematography, event coverage, reels, drone, video editing',
-    talentCount: 0,
+    talentCount: 1,
     problemPhrase: 'Nak Shoot Video?',
     cluster: 'events',
     clusterLabel: 'Shoot & Content',
