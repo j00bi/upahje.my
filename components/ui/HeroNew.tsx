@@ -3,7 +3,6 @@
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { useState } from 'react'
-import { NakWordTicker } from './NakWordTicker'
 
 const POPULAR = [
   { label: 'Wedding', href: '/categories/photography' },
@@ -32,19 +31,17 @@ export default function HeroNew() {
       <div className="relative max-w-3xl mx-auto text-center">
         {/* Heading */}
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-tight">
-          <span className="text-neutral-950">Nak </span>
-          <span className="text-green-mid">
-            <NakWordTicker />
-          </span>
+          <span className="text-neutral-950">Upah sesiapa. </span>
+          <span className="text-green-mid">Untuk apa sahaja.</span>
         </h1>
 
-        <p className="mt-3 text-2xl sm:text-3xl font-semibold text-neutral-800">
-          Cari orang local yang boleh settle.
+        <p className="mt-3 text-xl sm:text-2xl font-semibold text-neutral-800">
+          Cari pekerja verified dekat kawasan kau.
         </p>
 
         {/* Subtitle */}
         <p className="mt-4 max-w-lg mx-auto text-base" style={{ color: 'var(--color-body)' }}>
-          Post kerja, banding profile verified, dan bayar dengan lebih selamat bila kerja siap.
+          Dari photography &bull; plumbing &bull; web design &bull; runner &bull; cleaning — post kerja, banding profile, bayar hanya bila puas hati.
         </p>
 
         {/* Search bar */}
