@@ -1,3 +1,31 @@
+/**
+ * MARKETPLACE_CATEGORIES — single source of truth for all
+ * browse-facing category data (homepage, /categories, footer).
+ *
+ * Each entry has a talentCount that determines:
+ *   - Whether it appears as "N talent sedia" or "Opening soon"
+ *   - Whether it's included in getActiveCategories()
+ *   - The stats shown on the homepage ("Kategori live" count)
+ *
+ * IMPORTANT: When a real talent signs up with a skill that maps
+ * to one of these categories, increment its talentCount here
+ * (or move talentCount to a DB query once profiles go live).
+ *
+ * @see lib/domain.ts — LABOUR_CATEGORIES and TECHNICAL_CATEGORIES
+ *   are the **posting-form** category set (jobs and onboarding).
+ *   They overlap conceptually but use different IDs and names.
+ *   Keep MARKETPLACE_CATEGORIES in sync with them.
+ *
+ * Mapping (domain.ts → marketplace slug):
+ *   LABOUR: rumah-taman→home-services, elektrik→electrical-trade,
+ *           cucian→home-services, angkat→home-services,
+ *           masakan→(none), jagaan→(none), kereta→(none),
+ *           karpet→home-services, haiwan→(none), foto→photography
+ *   TECHNICAL: design→design, webdev→web-design, content→content-creator,
+ *              video→videography, photo→photography, marketing→(none),
+ *              data→(none), business→admin-support, itsupport→admin-support,
+ *              social→content-creator
+ */
 export type CategoryCluster = 'events' | 'home' | 'digital' | 'business'
 
 export interface Category {
@@ -33,7 +61,7 @@ export const MARKETPLACE_CATEGORIES: Category[] = [
     nameMs: 'Videografi',
     emoji: '🎥',
     description: 'Cinematography, event coverage, reels, drone, video editing',
-    talentCount: 0,
+    talentCount: 1,
     problemPhrase: 'Nak Shoot Video?',
     cluster: 'events',
     clusterLabel: 'Shoot & Content',

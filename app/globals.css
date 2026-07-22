@@ -2,9 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Content is now always visible - splash is non-blocking */
-/* Keeping data-intro for potential future use */
-/* html[data-intro='loading'] #page-content { visibility: hidden; } */
+/* No blocking intro — SVG fade is non-blocking */
 
 :root {
   /* Logo green — extracted from upahje-logo.svg #166345 */
@@ -43,6 +41,12 @@
   --color-positive: #2ead4b;
   --color-warning: #ffd11a;
   --color-negative: #d03238;
+
+  /* Primary — derived from teal brand */
+  --color-primary: var(--color-teal-mid);
+  --color-primary-hover: var(--color-teal-deep);
+  --color-primary-pale: var(--color-teal-pale);
+  --color-primary-neutral: var(--color-teal-soft);
 
   /* Tertiary */
   --color-accent-orange: #ffc091;

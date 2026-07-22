@@ -20,6 +20,25 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   title: 'UpahJe.my — Malaysia\'s Local Hiring Platform',
   description: 'Hire trusted local help in Malaysia. Post a job, compare verified workers, and pay safely after the work is done.',
+  metadataBase: new URL('https://upahje.my'),
+  openGraph: {
+    title: 'UpahJe.my — Malaysia\'s Local Hiring Platform',
+    description: 'Hire trusted local help in Malaysia. Post a job, compare verified workers, and pay safely after the work is done.',
+    url: 'https://upahje.my',
+    siteName: 'UpahJe.my',
+    locale: 'en_MY',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'UpahJe.my — Malaysia\'s Local Hiring Platform',
+    description: 'Hire trusted local help in Malaysia. Post a job, compare verified workers, and pay safely after the work is done.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
 }
 
 export default function RootLayout({
@@ -33,14 +52,6 @@ export default function RootLayout({
       className={`${sora.variable} ${dmSans.variable} bg-[var(--color-canvas-soft)]`}
       suppressHydrationWarning
     >
-      <head>
-        {/* Prevent flash of content behind intro overlay — runs before paint */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{document.documentElement.setAttribute('data-intro','loading')}catch(e){}})()`,
-          }}
-        />
-      </head>
       <body className="bg-[var(--color-canvas-soft)] text-neutral-900">
         <AuthProvider>
           <IntroAnimation />
