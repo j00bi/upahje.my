@@ -42,7 +42,7 @@ export default function Footer() {
           <div>
             <div
               className="text-lg font-bold tracking-tight mb-4"
-              style={{ color: 'var(--color-canvas)' }}
+              style={{ color: 'var(--color-ink)' }}
             >
               UpahJe.my
             </div>

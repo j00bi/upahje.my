@@ -2,6 +2,19 @@ export type Track = "LABOUR" | "TECHNICAL" | "PHOTOGRAPHY";
 
 export type Role = "employer" | "talent";
 
+/**
+ * LABOUR_CATEGORIES and TECHNICAL_CATEGORIES
+ * The **posting-form** category set — used for /jobs/post, /jobs filters, and onboarding.
+ *
+ * These are NOT the same as MARKETPLACE_CATEGORIES in lib/categories.ts.
+ * The marketplace categories are the browse-side taxonomy (homepage, /categories, footer).
+ *
+ * When a job is posted with a domain.ts categoryId, it should map to a marketplace
+ * category slug for browse-side display. See lib/categories.ts for the full mapping.
+ *
+ * Keep both sets in sync — every domain category should map to at least one
+ * marketplace category.
+ */
 export const LABOUR_CATEGORIES = [
   { id: 'rumah-taman', name: 'Rumah & Taman', emoji: '🏠' },
   { id: 'haiwan', name: 'Haiwan Peliharaan', emoji: '🐾' },
