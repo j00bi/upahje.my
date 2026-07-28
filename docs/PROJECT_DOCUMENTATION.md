@@ -29,6 +29,165 @@ The current product direction is broad marketplace positioning: “upah sesiapa 
 | Payments | Billplz integration routes/helpers |
 | Deployment | Vercel |
 
+## Platform at a glance
+
+```mermaid
+flowchart TB
+    U[Visitor or signed-in user] --> NX[Next.js App Router]
+    NX --> MK[Marketplace pages]
+    NX --> DB[Role-aware dashboards]
+    NX --> AD[Admin and KYC]
+    NX --> API[Route handlers]
+
+    API --> AU[Supabase Auth]
+    API --> PR[Prisma]
+    PR --> PG[(PostgreSQL)]
+    API --> BP[Billplz]
+    NX --> VC[Vercel deployment]
+
+    MK --> JB[Jobs and categories]
+    MK --> TL[Talent and portfolios]
+    DB --> EM[Employer workflow]
+    DB --> TA[Talent workflow]
+
+    classDef brand fill:#dcfce7,stroke:#166345,color:#123d2b;
+    classDef data fill:#e0f2fe,stroke:#0369a1,color:#0c4a6e;
+    classDef trust fill:#fef3c7,stroke:#d97706,color:#78350f;
+    class NX,MK,DB,JB,TL,EM,TA brand;
+    class API,PR,PG,AU data;
+    class AD,BP trust;
+```
+
+### Marketplace journey
+
+```mermaid
+flowchart LR
+    V[Discover a need] --> S[Search jobs, categories or talent]
+    S --> R{Choose a role}
+    R -->|Employer| P[Post a job]
+    R -->|Talent| A[Apply to a job]
+    P --> M[Review matches]
+    A --> M
+    M --> K[KYC and trust checks]
+    K --> H[Hold payment]
+    H --> W[Work in progress]
+    W --> C[Complete job]
+    C --> E[Release escrow]
+    E --> RV[Review each other]
+
+    classDef brand fill:#dcfce7,stroke:#166345,color:#123d2b;
+    classDef trust fill:#fef3c7,stroke:#d97706,color:#78350f;
+    class V,S,P,A,M,W,C,RV brand;
+    class K,H,E trust;
+```
+
+### Core data relationships
+
+```mermaid
+flowchart TB
+    U[User] --> P[Profile and role]
+    U --> T[Talent profile]
+    U --> E[Employer profile]
+    T --> TC[Talent categories]
+    TC --> C[Category]
+    E --> J[Job]
+    C --> J
+    J -->|optional assignment| T
+    J --> X[Escrow transaction]
+    J --> PY[Payment]
+    J --> R[Review]
+
+    classDef identity fill:#e0f2fe,stroke:#0369a1,color:#0c4a6e;
+    classDef market fill:#dcfce7,stroke:#166345,color:#123d2b;
+    classDef money fill:#fef3c7,stroke:#d97706,color:#78350f;
+    class U,P identity;
+    class T,E,TC,C,J,R market;
+    class X,PY money;
+```
+
+## Marketplace analytics
+
+Analytics should answer three questions: **Are people finding relevant work? Are jobs converting? Is the marketplace becoming safer and healthier?**
+
+| Panel | Primary metrics | Product decision supported |
+| --- | --- | --- |
+| Acquisition | Visitors, source, landing-page conversion, search usage | Which channels and homepage sections work |
+| Demand | Jobs posted, category demand, budget distribution, location coverage | Where employer demand exists |
+| Supply | Active talent, profile completion, KYC rate, category coverage | Where talent supply is missing |
+| Matching | Applications per job, qualified matches, time to first application | Whether discovery and matching work |
+| Transaction | Payment starts, holds, releases, cancellations, completion value | Whether jobs become paid outcomes |
+| Trust | KYC approval time, disputes, cancellations, review coverage and rating | Whether the marketplace is safe |
+| Retention | Repeat employers, repeat talent, 30-day return rate | Whether users receive lasting value |
+
+```mermaid
+flowchart LR
+    V[Visit] --> S[Search or browse]
+    S --> JD[View job or talent]
+    JD --> INT[Apply or post]
+    INT --> MAT[Match]
+    MAT --> PAY[Payment held]
+    PAY --> DONE[Job completed]
+    DONE --> REV[Review]
+    REV --> RET[Repeat usage]
+
+    S -.-> D1[Search abandonment]
+    JD -.-> D2[Detail abandonment]
+    INT -.-> D3[Form abandonment]
+    MAT -.-> D4[Match rejection]
+    PAY -.-> D5[Payment failure]
+
+    classDef success fill:#dcfce7,stroke:#166345,color:#123d2b;
+    classDef drop fill:#fee2e2,stroke:#dc2626,color:#7f1d1d;
+    class V,S,JD,INT,MAT,PAY,DONE,REV,RET success;
+    class D1,D2,D3,D4,D5 drop;
+```
+
+### North-star and guardrail metrics
+
+**North-star metric:** successfully completed and paid jobs per week.
+
+Supporting metrics:
+
+1. Job-post-to-first-qualified-application time.
+2. Match-to-payment conversion rate.
+3. Payment-hold-to-completion conversion rate.
+4. Median employer and talent response time.
+5. KYC completion and approval rate.
+6. Repeat transaction rate by cohort.
+7. Supply-demand ratio by category and location.
+
+Guardrails:
+
+- Dispute and cancellation rate
+- Payment failure rate
+- KYC review backlog and turnaround time
+- Suspicious duplicate accounts/jobs
+- Search results with zero relevant supply
+
+### Event taxonomy
+
+Track consistent, privacy-conscious events rather than page views alone:
+
+```text
+search_performed
+category_viewed
+job_viewed
+job_post_started
+job_post_completed
+application_started
+application_submitted
+match_viewed
+kyc_submitted
+kyc_decided
+payment_started
+payment_held
+job_completed
+escrow_released
+review_submitted
+```
+
+Every event should include only the minimum useful dimensions: anonymized user/session ID, role, category, state/area, device class, timestamp, and outcome. Never send MyKad images, secrets, free-form private messages, or payment credentials to analytics.
+
 ## Repository map
 
 ```text
