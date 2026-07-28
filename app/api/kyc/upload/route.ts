@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
-import { auth } from '@/lib/auth'
+import { auth, ensureLocalUser } from '@/lib/auth'
 import { writeFile, mkdir } from 'fs/promises'
 import { join } from 'path'
 import { existsSync } from 'fs'
@@ -11,6 +11,7 @@ export async function POST(req: Request) {
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+    const localUser = await ensureLocalUser(session.user)
 
     const formData = await req.formData()
     const file = formData.get('mykad') as File | null
@@ -39,16 +40,28 @@ export async function POST(req: Request) {
       await mkdir(uploadDir, { recursive: true })
     }
 
-    const fileName = `${session.user.id}-${Date.now()}.${file.name.split('.').pop()}`
+    const extensionByType: Record<string, string> = {
+      'image/jpeg': 'jpg',
+      'image/png': 'png',
+      'image/webp': 'webp',
+      'application/pdf': 'pdf',
+    }
+    const fileName = `${localUser.id}-${Date.now()}.${extensionByType[file.type]}`
     const filePath = join(uploadDir, fileName)
     await writeFile(filePath, buffer)
 
     const fileUrl = `/uploads/mykad/${fileName}`
 
     // Update profile with KYC file and set status to SUBMITTED
-    await prisma.profile.update({
-      where: { userId: session.user.id },
-      data: {
+    await prisma.profile.upsert({
+      where: { userId: localUser.id },
+      create: {
+        userId: localUser.id,
+        role: 'TALENT',
+        kycFileUrl: fileUrl,
+        kycStatus: 'SUBMITTED',
+      },
+      update: {
         kycFileUrl: fileUrl,
         kycStatus: 'SUBMITTED',
       },

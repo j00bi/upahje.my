@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { createClient } from '@/lib/supabase/server'
 
 export async function POST(
   req: Request,
@@ -44,16 +45,42 @@ export async function POST(
       }, { status: 403 })
     }
 
-    // Update job with talent (mark as matched)
-    await prisma.job.update({
-      where: { id: jobId },
-      data: {
-        talentId: talent.id,
-        status: 'MATCHED',
-      },
-    })
+    const supabase = await createClient()
+    const { data: existingApplication, error: lookupError } = await supabase
+      .from('Application')
+      .select('id')
+      .eq('jobId', jobId)
+      .eq('applicantId', session.user.id)
+      .maybeSingle()
 
-    return NextResponse.json({ success: true, message: 'Application submitted successfully.' })
+    if (lookupError) {
+      throw lookupError
+    }
+
+    if (existingApplication) {
+      return NextResponse.json(
+        { error: 'You have already applied for this job.' },
+        { status: 409 }
+      )
+    }
+
+    const { error: applicationError } = await supabase
+      .from('Application')
+      .insert({
+        jobId,
+        applicantId: session.user.id,
+        message: proposal.trim(),
+        status: 'PENDING',
+      })
+
+    if (applicationError) {
+      throw applicationError
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: 'Application submitted for employer review.',
+    })
   } catch (error) {
     console.error('Apply error:', error)
     return NextResponse.json({ error: 'Failed to submit application' }, { status: 500 })

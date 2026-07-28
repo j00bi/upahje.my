@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
+import { getSampleMarketplaceJob } from '@/lib/sampleJobs'
 
 export async function GET(
   _req: Request,
@@ -7,6 +8,13 @@ export async function GET(
 ) {
   try {
     const { jobId } = await params
+    const previewJob = getSampleMarketplaceJob(jobId)
+
+    if (previewJob) {
+      return NextResponse.json(previewJob, {
+        headers: { 'x-upahje-data-source': 'preview' },
+      })
+    }
 
     const job = await prisma.job.findUnique({
       where: { id: jobId },
@@ -24,7 +32,9 @@ export async function GET(
       return NextResponse.json({ error: 'Job not found' }, { status: 404 })
     }
 
-    return NextResponse.json(job)
+    return NextResponse.json(job, {
+      headers: { 'x-upahje-data-source': 'live' },
+    })
   } catch (error) {
     console.error('Job fetch error:', error)
     return NextResponse.json({ error: 'Failed to fetch job' }, { status: 500 })

@@ -115,7 +115,7 @@ export default function MatchesPage() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
         {/* Filters */}
         <div className="bg-white rounded-lg shadow-sm p-4 mb-4 sm:mb-6">
           {/* Search Bar */}
@@ -237,7 +237,7 @@ export default function MatchesPage() {
             </button>
           </div>
         )}
-      </main>
+      </div>
     </div>
   )
 }

@@ -1,8 +1,51 @@
+import { redirect } from 'next/navigation'
 import { OnboardingFlow } from '@/components/onboarding/OnboardingFlow'
+import { getUserWithRole } from '@/lib/auth'
+import {
+  getDashboardPath,
+  normalizeInternalRedirect,
+  normalizeRegistrationRole,
+} from '@/lib/auth-redirect'
 
-export default function OnboardingPage() {
+export const dynamic = 'force-dynamic'
+
+type OnboardingPageProps = {
+  searchParams?: {
+    role?: string
+    next?: string
+  }
+}
+
+export default async function OnboardingPage({ searchParams }: OnboardingPageProps) {
+  const { user, role, employer, talent } = await getUserWithRole()
+  const nextPath = normalizeInternalRedirect(
+    searchParams?.next,
+    getDashboardPath(role),
+  )
+
+  if (!user) {
+    const callbackUrl = searchParams?.next
+      ? `/onboarding?next=${encodeURIComponent(nextPath)}`
+      : '/onboarding'
+    redirect(`/auth/signin?callbackUrl=${encodeURIComponent(callbackUrl)}`)
+  }
+
+  if (
+    role === 'ADMIN' ||
+    (role === 'EMPLOYER' && employer) ||
+    (role === 'TALENT' && talent)
+  ) {
+    redirect(nextPath)
+  }
+
+  const initialRole = role === 'EMPLOYER'
+    ? 'employer'
+    : role === 'TALENT'
+      ? 'talent'
+      : normalizeRegistrationRole(searchParams?.role)
+
   return (
-    <main className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-4 sm:gap-6 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
+    <div className="mx-auto flex min-h-screen w-full max-w-7xl flex-col gap-4 sm:gap-6 px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
       <section className="glass rounded-[2rem] p-4 sm:p-6 shadow-[0_24px_80px_rgba(15,23,42,0.08)]">
         <div className="grid gap-4 sm:gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
           <div className="space-y-3 sm:space-y-4">
@@ -13,7 +56,7 @@ export default function OnboardingPage() {
               Start with role, then track, then the profile depth.
             </h1>
             <p className="max-w-xl text-sm leading-6 text-slate-600">
-              Choose your path — whether you're hiring or looking for work.
+              Choose your path — whether you&apos;re hiring or looking for work.
             </p>
 
             <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
@@ -30,10 +73,10 @@ export default function OnboardingPage() {
           </div>
 
           <div className="rounded-[1.5rem] border border-slate-200 bg-white/80 p-4 sm:p-6">
-            <OnboardingFlow />
+            <OnboardingFlow initialRole={initialRole} nextPath={nextPath} />
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }

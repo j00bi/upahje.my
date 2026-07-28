@@ -67,7 +67,7 @@
 | ID      | Task                                              | Status | Owner | Notes |
 |---------|---------------------------------------------------|--------|-------|-------|
 | M1-L1   | Finalize Labour role selection screen             | In Progress | Grok  | Best-of-N variants present in live onboarding flow |
-| M1-L2   | Design Labour quick registration (email + phone)  | To Do  | Grok  | Browse-only path |
+| M1-L2   | Design Labour quick registration (email + phone)  | Done  | Codex  | Email/Google registration, role-prefilled onboarding, persistence and return intent wired |
 | M1-L3   | Design Labour full registration + KYC flow        | To Do  | Grok  | Full access path |
 | M1-L4   | Create Labour profile form (basic + advanced)     | To Do  | Grok  | - |
 | M1-L5   | Build MyKad upload + verification UI              | To Do  | Grok  | - |
@@ -80,7 +80,7 @@
 | ID      | Task                                              | Status | Owner | Notes |
 |---------|---------------------------------------------------|--------|-------|-------|
 | M1-E1   | Design Employer role selection screen             | In Progress | Grok  | Best-of-N employer variants present in live onboarding flow |
-| M1-E2   | Create Employer quick registration flow           | To Do  | Grok  | - |
+| M1-E2   | Create Employer quick registration flow           | Done  | Codex  | Email/Google registration converges on validated employer onboarding |
 | M1-E3   | Design Employer full onboarding (company info)    | To Do  | Grok  | - |
 | M1-E4   | Build job posting during onboarding (optional)    | To Do  | Grok  | - |
 

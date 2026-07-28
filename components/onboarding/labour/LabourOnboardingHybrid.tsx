@@ -66,13 +66,11 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
           <button onClick={onBack} className="py-3.5 border rounded-2xl">Back</button>
           <button 
             onClick={() => { 
-              if (data.fullName && data.phone) {
+              if (data.fullName && data.phone && data.location && data.categories?.length) {
                 onComplete?.({ ...data, quickStart: true })
-              } else {
-                setMode('full')
               }
             }}
-            disabled={!data.fullName || !data.phone}
+            disabled={!data.fullName || !data.phone || !data.location || !data.categories?.length}
             className="py-3.5 bg-green-mid text-white rounded-2xl font-medium flex items-center justify-center gap-2 disabled:bg-gray-300"
           >
             Go live now <ArrowRight className="w-4 h-4" />
@@ -136,7 +134,18 @@ export function LabourOnboardingHybrid({ onComplete, onBack }: LabourOnboardingH
         </div>
       </div>
 
-      <button onClick={() => onComplete?.(data)} className="mt-6 w-full py-4 bg-green-mid text-white font-semibold rounded-3xl">Create my full profile</button>
+      <button
+        onClick={() => onComplete?.(data)}
+        disabled={
+          !data.fullName ||
+          !data.phone ||
+          !data.location ||
+          !data.categories?.length
+        }
+        className="mt-6 w-full py-4 bg-green-mid text-white font-semibold rounded-3xl disabled:cursor-not-allowed disabled:bg-gray-300"
+      >
+        Create my full profile
+      </button>
     </div>
   )
 }

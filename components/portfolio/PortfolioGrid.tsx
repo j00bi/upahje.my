@@ -10,6 +10,7 @@ interface PortfolioGridProps {
   showFilters?: boolean
   title?: string
   subtitle?: string
+  loading?: boolean
 }
 
 export function PortfolioGrid({
@@ -18,6 +19,7 @@ export function PortfolioGrid({
   showFilters = true,
   title,
   subtitle,
+  loading = false,
 }: PortfolioGridProps) {
   const [activeCategory, setActiveCategory] = useState('All')
 
@@ -51,10 +53,12 @@ export function PortfolioGrid({
           {displayCategories.map((cat) => (
             <button
               key={cat}
+              type="button"
               onClick={() => setActiveCategory(cat)}
+              aria-pressed={activeCategory === cat}
               className={`rounded-full px-3.5 py-1.5 text-xs font-medium transition-all duration-200 ${
                 activeCategory === cat
-                  ? 'bg-primary text-ink'
+                  ? 'bg-primary text-white'
                   : 'bg-canvas-soft text-body hover:bg-primary-pale hover:text-ink'
               }`}
             >
@@ -72,18 +76,18 @@ export function PortfolioGrid({
       </div>
 
       {/* Empty State */}
-      {filteredProjects.length === 0 && (
+      {!loading && filteredProjects.length === 0 && (
         <div className="flex flex-col items-center justify-center py-16 text-center">
           <div className="mb-4 text-4xl">📭</div>
           <p className="text-sm font-medium text-mute">No projects yet</p>
           <p className="mt-1 text-xs text-mute">
-            Projects in &ldquo;{activeCategory}&rdquo; will appear here.
+            This talent has not uploaded portfolio work yet.
           </p>
         </div>
       )}
 
       {/* Loading state (Behance-style skeleton) */}
-      {projects.length === 0 && (
+      {loading && (
         <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
           {Array.from({ length: 6 }).map((_, i) => (
             <div key={i} className="mb-5 animate-pulse break-inside-avoid">

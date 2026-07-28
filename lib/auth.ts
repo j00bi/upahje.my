@@ -9,7 +9,10 @@ export async function auth() {
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    (
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
+      process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+    )!,
     {
       cookies: {
         getAll() {
@@ -31,10 +34,19 @@ export async function auth() {
   )
 
   const {
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser()
+
+  if (userError || !user) {
+    return null
+  }
+
+  const {
     data: { session },
   } = await supabase.auth.getSession()
 
-  return session
+  return session?.user.id === user.id ? session : null
 }
 
 export async function getUser() {

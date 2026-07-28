@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
 import { MARKETPLACE_CATEGORIES } from '@/lib/categories'
+import { useLanguage } from '@/lib/i18n'
 
 const footerCategories = MARKETPLACE_CATEGORIES.filter((category) =>
   ['photography', 'videography', 'home-services', 'electrical-trade', 'admin-support', 'web-design'].includes(category.slug),
@@ -8,32 +11,38 @@ const footerCategories = MARKETPLACE_CATEGORIES.filter((category) =>
   label: category.name,
 }))
 
-const footerSections = [
-  {
-    heading: 'For Clients',
-    links: [
-      { href: '/talent', label: 'Find Talent' },
-      { href: '/categories', label: 'Browse Categories' },
-      { href: '/jobs/post', label: 'Post a Job' },
-      { href: '/#how-it-works', label: 'How It Works' },
-    ],
-  },
-  {
-    heading: 'For Talent',
-    links: [
-      { href: '/jobs', label: 'Find Work' },
-      { href: '/auth/signup', label: 'Create Profile' },
-      { href: '/talent', label: 'Portfolio Gallery' },
-      { href: '/#how-it-works', label: 'How It Works' },
-    ],
-  },
-  {
-    heading: 'Categories',
-    links: footerCategories,
-  },
-]
-
 export default function Footer() {
+  const { isEnglish } = useLanguage()
+  const footerSections = [
+    {
+      heading: isEnglish ? 'For clients' : 'Untuk pengupah',
+      links: [
+        { href: '/talent', label: isEnglish ? 'Find Talent' : 'Cari Talent' },
+        { href: '/categories', label: isEnglish ? 'Browse Services' : 'Lihat Servis' },
+        { href: '/jobs/post', label: isEnglish ? 'Post a Job' : 'Post Kerja' },
+        { href: '/#how-it-works', label: isEnglish ? 'How It Works' : 'Cara Ia Berfungsi' },
+      ],
+    },
+    {
+      heading: isEnglish ? 'For talent' : 'Untuk talent',
+      links: [
+        { href: '/jobs', label: isEnglish ? 'Find Work' : 'Cari Kerja' },
+        { href: '/auth/signup', label: isEnglish ? 'Create Profile' : 'Cipta Profil' },
+        { href: '/talent', label: isEnglish ? 'Browse Talent' : 'Lihat Talent' },
+        { href: '/#how-it-works', label: isEnglish ? 'How It Works' : 'Cara Ia Berfungsi' },
+      ],
+    },
+    {
+      heading: isEnglish ? 'Categories' : 'Kategori',
+      links: footerCategories.map(category => ({
+        ...category,
+        label: isEnglish
+          ? MARKETPLACE_CATEGORIES.find(item => `/categories/${item.slug}` === category.href)?.name ?? category.label
+          : category.label,
+      })),
+    },
+  ]
+
   return (
     <footer className="footer">
       <div className="max-w-7xl mx-auto">
@@ -46,11 +55,12 @@ export default function Footer() {
             >
               UpahJe.my
             </div>
-            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              Malaysia&apos;s local hiring platform for trusted work — connect with verified
-              workers across events, home services, creative projects, and more.
+            <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.68)' }}>
+              {isEnglish
+                ? 'A local Malaysian marketplace for posting work, reviewing talent, and making clearer hiring decisions.'
+                : 'Marketplace tempatan Malaysia untuk post kerja, semak talent, dan membuat pilihan dengan lebih jelas.'}
             </p>
-            <div className="flex gap-4 text-sm" style={{ color: 'rgba(255,255,255,0.4)' }}>
+            <div className="flex flex-wrap gap-x-4 gap-y-2 text-sm" style={{ color: 'rgba(255,255,255,0.68)' }}>
               <a href="https://instagram.com/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
               <a href="https://facebook.com/upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Facebook</a>
               <a href="https://tiktok.com/@upahje" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">TikTok</a>
@@ -80,24 +90,24 @@ export default function Footer() {
           className="pt-8 mt-8 border-t flex flex-col sm:flex-row justify-between gap-4"
           style={{ borderColor: 'rgba(255,255,255,0.08)' }}
         >
-          <div className="text-xs" style={{ color: 'rgba(255,255,255,0.3)' }}>
-            © {new Date().getFullYear()} UpahJe.my. All rights reserved.
+          <div className="text-xs" style={{ color: 'rgba(255,255,255,0.6)' }}>
+            © {new Date().getFullYear()} UpahJe.my. {isEnglish ? 'All rights reserved.' : 'Hak cipta terpelihara.'}
           </div>
           <div className="flex gap-6">
             <Link href="/about" className="text-xs footer-link">
-              About
+              {isEnglish ? 'About' : 'Tentang'}
             </Link>
             <Link href="/faq" className="text-xs footer-link">
               FAQ
             </Link>
             <Link href="/contact" className="text-xs footer-link">
-              Contact
+              {isEnglish ? 'Contact' : 'Hubungi'}
             </Link>
             <Link href="/privacy" className="text-xs footer-link">
-              Privacy
+              {isEnglish ? 'Privacy' : 'Privasi'}
             </Link>
             <Link href="/terms" className="text-xs footer-link">
-              Terms
+              {isEnglish ? 'Terms' : 'Terma'}
             </Link>
           </div>
         </div>

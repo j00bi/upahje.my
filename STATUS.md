@@ -12,7 +12,7 @@
 | Milestone | Status       | Progress | Lead Agent(s)     |
 |-----------|--------------|----------|-------------------|
 | M0        | Complete     | 100%     | Codex             |
-| M1        | In Progress  | ~65%     | Grok + Codex      |
+| M1        | In Progress  | ~75%     | Grok + Codex      |
 | M2        | Partial      | ~45%     | Hermes + Codex    |
 | M3        | Not Started  | 0%       | Codex             |
 | M4        | Not Started  | 0%       | Grok + Codex      |
@@ -26,6 +26,9 @@
 - Onboarding Integration: Best-of-N Labour / Technical / Employer flows persist through `/api/onboarding/complete`
 
 **M1 – Onboarding / KYC** — Meaningfully integrated
+- Email registration/login, Google SSO, confirmation resend, password recovery,
+  safe return intents, and role-prefilled onboarding now share one post-auth
+  resolver. Live provider verification awaits a reachable Supabase project.
 - OnboardingFlow writes to Prisma-backed profile records
 - Labour / Technical / Employer variant selection preserved through completion
 - MyKad upload/status tracking is live and admin review can verify/reject submissions

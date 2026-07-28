@@ -14,12 +14,12 @@ export default function TalentIndexPage() {
                 Talent
               </p>
               <h1 className="font-display-xl" style={{ color: 'var(--color-ink-deep)' }}>
-                Compare verified local workers.
+                Semak talent tempatan sebelum anda pilih.
               </h1>
               <p className="mt-4 text-base" style={{ color: 'var(--color-body)' }}>
-                Browse early UpahJe profiles across creative, technical, and home service work.
+                Lihat profil awal UpahJe merentas kerja kreatif, teknikal, dan servis rumah.
                 <span className="block text-sm mt-1" style={{ color: 'var(--color-mute)' }}>
-                  Click a profile to preview, then &ldquo;View Full Profile&rdquo; for details.
+                  Buka profil untuk semak servis, lokasi, kadar, ketersediaan dan kerja terdahulu.
                 </span>
               </p>
             </div>
@@ -27,7 +27,7 @@ export default function TalentIndexPage() {
               href="/jobs/post"
               className="inline-flex w-fit items-center justify-center rounded-full bg-emerald-700 px-6 py-3 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-emerald-800"
             >
-              Post a Job
+              Post Kerja
             </Link>
           </div>
 

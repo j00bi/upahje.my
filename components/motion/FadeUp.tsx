@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 import { ReactNode } from 'react'
 
 interface Props {
@@ -23,13 +23,14 @@ export default function FadeUp({
   tag = 'div',
 }: Props) {
   const Tag = motion[tag]
+  const reduceMotion = useReducedMotion()
 
   return (
     <Tag
-      initial={{ opacity: 0, y: distance }}
+      initial={reduceMotion ? false : { opacity: 1, y: Math.min(distance, 12) }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once, margin: '-80px' }}
-      transition={{ duration, delay, ease: 'easeOut' }}
+      transition={{ duration: reduceMotion ? 0 : duration, delay: reduceMotion ? 0 : delay, ease: 'easeOut' }}
       className={className}
     >
       {children}

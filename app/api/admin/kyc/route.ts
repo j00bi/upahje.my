@@ -1,20 +1,17 @@
 import { NextResponse } from 'next/server'
-import { auth } from '@/lib/auth'
+
+export const dynamic = 'force-dynamic'
+import { getUserWithRole } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 
 export async function GET() {
   try {
-    const session = await auth()
-    if (!session?.user?.id) {
+    const { user, role } = await getUserWithRole()
+    if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const profile = await prisma.profile.findUnique({
-      where: { userId: session.user.id },
-      select: { role: true },
-    })
-
-    if (profile?.role !== 'ADMIN') {
+    if (role !== 'ADMIN') {
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 })
     }
 
