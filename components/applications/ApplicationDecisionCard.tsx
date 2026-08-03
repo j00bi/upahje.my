@@ -59,7 +59,10 @@ export function ApplicationDecisionCard({
   }
 
   return (
-    <article className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm">
+    <article
+      className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm"
+      data-application-id={applicationId}
+    >
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h2 className="font-semibold text-slate-950">{applicantName}</h2>
