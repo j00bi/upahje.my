@@ -1,0 +1,171 @@
+
+## Account
+  id:text!
+  userId:text!
+  type:text!
+  provider:text!
+  providerAccountId:text!
+  refresh_token:text
+  access_token:text
+  expires_at:integer
+  token_type:text
+  scope:text
+  id_token:text
+  session_state:text
+
+## Category
+  id:text!
+  name:text!
+  track:USER-DEFINED!
+  emoji:text
+
+## Employer
+  id:text!
+  userId:text!
+  company:text
+  createdAt:timestamp without time zone!=CURRENT_TIMESTAMP
+
+## EscrowTransaction
+  id:text!
+  jobId:text!
+  amount:double precision!
+  status:USER-DEFINED!='HELD'::"EscrowStatus"
+  employerId:text!
+  talentId:text!
+  billplzTransactionId:text
+  createdAt:timestamp without time zone!=CURRENT_TIMESTAMP
+  releasedAt:timestamp without time zone
+  cancelledAt:timestamp without time zone
+
+## Job
+  id:text!
+  title:text!
+  description:text
+  track:USER-DEFINED!
+  rate:text
+  location:text
+  status:USER-DEFINED!='OPEN'::"JobStatus"
+  employerId:text!
+  talentId:text
+  createdAt:timestamp without time zone!=CURRENT_TIMESTAMP
+  categoryId:text!
+
+## Payment
+  id:text!
+  jobId:text!
+  amount:double precision!
+  status:text!
+  employerEmail:text!
+  talentEmail:text!
+  paidAt:timestamp without time zone
+  createdAt:timestamp without time zone!=CURRENT_TIMESTAMP
+
+## Profile
+  id:text!
+  userId:text!
+  role:USER-DEFINED!='TALENT'::"Role"
+  phone:text
+  state:text
+  area:text
+  createdAt:timestamp without time zone!=CURRENT_TIMESTAMP
+  updatedAt:timestamp without time zone!
+
+## Review
+  id:text!
+  jobId:text!
+  rating:integer!
+  comment:text
+  fromUserId:text!
+  toUserId:text!
+  createdAt:timestamp without time zone!=CURRENT_TIMESTAMP
+
+## Session
+  id:text!
+  sessionToken:text!
+  userId:text!
+  expires:timestamp without time zone!
+
+## Talent
+  id:text!
+  userId:text!
+  track:USER-DEFINED!
+  bio:text
+  rate:text
+  availability:text
+  kycTier:integer!=0
+  verified:boolean!=false
+  createdAt:timestamp without time zone!=CURRENT_TIMESTAMP
+
+## TalentCategory
+  talentId:text!
+  categoryId:text!
+
+## User
+  id:text!
+  email:text!
+  name:text
+  image:text
+  createdAt:timestamp without time zone!=CURRENT_TIMESTAMP
+  updatedAt:timestamp without time zone!
+
+## ENUMS
+  EscrowStatus: HELD,RELEASED,CANCELLED
+  JobStatus: OPEN,MATCHED,IN_PROGRESS,COMPLETED,CANCELLED
+  Role: TALENT,EMPLOYER,ADMIN
+  Track: LABOUR,TECHNICAL
+  aal_level: aal1,aal2,aal3
+  action: INSERT,UPDATE,DELETE,TRUNCATE,ERROR
+  buckettype: STANDARD,ANALYTICS,VECTOR
+  code_challenge_method: s256,plain
+  equality_op: eq,neq,lt,lte,gt,gte,in,like,ilike,is,match,imatch,isdistinct
+  factor_status: unverified,verified
+  factor_type: totp,webauthn,phone
+  oauth_authorization_status: pending,approved,denied,expired
+  oauth_client_type: public,confidential
+  oauth_registration_type: dynamic,manual
+  oauth_response_type: code
+  one_time_token_type: confirmation_token,reauthentication_token,recovery_token,email_change_token_new,email_change_token_current,phone_change_token
+
+## FKs
+  Account.userId -> User.id
+  Employer.userId -> User.id
+  EscrowTransaction.talentId -> Talent.id
+  EscrowTransaction.employerId -> Employer.id
+  EscrowTransaction.jobId -> Job.id
+  Job.talentId -> Talent.id
+  Job.employerId -> Employer.id
+  Job.categoryId -> Category.id
+  Payment.jobId -> Job.id
+  Profile.userId -> User.id
+  Review.fromUserId -> User.id
+  Review.toUserId -> User.id
+  Session.userId -> User.id
+  Talent.userId -> User.id
+  TalentCategory.categoryId -> Category.id
+  TalentCategory.talentId -> Talent.id
+
+## INDEXES
+  Account: Account_provider_providerAccountId_key
+  Account: Account_pkey
+  Category: Category_name_key
+  Category: Category_pkey
+  Employer: Employer_userId_key
+  Employer: Employer_pkey
+  EscrowTransaction: EscrowTransaction_jobId_idx
+  EscrowTransaction: EscrowTransaction_employerId_idx
+  EscrowTransaction: EscrowTransaction_talentId_idx
+  EscrowTransaction: EscrowTransaction_pkey
+  Job: Job_pkey
+  Payment: Payment_jobId_idx
+  Payment: Payment_pkey
+  Profile: Profile_pkey
+  Profile: Profile_userId_key
+  Review: Review_jobId_key
+  Review: Review_pkey
+  Session: Session_sessionToken_key
+  Session: Session_pkey
+  Talent: Talent_userId_key
+  Talent: Talent_pkey
+  TalentCategory: TalentCategory_pkey
+  User: User_email_key
+  User: User_pkey
