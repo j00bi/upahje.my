@@ -29,16 +29,40 @@ export function TalentProfilePreview({
   certs = [],
   variant = 'full',
 }: TalentProfilePreviewProps) {
-  const isLabour = track === 'LABOUR'
-  const accent = isLabour ? 'green' : 'purple'
+  const accent = track === 'LABOUR'
+    ? {
+        header: 'bg-green-50',
+        icon: 'bg-green-200',
+        chip: 'bg-green-100 text-green-800',
+        footer: 'text-green-700',
+        emoji: '👷',
+        label: 'Labour Talent',
+      }
+    : track === 'PHOTOGRAPHY'
+      ? {
+          header: 'bg-amber-50',
+          icon: 'bg-amber-100',
+          chip: 'bg-amber-100 text-amber-900',
+          footer: 'text-amber-800',
+          emoji: '📸',
+          label: 'Photography Talent',
+        }
+      : {
+          header: 'bg-purple-50',
+          icon: 'bg-purple-200',
+          chip: 'bg-purple-100 text-purple-800',
+          footer: 'text-purple-700',
+          emoji: '💻',
+          label: 'Technical Talent',
+        }
 
   return (
     <div className={`border rounded-3xl overflow-hidden bg-white ${variant === 'compact' ? 'text-sm' : ''}`}>
       {/* Header */}
-      <div className={`p-5 bg-${accent}-50 border-b`}>
+      <div className={`border-b p-5 ${accent.header}`}>
         <div className="flex items-center gap-3">
-          <div className={`w-12 h-12 rounded-2xl bg-${accent}-200 flex items-center justify-center text-2xl`}>
-            {isLabour ? '👷' : '💻'}
+          <div className={`flex h-12 w-12 items-center justify-center rounded-2xl text-2xl ${accent.icon}`}>
+            {accent.emoji}
           </div>
           <div>
             <div className="font-semibold text-lg">{name}</div>
@@ -66,7 +90,7 @@ export function TalentProfilePreview({
             <div className="text-[10px] uppercase tracking-widest text-gray-500 mb-1.5">Services</div>
             <div className="flex flex-wrap gap-1.5">
               {categories.slice(0, 4).map((c, i) => (
-                <span key={i} className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-${accent}-100 text-${accent}-800 text-xs`}>
+                <span key={i} className={`inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs ${accent.chip}`}>
                   {c.emoji} {c.name}
                 </span>
               ))}
@@ -92,7 +116,9 @@ export function TalentProfilePreview({
             <div className="text-[10px] uppercase tracking-widest text-gray-500 mb-1">Portfolio</div>
             <div className="text-xs text-blue-600 space-x-2">
               {portfolio.slice(0, 2).map((p, i) => (
-                <a key={i} href={p} target="_blank" className="hover:underline">Link {i+1}</a>
+                <a key={i} href={p} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                  Portfolio link {i + 1}
+                </a>
               ))}
             </div>
           </div>
@@ -115,8 +141,8 @@ export function TalentProfilePreview({
         </div>
       </div>
 
-      <div className={`px-5 py-3 bg-gray-50 text-[10px] text-gray-500 border-t flex items-center gap-2 ${isLabour ? 'text-green-700' : 'text-purple-700'}`}>
-        {isLabour ? 'Labour Talent' : 'Technical Talent'} • Profile preview
+      <div className={`flex items-center gap-2 border-t bg-gray-50 px-5 py-3 text-[10px] ${accent.footer}`}>
+        {accent.label} • Profile preview
       </div>
     </div>
   )

@@ -2,9 +2,26 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { getSampleMarketplaceJob } from '@/lib/sampleJobs'
 import { ApplySection } from './ApplySection'
 
 export const dynamic = 'force-dynamic'
+
+interface JobDetail {
+  id: string
+  title: string
+  description: string | null
+  rate: string | null
+  location: string | null
+  track: string
+  status: string
+  createdAt: Date
+  category: { id: string; name: string; emoji: string | null } | null
+  employer: {
+    company: string | null
+    user: { id: string; name: string | null; email: string }
+  } | null
+}
 
 export default async function JobDetailPage({
   params,
@@ -14,19 +31,52 @@ export default async function JobDetailPage({
   const { jobId } = await params
   const session = await auth()
 
-  const job = await prisma.job.findUnique({
-    where: { id: jobId },
-    include: {
-      employer: {
+  let job: JobDetail | null = getSampleMarketplaceJob(jobId)
+  let loadFailed = false
+
+  if (!job) {
+    try {
+      job = await prisma.job.findUnique({
+        where: { id: jobId },
         include: {
-          user: { select: { id: true, name: true, email: true } },
+          employer: {
+            include: {
+              user: { select: { id: true, name: true, email: true } },
+            },
+          },
+          category: { select: { id: true, name: true, emoji: true } },
         },
-      },
-      category: { select: { id: true, name: true, emoji: true } },
-    },
-  })
+      })
+    } catch (error) {
+      console.error('Job detail fetch error:', error)
+      loadFailed = true
+    }
+  }
+
+  if (loadFailed) {
+    return (
+      <div className="min-h-[70vh] bg-[#f8f8f8] px-4 py-16">
+        <div className="mx-auto max-w-xl rounded-3xl border border-slate-200 bg-white p-6 text-center sm:p-8">
+          <div className="text-4xl" aria-hidden="true">↻</div>
+          <h1 className="mt-4 text-2xl font-semibold text-slate-900">We couldn&apos;t load this job</h1>
+          <p className="mt-2 text-sm leading-6 text-slate-600">
+            The marketplace service is temporarily unavailable. Your account and application data have not been changed.
+          </p>
+          <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link href={`/jobs/${jobId}`} className="inline-flex min-h-11 items-center justify-center rounded-xl bg-green-mid px-5 text-sm font-semibold text-white">
+              Try again
+            </Link>
+            <Link href="/jobs" className="inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 text-sm font-semibold text-slate-800">
+              Back to jobs
+            </Link>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   if (!job) notFound()
+  const isPreview = jobId.startsWith('sample-')
 
   const postedDate = new Date(job.createdAt).toLocaleDateString('ms-MY', {
     day: 'numeric', month: 'long', year: 'numeric'
@@ -48,7 +98,14 @@ export default async function JobDetailPage({
 
       <div className="max-w-3xl mx-auto px-4 py-8 space-y-6">
         {/* Main card */}
-        <div className="bg-white border border-slate-200 rounded-3xl p-8">
+        {isPreview && (
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900" role="status">
+            <span className="font-semibold">Preview listing.</span>{' '}
+            This example shows how a job page works and cannot accept applications.
+          </div>
+        )}
+
+        <div className="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8">
           <div className="flex items-center gap-2 mb-4">
             {job.category && (
               <span className="text-sm bg-slate-100 text-slate-600 px-3 py-1 rounded-full">
@@ -59,7 +116,7 @@ export default async function JobDetailPage({
               {job.track === 'LABOUR' ? '🛠️ Labour' : '💻 Technical'}
             </span>
             <span className={`text-xs px-2.5 py-1 rounded-full font-medium ml-auto ${job.status === 'OPEN' ? 'bg-green-100 text-green-700' : 'bg-slate-100 text-slate-600'}`}>
-              {job.status}
+              {job.status === 'OPEN' ? 'Open' : job.status}
             </span>
           </div>
 
@@ -106,8 +163,25 @@ export default async function JobDetailPage({
           )}
         </div>
 
-        {/* Apply section — client component */}
-        <ApplySection jobId={jobId} userId={session?.user?.id} />
+        {/* Preview listings demonstrate layout but never accept applications. */}
+        {isPreview ? (
+          <div className="rounded-3xl border border-slate-200 bg-white p-6">
+            <h2 className="text-lg font-semibold text-slate-900">Ready to find real work?</h2>
+            <p className="mt-1 text-sm text-slate-600">
+              Browse available jobs or create your talent profile to be ready when new jobs are posted.
+            </p>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row">
+              <Link href="/jobs" className="inline-flex min-h-11 items-center justify-center rounded-xl bg-green-mid px-5 text-sm font-semibold text-white">
+                Browse jobs
+              </Link>
+              <Link href="/auth/signup?role=talent" className="inline-flex min-h-11 items-center justify-center rounded-xl border border-slate-300 px-5 text-sm font-semibold text-slate-800">
+                Create talent profile
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <ApplySection jobId={jobId} userId={session?.user?.id} />
+        )}
       </div>
     </div>
   )

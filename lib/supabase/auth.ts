@@ -4,17 +4,44 @@ import { normalizeInternalRedirect, normalizeRegistrationRole } from '@/lib/auth
 
 const supabase = createClient()
 
-export async function signUpWithEmail(email: string, password: string, role?: string) {
-  const registrationRole = normalizeRegistrationRole(role)
-  // Construct the callback URL with the role parameter
-  const origin =
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000')
-  const callbackUrl = new URL(origin)
+function getAuthOrigin() {
+  if (typeof window !== 'undefined') {
+    return window.location.origin
+  }
+
+  return process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
+}
+
+function buildAuthCallbackUrl(options: { role?: string; callbackUrl?: string }) {
+  const registrationRole = normalizeRegistrationRole(options.role)
+  const callbackUrl = new URL(getAuthOrigin())
   callbackUrl.pathname = '/auth/callback'
+
   if (registrationRole) {
     callbackUrl.searchParams.set('role', registrationRole)
   }
+
+  if (options.callbackUrl) {
+    callbackUrl.searchParams.set(
+      'next',
+      normalizeInternalRedirect(options.callbackUrl),
+    )
+  }
+
+  return callbackUrl
+}
+
+export async function signUpWithEmail(
+  email: string,
+  password: string,
+  options: { role?: string; callbackUrl?: string } = {},
+) {
+  const { role, callbackUrl: requestedCallbackUrl } = options
+  const registrationRole = normalizeRegistrationRole(role)
+  const callbackUrl = buildAuthCallbackUrl({
+    role,
+    callbackUrl: requestedCallbackUrl,
+  })
 
   const { data, error } = await supabase.auth.signUp({
     email,
@@ -41,18 +68,7 @@ export async function signInWithOAuth(
   provider: Provider,
   options: { role?: string; callbackUrl?: string } = {},
 ) {
-  const registrationRole = normalizeRegistrationRole(options.role)
-  const origin =
-    process.env.NEXT_PUBLIC_SITE_URL ??
-    (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:3000')
-  const callbackUrl = new URL(origin)
-  callbackUrl.pathname = '/auth/callback'
-  if (registrationRole) {
-    callbackUrl.searchParams.set('role', registrationRole)
-  }
-  if (options.callbackUrl) {
-    callbackUrl.searchParams.set('next', normalizeInternalRedirect(options.callbackUrl))
-  }
+  const callbackUrl = buildAuthCallbackUrl(options)
 
   const { data, error } = await supabase.auth.signInWithOAuth({
     provider,
@@ -63,6 +79,36 @@ export async function signInWithOAuth(
       },
     },
   })
+  return { data, error }
+}
+
+export async function resendSignupConfirmation(
+  email: string,
+  options: { role?: string; callbackUrl?: string } = {},
+) {
+  const callbackUrl = buildAuthCallbackUrl(options)
+  const { data, error } = await supabase.auth.resend({
+    type: 'signup',
+    email,
+    options: {
+      emailRedirectTo: callbackUrl.toString(),
+    },
+  })
+  return { data, error }
+}
+
+export async function sendPasswordResetEmail(email: string) {
+  const callbackUrl = buildAuthCallbackUrl({
+    callbackUrl: '/auth/reset-password',
+  })
+  const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
+    redirectTo: callbackUrl.toString(),
+  })
+  return { data, error }
+}
+
+export async function updatePassword(password: string) {
+  const { data, error } = await supabase.auth.updateUser({ password })
   return { data, error }
 }
 

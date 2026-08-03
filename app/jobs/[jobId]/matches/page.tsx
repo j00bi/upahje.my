@@ -1,243 +1,166 @@
-'use client'
+import Link from 'next/link'
+import { notFound, redirect } from 'next/navigation'
+import { ApplicationDecisionCard } from '@/components/applications/ApplicationDecisionCard'
+import { getUserWithRole } from '@/lib/auth'
+import { scoreApplicationMatch } from '@/lib/application-matching'
+import { prisma } from '@/lib/prisma'
 
-import { useState } from 'react'
-import { useParams, useRouter } from 'next/navigation'
-import { TalentCard } from '@/components/talent/TalentCard'
-import { rankTalents } from '@/lib/matching'
-import { mockTalents, talentLocations, talentRates, talentAvailability } from '@/lib/mockTalents'
-import { mockJobs } from '@/lib/mockJobs'
-import { slugify } from '@/lib/slug'
-import { TALENT_PROFILE_BY_SLUG } from '@/data/talentProfiles'
+export const dynamic = 'force-dynamic'
 
-export default function MatchesPage() {
-  const params = useParams()
-  const router = useRouter()
-  const jobId = params.jobId as string
+export default async function JobApplicationsPage({
+  params,
+}: {
+  params: Promise<{ jobId: string }>
+}) {
+  const { jobId } = await params
+  const { user } = await getUserWithRole()
 
-  // Find the job
-  const job = mockJobs.find(j => j.id === jobId)
+  if (!user) {
+    redirect(`/auth/signin?callbackUrl=/jobs/${jobId}/matches`)
+  }
 
-  // Filter state
-  const [selectedLocation, setSelectedLocation] = useState('All Locations')
-  const [selectedRate, setSelectedRate] = useState('All Rates')
-  const [selectedAvailability, setSelectedAvailability] = useState('All Availability')
-  const [searchQuery, setSearchQuery] = useState('')
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-
-  // Calculate match scores for all talents
-  const talentsWithScores = rankTalents(mockTalents, {
-    jobCategory: job?.category || '',
-    jobLocation: job?.location || '',
+  const job = await prisma.job.findUnique({
+    where: { id: jobId },
+    include: {
+      category: true,
+      employer: true,
+      applications: {
+        include: {
+          applicant: {
+            include: {
+              profile: true,
+              talent: {
+                include: {
+                  categories: true,
+                },
+              },
+            },
+          },
+        },
+        orderBy: [
+          { status: 'asc' },
+          { createdAt: 'desc' },
+        ],
+      },
+    },
   })
 
-  // Filter talents based on selected filters
-  const filteredTalents = talentsWithScores.filter((talentScore) => {
-    const talent = mockTalents.find(t => t.id === talentScore.talentId)
-    if (!talent) return false
-
-    // Location filter
-    const matchesLocation = selectedLocation === 'All Locations' || 
-      talent.location.includes(selectedLocation.replace('All Locations', ''))
-
-    // Rate filter
-    let matchesRate = true
-    if (selectedRate !== 'All Rates') {
-      const rateValue = parseInt(talent.rate.match(/\d+/)?.[0] || '0')
-      if (selectedRate === 'Under RM 30/hour') matchesRate = rateValue < 30
-      else if (selectedRate === 'RM 30 - 50/hour') matchesRate = rateValue >= 30 && rateValue <= 50
-      else if (selectedRate === 'RM 50 - 100/hour') matchesRate = rateValue > 50 && rateValue <= 100
-      else if (selectedRate === 'RM 100+/hour') matchesRate = rateValue > 100
-    }
-
-    // Availability filter
-    const matchesAvailability = selectedAvailability === 'All Availability' || 
-      talent.availability === selectedAvailability
-
-    // Search query
-    const matchesSearch = searchQuery === '' || 
-      talent.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      talent.categories.some(cat => cat.toLowerCase().includes(searchQuery.toLowerCase()))
-
-    return matchesLocation && matchesRate && matchesAvailability && matchesSearch
-  })
-
-  // Handle contact action
-  const handleContact = (talentName: string) => {
-    console.log('Contact talent:', talentName)
-    // In a real app, this would open a chat or contact modal
+  if (!job) notFound()
+  if (job.employer.userId !== user.id) {
+    redirect('/dashboard')
   }
 
-  // Handle view profile
-  const handleViewProfile = (talentName: string) => {
-    const slug = slugify(talentName)
-    router.push(TALENT_PROFILE_BY_SLUG[slug] ? `/talent/${slug}` : '/talent')
-  }
-
-  if (!job) {
-    return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-xl font-semibold text-gray-700">Job not found</h2>
-          <button
-            onClick={() => router.push('/jobs')}
-            className="mt-4 text-emerald-600 hover:text-emerald-700"
-          >
-            Back to Job Board
-          </button>
-        </div>
-      </div>
-    )
-  }
+  const pendingCount = job.applications.filter(
+    (application) => application.status === 'PENDING',
+  ).length
+  const acceptedApplication = job.applications.find(
+    (application) => application.status === 'ACCEPTED',
+  )
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      {/* Header */}
-      <header className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+    <div className="min-h-screen bg-[#f8f8f8] px-4 py-8 sm:py-12">
+      <div className="mx-auto max-w-5xl">
+        <Link
+          href="/dashboard/employer"
+          className="text-sm font-semibold text-emerald-700 hover:text-emerald-800"
+        >
+          ← Employer dashboard
+        </Link>
+
+        <header className="mt-5 rounded-[2rem] border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
             <div>
-              <button
-                onClick={() => router.push('/jobs')}
-                className="text-emerald-600 hover:text-emerald-700 text-sm mb-2"
-              >
-                ← Back to Jobs
-              </button>
-              <h1 className="text-xl sm:text-2xl font-bold text-gray-900">Talent Matches</h1>
-              <p className="mt-1 text-sm text-gray-500">
-                Showing matched talents for: <span className="font-medium">{job.title}</span>
+              <span className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-emerald-900">
+                Application review
+              </span>
+              <h1 className="mt-4 text-2xl font-semibold tracking-tight text-slate-950 sm:text-3xl">
+                {job.title}
+              </h1>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Compare proposals and trust signals. You stay in control of the hiring decision.
               </p>
             </div>
-            <div className="text-right">
-              <div className="text-sm text-gray-500">Location</div>
-              <div className="font-medium text-sm sm:text-base">{job.location}</div>
+
+            <div className="grid grid-cols-2 gap-3 sm:min-w-64">
+              <div className="rounded-2xl bg-slate-50 p-4">
+                <p className="text-xs font-medium uppercase tracking-wide text-slate-500">Applications</p>
+                <p className="mt-1 text-2xl font-semibold text-slate-950">{job.applications.length}</p>
+              </div>
+              <div className="rounded-2xl bg-amber-50 p-4">
+                <p className="text-xs font-medium uppercase tracking-wide text-amber-700">Pending</p>
+                <p className="mt-1 text-2xl font-semibold text-amber-950">{pendingCount}</p>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
 
-      <main className="max-w-7xl mx-auto px-4 py-4 sm:py-6 sm:px-6 lg:px-8">
-        {/* Filters */}
-        <div className="bg-white rounded-lg shadow-sm p-4 mb-4 sm:mb-6">
-          {/* Search Bar */}
-          <div className="mb-4">
-            <input
-              type="text"
-              placeholder="Search talents by name or skill..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full px-4 py-3 sm:py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
-            />
+          <div className="mt-6 flex flex-wrap gap-2 border-t border-slate-100 pt-5 text-xs text-slate-600">
+            <span className="rounded-full bg-slate-100 px-3 py-1.5">{job.category.emoji} {job.category.name}</span>
+            <span className="rounded-full bg-slate-100 px-3 py-1.5">{job.track === 'LABOUR' ? 'Labour' : 'Technical'}</span>
+            {job.location && <span className="rounded-full bg-slate-100 px-3 py-1.5">{job.location}</span>}
+            {job.rate && <span className="rounded-full bg-slate-100 px-3 py-1.5">{job.rate}</span>}
           </div>
+        </header>
 
-          {/* Mobile Filter Toggle */}
-          <button
-            onClick={() => setMobileFiltersOpen(!mobileFiltersOpen)}
-            className="md:hidden w-full flex items-center justify-center gap-2 px-4 py-2 border border-gray-300 rounded-lg text-sm font-medium text-gray-700 bg-gray-50 hover:bg-gray-100"
-          >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-            </svg>
-            {mobileFiltersOpen ? 'Hide Filters' : 'Show Filters'}
-          </button>
-
-          {/* Filters */}
-          <div className={`grid grid-cols-1 sm:grid-cols-3 gap-4 ${mobileFiltersOpen ? 'block' : 'hidden md:grid'}`}>
-            {/* Location Filter */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Location</label>
-              <select
-                value={selectedLocation}
-                onChange={(e) => setSelectedLocation(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
-              >
-                {talentLocations.map((location) => (
-                  <option key={location} value={location}>
-                    {location}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Rate Filter */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Rate</label>
-              <select
-                value={selectedRate}
-                onChange={(e) => setSelectedRate(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
-              >
-                {talentRates.map((rate) => (
-                  <option key={rate} value={rate}>
-                    {rate}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            {/* Availability Filter */}
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Availability</label>
-              <select
-                value={selectedAvailability}
-                onChange={(e) => setSelectedAvailability(e.target.value)}
-                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-emerald-500 text-sm"
-              >
-                {talentAvailability.map((availability) => (
-                  <option key={availability} value={availability}>
-                    {availability}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </div>
-        </div>
-
-        {/* Results Count */}
-        <div className="mb-4 text-sm text-gray-600">
-          Showing {filteredTalents.length} of {talentsWithScores.length} matched talents
-        </div>
-
-        {/* Talent Grid */}
-        {filteredTalents.length > 0 ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {filteredTalents.map((talentScore) => {
-              const talent = mockTalents.find(t => t.id === talentScore.talentId)
-              if (!talent) return null
-
-              return (
-                <TalentCard
-                  key={talent.id}
-                  name={talent.name}
-                  track={talent.track}
-                  location={talent.location}
-                  rate={talent.rate}
-                  availability={talent.availability}
-                  categories={talent.categories}
-                  score={talentScore.score}
-                  verified={talent.verified}
-                  onContact={() => handleContact(talent.name)}
-                  onViewProfile={() => handleViewProfile(talent.name)}
-                />
-              )
-            })}
-          </div>
-        ) : (
-          <div className="text-center py-12">
-            <p className="text-gray-500">No talents found matching your criteria.</p>
-            <button
-              onClick={() => {
-                setSelectedLocation('All Locations')
-                setSelectedRate('All Rates')
-                setSelectedAvailability('All Availability')
-                setSearchQuery('')
-              }}
-              className="mt-4 text-emerald-600 hover:text-emerald-700 font-medium"
-            >
-              Clear all filters
-            </button>
+        {acceptedApplication && (
+          <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-950" role="status">
+            <span className="font-semibold">Applicant selected.</span>{' '}
+            {acceptedApplication.applicant.name || 'The chosen talent'} is now assigned to this job.
+            Payment can be unlocked from the matched job flow once the agreement details are confirmed.
           </div>
         )}
-      </main>
+
+        <section className="mt-6">
+          {job.applications.length > 0 ? (
+            <div className="grid gap-4 lg:grid-cols-2">
+              {job.applications.map((application) => {
+                const talent = application.applicant.talent
+                const match = scoreApplicationMatch({
+                  jobTrack: job.track,
+                  talentTrack: talent?.track,
+                  jobCategoryId: job.categoryId,
+                  talentCategoryIds: talent?.categories.map(
+                    (category) => category.categoryId,
+                  ) ?? [],
+                  jobLocation: job.location,
+                  talentState: application.applicant.profile?.state,
+                  talentArea: application.applicant.profile?.area,
+                  kycStatus: application.applicant.profile?.kycStatus,
+                })
+
+                return (
+                  <ApplicationDecisionCard
+                    key={application.id}
+                    applicationId={application.id}
+                    applicantName={application.applicant.name || 'UpahJe talent'}
+                    proposal={application.message}
+                    submittedAt={new Date(application.createdAt).toLocaleDateString('ms-MY', {
+                      day: 'numeric',
+                      month: 'short',
+                      year: 'numeric',
+                    })}
+                    status={application.status}
+                    score={match.score}
+                    reasons={match.reasons}
+                  />
+                )
+              })}
+            </div>
+          ) : (
+            <div className="rounded-[2rem] border border-dashed border-slate-300 bg-white p-8 text-center">
+              <h2 className="text-lg font-semibold text-slate-950">No applications yet</h2>
+              <p className="mx-auto mt-2 max-w-md text-sm leading-6 text-slate-600">
+                Your job remains open. Applications will appear here as talents submit their proposals.
+              </p>
+              <Link
+                href={`/jobs/${job.id}`}
+                className="mt-5 inline-flex min-h-11 items-center rounded-xl bg-emerald-700 px-5 text-sm font-semibold text-white hover:bg-emerald-800"
+              >
+                View public job
+              </Link>
+            </div>
+          )}
+        </section>
+      </div>
     </div>
   )
 }

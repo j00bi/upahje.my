@@ -1,6 +1,8 @@
 import { NextResponse } from 'next/server'
+
+export const dynamic = 'force-dynamic'
 import { prisma } from '@/lib/prisma'
-import { auth } from '@/lib/auth'
+import { auth, ensureLocalUser } from '@/lib/auth'
 
 export async function GET() {
   try {
@@ -8,9 +10,10 @@ export async function GET() {
     if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
+    const localUser = await ensureLocalUser(session.user)
 
     const profile = await prisma.profile.findUnique({
-      where: { userId: session.user.id },
+      where: { userId: localUser.id },
       select: { kycStatus: true, kycFileUrl: true },
     })
 

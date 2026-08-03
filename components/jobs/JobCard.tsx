@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Link from 'next/link'
 
 interface JobCardProps {
   id: string
@@ -13,6 +14,7 @@ interface JobCardProps {
   postedDate: string
   employerName?: string
   onView?: () => void
+  detailsHref?: string
   onConfirmCompletion?: () => void
   onCancelRefund?: () => void
   skills?: string[]
@@ -32,6 +34,7 @@ export function JobCard({
   postedDate,
   employerName,
   onView,
+  detailsHref,
   onConfirmCompletion,
   onCancelRefund,
   skills = [],
@@ -191,12 +194,22 @@ export function JobCard({
                 {proposalCount} {proposalCount === 1 ? 'proposal' : 'proposals'}
               </div>
             )}
-            <button
-              onClick={onView}
-              className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg transition"
-            >
-              View Details
-            </button>
+            {onView ? (
+              <button
+                type="button"
+                onClick={onView}
+                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm font-medium rounded-lg transition"
+              >
+                View Details
+              </button>
+            ) : (
+              <Link
+                href={detailsHref ?? `/jobs/${id}`}
+                className="inline-flex min-h-10 items-center rounded-lg bg-emerald-600 px-4 text-sm font-medium text-white transition hover:bg-emerald-700"
+              >
+                View Details
+              </Link>
+            )}
           </div>
         </div>
 

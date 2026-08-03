@@ -85,6 +85,7 @@ export async function createBillplzBill({
   name,
   email,
   amount,
+  amountInRinggit,
   callbackUrl,
   redirectUrl,
   description,
@@ -95,6 +96,7 @@ export async function createBillplzBill({
   name: string
   email: string
   amount: number
+  amountInRinggit: number
   callbackUrl: string
   redirectUrl?: string
   description: string
@@ -145,7 +147,7 @@ export async function createBillplzBill({
     data: {
       id: response.id,
       jobId: reference1,
-      amount,
+      amount: amountInRinggit,
       status: 'PENDING',
       employerEmail: email,
       talentEmail: '',
@@ -168,18 +170,26 @@ export async function handleBillplzWebhook(
     return
   }
 
-  // Update payment status
+  const normalizedStatus = status.toUpperCase()
+  const successfulStatuses = new Set(['SUCCESS', 'PAID'])
+  const wasSuccessful = successfulStatuses.has(payment.status.toUpperCase())
+  const isSuccessful = successfulStatuses.has(normalizedStatus)
+
+  // Billplz may retry callbacks. Do not create a second escrow transaction for
+  // an already-processed payment.
+  if (wasSuccessful && isSuccessful) {
+    return
+  }
+
   await prisma.payment.update({
     where: { id: paymentId },
     data: {
-      status: status.toUpperCase(),
+      status: normalizedStatus,
       paidAt: paidAt ? new Date(paidAt) : undefined
     }
   })
-  
-  // If payment is successful, trigger escrow hold
-  if (status.toUpperCase() === 'SUCCESS' || status.toUpperCase() === 'PAID') {
-    // Import escrow functions dynamically to avoid circular dependency
+
+  if (isSuccessful) {
     const { holdPayment } = await import('./escrow')
     await holdPayment(payment.jobId, payment.amount)
   }

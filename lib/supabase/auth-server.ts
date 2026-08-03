@@ -8,6 +8,14 @@ export async function getUser() {
 
 export async function getSession() {
   const supabase = await createClient()
+  const { data: { user }, error: userError } = await supabase.auth.getUser()
+  if (userError || !user) {
+    return { session: null, error: userError }
+  }
+
   const { data: { session }, error } = await supabase.auth.getSession()
-  return { session, error }
+  return {
+    session: session?.user.id === user.id ? session : null,
+    error,
+  }
 }

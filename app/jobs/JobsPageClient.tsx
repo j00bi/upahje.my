@@ -2,10 +2,11 @@
 
 import Link from 'next/link'
 import { useEffect, useState, useCallback } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { JobFilters } from '@/components/jobs/JobFilters'
 import { ExpandableJobCard } from '@/components/jobs/ExpandableJobCard'
 import type { JobFilters as JobFiltersType } from '@/lib/actions/jobs'
+import { useLanguage } from '@/lib/i18n'
 
 interface Job {
   id: string
@@ -58,10 +59,13 @@ function filtersFromSearchParams(searchParams: ReturnType<typeof useSearchParams
 
 export default function JobsPageClient() {
   const searchParams = useSearchParams()
+  const router = useRouter()
+  const { isEnglish } = useLanguage()
   const searchKey = searchParams.toString()
   const initialFilters = filtersFromSearchParams(searchParams)
   const [jobs, setJobs] = useState<Job[]>([])
   const [loading, setLoading] = useState(true)
+  const [dataSource, setDataSource] = useState<'live' | 'preview'>('live')
   const [filters, setFilters] = useState<JobFiltersType>(initialFilters)
   const categories = SAMPLE_CATEGORIES
   const [locations] = useState<string[]>(SAMPLE_LOCATIONS)
@@ -78,8 +82,10 @@ export default function JobsPageClient() {
 
       const res = await fetch(`/api/jobs?${params.toString()}`)
       const data = await res.json()
+      setDataSource(res.headers.get('x-upahje-data-source') === 'preview' ? 'preview' : 'live')
       setJobs(Array.isArray(data) ? data : [])
     } catch {
+      setDataSource('preview')
       setJobs([])
     } finally {
       setLoading(false)
@@ -87,8 +93,8 @@ export default function JobsPageClient() {
   }, [])
 
   useEffect(() => {
-    setFilters(initialFilters)
-  }, [searchKey])
+    setFilters(filtersFromSearchParams(searchParams))
+  }, [searchParams])
 
   useEffect(() => { fetchJobs(filters) }, [filters, fetchJobs])
 
@@ -99,16 +105,24 @@ export default function JobsPageClient() {
         <div className="max-w-5xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center mb-4">
             <div>
-              <h1 className="text-2xl font-semibold text-slate-900">Browse Jobs</h1>
-              <p className="text-sm text-slate-500 mt-0.5">
-                {loading ? 'Searching...' : `${jobs.length} job${jobs.length !== 1 ? 's' : ''} available`}
+              <h1 className="text-2xl font-semibold text-slate-900">
+                {filters.search
+                  ? (isEnglish ? `Results for “${filters.search}”` : `Hasil untuk “${filters.search}”`)
+                  : (isEnglish ? 'Find work that fits' : 'Cari kerja yang sesuai')}
+              </h1>
+              <p className="text-sm text-slate-500 mt-0.5" aria-live="polite">
+                {loading
+                  ? (isEnglish ? 'Searching jobs...' : 'Mencari kerja...')
+                  : isEnglish
+                    ? `${jobs.length} ${jobs.length === 1 ? 'job' : 'jobs'} available`
+                    : `${jobs.length} kerja tersedia`}
               </p>
             </div>
             <Link
               href="/jobs/post"
               className="px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-2xl text-sm font-medium transition"
             >
-              + Post a Job
+              {isEnglish ? '+ Post a Job' : '+ Post Kerja'}
             </Link>
           </div>
 
@@ -124,16 +138,30 @@ export default function JobsPageClient() {
 
       {/* Job list */}
       <div className="max-w-5xl mx-auto px-4 py-8">
+        {dataSource === 'preview' && !loading && (
+          <div className="mb-5 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900" role="status">
+            <span className="font-semibold">
+              {isEnglish ? 'Marketplace preview.' : 'Paparan marketplace.'}
+            </span>{' '}
+            {isEnglish
+              ? 'These sample listings are shown while live inventory is unavailable. They do not accept applications.'
+              : 'Ini ialah contoh senarai sementara inventori sebenar belum tersedia. Contoh ini tidak menerima permohonan.'}
+          </div>
+        )}
         {jobs.length === 0 && !loading ? (
           <div className="text-center py-20">
             <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-xl font-semibold text-slate-700 mb-2">No jobs found</h3>
-            <p className="text-slate-500 mb-6">Try adjusting your filters or search terms.</p>
+            <h3 className="text-xl font-semibold text-slate-700 mb-2">
+              {isEnglish ? 'No matching jobs' : 'Tiada kerja yang sepadan'}
+            </h3>
+            <p className="text-slate-500 mb-6">
+              {isEnglish ? 'Try a broader search or clear your filters.' : 'Cuba carian yang lebih umum atau kosongkan tapisan.'}
+            </p>
             <button
-              onClick={() => setFilters({})}
+              onClick={() => router.replace('/jobs')}
               className="px-6 py-2.5 border border-slate-300 rounded-2xl text-sm font-medium hover:bg-slate-50 transition"
             >
-              Clear all filters
+              {isEnglish ? 'Clear search and filters' : 'Kosongkan carian dan tapisan'}
             </button>
           </div>
         ) : (

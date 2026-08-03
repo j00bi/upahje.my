@@ -7,33 +7,51 @@ function PaymentStatusContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
   
-  const [status, setStatus] = useState<'loading' | 'success' | 'cancelled' | 'error'>('loading')
+  const [status, setStatus] = useState<'loading' | 'pending' | 'success' | 'cancelled' | 'error'>('loading')
   const [billId, setBillId] = useState<string | null>(null)
   const [amount, setAmount] = useState<number | null>(null)
 
   useEffect(() => {
-    // Get status from URL parameters
-    const statusParam = searchParams.get('status')
     const billIdParam =
       searchParams.get('bill_id') ??
       searchParams.get('billplz[id]')
-    const amountParam = searchParams.get('amount') ?? searchParams.get('billplz[amount]')
-    const paidParam = searchParams.get('billplz[paid]') ?? searchParams.get('paid')
 
-    if (billIdParam) {
-      setBillId(billIdParam)
-    }
-    
-    if (amountParam) {
-      setAmount(parseFloat(amountParam))
-    }
-
-    if (statusParam === 'success' || paidParam === 'true') {
-      setStatus('success')
-    } else if (statusParam === 'cancelled' || paidParam === 'false') {
-      setStatus('cancelled')
-    } else {
+    if (!billIdParam) {
       setStatus('error')
+      return
+    }
+
+    setBillId(billIdParam)
+    let cancelled = false
+
+    async function confirmPayment() {
+      try {
+        const response = await fetch(
+          `/api/payments/status?billId=${encodeURIComponent(billIdParam)}`
+        )
+        const data = await response.json()
+        if (!response.ok) {
+          throw new Error(data.error || 'Unable to confirm payment.')
+        }
+        if (cancelled) return
+
+        const serverStatus = String(data.payment.status).toUpperCase()
+        setAmount(Number(data.payment.amount))
+        if (serverStatus === 'SUCCESS' || serverStatus === 'PAID') {
+          setStatus('success')
+        } else if (serverStatus === 'CANCELLED' || serverStatus === 'FAILED') {
+          setStatus('cancelled')
+        } else {
+          setStatus('pending')
+        }
+      } catch {
+        if (!cancelled) setStatus('error')
+      }
+    }
+
+    confirmPayment()
+    return () => {
+      cancelled = true
     }
   }, [searchParams])
 
@@ -62,11 +80,22 @@ function PaymentStatusContent() {
           bgColor: 'bg-yellow-50',
           borderColor: 'border-yellow-200',
         }
+      case 'pending':
+        return {
+          icon: '…',
+          title: 'Payment confirmation pending',
+          message:
+            'We have not received a verified payment confirmation yet. Refresh this page in a moment before trying again.',
+          color: 'text-amber-700',
+          bgColor: 'bg-amber-50',
+          borderColor: 'border-amber-200',
+        }
       case 'error':
         return {
           icon: '!',
           title: 'Payment Error',
-          message: 'There was an error processing your payment. Please try again or contact support.',
+          message:
+            'We could not verify this payment for your account. No success status has been assumed from the return link.',
           color: 'text-red-600',
           bgColor: 'bg-red-50',
           borderColor: 'border-red-200',
@@ -89,7 +118,10 @@ function PaymentStatusContent() {
     <div className="min-h-screen bg-gray-50 flex items-center justify-center py-8 px-4">
       <div className="max-w-md w-full">
         {/* Status Card */}
-        <div className={`bg-white rounded-lg shadow-sm p-6 sm:p-8 border ${content.borderColor}`}>
+        <div
+          className={`bg-white rounded-lg shadow-sm p-6 sm:p-8 border ${content.borderColor}`}
+          role={status === 'error' ? 'alert' : 'status'}
+        >
           {/* Icon */}
           <div className={`text-center mb-6`}>
             <div className={`inline-flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 rounded-full ${content.bgColor} ${content.color} text-xl sm:text-2xl font-bold`}>
@@ -114,7 +146,7 @@ function PaymentStatusContent() {
                 <span className="text-gray-600">Reference ID:</span>
                 <span className="font-mono text-gray-800">{billId}</span>
               </div>
-              {amount && (
+              {amount !== null && (
                 <div className="flex justify-between text-xs sm:text-sm mt-2">
                   <span className="text-gray-600">Amount:</span>
                   <span className="font-medium text-gray-800">RM {amount.toFixed(2)}</span>
@@ -145,7 +177,7 @@ function PaymentStatusContent() {
           {/* Help Text */}
           <p className="text-center text-xs sm:text-sm text-gray-500 mt-6">
             Need help?{' '}
-            <a href="/support" className="text-emerald-600 hover:text-emerald-700">
+            <a href="/contact" className="text-emerald-600 hover:text-emerald-700">
               Contact Support
             </a>
           </p>

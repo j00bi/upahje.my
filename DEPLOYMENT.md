@@ -20,6 +20,7 @@ Add these variables in Vercel Dashboard → Project Settings → Environment Var
 | `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL | Supabase Dashboard → Project Settings → API |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Supabase anon public key | Supabase Dashboard → Project Settings → API |
 | `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` | Supabase publishable key alias | Supabase Dashboard → Project Settings → API |
+| `NEXT_PUBLIC_SITE_URL` | Public application origin used in auth links | e.g., `https://upahje.my` |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase service role key | Supabase Dashboard → Project Settings → API |
 | `DATABASE_URL` | PostgreSQL connection string for the limited app role | Supabase Dashboard → Database → Connection String / pooled endpoint |
 | `DIRECT_URL` | Optional direct admin connection string for migrations/maintenance | Supabase Dashboard → Database → Connection String |
@@ -30,8 +31,6 @@ Add these variables in Vercel Dashboard → Project Settings → Environment Var
 
 | Variable | Description | Required For |
 |----------|-------------|--------------|
-| `GOOGLE_CLIENT_ID` | Google OAuth Client ID | Google Sign-In |
-| `GOOGLE_CLIENT_SECRET` | Google OAuth Secret | Google Sign-In |
 | `BILLPLZ_API_KEY` | Billplz API key | Payment processing |
 | `BILLPLZ_COLLECTION_ID` | Billplz collection ID | Payment processing |
 | `BILLPLZ_X_SIGNATURE_KEY` | Billplz signature key | Webhook verification |
@@ -39,6 +38,11 @@ Add these variables in Vercel Dashboard → Project Settings → Environment Var
 | `BILLPLZ_SANDBOX` | `true` for test mode | Development/testing |
 
 ## Step 2: Supabase Setup
+
+Google OAuth credentials are configured in Supabase Auth, not as UpahJe
+application environment variables. Follow
+[`docs/AUTH-SSO-SETUP.md`](docs/AUTH-SSO-SETUP.md) for the exact application,
+Supabase, and Google callback settings.
 
 ### 2.1 Create Supabase Project
 1. Go to [supabase.co](https://supabase.co)

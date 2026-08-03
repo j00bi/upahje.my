@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { Sora, DM_Sans } from 'next/font/google'
 import './globals.css'
 import CategoryNav from '@/components/navigation/CategoryNav'
-import IntroAnimation from '@/components/ui/IntroAnimation'
 import { AuthProvider } from '@/lib/supabase/auth-context'
+import { LanguageProvider } from '@/lib/i18n'
 
 const sora = Sora({
   subsets: ['latin'],
@@ -18,8 +18,8 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'UpahJe.my — Malaysia\'s Local Hiring Platform',
-  description: 'Hire trusted local help in Malaysia. Post a job, compare verified workers, and pay safely after the work is done.',
+  title: 'UpahJe.my — Cari kerja & talent tempatan',
+  description: 'Post kerja, semak profil talent tempatan, dan buat pilihan dengan lebih yakin di UpahJe.my.',
 }
 
 export default function RootLayout({
@@ -29,26 +29,22 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="en"
+      lang="ms"
       className={`${sora.variable} ${dmSans.variable} bg-[var(--color-canvas-soft)]`}
       suppressHydrationWarning
     >
-      <head>
-        {/* Prevent flash of content behind intro overlay — runs before paint */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{document.documentElement.setAttribute('data-intro','loading')}catch(e){}})()`,
-          }}
-        />
-      </head>
       <body className="bg-[var(--color-canvas-soft)] text-neutral-900">
-        <AuthProvider>
-          <IntroAnimation />
-          <div id="page-content">
-            <CategoryNav />
-            <main>{children}</main>
-          </div>
-        </AuthProvider>
+        <LanguageProvider>
+          <AuthProvider>
+            <a href="#main-content" className="skip-link">
+              Skip to main content
+            </a>
+            <div id="page-content">
+              <CategoryNav />
+              <main id="main-content" tabIndex={-1}>{children}</main>
+            </div>
+          </AuthProvider>
+        </LanguageProvider>
       </body>
     </html>
   )
