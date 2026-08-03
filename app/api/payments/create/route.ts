@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { assertSameOrigin } from '@/lib/security'
 
 export async function POST(request: NextRequest) {
+  const originGuard = assertSameOrigin(request)
+  if (originGuard) return originGuard
+
   try {
     if (process.env.PAYMENTS_ENABLED !== 'true') {
       return NextResponse.json(
@@ -20,7 +24,7 @@ export async function POST(request: NextRequest) {
       ])
 
     const session = await auth()
-    if (!session?.user?.email) {
+    if (!session?.user?.id) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
@@ -37,9 +41,7 @@ export async function POST(request: NextRequest) {
       where: {
         id: jobId,
         employer: {
-          user: {
-            email: session.user.email,
-          },
+          userId: session.user.id,
         },
       },
       include: {

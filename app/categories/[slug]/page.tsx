@@ -4,6 +4,7 @@ import Footer from '@/components/layout/Footer'
 import { getCategoryBySlug, MARKETPLACE_CATEGORIES } from '@/lib/categories'
 import { prisma } from '@/lib/prisma'
 import { getSampleMarketplaceJobs } from '@/lib/sampleJobs'
+import { previewDataEnabled } from '@/lib/security'
 
 const SLUG_TO_CATEGORY_ID: Record<string, string> = {
   'home-services': 'rumah-taman',
@@ -64,6 +65,13 @@ async function getJobsByCategory(categoryId: string): Promise<{
     }
   } catch (error) {
     console.error('Error fetching category jobs:', error)
+    if (!previewDataEnabled()) {
+      return { jobs: [], isPreview: false }
+    }
+  }
+
+  if (!previewDataEnabled()) {
+    return { jobs: [], isPreview: false }
   }
 
   return {

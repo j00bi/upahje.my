@@ -2,8 +2,12 @@ import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { createJob } from '@/lib/actions/jobCreation'
 import { getFilteredSampleMarketplaceJobs } from '@/lib/sampleJobs'
+import { previewDataEnabled, assertSameOrigin } from '@/lib/security'
 
 export async function POST(req: Request) {
+  const originGuard = assertSameOrigin(req)
+  if (originGuard) return originGuard
+
   try {
     const body = await req.json()
     const categories = Array.isArray(body.categories) ? body.categories : []
@@ -79,6 +83,9 @@ export async function GET(req: Request) {
     })
 
     if (jobs.length === 0) {
+      if (!previewDataEnabled()) {
+        return NextResponse.json({ error: 'No jobs found' }, { status: 404 })
+      }
       return NextResponse.json(getFilteredSampleMarketplaceJobs(fallbackFilters), {
         headers: { 'x-upahje-data-source': 'preview' },
       })
@@ -88,7 +95,13 @@ export async function GET(req: Request) {
       headers: { 'x-upahje-data-source': 'live' },
     })
   } catch (error) {
-    console.error('Job fetch error, returning samples:', error)
+    console.error('Job fetch error:', error)
+    if (!previewDataEnabled()) {
+      return NextResponse.json(
+        { error: 'Failed to fetch jobs' },
+        { status: 503 },
+      )
+    }
     return NextResponse.json(getFilteredSampleMarketplaceJobs(fallbackFilters), {
       headers: { 'x-upahje-data-source': 'preview' },
     })

@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { getSampleMarketplaceJob } from '@/lib/sampleJobs'
+import { previewDataEnabled } from '@/lib/security'
 import { ApplySection } from './ApplySection'
 
 export const dynamic = 'force-dynamic'
@@ -31,7 +32,7 @@ export default async function JobDetailPage({
   const { jobId } = await params
   const session = await auth()
 
-  let job: JobDetail | null = getSampleMarketplaceJob(jobId)
+  let job: JobDetail | null = previewDataEnabled() ? getSampleMarketplaceJob(jobId) : null
   let loadFailed = false
 
   if (!job) {

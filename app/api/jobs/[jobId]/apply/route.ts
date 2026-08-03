@@ -2,23 +2,42 @@ import { NextResponse } from 'next/server'
 import { Prisma } from '@prisma/client'
 import { getUserWithRole } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
+import { assertSameOrigin } from '@/lib/security'
 
 export async function POST(
   req: Request,
   { params }: { params: Promise<{ jobId: string }> }
 ) {
+  const originGuard = assertSameOrigin(req)
+  if (originGuard) return originGuard
+
   try {
-    const { user, talent, profile } = await getUserWithRole()
+    const { user, talent, profile, role } = await getUserWithRole()
     if (!user) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    const { jobId } = await params
-    const body = await req.json()
-    const { proposal } = body
+    if (role === 'EMPLOYER') {
+      return NextResponse.json({ error: 'Employers cannot apply to jobs.' }, { status: 403 })
+    }
 
-    if (!proposal || typeof proposal !== 'string' || proposal.trim().length < 10) {
+    const { jobId } = await params
+
+    let body: { proposal?: unknown }
+    try {
+      body = await req.json()
+    } catch {
+      return NextResponse.json({ error: 'Malformed JSON payload.' }, { status: 400 })
+    }
+
+    const proposal = typeof body.proposal === 'string' ? body.proposal.trim() : ''
+
+    if (proposal.length < 10) {
       return NextResponse.json({ error: 'Proposal must be at least 10 characters.' }, { status: 400 })
+    }
+
+    if (proposal.length > 5000) {
+      return NextResponse.json({ error: 'Proposal must be 5,000 characters or fewer.' }, { status: 400 })
     }
 
     // Get the job
@@ -56,7 +75,7 @@ export async function POST(
       data: {
         jobId,
         applicantId: user.id,
-        message: proposal.trim(),
+        message: proposal,
       },
       select: { id: true, status: true },
     })

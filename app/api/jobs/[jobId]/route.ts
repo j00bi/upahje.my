@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { getSampleMarketplaceJob } from '@/lib/sampleJobs'
+import { previewDataEnabled } from '@/lib/security'
 
 export async function GET(
   _req: Request,
@@ -8,12 +9,14 @@ export async function GET(
 ) {
   try {
     const { jobId } = await params
-    const previewJob = getSampleMarketplaceJob(jobId)
 
-    if (previewJob) {
-      return NextResponse.json(previewJob, {
-        headers: { 'x-upahje-data-source': 'preview' },
-      })
+    if (previewDataEnabled()) {
+      const previewJob = getSampleMarketplaceJob(jobId)
+      if (previewJob) {
+        return NextResponse.json(previewJob, {
+          headers: { 'x-upahje-data-source': 'preview' },
+        })
+      }
     }
 
     const job = await prisma.job.findUnique({
@@ -37,6 +40,6 @@ export async function GET(
     })
   } catch (error) {
     console.error('Job fetch error:', error)
-    return NextResponse.json({ error: 'Failed to fetch job' }, { status: 500 })
+    return NextResponse.json({ error: 'Failed to fetch job' }, { status: 503 })
   }
 }

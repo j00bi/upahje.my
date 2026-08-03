@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 import { getSupabaseConfig } from '@/lib/supabase/config'
 import { completeAuthentication } from '@/lib/auth-flow'
+import { IdentityConflictError } from '@/lib/auth'
 import {
   normalizeInternalRedirect,
   toProfileRole,
@@ -60,10 +61,18 @@ export async function GET(request: NextRequest) {
       } catch (profileError) {
         console.error('Error completing user registration:', profileError)
         const signInUrl = new URL('/auth/signin', request.url)
+
+        if (profileError instanceof IdentityConflictError) {
+          console.error(
+            `[identity-conflict] supabase=${profileError.supabaseUserId} local=${profileError.conflictingUserId}`,
+          )
+          signInUrl.searchParams.set('error', 'identity_conflict')
+          return NextResponse.redirect(signInUrl)
+        }
+
         signInUrl.searchParams.set('error', 'profile_setup_failed')
         return NextResponse.redirect(signInUrl)
-      }
-    }
+      }    }
 
     console.error('Authentication callback failed:', error)
   }

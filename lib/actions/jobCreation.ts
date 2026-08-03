@@ -1,5 +1,6 @@
 import { createClient } from '@/lib/supabase/server'
 import { auth } from '@/lib/auth'
+import { prisma } from '@/lib/prisma'
 import { validateJobPosting, getValidationErrors, JobPostingFormData } from '@/lib/validation/job'
 
 /**
@@ -24,6 +25,18 @@ export async function createJob(formData: JobPostingFormData) {
     return {
       success: false,
       error: 'Authentication required',
+    }
+  }
+
+  const profile = await prisma.profile.findUnique({
+    where: { userId: session.user.id },
+    select: { role: true },
+  })
+
+  if (!profile || profile.role !== 'EMPLOYER') {
+    return {
+      success: false,
+      error: 'Only employers can post jobs.',
     }
   }
 

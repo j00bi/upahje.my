@@ -42,6 +42,16 @@ export function ApplySection({ jobId, userId }: ApplySectionProps) {
       return
     }
 
+    if (proposal.trim().length < 10) {
+      setApplyError('Your proposal must be at least 10 characters.')
+      return
+    }
+
+    if (proposal.trim().length > 5000) {
+      setApplyError('Your proposal must be 5,000 characters or fewer.')
+      return
+    }
+
     setIsApplying(true)
     setApplyError(null)
 

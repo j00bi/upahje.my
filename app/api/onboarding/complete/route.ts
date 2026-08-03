@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import { prisma } from '@/lib/prisma'
 import { auth, ensureLocalUser } from '@/lib/auth'
+import { assertSameOrigin } from '@/lib/security'
 import {
   LABOUR_CATEGORIES,
   TECHNICAL_CATEGORIES,
@@ -125,6 +126,9 @@ async function upsertCategories(
 }
 
 export async function POST(req: Request) {
+  const originGuard = assertSameOrigin(req)
+  if (originGuard) return originGuard
+
   try {
     const session = await auth()
     if (!session?.user?.id) {

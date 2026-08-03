@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import { getUserWithRole } from '@/lib/auth'
 import { parseApplicationAction } from '@/lib/application-matching'
 import { prisma } from '@/lib/prisma'
+import { assertSameOrigin } from '@/lib/security'
 
 class ApplicationConflictError extends Error {}
 
@@ -9,6 +10,9 @@ export async function PATCH(
   request: Request,
   { params }: { params: Promise<{ applicationId: string }> },
 ) {
+  const originGuard = assertSameOrigin(request)
+  if (originGuard) return originGuard
+
   try {
     const { user } = await getUserWithRole()
     if (!user) {
@@ -16,7 +20,14 @@ export async function PATCH(
     }
 
     const { applicationId } = await params
-    const body = await request.json()
+
+    let body: { action?: unknown }
+    try {
+      body = await request.json()
+    } catch {
+      return NextResponse.json({ error: 'Malformed JSON payload.' }, { status: 400 })
+    }
+
     const action = parseApplicationAction(body.action)
 
     if (!action) {

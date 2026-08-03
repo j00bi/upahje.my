@@ -54,6 +54,20 @@ export async function getUser() {
   return session?.user ?? null
 }
 
+export class IdentityConflictError extends Error {
+  constructor(
+    public readonly supabaseUserId: string,
+    public readonly conflictingUserId: string,
+    message?: string,
+  ) {
+    super(
+      message ??
+        `Identity conflict: Supabase user ${supabaseUserId} maps to local user ${conflictingUserId} by email.`,
+    )
+    this.name = 'IdentityConflictError'
+  }
+}
+
 export async function ensureLocalUser(supabaseUser: SupabaseUser) {
   const email = supabaseUser.email?.trim().toLowerCase()
 
@@ -79,7 +93,11 @@ export async function ensureLocalUser(supabaseUser: SupabaseUser) {
   })
 
   if (userByEmail) {
-    return userByEmail
+    // The Supabase auth user ID does not match the local user that owns this
+    // email. Silently attaching the session here would break the identity
+    // invariant (Supabase auth user ID === local User.id) and let one user act
+    // as another. Fail closed and require an explicit repair step.
+    throw new IdentityConflictError(supabaseUser.id, userByEmail.id)
   }
 
   try {
@@ -102,7 +120,7 @@ export async function ensureLocalUser(supabaseUser: SupabaseUser) {
     })
 
     if (existing) {
-      return existing
+      throw new IdentityConflictError(supabaseUser.id, existing.id)
     }
 
     throw new Error('Failed to create local user record')
