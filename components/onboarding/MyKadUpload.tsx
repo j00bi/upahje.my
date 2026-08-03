@@ -122,7 +122,7 @@ export function MyKadUpload({ onUpload }: MyKadUploadProps) {
         <div className="space-y-2">
           <p className="text-green-600 font-medium text-sm">✓ {fileName}</p>
           <p className="text-xs text-gray-500">
-            We'll review your MyKad within 24 hours. You'll be notified once verified.
+            We&apos;ll review your MyKad within 24 hours. You&apos;ll be notified once verified.
           </p>
         </div>
       )}

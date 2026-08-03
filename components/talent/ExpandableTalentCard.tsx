@@ -8,6 +8,16 @@ interface ExpandableTalentCardProps {
   talent: TalentProfile
 }
 
+const avatarToneByTrack = {
+  LABOUR: '#f7dfae',
+  TECHNICAL: '#d9d5f5',
+  PHOTOGRAPHY: '#cce9e4',
+} as const
+
+function initials(name: string) {
+  return name.split(' ').filter(Boolean).slice(0, 2).map(part => part[0]).join('').toUpperCase()
+}
+
 export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
   const [expanded, setExpanded] = useState(false)
   const contentRef = useRef<HTMLDivElement>(null)
@@ -23,7 +33,7 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
 
   return (
       <div
-      className={`rounded-2xl border transition-all duration-300 ${
+      className={`rounded-[24px] border transition-all duration-300 ${
         expanded ? 'shadow-lg border-teal-mid/40' : 'border-neutral-200 hover:border-teal-mid/20 hover:shadow-md'
       }`}
       style={{ backgroundColor: 'var(--color-canvas)' }}
@@ -36,16 +46,17 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
       >
         <div className="flex items-start gap-4">
           <div
-            className="h-14 w-14 flex-shrink-0 rounded-full bg-cover bg-center"
-            style={{ backgroundImage: `url(https://i.pravatar.cc/112?img=${talent.avatarImg})` }}
-          />
+            className="grid h-14 w-14 flex-shrink-0 place-items-center rounded-2xl text-sm font-extrabold text-[var(--color-green-deep)]"
+            style={{ backgroundColor: avatarToneByTrack[talent.track] }}
+            aria-hidden="true"
+          >{initials(talent.name)}</div>
           <div className="min-w-0 flex-1">
             <div className="flex items-start justify-between gap-2">
               <div>
                 <div className="flex items-center gap-2">
                   <h2 className="font-semibold" style={{ color: 'var(--color-ink)' }}>{talent.name}</h2>
                   {talent.verified && (
-                    <span className="badge badge-verified text-[10px] leading-none">✓ Verified</span>
+                    <span className="badge badge-verified text-[10px] leading-none">✓ Disahkan</span>
                   )}
                 </div>
                 <p className="text-sm mt-0.5" style={{ color: 'var(--color-mute)' }}>{talent.role}</p>
@@ -55,7 +66,7 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
               </div>
               <div className="flex flex-col items-end shrink-0">
                 <span className="font-semibold text-sm" style={{ color: 'var(--color-teal-deep)' }}>{talent.rate}</span>
-                <span className="text-[10px] mt-0.5" style={{ color: 'var(--color-mute)' }}>starting</span>
+                <span className="text-[10px] mt-0.5" style={{ color: 'var(--color-mute)' }}>bermula dari</span>
               </div>
             </div>
 
@@ -75,7 +86,7 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
                     <span style={{ color: 'var(--color-mute)' }}>({talent.reviewCount})</span>
                   </span>
                 ) : (
-                  <span className="text-sm" style={{ color: 'var(--color-mute)' }}>New to UpahJe</span>
+                  <span className="text-sm" style={{ color: 'var(--color-mute)' }}>Baru di UpahJe</span>
                 )}
                 <span className="w-1 h-1 rounded-full" style={{ backgroundColor: 'var(--color-mute)' }} />
                 <span className="text-sm" style={{ color: 'var(--color-body)' }}>{talent.availability}</span>
@@ -104,7 +115,7 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
         <div className="px-5 pb-5 pt-0 border-t" style={{ borderColor: 'rgba(14, 15, 12, 0.06)' }}>
           {talent.bio && (
             <div className="mt-4">
-              <h4 className="text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: 'var(--color-mute)' }}>About</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-wider mb-1.5" style={{ color: 'var(--color-mute)' }}>Tentang</h4>
               <p className="text-sm leading-relaxed" style={{ color: 'var(--color-body)' }}>{talent.bio}</p>
             </div>
           )}
@@ -112,14 +123,14 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
           <div className="mt-4 grid grid-cols-2 gap-3">
             <div className="rounded-2xl p-3" style={{ backgroundColor: 'var(--color-teal-pale)' }}>
               <div className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: 'var(--color-teal-deep)' }}>
-                Availability
+                Ketersediaan
               </div>
               <div className="font-medium text-sm" style={{ color: 'var(--color-teal-deep)' }}>{talent.availability}</div>
             </div>
             {talent.certs && talent.certs.length > 0 && (
               <div className="rounded-2xl p-3" style={{ backgroundColor: 'var(--color-amber-pale)' }}>
                 <div className="text-xs font-semibold uppercase tracking-wide mb-0.5" style={{ color: 'var(--color-amber-deep)' }}>
-                  Certifications
+                  Pensijilan
                 </div>
                 <div className="flex flex-wrap gap-1 mt-1">
                   {talent.certs.map((c, i) => (
@@ -139,7 +150,7 @@ export function ExpandableTalentCard({ talent }: ExpandableTalentCardProps) {
               backgroundColor: 'var(--color-green-mid)',
             }}
           >
-            View Full Profile
+            Lihat profil penuh
           </button>
         </div>
       </div>

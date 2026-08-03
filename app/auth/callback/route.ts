@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
 import { getSupabaseConfig } from '@/lib/supabase/config'
-import { ensureLocalUser } from '@/lib/auth'
-import { prisma } from '@/lib/prisma'
+import { completeAuthentication } from '@/lib/auth-flow'
+import { IdentityConflictError } from '@/lib/auth'
 import {
   normalizeInternalRedirect,
   toProfileRole,
@@ -46,45 +46,38 @@ export async function GET(request: NextRequest) {
     const { error, data } = result
 
     if (!error && data?.user) {
-      const localUser = await ensureLocalUser(data.user)
-      const userRole = selectedRole ?? toProfileRole(data.user.user_metadata?.role)
-      let redirectTarget = new URL(next, request.url)
-
       try {
-        const existingProfile = await prisma.profile.findUnique({
-          where: { userId: localUser.id },
+        const registration = await completeAuthentication(data.user, selectedRole, next)
+        const destination = next === '/auth/reset-password'
+          ? next
+          : registration.destination
+        const redirectTarget = new URL(destination, request.url)
+
+        const response = NextResponse.redirect(redirectTarget)
+        pendingCookies.forEach(({ name, value, options }) => {
+          response.cookies.set(name, value, options)
         })
-
-        if (!existingProfile && userRole) {
-          await prisma.profile.create({
-            data: {
-              userId: localUser.id,
-              role: userRole,
-            },
-          })
-        }
-
-        if (!existingProfile && userRole) {
-          const redirectPath = userRole === 'EMPLOYER'
-            ? '/dashboard/employer'
-            : '/dashboard/talent'
-
-          redirectTarget = new URL(redirectPath, request.url)
-        } else if (!existingProfile && !userRole) {
-          redirectTarget = new URL('/onboarding', request.url)
-        }
+        return response
       } catch (profileError) {
-        console.error('Error creating user profile:', profileError)
-      }
+        console.error('Error completing user registration:', profileError)
+        const signInUrl = new URL('/auth/signin', request.url)
 
-      const response = NextResponse.redirect(redirectTarget)
-      pendingCookies.forEach(({ name, value, options }) => {
-        response.cookies.set(name, value, options)
-      })
-      return response
-    }
+        if (profileError instanceof IdentityConflictError) {
+          console.error(
+            `[identity-conflict] supabase=${profileError.supabaseUserId} local=${profileError.conflictingUserId}`,
+          )
+          signInUrl.searchParams.set('error', 'identity_conflict')
+          return NextResponse.redirect(signInUrl)
+        }
+
+        signInUrl.searchParams.set('error', 'profile_setup_failed')
+        return NextResponse.redirect(signInUrl)
+      }    }
+
+    console.error('Authentication callback failed:', error)
   }
 
-  // If verification fails or parameters are missing, redirect to sign-in
-  return NextResponse.redirect(new URL('/auth/signin', request.url))
+  const signInUrl = new URL('/auth/signin', request.url)
+  signInUrl.searchParams.set('error', 'callback_failed')
+  return NextResponse.redirect(signInUrl)
 }

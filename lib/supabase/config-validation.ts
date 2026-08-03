@@ -88,8 +88,22 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 export function getValidatedSupabaseConfig(): SupabaseConfig {
-  const config = validateEnvironment()
-  return config.supabase
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const anonKey =
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
+    process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+
+  if (!url || !anonKey) {
+    throw new Error(
+      'NEXT_PUBLIC_SUPABASE_URL and a Supabase public key are required'
+    )
+  }
+
+  return {
+    url,
+    anonKey,
+    serviceRoleKey: process.env.SUPABASE_SERVICE_ROLE_KEY,
+  }
 }
 
 export function getValidatedAppConfig(): AppConfig {

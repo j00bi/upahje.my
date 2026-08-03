@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 
@@ -16,6 +16,20 @@ export function ApplySection({ jobId, userId }: ApplySectionProps) {
   const [applied, setApplied] = useState(false)
   const [applyError, setApplyError] = useState<string | null>(null)
 
+  useEffect(() => {
+    const pending = sessionStorage.getItem('pendingApply')
+    if (!pending) return
+
+    try {
+      const saved = JSON.parse(pending)
+      if (saved.jobId === jobId && typeof saved.proposal === 'string') {
+        setProposal(saved.proposal)
+      }
+    } catch {
+      sessionStorage.removeItem('pendingApply')
+    }
+  }, [jobId])
+
   const handleApply = async () => {
     if (!userId) {
       sessionStorage.setItem('pendingApply', JSON.stringify({ jobId, proposal }))
@@ -25,6 +39,16 @@ export function ApplySection({ jobId, userId }: ApplySectionProps) {
 
     if (!proposal.trim()) {
       setApplyError('Please write a short proposal first.')
+      return
+    }
+
+    if (proposal.trim().length < 10) {
+      setApplyError('Your proposal must be at least 10 characters.')
+      return
+    }
+
+    if (proposal.trim().length > 5000) {
+      setApplyError('Your proposal must be 5,000 characters or fewer.')
       return
     }
 
@@ -39,6 +63,7 @@ export function ApplySection({ jobId, userId }: ApplySectionProps) {
       })
 
       if (res.ok) {
+        sessionStorage.removeItem('pendingApply')
         setApplied(true)
       } else {
         const data = await res.json()
@@ -52,20 +77,22 @@ export function ApplySection({ jobId, userId }: ApplySectionProps) {
   }
 
   return (
-    <div className="bg-white border border-slate-200 rounded-3xl p-8">
+    <div className="bg-white border border-slate-200 rounded-3xl p-5 sm:p-8">
       {!applied ? (
         <>
           <h3 className="font-semibold text-lg text-slate-800 mb-4">
             {userId ? 'Apply for this job' : 'Want to apply?'}
           </h3>
+          <label htmlFor="job-proposal" className="sr-only">Your proposal</label>
           <textarea
+            id="job-proposal"
             value={proposal}
             onChange={e => setProposal(e.target.value)}
             placeholder="Write a short proposal explaining why you're a good fit for this job..."
             className="w-full border border-slate-200 rounded-2xl p-4 h-32 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent resize-none"
           />
           {applyError && (
-            <p className="mt-2 text-sm text-red-600">{applyError}</p>
+            <p className="mt-2 text-sm text-red-600" role="alert">{applyError}</p>
           )}
           <button
             onClick={handleApply}
@@ -79,7 +106,7 @@ export function ApplySection({ jobId, userId }: ApplySectionProps) {
                 : 'Sign In to Apply'
             }
           </button>
-          <p className="mt-3 text-center text-xs text-slate-400">
+          <p className="mt-3 text-center text-xs text-slate-500">
             {userId
               ? 'By applying, you agree to our Terms of Service.'
               : 'Sign in to submit your application. Your proposal will be saved.'
@@ -87,7 +114,7 @@ export function ApplySection({ jobId, userId }: ApplySectionProps) {
           </p>
         </>
       ) : (
-        <div className="text-center py-6">
+        <div className="text-center py-6" role="status">
           <div className="text-5xl mb-4">✅</div>
           <h3 className="text-xl font-semibold text-emerald-700 mb-2">Application submitted!</h3>
           <p className="text-slate-600 text-sm mb-4">The employer will review your proposal and get in touch.</p>

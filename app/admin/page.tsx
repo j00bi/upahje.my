@@ -8,7 +8,6 @@ export default function AdminPage() {
         <div className="grid gap-4">
           {[
             { href: '/admin/kyc', emoji: '🪪', label: 'KYC Review', desc: 'Review and verify talent MyKad submissions' },
-            { href: '/admin/jobs', emoji: '💼', label: 'Jobs', desc: 'Manage job postings' },
           ].map(item => (
             <Link
               key={item.href}

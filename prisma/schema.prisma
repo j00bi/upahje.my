@@ -8,17 +8,18 @@ datasource db {
 }
 
 model User {
-  id              String    @id @default(cuid())
-  email           String    @unique
+  id              String        @id @default(cuid())
+  email           String        @unique
   name            String?
   image           String?
-  createdAt       DateTime  @default(now())
-  updatedAt       DateTime  @updatedAt
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
   accounts        Account[]
+  applications    Application[]
   employer        Employer?
   profile         Profile?
-  reviewsWritten  Review[]  @relation("ReviewFromUser")
-  reviewsReceived Review[]  @relation("ReviewToUser")
+  reviewsWritten  Review[]      @relation("ReviewFromUser")
+  reviewsReceived Review[]      @relation("ReviewToUser")
   sessions        Session[]
   talent          Talent?
 }
@@ -50,17 +51,17 @@ model Session {
 }
 
 model Profile {
-  id        String    @id @default(cuid())
-  userId    String    @unique
-  role      Role      @default(TALENT)
-  phone     String?
-  state     String?
-  area      String?
-  kycStatus KYCStatus @default(PENDING)
+  id         String    @id @default(cuid())
+  userId     String    @unique
+  role       Role      @default(TALENT)
+  phone      String?
+  state      String?
+  area       String?
+  kycStatus  KYCStatus @default(PENDING)
   kycFileUrl String?
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
+  user       User      @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Talent {
@@ -119,11 +120,29 @@ model Job {
   talentId           String?
   createdAt          DateTime            @default(now())
   categoryId         String
+  applications       Application[]
   escrowTransactions EscrowTransaction[]
   category           Category            @relation(fields: [categoryId], references: [id])
   employer           Employer            @relation(fields: [employerId], references: [id])
   talent             Talent?             @relation(fields: [talentId], references: [id])
   payments           Payment[]
+}
+
+model Application {
+  id          String            @id @default(cuid())
+  jobId       String
+  applicantId String
+  message     String?
+  status      ApplicationStatus @default(PENDING)
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+  job         Job               @relation(fields: [jobId], references: [id])
+  applicant   User              @relation(fields: [applicantId], references: [id], onDelete: Cascade)
+
+  @@unique([jobId, applicantId])
+  @@index([jobId])
+  @@index([applicantId])
+  @@index([status])
 }
 
 model Review {
@@ -196,6 +215,13 @@ enum JobStatus {
   IN_PROGRESS
   COMPLETED
   CANCELLED
+}
+
+enum ApplicationStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+  WITHDRAWN
 }
 
 enum EscrowStatus {

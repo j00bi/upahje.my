@@ -35,7 +35,7 @@ export default function AiTasksPage() {
         </div>
       </nav>
 
-      <main className="max-w-5xl mx-auto px-6 py-10">
+      <div className="max-w-5xl mx-auto px-6 py-10">
         <div className="flex justify-between items-center mb-8">
           <div>
             <h1 className="text-3xl font-bold">AI Task Marketplace</h1>
@@ -80,7 +80,7 @@ export default function AiTasksPage() {
             </div>
           ))}
         </div>
-      </main>
+      </div>
     </div>
   )
 }

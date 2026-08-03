@@ -14,10 +14,32 @@ import type {
 
 type Step = 'role' | 'track' | 'profile'
 
-export function OnboardingFlow() {
-  const [step, setStep] = useState<Step>('role')
-  const [role, setRole] = useState<'employer' | 'talent' | null>(null)
+type OnboardingFlowProps = {
+  initialRole?: 'employer' | 'talent' | null
+  nextPath?: string
+}
+
+export function OnboardingFlow({
+  initialRole = null,
+  nextPath = '/dashboard',
+}: OnboardingFlowProps) {
+  const [step, setStep] = useState<Step>(
+    initialRole === 'employer'
+      ? 'profile'
+      : initialRole === 'talent'
+        ? 'track'
+        : 'role',
+  )
+  const [role, setRole] = useState<'employer' | 'talent' | null>(initialRole)
   const [track, setTrack] = useState<Track | null>(null)
+  const [submitting, setSubmitting] = useState(false)
+  const [submitError, setSubmitError] = useState<string | null>(null)
+
+  const finishAuthentication = () => {
+    const completeUrl = new URL('/auth/complete', window.location.origin)
+    completeUrl.searchParams.set('next', nextPath)
+    window.location.href = `${completeUrl.pathname}${completeUrl.search}`
+  }
 
   const handleRoleSelect = (selectedRole: 'employer' | 'talent') => {
     setRole(selectedRole)
@@ -41,8 +63,9 @@ export function OnboardingFlow() {
   }
 
   const handleProfileComplete = async (profileData: LabourOnboardingData | TechnicalOnboardingData) => {
-    console.log('[Onboarding] Profile completed:', track, profileData)
-
+    if (!track || submitting) return
+    setSubmitting(true)
+    setSubmitError(null)
     try {
       const response = await fetch('/api/onboarding/complete', {
         method: 'POST',
@@ -56,22 +79,22 @@ export function OnboardingFlow() {
       })
 
       if (response.ok) {
-        const result = await response.json()
-        console.log('Profile saved successfully:', result)
-        window.location.href = '/dashboard/talent'
+        finishAuthentication()
       } else {
         const error = await response.json()
-        alert(`Failed to save profile: ${error.error || 'Unknown error'}`)
+        setSubmitError(error.error || 'Failed to save profile')
       }
     } catch {
-      console.error('Error saving profile:')
-      alert('Something went wrong while saving your profile. Please try again.')
+      setSubmitError('Something went wrong while saving your profile. Please try again.')
+    } finally {
+      setSubmitting(false)
     }
   }
 
   const handleEmployerComplete = async (empData: EmployerOnboardingData) => {
-    console.log('[Onboarding] Employer profile:', empData)
-
+    if (submitting) return
+    setSubmitting(true)
+    setSubmitError(null)
     try {
       const response = await fetch('/api/onboarding/complete', {
         method: 'POST',
@@ -84,19 +107,30 @@ export function OnboardingFlow() {
       })
 
       if (response.ok) {
-        window.location.href = '/dashboard/employer'
+        finishAuthentication()
       } else {
         const error = await response.json()
-        alert(`Error: ${error.message || 'Failed to save profile'}`)
+        setSubmitError(error.error || 'Failed to save profile')
       }
     } catch {
-      console.error('Error saving profile:')
-      alert('An error occurred while saving your profile. Please try again.')
+      setSubmitError('An error occurred while saving your profile. Please try again.')
+    } finally {
+      setSubmitting(false)
     }
   }
 
   return (
     <div className="space-y-6">
+      {submitError && (
+        <div className="rounded-2xl border border-red-200 bg-red-50 p-3 text-sm text-red-800" role="alert">
+          {submitError}
+        </div>
+      )}
+      {submitting && (
+        <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-3 text-sm text-emerald-800" role="status">
+          Saving your profile…
+        </div>
+      )}
       <div className="flex items-center justify-between gap-3">
         {(role === 'employer' ? ['Role', 'Profile'] : ['Role', 'Track', 'Profile']).map((label, index) => {
           const current =

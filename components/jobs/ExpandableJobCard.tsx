@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
+import { useLanguage } from '@/lib/i18n'
 
 interface Job {
   id: string
@@ -27,6 +28,7 @@ export function ExpandableJobCard({ job }: ExpandableJobCardProps) {
   const [expanded, setExpanded] = useState(false)
   const contentRef = useRef<HTMLDivElement>(null)
   const router = useRouter()
+  const { isEnglish } = useLanguage()
 
   const toggle = () => setExpanded(e => !e)
 
@@ -73,7 +75,9 @@ export function ExpandableJobCard({ job }: ExpandableJobCardProps) {
                 <span className="hidden sm:inline">{job.employer.company}</span>
               )}
               <span className={`px-2 py-0.5 rounded-full text-xs font-medium ${job.track === 'LABOUR' ? 'bg-green-soft text-green-mid' : 'bg-purple-100 text-purple-700'}`}>
-                {job.track === 'LABOUR' ? '🛠️ Labour' : '💻 Technical'}
+                {job.track === 'LABOUR'
+                  ? (isEnglish ? '🛠️ Physical work' : '🛠️ Kerja fizikal')
+                  : (isEnglish ? '💻 Technical' : '💻 Teknikal')}
               </span>
             </div>
             {job.description && !expanded && (
@@ -112,7 +116,9 @@ export function ExpandableJobCard({ job }: ExpandableJobCardProps) {
         <div className="px-6 pb-6 pt-2 border-t border-slate-100">
           {job.description && (
             <div className="mb-4">
-              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">Description</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-2">
+                {isEnglish ? 'Job details' : 'Butiran kerja'}
+              </h4>
               <p className="text-slate-700 text-sm leading-relaxed whitespace-pre-wrap">{job.description}</p>
             </div>
           )}
@@ -120,21 +126,27 @@ export function ExpandableJobCard({ job }: ExpandableJobCardProps) {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-4">
             {job.rate && (
               <div className="bg-green-soft rounded-2xl p-3">
-                <div className="text-xs text-green-mid font-medium uppercase tracking-wide mb-0.5">Budget</div>
+                <div className="text-xs text-green-mid font-medium uppercase tracking-wide mb-0.5">
+                  {isEnglish ? 'Budget' : 'Bajet'}
+                </div>
                 <div className="font-semibold text-green-deep text-sm">{job.rate}</div>
               </div>
             )}
             {job.location && (
               <div className="bg-slate-50 rounded-2xl p-3">
-                <div className="text-xs text-slate-500 font-medium uppercase tracking-wide mb-0.5">Location</div>
+                <div className="text-xs text-slate-500 font-medium uppercase tracking-wide mb-0.5">
+                  {isEnglish ? 'Location' : 'Lokasi'}
+                </div>
                 <div className="font-medium text-slate-800 text-sm">{job.location}</div>
               </div>
             )}
             {job.employer && (
               <div className="bg-slate-50 rounded-2xl p-3">
-                <div className="text-xs text-slate-500 font-medium uppercase tracking-wide mb-0.5">Posted by</div>
+                <div className="text-xs text-slate-500 font-medium uppercase tracking-wide mb-0.5">
+                  {isEnglish ? 'Posted by' : 'Dipost oleh'}
+                </div>
                 <div className="font-medium text-slate-800 text-sm truncate">
-                  {job.employer.company || job.employer.user.name || 'Anonymous'}
+                  {job.employer.company || job.employer.user.name || (isEnglish ? 'Anonymous' : 'Tanpa nama')}
                 </div>
               </div>
             )}
@@ -145,7 +157,7 @@ export function ExpandableJobCard({ job }: ExpandableJobCardProps) {
               onClick={() => router.push(`/jobs/${job.id}`)}
               className="flex-1 py-3 bg-green-mid hover:bg-green-deep text-white font-medium text-sm rounded-2xl transition"
             >
-              View Full Details
+              {isEnglish ? 'View full details' : 'Lihat butiran penuh'}
             </button>
           </div>
         </div>

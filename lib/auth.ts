@@ -9,7 +9,10 @@ export async function auth() {
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+    (
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ??
+      process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+    )!,
     {
       cookies: {
         getAll() {
@@ -31,15 +34,38 @@ export async function auth() {
   )
 
   const {
+    data: { user },
+    error: userError,
+  } = await supabase.auth.getUser()
+
+  if (userError || !user) {
+    return null
+  }
+
+  const {
     data: { session },
   } = await supabase.auth.getSession()
 
-  return session
+  return session?.user.id === user.id ? session : null
 }
 
 export async function getUser() {
   const session = await auth()
   return session?.user ?? null
+}
+
+export class IdentityConflictError extends Error {
+  constructor(
+    public readonly supabaseUserId: string,
+    public readonly conflictingUserId: string,
+    message?: string,
+  ) {
+    super(
+      message ??
+        `Identity conflict: Supabase user ${supabaseUserId} maps to local user ${conflictingUserId} by email.`,
+    )
+    this.name = 'IdentityConflictError'
+  }
 }
 
 export async function ensureLocalUser(supabaseUser: SupabaseUser) {
@@ -67,7 +93,11 @@ export async function ensureLocalUser(supabaseUser: SupabaseUser) {
   })
 
   if (userByEmail) {
-    return userByEmail
+    // The Supabase auth user ID does not match the local user that owns this
+    // email. Silently attaching the session here would break the identity
+    // invariant (Supabase auth user ID === local User.id) and let one user act
+    // as another. Fail closed and require an explicit repair step.
+    throw new IdentityConflictError(supabaseUser.id, userByEmail.id)
   }
 
   try {
@@ -90,7 +120,7 @@ export async function ensureLocalUser(supabaseUser: SupabaseUser) {
     })
 
     if (existing) {
-      return existing
+      throw new IdentityConflictError(supabaseUser.id, existing.id)
     }
 
     throw new Error('Failed to create local user record')

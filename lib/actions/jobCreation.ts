@@ -1,5 +1,5 @@
-import { createClient } from '@/lib/supabase/server'
 import { auth } from '@/lib/auth'
+import { prisma } from '@/lib/prisma'
 import { validateJobPosting, getValidationErrors, JobPostingFormData } from '@/lib/validation/job'
 
 /**
@@ -27,22 +27,22 @@ export async function createJob(formData: JobPostingFormData) {
     }
   }
 
-  const supabase = await createClient()
+  const profile = await prisma.profile.findUnique({
+    where: { userId: session.user.id },
+    select: { role: true },
+  })
 
-  // Find employer record for this user
-  const { data: employer, error: selectError } = await supabase
-    .from('Employer')
-    .select('id')
-    .eq('userId', session.user.id)
-    .single()
-
-  if (selectError && selectError.code !== 'PGRST116') {
-    console.error('Error fetching employer:', selectError)
+  if (!profile || profile.role !== 'EMPLOYER') {
     return {
       success: false,
-      error: 'Failed to retrieve employer profile',
+      error: 'Only employers can post jobs.',
     }
   }
+
+  const employer = await prisma.employer.findUnique({
+    where: { userId: session.user.id },
+    select: { id: true },
+  })
 
   if (!employer) {
     return {
@@ -51,33 +51,31 @@ export async function createJob(formData: JobPostingFormData) {
     }
   }
 
-  // Create the job
-  const { data: newJob, error: insertError } = await supabase
-    .from('Job')
-    .insert({
-      title: validation.data.title,
-      description: validation.data.description,
-      rate: validation.data.rate,
-      location: validation.data.location,
-      track: validation.data.track,
-      categoryId: validation.data.categoryId,
-      employerId: employer.id,
-      status: 'OPEN',
+  try {
+    const newJob = await prisma.job.create({
+      data: {
+        title: validation.data.title,
+        description: validation.data.description,
+        rate: validation.data.rate,
+        location: validation.data.location,
+        track: validation.data.track,
+        categoryId: validation.data.categoryId,
+        employerId: employer.id,
+        status: 'OPEN',
+      },
+      select: { id: true, title: true, description: true, rate: true, location: true, track: true, status: true, createdAt: true },
     })
-    .select('id, title, description, rate, location, track, status, createdAt')
-    .single()
 
-  if (insertError) {
+    return {
+      success: true,
+      job: newJob,
+    }
+  } catch (insertError) {
     console.error('Error creating job:', insertError)
     return {
       success: false,
       error: 'Failed to create job. Please try again.',
     }
-  }
-
-  return {
-    success: true,
-    job: newJob,
   }
 }
 
@@ -94,50 +92,36 @@ export async function getCurrentEmployerId() {
     }
   }
 
-  const supabase = await createClient()
+  const existing = await prisma.employer.findUnique({
+    where: { userId: session.user.id },
+    select: { id: true },
+  })
 
-  // Find employer record for this user
-  const { data: employer, error: selectError } = await supabase
-    .from('Employer')
-    .select('id')
-    .eq('userId', session.user.id)
-    .single()
-
-  if (selectError && selectError.code !== 'PGRST116') {
-    console.error('Error fetching employer:', selectError)
+  if (existing) {
     return {
-      success: false,
-      error: 'Failed to retrieve employer profile',
+      success: true,
+      employerId: existing.id,
     }
   }
 
-  if (!employer) {
-    // Create employer record if it doesn't exist
-    const { data: newEmployer, error: insertError } = await supabase
-      .from('Employer')
-      .insert({
+  try {
+    const created = await prisma.employer.create({
+      data: {
         userId: session.user.id,
         company: null,
-      })
-      .select('id')
-      .single()
-
-    if (insertError) {
-      console.error('Error creating employer:', insertError)
-      return {
-        success: false,
-        error: 'Failed to create employer profile',
-      }
-    }
+      },
+      select: { id: true },
+    })
 
     return {
       success: true,
-      employerId: newEmployer.id,
+      employerId: created.id,
     }
-  }
-
-  return {
-    success: true,
-    employerId: employer.id,
+  } catch (insertError) {
+    console.error('Error creating employer:', insertError)
+    return {
+      success: false,
+      error: 'Failed to create employer profile',
+    }
   }
 }

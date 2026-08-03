@@ -1,6 +1,6 @@
 'use client'
 
-import { motion } from 'motion/react'
+import { motion, useReducedMotion } from 'motion/react'
 import type { Variants } from 'motion/react'
 import { ReactNode } from 'react'
 
@@ -17,7 +17,7 @@ const containerVariants: Variants = {
 }
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 1, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
@@ -34,9 +34,11 @@ export function StaggerContainer({
   className?: string
   once?: boolean
 }) {
+  const reduceMotion = useReducedMotion()
+
   return (
     <motion.div
-      initial="hidden"
+      initial={reduceMotion ? 'visible' : 'hidden'}
       whileInView="visible"
       viewport={{ once, margin: '-60px' }}
       variants={containerVariants}

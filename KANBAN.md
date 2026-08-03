@@ -67,7 +67,7 @@
 | ID      | Task                                              | Status | Owner | Notes |
 |---------|---------------------------------------------------|--------|-------|-------|
 | M1-L1   | Finalize Labour role selection screen             | In Progress | Grok  | Best-of-N variants present in live onboarding flow |
-| M1-L2   | Design Labour quick registration (email + phone)  | To Do  | Grok  | Browse-only path |
+| M1-L2   | Design Labour quick registration (email + phone)  | Done  | Codex  | Email/Google registration, role-prefilled onboarding, persistence and return intent wired |
 | M1-L3   | Design Labour full registration + KYC flow        | To Do  | Grok  | Full access path |
 | M1-L4   | Create Labour profile form (basic + advanced)     | To Do  | Grok  | - |
 | M1-L5   | Build MyKad upload + verification UI              | To Do  | Grok  | - |
@@ -80,7 +80,7 @@
 | ID      | Task                                              | Status | Owner | Notes |
 |---------|---------------------------------------------------|--------|-------|-------|
 | M1-E1   | Design Employer role selection screen             | In Progress | Grok  | Best-of-N employer variants present in live onboarding flow |
-| M1-E2   | Create Employer quick registration flow           | To Do  | Grok  | - |
+| M1-E2   | Create Employer quick registration flow           | Done  | Codex  | Email/Google registration converges on validated employer onboarding |
 | M1-E3   | Design Employer full onboarding (company info)    | To Do  | Grok  | - |
 | M1-E4   | Build job posting during onboarding (optional)    | To Do  | Grok  | - |
 
@@ -122,6 +122,27 @@
 | M2-H9  | Build vertical landing pages for all categories     | In Progress | Hermes | 7 done, more verticals pending |
 | M2-H10 | Implement job discovery + search                    | Done       | Hermes | /jobs reads query-string filters; nav search routes into it |
 | M2-H11 | Build job listing detail pages                      | Done       | Hermes | Live /jobs/[jobId] page + apply CTA wired to job APIs |
+
+---
+
+## M3 – Applications & Matching
+
+### Status Overview
+- **Application submission**: Done
+- **Employer review and decisions**: Done
+- **Talent status tracking**: Done
+- **Transactional job matching**: Done
+- **Live authenticated E2E**: To Do
+- **Overall Progress**: ~80%
+
+| ID     | Task                                           | Status | Owner | Notes |
+|--------|------------------------------------------------|--------|-------|-------|
+| M3-A1  | Model applications in Prisma                   | Done   | Codex | Reconciled the initial migration and added unique applicant/job constraint |
+| M3-A2  | Submit deduplicated pending applications       | Done   | Codex | Prisma-backed route; job remains OPEN |
+| M3-A3  | Employer application review surface            | Done   | Codex | Per-job inbox with proposal and fit signals |
+| M3-A4  | Accept/reject application transaction          | Done   | Codex | Accept assigns talent, marks job MATCHED, rejects competing pending applications |
+| M3-A5  | Talent application tracking and withdrawal     | Done   | Codex | Dashboard history and pending withdrawal |
+| M3-A6  | Authenticated database E2E                     | To Do  | Codex | Requires reachable Supabase project and employer/talent test accounts |
 
 ---
 

@@ -50,9 +50,16 @@ export function normalizeInternalRedirect(value: string | null | undefined, fall
     return fallback
   }
 
-  if (!value.startsWith('/') || value.startsWith('//')) {
+  try {
+    const baseUrl = new URL('https://upahje.local')
+    const redirectUrl = new URL(value, baseUrl)
+
+    if (redirectUrl.origin !== baseUrl.origin || !value.startsWith('/')) {
+      return fallback
+    }
+
+    return `${redirectUrl.pathname}${redirectUrl.search}${redirectUrl.hash}`
+  } catch {
     return fallback
   }
-
-  return value
 }

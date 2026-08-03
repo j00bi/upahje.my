@@ -158,7 +158,7 @@ export function EmployerOnboardingSimple({ onComplete, onBack }: EmployerOnboard
           {step === 3 ? 'Create Employer Account' : 'Continue'}
         </button>
       </div>
-      <p className="text-center text-[10px] text-gray-400 mt-3">Step 3 of 3 — You're ready to hire</p>
+      <p className="text-center text-[10px] text-gray-400 mt-3">Step 3 of 3 — You&apos;re ready to hire</p>
     </div>
   )
 }

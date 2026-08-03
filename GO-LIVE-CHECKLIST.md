@@ -21,7 +21,7 @@
 - [x] Seed sample jobs for demo purposes (realistic LABOUR + TECHNICAL jobs)
 - [x] Real employer association in job posting (fetchOrCreateEmployer implemented in PostJobForm)
 - [x] Improve JobCard to show employer info
-- [ ] Add apply/contact functionality
+- [x] Add application submission, employer review, and acceptance functionality
 - [ ] Set up custom domain (upahje.my)
 
 ## 🚀 Deployment

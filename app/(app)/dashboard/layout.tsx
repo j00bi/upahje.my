@@ -34,9 +34,9 @@ export default async function DashboardLayout({
             <UserNav />
           </div>
         </header>
-        <main className="flex-1 overflow-auto p-6">
+        <div className="flex-1 overflow-auto p-4 pb-24 sm:p-6 md:pb-6">
           {children}
-        </main>
+        </div>
       </div>
     </div>
   )
