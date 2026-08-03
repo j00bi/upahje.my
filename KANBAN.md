@@ -125,6 +125,27 @@
 
 ---
 
+## M3 – Applications & Matching
+
+### Status Overview
+- **Application submission**: Done
+- **Employer review and decisions**: Done
+- **Talent status tracking**: Done
+- **Transactional job matching**: Done
+- **Live authenticated E2E**: To Do
+- **Overall Progress**: ~80%
+
+| ID     | Task                                           | Status | Owner | Notes |
+|--------|------------------------------------------------|--------|-------|-------|
+| M3-A1  | Model applications in Prisma                   | Done   | Codex | Reconciled the initial migration and added unique applicant/job constraint |
+| M3-A2  | Submit deduplicated pending applications       | Done   | Codex | Prisma-backed route; job remains OPEN |
+| M3-A3  | Employer application review surface            | Done   | Codex | Per-job inbox with proposal and fit signals |
+| M3-A4  | Accept/reject application transaction          | Done   | Codex | Accept assigns talent, marks job MATCHED, rejects competing pending applications |
+| M3-A5  | Talent application tracking and withdrawal     | Done   | Codex | Dashboard history and pending withdrawal |
+| M3-A6  | Authenticated database E2E                     | To Do  | Codex | Requires reachable Supabase project and employer/talent test accounts |
+
+---
+
 ## Parallel Execution Notes
 
 - M0 and M1 can run in parallel.

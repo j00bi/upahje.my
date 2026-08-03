@@ -2,6 +2,7 @@ import { redirect } from 'next/navigation'
 import { auth, getUserWithRole } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { JobCard } from '@/components/jobs/JobCard'
+import { WithdrawApplicationButton } from '@/components/applications/WithdrawApplicationButton'
 import Link from 'next/link'
 
 export const dynamic = 'force-dynamic'
@@ -66,6 +67,27 @@ export default async function TalentDashboard() {
     orderBy: { createdAt: 'desc' },
     take: 6,
   })
+
+  const applications = await prisma.application.findMany({
+    where: { applicantId: user.id },
+    include: {
+      job: {
+        include: {
+          category: true,
+          employer: true,
+        },
+      },
+    },
+    orderBy: { createdAt: 'desc' },
+    take: 10,
+  })
+
+  const applicationStatusStyles = {
+    PENDING: 'bg-amber-100 text-amber-900',
+    ACCEPTED: 'bg-emerald-100 text-emerald-900',
+    REJECTED: 'bg-rose-100 text-rose-900',
+    WITHDRAWN: 'bg-slate-100 text-slate-700',
+  }
 
   return (
     <div className="space-y-6">
@@ -160,6 +182,58 @@ export default async function TalentDashboard() {
             )}
           </div>
         </aside>
+      </section>
+
+      <section className="glass rounded-[1.75rem] p-5 sm:p-6">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 className="text-lg font-semibold text-slate-950">Your applications</h2>
+            <p className="text-sm text-slate-600">
+              Track employer decisions without losing your proposal history.
+            </p>
+          </div>
+          <Link href="/jobs" className="text-sm font-semibold text-blue-700 hover:text-blue-800">
+            Find more work →
+          </Link>
+        </div>
+
+        {applications.length > 0 ? (
+          <div className="mt-5 grid gap-4 lg:grid-cols-2">
+            {applications.map((application) => (
+              <article key={application.id} className="rounded-2xl border border-slate-200 bg-white/90 p-4">
+                <div className="flex items-start justify-between gap-3">
+                  <div>
+                    <Link
+                      href={`/jobs/${application.jobId}`}
+                      className="font-semibold text-slate-950 hover:text-blue-700"
+                    >
+                      {application.job.title}
+                    </Link>
+                    <p className="mt-1 text-xs text-slate-500">
+                      {application.job.employer.company || 'UpahJe employer'} ·{' '}
+                      {new Date(application.createdAt).toLocaleDateString('ms-MY')}
+                    </p>
+                  </div>
+                  <span className={`rounded-full px-3 py-1 text-xs font-semibold ${applicationStatusStyles[application.status]}`}>
+                    {application.status.charAt(0) + application.status.slice(1).toLowerCase()}
+                  </span>
+                </div>
+                <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-600">
+                  {application.message || 'No proposal message supplied.'}
+                </p>
+                {application.status === 'PENDING' && (
+                  <div className="mt-3 border-t border-slate-100 pt-3">
+                    <WithdrawApplicationButton applicationId={application.id} />
+                  </div>
+                )}
+              </article>
+            ))}
+          </div>
+        ) : (
+          <div className="mt-5 rounded-2xl border border-dashed border-slate-300 p-6 text-center text-sm text-slate-500">
+            You have not applied to any jobs yet.
+          </div>
+        )}
       </section>
     </div>
   )

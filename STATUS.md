@@ -1,7 +1,7 @@
 # UpahJe.My — Project Status
 
 **Last Updated**: 2026-05-22
-**Current Phase**: M1 (Onboarding/KYC) + M2 (Marketplace Discovery)
+**Current Phase**: M3 (Applications & Matching)
 **Roadmap**: M0 to M7 active (see docs/M0-TO-M7-ROADMAP.md)
 **Overall Progress**: ~58%
 **Go-Live Target**: Late July – Early August 2026
@@ -14,10 +14,17 @@
 | M0        | Complete     | 100%     | Codex             |
 | M1        | In Progress  | ~75%     | Grok + Codex      |
 | M2        | Partial      | ~45%     | Hermes + Codex    |
-| M3        | Not Started  | 0%       | Codex             |
+| M3        | In Progress  | ~80%     | Codex             |
 | M4        | Not Started  | 0%       | Grok + Codex      |
 
 ## Current Focus
+
+**M3 – Applications & Matching** — Core hiring loop implemented
+- Prisma now models the existing Application table with deduplication and explicit statuses
+- Talent applications remain pending until an employer decides
+- Employers can review proposals with fit signals and accept or reject candidates
+- Accepting is transactional: the job is matched, the selected talent is assigned, and other pending applications are rejected
+- Talents can track and withdraw pending applications from their dashboard
 
 **M0 – Foundation** — Complete
 - Auth System: Core context + pages complete, role-aware auth wired, middleware auth-only
@@ -67,7 +74,7 @@
 
 1. Finish MyKad OCR/preview and tighten KYC review workflow
 2. Polish M2 discovery flow (more vertical mappings, quick filter chips, route-level URL sync)
-3. Start M3 Matching & Applications after onboarding/discovery is solid
+3. Verify M3 against a reachable Supabase database with employer and talent test accounts
 4. Implement trust & safety (reviews, escrow) for M4
 
 ## Blockers

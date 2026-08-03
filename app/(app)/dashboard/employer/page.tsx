@@ -27,6 +27,9 @@ export default async function EmployerDashboard() {
         include: {
           category: true,
           talent: true,
+          applications: {
+            select: { id: true, status: true },
+          },
         },
         orderBy: { createdAt: 'desc' },
       },
@@ -81,6 +84,8 @@ export default async function EmployerDashboard() {
                   budget={job.rate || 'Negotiable'}
                   status={job.status}
                   postedDate={new Date(job.createdAt).toLocaleDateString()}
+                  proposalCount={job.applications.length}
+                  detailsHref={`/jobs/${job.id}/matches`}
                 />
               ))
             ) : (
@@ -98,20 +103,47 @@ export default async function EmployerDashboard() {
         </article>
 
         <aside className="glass rounded-[1.75rem] p-5 sm:p-6">
-          <h2 className="text-lg font-semibold text-slate-950">Recent Matches</h2>
+          <h2 className="text-lg font-semibold text-slate-950">Application inbox</h2>
           <p className="mt-2 text-sm leading-6 text-slate-600">
-            Matched talents will appear here once the matching layer is connected.
+            Open a job to review proposals and choose who you want to hire.
           </p>
           <div className="mt-5 space-y-3">
-            {[
-              "Trust score and verification badges",
-              "Matching explanation and rate fit",
-              "Quick contact and shortlist actions",
-            ].map((item) => (
-              <div key={item} className="rounded-2xl border border-slate-200 bg-white/80 p-4 text-sm text-slate-700">
-                {item}
+            {employer.jobs.filter((job) => job.applications.length > 0).length > 0 ? (
+              employer.jobs
+                .filter((job) => job.applications.length > 0)
+                .slice(0, 5)
+                .map((job) => {
+                  const pendingCount = job.applications.filter(
+                    (application) => application.status === 'PENDING',
+                  ).length
+
+                  return (
+                    <Link
+                      key={job.id}
+                      href={`/jobs/${job.id}/matches`}
+                      className="block rounded-2xl border border-slate-200 bg-white/80 p-4 transition hover:border-emerald-300 hover:bg-white"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div>
+                          <p className="font-medium text-slate-900">{job.title}</p>
+                          <p className="mt-1 text-xs text-slate-500">
+                            {job.applications.length} total application{job.applications.length === 1 ? '' : 's'}
+                          </p>
+                        </div>
+                        {pendingCount > 0 && (
+                          <span className="rounded-full bg-amber-100 px-2.5 py-1 text-xs font-semibold text-amber-900">
+                            {pendingCount} new
+                          </span>
+                        )}
+                      </div>
+                    </Link>
+                  )
+                })
+            ) : (
+              <div className="rounded-2xl border border-slate-200 bg-white/80 p-4 text-sm text-slate-500">
+                No applications yet. New proposals will appear here.
               </div>
-            ))}
+            )}
           </div>
         </aside>
       </section>
