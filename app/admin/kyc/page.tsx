@@ -62,6 +62,21 @@ export default function AdminKYCMgmt() {
     }
   }
 
+  const handleViewDocument = async (profileId: string) => {
+    try {
+      const res = await fetch(`/api/admin/kyc/${profileId}/document`)
+      if (!res.ok) {
+        const data = await res.json()
+        alert(data.error ?? 'Could not load document')
+        return
+      }
+      const data = await res.json()
+      window.open(data.signedUrl, '_blank', 'noopener,noreferrer')
+    } catch {
+      alert('Could not load document')
+    }
+  }
+
   const filtered = submissions.filter(s => filter === 'ALL' || s.kycStatus === filter)
   const counts = {
     ALL: submissions.length,
@@ -173,14 +188,13 @@ export default function AdminKYCMgmt() {
                       {/* Actions + file */}
                       <div className="w-48 shrink-0 space-y-3">
                         {sub.kycFileUrl ? (
-                          <a
-                            href={sub.kycFileUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="block text-center py-2.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-xl text-sm font-medium text-slate-700 transition"
+                          <button
+                            type="button"
+                            onClick={() => handleViewDocument(sub.id)}
+                            className="block w-full text-center py-2.5 bg-slate-100 hover:bg-slate-200 border border-slate-200 rounded-xl text-sm font-medium text-slate-700 transition"
                           >
                             📄 View MyKad
-                          </a>
+                          </button>
                         ) : (
                           <div className="text-center py-2.5 text-xs text-slate-400 italic">
                             No file uploaded

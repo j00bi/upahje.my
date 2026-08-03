@@ -37,6 +37,8 @@ export async function GET() {
       orderBy: { updatedAt: 'desc' },
     })
 
+    // kycFileUrl is a private storage object path. Do not expose a permanent
+    // URL. The admin UI must call the signed-URL endpoint to view a document.
     return NextResponse.json(submissions)
   } catch (error) {
     console.error('Admin KYC list error:', error)
