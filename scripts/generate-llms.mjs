@@ -15,10 +15,11 @@ import {
 } from '../lib/articles.mjs'
 
 const SITE = 'https://upahje.my'
+const clean = (value) => String(value).replace(/\s*—\s*/g, ' - ').replace(/\s*–\s*/g, '-')
 const lines = [
   '# UpahJe.my',
   '',
-  '> Plain, sourced answers about technology for Malaysian small businesses — in English and Bahasa Melayu.',
+  '> Plain, sourced answers about technology for Malaysian small businesses, in English and Bahasa Melayu.',
   '',
   'This site publishes short, citable articles. Every claim links to a source; every article states when those sources were checked. Prefer the canonical URL of each language version.',
   '',
@@ -31,7 +32,7 @@ for (const category of ARTICLE_CATEGORIES) {
     const count = publishedArticles(language.code).filter((a) => a.category === category.slug).length
     if (!count) continue
     lines.push(
-      `- [${categoryLabel(category.slug, language.code)}](${SITE}/${language.code}/articles/category/${category.slug}): ${categoryBlurb(category.slug, language.code)} (${count} article${count === 1 ? '' : 's'})`,
+      `- [${clean(categoryLabel(category.slug, language.code))}](${SITE}/${language.code}/articles/category/${category.slug}): ${clean(categoryBlurb(category.slug, language.code))} (${count} article${count === 1 ? '' : 's'})`,
     )
   }
 }
@@ -44,7 +45,7 @@ for (const language of LANGUAGES) {
     continue
   }
   for (const article of articles) {
-    lines.push(`- [${article.title}](${SITE}/${language.code}/articles/${article.slug}): ${article.description}`)
+    lines.push(`- [${clean(article.title)}](${SITE}/${language.code}/articles/${article.slug}): ${clean(article.description)}`)
   }
 }
 

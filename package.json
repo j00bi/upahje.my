@@ -13,7 +13,9 @@
     "db:reset": "prisma migrate reset",
     "prebuild": "node scripts/generate-llms.mjs",
     "articles:llms": "node scripts/generate-llms.mjs",
-    "articles:check": "node scripts/check-articles.mjs"
+    "articles:check": "node scripts/check-articles.mjs",
+    "verify:content": "node scripts/verify-content.mjs",
+    "test:faq-boundary": "node scripts/test-faq-boundary.mjs"
   },
   "dependencies": {
     "@prisma/client": "^5.13.0",

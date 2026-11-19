@@ -1,3 +1,5 @@
+import fs from 'node:fs'
+import path from 'node:path'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { cleanText } from './text'
@@ -80,6 +82,29 @@ function splitRow(line: string): string[] {
     .replace(/\|\s*$/, '')
     .split(/(?<!\\)\|/)
     .map((cell) => cell.trim().replace(/\\\|/g, '|'))
+}
+
+/* Figure sizes come from the file itself, so the <img> never ships without
+   intrinsic dimensions (no CLS). SVGs only; a raster figure would need its own
+   size in the alt syntax and is not supported yet. */
+const figureSizes = new Map<string, { width: number; height: number } | null>()
+function figureSize(src: string) {
+  if (!src.startsWith('/') || !src.endsWith('.svg')) return null
+  if (figureSizes.has(src)) return figureSizes.get(src) ?? null
+  try {
+    const svg = fs.readFileSync(path.join(process.cwd(), 'public', src), 'utf8')
+    const width = Number(svg.match(/\bwidth="(\d+)"/)?.[1])
+    const height = Number(svg.match(/\bheight="(\d+)"/)?.[1])
+    const view = svg.match(/\bviewBox="[\d.]+[\s,]+[\d.]+[\s,]+([\d.]+)[\s,]+([\d.]+)"/)
+    const size = width && height
+      ? { width, height }
+      : view ? { width: Number(view[1]), height: Number(view[2]) } : null
+    figureSizes.set(src, size)
+    return size
+  } catch {
+    figureSizes.set(src, null)
+    return null
+  }
 }
 
 const startsTable = (line: string, next: string | undefined) =>
@@ -171,6 +196,36 @@ export function Markdown({ source }: { source: string }): ReactNode {
             <li key={index} className="pl-1">{renderInline(item, `li${key}-${index}`)}</li>
           ))}
         </ul>,
+      )
+      continue
+    }
+
+    const image = line.match(/^!\[([^\]]*)\]\((\S+?)(?:\s+"[^"]*")?\)\s*$/)
+    if (image) {
+      const [, alt, src] = image
+      let caption: string | null = null
+      if (i + 1 < lines.length) {
+        const next = lines[i + 1].match(/^\*([^*]+)\*\s*$/)
+        if (next) { caption = cleanText(next[1].trim()); i += 1 }
+      }
+      i += 1
+      const size = figureSize(src)
+      blocks.push(
+        <figure key={key++} className="my-6">
+          <img
+            src={src}
+            alt={cleanText(alt)}
+            {...(size ? { width: size.width, height: size.height } : {})}
+            loading="lazy"
+            decoding="async"
+            style={{ display: 'block', width: '100%', height: 'auto' }}
+          />
+          {caption && caption.toLowerCase() !== cleanText(alt).toLowerCase() && (
+            <figcaption className="mt-2 text-[13px]" style={{ color: 'var(--ui-muted)' }}>
+              {caption}
+            </figcaption>
+          )}
+        </figure>,
       )
       continue
     }

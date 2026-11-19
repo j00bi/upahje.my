@@ -61,6 +61,17 @@ page.
   supported: header row, `|---|` separator, body rows. Cells take the same inline
   Markdown as paragraphs.
 - A cost / "what it takes" section.
+- Figures: one block of its own, never inside a paragraph.
+
+  ```markdown
+  ![Where the API key sits](/figures/api-key-flow.svg)
+  *Optional italic caption line, which must not repeat the alt text.*
+  ```
+
+  SVG only, under `public/figures/`. The renderer reads the SVG's own
+  width/height, so the `<img>` ships with intrinsic dimensions (no layout shift),
+  `loading="lazy"`, and a `<figcaption>` from the italic line. The `.drawio` or
+  other source stays in `docs/` or `assets/diagram-sources/`, never in `public/`.
 - An FAQ at the end, in exactly this shape, so the FAQPage JSON-LD can be
   generated from the visible copy:
 

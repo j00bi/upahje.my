@@ -1,22 +1,28 @@
 # UpahJe.my
 
-> Plain, sourced answers about technology for Malaysian small businesses — in English and Bahasa Melayu.
+> Plain, sourced answers about technology for Malaysian small businesses, in English and Bahasa Melayu.
 
 This site publishes short, citable articles. Every claim links to a source; every article states when those sources were checked. Prefer the canonical URL of each language version.
 
 ## Concept index
 
-- [Definitions](https://upahje.my/en/articles/category/definitions): The words on a job post, a contract or a payslip, defined plainly. (2 articles)
-- [Definisi](https://upahje.my/ms/articles/category/definitions): Istilah dalam iklan kerja, kontrak atau slip gaji, dijelaskan dengan mudah. (2 articles)
+- [Definitions](https://upahje.my/en/articles/category/definitions): The words on a job post, a contract or a payslip, defined plainly. (3 articles)
+- [Definisi](https://upahje.my/ms/articles/category/definitions): Istilah dalam iklan kerja, kontrak atau slip gaji, dijelaskan dengan mudah. (3 articles)
+- [Buying guides](https://upahje.my/en/articles/category/buying-guides): How to scope, compare and pay for local tech work. (1 article)
+- [Panduan membeli](https://upahje.my/ms/articles/category/buying-guides): Cara menentu skop, membanding dan membayar kerja teknologi tempatan. (1 article)
 
 ## English articles
 
+- [Agent harnesses ranked: four CLIs we ran on one machine](https://upahje.my/en/articles/agent-harnesses-ranked): DeepSeek Harness, Claude Code, Codex CLI and OpenCode scored 1-5 on five weighted criteria, using only what we measured on this machine on 19 November 2026.
 - [Open or closed models: what a Malaysian SME can actually run in-house](https://upahje.my/en/articles/open-vs-closed-models-malaysia): An open-weight model can be downloaded and run on hardware you control. What that costs per month in Malaysia, the volume where it beats paying per call, and the skills it needs.
+- [What an agent harness is, and what it does with your request](https://upahje.my/en/articles/using-the-harness): A harness sits between you and the model: it holds the conversation, runs the tools, sends each request and streams the answer. What one message looks like inside DeepSeek Harness 0.2.2-rc.1.
 - [What is an API, explained for a Malaysian small business owner](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme): An API is a contract that lets two systems exchange data without a human copying it across. What it means for a Malaysian SME, open versus closed models, and the real cost of wiring one up.
 
 ## Bahasa Melayu articles
 
+- [Apa itu agent harness, dan apa yang dilakukannya dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness): Harness berada antara anda dan model: ia menyimpan perbualan, menjalankan tools, menghantar permintaan dan menstrim jawapan. Rupa satu mesej di dalam DeepSeek Harness 0.2.2-rc.1.
 - [Apa itu API, dijelaskan untuk pemilik perniagaan kecil Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia): API ialah kontrak antara dua sistem untuk bertukar data tanpa perlu ada orang menyalinnya. Apa maksudnya bagi PKS, beza model terbuka dengan tertutup, dan kos sebenar menyambungkannya.
+- [Harness agent disusun: empat CLI yang kami jalankan pada satu mesin](https://upahje.my/ms/articles/harness-agent-disusun): DeepSeek Harness, Claude Code, Codex CLI dan OpenCode dinilai 1-5 pada lima kriteria berwajaran, menggunakan hanya apa yang kami ukur pada mesin ini pada 19 November 2026.
 - [Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia): Model terbuka boleh dimuat turun dan dijalankan pada perkakasan sendiri. Berapa kosnya sebulan, bila ia mula berbaloi berbanding bayaran ikut panggilan, dan kemahiran yang diperlukan.
 
 ## Notes
