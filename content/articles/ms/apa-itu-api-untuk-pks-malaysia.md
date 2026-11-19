@@ -55,7 +55,7 @@ Setakat 19 November 2026, katalog Mistral sendiri menyenaraikan ketiga-tiga bent
 
 ## Patut mula dengan yang mana?
 
-Bayar ikut panggilan tidak kos apa-apa bila penggunaan sifar. Pelayan kos setiap bulan walaupun tiada orang guna. Aritmetik itu yang menjadikan API tertutup lebih murah untuk permulaan kebanyakan perniagaan kecil. Model terbuka hanya menang apabila penggunaan bulanan cukup tinggi untuk mengalahkan kos mesin, dan ada orang di pihak anda yang tahu menjalankannya. Bagi kebanyakan PKS Malaysia, syarat kedua itulah yang menentukan.
+Bayar ikut panggilan tidak kos apa-apa bila penggunaan sifar. Pelayan kos setiap bulan walaupun tiada orang guna. Kiraan itu yang menjadikan API tertutup lebih murah untuk permulaan kebanyakan perniagaan kecil. Model terbuka hanya menang apabila penggunaan bulanan cukup tinggi untuk mengalahkan kos mesin, dan ada orang di pihak anda yang tahu menjalankannya. Bagi kebanyakan PKS Malaysia, syarat kedua itulah yang menentukan.
 
 ## Berapa kos untuk orang sambungkan API di Malaysia?
 
@@ -97,7 +97,7 @@ Bukan kunci utama anda. Keluarkan kunci berasingan untuk integrasi itu dengan ha
 
 ### Apa jadi kalau pembekal ubah atau tutup API mereka?
 
-Integrasi berhenti berfungsi sehingga dikemas kini. Tempohnya milik pembekal: OpenAI menerbitkan garis masa penghentian yang dipautkan dari halaman harga mereka ([disemak 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Pastikan integrasi nipis supaya boleh dihalakan ke pembekal lain.
+Integrasi berhenti berfungsi sehingga dikemas kini. Tempoh itu ditentukan pembekal: OpenAI menerbitkan garis masa penghentian yang dipautkan dari halaman harga mereka ([disemak 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Pastikan integrasi nipis supaya boleh dihalakan ke pembekal lain.
 
 ### Berapa lama integrasi pertama mengambil masa?
 
