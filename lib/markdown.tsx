@@ -27,6 +27,10 @@ const LINK =
   'font-medium text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800'
 const PRE =
   'mb-6 overflow-x-auto rounded-md bg-green-deep p-4 text-sm leading-6 text-canvas'
+const TABLE_WRAP = 'my-8 overflow-x-auto rounded-md border border-neutral-200'
+const TABLE = 'w-full border-collapse text-left text-[15px] leading-6'
+const TH = 'border-b border-neutral-200 bg-canvas-soft px-4 py-3 font-semibold text-ink align-top'
+const TD = 'border-t border-neutral-200 px-4 py-3 align-top text-body'
 
 function anchor(text: string) {
   return text
@@ -65,6 +69,20 @@ function renderInline(text: string, keyPrefix: string): ReactNode[] {
     return <span key={key}>{part}</span>
   })
 }
+
+const TABLE_SEPARATOR = /^\s*\|?\s*:?-{3,}:?\s*(\|\s*:?-{3,}:?\s*)+\|?\s*$/
+
+/** `| a | b |` -> ['a', 'b'], keeping escaped pipes inside a cell. */
+function splitRow(line: string): string[] {
+  return line
+    .replace(/^\s*\|/, '')
+    .replace(/\|\s*$/, '')
+    .split(/(?<!\\)\|/)
+    .map((cell) => cell.trim().replace(/\\\|/g, '|'))
+}
+
+const startsTable = (line: string, next: string | undefined) =>
+  line.includes('|') && !!next && TABLE_SEPARATOR.test(next)
 
 const isBlockStart = (line: string) =>
   /^#{1,3}\s/.test(line) ||
@@ -150,6 +168,43 @@ export function Markdown({ source }: { source: string }): ReactNode {
             <li key={index} className="pl-1">{renderInline(item, `li${key}-${index}`)}</li>
           ))}
         </ul>,
+      )
+      continue
+    }
+
+    if (startsTable(line, lines[i + 1])) {
+      const header = splitRow(line)
+      const rows: string[][] = []
+      i += 2
+      while (i < lines.length && lines[i].includes('|') && lines[i].trim() && !isBlockStart(lines[i])) {
+        rows.push(splitRow(lines[i]))
+        i += 1
+      }
+      blocks.push(
+        <div key={key++} className={TABLE_WRAP}>
+          <table className={TABLE}>
+            <thead>
+              <tr>
+                {header.map((cell, index) => (
+                  <th key={index} scope="col" className={TH}>
+                    {renderInline(cell, `th${key}-${index}`)}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {rows.map((row, rowIndex) => (
+                <tr key={rowIndex}>
+                  {header.map((_, cellIndex) => (
+                    <td key={cellIndex} className={TD}>
+                      {renderInline(row[cellIndex] || '', `td${key}-${rowIndex}-${cellIndex}`)}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>,
       )
       continue
     }

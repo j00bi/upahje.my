@@ -57,8 +57,9 @@ page.
 - One `# H1` matching `title` at the top (the page renders the title itself and
   drops the duplicate).
 - Question-shaped `##` headings.
-- At least one ordered step list (`1.` `2.`). **Tables are not supported yet** —
-  use an ordered list.
+- At least one ordered step list (`1.` `2.`) or a pipe table. GFM tables are
+  supported: header row, `|---|` separator, body rows. Cells take the same inline
+  Markdown as paragraphs.
 - A cost / "what it takes" section.
 - An FAQ at the end, in exactly this shape, so the FAQPage JSON-LD can be
   generated from the visible copy:
@@ -96,6 +97,37 @@ Next requires `<html>` in the root layout, which has no language parameter, so
 `div` and emits correct `hreflang` + canonical per page. Fixing `<html lang>`
 properly means multiple root layouts (moving every route into a group) — do not
 "fix" it by moving routes without checking the marketplace surface first.
+
+## Deployment identity (Vercel blocks unknown committers)
+
+Vercel only deploys commits authored by a verified identity on the project. A
+commit authored as an agent identity (`SEO Publisher <seo@local>`, etc.) fails
+with **"Deployment was blocked"** — and nothing visible breaks: the site just
+serves the previous build while the GitHub branch looks updated.
+
+- Commit with the repo identity (`Ahmad Husni <husnisarafi17@gmail.com>`, the
+  repo's configured `user.name`/`user.email`), not an agent label.
+- After a push, confirm the deployment actually ran:
+
+  ```bash
+  gh api repos/j00bi/upahje.my/commits/<sha>/statuses \
+    --jq '.[] | [.context,.state,.target_url] | @tsv'
+  ```
+
+  `state: failure` with "Deployment was blocked" means the identity, not the code.
+
+## `llms.txt` on deploy
+
+Vercel uses the `buildCommand` from `vercel.json`, which does **not** run the
+package.json `prebuild` hook. The generation therefore lives in the build command
+itself:
+
+```
+prisma generate && node scripts/generate-llms.mjs && next build
+```
+
+Keep both in sync if the build command ever changes; `npm run articles:llms`
+regenerates the file locally.
 
 ## Build environment trap
 
