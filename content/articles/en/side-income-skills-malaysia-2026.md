@@ -1,6 +1,6 @@
 ---
 title: "Five side-income skills in Malaysia that actually pay in 2026"
-description: "Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing. Rates, counts and dates from 12 listings."
+description: "Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing. Rates, counts and dates from 11 listings."
 slug: side-income-skills-malaysia-2026
 translationKey: side-income-skills-malaysia-2026
 date: 2026-11-19
@@ -48,7 +48,7 @@ sources:
 
 # Five side-income skills in Malaysia that actually pay in 2026
 
-Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing. Every band below is a count, not an average. The evidence is 12 listings on freelancing.my, posted between September and November 2026, each with its own budget in ringgit.
+Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing. Every band below is a count, not an average. The evidence is 11 listings on freelancing.my, posted between September and November 2026, each with its own budget in ringgit, plus one hourly-rate listing that is excluded and named below.
 
 ## Who these numbers come from?
 

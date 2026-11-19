@@ -83,6 +83,12 @@ Itu cadangan bersyarat, bukan keputusan: ia menganggap tugasan anda boleh meneri
 
 Tiada kad menyatakan konfigurasi perkakasan minimum, jadi tiada kos hosting sendiri didakwa. Angka perkakasan Kimi tidak dirakam, dan harga input puncak DeepSeek tidak diterbitkan pada halaman yang dibaca.
 
+**Baca seterusnya**
+
+[Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)
+
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
+
 ## FAQ
 
 ### Adakah model terbuka bermakna percuma untuk kegunaan komersial?
@@ -96,11 +102,3 @@ Tidak secara berguna bagi model dalam jadual ini. Ia berjalan dari 95B hingga 1T
 ### Adakah menyewa sentiasa lebih buruk daripada menjalankan sendiri?
 
 Tidak, dan bagi kebanyakan perniagaan menyewa menang kerana nod itu mahal dan terbiar sebahagian besar hari. Menjalankan sendiri menjadi soalan apabila penggunaan cukup tinggi untuk mengalahkan kos bulanan nod, atau apabila lokasi data memaksa anda. Artikel ini tidak boleh menilai nod itu, jadi ia tidak berpura-pura menarik garis tersebut.
-
----
-
-**Baca seterusnya**
-
-[Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)
-
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)

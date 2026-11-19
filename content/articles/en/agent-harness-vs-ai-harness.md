@@ -66,6 +66,12 @@ Because the words describe what the product does to your machine and your data, 
 
 A framework is something a developer imports; it does not give you a running environment, a transcript you can read, or an approval gate. A harness does, and that is why the questions you ask a vendor differ: where does the transcript live, what may the tools touch, and who approves an action. If a product calls itself an "AI harness" and cannot answer those three, the label is decoration.
 
+**Read next**
+
+[What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
+
+[More on agent harnesses](https://upahje.my/en/articles/category/definitions)
+
 ## FAQ
 
 ### Is Claude Code a harness or an app?
@@ -79,11 +85,3 @@ No. A framework is a library you build with; a harness is the thing that runs th
 ### Does the word "harness" tell me whether it is open source?
 
 No. The word describes a function, not a licence. A harness can be proprietary and cloud-hosted, or open source and local, and the label reads the same either way.
-
----
-
-**Read next**
-
-[What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
-
-[More on agent harnesses](https://upahje.my/en/articles/category/definitions)

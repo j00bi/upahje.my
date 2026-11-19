@@ -1,6 +1,6 @@
 ---
 title: "Claude, ChatGPT, Gemini dan Grok: apa sebenarnya beza antara model tertutup"
-description: "Bukan skor penanda aras, yang tiada papan pendahulu semasa dapat dipastikan di sini. Apa yang anda terikat dengannya: tetingkap konteks, harga setiap token, keupayaan yang didokumenkan dan termanya."
+description: "Bukan skor penanda aras, yang tiada papan pendahulu semasa dapat dipastikan di sini. Apa yang anda terikat dengannya: tetingkap konteks, harga setiap token dan keupayaan yang didokumenkan. Setiap sel bersumber atau ditanda tidak dirakam, dan jika halaman terma tidak dibuka, artikel menyatakannya."
 slug: beza-model-tertutup
 translationKey: closed-models-differences
 date: 2026-11-19

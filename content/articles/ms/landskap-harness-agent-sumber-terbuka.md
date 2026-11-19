@@ -77,6 +77,12 @@ Pelancar `openmausbot` masih ada pada mesin ini, dan menjalankannya gagal dengan
 
 "Agent harness" jika anda mahu istilah vendor, "harness" jika anda bercakap dengan orang yang sudah tahu. "AI harness" ialah kata pengubah yang vendor yang kami baca tidak gunakan. Istilahnya dibincangkan dalam [agent harness, AI harness, agent framework](https://upahje.my/ms/articles/agent-harness-atau-ai-harness).
 
+**Baca seterusnya**
+
+[Agent harness, AI harness, agent framework: apa maksud istilah ini](https://upahje.my/ms/articles/agent-harness-atau-ai-harness)
+
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
+
 ## FAQ
 
 ### Adakah OpenBot sumber terbuka?
@@ -90,11 +96,3 @@ Repositori utama MausBot ialah Apache-2.0, iaitu sumber terbuka dan membenarkan 
 ### Adakah harness sumber terbuka bermakna model sumber terbuka?
 
 Tidak. Harness dan model ialah dua perkara berasingan, dan perpecahannya berlaku dua arah: harness terbuka boleh memanggil model tertutup, dan harness tertutup boleh menjalankan model terbuka. Lesen yang anda baca terpakai pada kod harness, bukan pada model yang dipanggilnya.
-
----
-
-**Baca seterusnya**
-
-[Agent harness, AI harness, agent framework: apa maksud istilah ini](https://upahje.my/ms/articles/agent-harness-atau-ai-harness)
-
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)

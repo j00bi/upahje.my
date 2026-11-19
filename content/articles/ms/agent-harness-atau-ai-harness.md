@@ -66,6 +66,12 @@ Kerana perkataan itu menerangkan apa yang produk lakukan kepada mesin dan data a
 
 Framework ialah sesuatu yang diimport oleh pembangun; ia tidak memberikan persekitaran yang berjalan, transkrip yang boleh dibaca, atau pintu kelulusan. Harness memberi semua itu, dan sebab itulah soalan yang anda tanya kepada vendor berbeza: di mana transkrip disimpan, apa yang boleh disentuh oleh tool, dan siapa yang meluluskan tindakan. Jika sesuatu produk menggelar dirinya "AI harness" tetapi tidak boleh menjawab tiga soalan itu, label itu hiasan.
 
+**Baca seterusnya**
+
+[Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
+
+[Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
+
 ## FAQ
 
 ### Adakah Claude Code harness atau aplikasi?
@@ -79,11 +85,3 @@ Tidak. Framework ialah perpustakaan yang anda bina dengannya; harness ialah bend
 ### Adakah perkataan "harness" memberitahu saya sama ada ia sumber terbuka?
 
 Tidak. Perkataan itu menerangkan fungsi, bukan lesen. Harness boleh jadi proprietari dan dihoskan di awan, atau sumber terbuka dan setempat, dan labelnya tetap sama.
-
----
-
-**Baca seterusnya**
-
-[Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
-
-[Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)

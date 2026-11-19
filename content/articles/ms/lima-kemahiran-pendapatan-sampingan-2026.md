@@ -1,6 +1,6 @@
 ---
 title: "Lima kemahiran pendapatan sampingan di Malaysia yang benar-benar membayar pada 2026"
-description: "Lima kemahiran melepasi syarat dua senarai pada satu-satunya platform freelance Malaysia yang halaman awamnya boleh dibaca: suntingan video, reka bentuk grafik, kemasukan data, panggilan jualan dan ujian aplikasi. Kadar, kiraan dan tarikh daripada 12 senarai."
+description: "Lima kemahiran melepasi syarat dua senarai pada satu-satunya platform freelance Malaysia yang halaman awamnya boleh dibaca: suntingan video, reka bentuk grafik, kemasukan data, panggilan jualan dan ujian aplikasi. Kadar, kiraan dan tarikh daripada 11 senarai."
 slug: lima-kemahiran-pendapatan-sampingan-2026
 translationKey: side-income-skills-malaysia-2026
 date: 2026-11-19
@@ -48,7 +48,7 @@ sources:
 
 # Lima kemahiran pendapatan sampingan di Malaysia yang benar-benar membayar pada 2026
 
-Lima kemahiran melepasi syarat dua senarai pada satu-satunya platform freelance Malaysia yang halaman awamnya boleh dibaca: suntingan video, reka bentuk grafik, kemasukan data, panggilan jualan dan ujian aplikasi. Setiap julat di bawah ialah kiraan, bukan purata. Buktinya 12 senarai di freelancing.my, disiarkan antara September dan November 2026, setiap satu dengan bajet sendiri dalam ringgit.
+Lima kemahiran melepasi syarat dua senarai pada satu-satunya platform freelance Malaysia yang halaman awamnya boleh dibaca: suntingan video, reka bentuk grafik, kemasukan data, panggilan jualan dan ujian aplikasi. Setiap julat di bawah ialah kiraan, bukan purata. Buktinya 11 senarai di freelancing.my, disiarkan antara September dan November 2026, setiap satu dengan bajet sendiri dalam ringgit, serta satu senarai berkadar sejam yang dikecualikan dan dinamakan di bawah.
 
 ## Dari mana angka ini datang?
 

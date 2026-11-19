@@ -79,7 +79,7 @@ Setiap baris ialah tugasan × RM0.00185. Bulan 30 hari diandaikan. Pada pengguna
 
 Maka anda membeli dua perkara, dan versi paling murah ialah tempat duduk lebih kecil campur token, bukan tempat duduk terbesar.
 
-ChatGPT Go pada RM24 meninggalkan RM76 untuk token, kira-kira 41,000 tugasan pada saiz yang diandaikan. Claude Pro pada RM82.29 meninggalkan RM17.71, kira-kira 9,500 tugasan. Tier tinggi membundel kredit API, yang berguna jika anda mahu satu bil, dan mahal jika anda tidak menggunakan kredit itu: Claude Max berharga RM411.45 untuk RM100 token yang dibundel di dalamnya.
+ChatGPT Go pada RM24 meninggalkan RM76 untuk token, kira-kira 41,000 tugasan pada saiz yang diandaikan. Claude Pro pada RM82.29 meninggalkan RM17.71, kira-kira 9,500 tugasan. Tier tinggi membundel kredit API, yang berguna jika anda mahu satu bil, dan mahal jika anda tidak menggunakan kredit itu: Claude Max berharga RM411.45 untuk kredit API bernilai USD 100 yang dibundel di dalamnya, iaitu RM411.45 juga pada kadar yang sama.
 
 ## Di mana garisnya?
 
@@ -95,6 +95,12 @@ Harga pelan Gemini: halaman itu memulangkan badan kosong kepada pengambil kami. 
 
 Dua papan pendahulu penanda aras juga tidak dirakam untuk artikel ini, dan artikel ini tidak membuat sebarang dakwaan tentang kualiti model. Itu disengajakan: soalannya di sini ialah harga dan akses, dan susunan kualiti akan menjawab soalan yang lain.
 
+**Baca seterusnya**
+
+[Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
+
+[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+
 ## FAQ
 
 ### Bolehkah saya guna langganan ChatGPT saya sebagai kunci API?
@@ -108,11 +114,3 @@ Kerana kedua-duanya ditukar dengan cara berbeza, bukan dinilai berbeza. Claude m
 ### Adakah pelan tahunan berbaloi?
 
 Kadar tahunan Claude ialah USD 17 sebulan berbanding USD 20 bulanan, iaitu RM69.95 berbanding RM82.29, dan ia menelan USD 200 di awal. Sama ada ia berbaloi bergantung pada sama ada anda masih menggunakannya dua belas bulan lagi; aritmetiknya tidak tahu, dan artikel ini tidak mempunyai data penggunaan anda.
-
----
-
-**Baca seterusnya**
-
-[Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
-
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)

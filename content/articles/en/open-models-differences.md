@@ -83,6 +83,12 @@ That is a conditional recommendation, not a verdict: it assumes your task tolera
 
 No card states a minimum hardware configuration, so no self-hosting cost is claimed. Kimi's hardware figures were not captured, and DeepSeek's peak input price is not published on the page read.
 
+**Read next**
+
+[Open or closed models: what a Malaysian SME can actually run in-house](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
+
+[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+
 ## FAQ
 
 ### Does open weight mean free to use commercially?
@@ -96,11 +102,3 @@ Not usefully for the models in this table. They run from 95B to 1T activated par
 ### Is renting always worse than running it yourself?
 
 No, and for most businesses renting wins because the node is expensive and idle most of the day. Running it yourself becomes a question when usage is high enough to beat the node's monthly cost, or when data location forces your hand. This article cannot price the node, so it does not pretend to draw that line.
-
----
-
-**Read next**
-
-[Open or closed models: what a Malaysian SME can actually run in-house](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
-
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)

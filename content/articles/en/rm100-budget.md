@@ -79,7 +79,7 @@ Each row is tasks × RM0.00185. A 30-day month is assumed. At heavy use you are 
 
 Then you are buying two things, and the cheapest version is a smaller seat plus tokens rather than the largest seat.
 
-ChatGPT Go at RM24 leaves RM76 for tokens, about 41,000 tasks at the assumed size. Claude Pro at RM82.29 leaves RM17.71, about 9,500 tasks. The high tiers bundle API credits, which is useful if you want one bill, and expensive if you do not use the credits: Claude Max costs RM411.45 for RM100 of tokens bundled inside it.
+ChatGPT Go at RM24 leaves RM76 for tokens, about 41,000 tasks at the assumed size. Claude Pro at RM82.29 leaves RM17.71, about 9,500 tasks. The high tiers bundle API credits, which is useful if you want one bill, and expensive if you do not use the credits: Claude Max costs RM411.45 for USD 100 of API credits bundled inside it, which at the same rate is RM411.45 of tokens.
 
 ## Where is the line?
 
@@ -95,6 +95,12 @@ Gemini's plan pricing: the page returned an empty body to our fetcher. Cursor an
 
 Two benchmark leaderboards were also not captured for this piece, and this article makes no claim about model quality. That is deliberate: the question here is price and access, and a quality ranking would answer a different one.
 
+**Read next**
+
+[What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
+
+[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+
 ## FAQ
 
 ### Can I use my ChatGPT subscription as an API key?
@@ -108,11 +114,3 @@ Because they are converted differently, not priced differently. Claude publishes
 ### Is a yearly plan worth it?
 
 Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 against RM82.29, and it costs USD 200 up front. Whether that is worth it depends on whether you will still be using it in twelve months; the arithmetic does not, and this article does not have your usage.
-
----
-
-**Read next**
-
-[What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
-
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)

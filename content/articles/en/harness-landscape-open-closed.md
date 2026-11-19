@@ -77,6 +77,12 @@ The `openmausbot` launcher is still on this machine, and running it fails with a
 
 "Agent harness" if you want the vendor's own term, "harness" if you are talking to someone who already knows. "AI harness" is a modifier the vendors we read do not use. The vocabulary is covered in [agent harness, AI harness, agent framework](https://upahje.my/en/articles/agent-harness-vs-ai-harness).
 
+**Read next**
+
+[Agent harness, AI harness, agent framework: what the words mean](https://upahje.my/en/articles/agent-harness-vs-ai-harness)
+
+[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+
 ## FAQ
 
 ### Is OpenBot open source?
@@ -90,11 +96,3 @@ MausBot's main repository is Apache-2.0, which is open source and permits commer
 ### Does an open-source harness mean an open-source model?
 
 No. The harness and the model are separate, and the split runs both ways: an open harness can call a closed model, and a closed harness can run an open-weight model. The licence you read applies to the harness code, not to the model it calls.
-
----
-
-**Read next**
-
-[Agent harness, AI harness, agent framework: what the words mean](https://upahje.my/en/articles/agent-harness-vs-ai-harness)
-
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)

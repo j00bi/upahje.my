@@ -1,6 +1,6 @@
 ---
 title: "Claude, ChatGPT, Gemini and Grok: what actually differs between the closed models"
-description: "Not the benchmark score, which no current leaderboard here can settle. What you are stuck with: context window, price per token, documented capabilities and the terms. Every cell sourced or marked not captured."
+description: "Not the benchmark score, which no current leaderboard here can settle. What you are stuck with: context window, price per token and the documented capabilities. Every cell sourced or marked not captured, and where the terms pages were not opened, the article says so."
 slug: closed-models-differences
 translationKey: closed-models-differences
 date: 2026-11-19
