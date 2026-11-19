@@ -1,6 +1,6 @@
 ---
 title: "What automation work costs in Malaysia: published rates, six sources"
-description: "Six Malaysian publishers, 30 published prices for automation and integration work, all checked on 19 November 2026. What is published, what is not, and how to read the units."
+description: "Six Malaysian publishers, 30 published prices for automation and integration work. Prices were read on 19 November 2026; several source pages carry no publication date, so a price may be older than this article."
 slug: automation-rates-malaysia-published
 translationKey: automation-rates-malaysia-published
 date: 2026-11-19
