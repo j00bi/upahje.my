@@ -1,6 +1,6 @@
 ---
 title: "What automation work costs in Malaysia: published rates, six sources"
-description: "Six Malaysian publishers, 30 published prices for automation and integration work. Prices were read on 19 November 2026; several source pages carry no publication date, so a price may be older than this article."
+description: "Six Malaysian publishers, 30 published prices for automation and integration work, checked 19 November 2026 except one page read on 27 October 2026. Several source pages carry no publication date, so a price may be older than this article."
 slug: automation-rates-malaysia-published
 translationKey: automation-rates-malaysia-published
 date: 2026-11-19
@@ -33,11 +33,11 @@ sources:
 
 # What automation work costs in Malaysia: published rates, six sources
 
-Six Malaysian publishers state prices for automation work, and 30 of those prices are collected below with the publisher, unit and date on every row. Five are studios and one is an independent practitioner; the only per-hour figure comes from one freelance profile. Solo freelancers usually quote per job rather than publish, so this table is published supply, not the whole market.
+Published prices for automation work in Malaysia run from RM400 for a simple process build to RM6,000-plus for autonomous task execution. Those figures and 28 more below come from six Malaysian publishers, with the publisher, unit and date on every row. Three are studios, one is a platform vendor selling subscription tiers, one is an independent practitioner, and one is a freelance profile; the only per-hour figure comes from that profile. Solo freelancers usually quote per job rather than publish, so this table is published supply, not the whole market.
 
 ## Who publishes these numbers, and who does not?
 
-The figures below come from pricing pages of Malaysian automation providers and from one Malaysian freelance profile, all read on 19 or 27 October and November 2026 as dated per row.
+The figures below come from pricing pages of Malaysian automation providers and from one Malaysian freelance profile. Every row carries the date it was read: 19 November 2026 for the studio and platform pages, and 27 October 2026 for the independent practitioner's page.
 
 What could not be read matters as much. The global marketplaces are unmeasured here: Upwork returns HTTP 403 with a Cloudflare block, Fiverr returns a bot challenge, Jobstreet returns a Cloudflare interstitial, and Indeed and Maukerja render their listings only in JavaScript. Not one Upwork or Fiverr profile rate could be collected, so nothing here should be read as what a globally-priced freelancer charges. These bands describe the local published-supply layer: agencies with a price list, and one marketplace profile with an hourly rate.
 
@@ -45,7 +45,7 @@ Two further exclusions. Every "quote on request" tier is excluded, because a quo
 
 ## What does a published automation build cost?
 
-Per project, published prices run from RM400 for a simple process build to RM6,000-plus for autonomous task execution. All rows carry the publisher's own unit.
+Per project, published prices run from RM400 for a simple process build at Pang Jun Han to RM6,000-plus for autonomous task execution at Autoflow Solutions. All rows carry the publisher's own unit.
 
 | Task | Rate | Unit | Publisher | Date checked |
 | --- | --- | --- | --- | --- |
