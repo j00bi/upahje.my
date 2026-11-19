@@ -18,7 +18,7 @@
 | 12 | "Heavy | 200 | 6,000 | 11.11" | - | - | - | estimate: arithmetic, 6,000 tasks x RM0.00185 |
 | 13 | "ChatGPT Go at RM24 leaves RM76 for tokens, about 41,000 tasks at the assumed size." | https://chatgpt.com/pricing | OpenAI | 2026-11-19 | estimate: arithmetic, plan price from Table 7, tasks at RM0.00185 |
 | 14 | "Gemini's plan pricing: the page returned an empty body to our fetcher." | - | our measurement, this machine | 2026-11-19 | source: collection log, empty response body recorded 19 November 2026 |
-| 15 | "Claude Max costs RM411.45 because it bundles USD 100 of API credits, which is the same RM411.45 rather than a discount." | https://claude.com/pricing | Anthropic | 2026-11-19 | source: Table 1 Claude Max row (USD 100 per month, USD 100 monthly API credits) and Table 7 conversion |
+| 15 | "Claude Max costs RM411.45 for USD 100 of API credits bundled inside it, which at the same rate is RM411.45 of tokens." | https://claude.com/pricing | Anthropic | 2026-11-19 | source: Table 1 Claude Max row (USD 100 per month, USD 100 monthly API credits) and Table 7 conversion |
 
 ## Sections
 
