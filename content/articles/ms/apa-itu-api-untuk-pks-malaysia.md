@@ -105,4 +105,8 @@ Satu endpoint yang membaca sahaja mengambil masa sekitar sehari untuk pembangun 
 
 ---
 
-**Baca seterusnya:** [ruang definisi](https://upahje.my/ms/articles/category/definitions) dan [model terbuka atau tertutup](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia).
+**Baca seterusnya**
+
+[ruang definisi](https://upahje.my/ms/articles/category/definitions)
+
+[model terbuka atau tertutup](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)

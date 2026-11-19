@@ -105,4 +105,8 @@ A single read-only endpoint takes a competent developer about a day. Anything th
 
 ---
 
-**Read next:** [the definitions pillar](https://upahje.my/en/articles/category/definitions) and [open or closed models](https://upahje.my/en/articles/open-vs-closed-models-malaysia).
+**Read next**
+
+[the definitions pillar](https://upahje.my/en/articles/category/definitions)
+
+[open or closed models](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
