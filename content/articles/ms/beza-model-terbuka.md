@@ -1,6 +1,6 @@
 ---
 title: "Model terbuka: Qwen, DeepSeek, Mistral dan Kimi, dan apa yang dibenarkan oleh lesennya"
-description: "Empat keluarga terbuka, lima kad model, empat bentuk lesen. MIT pada DeepSeek, lesen Qwen tersuai, lesen terbuka Mistral sendiri. Apa yang dibenarkan, kos sewa, dan mengapa hosting sendiri tidak boleh dinilai daripada kad model."
+description: "Empat keluarga terbuka, lima kad model, empat bentuk lesen. MIT pada DeepSeek, lesen Qwen tersuai, lesen terbuka Mistral sendiri. Apa yang dibenarkan dan kos menyewanya."
 slug: beza-model-terbuka
 translationKey: open-models-differences
 date: 2026-11-19
@@ -28,6 +28,12 @@ sources:
     checked: 2026-11-19
   - title: "DeepSeek, harga API"
     url: "https://api-docs.deepseek.com/quick_start/pricing"
+    checked: 2026-11-19
+  - title: "Moonshot AI, harga chat Kimi"
+    url: "https://platform.moonshot.ai/docs/pricing/chat"
+    checked: 2026-11-19
+  - title: "Mistral AI, harga inferens"
+    url: "https://docs.mistral.ai/inference/pricing.md"
     checked: 2026-11-19
 ---
 
@@ -63,8 +69,8 @@ Setiap model ini juga dijual setiap token oleh penerbitnya, dan harganya cukup b
 
 | Model | Harga hos penerbit, USD setiap juta | Nota |
 | --- | --- | --- |
-| deepseek-flash | 0.15 masuk / 0.60 keluar luar puncak, 0.30 / 1.20 puncak | Luar puncak dan puncak berbeza |
-| deepseek-v4-pro | 0.66 masuk luar puncak / 1.98 keluar luar puncak | Output puncak 3.96, input puncak tidak dirakam |
+| deepseek-flash | 0.15 masuk / 0.60 keluar luar puncak; 0.30 masuk / 1.20 keluar puncak | Luar puncak dan puncak berbeza |
+| deepseek-v4-pro | 0.66 masuk / 1.98 keluar luar puncak; output puncak 3.96 | Input puncak tidak dirakam |
 | qwen3.8-max | 1.50 masuk / 4.50 keluar | Kad menyatakan ini versi rasmi berdasarkan Qwen3.8-2.4T-A95B |
 | mistral-large-4 | 0.70 masuk / 2.10 keluar | API Mistral pihak pertama |
 | kimi-k3.1-pro | 2.00 masuk / 10.00 keluar | Konteks 1,048,576 token |

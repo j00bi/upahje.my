@@ -1,6 +1,6 @@
 ---
 title: "Open-weight models: Qwen, DeepSeek, Mistral and Kimi, and what the licence lets you do"
-description: "Four open-weight families, five model cards, four licence shapes. MIT on DeepSeek, a custom Qwen licence, Mistral's own open-weight licence. What each permits, what the model costs to rent, and why self-hosting cannot be priced from the cards."
+description: "Four open-weight families, five model cards, four licence shapes. MIT on DeepSeek, a custom Qwen licence, Mistral's own open-weight licence. What each permits and what the model costs to rent."
 slug: open-models-differences
 translationKey: open-models-differences
 date: 2026-11-19
@@ -28,6 +28,12 @@ sources:
     checked: 2026-11-19
   - title: "DeepSeek, API pricing"
     url: "https://api-docs.deepseek.com/quick_start/pricing"
+    checked: 2026-11-19
+  - title: "Moonshot AI, Kimi chat pricing"
+    url: "https://platform.moonshot.ai/docs/pricing/chat"
+    checked: 2026-11-19
+  - title: "Mistral AI, inference pricing"
+    url: "https://docs.mistral.ai/inference/pricing.md"
     checked: 2026-11-19
 ---
 
@@ -63,8 +69,8 @@ Every one of these models is also sold per token by its publisher, and the price
 
 | Model | Publisher's hosted price, USD per million | Note |
 | --- | --- | --- |
-| deepseek-flash | 0.15 in / 0.60 out off-peak, 0.30 / 1.20 peak | Off-peak and peak differ |
-| deepseek-v4-pro | 0.66 in off-peak / 1.98 out off-peak | Peak output 3.96, peak input not captured |
+| deepseek-flash | 0.15 in / 0.60 out off-peak; 0.30 in / 1.20 out peak | Off-peak and peak differ |
+| deepseek-v4-pro | 0.66 in / 1.98 out off-peak; peak output 3.96 | Peak input not captured |
 | qwen3.8-max | 1.50 in / 4.50 out | Card states this is the official version based on Qwen3.8-2.4T-A95B |
 | mistral-large-4 | 0.70 in / 2.10 out | First-party Mistral API |
 | kimi-k3.1-pro | 2.00 in / 10.00 out | 1,048,576-token context |

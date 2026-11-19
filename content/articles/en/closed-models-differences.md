@@ -111,7 +111,7 @@ SWE-bench Verified was read with the Bash Only setting and the mini-SWE-agent ag
 
 Aider polyglot's visible top row is gpt-5 (high) at 88.0% pass rate for a total run cost of USD 29.08, but its run directory is dated 2025-08-23 and none of the visible rows is newer than August 2025 ([aider.chat, read 19 Nov 2026](https://aider.chat/docs/leaderboards/)). Those numbers cannot be presented as the state of the art in November 2026.
 
-The names do not reconcile, and that is a finding rather than a formatting problem. The leaderboard prints "Claude 4.5 Opus", "Gemini 3 Flash" and "GPT 5.2", while the vendor table above lists Claude Opus 5.5, gemini-4-neon and gpt-6-luna. Different naming generations may not be the same models, so this article never claims that a vendor model in its table scores a leaderboard number.
+The names do not reconcile, and that is a finding rather than a formatting problem. The SWE-bench board prints "Claude 4.5 Opus", "Gemini 3 Flash" and "GPT 5.2", while the vendor table above lists Claude Opus 5.5, gemini-4-neon and gpt-6-luna. Different naming generations may not be the same models, so this article never claims that a vendor model in its table scores a leaderboard number.
 
 ## What did we not measure?
 

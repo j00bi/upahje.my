@@ -111,7 +111,7 @@ SWE-bench Verified dibaca dengan tetapan Bash Only dan penapis agent mini-SWE-ag
 
 Baris teratas yang kelihatan pada Aider polyglot ialah gpt-5 (high) pada 88.0% kadar lulus dengan jumlah kos larian USD 29.08, tetapi direktori lariannya bertarikh 2025-08-23 dan tiada baris yang kelihatan lebih baharu daripada Ogos 2025 ([aider.chat, dibaca 19 Nov 2026](https://aider.chat/docs/leaderboards/)). Angka itu tidak boleh dibentangkan sebagai keadaan seni pada November 2026.
 
-Nama tidak selaras, dan itu penemuan dan bukan masalah format. Papan pendahulu mencetak "Claude 4.5 Opus", "Gemini 3 Flash" dan "GPT 5.2", manakala jadual vendor di atas menyenaraikan Claude Opus 5.5, gemini-4-neon dan gpt-6-luna. Generasi penamaan yang berbeza mungkin bukan model yang sama, jadi artikel ini tidak pernah mendakwa model vendor dalam jadualnya mendapat angka papan pendahulu.
+Nama tidak selaras, dan itu penemuan dan bukan masalah format. Papan SWE-bench mencetak "Claude 4.5 Opus", "Gemini 3 Flash" dan "GPT 5.2", manakala jadual vendor di atas menyenaraikan Claude Opus 5.5, gemini-4-neon dan gpt-6-luna. Generasi penamaan yang berbeza mungkin bukan model yang sama, jadi artikel ini tidak pernah mendakwa model vendor dalam jadualnya mendapat angka papan pendahulu.
 
 ## Apa yang tidak kami ukur?
 

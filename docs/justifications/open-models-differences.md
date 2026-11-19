@@ -9,11 +9,16 @@
 | 3 | "Mistral-Large-4-1T-A52B | Mistral Ecosystem Open-Weight License | Licence text in the repo's LICENSE file | 1 trillion" | https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B | Mistral AI | 2026-11-19 | source: Table 6, licence and parameter columns |
 | 4 | "Kimi-K3.1-Pro | Kimi K3.1 Pro License | Licence text in the repo's LICENSE file | 2.8T total, 104B activated" | https://huggingface.co/moonshotai/Kimi-K3.1-Pro | Moonshot AI | 2026-11-19 | source: Table 6, licence and parameter columns |
 | 5 | "Mistral's card carries the only first-party hardware note among them: "`--tp-size 8`: example tensor-parallel size for a node of 8 GPUs", and it is an example rather than a stated minimum." | https://huggingface.co/mistralai/Mistral-Large-4-1T-A52B | Mistral AI | 2026-11-19 | source: Table 6 hardware-guidance cell |
-| 6 | "deepseek-flash | 0.15 in / 0.60 out off-peak, 0.30 / 1.20 peak | Off-peak and peak differ" | https://api-docs.deepseek.com/quick_start/pricing | DeepSeek | 2026-11-19 | source: Table 6 hosted-price cell |
+| 6 | "deepseek-flash | 0.15 in / 0.60 out off-peak; 0.30 in / 1.20 out peak | Off-peak and peak differ" | https://api-docs.deepseek.com/quick_start/pricing | DeepSeek | 2026-11-19 | source: Table 6 hosted-price cell |
 | 7 | "kimi-k3.1-pro | 2.00 in / 10.00 out | 1,048,576-token context" | https://platform.moonshot.ai/docs/pricing/chat | Moonshot AI | 2026-11-19 | source: Table 6 hosted-price cell |
 | 8 | "Mistral's API lists it at 0.30 in / 1.20 out, against DeepSeek's own off-peak 0.15 / 0.60." | https://docs.mistral.ai/inference/pricing.md | Mistral AI | 2026-11-19 | source: Table 6 third-party hosting note |
 | 9 | "deepseek-flash off-peak costs USD 0.00015 + USD 0.0003 = USD 0.00045 a task; kimi-k3.1-pro costs USD 0.002 + USD 0.005 = USD 0.007 a task" | - | - | - | estimate: arithmetic on the printed hosted prices at 1,000 input and 500 output tokens per task |
 | 10 | "A node of GPUs is a real bill, and no card here states the minimum configuration, so any figure would be invented." | - | - | - | estimate: our judgement from the absence of a first-party hardware minimum in Table 6 |
+| 11 | "DeepSeek-V4-Pro-0813 | MIT | Same wording as above | Not stated in card text" | https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813 | DeepSeek | 2026-11-19 | source: Table 6, licence and parameter columns |
+| 12 | "deepseek-v4-pro | 0.66 in / 1.98 out off-peak; peak output 3.96 | Peak input not captured" | https://api-docs.deepseek.com/quick_start/pricing | DeepSeek | 2026-11-19 | source: Table 6, hosted-price cell |
+| 13 | "qwen3.8-max | 1.50 in / 4.50 out | Card states this is the official version based on Qwen3.8-2.4T-A95B" | https://www.alibabacloud.com/help/en/model-studio/billing-for-model-studio | Alibaba Cloud | 2026-11-19 | source: Table 6, hosted-price cell |
+| 14 | "mistral-large-4 | 0.70 in / 2.10 out | First-party Mistral API" | https://docs.mistral.ai/inference/pricing.md | Mistral AI | 2026-11-19 | source: Table 6, hosted-price cell |
+| 15 | "MIT is the permissive one: commercial use, modification and redistribution, with the notice kept." | - | - | - | estimate: our summary of what MIT permits, as a licence, not a vendor claim |
 
 ## Sections
 

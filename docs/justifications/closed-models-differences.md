@@ -19,6 +19,14 @@
 | 13 | "1. Claude Haiku 5.5: 0.1 million input × USD 0.10 = USD 0.01, plus 0.02 million output × USD 0.50 = USD 0.01, so USD 0.02 per task." | - | - | - | estimate: arithmetic on the printed Haiku 5.5 rate at the stated 100,000 input and 20,000 output tokens |
 | 14 | "2. Claude Fable 5.2: 0.1 million input × USD 8.00 = USD 0.80, plus 0.02 million output × USD 40.00 = USD 0.80, so USD 1.60 per task." | - | - | - | estimate: arithmetic on the printed Fable 5.2 rate at the same assumed task size |
 | 15 | "That is an 80 times spread between the cheapest and most expensive row on the same task" | - | - | - | estimate: arithmetic, USD 1.60 divided by USD 0.02 |
+| 16 | "Claude Opus 5.5 | 1M tokens | 4 / 20 | Documented | Documented | Image and file documented" | https://docs.claude.com/en/docs/about-claude/models/overview | Anthropic | 2026-11-19 | source: Table 5, row Claude Opus 5.5 |
+| 17 | "Claude Sonnet 5.5 | 1M tokens | 2 / 10 | Documented | Documented | Image and file documented" | https://docs.claude.com/en/docs/about-claude/models/overview | Anthropic | 2026-11-19 | source: Table 5, row Claude Sonnet 5.5 |
+| 18 | "GPT-6.2 Sol | 128K tokens short context | Short 2 / 10, long 4 / 15 | Documented | Documented | Image and file documented" | https://developers.openai.com/api/docs/pricing | OpenAI | 2026-11-19 | source: Table 5, row GPT-6.2 Sol |
+| 19 | "deepseek-flash | 1M tokens | 0.15 / 0.60 off-peak, 0.30 / 1.20 peak | Documented | Documented | Vision yes, file not verified" | https://api-docs.deepseek.com/quick_start/pricing | DeepSeek | 2026-11-19 | source: Table 5, row deepseek-flash |
+| 20 | "gemini-4-neon | 1M tokens | 3.00 / 15.00 | Documented | Documented | Image and file documented" | https://aistudio.google.com/docs/pricing | Google | 2026-11-19 | source: Table 5, row Gemini 4 Neon |
+| 21 | "Gemini 3 Flash (high) | 75.80 | 0.36" | https://www.swebench.com/ | SWE-bench | 2026-11-19 | source: Table 2a row 2, same settings (Verified, Bash Only, mini-SWE-agent) |
+| 22 | "MiniMax M2.5 (high) | 75.80 | 0.07" | https://www.swebench.com/ | SWE-bench | 2026-11-19 | source: Table 2a row 3, same settings |
+| 23 | "Claude 4.6 Opus | 75.60 | 0.55" | https://www.swebench.com/ | SWE-bench | 2026-11-19 | source: Table 2a row 4, same settings |
 
 ## Sections
 
