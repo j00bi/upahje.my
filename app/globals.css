@@ -698,11 +698,3 @@ summary,
     scroll-behavior: auto !important;
   }
 }
-
-.theme-toggle {
-  display: none;
-}
-
-:root[data-js='on'] .theme-toggle {
-  display: inline-flex;
-}
