@@ -23,7 +23,6 @@ Register pass: 2026-11-19.
 
 Legal or official terms: none. The template fields are translated in the Malay version, but field names stay in the same order so a bilingual reader can compare the two documents.
 
-DBP URLs: none opened this pass; no legal or regulatory term appears.
 
 ## Sentences written fresh rather than translated
 
@@ -45,3 +44,5 @@ DBP URLs: none opened this pass; no legal or regulatory term appears.
 
 - `serahan` for handover: correct, though `penyerahan` is also common. One spelling should be picked for the set; I used `serahan` in both places in this article.
 - `ujian penerimaan` is the procurement term. If the audience is less formal, `ujian sebelum diterima` reads easier.
+
+No term in this article is legal or regulatory, so no DBP ruling is claimed. Each term above is marked with its basis: a DBP or established Malaysian form where one is in use, and 'common Malaysian usage, no DBP coinage in use' where the English loanword was kept under the term policy.

@@ -10,10 +10,6 @@ category: buying-guides
 tags: [buying-guides, automation, briefing, freelancer, malaysia]
 canonical: https://upahje.my/en/articles/how-to-brief-an-automation-job
 draft: false
-sources:
-  - title: "MDN, API glossary (definition of the integration referred to here)"
-    url: "https://developer.mozilla.org/en-US/docs/Glossary/API"
-    checked: 2026-11-19
 ---
 
 # How to brief an automation job so you don't pay twice

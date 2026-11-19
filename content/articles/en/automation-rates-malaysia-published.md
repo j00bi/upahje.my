@@ -127,7 +127,7 @@ It is one published figure from one profile on freelancing.my, checked 19 Novemb
 
 ### Why are there no Upwork or Fiverr figures?
 
-Because they could not be read from here. Upwork returned HTTP 403 with a Cloudflare block, Fiverr returned a bot challenge, and Jobstreet returned a Cloudflare interstitial. Saying so is more useful than filling the gap with a number from memory.
+Because they could not be read from here, and the article says so in the method section rather than filling the gap with a number from memory.
 
 ### Does a higher monthly retainer mean a better system?
 

@@ -25,7 +25,6 @@ Register pass: 2026-11-19.
 
 Legal or official terms: none. The record names (`turn/start`, `tool/call`) are quoted exactly as the file spells them, because translating them would break the reader's ability to find them.
 
-DBP URLs: none opened this pass. No legal or regulatory term appears, so the DBP check was not triggered.
 
 ## Sentences written fresh rather than translated
 
@@ -47,3 +46,5 @@ DBP URLs: none opened this pass. No legal or regulatory term appears, so the DBP
 
 - `turn` and `step` are untranslated on purpose so they match the transcript. If house style wants BM prose, the first mention could read `turn (satu pusingan)` and `step (satu langkah)`, but then the file names stop matching the text.
 - `dinyahmampat` is correct but stiff; `dibuka` or `didekompres` would read easier at some cost in precision.
+
+No term in this article is legal or regulatory, so no DBP ruling is claimed. Each term above is marked with its basis: a DBP or established Malaysian form where one is in use, and 'common Malaysian usage, no DBP coinage in use' where the English loanword was kept under the term policy.

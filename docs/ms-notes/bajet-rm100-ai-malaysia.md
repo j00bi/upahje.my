@@ -24,7 +24,6 @@ Register pass: 2026-11-19.
 
 Legal or official terms: none. Currency codes, plan names and vendor wording are left as published.
 
-DBP URLs: none opened this pass. No legal or regulatory term appears, so the DBP check was not triggered; each term above is marked with its basis, and the loanwords are kept under the term policy rather than presented as DBP words.
 
 ## Sentences written fresh rather than translated
 
@@ -47,3 +46,5 @@ DBP URLs: none opened this pass. No legal or regulatory term appears, so the DBP
 
 - `tempat duduk` for a subscription seat is a direct loan translation. It reads clearly next to `meter`, but if house style prefers, `akaun pengguna` would be plainer at the cost of the metaphor.
 - `tier` is kept because vendors and Malaysian resellers print it. `peringkat` is the BM alternative and makes the table headers longer.
+
+No term in this article is legal or regulatory, so no DBP ruling is claimed. Each term above is marked with its basis: a DBP or established Malaysian form where one is in use, and 'common Malaysian usage, no DBP coinage in use' where the English loanword was kept under the term policy.

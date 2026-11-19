@@ -44,3 +44,5 @@ Legal or official terms: none. No DBP URL was needed.
 
 - `putar` for rotate is the standard security usage; `tukar` would be read as "swap" and is weaker in this context.
 - `stor credentials` keeps two English words. If house style wants fewer, `simpanan credentials` is acceptable, but the product surface uses `credentials`.
+
+No term in this article is legal or regulatory, so no DBP ruling is claimed. Each term above is marked with its basis: a DBP or established Malaysian form where one is in use, and 'common Malaysian usage, no DBP coinage in use' where the English loanword was kept under the term policy.

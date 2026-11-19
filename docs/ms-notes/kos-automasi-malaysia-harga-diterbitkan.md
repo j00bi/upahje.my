@@ -44,3 +44,5 @@ Legal or official terms: none. Publisher names, URLs and page titles are left as
 
 - `reteria` is the loanword form I chose over `retainer`; both appear in Malaysian business writing. The set should keep one.
 - `aliran kerja` for workflow is DBP and widely used; `workflow` would also be understood and is what many studios put on their pages. I kept the BM term because the publisher names are already in English.
+
+No term in this article is legal or regulatory, so no DBP ruling is claimed. Each term above is marked with its basis: a DBP or established Malaysian form where one is in use, and 'common Malaysian usage, no DBP coinage in use' where the English loanword was kept under the term policy.

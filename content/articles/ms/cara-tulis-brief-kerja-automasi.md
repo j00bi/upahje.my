@@ -10,10 +10,6 @@ category: buying-guides
 tags: [buying-guides, automasi, brief, freelancer, malaysia]
 canonical: https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi
 draft: false
-sources:
-  - title: "MDN, glosari API (takrif integrasi yang dirujuk di sini)"
-    url: "https://developer.mozilla.org/en-US/docs/Glossary/API"
-    checked: 2026-11-19
 ---
 
 # Cara menulis brief kerja automasi supaya anda tidak bayar dua kali

@@ -10,10 +10,6 @@ category: definitions
 tags: [definitions, api, spreadsheet, decision, malaysia]
 canonical: https://upahje.my/en/articles/do-you-need-an-api-or-a-spreadsheet
 draft: false
-sources:
-  - title: "MDN, API glossary (definition used throughout)"
-    url: "https://developer.mozilla.org/en-US/docs/Glossary/API"
-    checked: 2026-11-19
 ---
 
 # Do you need an API, or just a spreadsheet?

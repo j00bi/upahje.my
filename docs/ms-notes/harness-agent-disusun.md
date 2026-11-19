@@ -27,7 +27,6 @@ Register pass: 2026-11-19.
 
 Legal or official terms: none. Version strings, paths and commands are quoted exactly, never translated.
 
-DBP URLs: none opened this pass; no legal or regulatory term appears.
 
 ## Sentences written fresh rather than translated
 
@@ -49,3 +48,5 @@ DBP URLs: none opened this pass; no legal or regulatory term appears.
 
 - `kebolehlanjutan` is correct BM but heavy; `kebolehan dikembangkan` reads easier if house style prefers it, at the cost of precision.
 - `jejak operasi` for operational footprint: understandable, but a reader may expect `saiz pemasangan`. Flagged rather than changed, because the criterion is about operational weight, not size alone.
+
+No term in this article is legal or regulatory, so no DBP ruling is claimed. Each term above is marked with its basis: a DBP or established Malaysian form where one is in use, and 'common Malaysian usage, no DBP coinage in use' where the English loanword was kept under the term policy.

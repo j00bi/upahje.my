@@ -10,10 +10,6 @@ category: definitions
 tags: [definitions, api, spreadsheet, keputusan, malaysia]
 canonical: https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet
 draft: false
-sources:
-  - title: "MDN, glosari API (takrif yang digunakan sepanjang artikel)"
-    url: "https://developer.mozilla.org/en-US/docs/Glossary/API"
-    checked: 2026-11-19
 ---
 
 # Perlukan API, atau cukup spreadsheet?

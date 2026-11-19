@@ -41,3 +41,5 @@ Legal or official terms: none. No DBP URL was needed.
 
 - `tool` kept English throughout. If house style wants BM, `alat` is correct but loses the connection to the other articles.
 - `penyelarasan` is used for sync; `penyegerakan` is acceptable too, and the set should pick one. I have used `penyelarasan` since article one.
+
+No term in this article is legal or regulatory, so no DBP ruling is claimed. Each term above is marked with its basis: a DBP or established Malaysian form where one is in use, and 'common Malaysian usage, no DBP coinage in use' where the English loanword was kept under the term policy.

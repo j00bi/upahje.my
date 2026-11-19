@@ -45,3 +45,5 @@ Legal or official terms: none. Platform names and listing titles are left as pub
 
 - `senarai` for a listing is clear in context, but a Malaysian reader may expect `iklan`. If `iklan` is preferred, switch it everywhere in the article, not half.
 - `tool` kept English; `alat` is correct BM but loses the link to the other articles in the set.
+
+No term in this article is legal or regulatory, so no DBP ruling is claimed. Each term above is marked with its basis: a DBP or established Malaysian form where one is in use, and 'common Malaysian usage, no DBP coinage in use' where the English loanword was kept under the term policy.

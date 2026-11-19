@@ -197,3 +197,19 @@ they follow the reader's point of view:
 Write the block as a short label line, then each link on its own line. Do not
 write it as one sentence: the renderer turns a paragraph into anchors, so a
 comma-separated run of links becomes a run-on of plain text.
+
+## Rendering figures
+
+Figure sources live in `figures/<slug>.mmd` and render to `public/figures/<slug>.svg`:
+
+```bash
+NPM_CONFIG_CACHE=$PWD/../.npm-cache \
+PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium \
+npx -y @mermaid-js/mermaid-cli -i figures/<slug>.mmd -o public/figures/<slug>.svg -b transparent
+```
+
+The `NPM_CONFIG_CACHE` override is not optional on this machine: npm's default
+cache is outside the writable workspace, so the render fails with `EROFS`
+before mermaid runs. Mermaid's front-matter `title` does not survive into the
+SVG (`<title>`/`<desc>` come out empty), so the description belongs in the
+markdown alt text, which the renderer emits on the `<img>`.

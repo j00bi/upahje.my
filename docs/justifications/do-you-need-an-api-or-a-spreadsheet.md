@@ -4,12 +4,11 @@
 
 | # | claim | source URL | publisher | checked | basis |
 |---|-------|------------|-----------|---------|-------|
-| 1 | "An API is a set of rules that lets two pieces of software interact" | https://developer.mozilla.org/en-US/docs/Glossary/API | MDN Web Docs | 2026-11-19 | source |
-| 2 | "A spreadsheet wins when the volume is small and one person owns the data." | - | - | - | estimate: our judgement from the decision test set out in the same section, no Malaysian dataset exists |
-| 3 | "A spreadsheet is the correct tool in three situations: low volume, one owner, and input that needs judgement." | - | - | - | estimate: our judgement, reasons given in the section |
-| 4 | "Four signals, and any one of them is enough to start looking at an API: drift, a single owner as bottleneck, failure cost exceeding repair cost, and data that must move at night." | - | - | - | estimate: our judgement, derived from the same test |
-| 5 | "No public benchmark exists for what Malaysian developers charge for this work." | - | - | - | estimate: our own search of public rate cards and job listings, no Malaysian figure found |
-| 6 | "A CSV export plus a scheduled import can carry a business for years." | - | - | - | estimate: our judgement, with the two-way-sync limitation stated in the same paragraph |
+| 1 | "A spreadsheet is the correct tool in three situations, and buying an API in any of them is money thrown at a problem you do not have." | - | - | - | estimate: our judgement, reasons given in the same section |
+| 2 | "Four signals, and any one of them is enough to start looking at an API." | - | - | - | estimate: our judgement, derived from the decision test in the opening section |
+| 3 | "Not a like-for-like number, because no public benchmark exists for what Malaysian developers charge for this work, and we will not invent one." | - | - | - | estimate: our own search of public rate cards and job listings, no Malaysian figure found |
+| 4 | "Exporting a CSV and importing it into the other tool is still a copy step, but a faster and more reliable one than retyping." | - | - | - | estimate: our judgement, with the two-way-sync limitation stated in the same paragraph |
+| 5 | "A spreadsheet wins when the volume is small and one person owns the data." | - | - | - | estimate: our judgement, from the decision test set out in the first section |
 
 ## Sections
 
@@ -21,4 +20,4 @@
 | What does each one actually cost? | Names the missing benchmark instead of inventing a range, and gives the shape of the bill |
 | What is the middle option? | The honest third choice, because most SMEs do not jump from sheet to API |
 | FAQ | Sequence, security, and an existing tool with an API. All absent from the body |
-| Sources | One URL, for the API definition used in the opening |
+| Sources | None: every claim in this article is our judgement, and the page cites nothing external |

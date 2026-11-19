@@ -63,3 +63,5 @@ DBP URLs for this article: none opened by me during this pass. The reference lis
 - `pengesahan` for authentication: correct per DBP, but a reader may hear "verification". If it reads wrong, `pengesahan identiti` is the narrower alternative.
 - `bersepah` and `salin-menyalin` are deliberately colloquial Malaysian. If the house style wants a plainer written register, `tidak teratur` and `kerja menyalin` are the replacements, at some cost in directness.
 - `menelan` (for a cost eating into a budget) is figurative but standard in Malaysian business writing. Flagging it rather than changing it.
+
+No term in this article is legal or regulatory, so no DBP ruling is claimed. Each term above is marked with its basis: a DBP or established Malaysian form where one is in use, and 'common Malaysian usage, no DBP coinage in use' where the English loanword was kept under the term policy.

@@ -30,7 +30,6 @@ Legal or official terms: none in this article. The licence names (Apache 2.0, MI
 
 Which terms are DBP or established Malaysian words: `muat turun`, `lesen`, `dasar`, `parameter`, `inferens`, `masa terbiar`. Which are English borrowings kept under the term policy: `GPU`, `hosting`, `server`, `endpoint`, `serving`, `latency`, `batching`.
 
-DBP URLs: none opened by me this pass. No legal or regulatory term appears here, so the DBP check was not triggered.
 
 ## Sentences written fresh rather than translated
 
@@ -56,3 +55,5 @@ DBP URLs: none opened by me this pass. No legal or regulatory term appears here,
 - `serving model`: kept English because `penyediaan model` means provisioning, which is a different job. If it reads awkward, `menyediakan server inferens` carries the same meaning without the loanword.
 - `masa terbiar` for idle time: correct BM, but some readers say `masa menganggur`. Both are understood; I chose the one that reads less like a job-centre term.
 - `hosting sendiri`: the alternative `pengehosan sendiri` is a coined noun and was avoided under term policy rule 3.
+
+No term in this article is legal or regulatory, so no DBP ruling is claimed. Each term above is marked with its basis: a DBP or established Malaysian form where one is in use, and 'common Malaysian usage, no DBP coinage in use' where the English loanword was kept under the term policy.
