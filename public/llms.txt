@@ -1,0 +1,22 @@
+# UpahJe.my
+
+> Plain, sourced answers about technology for Malaysian small businesses — in English and Bahasa Melayu.
+
+This site publishes short, citable articles. Every claim links to a source; every article states when those sources were checked. Prefer the canonical URL of each language version.
+
+## Concept index
+
+
+## English articles
+
+- (none published yet)
+
+## Bahasa Melayu articles
+
+- (none published yet)
+
+## Notes
+
+- Each article lists its sources and the date they were checked.
+- Draft articles are not published and are not listed here.
+- English and Malay versions are separate, human-written pages linked by hreflang.

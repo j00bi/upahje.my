@@ -231,3 +231,18 @@ NEXTAUTH_URL=https://upahje.my
 
 **Last Updated**: 2026-05-17
 **Version**: 1.0.0
+
+## Build environment
+
+`next build` must run with `NODE_ENV=production`. A shell that exports
+`NODE_ENV=development` makes the production build fail with
+`<Html> should not be imported outside of pages/_document` and
+`Cannot read properties of null (reading 'useContext')` — the page is compiled
+with the dev React runtime. That predates the articles work; always verify with:
+
+```bash
+NODE_ENV=production npm run build
+```
+
+`prebuild` regenerates `public/llms.txt` from `content/articles/`. Content
+contract: `docs/ARTICLES.md`.

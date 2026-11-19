@@ -1,38 +1,37 @@
 import type { MetadataRoute } from 'next'
-import { MARKETPLACE_CATEGORIES } from '@/lib/categories'
-import { TALENT_PROFILES } from '@/data/talentProfiles'
+import { ARTICLE_CATEGORIES, LANGUAGES, publishedArticles } from '@/lib/articles.mjs'
+import { SITE } from '@/lib/seo'
 
-const BASE = 'https://upahje.my'
-
+/**
+ * Content only. The marketplace routes (jobs, talent, categories, portfolio,
+ * pay, ai, auth) are unlinked and carry `X-Robots-Tag: noindex`; advertising
+ * them here would push dead pages to search engines.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
+  const entries: MetadataRoute.Sitemap = []
 
-  const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE, lastModified: now, changeFrequency: 'daily', priority: 1 },
-    { url: `${BASE}/jobs`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE}/talent`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE}/categories`, lastModified: now, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE}/jobs/post`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE}/faq`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${BASE}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-  ]
+  for (const language of LANGUAGES) {
+    const lang = language.code
+    entries.push({ url: `${SITE}/${lang}`, changeFrequency: 'weekly', priority: 1 })
+    entries.push({ url: `${SITE}/${lang}/articles`, changeFrequency: 'daily', priority: 0.9 })
 
-  const categoryPages: MetadataRoute.Sitemap = MARKETPLACE_CATEGORIES.map((cat) => ({
-    url: `${BASE}/categories/${cat.slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }))
+    for (const category of ARTICLE_CATEGORIES) {
+      entries.push({
+        url: `${SITE}/${lang}/articles/category/${category.slug}`,
+        changeFrequency: 'weekly',
+        priority: 0.7,
+      })
+    }
 
-  const talentPages: MetadataRoute.Sitemap = TALENT_PROFILES.map((t) => ({
-    url: `${BASE}/talent/${t.slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly' as const,
-    priority: 0.6,
-  }))
+    for (const article of publishedArticles(lang)) {
+      entries.push({
+        url: `${SITE}/${lang}/articles/${article.slug}`,
+        lastModified: new Date(`${article.updated || article.date}T00:00:00Z`),
+        changeFrequency: 'monthly',
+        priority: 0.8,
+      })
+    }
+  }
 
-  return [...staticPages, ...categoryPages, ...talentPages]
+  return entries
 }
