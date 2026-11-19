@@ -97,4 +97,4 @@ Only if the hardware is in Malaysia. Renting a GPU in another region moves the d
 
 ---
 
-**Read next:** [the definitions pillar](/en/articles/category/definitions) and [what an API costs to wire up](/en/articles/what-is-an-api-for-malaysian-sme).
+**Read next:** [the definitions pillar](https://upahje.my/en/articles/category/definitions) and [what an API costs to wire up](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme).
