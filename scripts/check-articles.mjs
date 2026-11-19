@@ -8,7 +8,9 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { ARTICLES_ROOT, LANGUAGES, allArticles, publishedArticles, translatedArticle } from '../lib/articles.mjs'
+import os from 'node:os'
 import { MS_LINT_ALLOW, MS_LINT_WORDS } from '../tools/ms-lint-words.mjs'
+import { PII_PATTERNS } from '../tools/pii-patterns.mjs'
 
 
 /**
@@ -48,6 +50,66 @@ function lintMalay() {
   return hits
 }
 
+
+/** First six characters only: a key, path or address is never echoed whole. */
+function redact(value) {
+  const text = value.trim()
+  return `${text.slice(0, 6)}…`
+}
+
+/** Denylist file plus the local machine's own names, so they cannot leak. */
+function piiDenylist() {
+  const file = path.join(process.cwd(), 'tools', 'pii-denylist.txt')
+  const names = new Set([os.hostname(), process.env.USER || ''].filter(Boolean))
+  if (fs.existsSync(file)) {
+    for (const line of fs.readFileSync(file, 'utf8').split(/\r?\n/)) {
+      const value = line.trim()
+      if (value && !value.startsWith('#')) names.add(value)
+    }
+  }
+  return [...names].filter((name) => name.length >= 3)
+}
+
+/**
+ * PII and secret gate over the article sources. Any hit is a failure: these
+ * files are published, and a path, a session id or a key in prose is a leak even
+ * when the source is private.
+ */
+function lintPii() {
+  const denylist = piiDenylist()
+  const denylistPattern = denylist.length
+    ? new RegExp(`\\b(?:${denylist.map((name) => name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'gi')
+    : null
+  let hits = 0
+  const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const full = path.join(dir, entry.name)
+    return entry.isDirectory() ? walk(full) : /\.(md|mdx)$/.test(entry.name) ? [full] : []
+  })
+
+  for (const file of walk(ARTICLES_ROOT).sort()) {
+    const lines = fs.readFileSync(file, 'utf8').split(/\r?\n/)
+    lines.forEach((line, index) => {
+      const report = (category, match, fix) => {
+        hits += 1
+        console.error(`${path.relative(process.cwd(), file)}:${index + 1}: ${category}, "${redact(match)}" -> ${fix}`)
+      }
+      for (const entry of PII_PATTERNS) {
+        entry.pattern.lastIndex = 0
+        for (const match of line.matchAll(entry.pattern)) report(entry.category, match[0], entry.fix)
+      }
+      if (denylistPattern) {
+        denylistPattern.lastIndex = 0
+        for (const match of line.matchAll(denylistPattern)) {
+          report('denylisted-name', match[0], 'remove the local username or hostname')
+        }
+      }
+    })
+  }
+  if (hits) console.error(`[pii] ${hits} personal or secret string(s) in article sources`)
+  else console.log('pii: clean')
+  return hits
+}
+
 let failed = 0
 for (const language of LANGUAGES) {
   const all = allArticles(language.code)
@@ -73,5 +135,6 @@ for (const language of LANGUAGES) {
 }
 
 const malayHits = lintMalay()
+const piiHits = lintPii()
 console.log(`root: ${ARTICLES_ROOT}`)
-process.exit(failed || malayHits ? 1 : 0)
+process.exit(failed || malayHits || piiHits ? 1 : 0)

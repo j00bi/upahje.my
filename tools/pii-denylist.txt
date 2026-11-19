@@ -1,0 +1,3 @@
+# Extra usernames and hostnames for the PII gate. One per line, comments allowed.
+# The checker also adds this machine's hostname and $USER automatically.
+husni
