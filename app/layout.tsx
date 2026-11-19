@@ -4,21 +4,27 @@ import CategoryNav from '@/components/navigation/CategoryNav'
 import IntroAnimation from '@/components/ui/IntroAnimation'
 
 export const metadata: Metadata = {
-  title: 'UpahJe.my — Malaysia\'s Local Hiring Platform',
-  description: 'Hire trusted local help in Malaysia. Post a job, compare verified workers, and pay safely after the work is done.',
   metadataBase: new URL('https://upahje.my'),
+  title: {
+    default: 'UpahJe.my — Plain tech answers for Malaysian small businesses',
+    template: '%s — UpahJe.my',
+  },
+  description:
+    'Short, sourced articles about technology for Malaysian small businesses — in English and Bahasa Melayu.',
+  // og:url is per page and per locale (each route sets it); a site-wide value
+  // here is what a crawler would quote for every page.
   openGraph: {
-    title: 'UpahJe.my — Malaysia\'s Local Hiring Platform',
-    description: 'Hire trusted local help in Malaysia. Post a job, compare verified workers, and pay safely after the work is done.',
-    url: 'https://upahje.my',
     siteName: 'UpahJe.my',
-    locale: 'en_MY',
     type: 'website',
+    title: 'UpahJe.my — Plain tech answers for Malaysian small businesses',
+    description:
+      'Short, sourced articles about technology for Malaysian small businesses — in English and Bahasa Melayu.',
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'UpahJe.my — Malaysia\'s Local Hiring Platform',
-    description: 'Hire trusted local help in Malaysia. Post a job, compare verified workers, and pay safely after the work is done.',
+    card: 'summary',
+    title: 'UpahJe.my — Plain tech answers for Malaysian small businesses',
+    description:
+      'Short, sourced articles about technology for Malaysian small businesses — in English and Bahasa Melayu.',
   },
   robots: {
     index: true,

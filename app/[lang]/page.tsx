@@ -10,7 +10,7 @@ import {
   languageByCode,
   publishedArticles,
 } from '@/lib/articles.mjs'
-import { SITE_NAME, absolute, languagesFor } from '@/lib/seo'
+import { SITE_NAME, absolute, languagesFor, social } from '@/lib/seo'
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const copy = copyFor(params.lang)
@@ -18,6 +18,7 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
     title: `${SITE_NAME} — ${copy.tagline}`,
     description: copy.intro,
     alternates: { canonical: absolute(`/${params.lang}`), languages: languagesFor('') },
+    ...social(params.lang, `/${params.lang}`, `${SITE_NAME} — ${copy.tagline}`, copy.intro),
   }
 }
 

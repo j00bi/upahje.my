@@ -13,7 +13,7 @@ import {
   categoryLabel,
   languageCodes,
 } from '@/lib/articles.mjs'
-import { SITE_NAME, absolute, categoryLanguages } from '@/lib/seo'
+import { SITE_NAME, absolute, categoryLanguages, social } from '@/lib/seo'
 
 export const dynamicParams = false
 
@@ -34,6 +34,7 @@ export function generateMetadata({ params }: { params: { lang: string; category:
       canonical: absolute(`/${params.lang}/articles/category/${params.category}`),
       languages: categoryLanguages(params.category),
     },
+    ...social(params.lang, `/${params.lang}/articles/category/${params.category}`, `${label} — ${SITE_NAME}`, category.blurb[params.lang]),
   }
 }
 

@@ -6,7 +6,7 @@ import LanguageSwitch from '@/components/articles/LanguageSwitch'
 import Pagination from '@/components/articles/Pagination'
 import { copyFor } from '@/lib/copy'
 import { articlePageCount, articlesForPage } from '@/lib/articles.mjs'
-import { SITE_NAME, absolute, languagesFor } from '@/lib/seo'
+import { SITE_NAME, absolute, languagesFor, social } from '@/lib/seo'
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const copy = copyFor(params.lang)
@@ -14,6 +14,7 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
     title: `${copy.journal} — ${SITE_NAME}`,
     description: copy.intro,
     alternates: { canonical: absolute(`/${params.lang}/articles`), languages: languagesFor('/articles') },
+    ...social(params.lang, `/${params.lang}/articles`, `${copy.journal} — ${SITE_NAME}`, copy.intro),
   }
 }
 

@@ -35,3 +35,18 @@ export const categoryLanguages = (category: string) => ({
 })
 
 export const htmlLang = (lang: string) => LANGUAGES.find((l) => l.code === lang)?.htmlLang || 'en-MY'
+
+/** OpenGraph + Twitter for one page in one language. */
+export function social(lang: string, path: string, title: string, description: string) {
+  return {
+    openGraph: {
+      title,
+      description,
+      url: absolute(path),
+      siteName: SITE_NAME,
+      locale: lang === 'ms' ? 'ms_MY' : 'en_MY',
+      type: 'website' as const,
+    },
+    twitter: { card: 'summary' as const, title, description },
+  }
+}

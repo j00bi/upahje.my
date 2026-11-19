@@ -7,7 +7,7 @@ import LanguageSwitch from '@/components/articles/LanguageSwitch'
 import Pagination from '@/components/articles/Pagination'
 import { copyFor } from '@/lib/copy'
 import { articlePageCount, articlesForPage, languageCodes } from '@/lib/articles.mjs'
-import { SITE_NAME, absolute, languagesFor } from '@/lib/seo'
+import { SITE_NAME, absolute, languagesFor, social } from '@/lib/seo'
 
 export const dynamicParams = false
 
@@ -33,6 +33,7 @@ export function generateMetadata({ params }: { params: { lang: string; page: str
       languages: languagesFor(`/articles/page/${n}`),
     },
     robots: { index: false, follow: true },
+    ...social(params.lang, `/${params.lang}/articles/page/${n}`, `${copy.journal} — page ${n} — ${SITE_NAME}`, copy.intro),
   }
 }
 
