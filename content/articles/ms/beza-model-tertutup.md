@@ -39,7 +39,7 @@ sources:
 
 # Claude, ChatGPT, Gemini dan Grok: apa sebenarnya beza antara model tertutup
 
-Yang berbeza bukan model mana yang mendapat skor tertinggi. Tiada papan pendahulu semasa yang bertarikh dapat dicapai untuk artikel ini, jadi tiada susunan prestasi diberikan. Yang mengikat pembeli ialah lima perkara yang didokumenkan: tetingkap konteks, harga setiap juta token, sama ada tool calling dan structured output didokumenkan, sama ada input fail dan imej disokong, dan termanya.
+Yang berbeza bukan model mana yang mendapat skor tertinggi. Dua papan pendahulu dapat dicapai dan dicetak di bawah dengan tetapannya, tetapi tiada satu pun dianggap sebagai susunan kualiti di sini. Yang mengikat pembeli ialah empat perkara yang didokumenkan: tetingkap konteks, harga setiap juta token, sama ada tool calling dan structured output didokumenkan, serta sama ada input fail dan imej disokong.
 
 ## Apa yang didokumenkan oleh setiap vendor?
 
@@ -66,7 +66,7 @@ Dua sel memerlukan nota dan bukan angka. Harga input Haiku 5.5 disyaratkan pada 
 
 ## Apa yang tidak diberitahu oleh skor penanda aras?
 
-Hampir semua yang ada dalam jadual di atas, dan artikel ini sengaja tiada jadual penanda aras kerana yang dapat dicapai tidak semasa.
+Hampir semua yang ada dalam jadual di atas. Dua papan pendahulu di bawah dicetak dengan tetapannya, dan tiada satu pun dianggap sebagai keputusan kualiti.
 
 SWE-bench menyajikan papan pendahuluannya melalui skrip dan bukan teks statik, dan tiada petikan bertarikh dirakam. Baris teratas yang kelihatan pada halaman Aider polyglot membawa direktori larian bertarikh 23 Ogos 2025, yang bukan petikan November 2026. Daripada memetik mana-mana satu sebagai semasa, artikel ini membandingkan apa yang anda dapat dan bayar. Angka penanda aras juga tidak akan memberitahu tetingkap konteks, harga, sama ada structured output didokumenkan, atau apa yang dibenarkan oleh terma.
 

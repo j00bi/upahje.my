@@ -39,7 +39,7 @@ sources:
 
 # Claude, ChatGPT, Gemini and Grok: what actually differs between the closed models
 
-What differs is not which model scores highest. No current, dated leaderboard could be reached for this article, so no performance ranking is offered. What a buyer is stuck with is five documented things: the context window, the price per million tokens, whether tool calling and structured output are documented, whether file and image input are supported, and the terms.
+What differs is not which model scores highest. Two leaderboards were reachable and are printed below with their settings, but neither is treated here as a quality ranking. What a buyer is stuck with is four documented things: the context window, the price per million tokens, whether tool calling and structured output are documented, and whether file and image input are supported.
 
 ## What does each vendor document?
 
@@ -66,7 +66,7 @@ Two cells need a note rather than a number. Haiku 5.5's input price is qualified
 
 ## What does a benchmark score not tell you?
 
-Almost everything in the table above, and this article deliberately has no benchmark table because the ones reachable were not current.
+Almost everything in the table above. The two leaderboards further down are printed with their settings, and neither is treated as a quality verdict.
 
 SWE-bench serves its leaderboards through script rather than static text, and no dated snapshot was captured. The Aider polyglot page's visible top row carries a run directory dated 23 August 2025, which is not a snapshot of November 2026. Rather than cite either as current, this piece compares what you get and pay. A benchmark number also would not tell you the context window, the price, whether structured output is documented, or what the terms allow.
 
