@@ -25,7 +25,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Harness agent disusun: empat CLI yang kami jalankan pada satu mesin
+# Harness agent disusun: empat CLI yang dipasang pada satu mesin
 
 DeepSeek Harness mendapat skor tertinggi 4.35 daripada 5, OpenCode kedua dengan 4.15, Claude Code ketiga dengan 3.70 dan Codex CLI keempat dengan 3.45. Skor itu datang daripada lima kriteria berwajaran, dan setiap satu dinilai hanya berdasarkan pemerhatian pada mesin ini pada 19 November 2026. Tiada satu pun di bawah ini ialah pengetahuan umum tentang tools tersebut.
 
@@ -87,7 +87,7 @@ Tiada 5 di luar jejak cakera, dan tiada 3 atau lebih rendah di mana-mana. Bagi p
 
 Claude Code menang pada jejak cakera dan kebolehlanjutan, tetapi terhad pada pembekal.
 
-Pada 116 KB ia pemasangan terkecil antara empat ini dengan beza tiga urutan magnitud, dan skills serta subagent-nya ialah cerita kebolehlanjutan paling lengkap yang kami perhatikan. Baris pembekalnya, "model Anthropic, `--model`", yang menahannya pada 3.70.
+Pada 116 KB ia pemasangan terkecil antara empat ini, kira-kira 550 kali lebih kecil daripada 62 MB OpenCode, dan skills serta subagent-nya ialah cerita kebolehlanjutan paling lengkap yang kami perhatikan. Baris pembekalnya, "model Anthropic, `--model`", yang menahannya pada 3.70.
 
 Codex CLI menang pada MCP, kerana ia satu-satunya antara empat ini yang didokumenkan sebagai klien MCP dan server MCP sekali gus.
 

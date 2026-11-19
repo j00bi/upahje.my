@@ -41,9 +41,6 @@ API menyampaikan satu maklumat yang ditetapkan antara dua sistem, apabila dimint
 - Balasan tidak lagi ditulis selepas menyemak stok secara manual kerana bot WhatsApp bertanya kepada sistem inventori anda dahulu.
 - Invois tidak perlu ditaip semula kerana alat perakaunan mengambilnya daripada kedai anda.
 
-![Kedai anda menghantar pesanan kepada API, API menyalurkannya kepada kurier, dan status penghantaran kembali melalui laluan yang sama](/figures/what-is-an-api.svg)
-*Satu pesanan, keluar melalui API dan kembali sebagai status.*
-
 ## Apakah beza antara API model tertutup dengan API model terbuka?
 
 API model tertutup ialah API yang anda boleh panggil, tetapi modelnya tidak boleh anda jalankan sendiri. API model terbuka pula membolehkan fail model dimuat turun dan dijalankan pada perkakasan yang anda kawal.
