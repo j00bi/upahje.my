@@ -20,7 +20,7 @@
 |----|-------------------------|
 | What does an API actually do for my business? | Definition before cost, because a reader cannot price what they cannot name |
 | What is the difference between an open and a closed model API? | The choice that changes cost, control and exit route |
-| Patut mula dengan model mana? | Turns the comparison into a decision using pay-per-call arithmetic |
+| Which one should a small business start with? | Turns the comparison into a decision using pay-per-call arithmetic |
 | What does it cost to have someone wire an API up in Malaysia? | The question the reader came with, answered with the missing benchmark named |
 | How do I price the job myself? | A procedure the reader can act on this week instead of trusting a quote |
 | What does the bill look like each month? | Running cost separated from build cost, so the small number is not mistaken for the total |
