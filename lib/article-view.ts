@@ -14,6 +14,32 @@ export function anchor(text: string): string {
 const words = (value: string) => value.split(/\s+/).filter(Boolean).length
 
 /**
+ * Sentence boundaries, not punctuation. A terminator splits only when it is
+ * followed by whitespace and a word that starts with a capital or digit, or by
+ * end of text. A decimal point has no whitespace after it, so "4.35" and
+ * "0.2.2-rc.1" survive as one token.
+ */
+function splitSentences(text: string): string[] {
+  const sentences: string[] = []
+  let start = 0
+  for (let i = 0; i < text.length; i++) {
+    if (!/[.!?]/.test(text[i])) continue
+    let j = i + 1
+    while (j < text.length && /["'”’)\]]/.test(text[j])) j += 1
+    const rest = text.slice(j)
+    if (/^\s*$/.test(rest) || /^\s+["'“«]?[A-Z0-9]/.test(rest)) {
+      const sentence = text.slice(start, j).trim()
+      if (sentence) sentences.push(sentence)
+      start = j
+    }
+  }
+  const tail = text.slice(start).trim()
+  if (tail) sentences.push(tail)
+  return sentences.length ? sentences : [text]
+}
+
+
+/**
  * The short answer is the first body paragraph, moved above the body and cut to
  * 40 to 60 words. This is the block an answer engine lifts, so it is real copy
  * from the article, not a summary written for the template.
@@ -32,7 +58,7 @@ export function splitShortAnswer(body: string): { short: string | null; rest: st
     end += 1
   }
   const text = paragraph.join(' ')
-  const sentences = text.match(/[^.!?]+[.!?]+["')\]]*|\S[^.!?]*$/g) || [text]
+  const sentences = splitSentences(text)
   const picked: string[] = []
   let count = 0
   for (const sentence of sentences) {

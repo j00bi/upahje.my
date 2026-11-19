@@ -38,7 +38,7 @@ draft: false
 
 # FAQ boundary fixture
 
-A short opening paragraph that gives the page a short answer block and enough words to read.
+DeepSeek Harness scores 4.35 out of 5 in this fixture, version 0.2.2-rc.1 costs USD 100 a month, and this closing sentence ends the lede.
 
 ## FAQ
 
@@ -109,6 +109,11 @@ try {
   if (!figure) failures.push('figure/img for the SVG missing')
   if (!dimensions) failures.push('img lacks intrinsic width/height')
   if (!caption) failures.push('figcaption missing from the italic line')
+  // Decimals in the lede must survive the short-answer split unchanged.
+  for (const literal of ['4.35 out of 5', '0.2.2-rc.1', 'USD 100']) {
+    if (!html.includes(literal)) failures.push(`short answer lost the literal: ${literal}`)
+  }
+  if (html.includes('4. 35')) failures.push('decimal split into a sentence: 4. 35')
 
   console.log(JSON.stringify({ sourceQuestions, questions, readNext, figure, dimensions, caption, failures }, null, 1))
   process.exit(failures.length ? 1 : 0)
