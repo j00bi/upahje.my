@@ -48,12 +48,14 @@ API model tertutup ialah API yang anda boleh panggil tetapi tidak boleh hoskan s
 
 Enam perbezaan menentukan pilihan, ikut urutan kepentingannya kepada pemilik perniagaan:
 
-1. **Di mana model berjalan.** Tertutup: pelayan pembekal. Terbuka: pelayan anda, atau hos yang anda pilih.
-2. **Boleh atau tidak anda dapatkan model itu.** Tertutup: tidak, anda hanya dapat katalog dan kadar setiap token. Terbuka: ya, anda muat turun pemberat model.
-3. **Apa yang mengawal penggunaan.** Tertutup: terma perkhidmatan pembekal. Terbuka: lesen model — Apache 2.0, MIT, atau lesen khusus pembekal.
-4. **Apa yang anda bayar.** Tertutup: token atau panggilan, dan tiada bayaran bila tiada orang guna. Terbuka: kuasa pengiraan dan hos setiap bulan, tambah orang untuk menjalankannya.
-5. **Siapa boleh tukar model di bawah anda.** Tertutup: pembekal boleh, dalam polisi penghentian mereka. Terbuka: hanya apabila anda sendiri kemas kini.
-6. **Data anda keluar dari premis atau tidak.** Tertutup: biasanya ya. Terbuka: tidak semestinya.
+| Apa yang menentukan | API model tertutup | API model terbuka |
+| --- | --- | --- |
+| Di mana model berjalan | Pelayan pembekal | Pelayan anda, atau hos yang anda pilih |
+| Boleh dapatkan model | Tidak — anda hanya dapat katalog dan kadar setiap token | Ya — anda muat turun pemberat model |
+| Apa yang mengawal penggunaan | Terma perkhidmatan pembekal | Lesen model: Apache 2.0, MIT, atau lesen khusus pembekal |
+| Apa yang anda bayar | Token atau panggilan, tiada bayaran bila tiada orang guna | Kuasa pengiraan dan hos setiap bulan, tambah orang untuk menjalankannya |
+| Siapa boleh tukar model di bawah anda | Pembekal boleh, dalam polisi penghentian mereka | Hanya apabila anda sendiri kemas kini |
+| Data anda keluar dari premis | Biasanya ya | Tidak semestinya |
 
 Setakat 19 November 2026, katalog Mistral sendiri menyenaraikan ketiga-tiga bentuk lesen ini sebelah menyebelah: Mistral Small 4 dan model Ministral 3 di bawah Apache 2.0, Z.ai GLM 5.3 dan DeepSeek V4.1 Flash di bawah MIT, dan Mistral Large 4 di bawah "Mistral Ecosystem Open Weight License" yang khusus ([dokumentasi Mistral, disemak 19 Nov 2026](https://docs.mistral.ai/models)). Pembekal tertutup pula menerbitkan katalog model dan kadar, bukan pemberat model ([katalog model OpenAI, disemak 19 Nov 2026](https://developers.openai.com/api/docs/models)).
 

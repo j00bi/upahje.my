@@ -48,12 +48,14 @@ A closed model API is one you can call but never host yourself; an open-weight m
 
 Six differences decide the choice, in the order they matter to a business owner:
 
-1. **Where the model runs.** Closed: the vendor's servers. Open-weight: your server, or a host you choose.
-2. **Whether you can obtain the model.** Closed: no, you get a catalogue and per-token rates. Open-weight: yes, you download the weights.
-3. **What governs use.** Closed: the vendor's terms of service. Open-weight: a model licence — Apache 2.0, MIT, or a vendor-specific licence.
-4. **What you pay for.** Closed: tokens or requests, and nothing when nobody uses it. Open-weight: compute and hosting every month, plus someone to run it.
-5. **Who can change the model under you.** Closed: the vendor can, within their deprecation policy. Open-weight: only when you update it yourself.
-6. **Whether your data leaves your premises.** Closed: usually yes. Open-weight: not necessarily.
+| What decides it | Closed model API | Open-weight model API |
+| --- | --- | --- |
+| Where the model runs | The vendor's servers | Your server, or a host you choose |
+| Whether you can obtain the model | No — you get a catalogue and per-token rates | Yes — you download the weights |
+| What governs use | The vendor's terms of service | A model licence: Apache 2.0, MIT, or a vendor-specific licence |
+| What you pay for | Tokens or requests, and nothing when nobody uses it | Compute and hosting every month, plus someone to run it |
+| Who can change the model under you | The vendor can, within their deprecation policy | Only when you update it yourself |
+| Whether your data leaves your premises | Usually yes | Not necessarily |
 
 As of 19 November 2026, Mistral's own catalogue lists all three licence shapes side by side: Mistral Small 4 and the Ministral 3 models under Apache 2.0, Z.ai GLM 5.3 and DeepSeek V4.1 Flash under MIT, and Mistral Large 4 under a vendor-specific "Mistral Ecosystem Open Weight License" ([Mistral docs, checked 19 Nov 2026](https://docs.mistral.ai/models)). Closed vendors publish a model catalogue and rates instead of weights ([OpenAI model catalogue, checked 19 Nov 2026](https://developers.openai.com/api/docs/models)).
 
