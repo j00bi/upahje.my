@@ -61,6 +61,16 @@ Hampir semua yang ada dalam jadual di atas, dan artikel ini sengaja tiada jadual
 
 SWE-bench menyajikan papan pendahuluannya melalui skrip dan bukan teks statik, dan tiada petikan bertarikh dirakam. Baris teratas yang kelihatan pada halaman Aider polyglot membawa direktori larian bertarikh 23 Ogos 2025, yang bukan petikan November 2026. Daripada memetik mana-mana satu sebagai semasa, artikel ini membandingkan apa yang anda dapat dan bayar. Angka penanda aras juga tidak akan memberitahu tetingkap konteks, harga, sama ada structured output didokumenkan, atau apa yang dibenarkan oleh terma.
 
+## Berapa kos satu tugasan pada kadar ini?
+
+Kerana input dan output dinilai berasingan, satu contoh berkira menjadikan jadual itu boleh digunakan. Andaiannya 100,000 token input dan 20,000 token output setiap tugasan, dan kadarnya ialah harga yang dicetak di atas.
+
+1. Claude Haiku 5.5: 0.1 juta input × USD 0.10 = USD 0.01, tambah 0.02 juta output × USD 0.50 = USD 0.01, jadi USD 0.02 setiap tugasan.
+2. Claude Fable 5.2: 0.1 juta input × USD 8.00 = USD 0.80, tambah 0.02 juta output × USD 40.00 = USD 0.80, jadi USD 1.60 setiap tugasan.
+3. gemini-4-carbon pada kadar semasa: 0.1 juta input × USD 2.00 = USD 0.20, tambah 0.02 juta output × USD 10.00 = USD 0.20, jadi USD 0.40 setiap tugasan.
+
+Itu jurang 80 kali antara baris termurah dan termahal pada tugasan yang sama, dan setiap angka boleh disemak terhadap harga yang dicetak. Tukar andaian itu dan jumlahnya berubah secara berkadar; pendaraban itulah yang menjadikannya boleh diaudit.
+
 ## Di mana terletaknya ikatan?
 
 Tiga tempat, dan setiap satu muncul dalam kontrak, bukan dalam penanda aras.

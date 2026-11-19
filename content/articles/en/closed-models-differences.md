@@ -61,6 +61,16 @@ Almost everything in the table above, and this article deliberately has no bench
 
 SWE-bench serves its leaderboards through script rather than static text, and no dated snapshot was captured. The Aider polyglot page's visible top row carries a run directory dated 23 August 2025, which is not a snapshot of November 2026. Rather than cite either as current, this piece compares what you get and pay. A benchmark number also would not tell you the context window, the price, whether structured output is documented, or what the terms allow.
 
+## What does one task cost at these rates?
+
+Because input and output are priced separately, one worked example makes the table usable. The assumption is 100,000 input and 20,000 output tokens per task, and the rate is the printed price above.
+
+1. Claude Haiku 5.5: 0.1 million input × USD 0.10 = USD 0.01, plus 0.02 million output × USD 0.50 = USD 0.01, so USD 0.02 per task.
+2. Claude Fable 5.2: 0.1 million input × USD 8.00 = USD 0.80, plus 0.02 million output × USD 40.00 = USD 0.80, so USD 1.60 per task.
+3. gemini-4-carbon at the current rate: 0.1 million input × USD 2.00 = USD 0.20, plus 0.02 million output × USD 10.00 = USD 0.20, so USD 0.40 per task.
+
+That is an 80 times spread between the cheapest and most expensive row on the same task, and every figure is checkable against the printed price. Change the assumption and the totals change proportionally; the multiplication is what makes it auditable.
+
 ## Where is the lock-in?
 
 Three places, and each shows up in the contract rather than the benchmark.

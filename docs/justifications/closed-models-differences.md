@@ -16,6 +16,9 @@
 | 10 | "Aider polyglot's visible top row is gpt-5 (high) at 88.0% pass rate for a total run cost of USD 29.08, but its run directory is dated 2025-08-23 and none of the visible rows is newer than August 2025" | https://aider.chat/docs/leaderboards/ | Aider | 2026-11-19 | source: Table 2b, stale board |
 | 11 | "SWE-bench serves its leaderboards through script rather than static text, and no dated snapshot was captured." | - | our measurement, this machine | 2026-11-19 | source: attempt recorded during the collection pass; no static snapshot obtained |
 | 12 | "What happens to your prompts is governed by the terms, and the terms pages were listed but not opened for this piece, so I am not going to characterise them." | - | our measurement, this machine | 2026-11-19 | source: collection log; terms URLs recorded as not opened |
+| 13 | "1. Claude Haiku 5.5: 0.1 million input × USD 0.10 = USD 0.01, plus 0.02 million output × USD 0.50 = USD 0.01, so USD 0.02 per task." | - | - | - | estimate: arithmetic on the printed Haiku 5.5 rate at the stated 100,000 input and 20,000 output tokens |
+| 14 | "2. Claude Fable 5.2: 0.1 million input × USD 8.00 = USD 0.80, plus 0.02 million output × USD 40.00 = USD 0.80, so USD 1.60 per task." | - | - | - | estimate: arithmetic on the printed Fable 5.2 rate at the same assumed task size |
+| 15 | "That is an 80 times spread between the cheapest and most expensive row on the same task" | - | - | - | estimate: arithmetic, USD 1.60 divided by USD 0.02 |
 
 ## Sections
 
