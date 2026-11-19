@@ -15,7 +15,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Bahasa Melayu articles
 
-- [Apa itu API, dijelaskan untuk pemilik perniagaan kecil Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia): API ialah kontrak antara dua sistem untuk bertukar data tanpa manusia menyalinnya. Apa maknanya bagi PKS, beza model terbuka dan tertutup, serta kos sebenar menyambungkannya.
+- [Apa itu API, dijelaskan untuk pemilik perniagaan kecil Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia): API ialah kontrak antara dua sistem untuk bertukar data tanpa perlu ada orang menyalinnya. Apa maksudnya bagi PKS, beza model terbuka dengan tertutup, dan kos sebenar menyambungkannya.
 
 ## Notes
 

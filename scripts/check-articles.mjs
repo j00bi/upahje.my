@@ -35,6 +35,7 @@ function lintMalay() {
         pattern.lastIndex = 0
         const match = pattern.exec(line)
         if (!match) continue
+        if (entry.ignore && entry.ignore(line, match)) continue
         hits += 1
         const relative = path.relative(process.cwd(), file)
         console.error(`${relative}:${index + 1}: "${match[0]}" -> "${entry.suggest}"`)

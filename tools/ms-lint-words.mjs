@@ -34,7 +34,14 @@ export const MS_LINT_WORDS = [
   { word: 'manapun', suggest: 'mana-mana' },
   { word: 'kapanpun', suggest: 'bila-bila masa' },
   { word: 'siapapun', suggest: 'sesiapa' },
-  { word: 'yang mana', suggest: 'yang', pattern: /\byang\s+mana\b/gi },
+  {
+    word: 'yang mana',
+    suggest: 'yang',
+    pattern: /\byang\s+mana\b/gi,
+    // The ban is the relative pronoun. "Yang mana satu?" is a question, and
+    // "dengan yang mana" is a legitimate prepositional phrase.
+    ignore: (line) => /\?\s*$/.test(line.trim()) || /\bdengan\s+yang\s+mana\b/i.test(line),
+  },
   {
     word: 'adalah merupakan',
     suggest: 'adalah, atau merupakan (not both)',
