@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { cleanText } from './text'
+import { anchor } from './article-view'
 
 /**
  * The article body renderer.
@@ -14,36 +16,27 @@ import type { ReactNode } from 'react'
  * next-mdx-remote + @mdx-js/react — until then, keep bodies to this subset.
  */
 
-const P = 'mb-5 text-[17px] leading-[1.75] text-body'
-const H2 = 'font-display-lg mt-12 mb-4 text-ink scroll-mt-24'
-const H3 = 'font-display-sm mt-8 mb-3 text-ink scroll-mt-24'
-const UL = 'mb-6 list-disc space-y-2 pl-6 text-[17px] leading-[1.75] text-body marker:text-emerald-600'
-const OL = 'mb-6 list-decimal space-y-2 pl-6 text-[17px] leading-[1.75] text-body marker:text-emerald-600'
+const P = 'mb-5 text-[17px] leading-[1.7] text-[color:var(--ui-body)]'
+const H2 = 'mt-12 mb-3 text-xl font-semibold leading-7 text-[color:var(--ui-ink)] scroll-mt-24'
+const H3 = 'mt-8 mb-2 text-[16px] font-semibold text-[color:var(--ui-ink)]'
+const UL = 'mb-6 list-disc space-y-2 pl-6 text-[17px] leading-[1.7] text-[color:var(--ui-body)] marker:text-[color:var(--ui-muted)]'
+const OL = 'mb-6 list-decimal space-y-2 pl-6 text-[17px] leading-[1.7] text-[color:var(--ui-body)] marker:text-[color:var(--ui-muted)]'
 const QUOTE =
-  'my-8 rounded-md border-l-4 border-primary bg-canvas-soft px-5 py-4 text-[17px] leading-[1.7] text-ink'
+  'my-8 border-l-2 border-[color:var(--ui-accent)] pl-5 text-[17px] leading-[1.7] text-[color:var(--ui-ink)]'
 const INLINE_CODE =
-  'rounded bg-canvas-warm px-1.5 py-0.5 font-mono text-[0.9em] text-ink'
+  'rounded bg-[color:var(--ui-accent-soft)] px-1.5 py-0.5 font-mono text-[0.9em] text-[color:var(--ui-ink)]'
 const LINK =
-  'font-medium text-emerald-700 underline decoration-emerald-300 underline-offset-2 hover:text-emerald-800'
+  'font-medium text-[color:var(--ui-accent)] underline decoration-1 underline-offset-2 hover:opacity-80'
 const PRE =
-  'mb-6 overflow-x-auto rounded-md bg-green-deep p-4 text-sm leading-6 text-canvas'
-const TABLE_WRAP = 'my-8 overflow-x-auto rounded-md border border-neutral-200'
+  'mb-6 overflow-x-auto rounded-[10px] border border-[color:var(--ui-rule)] bg-[color:var(--ui-surface)] p-4 text-sm leading-6 text-[color:var(--ui-ink)]'
 const TABLE = 'w-full border-collapse text-left text-[15px] leading-6'
-const TH = 'border-b border-neutral-200 bg-canvas-soft px-4 py-3 font-semibold text-ink align-top'
-const TD = 'border-t border-neutral-200 px-4 py-3 align-top text-body'
-
-function anchor(text: string) {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, '')
-    .trim()
-    .replace(/\s+/g, '-')
-}
+const TH = 'ui-mono px-3 py-3 text-[12px] font-semibold uppercase tracking-[0.08em] text-[color:var(--ui-muted)]'
+const TD = 'px-3 py-3 align-top text-[color:var(--ui-body)]'
 
 const TOKEN = /(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/
 
 function renderInline(text: string, keyPrefix: string): ReactNode[] {
-  const parts = text.split(TOKEN).filter((part) => part !== '')
+  const parts = cleanText(text).split(TOKEN).filter((part) => part !== '')
   return parts.map((part, index) => {
     const key = `${keyPrefix}-${index}`
     const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
@@ -99,6 +92,7 @@ export function Markdown({ source }: { source: string }): ReactNode {
   const blocks: ReactNode[] = []
   let i = 0
   let key = 0
+  let lastHeading = ''
 
   while (i < lines.length) {
     const line = lines[i]
@@ -129,6 +123,7 @@ export function Markdown({ source }: { source: string }): ReactNode {
       const level = heading[1].length
       const text = heading[2].trim()
       const id = anchor(text)
+      lastHeading = cleanText(text)
       if (level === 1) blocks.push(<h2 key={key++} id={id} className={H2}>{renderInline(text, `h${key}`)}</h2>)
       else if (level === 2) blocks.push(<h2 key={key++} id={id} className={H2}>{renderInline(text, `h${key}`)}</h2>)
       else blocks.push(<h3 key={key++} id={id} className={H3}>{renderInline(text, `h${key}`)}</h3>)
@@ -180,9 +175,14 @@ export function Markdown({ source }: { source: string }): ReactNode {
         rows.push(splitRow(lines[i]))
         i += 1
       }
+      const numeric = (value: string) => /^\s*(?:RM|MYR|USD|\$)?\s*\d[\d.,]*\s*(?:%|px|ms|s|GB|MB)?\s*$/i.test(value)
       blocks.push(
-        <div key={key++} className={TABLE_WRAP}>
-          <table className={TABLE}>
+        <div key={key++} className="my-8 max-w-full overflow-x-auto">
+          <table
+            className={TABLE}
+            style={{ borderTop: '1px solid var(--ui-rule)', borderBottom: '1px solid var(--ui-rule)' }}
+          >
+            <caption className="sr-only">{lastHeading || 'Table'}</caption>
             <thead>
               <tr>
                 {header.map((cell, index) => (
@@ -195,11 +195,17 @@ export function Markdown({ source }: { source: string }): ReactNode {
             <tbody>
               {rows.map((row, rowIndex) => (
                 <tr key={rowIndex}>
-                  {header.map((_, cellIndex) => (
-                    <td key={cellIndex} className={TD}>
-                      {renderInline(row[cellIndex] || '', `td${key}-${rowIndex}-${cellIndex}`)}
-                    </td>
-                  ))}
+                  {header.map((_, cellIndex) => {
+                    const value = row[cellIndex] || ''
+                    return (
+                      <td
+                        key={cellIndex}
+                        className={`${TD} ${numeric(value) ? 'text-right tabular-nums' : ''}`}
+                      >
+                        {renderInline(value, `td${key}-${rowIndex}-${cellIndex}`)}
+                      </td>
+                    )
+                  })}
                 </tr>
               ))}
             </tbody>

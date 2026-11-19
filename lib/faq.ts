@@ -1,4 +1,5 @@
 import type { ArticleFaq } from './types'
+import { cleanText } from './text'
 
 /**
  * The FAQ is content, not a second hand-written JSON-LD block: it is read out of
@@ -17,7 +18,7 @@ export function extractFaq(body: string): ArticleFaq[] {
   let answer: string[] = []
 
   const flush = () => {
-    if (question && answer.length) faq.push({ question: question.trim(), answer: plain(answer.join(' ')) })
+    if (question && answer.length) faq.push({ question: plain(question), answer: plain(answer.join(' ')) })
     question = null
     answer = []
   }
@@ -60,4 +61,6 @@ export function plain(markdown: string): string {
     .replace(/\*([^*]+)\*/g, '$1')
     .replace(/\s+/g, ' ')
     .trim()
+    .replace(/\s*—\s*/g, ' - ')
+    .replace(/\s*–\s*/g, '-')
 }

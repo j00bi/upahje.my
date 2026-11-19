@@ -7,7 +7,7 @@ export const COPY = {
       'Short, sourced articles about the tech decisions a small business actually makes: what the words mean, what to buy, and how to pay for it without getting burned.',
     whoTitle: 'Who this is for',
     whoBody:
-      'Owners and managers of Malaysian small businesses who are hiring for, or buying, technical work — and the freelancers on the other side of that table.',
+      'Owners and managers of Malaysian small businesses who commission or buy technical work, and the freelancers on the other side of that table.',
     concepts: 'Concept index',
     journal: 'Articles',
     all: 'All',
@@ -30,7 +30,7 @@ export const COPY = {
       'Artikel pendek bersumber tentang keputusan teknologi yang sebenarnya dibuat perniagaan kecil: maksud istilah, apa yang perlu dibeli, dan cara membayar tanpa tertipu.',
     whoTitle: 'Untuk siapa',
     whoBody:
-      'Pemilik dan pengurus perniagaan kecil Malaysia yang mengupah atau membeli kerja teknikal — dan pekerja bebas di seberang meja itu.',
+      'Pemilik dan pengurus perniagaan kecil Malaysia yang mengupah atau membeli kerja teknikal, serta pekerja bebas di seberang meja itu.',
     concepts: 'Indeks konsep',
     journal: 'Artikel',
     all: 'Semua',

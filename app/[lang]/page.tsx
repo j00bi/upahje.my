@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Footer from '@/components/layout/Footer'
-import LanguageSwitch from '@/components/articles/LanguageSwitch'
+import TopBar from '@/components/layout/TopBar'
 import { copyFor } from '@/lib/copy'
 import {
   ARTICLE_CATEGORIES,
@@ -15,10 +15,10 @@ import { SITE_NAME, absolute, languagesFor, social } from '@/lib/seo'
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const copy = copyFor(params.lang)
   return {
-    title: `${SITE_NAME} — ${copy.tagline}`,
+    title: `${SITE_NAME} - ${copy.tagline}`,
     description: copy.intro,
     alternates: { canonical: absolute(`/${params.lang}`), languages: languagesFor('') },
-    ...social(params.lang, `/${params.lang}`, `${SITE_NAME} — ${copy.tagline}`, copy.intro),
+    ...social(params.lang, `/${params.lang}`, `${SITE_NAME} - ${copy.tagline}`, copy.intro),
   }
 }
 
@@ -34,16 +34,10 @@ export default function Hub({ params }: { params: { lang: string } }) {
   const total = publishedArticles('en').length + publishedArticles('ms').length
 
   return (
-    <div className="min-h-screen bg-canvas">
-      <header className="border-b border-neutral-200/70 bg-canvas-soft">
+    <div className="ui-canvas min-h-screen">
+      <TopBar lang={lang} otherHref={`/${lang === 'en' ? 'ms' : 'en'}`} />
+      <header className="border-b" style={{ borderColor: 'var(--ui-rule)' }}>
         <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 sm:py-14">
-          <div className="flex flex-wrap items-start justify-between gap-4">
-            <p className="section-label text-emerald-700">{copy.site}</p>
-            <div className="flex items-center gap-3">
-              <span className="text-xs text-mute">{copy.langSwitch}</span>
-              <LanguageSwitch lang={lang} hrefs={{ en: '/en', ms: '/ms' }} />
-            </div>
-          </div>
           <h1 className="font-display-xl mt-4 max-w-3xl text-ink">{copy.tagline}</h1>
           <p className="mt-5 max-w-2xl text-[17px] leading-8 text-body">{copy.intro}</p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -51,7 +45,7 @@ export default function Hub({ params }: { params: { lang: string } }) {
               href={`/${lang}/articles`}
               className="inline-flex items-center justify-center rounded-pill bg-emerald-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-emerald-800"
             >
-              {copy.journal} →
+              {copy.journal}
             </Link>
           </div>
         </div>
@@ -82,7 +76,7 @@ export default function Hub({ params }: { params: { lang: string } }) {
                     href={`/${lang}/articles/category/${category.slug}`}
                     className="text-sm font-semibold text-emerald-700 hover:text-emerald-800"
                   >
-                    {categoryLabel(category.slug, lang)} →
+                    {categoryLabel(category.slug, lang)}
                   </Link>
                 </div>
                 <div className="mt-4 grid gap-6 sm:grid-cols-2">

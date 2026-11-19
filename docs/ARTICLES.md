@@ -98,6 +98,30 @@ Next requires `<html>` in the root layout, which has no language parameter, so
 properly means multiple root layouts (moving every route into a group) — do not
 "fix" it by moving routes without checking the marketplace surface first.
 
+## Malay register lint
+
+`npm run articles:check` lints every `content/articles/ms/**` file for
+Indonesian-leaning forms before the build: `bisa`, `uang`, `gratis`, `kantor`,
+`perusahaan`, `manajemen`, `karyawan`, `daring`, `luring`, `unduh`, `unggah`,
+`ponsel`, `gawai` (device usage), `izin`, `karena`, `aktifitas`, `kualitas`,
+`universitas`, `realitas`, `manapun`, `kapanpun`, `siapapun`, the relative
+pronoun `yang mana`, and `adalah merupakan`.
+
+Each hit prints `file:line: "word" -> "suggested"` and the command exits
+non-zero. The list lives in `tools/ms-lint-words.mjs`; grow that file, not the
+checker. A word that is correct in a specific line can be escaped inline:
+
+```markdown
+Pesta Gawai is a festival. <!-- ms-lint: allow -->
+```
+
+`sudah` and `sedang` are correct BM and are never flagged. The command:
+
+```bash
+npm run articles:check            # content/articles
+npm run articles:check -- --fixtures
+```
+
 ## Deployment identity (Vercel blocks unknown committers)
 
 Vercel only deploys commits authored by a verified identity on the project. A

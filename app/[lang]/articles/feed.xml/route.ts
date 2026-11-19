@@ -31,7 +31,7 @@ export function GET(_request: Request, { params }: { params: { lang: string } })
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xml:lang="${lang === 'ms' ? 'ms-MY' : 'en-MY'}">
   <channel>
-    <title>${SITE_NAME} — ${lang === 'ms' ? 'Artikel' : 'Articles'}</title>
+    <title>${SITE_NAME} - ${lang === 'ms' ? 'Artikel' : 'Articles'}</title>
     <link>${home}</link>
     <description>${lang === 'ms' ? 'Jawapan mudah tentang teknologi untuk perniagaan kecil Malaysia.' : 'Plain answers about technology for Malaysian small businesses.'}</description>
     <language>${lang === 'ms' ? 'ms-MY' : 'en-MY'}</language>

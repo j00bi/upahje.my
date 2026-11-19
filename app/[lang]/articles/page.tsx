@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Footer from '@/components/layout/Footer'
 import ArticleCard from '@/components/articles/ArticleCard'
 import CategoryNav from '@/components/articles/CategoryNav'
-import LanguageSwitch from '@/components/articles/LanguageSwitch'
+import TopBar from '@/components/layout/TopBar'
 import Pagination from '@/components/articles/Pagination'
 import { copyFor } from '@/lib/copy'
 import { articlePageCount, articlesForPage } from '@/lib/articles.mjs'
@@ -11,10 +11,10 @@ import { SITE_NAME, absolute, languagesFor, social } from '@/lib/seo'
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const copy = copyFor(params.lang)
   return {
-    title: `${copy.journal} — ${SITE_NAME}`,
+    title: `${copy.journal} - ${SITE_NAME}`,
     description: copy.intro,
     alternates: { canonical: absolute(`/${params.lang}/articles`), languages: languagesFor('/articles') },
-    ...social(params.lang, `/${params.lang}/articles`, `${copy.journal} — ${SITE_NAME}`, copy.intro),
+    ...social(params.lang, `/${params.lang}/articles`, `${copy.journal} - ${SITE_NAME}`, copy.intro),
   }
 }
 
@@ -25,13 +25,10 @@ export default function ArticlesIndex({ params }: { params: { lang: string } }) 
   const pages = articlePageCount(lang)
 
   return (
-    <div className="min-h-screen bg-canvas">
-      <header className="border-b border-neutral-200/70 bg-canvas-soft">
+    <div className="ui-canvas min-h-screen">
+      <TopBar lang={lang} otherHref={`/${lang === 'en' ? 'ms' : 'en'}/articles`} />
+      <header className="border-b" style={{ borderColor: 'var(--ui-rule)' }}>
         <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
-          <div className="flex flex-wrap items-start justify-between gap-4">
-            <p className="section-label text-emerald-700">{copy.site}</p>
-            <LanguageSwitch lang={lang} hrefs={{ en: '/en/articles', ms: '/ms/articles' }} />
-          </div>
           <h1 className="font-display-xl mt-4 text-ink">{copy.journal}</h1>
           <p className="mt-4 max-w-2xl text-[17px] leading-8 text-body">{copy.intro}</p>
           <div className="mt-8">
