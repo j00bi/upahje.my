@@ -56,7 +56,7 @@ API model tertutup ialah API yang anda boleh panggil, tetapi modelnya tidak bole
 
 Setakat 19 November 2026, katalog Mistral menyenaraikan ketiga-tiga bentuk lesen ini. Mistral Small 4 dan model Ministral 3 berada di bawah Apache 2.0, Z.ai GLM 5.3 dan DeepSeek V4.1 Flash di bawah MIT, dan Mistral Large 4 di bawah "Mistral Ecosystem Open Weight License" yang khusus ([dokumentasi Mistral, disemak 19 Nov 2026](https://docs.mistral.ai/models)). Pembekal tertutup pula menerbitkan katalog model dan kadar, bukan model weights ([katalog model OpenAI, disemak 19 Nov 2026](https://developers.openai.com/api/docs/models)).
 
-## Patut mula dengan yang mana satu?
+## Patut mula dengan model mana?
 
 Bayaran ikut panggilan tidak dikenakan apabila tiada penggunaan. Server pula menelan kos setiap bulan walaupun tiada siapa menggunakannya. Sebab itulah API tertutup lebih murah untuk permulaan kebanyakan perniagaan kecil. Model terbuka hanya menang apabila penggunaan bulanan cukup tinggi untuk melebihi kos mesin, dan ada orang di pihak anda yang tahu menjalankannya. Bagi kebanyakan PKS Malaysia, syarat kedua itulah yang menentukan.
 

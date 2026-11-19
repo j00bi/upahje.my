@@ -14,6 +14,7 @@
 | 8 | "BlueAura describes a one-time implementation fee without a number." | https://www.blueaura.com.my/blog/2026-06-20-ai-automation-cost-smes-malaysia-asean/ | BlueAura Technology | 2026-11-19 | source: Table 2 publisher page, implementation fee described but not priced |
 | 9 | "The one build price that names integration work as part of the deliverable is a 3 to 5 workflow project from RM4,000." | https://kodesme.klyihao.com/ | KodeSME | 2026-11-19 | source: Table 1 row 2 |
 | 10 | "The global marketplaces are unmeasured here: Upwork returns HTTP 403 with a Cloudflare block, Fiverr returns a bot challenge, Jobstreet returns a Cloudflare interstitial, and Indeed and Maukerja render their listings only in JavaScript." | - | our measurement, this machine | 2026-11-19 | source: collection log recorded each HTTP response on 19 November 2026 |
+| 12 | "Four Malaysian studios, one independent practitioner and one freelance profile: 30 published prices for automation and integration work, checked 19 November 2026 except one page read on 27 October 2026." | - | - | - | estimate: scan count, four studio price lists (KodeSME, Nixlab, Autoflow, BlueAura), one independent practitioner (Pang Jun Han), one freelance profile (NG Jack Sen on freelancing.my) |
 | 11 | "Several pages carry no publication date, so the row date is the day the price was read, not the day it was published." | - | - | - | estimate: our observation of the six pages, each row marked "page undated" where applicable |
 
 ## Sections
