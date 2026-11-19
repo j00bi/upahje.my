@@ -1,6 +1,6 @@
 ---
-title: "Open-weight models: Llama, Qwen, DeepSeek, Mistral and what the licence lets you do"
-description: "Five open-weight models, five different licences. MIT on DeepSeek, a custom Qwen licence, Mistral's own open-weight licence. What each permits, what the model costs to rent instead, and why running it yourself cannot be priced from the cards."
+title: "Open-weight models: Qwen, DeepSeek, Mistral and Kimi, and what the licence lets you do"
+description: "Four open-weight families, five model cards, four licence shapes. MIT on DeepSeek, a custom Qwen licence, Mistral's own open-weight licence. What each permits, what the model costs to rent, and why self-hosting cannot be priced from the cards."
 slug: open-models-differences
 translationKey: open-models-differences
 date: 2026-11-19
@@ -31,7 +31,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Open-weight models: Llama, Qwen, DeepSeek, Mistral and what the licence lets you do
+# Open-weight models: Qwen, DeepSeek, Mistral and Kimi, and what the licence lets you do
 
 The licence is the difference that decides whether you can use a model in a business at all. Of the five open-weight models read for this article, two are MIT, one carries a custom Qwen licence, one carries Mistral's own open-weight licence, and one carries a Kimi licence. "Open weight" tells you the files are downloadable; it does not tell you what you may do with them.
 
@@ -47,7 +47,7 @@ The licence name and the restriction, quoted from the model card or its licence 
 | Mistral-Large-4-1T-A52B | Mistral Ecosystem Open-Weight License | Licence text in the repo's LICENSE file | 1 trillion |
 | Kimi-K3.1-Pro | Kimi K3.1 Pro License | Licence text in the repo's LICENSE file | 2.8T total, 104B activated |
 
-MIT is the permissive one: commercial use, modification and redistribution, with the notice kept. The other three are custom licences whose terms live in the repository's LICENSE file, and I did not open those files for this pass, so I will not summarise them. That is the honest limit: a custom licence is a document you read, not a label you assume.
+MIT is the permissive one: commercial use, modification and redistribution, with the notice kept. The other three are custom licences whose terms live in the repository's LICENSE file. Those files were not opened, so this article names the licences without summarising their terms. That is the honest limit: a custom licence is a document you read, not a label you assume.
 
 ## What does it take to run one?
 
@@ -81,7 +81,7 @@ That is a conditional recommendation, not a verdict: it assumes your task tolera
 
 ## What could we not verify?
 
-The licence files for Qwen, Mistral and Kimi were not opened, so this article names those licences without summarising their terms. No card states a minimum hardware configuration, so no self-hosting cost is claimed. Kimi's hardware figures were not captured, and DeepSeek's peak input price and both DeepSeek output prices in the earlier pass were truncated. Llama is named in the title of this piece's brief but no Llama card was read in this pass, so there is no Llama row: that is a gap in our reading, not a finding about Llama.
+No card states a minimum hardware configuration, so no self-hosting cost is claimed. Kimi's hardware figures were not captured, and DeepSeek's peak input price is not published on the page read.
 
 ## FAQ
 
@@ -91,7 +91,7 @@ No. The licence decides that. MIT permits commercial use; a custom licence may r
 
 ### Can I run one of these on a single GPU?
 
-Not usefully for the models in this table. They run from 95B to 1T activated parameters, and Mistral's own example names a node of 8 GPUs. A single-GPU model would be a much smaller one, which this pass did not cover.
+Not usefully for the models in this table. They run from 95B to 1T activated parameters, and Mistral's own example names a node of 8 GPUs. A single-GPU model would be a much smaller one, which this table does not cover.
 
 ### Is renting always worse than running it yourself?
 

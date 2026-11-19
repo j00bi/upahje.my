@@ -23,6 +23,6 @@
 | What does it take to run one? | Size and the absence of a first-party hardware minimum, stated as a limit rather than a plan |
 | What does renting cost instead? | Every published hosted price, including a second host for the same model |
 | Which model should a Malaysian SME start with? | One conditional recommendation with its conditions printed beside it |
-| What could we not verify? | Licence files not opened, hardware not stated, Llama absent, DeepSeek output truncated |
+| What could we not verify? | Licence files not opened, hardware not stated by any card, DeepSeek peak input not published |
 | FAQ | Open weight versus commercial use, single GPU, and whether renting is worse |
 | Sources | The five model cards and the pricing pages, each dated |

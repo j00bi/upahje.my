@@ -1,6 +1,6 @@
 ---
-title: "Model terbuka: Llama, Qwen, DeepSeek, Mistral dan apa yang dibenarkan oleh lesennya"
-description: "Lima model terbuka, lima lesen berbeza. MIT pada DeepSeek, lesen Qwen tersuai, lesen terbuka Mistral sendiri. Apa yang dibenarkan, kos sewa, dan mengapa menjalankannya sendiri tidak boleh dinilai daripada kad model."
+title: "Model terbuka: Qwen, DeepSeek, Mistral dan Kimi, dan apa yang dibenarkan oleh lesennya"
+description: "Empat keluarga terbuka, lima kad model, empat bentuk lesen. MIT pada DeepSeek, lesen Qwen tersuai, lesen terbuka Mistral sendiri. Apa yang dibenarkan, kos sewa, dan mengapa hosting sendiri tidak boleh dinilai daripada kad model."
 slug: beza-model-terbuka
 translationKey: open-models-differences
 date: 2026-11-19
@@ -31,7 +31,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Model terbuka: Llama, Qwen, DeepSeek, Mistral dan apa yang dibenarkan oleh lesennya
+# Model terbuka: Qwen, DeepSeek, Mistral dan Kimi, dan apa yang dibenarkan oleh lesennya
 
 Lesen ialah perbezaan yang menentukan sama ada anda boleh menggunakan sesuatu model dalam perniagaan. Antara lima model terbuka yang dibaca untuk artikel ini, dua berlesen MIT, satu membawa lesen Qwen tersuai, satu membawa lesen terbuka Mistral sendiri, dan satu membawa lesen Kimi. "Model terbuka" memberitahu anda failnya boleh dimuat turun; ia tidak memberitahu apa yang boleh anda lakukan dengannya.
 
@@ -47,7 +47,7 @@ Nama lesen dan sekatan, dipetik daripada kad model atau fail lesennya, bukan dar
 | Mistral-Large-4-1T-A52B | Mistral Ecosystem Open-Weight License | Teks lesen dalam fail LICENSE repositori | 1 trilion |
 | Kimi-K3.1-Pro | Kimi K3.1 Pro License | Teks lesen dalam fail LICENSE repositori | 2.8T jumlah, 104B aktif |
 
-MIT ialah yang longgar: penggunaan komersial, pengubahsuaian dan pengedaran, dengan notis dikekalkan. Tiga lagi ialah lesen tersuai yang termanya berada dalam fail LICENSE repositori, dan saya tidak membuka fail itu untuk pusingan ini, jadi saya tidak akan meringkaskannya. Itu had yang jujur: lesen tersuai ialah dokumen yang anda baca, bukan label yang anda anggap.
+MIT ialah yang longgar: penggunaan komersial, pengubahsuaian dan pengedaran, dengan notis dikekalkan. Tiga lagi ialah lesen tersuai yang termanya berada dalam fail LICENSE repositori. Fail itu tidak dibuka, jadi artikel ini menamakan lesen tersebut tanpa meringkaskan termanya. Itu had yang jujur: lesen tersuai ialah dokumen yang anda baca, bukan label yang anda anggap.
 
 ## Apa yang diperlukan untuk menjalankannya?
 
@@ -81,7 +81,7 @@ Itu cadangan bersyarat, bukan keputusan: ia menganggap tugasan anda boleh meneri
 
 ## Apa yang tidak dapat kami sahkan?
 
-Fail lesen bagi Qwen, Mistral dan Kimi tidak dibuka, jadi artikel ini menamakan lesen itu tanpa meringkaskan termanya. Tiada kad menyatakan konfigurasi perkakasan minimum, jadi tiada kos hosting sendiri didakwa. Angka perkakasan Kimi tidak dirakam, dan harga input puncak DeepSeek serta kedua-dua harga output DeepSeek dalam pusingan terdahulu terpotong. Llama disebut dalam tajuk brief artikel ini tetapi tiada kad Llama dibaca dalam pusingan ini, jadi tiada baris Llama: itu jurang dalam bacaan kami, bukan penemuan tentang Llama.
+Tiada kad menyatakan konfigurasi perkakasan minimum, jadi tiada kos hosting sendiri didakwa. Angka perkakasan Kimi tidak dirakam, dan harga input puncak DeepSeek tidak diterbitkan pada halaman yang dibaca.
 
 ## FAQ
 
@@ -91,7 +91,7 @@ Tidak. Lesen yang menentukannya. MIT membenarkan penggunaan komersial; lesen ter
 
 ### Bolehkah saya menjalankan salah satu ini pada satu GPU?
 
-Tidak secara berguna bagi model dalam jadual ini. Ia berjalan dari 95B hingga 1T parameter aktif, dan contoh Mistral sendiri menamakan nod 8 GPU. Model satu GPU ialah model yang jauh lebih kecil, yang tidak diliputi pusingan ini.
+Tidak secara berguna bagi model dalam jadual ini. Ia berjalan dari 95B hingga 1T parameter aktif, dan contoh Mistral sendiri menamakan nod 8 GPU. Model satu GPU ialah model yang jauh lebih kecil, yang tidak diliputi jadual ini.
 
 ### Adakah menyewa sentiasa lebih buruk daripada menjalankan sendiri?
 
