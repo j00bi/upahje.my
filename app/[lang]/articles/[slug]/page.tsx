@@ -77,8 +77,8 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
   return (
     <div className="ui-canvas min-h-screen">
       <TopBar lang={article.lang} otherHref={otherHref} />
-      <main id="main" className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">
-        <nav aria-label="Breadcrumb" className="ui-mono text-[12px]" style={{ color: 'var(--ui-muted)' }}>
+      <main id="main" className="mx-auto max-w-6xl px-4 sm:px-6" style={{ paddingTop: 'var(--space-top)', paddingBottom: 'var(--space-section)' }}>
+        <nav aria-label="Breadcrumb" className="text-[13px]" style={{ color: 'var(--ui-muted)' }}>
           <Link href={`/${article.lang}/articles`} className="ui-link">Articles</Link>
           <span aria-hidden> / </span>
           <Link href={`/${article.lang}/articles/category/${article.category}`} className="ui-link">
@@ -86,13 +86,13 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
           </Link>
         </nav>
 
-        <header className="mt-6">
-          <h1 className="text-3xl leading-[1.1] tracking-tight md:text-4xl" style={{ color: 'var(--ui-ink)' }}>
+        <header style={{ marginTop: 'var(--space-sources)' }}>
+          <h1 className="text-3xl leading-[1.12] tracking-[-0.02em] md:text-[36px]" style={{ color: 'var(--ui-ink)' }}>
             {cleanText(article.title)}
           </h1>
           <div
-            className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px]"
-            style={{ color: 'var(--ui-muted)' }}
+            className="flex flex-wrap items-center gap-x-3 gap-y-1 text-[13px]"
+            style={{ color: 'var(--ui-muted)', marginTop: 'var(--space-title-meta)' }}
           >
             <span>{cleanText(article.author)}</span>
             <span className="sm:border-l sm:pl-3" style={{ borderColor: 'var(--ui-rule)' }}>
@@ -109,8 +109,8 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
           </div>
         </header>
 
-        <div className="mt-10 lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-12">
-          <aside className="hidden lg:block">
+        <div className="lg:grid lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-12" style={{ marginTop: 'var(--space-first-h2)' }}>
+          <aside className="article-toc hidden lg:block">
             <div className="sticky" style={{ top: '88px' }}>
               <ArticleToc items={headings} />
             </div>
@@ -118,8 +118,8 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
 
           <div className="min-w-0">
             {short && (
-              <div className="mb-10 pl-5" style={{ borderLeft: '2px solid var(--ui-accent)' }}>
-                <p className="ui-mono text-[11px] uppercase tracking-[0.14em]" style={{ color: 'var(--ui-muted)' }}>
+              <div className="pl-5" style={{ borderLeft: '2px solid var(--ui-accent)', marginBottom: 'var(--space-section)' }}>
+                <p className="text-[11px] uppercase tracking-[0.08em]" style={{ color: 'var(--ui-muted)' }}>
                   Short answer
                 </p>
                 <p className="mt-2 text-[17px] leading-[1.7]" style={{ color: 'var(--ui-body)' }}>
@@ -130,17 +130,17 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
 
             <ApiFlowFigure />
 
-            <div className="max-w-[68ch]">
+            <div className="article-body max-w-[68ch]">
               <Markdown source={withoutFaq} />
             </div>
 
-            <div className="max-w-[68ch]">
+            <div className="max-w-[68ch]" style={{ marginTop: 'var(--space-section)' }}>
               <FaqList items={faq} />
             </div>
 
             {article.sources.length > 0 && (
-              <section aria-labelledby="sources" className="mt-14 max-w-[68ch]">
-                <h2 id="sources" className="ui-mono text-[11px] uppercase tracking-[0.14em]" style={{ color: 'var(--ui-muted)' }}>
+              <section aria-labelledby="sources" className="max-w-[68ch]" style={{ marginTop: 'var(--space-sources)' }}>
+                <h2 id="sources" className="text-[13px] font-semibold" style={{ color: 'var(--ui-ink)' }}>
                   Sources
                 </h2>
                 <ol className="mt-4 space-y-3 text-[13px] leading-6">
@@ -149,8 +149,8 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
                       <a
                         href={`#source-${index + 1}`}
                         aria-label={`Source ${index + 1}`}
-                        className="ui-mono shrink-0 tabular-nums"
-                        style={{ color: 'var(--ui-accent)' }}
+                        className="shrink-0 tabular-nums"
+                        style={{ color: 'var(--ui-ink)' }}
                       >
                         {index + 1}
                       </a>
@@ -166,7 +166,7 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
                         </a>
                         <span className="block break-all" style={{ color: 'var(--ui-muted)' }}>{source.url}</span>
                         {source.checked && (
-                          <span className="ui-mono mt-1 block text-[11px]" style={{ color: 'var(--ui-muted)' }}>
+                          <span className="mt-1 block text-[13px] tabular-nums" style={{ color: 'var(--ui-muted)' }}>
                             checked {source.checked}
                           </span>
                         )}
@@ -177,7 +177,7 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
               </section>
             )}
 
-            <footer className="mt-14 flex flex-wrap items-center justify-between gap-4 border-t pt-6 text-[13px]" style={{ borderColor: 'var(--ui-rule)', color: 'var(--ui-muted)' }}>
+            <footer className="flex flex-wrap items-center justify-between gap-4 border-t pt-6 text-[13px]" style={{ borderColor: 'var(--ui-rule)', color: 'var(--ui-muted)', marginTop: 'var(--space-section)' }}>
               <span>
                 Last updated <time dateTime={isoDate(article.updated || article.date)}>{formatDate(article.updated || article.date, article.lang)}</time>
               </span>

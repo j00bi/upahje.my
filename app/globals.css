@@ -561,39 +561,44 @@ body {
 
 /* ===========================================
    Article surface tokens
-   Light default, dark via prefers-color-scheme.
+   Light default; dark is a reader choice set as data-theme before paint.
    One accent (brand emerald), one neutral family.
    =========================================== */
 
 :root {
+  /* Light is the default, whatever the OS says. Dark is chosen by the reader. */
   --ui-canvas: #fbfaf7;
-  --ui-surface: #fdfdfb;
+  --ui-surface: #fdfcf9;
   --ui-ink: #14160f;
   --ui-body: #3f423c;
   --ui-muted: #63665e;
-  --ui-rule: rgba(20, 22, 15, 0.14);
+  --ui-rule: rgba(20, 22, 15, 0.12);
   --ui-accent: #1a6b2e;
-  --ui-accent-soft: #e8f5e0;
   --ui-topbar: color-mix(in oklab, var(--ui-canvas) 92%, transparent);
   --ui-font: Inter, system-ui, -apple-system, sans-serif;
   --ui-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --ui-ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* The only vertical rhythm numbers in the article. One 4px base. */
+  --space-top: 48px;
+  --space-title-meta: 32px;
+  --space-first-h2: 40px;
+  --space-section: 56px;
+  --space-sources: 24px;
+
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ui-canvas: #12140f;
-    --ui-surface: #171a14;
-    --ui-ink: #e9e7df;
-    --ui-body: #c8c6bd;
-    --ui-muted: #9b9a90;
-    --ui-rule: rgba(233, 231, 223, 0.16);
-    --ui-accent: #9fe870;
-    --ui-accent-soft: #1c2a18;
-    --ui-topbar: color-mix(in oklab, var(--ui-canvas) 92%, transparent);
-    color-scheme: dark;
-  }
+:root[data-theme='dark'] {
+  --ui-canvas: #12140f;
+  --ui-surface: #171a14;
+  --ui-ink: #e9e7df;
+  --ui-body: #c8c6bd;
+  --ui-muted: #9b9a90;
+  --ui-rule: rgba(233, 231, 223, 0.14);
+  --ui-accent: #9fe870;
+  --ui-topbar: color-mix(in oklab, var(--ui-canvas) 92%, transparent);
+  color-scheme: dark;
 }
 
 .ui-canvas {
@@ -625,6 +630,42 @@ body {
 .ui-mono {
   font-family: var(--ui-mono);
   font-variant-ligatures: none;
+}
+
+.article-body h2:first-of-type {
+  margin-top: var(--space-first-h2);
+}
+
+@media print {
+  .ui-topbar,
+  .article-toc,
+  .no-print {
+    display: none !important;
+  }
+  :root,
+  :root[data-theme='dark'] {
+    --ui-canvas: #ffffff;
+    --ui-surface: #ffffff;
+    --ui-ink: #000000;
+    --ui-body: #000000;
+    --ui-muted: #333333;
+    --ui-rule: #cccccc;
+    --ui-accent: #000000;
+  }
+  body,
+  .ui-canvas {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  a,
+  a:visited {
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
+  .article-body p,
+  .article-body li {
+    break-inside: avoid;
+  }
 }
 
 .ui-focus:focus-visible,
@@ -669,4 +710,12 @@ summary,
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+.theme-toggle {
+  display: none;
+}
+
+:root[data-js='on'] .theme-toggle {
+  display: inline-flex;
 }

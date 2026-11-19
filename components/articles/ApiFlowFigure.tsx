@@ -5,7 +5,7 @@
  */
 export default function ApiFlowFigure() {
   return (
-    <figure className="my-10" style={{ maxWidth: '360px' }}>
+    <figure style={{ maxWidth: '360px', margin: '0 0 var(--space-section)' }}>
       <svg
         viewBox="0 0 360 120"
         width="360"

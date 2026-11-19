@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ThemeToggle from '@/components/layout/ThemeToggle'
 import { ARTICLE_CATEGORIES, categoryLabel, LANGUAGES, languageByCode } from '@/lib/articles.mjs'
 
 /**
@@ -21,7 +22,7 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
             href={active ? `/${language.code}` : otherHref}
             hrefLang={language.htmlLang}
             aria-current={active ? 'true' : undefined}
-            className="ui-mono inline-flex h-full min-w-[44px] items-center justify-center px-2 text-[11px] uppercase tracking-[0.08em]"
+            className="inline-flex h-full min-w-[44px] items-center justify-center px-2 text-[13px] font-medium"
             style={{
               color: active ? 'var(--ui-ink)' : 'var(--ui-muted)',
               fontWeight: active ? 700 : 500,
@@ -59,6 +60,7 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
             </Link>
           ))}
           {languageSwitch}
+          <ThemeToggle />
           <Link href={`/${lang}/articles`} className="ui-link text-[13px] font-semibold" style={{ color: 'var(--ui-ink)' }}>
             Articles
           </Link>
@@ -93,13 +95,11 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
               <Link href={`/${lang}/articles`} className="ui-link rounded-[8px] px-2 py-3 text-[14px] font-semibold" style={{ color: 'var(--ui-ink)' }}>
                 Articles
               </Link>
-              <div className="mt-2 flex items-center justify-between border-t pt-3" style={{ borderColor: 'var(--ui-rule)' }}>
-                <span className="ui-mono text-[11px] uppercase tracking-[0.08em]" style={{ color: 'var(--ui-muted)' }}>
-                  {otherLanguage.code}
-                </span>
+              <div className="mt-2 flex items-center justify-between gap-3 border-t pt-3" style={{ borderColor: 'var(--ui-rule)' }}>
                 <Link href={otherHref} hrefLang={otherLanguage.htmlLang} className="ui-link px-2 py-3 text-[14px] font-semibold">
                   {otherLanguage.native}
                 </Link>
+                <ThemeToggle />
               </div>
             </nav>
           </div>

@@ -16,21 +16,21 @@ import { anchor } from './article-view'
  * next-mdx-remote + @mdx-js/react — until then, keep bodies to this subset.
  */
 
-const P = 'mb-5 text-[17px] leading-[1.7] text-[color:var(--ui-body)]'
-const H2 = 'mt-12 mb-3 text-xl font-semibold leading-7 text-[color:var(--ui-ink)] scroll-mt-24'
-const H3 = 'mt-8 mb-2 text-[16px] font-semibold text-[color:var(--ui-ink)]'
-const UL = 'mb-6 list-disc space-y-2 pl-6 text-[17px] leading-[1.7] text-[color:var(--ui-body)] marker:text-[color:var(--ui-muted)]'
-const OL = 'mb-6 list-decimal space-y-2 pl-6 text-[17px] leading-[1.7] text-[color:var(--ui-body)] marker:text-[color:var(--ui-muted)]'
+const P = 'mb-[1.15em] text-[17px] leading-[1.65] text-[color:var(--ui-body)]'
+const H2 = 'mt-14 mb-3 text-[21px] font-semibold leading-[1.3] tracking-[-0.01em] text-[color:var(--ui-ink)] scroll-mt-24'
+const H3 = 'mt-8 mb-2 text-[17px] font-semibold leading-6 text-[color:var(--ui-ink)]'
+const UL = 'mb-6 list-disc space-y-2 pl-6 text-[17px] leading-[1.65] text-[color:var(--ui-body)] marker:text-[color:var(--ui-muted)]'
+const OL = 'mb-6 list-decimal space-y-2 pl-6 text-[17px] leading-[1.65] text-[color:var(--ui-body)] marker:text-[color:var(--ui-muted)]'
 const QUOTE =
-  'my-8 border-l-2 border-[color:var(--ui-accent)] pl-5 text-[17px] leading-[1.7] text-[color:var(--ui-ink)]'
+  'my-6 border-l-2 border-[color:var(--ui-rule)] pl-5 text-[17px] leading-[1.65] text-[color:var(--ui-ink)]'
 const INLINE_CODE =
-  'rounded bg-[color:var(--ui-accent-soft)] px-1.5 py-0.5 font-mono text-[0.9em] text-[color:var(--ui-ink)]'
+  'rounded px-1.5 py-0.5 font-mono text-[0.9em] text-[color:var(--ui-ink)]'
 const LINK =
   'font-medium text-[color:var(--ui-accent)] underline decoration-1 underline-offset-2 hover:opacity-80'
 const PRE =
   'mb-6 overflow-x-auto rounded-[10px] border border-[color:var(--ui-rule)] bg-[color:var(--ui-surface)] p-4 text-sm leading-6 text-[color:var(--ui-ink)]'
 const TABLE = 'w-full border-collapse text-left text-[15px] leading-6'
-const TH = 'ui-mono px-3 py-3 text-[12px] font-semibold uppercase tracking-[0.08em] text-[color:var(--ui-muted)]'
+const TH = 'px-3 py-3 text-[11px] font-semibold uppercase tracking-[0.08em] text-[color:var(--ui-muted)]'
 const TD = 'px-3 py-3 align-top text-[color:var(--ui-body)]'
 
 const TOKEN = /(\*\*[^*]+\*\*|\*[^*]+\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/
@@ -58,7 +58,7 @@ function renderInline(text: string, keyPrefix: string): ReactNode[] {
     }
     if (part.startsWith('**') && part.endsWith('**')) return <strong key={key} className="font-semibold text-ink">{part.slice(2, -2)}</strong>
     if (part.startsWith('*') && part.endsWith('*')) return <em key={key}>{part.slice(1, -1)}</em>
-    if (part.startsWith('`') && part.endsWith('`')) return <code key={key} className={INLINE_CODE}>{part.slice(1, -1)}</code>
+    if (part.startsWith('`') && part.endsWith('`')) return <code key={key} className={INLINE_CODE} style={{ background: 'color-mix(in oklab, var(--ui-ink) 6%, transparent)' }}>{part.slice(1, -1)}</code>
     return <span key={key}>{part}</span>
   })
 }
@@ -177,7 +177,7 @@ export function Markdown({ source }: { source: string }): ReactNode {
       }
       const numeric = (value: string) => /^\s*(?:RM|MYR|USD|\$)?\s*\d[\d.,]*\s*(?:%|px|ms|s|GB|MB)?\s*$/i.test(value)
       blocks.push(
-        <div key={key++} className="my-8 max-w-full overflow-x-auto">
+        <div key={key++} className="my-6 max-w-full overflow-x-auto">
           <table
             className={TABLE}
             style={{ borderTop: '1px solid var(--ui-rule)', borderBottom: '1px solid var(--ui-rule)' }}
@@ -186,7 +186,7 @@ export function Markdown({ source }: { source: string }): ReactNode {
             <thead>
               <tr>
                 {header.map((cell, index) => (
-                  <th key={index} scope="col" className={TH}>
+                  <th key={index} scope="col" className={TH} style={{ fontFamily: 'var(--ui-font)' }}>
                     {renderInline(cell, `th${key}-${index}`)}
                   </th>
                 ))}

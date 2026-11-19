@@ -37,8 +37,14 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="ui-canvas">
+    <html lang="en" className="ui-canvas" suppressHydrationWarning>
       <body className="ui-canvas">
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{document.documentElement.dataset.js='on';if(localStorage.getItem('upahje-theme')==='dark'){document.documentElement.dataset.theme='dark'}}catch(e){}",
+          }}
+        />
         <main>{children}</main>
       </body>
     </html>

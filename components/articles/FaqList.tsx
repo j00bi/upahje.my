@@ -8,8 +8,8 @@ import type { ArticleFaq } from '@/lib/types'
 export default function FaqList({ items }: { items: ArticleFaq[] }) {
   if (!items.length) return null
   return (
-    <section aria-labelledby="faq" className="mt-14">
-      <h2 id="faq" className="ui-mono text-[11px] uppercase tracking-[0.14em]" style={{ color: 'var(--ui-muted)' }}>
+    <section aria-labelledby="faq">
+      <h2 id="faq" className="text-[13px] font-semibold" style={{ color: 'var(--ui-ink)' }}>
         FAQ
       </h2>
       <div className="mt-4">
