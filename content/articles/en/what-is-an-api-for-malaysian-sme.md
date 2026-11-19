@@ -87,6 +87,11 @@ Settle three things in writing before you pay.
 2. Failure behaviour. Retry, queue, or alert. Silence is not acceptable for anything involving money or orders.
 3. Exit. You get the code and a working test environment, not a running system on someone else's account.
 
+**Read next**
+
+[Open or closed models, and which to start with](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
+
+[More on APIs and models](https://upahje.my/en/articles/category/definitions)
 ## FAQ
 
 ### Do I need my own server to use an API?
@@ -105,10 +110,3 @@ The integration stops working until it is updated. The window belongs to the ven
 
 A single read-only endpoint takes a competent developer about a day. Anything that moves money or writes data takes a week, most of it spent on what happens when calls fail. No published dataset for Malaysian timelines exists, so these are working estimates.
 
----
-
-**Read next**
-
-[the definitions pillar](https://upahje.my/en/articles/category/definitions)
-
-[open or closed models](https://upahje.my/en/articles/open-vs-closed-models-malaysia)

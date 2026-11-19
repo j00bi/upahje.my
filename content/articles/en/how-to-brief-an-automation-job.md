@@ -91,6 +91,11 @@ Ask each freelancer to price the same five sections and to mark anything exclude
 
 Then ask both to walk you through the acceptance test. The one who can describe how it runs on your data has understood the job. The one who cannot has quoted a description.
 
+**Read next**
+
+[What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
+
+[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 ## FAQ
 
 ### Should I write the brief myself or let the freelancer propose one?
@@ -105,10 +110,3 @@ Get one real example first. Export the report or the row you want reproduced, an
 
 Not always, but for this kind of work it usually is, because the scope can be written down. Hourly suits work where the scope genuinely cannot be known in advance, such as investigating why a third-party service fails. If the brief is clear and the quote is still hourly only, ask what part is unknown.
 
----
-
-**Read next**
-
-[the buying guides pillar](https://upahje.my/en/articles/category/buying-guides)
-
-[what an API costs to wire up](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)

@@ -118,6 +118,9 @@ Ia memberitahu apa yang klien bajetkan secara awam di satu platform dalam satu s
 
 Dua lagi had. Dua baris panggilan jualan ialah bajet yang diiklankan, yang boleh diturunkan klien selepas melihat sambutan. Dan tiada senarai menyatakan jam, jadi mana-mana angka sejam di sini ialah kiraan atas tekaan. Jika anda memerlukan angka sejam, tanya klien sebelum memberi sebut harga, kerana senarai itu tidak akan memberikannya.
 
+**Baca seterusnya**
+
+[Lagi tentang pendapatan sampingan](https://upahje.my/ms/articles/category/side-income)
 ## FAQ
 
 ### Cukupkah satu platform untuk menilai keseluruhan pasaran?
@@ -132,10 +135,3 @@ Kerana bajet yang dinyatakan dalam senarai ialah apa yang klien kata akan dibaya
 
 Boleh, dan senarai itu menunjukkan ia biasa: peranan video RM2,500 menggabungkan merakam, menyunting dan muncul di hadapan kamera. Kemahiran kedua menaikkan harga lebih cepat daripada melakukan yang pertama lebih lama.
 
----
-
-**Baca seterusnya**
-
-[ruang pendapatan sampingan](https://upahje.my/ms/articles/category/side-income)
-
-[ruang definisi](https://upahje.my/ms/articles/category/definitions)

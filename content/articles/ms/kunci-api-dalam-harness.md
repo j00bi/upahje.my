@@ -62,6 +62,11 @@ Batalkan dahulu, kemudian putar, kemudian siasat, mengikut urutan itu. Membatalk
 
 Urutannya lebih penting daripada ketelitiannya. Pasukan yang memutar dahulu dan membatalkan kemudian biasanya terus membayar untuk kunci yang sama.
 
+**Baca seterusnya**
+
+[Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
+
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
 ## FAQ
 
 ### Patutkah saya guna pemboleh ubah persekitaran atau stor credentials harness?
@@ -76,10 +81,3 @@ Boleh, dan anda kehilangan keupayaan untuk mengatakan siapa melakukan apa. Kunci
 
 Itu bergantung pada pembekal, jadi semak pembekal anda daripada menganggap. Kunci tanpa tamat tempoh ialah credentials yang anda mesti ingat untuk diputar, dan kebanyakan pasukan tidak melakukannya. Tetapkan peringatan kalendar jika pembekal tiada tamat tempoh paksa.
 
----
-
-**Baca seterusnya**
-
-[panduan membeli](https://upahje.my/ms/articles/category/buying-guides)
-
-[apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)

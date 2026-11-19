@@ -64,6 +64,11 @@ Tiga arahan, dan anda tidak perlu mempercayai halaman ini untuk menjalankannya.
 2. `ls ~/.dsh/sessions/<folder>/<session>` menunjukkan fail transkrip dan locknya.
 3. `zstd -dc ~/.dsh/sessions/<folder>/<session>/session.v4.jsonl.zstd | head -40` mencetak rekod pertama dalam teks biasa.
 
+**Baca seterusnya**
+
+[Di mana kunci API diletakkan dalam harness, dan di mana ia tidak boleh ada](https://upahje.my/ms/articles/kunci-api-dalam-harness)
+
+[Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
 ## FAQ
 
 ### Bolehkah transkrip itu dibaca oleh manusia?
@@ -78,8 +83,3 @@ Direktori sesi kekal pada cakera bersama transkripnya, jadi fail itu masih ada s
 
 Harness merekodkan `request/header` dan `request/context` bagi setiap step, jadi setiap step ialah permintaan berasingan, bukan satu pertukaran panjang. Apa sebenarnya yang diterima pembekal di dalam permintaan itu tidak diukur oleh halaman ini, dan kami tidak akan menekanya.
 
----
-
-**Baca seterusnya**
-
-[ruang definisi](https://upahje.my/ms/articles/category/definitions)

@@ -87,6 +87,11 @@ Tetapkan tiga perkara secara bertulis sebelum bayaran.
 2. Tingkah laku apabila gagal. Cuba semula, masuk baris gilir, atau beri amaran. Diam sahaja tidak boleh diterima bagi apa-apa yang melibatkan wang atau pesanan.
 3. Jalan keluar. Anda menerima kod dan persekitaran ujian yang berfungsi, bukan sistem yang berjalan pada akaun orang lain.
 
+**Baca seterusnya**
+
+[Model terbuka atau tertutup, dan mana yang patut dimulakan](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)
+
+[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
 ## FAQ
 
 ### Perlu saya ada server sendiri untuk menggunakan API?
@@ -105,10 +110,3 @@ Integrasi berhenti berfungsi sehingga dikemas kini. Tempoh itu ditentukan pembek
 
 Satu endpoint yang membaca sahaja mengambil masa sekitar sehari untuk pembangun yang cekap. Sebarang kerja yang memindahkan wang atau menulis data mengambil masa seminggu, sebahagian besarnya untuk menguji apa yang berlaku apabila panggilan gagal. Tiada data awam tentang tempoh di Malaysia, jadi ini anggaran kerja.
 
----
-
-**Baca seterusnya**
-
-[ruang definisi](https://upahje.my/ms/articles/category/definitions)
-
-[model terbuka atau tertutup](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)

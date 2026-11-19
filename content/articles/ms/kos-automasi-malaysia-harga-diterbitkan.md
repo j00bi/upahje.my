@@ -114,6 +114,11 @@ Tukar kedua-duanya kepada tiga angka yang sama sebelum membandingkan: jumlah kos
 
 Sesi RM400 dan projek RM1,500 kedua-duanya kelihatan kecil berbanding pembinaan RM6,000, dan tiada satu pun boleh dibandingkan sehingga anda bertanya berapa sesi sehingga ia berjalan, berapa bulan retainer yang akan anda bayar, dan faktor mana antara enam di atas yang dikecualikan oleh setiap sebut harga. Tulis jawapannya di sebelah angka daripada tarikh yang sama, dan perbandingan itu berhenti menjadi soal angka mana yang lebih rendah.
 
+**Baca seterusnya**
+
+[Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi)
+
+[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
 ## FAQ
 
 ### Adakah RM60 sejam kadar biasa bagi freelancer automasi Malaysia?
@@ -128,10 +133,3 @@ Kerana ia tidak dapat dibaca dari sini. Upwork memulangkan HTTP 403 dengan sekat
 
 Tidak, dan jadual ini tidak boleh memberitahu anda perkara itu. Ia menyenaraikan harga, penerbit dan tarikh. Ia tidak menyatakan apa-apa tentang kualiti kerja, masa penghantaran, atau sama ada automasi itu masih berjalan setahun kemudian, dan tiada satu pun daripada enam penerbit itu menerbitkan maklumat tersebut.
 
----
-
-**Baca seterusnya**
-
-[panduan membeli](https://upahje.my/ms/articles/category/buying-guides)
-
-[cara menulis brief kerja automasi](https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi)

@@ -108,6 +108,11 @@ Four commands and a filesystem check, and you can audit every number in the tabl
 3. Read the config paths in the table: `$DSH_HOME/profiles`, `~/.claude.json`, `~/.codex/config.toml`, `~/.config/opencode/opencode.jsonc`.
 4. Run `du -sh` on `~/.dsh`, `~/.claude`, `~/.codex` and `~/.config/opencode` for the footprints.
 
+**Read next**
+
+[What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
+
+[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
 ## FAQ
 
 ### Does the ranking change if I care about cost more than 30%?
@@ -118,10 +123,3 @@ Yes, and the table lets you recompute it. Raising provider and cost control to 4
 
 Because a buyer still has to choose this week, and a stated method with a re-run recipe is checkable. The alternative, an unranked list with no weights, hides the same judgement behind prose where nobody can audit it.
 
----
-
-**Read next**
-
-[the buying guides pillar](https://upahje.my/en/articles/category/buying-guides)
-
-[what an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
