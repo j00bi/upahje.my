@@ -5,8 +5,8 @@
 | # | claim | source URL | publisher | checked | basis |
 |---|-------|------------|-----------|---------|-------|
 | 1 | "Published prices for automation work in Malaysia run from RM400 for a simple process build to RM6,000-plus for autonomous task execution." | - | - | - | estimate: scan count, 6 publishers across Table 1 (21 rows) and Table 2 (9 rows) |
-| 2 | "Per project, published prices run from RM400 for a simple process build at Pang Jun Han to RM6,000-plus for autonomous task execution at Autoflow Solutions." | https://pangjunhan.vercel.app/ai-automation | Pang Jun Han | 2026-10-27 | source: Table 1 row 12 for the RM400 floor |
-| 3 | "Per project, published prices run from RM400 for a simple process build at Pang Jun Han to RM6,000-plus for autonomous task execution at Autoflow Solutions." | https://www.autoflow-solutions.com/my/services | Autoflow Solutions | 2026-11-19 | source: Table 1 row 19 for the RM6,000-plus ceiling |
+| 2 | "Per project, published prices run from RM400 for a simple process build at Pang Jun Han" | https://pangjunhan.vercel.app/ai-automation | Pang Jun Han | 2026-10-27 | source: Table 1 row 12 for the RM400 floor |
+| 3 | "RM6,000-plus for autonomous task execution at Autoflow Solutions" | https://www.autoflow-solutions.com/my/services | Autoflow Solutions | 2026-11-19 | source: Table 1 row 19 for the RM6,000-plus ceiling |
 | 4 | "Workflow automation build, starter, 1 to 2 workflows | RM1,500 (from) | per project | KodeSME | 2026-11-19, page undated" | https://kodesme.klyihao.com/ | KodeSME | 2026-11-19 | source: Table 1 row 1 |
 | 5 | "Workflow automation build, growth, 3 to 5 workflows, dashboard, approval flows | RM4,000 (from) | per project | KodeSME | 2026-11-19, page undated" | https://kodesme.klyihao.com/ | KodeSME | 2026-11-19 | source: Table 1 row 2 |
 | 6 | "Automation care plan, monitoring and one minor automation a month | RM300 (from) | per month | KodeSME | 2026-11-19, page undated" | https://kodesme.klyihao.com/ | KodeSME | 2026-11-19 | source: Table 1 row 3 |

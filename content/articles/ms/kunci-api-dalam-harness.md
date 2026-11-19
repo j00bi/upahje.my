@@ -48,7 +48,7 @@ Empat tempat, dan ia meliputi hampir setiap kebocoran sebenar: mesej sembang, fa
 1. **Mesej sembang.** Menampal kunci ke dalam perbualan menghantarnya kepada pembekal model sebagai sebahagian daripada prompt, dan harness menulis perbualan itu ke cakera. Kunci itu kemudian tinggal dalam transkrip, mungkin dalam sandaran, mungkin dalam tiket yang seseorang buka kemudian.
 2. **Fail yang di-commit.** `.env` dalam repositori ialah kebocoran paling biasa. Walaupun selepas dipadam, nilainya kekal dalam sejarah git, dan tolakan ke repositori awam ialah pendedahan kekal.
 3. **Tangkapan skrin atau log.** Output nyahpepijat yang mencetak keseluruhan pengepala permintaan, atau tangkapan skrin skrin tetapan, membawa kunci itu tanpa sesiapa berniat. Penapisan log ialah tetapan yang wajar disemak sebelum anda berkongsi output dengan kontraktor.
-4. **Kod di sebelah klien.** Apa sahaja yang sampai ke pelayar adalah awam. Kunci dalam JavaScript bahagian hadapan, aplikasi mudah alih, atau halaman statik boleh didapati oleh sesiapa yang membuka alat pembangun, tidak kira bagaimana ia disamarkan.
+4. **Kod di sebelah klien.** Apa sahaja yang sampai ke pelayar bersifat awam. Kunci dalam JavaScript bahagian hadapan, aplikasi mudah alih, atau halaman statik boleh didapati oleh sesiapa yang membuka alat pembangun, tidak kira bagaimana ia disamarkan.
 
 ## Apa yang perlu saya buat apabila kunci bocor?
 

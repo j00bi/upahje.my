@@ -87,7 +87,7 @@ Tiada 5 di luar jejak cakera, dan tiada 3 atau lebih rendah di mana-mana. Bagi p
 
 Claude Code menang pada jejak cakera dan kebolehlanjutan, tetapi terhad pada pembekal.
 
-Pada 116 KB ia pemasangan terkecil antara empat ini dengan beza tiga urutan magnitud, dan skills serta subagent-nya ialah cerita kebolehlanjutan paling lengkap yang kami perhatikan. Baris pembekalnya, "model Anthropic, `--model`", yang menahannya pada 3.70.
+Pada 116 KB ia pemasangan terkecil antara empat ini, kira-kira 550 kali lebih kecil daripada 62 MB OpenCode, dan skills serta subagent-nya ialah cerita kebolehlanjutan paling lengkap yang kami perhatikan. Baris pembekalnya, "model Anthropic, `--model`", yang menahannya pada 3.70.
 
 Codex CLI menang pada MCP, kerana ia satu-satunya antara empat ini yang didokumenkan sebagai klien MCP dan server MCP sekali gus.
 

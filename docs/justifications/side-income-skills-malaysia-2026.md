@@ -4,7 +4,7 @@
 
 | # | claim | source URL | publisher | checked | basis |
 |---|-------|------------|-----------|---------|-------|
-| 1 | "Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing." | - | - | - | estimate: scan count, 12 listings on freelancing.my, five of six candidate skills reaching two listings each |
+| 1 | "Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing." | - | - | - | estimate: scan count, 11 listings on freelancing.my in the five counted bands; the social-media listing is excluded because it is one dated listing plus one hourly rate, not two |
 | 2 | "Video editing | 3 | RM150, RM1,500, RM2,500 | per project | freelancing.my | Oct to Nov 2026" | https://freelancing.my/project/short-form-video-editor-for-tiktok-reels-trial-batch-then-ongoing/ | freelancing.my listing | 2026-11-19 | source: Table 3 rows 1 to 3 |
 | 3 | "Graphic design | 2 | RM300, RM1,100 | per project | freelancing.my | Sep 2026" | https://freelancing.my/project/retail-pos-designs-adhoc/ | freelancing.my listing | 2026-11-19 | source: Table 3 rows 4 and 5 |
 | 4 | "Data entry | 2 | RM50, RM70 | per project | freelancing.my | Sep to Nov 2026" | https://freelancing.my/project/simple-verification-one-off-task/ | freelancing.my listing | 2026-11-19 | source: Table 3 rows 6 and 7 |
