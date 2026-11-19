@@ -25,7 +25,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Agent harnesses ranked: four CLIs we ran on one machine
+# Agent harnesses ranked: four CLIs installed on one machine
 
 DeepSeek Harness scores highest at 4.35 out of 5, OpenCode second at 4.15, Claude Code third at 3.70 and Codex CLI fourth at 3.45. The scores come from five weighted criteria, each scored only from observations made on this machine on 19 November 2026. Nothing below is general knowledge about these tools.
 
@@ -87,7 +87,7 @@ It has no 5 outside footprint, and no 3 or lower anywhere. For a small team that
 
 Claude Code wins on footprint and extensibility and is restricted on provider.
 
-At 116 KB it is the smallest install of the four by three orders of magnitude, and its skills plus subagents are the most complete extensibility story we observed. The provider line, "Anthropic models, `--model`", is what holds it to 3.70 despite that.
+At 116 KB it is the smallest install of the four, about 550 times smaller than OpenCode's 62 MB, and its skills plus subagents are the most complete extensibility story we observed. The provider line, "Anthropic models, `--model`", is what holds it to 3.70 despite that.
 
 Codex CLI wins on MCP, because it is the only one of the four documented here as both an MCP client and an MCP server.
 

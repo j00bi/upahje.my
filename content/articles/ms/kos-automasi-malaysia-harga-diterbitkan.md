@@ -1,6 +1,6 @@
 ---
 title: "Kos kerja automasi di Malaysia: harga yang diterbitkan, enam sumber"
-description: "Enam penerbit Malaysia, 30 harga diterbitkan untuk kerja automasi dan integrasi. Harga dibaca pada 19 November 2026; beberapa halaman sumber tiada tarikh terbitan, jadi sesuatu harga mungkin lebih lama daripada artikel ini."
+description: "Enam penerbit Malaysia, 30 harga diterbitkan untuk kerja automasi dan integrasi, disemak 19 November 2026 kecuali satu halaman dibaca pada 27 Oktober 2026. Beberapa halaman sumber tiada tarikh terbitan, jadi sesuatu harga mungkin lebih lama daripada artikel ini."
 slug: kos-automasi-malaysia-harga-diterbitkan
 translationKey: automation-rates-malaysia-published
 date: 2026-11-19
@@ -33,7 +33,7 @@ sources:
 
 # Kos kerja automasi di Malaysia: harga yang diterbitkan, enam sumber
 
-Enam penerbit Malaysia menyatakan harga untuk kerja automasi, dan 30 daripada harga itu dikumpulkan di bawah dengan penerbit, unit dan tarikh pada setiap baris. Lima daripadanya studio dan satu pengamal bebas; satu-satunya kadar sejam datang daripada satu profil freelance. Freelancer solo biasanya memberi sebut harga ikut kerja dan tidak menerbitkan kadar, jadi jadual ini ialah penawaran yang diterbitkan, bukan keseluruhan pasaran.
+Harga yang diterbitkan bagi kerja automasi di Malaysia bermula dari RM400 untuk pembinaan proses mudah hingga RM6,000 lebih untuk pelaksanaan tugasan autonomi. Angka itu dan 28 lagi di bawah datang daripada enam penerbit Malaysia, dengan penerbit, unit dan tarikh pada setiap baris. Tiga daripadanya studio, satu penjual platform yang menjual tier langganan, satu pengamal bebas, dan satu profil freelance; satu-satunya kadar sejam datang daripada profil itu. Freelancer solo biasanya memberi sebut harga ikut kerja dan tidak menerbitkan kadar, jadi jadual ini ialah penawaran yang diterbitkan, bukan keseluruhan pasaran.
 
 ## Siapa yang menerbitkan angka ini, dan siapa yang tidak?
 
@@ -45,7 +45,7 @@ Dua lagi pengecualian. Setiap tier "sebut harga atas permintaan" dikecualikan, k
 
 ## Berapa kos satu pembinaan automasi yang diterbitkan?
 
-Mengikut projek, harga yang diterbitkan bermula dari RM400 bagi pembinaan proses mudah hingga RM6,000 lebih bagi pelaksanaan tugasan autonomi. Semua baris membawa unit penerbit sendiri.
+Mengikut projek, harga yang diterbitkan bermula dari RM400 bagi pembinaan proses mudah di Pang Jun Han hingga RM6,000 lebih bagi pelaksanaan tugasan autonomi di Autoflow Solutions. Semua baris membawa unit penerbit sendiri.
 
 | Tugasan | Kadar | Unit | Penerbit | Tarikh disemak |
 | --- | --- | --- | --- | --- |
