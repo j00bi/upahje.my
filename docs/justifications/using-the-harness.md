@@ -4,7 +4,7 @@
 
 | # | claim | source URL | publisher | checked | basis |
 |---|-------|------------|-----------|---------|-------|
-| 1 | "In DeepSeek Harness 0.2.2-rc.1 on this machine, one typed message becomes a turn, a turn becomes steps, and every step is written to a file on disk." | https://www.npmjs.com/package/@deepseek-ai/dsh | our measurement, this machine | 2026-11-19 | source: `--version` printed 0.2.2-rc.1; record types read from a decompressed session transcript |
+| 1 | "In DeepSeek Harness 0.2.2-rc.1 on this machine, one typed message becomes a turn, a turn becomes steps, and every step is written to a file on disk." | - | our measurement, this machine | 2026-11-19 | source: `dsh --version` printed 0.2.2-rc.1, and the record types were read from a decompressed session transcript |
 | 2 | "The transcript for this machine contains these record types, in the order a single exchange produces them: turn/start, step/start, request/header, request/context, assistant/message, tool/call, tool/result, step/end, turn/end." | - | our measurement, this machine | 2026-11-19 | source: `zstd -dc` on session.v4.jsonl.zstd and counting record types |
 | 3 | "The path has three parts: `~/.dsh/sessions/<workspace>/<session>/session.v4.jsonl.zstd`." | - | our measurement, this machine | 2026-11-19 | source: directory listing of ~/.dsh/sessions on 19 November 2026, with workspace slug and session identifier replaced by placeholders here |
 | 4 | "The transcript is Zstandard-compressed JSON Lines, one record per line before compression." | - | our measurement, this machine | 2026-11-19 | source: `file` reports Zstandard data; `zstd -dc` produces one JSON object per line |
