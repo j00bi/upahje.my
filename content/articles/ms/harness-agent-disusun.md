@@ -108,6 +108,11 @@ Empat arahan dan satu semakan fail, dan anda boleh mengaudit setiap nombor dalam
 3. Baca laluan konfigurasi dalam jadual: `$DSH_HOME/profiles`, `~/.claude.json`, `~/.codex/config.toml`, `~/.config/opencode/opencode.jsonc`.
 4. Jalankan `du -sh` pada `~/.dsh`, `~/.claude`, `~/.codex` dan `~/.config/opencode` untuk jejak cakera.
 
+**Baca seterusnya**
+
+[Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
+
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
 ## FAQ
 
 ### Adakah susunan ini berubah jika saya lebih mementingkan kos daripada 30%?
@@ -118,10 +123,3 @@ Ya, dan jadual itu membolehkan anda mengiranya semula. Jika kawalan pembekal dan
 
 Kerana pembeli tetap perlu memilih minggu ini, dan kaedah yang dinyatakan berserta resipi ulang semak boleh disemak. Alternatifnya, senarai tanpa susunan dan tanpa wajaran, menyembunyikan pertimbangan yang sama di sebalik prosa yang tiada siapa boleh audit.
 
----
-
-**Baca seterusnya**
-
-[panduan membeli](https://upahje.my/ms/articles/category/buying-guides)
-
-[apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)

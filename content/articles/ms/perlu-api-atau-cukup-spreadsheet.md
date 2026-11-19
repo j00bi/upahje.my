@@ -55,6 +55,11 @@ Banyak PKS Malaysia berada di antara kedua-duanya, dan pilihan tengah itu wajar 
 
 Eksport CSV dan import ke tool lain masih satu langkah salin, tetapi lebih pantas dan lebih boleh dipercayai daripada menaip semula. Eksport berjadual dengan susun atur fail yang tetap, disemak sekali seminggu oleh seorang, boleh membawa perniagaan selama bertahun-tahun. Ia bukan API dan ia tidak akan bertahan dengan penyelarasan dua hala, tetapi kosnya hampir tiada dan ia gagal secara kelihatan.
 
+**Baca seterusnya**
+
+[Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
+
+[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
 ## FAQ
 
 ### Bolehkah saya mula dengan spreadsheet dan tambah API kemudian?
@@ -69,10 +74,3 @@ Tidak semestinya. Spreadsheet dalam pemacu kongsi dengan kawalan akses ialah too
 
 Maka keputusannya menyempit kepada sama ada ada orang yang ada masa untuk menyambungkannya. API yang tiada siapa sambungkan tidak bernilai apa-apa, dan tool tanpa API yang digunakan setiap hari lebih bernilai daripada tool yang lebih baik tetapi tidak digunakan.
 
----
-
-**Baca seterusnya**
-
-[ruang definisi](https://upahje.my/ms/articles/category/definitions)
-
-[kos menyambungkan API](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)

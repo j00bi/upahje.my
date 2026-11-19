@@ -62,6 +62,11 @@ Revoke first, then rotate, then investigate, in that order. Revoking is the only
 
 The order matters more than the thoroughness. Teams that rotate first and revoke later usually keep paying for the same key.
 
+**Read next**
+
+[What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
+
+[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
 ## FAQ
 
 ### Should I use an environment variable or the harness credential store?
@@ -76,10 +81,3 @@ You can, and you lose the ability to tell who did what. Separate keys per person
 
 That depends on the provider, so check yours rather than assuming. A key with no expiry is a credential you must remember to rotate, and most teams do not. Set a calendar reminder if the provider offers no forced expiry.
 
----
-
-**Read next**
-
-[the buying guides pillar](https://upahje.my/en/articles/category/buying-guides)
-
-[what an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)

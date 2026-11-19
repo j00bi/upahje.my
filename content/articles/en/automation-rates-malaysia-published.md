@@ -114,6 +114,11 @@ Convert both to the same three numbers before you compare: total cost to a worki
 
 A RM400 session and a RM1,500 project both look small next to a RM6,000 build, and none of them is comparable until you ask how many sessions until it runs, how many months of retainer you will actually pay, and which of the six factors above each quote excludes. Write the answers next to the figures from the same date, and the comparison stops being about which number is lower.
 
+**Read next**
+
+[How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/how-to-brief-an-automation-job)
+
+[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 ## FAQ
 
 ### Is RM60 an hour typical for Malaysian automation freelancers?
@@ -128,10 +133,3 @@ Because they could not be read from here. Upwork returned HTTP 403 with a Cloudf
 
 No, and this table cannot tell you that. It lists prices, publishers and dates. It says nothing about the quality of the work, delivery time, or whether the automation still runs a year later, and none of the six publishers publishes that information.
 
----
-
-**Read next**
-
-[the buying guides pillar](https://upahje.my/en/articles/category/buying-guides)
-
-[how to brief an automation job](https://upahje.my/en/articles/how-to-brief-an-automation-job)

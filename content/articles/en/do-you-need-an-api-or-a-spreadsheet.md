@@ -55,6 +55,11 @@ Plenty of Malaysian SMEs sit between the two, and it is worth naming the middle 
 
 Exporting a CSV and importing it into the other tool is still a copy step, but a faster and more reliable one than retyping. A scheduled export with a fixed file layout, checked once a week by one person, can carry a business for years. It is not an API and it will not survive two-way sync, but it costs almost nothing and it fails visibly.
 
+**Read next**
+
+[What an API costs to wire up in Malaysia](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
+
+[More on APIs and models](https://upahje.my/en/articles/category/definitions)
 ## FAQ
 
 ### Can I start with a spreadsheet and add the API later?
@@ -69,10 +74,3 @@ Not inherently. A spreadsheet that lives in a shared drive with access controls 
 
 Then the decision narrows to whether anyone has time to connect it. An API that nobody wires up is worth nothing, and a tool with no API that people use daily is worth more than a better tool sitting unused.
 
----
-
-**Read next**
-
-[the definitions pillar](https://upahje.my/en/articles/category/definitions)
-
-[what an API costs to wire up](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)

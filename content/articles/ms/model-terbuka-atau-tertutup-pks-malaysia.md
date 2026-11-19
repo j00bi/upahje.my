@@ -81,6 +81,11 @@ Senarai ini huraian kami tentang kerja itu, bukan tinjauan gaji atau spesifikasi
 
 Cuba panggil model terbuka melalui API sebelum cuba menjalankannya. Mistral sendiri menyediakan model terbuka mereka melalui API pada USD 0.15 dan USD 0.60 setiap juta token, jadi anda dapat terma lesen dan tingkah laku model itu tanpa membeli GPU atau mengupah sesiapa. Soalan tentang hosting sendiri patut ditimbulkan apabila perbelanjaan token bulanan anda hampir menyamai kos bulanan GPU, atau apabila syarat lokasi data memaksa anda.
 
+**Baca seterusnya**
+
+[Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
+
+[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
 ## FAQ
 
 ### Perlukah saya jalankan model sendiri untuk menggunakan model terbuka?
@@ -95,10 +100,3 @@ Tidak secara berguna. Model dalam artikel ini besar: Mistral Small 4 mempunyai 1
 
 Hanya jika perkakasan itu berada di Malaysia. Menyewa GPU di wilayah lain memindahkan data ke sana, sama seperti memanggil API tertutup. Jika lokasi data ialah sebab anda mahu hosting sendiri, sahkan dahulu di mana mesin sewaan itu berada sebelum komited.
 
----
-
-**Baca seterusnya**
-
-[ruang definisi](https://upahje.my/ms/articles/category/definitions)
-
-[kos menyambungkan API](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)

@@ -118,6 +118,9 @@ It tells you what clients publicly budget on one platform in one quarter, and no
 
 Two further limits. The two cold-calling rows are advertised budgets, which a client can lower once they see the response. And no listing states hours, so any hourly figure here would be arithmetic on a guess. If you need an hourly number, ask the client before quoting, because the listing will not give it to you.
 
+**Read next**
+
+[More on side-income work](https://upahje.my/en/articles/category/side-income)
 ## FAQ
 
 ### Is one platform enough to judge the whole market?
@@ -132,10 +135,3 @@ Because a listing's stated budget is what the client says they will pay, not wha
 
 Yes, and the listings suggest it is common: the RM2,500 video role combines filming, editing and appearing on camera. A second skill raises the price faster than doing the first one for longer.
 
----
-
-**Read next**
-
-[the side income pillar](https://upahje.my/en/articles/category/side-income)
-
-[the definitions pillar](https://upahje.my/en/articles/category/definitions)

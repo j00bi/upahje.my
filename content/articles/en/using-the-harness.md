@@ -64,6 +64,11 @@ Three commands, and you do not need to trust this page to run them.
 2. `ls ~/.dsh/sessions/<folder>/<session>` shows the transcript file and its lock.
 3. `zstd -dc ~/.dsh/sessions/<folder>/<session>/session.v4.jsonl.zstd | head -40` prints the first records in plain text.
 
+**Read next**
+
+[Where an API key goes in a harness, and where it must never go](https://upahje.my/en/articles/harness-api-keys)
+
+[More on agent harnesses](https://upahje.my/en/articles/category/definitions)
 ## FAQ
 
 ### Is the transcript human-readable?
@@ -78,8 +83,3 @@ The session directory stays on disk with its transcript, so the file persists af
 
 The harness records a `request/header` and a `request/context` per step, so each step is a separate request rather than one long exchange. What exactly the provider receives inside that request is not something this page measures, and we are not going to guess at it.
 
----
-
-**Read next**
-
-[the definitions pillar](https://upahje.my/en/articles/category/definitions)
