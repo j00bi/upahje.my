@@ -1,6 +1,6 @@
 ---
 title: "Apa itu API, dijelaskan untuk pemilik perniagaan kecil Malaysia"
-description: "API ialah cara dua sistem perisian bertukar data apabila diminta. Apa maksudnya bagi PKS Malaysia, beza API model terbuka dengan model tertutup, dan berapa kos untuk upah orang sambungkannya di sini."
+description: "API ialah kontrak antara dua sistem untuk bertukar data tanpa manusia menyalinnya. Apa maknanya bagi PKS, beza model terbuka dan tertutup, serta kos sebenar menyambungkannya."
 slug: apa-itu-api-untuk-pks-malaysia
 translationKey: what-is-an-api
 date: 2026-11-19

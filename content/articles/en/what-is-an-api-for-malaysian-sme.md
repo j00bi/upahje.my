@@ -1,6 +1,6 @@
 ---
 title: "What is an API, explained for a Malaysian small business owner"
-description: "An API is an agreed way for two software systems to exchange data on request. What that means for a Malaysian SME, open versus closed model APIs, and what it costs to have someone wire one up here."
+description: "An API is a contract that lets two systems exchange data without a human copying it across. What it means for a Malaysian SME, open versus closed models, and the real cost of wiring one up."
 slug: what-is-an-api-for-malaysian-sme
 translationKey: what-is-an-api
 date: 2026-11-19
