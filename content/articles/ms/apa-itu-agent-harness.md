@@ -43,7 +43,7 @@ Perkara penting bagi pemilik perniagaan ialah nombor 7. Tugasan yang memerlukan 
 
 Setiap sesi ialah satu direktori di bawah `.dsh/sessions`, dinamakan sempena folder kerja anda, dan ia menyimpan satu fail transkrip termampat serta satu fail lock.
 
-Pada mesin ini laluannya kelihatan begini: `~/.dsh/sessions/--home-husni-.dsh-bot-workspace--/session-0ec7202e-ac1e-4f02-ab14-bf76b3d29de3/session.v4.jsonl.zstd`. Baca sebagai tiga bahagian: slug daripada direktori kerja, kemudian pengenal sesi, kemudian fail. Transkrip itu ialah JSON Lines termampat dengan Zstandard, satu rekod setiap baris sebelum dimampatkan, dan `session.lock` terletak di sebelahnya.
+Laluan itu ada tiga bahagian: `~/.dsh/sessions/<workspace>/<session>/session.v4.jsonl.zstd`. Placeholder workspace ialah slug daripada folder kerja anda, placeholder session ialah pengenal unik, dan bahagian terakhir ialah fail transkrip. Nilai sebenar pada mesin anda berbeza daripada mesin orang lain, dan itulah tujuan placeholder. Transkrip itu ialah JSON Lines termampat dengan Zstandard, satu rekod setiap baris sebelum dimampatkan, dan `session.lock` terletak di sebelahnya.
 
 Itu wajar diketahui sebelum anda menampal kontrak pelanggan ke dalam tetingkap sembang. Perbualan itu ialah fail pada cakera anda sendiri, dalam folder yang dinamakan sempena projek anda, dan ia boleh dibaca dengan satu arahan.
 

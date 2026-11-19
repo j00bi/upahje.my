@@ -43,7 +43,7 @@ The important detail for a business owner is number 7. A task that needs four to
 
 Every session is a directory under `.dsh/sessions`, named after the folder you were working in, and it holds one compressed transcript file plus a lock file.
 
-On this machine the path looks like this: `~/.dsh/sessions/--home-husni-.dsh-bot-workspace--/session-0ec7202e-ac1e-4f02-ab14-bf76b3d29de3/session.v4.jsonl.zstd`. Read that as three parts: a slug built from the working directory, then a session identifier, then the file. The transcript is Zstandard-compressed JSON Lines, one record per line before compression, and `session.lock` sits beside it.
+The path has three parts: `~/.dsh/sessions/<workspace>/<session>/session.v4.jsonl.zstd`. The workspace placeholder is a slug built from the folder you were working in, the session placeholder is a unique identifier, and the last part is the transcript file. The real values on your machine will differ from anyone else's, which is the point of the placeholders. The transcript is Zstandard-compressed JSON Lines, one record per line before compression, and `session.lock` sits beside it.
 
 That is worth knowing before you paste a client's contract into a chat window. The conversation is a file on your own disk, in a folder named after your project, and it is readable with one command.
 
