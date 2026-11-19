@@ -50,12 +50,26 @@ export function splitShortAnswer(body: string): { short: string | null; rest: st
   return { short: short || null, rest }
 }
 
-/** Split the FAQ section off the body so it can render with its own rhythm. */
+/**
+ * Split the FAQ section off the body so it can render with its own rhythm.
+ * The section ends at the next H2, not at the end of the file: publishers put a
+ * read-next block after the FAQ, and truncating there silently deleted it.
+ */
 export function splitFaq(body: string): { withoutFaq: string; faqSource: string | null } {
-  const match = body.match(/(^|\n)##\s+(FAQ|Frequently asked questions)[^\n]*\n([\s\S]*)$/i)
-  if (!match) return { withoutFaq: body, faqSource: null }
-  const start = match.index ?? 0
-  return { withoutFaq: body.slice(0, start).trim(), faqSource: match[0].trim() }
+  const lines = body.split(/\r?\n/)
+  const start = lines.findIndex((line) => /^##\s+(FAQ|Frequently asked questions)\s*$/i.test(line))
+  if (start < 0) return { withoutFaq: body, faqSource: null }
+  // The section ends at the next H2 or at the horizontal rule / bold label that
+  // publishers use to open a read-next block after the FAQ.
+  let end = lines.length
+  for (let i = start + 1; i < lines.length; i++) {
+    if (/^##\s+/.test(lines[i]) || /^---+$/.test(lines[i]) || /^\*\*[^*]+\*\*\s*$/.test(lines[i])) {
+      end = i
+      break
+    }
+  }
+  const withoutFaq = [...lines.slice(0, start), ...lines.slice(end)].join('\n').trim()
+  return { withoutFaq, faqSource: lines.slice(start, end).join('\n').trim() || null }
 }
 
 /** H2s of the body, minus the FAQ, as TOC entries. */

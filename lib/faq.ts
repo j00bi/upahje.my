@@ -31,6 +31,13 @@ export function extractFaq(body: string): ArticleFaq[] {
       continue
     }
     if (!inFaq) continue
+    // A rule or a standalone bold label closes the FAQ: nothing after it belongs
+    // to the last answer.
+    if (/^---+$/.test(line) || /^\*\*[^*]+\*\*\s*$/.test(line)) {
+      flush()
+      inFaq = false
+      continue
+    }
     const h3 = line.match(/^###\s+(.*)$/)
     if (h3) {
       flush()

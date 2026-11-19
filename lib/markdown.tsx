@@ -42,7 +42,15 @@ function renderInline(text: string, keyPrefix: string): ReactNode[] {
     const link = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/)
     if (link) {
       const [, label, href] = link
-      const external = /^https?:\/\//.test(href)
+      const absoluteInternal = href.startsWith('https://upahje.my')
+      const external = /^https?:\/\//.test(href) && !absoluteInternal
+      if (absoluteInternal) {
+        return (
+          <Link key={key} href={href.replace('https://upahje.my', '')} className={LINK}>
+            {label}
+          </Link>
+        )
+      }
       if (external) {
         return (
           <a key={key} href={href} className={LINK} target="_blank" rel="noopener noreferrer">
