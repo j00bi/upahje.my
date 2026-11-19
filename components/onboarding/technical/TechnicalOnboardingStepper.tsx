@@ -352,9 +352,9 @@ export function TechnicalOnboardingStepper({ onComplete, onBack }: TechnicalOnbo
               <div className="pt-2 border-t"><span className="text-gray-500">Bio:</span><br />{data.bio || <span className="italic">No bio yet</span>}</div>
             </div>
 
-            <div className="bg-green-soft border border-green-mid/20 p-4 rounded-2xl text-sm">
-              <div className="font-medium text-green-mid">Ready to go live?</div>
-              <p className="text-green-mid/80 text-xs mt-1">Your profile will be visible to employers immediately after submission. You can edit everything later from your dashboard.</p>
+            <div className="bg-emerald-50 border border-emerald-200 p-4 rounded-2xl text-sm">
+              <div className="font-medium text-emerald-800">Ready to go live?</div>
+              <p className="text-emerald-700 text-xs mt-1">Your profile will be visible to employers immediately after submission. You can edit everything later from your dashboard.</p>
             </div>
           </div>
         )}

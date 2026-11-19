@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="620" viewBox="0 0 1080 620" role="img" aria-labelledby="figTitle figDesc">
+  <title id="figTitle">Where an API key sits when a harness calls a model</title>
+  <desc id="figDesc">A request leaves your application, the harness reads the key from an environment variable or secret store, attaches it to an HTTPS call, and the provider verifies it before the model answers. The key never enters a chat message, a commit, or a log.</desc>
+
+  <rect width="1080" height="620" fill="#fbfaf7"/>
+
+  <!-- column labels -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#63665e" letter-spacing="0.08em">
+    <text x="60" y="52">YOUR MACHINE</text>
+    <text x="700" y="52">THE PROVIDER</text>
+  </g>
+  <line x1="40" y1="62" x2="620" y2="62" stroke="#14160f" stroke-opacity="0.12"/>
+  <line x1="700" y1="62" x2="1040" y2="62" stroke="#14160f" stroke-opacity="0.12"/>
+
+  <!-- boxes -->
+  <g font-family="ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif">
+    <!-- app -->
+    <rect x="60" y="130" width="200" height="96" rx="10" fill="#fdfcf9" stroke="#14160f" stroke-opacity="0.18"/>
+    <text x="80" y="166" font-size="15" fill="#14160f">Your app</text>
+    <text x="80" y="190" font-size="13" fill="#3f423c">sends a request</text>
+    <text x="80" y="208" font-size="13" fill="#3f423c">no key inside it</text>
+
+    <!-- harness -->
+    <rect x="330" y="110" width="250" height="136" rx="10" fill="#fdfcf9" stroke="#1a6b2e" stroke-width="1.5"/>
+    <text x="350" y="146" font-size="15" fill="#14160f">Harness</text>
+    <text x="350" y="170" font-size="13" fill="#3f423c">reads the key from the environment</text>
+    <text x="350" y="192" font-size="13" fill="#3f423c">attaches it to the request</text>
+    <text x="350" y="214" font-size="13" fill="#3f423c">sends over HTTPS</text>
+
+    <!-- key store -->
+    <rect x="330" y="330" width="250" height="86" rx="10" fill="#fdfcf9" stroke="#14160f" stroke-opacity="0.18" stroke-dasharray="4 4"/>
+    <text x="350" y="362" font-size="14" fill="#14160f">Key store</text>
+    <text x="350" y="384" font-size="13" fill="#3f423c">.env, keychain or a secret manager</text>
+    <text x="350" y="402" font-size="13" fill="#3f423c">outside the repository</text>
+
+    <!-- provider -->
+    <rect x="700" y="130" width="300" height="96" rx="10" fill="#fdfcf9" stroke="#14160f" stroke-opacity="0.18"/>
+    <text x="720" y="166" font-size="15" fill="#14160f">Provider API</text>
+    <text x="720" y="190" font-size="13" fill="#3f423c">checks the key, bills the account,</text>
+    <text x="720" y="208" font-size="13" fill="#3f423c">forwards to the model</text>
+
+    <!-- model -->
+    <rect x="700" y="290" width="300" height="80" rx="10" fill="#fdfcf9" stroke="#14160f" stroke-opacity="0.18"/>
+    <text x="720" y="324" font-size="15" fill="#14160f">Model</text>
+    <text x="720" y="348" font-size="13" fill="#3f423c">answers, the harness streams it back</text>
+
+    <!-- forbidden note -->
+    <rect x="60" y="330" width="220" height="150" rx="10" fill="none" stroke="#a33127" stroke-opacity="0.55" stroke-dasharray="4 4"/>
+    <text x="78" y="362" font-size="13" fill="#a33127" font-weight="600">Never here</text>
+    <text x="78" y="386" font-size="13" fill="#3f423c">in a chat message</text>
+    <text x="78" y="406" font-size="13" fill="#3f423c">in a commit or a screenshot</text>
+    <text x="78" y="426" font-size="13" fill="#3f423c">in a log line</text>
+    <text x="78" y="446" font-size="13" fill="#3f423c">in a client-side bundle</text>
+  </g>
+
+  <!-- arrows -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3f423c"/>
+    </marker>
+  </defs>
+  <g stroke="#3f423c" stroke-width="1.4" fill="none" marker-end="url(#arrow)">
+    <path d="M 260 178 L 322 178"/>
+    <path d="M 580 178 L 692 178"/>
+    <path d="M 850 226 L 850 282"/>
+    <path d="M 455 330 L 455 254"/>
+  </g>
+  <text x="600" y="166" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#63665e">HTTPS + key header</text>
+  <text x="466" y="300" font-family="ui-sans-serif, system-ui, sans-serif" font-size="12" fill="#63665e">read once at start</text>
+
+  <line x1="40" y1="540" x2="1040" y2="540" stroke="#14160f" stroke-opacity="0.12"/>
+  <text x="60" y="572" font-family="ui-sans-serif, system-ui, sans-serif" font-size="13" fill="#63665e">The key authenticates the account, not the request. Revoking it is one action, and it should be routine.</text>
+</svg>

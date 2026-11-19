@@ -106,8 +106,8 @@ export function JobFilters({ onFilterChange, categories, locations, initialFilte
               <button
                 onClick={() => setSelectedTrack(selectedTrack === 'LABOUR' ? '' : 'LABOUR')}
                 className={`flex-1 py-2 px-3 rounded-lg text-sm font-medium transition ${
-selectedTrack === 'LABOUR'
-                    ? 'bg-emerald-600 text-white'
+                  selectedTrack === 'LABOUR'
+                    ? 'bg-amber-500 text-white'
                     : 'bg-white border border-slate-200 text-slate-600 hover:bg-slate-100'
                 }`}
               >

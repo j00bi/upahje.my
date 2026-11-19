@@ -2,38 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Prevent FOUC — content is hidden until intro overlay mounts */
-html[data-intro='loading'] #page-content {
-  visibility: hidden;
-}
-
 :root {
-  /* Green Brand Core — unified around brand green #166345 */
-  --color-primary: #166345;
-  --color-primary-hover: #0d3b18;
-  --color-primary-neutral: #2d8f5e;
-  --color-primary-pale: #e8f5e0;
+  /* Green Brand Core */
+  --color-primary: #9fe870;
+  --color-primary-hover: #cdffad;
+  --color-primary-neutral: #c5edab;
+  --color-primary-pale: #e2f6d5;
 
-  /* Green scale — brand anchoring */
+  /* Deep Green — brand anchoring */
   --color-green-deep: #0a2a12;
   --color-green-forest: #0d3b18;
-  --color-green-mid: #166345;
+  --color-green-mid: #1a6b2e;
   --color-green-soft: #e8f5e0;
-
-  /* Teal scale — trust & security accent */
-  --color-teal-deep: #0f766e;
-  --color-teal-mid: #14b8a6;
-  --color-teal-soft: #ccfbf1;
-  --color-teal-pale: #f0fdfa;
-
-  /* Amber scale — energy & urgency (CTAs) */
-  --color-amber-deep: #b45309;
-  --color-amber-mid: #f59e0b;
-  --color-amber-soft: #fef3c7;
-  --color-amber-pale: #fffbeb;
-
-  /* Positive deep — needed by badge-positive */
-  --color-positive-deep: #166345;
 
   /* Surfaces */
   --color-canvas: #ffffff;
@@ -51,6 +31,12 @@ html[data-intro='loading'] #page-content {
   --color-warning: #ffd11a;
   --color-negative: #d03238;
 
+  /* Primary — derived from teal brand */
+  --color-primary: var(--color-teal-mid);
+  --color-primary-hover: var(--color-teal-deep);
+  --color-primary-pale: var(--color-teal-pale);
+  --color-primary-neutral: var(--color-teal-soft);
+
   /* Tertiary */
   --color-accent-orange: #ffc091;
   --color-accent-cyan: #38c8ff;
@@ -66,7 +52,7 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: var(--font-dm-sans), system-ui, -apple-system, sans-serif;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
   background-color: var(--color-canvas);
   color: var(--color-ink);
 }
@@ -76,7 +62,6 @@ body {
    =========================================== */
 
 .font-display-mega {
-  font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   line-height: 1.05;
   font-weight: 700;
@@ -84,7 +69,6 @@ body {
 }
 
 .font-display-xl {
-  font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.1;
   font-weight: 700;
@@ -92,7 +76,6 @@ body {
 }
 
 .font-display-lg {
-  font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
   font-size: clamp(1.5rem, 3vw, 2rem);
   line-height: 1.2;
   font-weight: 600;
@@ -100,7 +83,6 @@ body {
 }
 
 .font-display-md {
-  font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
   font-size: 1.5rem;
   line-height: 1.1;
   font-weight: 700;
@@ -108,7 +90,6 @@ body {
 }
 
 .font-display-sm {
-  font-family: var(--font-sora), system-ui, -apple-system, sans-serif;
   font-size: 1.25rem;
   line-height: 1.2;
   font-weight: 600;
@@ -142,7 +123,7 @@ body {
 
 .btn-primary:hover {
   background-color: var(--color-primary-hover);
-  box-shadow: 0 4px 24px rgba(22, 99, 69, 0.3);
+  box-shadow: 0 4px 24px rgba(159, 232, 112, 0.3);
   transform: translateY(-1px);
 }
 
@@ -244,7 +225,7 @@ body {
 
 .cta-nav:hover {
   background-color: var(--color-primary-hover);
-  box-shadow: 0 4px 16px rgba(22, 99, 69, 0.25);
+  box-shadow: 0 4px 16px rgba(159, 232, 112, 0.25);
 }
 
 /* ===========================================
@@ -275,7 +256,7 @@ body {
 
 .card-feature-green:hover {
   background-color: var(--color-primary-neutral);
-  box-shadow: 0 8px 32px rgba(22, 99, 69, 0.15);
+  box-shadow: 0 8px 32px rgba(159, 232, 112, 0.15);
 }
 
 .card-feature-dark {
@@ -308,7 +289,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: radial-gradient(ellipse at 20% 50%, rgba(22, 99, 69, 0.12) 0%, transparent 60%);
+  background-image: radial-gradient(ellipse at 20% 50%, rgba(159, 232, 112, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -440,7 +421,7 @@ body {
 /* ===========================================
    Badges
    =========================================== */
-/* Badges */
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -460,21 +441,6 @@ body {
   background-color: transparent;
   border: 1px solid rgba(14, 15, 12, 0.1);
   color: var(--color-body);
-}
-
-.badge-teal {
-  background-color: var(--color-teal-soft);
-  color: var(--color-teal-deep);
-}
-
-.badge-amber {
-  background-color: var(--color-amber-soft);
-  color: var(--color-amber-deep);
-}
-
-.badge-verified {
-  background-color: var(--color-teal-soft);
-  color: var(--color-teal-deep);
 }
 
 /* ===========================================
@@ -594,101 +560,162 @@ body {
 }
 
 /* ===========================================
-   Stats Bar
+   Article surface tokens
+   Light default; dark is a reader choice set as data-theme before paint.
+   One accent (brand emerald), one neutral family.
    =========================================== */
 
-.stat-item {
-  text-align: center;
-  padding: 20px 16px;
+:root {
+  /* Light is the default, whatever the OS says. Dark is chosen by the reader. */
+  --ui-canvas: #fbfaf7;
+  --ui-surface: #fdfcf9;
+  --ui-ink: #14160f;
+  --ui-body: #3f423c;
+  --ui-muted: #63665e;
+  --ui-rule: rgba(20, 22, 15, 0.12);
+  --ui-accent: #1a6b2e;
+  --ui-topbar: color-mix(in oklab, var(--ui-canvas) 92%, transparent);
+  --ui-font: Inter, system-ui, -apple-system, sans-serif;
+  --ui-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --ui-ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* The only vertical rhythm numbers in the article. One 4px base. */
+  --space-top: 48px;
+  --space-title-meta: 32px;
+  --space-first-h2: 40px;
+  --space-section: 56px;
+  --space-sources: 24px;
+
+  color-scheme: light;
 }
 
-.stat-number {
-  font-family: var(--font-sora), system-ui, sans-serif;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 700;
-  line-height: 1;
-  background: linear-gradient(135deg, var(--color-teal-mid), var(--color-green-mid));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+:root[data-theme='dark'] {
+  --ui-canvas: #12140f;
+  --ui-surface: #171a14;
+  --ui-ink: #e9e7df;
+  --ui-body: #c8c6bd;
+  --ui-muted: #9b9a90;
+  --ui-rule: rgba(233, 231, 223, 0.14);
+  --ui-accent: #9fe870;
+  --ui-topbar: color-mix(in oklab, var(--ui-canvas) 92%, transparent);
+  color-scheme: dark;
 }
 
-.stat-label {
-  font-size: 0.8rem;
-  color: var(--color-body);
-  margin-top: 6px;
-  font-weight: 500;
+.ui-canvas {
+  background-color: var(--ui-canvas);
+  color: var(--ui-body);
 }
 
-/* ===========================================
-   Testimonial Card
-   =========================================== */
-
-.testimonial-card {
-  background-color: var(--color-canvas);
-  border: 1px solid rgba(14, 15, 12, 0.06);
-  border-radius: 16px;
-  padding: 24px;
-  transition: all 0.2s ease;
+.ui-topbar {
+  background-color: var(--ui-topbar);
+  border-bottom: 1px solid var(--ui-rule);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
-.testimonial-card:hover {
-  box-shadow: 0 8px 32px rgba(14, 15, 12, 0.06);
-  transform: translateY(-2px);
+.ui-rule {
+  border-color: var(--ui-rule);
 }
 
-/* ===========================================
-   Gradient Mesh (for hero backgrounds)
-   =========================================== */
+.ui-link {
+  color: var(--ui-body);
+  text-decoration: none;
+  transition: color 160ms var(--ui-ease);
+}
 
-.gradient-mesh {
+.ui-link:hover {
+  color: var(--ui-ink);
+}
+
+.ui-mono {
+  font-family: var(--ui-mono);
+  font-variant-ligatures: none;
+}
+
+.article-body h2:first-of-type {
+  margin-top: var(--space-first-h2);
+}
+
+@media print {
+  .ui-topbar,
+  .article-toc,
+  .no-print {
+    display: none !important;
+  }
+  :root,
+  :root[data-theme='dark'] {
+    --ui-canvas: #ffffff;
+    --ui-surface: #ffffff;
+    --ui-ink: #000000;
+    --ui-body: #000000;
+    --ui-muted: #333333;
+    --ui-rule: #cccccc;
+    --ui-accent: #000000;
+  }
+  body,
+  .ui-canvas {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  a,
+  a:visited {
+    color: #000000 !important;
+    text-decoration: none !important;
+  }
+  .article-body p,
+  .article-body li {
+    break-inside: avoid;
+  }
+}
+
+.ui-focus:focus-visible,
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--ui-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+a[href],
+button:not(:disabled),
+summary,
+[role="button"]:not([aria-disabled="true"]) {
+  cursor: pointer;
+}
+
+.skip-link {
   position: absolute;
-  inset: 0;
-  pointer-events: none;
-  overflow: hidden;
+  left: 12px;
+  top: -48px;
+  z-index: 100;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--ui-ink);
+  color: var(--ui-canvas);
+  font-weight: 600;
+  transition: top 160ms var(--ui-ease);
 }
 
-.gradient-mesh::before {
-  content: '';
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  top: -200px;
-  left: -100px;
-  background: radial-gradient(circle, rgba(20, 184, 166, 0.12) 0%, transparent 70%);
+.skip-link:focus {
+  top: 12px;
 }
 
-.gradient-mesh::after {
-  content: '';
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  border-radius: 50%;
-  bottom: -150px;
-  right: -100px;
-  background: radial-gradient(circle, rgba(22, 99, 69, 0.1) 0%, transparent 70%);
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-.gradient-mesh-center {
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(245, 158, 11, 0.06) 0%, transparent 70%);
-  pointer-events: none;
+.theme-toggle {
+  display: none;
 }
 
-/* ===========================================
-   Gradient Text
-   =========================================== */
-
-.gradient-text {
-  background: linear-gradient(135deg, var(--color-green-mid), var(--color-teal-mid));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+:root[data-js='on'] .theme-toggle {
+  display: inline-flex;
 }

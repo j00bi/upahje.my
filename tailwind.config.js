@@ -3,21 +3,22 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './lib/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        // Green Brand Core — unified around brand green #166345
-        primary: '#166345',
-        'primary-hover': '#0d3b18',
-        'primary-neutral': '#2d8f5e',
-        'primary-pale': '#e8f5e0',
+        // Green Brand Core
+        primary: '#9fe870',
+        'primary-hover': '#cdffad',
+        'primary-neutral': '#c5edab',
+        'primary-pale': '#e2f6d5',
 
-        // Green scale — brand anchoring
+        // Deep Green — brand anchoring
         'green-deep': '#0a2a12',
         'green-forest': '#0d3b18',
-        'green-mid': '#166345',
+        'green-mid': '#1a6b2e',
         'green-soft': '#e8f5e0',
 
         // Surfaces
@@ -66,13 +67,13 @@ module.exports = {
         '3xl': '48px',
       },
       fontFamily: {
-        sans: ['var(--font-dm-sans)', 'system-ui', '-apple-system', 'sans-serif'],
-        display: ['var(--font-sora)', 'var(--font-dm-sans)', 'system-ui', '-apple-system', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Inter', 'Manrope', 'system-ui', '-apple-system', 'sans-serif'],
       },
       boxShadow: {
         'card': '0 0 0 1px rgba(14, 15, 12, 0.05)',
         'elevated': '0 4px 16px rgba(14, 15, 12, 0.08)',
-        'green-glow': '0 4px 24px rgba(22, 99, 69, 0.25)',
+        'green-glow': '0 4px 24px rgba(159, 232, 112, 0.25)',
       },
     },
   },

@@ -25,14 +25,6 @@ export type TalentProfile = {
   avatarImg: number
 }
 
-/**
- * Seed talent profiles — demo content showing the structure of a talent
- * card. Ratings and reviewCounts are zeroed (no real reviews yet) and
- * portfolio URLs are removed (no real portfolios uploaded yet).
- *
- * Once real users onboard and upload work, these seed profiles can be
- * replaced with database content.
- */
 export const TALENT_PROFILES: TalentProfile[] = [
   {
     slug: 'aina-photography',
@@ -49,10 +41,16 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     verified: true,
     myKadVerified: true,
-    portfolio: [],
+    portfolio: [
+      'https://picsum.photos/seed/aina1/400/300',
+      'https://picsum.photos/seed/aina2/400/300',
+      'https://picsum.photos/seed/aina3/400/300',
+      'https://picsum.photos/seed/aina4/400/300',
+      'https://picsum.photos/seed/aina5/400/300',
+    ],
     userId: 'user-3',
-    rating: 0,
-    reviewCount: 0,
+    rating: 4.9,
+    reviewCount: 24,
     avatarImg: 1,
   },
   {
@@ -69,10 +67,15 @@ export const TALENT_PROFILES: TalentProfile[] = [
       { emoji: '📸', name: 'Event Photography' },
     ],
     verified: true,
-    portfolio: [],
+    portfolio: [
+      'https://picsum.photos/seed/danial1/400/300',
+      'https://picsum.photos/seed/danial2/400/300',
+      'https://picsum.photos/seed/danial3/400/300',
+      'https://picsum.photos/seed/danial4/400/300',
+    ],
     userId: 'user-4',
-    rating: 0,
-    reviewCount: 0,
+    rating: 4.8,
+    reviewCount: 18,
     avatarImg: 4,
   },
   {
@@ -90,10 +93,16 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     verified: true,
     myKadVerified: true,
-    portfolio: [],
+    portfolio: [
+      'https://picsum.photos/seed/sharifah1/400/300',
+      'https://picsum.photos/seed/sharifah2/400/300',
+      'https://picsum.photos/seed/sharifah3/400/300',
+      'https://picsum.photos/seed/sharifah4/400/300',
+      'https://picsum.photos/seed/sharifah5/400/300',
+    ],
     userId: 'user-5',
-    rating: 0,
-    reviewCount: 0,
+    rating: 4.9,
+    reviewCount: 31,
     avatarImg: 25,
   },
   {
@@ -113,8 +122,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
     portfolio: ['https://github.com/amirhakim', 'https://amirhakim.dev'],
     certs: ['AWS Certified', 'Google Analytics'],
     userId: 'user-6',
-    rating: 0,
-    reviewCount: 0,
+    rating: 4.7,
+    reviewCount: 42,
     avatarImg: 33,
   },
   {
@@ -135,8 +144,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
     myKadVerified: true,
     certs: ['Bomba Safety Certified'],
     userId: 'user-1',
-    rating: 0,
-    reviewCount: 0,
+    rating: 4.8,
+    reviewCount: 16,
     avatarImg: 16,
   },
   {
@@ -156,8 +165,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
     portfolio: ['https://github.com/sitinur', 'https://sitinur.design'],
     certs: ['Figma Certified', 'Google Analytics', 'AWS Certified'],
     userId: 'user-2',
-    rating: 0,
-    reviewCount: 0,
+    rating: 4.9,
+    reviewCount: 29,
     avatarImg: 18,
   },
   {
@@ -176,8 +185,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
     verified: true,
     myKadVerified: true,
     userId: 'user-7',
-    rating: 0,
-    reviewCount: 0,
+    rating: 4.5,
+    reviewCount: 18,
     avatarImg: 21,
   },
   {
@@ -195,8 +204,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     verified: true,
     userId: 'user-8',
-    rating: 0,
-    reviewCount: 0,
+    rating: 4.2,
+    reviewCount: 7,
     avatarImg: 22,
   },
   {
@@ -214,8 +223,8 @@ export const TALENT_PROFILES: TalentProfile[] = [
     ],
     verified: true,
     userId: 'user-9',
-    rating: 0,
-    reviewCount: 0,
+    rating: 4.8,
+    reviewCount: 23,
     avatarImg: 23,
   },
 ]

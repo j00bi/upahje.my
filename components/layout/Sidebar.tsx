@@ -108,7 +108,7 @@ export function Sidebar({ role }: SidebarProps) {
     <aside className="w-64 bg-white border-r border-slate-200 flex flex-col">
       <div className="h-16 flex items-center px-6 border-b border-slate-200">
         <Link href="/dashboard" className="flex items-center gap-2">
-          <Shield className="h-6 w-6 text-green-mid" />
+          <Shield className="h-6 w-6 text-emerald-600" />
           <span className="font-bold text-lg text-slate-900">UpahJe.my</span>
         </Link>
       </div>
@@ -123,7 +123,7 @@ export function Sidebar({ role }: SidebarProps) {
               className={cn(
                 'flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors',
                 isActive
-                  ? 'bg-green-soft text-green-mid'
+                  ? 'bg-emerald-50 text-emerald-700'
                   : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900'
               )}
             >

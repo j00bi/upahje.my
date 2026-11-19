@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 
 export interface PhotographerCardProps {
   id: string;
@@ -70,9 +71,12 @@ export function PhotographerCard({
       {/* Header with Avatar and Info */}
       <div className="p-4 flex items-start gap-3">
         <div className="relative flex-shrink-0">
-          <img
+          <Image
             src={avatar}
             alt={name}
+            width={56}
+            height={56}
+            unoptimized
             className="w-14 h-14 rounded-full object-cover border-2 border-gray-100"
           />
           {verified && (
@@ -138,9 +142,12 @@ export function PhotographerCard({
               key={idx}
               className="aspect-square rounded-md overflow-hidden bg-gray-100"
             >
-              <img
+              <Image
                 src={thumb}
                 alt={`Portfolio ${idx + 1}`}
+                width={100}
+                height={100}
+                unoptimized
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-200"
               />
             </div>

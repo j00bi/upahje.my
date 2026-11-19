@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useCallback } from 'react';
+import Image from 'next/image';
 
 export interface LightboxProps {
   images: { id: string; src: string; title: string; category: string }[];
@@ -71,10 +72,13 @@ export function Lightbox({ images, currentIndex, onClose, onPrev, onNext }: Ligh
 
       {/* Image Container */}
       <div className="max-w-5xl max-h-[80vh] mx-4 flex flex-col items-center" onClick={(e) => e.stopPropagation()}>
-        <div className="relative">
-          <img
+        <div className="relative w-full" style={{ maxHeight: '70vh' }}>
+          <Image
             src={currentImage.src}
             alt={currentImage.title}
+            width={1200}
+            height={800}
+            unoptimized
             className="max-w-full max-h-[70vh] object-contain rounded-lg shadow-2xl"
           />
         </div>

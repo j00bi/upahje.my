@@ -40,39 +40,12 @@ export async function POST(req: Request) {
   }
 }
 
-export async function GET(req: Request) {
-  const { searchParams } = new URL(req.url)
-  const search = searchParams.get('search') || undefined
-  const category = searchParams.get('category') || undefined
-  const location = searchParams.get('location') || undefined
-  const track = searchParams.get('track') as 'LABOUR' | 'TECHNICAL' | undefined
-  const status = searchParams.get('status') || 'OPEN'
-  const limit = Math.min(parseInt(searchParams.get('limit') || '20', 10), 50)
-
+export async function GET() {
   try {
     const jobs = await prisma.job.findMany({
-      where: {
-        status: status as 'OPEN' | 'MATCHED' | 'IN_PROGRESS' | 'COMPLETED' | 'CANCELLED',
-        ...(search && {
-          OR: [
-            { title: { contains: search, mode: 'insensitive' } },
-            { description: { contains: search, mode: 'insensitive' } },
-          ],
-        }),
-        ...(category && { categoryId: category }),
-        ...(location && { location: { contains: location, mode: 'insensitive' } }),
-        ...(track && { track: track as 'LABOUR' | 'TECHNICAL' }),
-      },
-      include: {
-        employer: {
-          include: {
-            user: { select: { name: true } },
-          },
-        },
-        category: { select: { id: true, name: true, emoji: true } },
-      },
+      where: { status: 'OPEN' },
       orderBy: { createdAt: 'desc' },
-      take: limit,
+      take: 50,
     })
 
     if (jobs.length === 0) {

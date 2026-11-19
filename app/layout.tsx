@@ -1,25 +1,34 @@
 import type { Metadata } from 'next'
-import { Sora, DM_Sans } from 'next/font/google'
 import './globals.css'
-import CategoryNav from '@/components/navigation/CategoryNav'
-import IntroAnimation from '@/components/ui/IntroAnimation'
-import { AuthProvider } from '@/lib/supabase/auth-context'
-
-const sora = Sora({
-  subsets: ['latin'],
-  variable: '--font-sora',
-  display: 'swap',
-})
-
-const dmSans = DM_Sans({
-  subsets: ['latin'],
-  variable: '--font-dm-sans',
-  display: 'swap',
-})
 
 export const metadata: Metadata = {
-  title: 'UpahJe.my — Malaysia\'s Local Hiring Platform',
-  description: 'Hire trusted local help in Malaysia. Post a job, compare verified workers, and pay safely after the work is done.',
+  metadataBase: new URL('https://upahje.my'),
+  title: {
+    default: 'UpahJe.my - Plain tech answers for Malaysian small businesses',
+    template: '%s - UpahJe.my',
+  },
+  description:
+    'Short, sourced articles about technology for Malaysian small businesses, in English and Bahasa Melayu.',
+  // og:url is per page and per locale (each route sets it); a site-wide value
+  // here is what a crawler would quote for every page.
+  openGraph: {
+    siteName: 'UpahJe.my',
+    type: 'website',
+    title: 'UpahJe.my - Plain tech answers for Malaysian small businesses',
+    description:
+      'Short, sourced articles about technology for Malaysian small businesses, in English and Bahasa Melayu.',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'UpahJe.my - Plain tech answers for Malaysian small businesses',
+    description:
+      'Short, sourced articles about technology for Malaysian small businesses, in English and Bahasa Melayu.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
 }
 
 export default function RootLayout({
@@ -28,27 +37,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html
-      lang="en"
-      className={`${sora.variable} ${dmSans.variable} bg-[var(--color-canvas-soft)]`}
-      suppressHydrationWarning
-    >
-      <head>
-        {/* Prevent flash of content behind intro overlay — runs before paint */}
+    <html lang="en" className="ui-canvas" suppressHydrationWarning>
+      <body className="ui-canvas">
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){try{document.documentElement.setAttribute('data-intro','loading')}catch(e){}})()`,
+            __html:
+              "try{document.documentElement.dataset.js='on';if(localStorage.getItem('upahje-theme')==='dark'){document.documentElement.dataset.theme='dark'}}catch(e){}",
           }}
         />
-      </head>
-      <body className="bg-[var(--color-canvas-soft)] text-neutral-900">
-        <AuthProvider>
-          <IntroAnimation />
-          <div id="page-content">
-            <CategoryNav />
-            <main>{children}</main>
-          </div>
-        </AuthProvider>
+        <main>{children}</main>
       </body>
     </html>
   )

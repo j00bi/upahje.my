@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "prisma generate && next build",
+  "buildCommand": "node scripts/check-articles.mjs && prisma generate && node scripts/generate-llms.mjs && next build",
   "outputDirectory": ".next",
   "framework": "nextjs"
 }

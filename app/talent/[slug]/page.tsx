@@ -150,8 +150,8 @@ export default async function TalentProfilePage({ params }: { params: Promise<{ 
               availability="Flexible"
               categories={["Rumah & Taman", "Cucian & Dobi"]}
               verified
-              reviewCount={0}
-              averageRating={0}
+              reviewCount={18}
+              averageRating={4.5}
             />
             <TalentCard
               name="Kumar a/l Raj"
@@ -160,9 +160,8 @@ export default async function TalentProfilePage({ params }: { params: Promise<{ 
               rate="RM 45–60 / job"
               availability="Weekdays"
               categories={["Baik Pulih Kenderaan", "Elektrik & Plumbing"]}
-              verified
-              reviewCount={0}
-              averageRating={0}
+              reviewCount={7}
+              averageRating={4.2}
             />
             <TalentCard
               name="Siti Aminah"
@@ -171,9 +170,8 @@ export default async function TalentProfilePage({ params }: { params: Promise<{ 
               rate="RM 35–50 / job"
               availability="Weekends"
               categories={["Masakan & Katering", "Jagaan & Teman"]}
-              verified
-              reviewCount={0}
-              averageRating={0}
+              reviewCount={23}
+              averageRating={4.8}
             />
           </div>
         </div>

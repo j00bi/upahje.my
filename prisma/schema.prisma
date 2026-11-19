@@ -50,17 +50,15 @@ model Session {
 }
 
 model Profile {
-  id        String    @id @default(cuid())
-  userId    String    @unique
-  role      Role      @default(TALENT)
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  role      Role     @default(TALENT)
   phone     String?
   state     String?
   area      String?
-  kycStatus KYCStatus @default(PENDING)
-  kycFileUrl String?
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
-  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model Talent {
@@ -176,13 +174,6 @@ enum Role {
   TALENT
   EMPLOYER
   ADMIN
-}
-
-enum KYCStatus {
-  PENDING
-  SUBMITTED
-  VERIFIED
-  REJECTED
 }
 
 enum Track {

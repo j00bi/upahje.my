@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useMemo } from 'react';
+import Image from 'next/image';
 
 export interface PortfolioImage {
   id: string;
@@ -56,9 +57,12 @@ export function PortfolioGallery({ images, categories: propCategories, onImageCl
             onClick={() => onImageClick?.(image, index)}
           >
             <div className="relative overflow-hidden rounded-lg shadow-md transition-transform duration-300 group-hover:scale-[1.02] group-hover:shadow-xl">
-              <img
+              <Image
                 src={image.src}
                 alt={image.title}
+                width={600}
+                height={400}
+                unoptimized
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />

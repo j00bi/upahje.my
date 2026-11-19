@@ -1,215 +1,150 @@
 'use client'
 
 import { useState } from 'react'
-import { useRouter } from 'next/navigation'
-import { LABOUR_CATEGORIES, TECHNICAL_CATEGORIES } from '@/lib/domain'
-import type { Track } from '@/lib/domain'
+import { LABOUR_CATEGORIES, type LabourCategoryId } from '@/lib/domain'
 
-interface PostJobFormProps {
-  session?: { user: { id: string } } | null
-  onSuccess?: (jobId: string) => void
+interface JobFormData {
+  title: string
+  description: string
+  categories: LabourCategoryId[]
+  location: string
+  rateMin: string
+  rateMax: string
 }
 
-export function PostJobForm({ session, onSuccess }: PostJobFormProps) {
-  const router = useRouter()
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-
-  const [form, setForm] = useState({
+export function PostJobForm() {
+  const [formData, setFormData] = useState<JobFormData>({
     title: '',
     description: '',
-    categoryId: '',
+    categories: [],
     location: '',
     rateMin: '',
     rateMax: '',
-    track: 'LABOUR' as Track,
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const update = (k: string, v: string) => setForm(f => ({ ...f, [k]: v }))
-
-  const isValid = form.title.trim().length >= 3 && form.categoryId && form.location.trim()
+  const toggleCategory = (id: LabourCategoryId) => {
+    setFormData(prev => ({
+      ...prev,
+      categories: prev.categories.includes(id)
+        ? prev.categories.filter(c => c !== id)
+        : [...prev.categories, id]
+    }))
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!isValid) return
-
-    // If not authenticated, redirect to sign-in preserving form intent
-    if (!session) {
-      sessionStorage.setItem('pendingJobPost', JSON.stringify(form))
-      router.push('/auth/signin?callbackUrl=/jobs/post')
-      return
-    }
-
-    setLoading(true)
-    setError(null)
-
-    const rate = form.rateMin && form.rateMax
-      ? `RM${form.rateMin} – RM${form.rateMax}`
-      : form.rateMin ? `RM${form.rateMin}+` : 'Negotiable'
+    setIsSubmitting(true)
 
     try {
-      const res = await fetch('/api/jobs', {
+      const response = await fetch('/api/jobs', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          title: form.title.trim(),
-          description: form.description.trim(),
-          categoryId: form.categoryId,
-          location: form.location.trim(),
-          rateMin: form.rateMin,
-          rateMax: form.rateMax,
-          track: form.track,
-          rate,
-        }),
+        body: JSON.stringify(formData),
       })
 
-      const data = await res.json()
-
-      if (res.ok) {
-        onSuccess?.(data.jobId)
-        router.push(`/jobs/${data.jobId}`)
-      } else if (res.status === 401) {
-        // Token expired or session lost
-        sessionStorage.setItem('pendingJobPost', JSON.stringify(form))
-        router.push('/auth/signin?callbackUrl=/jobs/post')
+      if (response.ok) {
+        alert('Job posted successfully!')
+        // Navigate on success
       } else {
-        setError(data.error ?? 'Failed to post job. Please try again.')
+        alert('Failed to post job')
       }
     } catch {
-      setError('Network error. Please check your connection.')
+      console.error('Error posting job')
+      alert('Error posting job')
     } finally {
-      setLoading(false)
+      setIsSubmitting(false)
     }
   }
 
-  const categories = form.track === 'LABOUR' ? LABOUR_CATEGORIES : TECHNICAL_CATEGORIES
-
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      {/* Track selector */}
-      <div className="flex gap-3">
-        {(['LABOUR', 'TECHNICAL'] as Track[]).map(t => (
-          <button
-            key={t}
-            type="button"
-            onClick={() => update('track', t)}
-            className={`flex-1 py-3 rounded-2xl border-2 text-sm font-medium transition ${
-form.track === t
-                    ? 'border-emerald-600 bg-emerald-50 text-emerald-800'
-                    : 'border-slate-200 bg-white text-slate-500 hover:border-slate-300'
-            }`}
-          >
-            {t === 'LABOUR' ? '🛠️ Labour' : '💻 Technical'}
-          </button>
-        ))}
-      </div>
-
-      {/* Title */}
+    <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
       <div>
-        <label className="block text-sm font-medium text-slate-700 mb-1.5">Job title *</label>
+        <label className="block text-sm font-medium mb-1">Job Title</label>
         <input
           type="text"
-          value={form.title}
-          onChange={e => update('title', e.target.value)}
-          placeholder="e.g. Need grass cutter this Saturday"
-          className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-          maxLength={120}
+          value={formData.title}
+          onChange={e => setFormData({ ...formData, title: e.target.value })}
+          className="w-full border rounded-xl px-4 py-3"
+          placeholder="Need a reliable house painter"
           required
         />
       </div>
 
-      {/* Category */}
       <div>
-        <label className="block text-sm font-medium text-slate-700 mb-1.5">Category *</label>
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-          {categories.map(cat => (
+        <label className="block text-sm font-medium mb-1">Categories (select at least 1)</label>
+        <div className="flex flex-wrap gap-2">
+          {LABOUR_CATEGORIES.map(cat => (
             <button
               key={cat.id}
               type="button"
-              onClick={() => update('categoryId', cat.id)}
-              className={`p-3 rounded-2xl border text-sm text-left transition ${
-                form.categoryId === cat.id
-                  ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-medium'
-                  : 'border-slate-200 bg-white text-slate-600 hover:border-slate-300'
+              onClick={() => toggleCategory(cat.id)}
+              className={`px-4 py-2 rounded-2xl border text-sm transition-all ${
+                formData.categories.includes(cat.id)
+                  ? 'bg-green-600 text-white border-green-600'
+                  : 'border-gray-300 hover:border-green-600'
               }`}
             >
-              <span className="text-base">{cat.emoji}</span>
-              <span className="ml-1.5">{cat.name}</span>
+              {cat.emoji} {cat.name}
             </button>
           ))}
         </div>
       </div>
 
-      {/* Location */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label className="block text-sm font-medium mb-1">Location</label>
+          <input
+            type="text"
+            value={formData.location}
+            onChange={e => setFormData({ ...formData, location: e.target.value })}
+            className="w-full border rounded-xl px-4 py-3"
+            placeholder="Kajang, Selangor"
+            required
+          />
+        </div>
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className="block text-sm font-medium mb-1">Rate Min (RM)</label>
+            <input
+              type="number"
+              value={formData.rateMin}
+              onChange={e => setFormData({ ...formData, rateMin: e.target.value })}
+              className="w-full border rounded-xl px-4 py-3"
+              placeholder="80"
+            />
+          </div>
+          <div>
+            <label className="block text-sm font-medium mb-1">Rate Max (RM)</label>
+            <input
+              type="number"
+              value={formData.rateMax}
+              onChange={e => setFormData({ ...formData, rateMax: e.target.value })}
+              className="w-full border rounded-xl px-4 py-3"
+              placeholder="150"
+            />
+          </div>
+        </div>
+      </div>
+
       <div>
-        <label className="block text-sm font-medium text-slate-700 mb-1.5">Location *</label>
-        <input
-          type="text"
-          value={form.location}
-          onChange={e => update('location', e.target.value)}
-          placeholder="e.g. Kajang, Selangor"
-          className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+        <label className="block text-sm font-medium mb-1">Job Description</label>
+        <textarea
+          value={formData.description}
+          onChange={e => setFormData({ ...formData, description: e.target.value })}
+          className="w-full border rounded-2xl px-4 py-3 h-32"
+          placeholder="Describe the job requirements, timeline, and any specific skills needed..."
           required
         />
       </div>
 
-      {/* Budget range */}
-      <div>
-        <label className="block text-sm font-medium text-slate-700 mb-1.5">Budget (RM, optional)</label>
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <input
-              type="number"
-              value={form.rateMin}
-              onChange={e => update('rateMin', e.target.value)}
-              placeholder="Min"
-              min="0"
-              className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-            />
-          </div>
-          <div>
-            <input
-              type="number"
-              value={form.rateMax}
-              onChange={e => update('rateMax', e.target.value)}
-              placeholder="Max"
-              min="0"
-              className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Description */}
-      <div>
-        <label className="block text-sm font-medium text-slate-700 mb-1.5">Description (optional)</label>
-        <textarea
-          value={form.description}
-          onChange={e => update('description', e.target.value)}
-          placeholder="Describe the job, requirements, what's included, any special notes..."
-          className="w-full border border-slate-200 rounded-2xl px-4 py-3 text-sm h-28 resize-none focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
-          maxLength={1000}
-        />
-        <p className="mt-1 text-xs text-slate-400 text-right">{form.description.length}/1000</p>
-      </div>
-
-      {error && (
-        <div className="bg-red-50 border border-red-200 rounded-2xl p-4 text-sm text-red-700">
-          {error}
-        </div>
-      )}
-
       <button
         type="submit"
-        disabled={!isValid || loading}
-        className="w-full py-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold rounded-2xl transition disabled:bg-slate-300 disabled:cursor-not-allowed"
+        disabled={isSubmitting || formData.categories.length === 0}
+        className="w-full py-4 bg-green-600 text-white font-semibold rounded-3xl disabled:bg-gray-300"
       >
-        {loading ? 'Posting...' : 'Post Job'}
+        {isSubmitting ? 'Posting Job...' : 'Post Job'}
       </button>
-
-      <p className="text-center text-xs text-slate-400">
-        {session ? 'Your job will be visible immediately after posting.' : 'You\'ll be asked to sign in before we post your job.'}
-      </p>
     </form>
   )
 }
