@@ -40,18 +40,18 @@ API menyampaikan satu maklumat yang ditetapkan antara dua sistem, apabila dimint
 
 ## Apakah beza antara API model tertutup dengan API model terbuka?
 
-API model tertutup ialah API yang anda boleh panggil, tetapi modelnya tidak boleh anda hoskan sendiri. API model terbuka pula membolehkan fail model dimuat turun dan dijalankan pada perkakasan yang anda kawal.
+API model tertutup ialah API yang anda boleh panggil, tetapi modelnya tidak boleh anda hosting sendiri. API model terbuka pula membolehkan fail model dimuat turun dan dijalankan pada perkakasan yang anda kawal.
 
 | Apa yang menentukan | API model tertutup | API model terbuka |
 | --- | --- | --- |
-| Di mana model berjalan | Server pembekal | Server anda, atau hos yang anda pilih |
-| Cara mendapatkan model | Tidak boleh. Anda hanya dapat katalog dan kadar setiap token | Boleh. Anda muat turun pemberat model |
+| Di mana model berjalan | Server pembekal | Server anda, atau hosting yang anda pilih |
+| Cara mendapatkan model | Tidak boleh. Anda hanya dapat katalog dan kadar setiap token | Boleh. Anda muat turun model weights |
 | Apa yang mengawal penggunaan | Terma perkhidmatan pembekal | Lesen model: Apache 2.0, MIT, atau lesen khusus pembekal |
 | Apa yang anda bayar | Token atau panggilan. Tiada bayaran bila tiada penggunaan | Kos server dan kos pengiraan setiap bulan, tambah orang untuk menjalankannya |
 | Siapa boleh menukar model | Pembekal, mengikut dasar penghentian mereka | Hanya anda, apabila anda mengemas kini sendiri |
 | Adakah data anda keluar dari premis | Biasanya ya | Tidak semestinya |
 
-Setakat 19 November 2026, katalog Mistral menyenaraikan ketiga-tiga bentuk lesen ini. Mistral Small 4 dan model Ministral 3 berada di bawah Apache 2.0, Z.ai GLM 5.3 dan DeepSeek V4.1 Flash di bawah MIT, dan Mistral Large 4 di bawah "Mistral Ecosystem Open Weight License" yang khusus ([dokumentasi Mistral, disemak 19 Nov 2026](https://docs.mistral.ai/models)). Pembekal tertutup pula menerbitkan katalog model dan kadar, bukan pemberat model ([katalog model OpenAI, disemak 19 Nov 2026](https://developers.openai.com/api/docs/models)).
+Setakat 19 November 2026, katalog Mistral menyenaraikan ketiga-tiga bentuk lesen ini. Mistral Small 4 dan model Ministral 3 berada di bawah Apache 2.0, Z.ai GLM 5.3 dan DeepSeek V4.1 Flash di bawah MIT, dan Mistral Large 4 di bawah "Mistral Ecosystem Open Weight License" yang khusus ([dokumentasi Mistral, disemak 19 Nov 2026](https://docs.mistral.ai/models)). Pembekal tertutup pula menerbitkan katalog model dan kadar, bukan model weights ([katalog model OpenAI, disemak 19 Nov 2026](https://developers.openai.com/api/docs/models)).
 
 ## Patut mula dengan yang mana satu?
 
@@ -67,11 +67,11 @@ Tiada penanda aras awam bagi kadar kerja integrasi API di Malaysia setakat Novem
 2. Asingkan kerja membaca sahaja daripada kerja yang menulis data atau memindahkan wang.
 3. Tanya apa yang berlaku apabila panggilan gagal. Pesanan yang hilang tanpa sebarang notifikasi ialah hasil yang paling mahal.
 4. Minta harga tetap bagi setiap integrasi, bukan anggaran ikut jam.
-5. Tanya apa yang berlaku kepada kod dan kredensial apabila kerja tamat.
+5. Tanya apa yang berlaku kepada kod dan credentials apabila kerja tamat.
 
 ## Berapa bil bulanan selepas sistem berjalan?
 
-Pembekal menerbitkan kadar mereka, jadi bil bulanan boleh dikira, bukan diagak. Kadar standard OpenAI untuk model kecil semasa, GPT-6 Luna, ialah USD 0.10 setiap juta token input dan USD 0.50 setiap juta token output ([harga OpenAI, disemak 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Bot FAQ WhatsApp yang mengendalikan 3,000 mesej sebulan, kira-kira 600 token masuk dan 200 token keluar setiap mesej, menelan sekitar USD 0.48 sebulan untuk token sahaja. Jika integrasi berjalan pada server anda sendiri, tambah kos hos. Kadar tukaran mata wang yang dikenakan oleh kad anda juga tidak termasuk dalam angka ini. Penyelenggaraan turut masuk dalam bil ini: apabila pembekal menghentikan sesuatu versi model, integrasi berhenti berfungsi sehingga ada orang membaikinya.
+Pembekal menerbitkan kadar mereka, jadi bil bulanan boleh dikira, bukan diagak. Kadar standard OpenAI untuk model kecil semasa, GPT-6 Luna, ialah USD 0.10 setiap juta token input dan USD 0.50 setiap juta token output ([harga OpenAI, disemak 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Bot FAQ WhatsApp yang mengendalikan 3,000 mesej sebulan, kira-kira 600 token masuk dan 200 token keluar setiap mesej, menelan sekitar USD 0.48 sebulan untuk token sahaja. Jika integrasi berjalan pada server anda sendiri, tambah kos hosting. Kadar tukaran mata wang yang dikenakan oleh kad anda juga tidak termasuk dalam angka ini. Penyelenggaraan turut masuk dalam bil ini: apabila pembekal menghentikan sesuatu versi model, integrasi berhenti berfungsi sehingga ada orang membaikinya.
 
 ## Bagaimana saya tahu sama ada saya perlu API atau cukup sekadar buat secara manual?
 
@@ -89,7 +89,7 @@ Tetapkan tiga perkara secara bertulis sebelum bayaran.
 
 ### Perlu saya ada server sendiri untuk menggunakan API?
 
-Tidak. API tertutup hanya memerlukan sambungan internet dan satu skrip atau aplikasi kecil. Anda memerlukan server hanya jika anda menghos model terbuka sendiri.
+Tidak. API tertutup hanya memerlukan sambungan internet dan satu skrip atau aplikasi kecil. Anda memerlukan server hanya jika anda hosting model terbuka sendiri.
 
 ### Adakah selamat memberikan kunci API saya kepada freelancer?
 

@@ -11,18 +11,20 @@ Register pass: 2026-11-19.
 | Term | Form used | Basis |
 | --- | --- | --- |
 | API | API | Common Malaysian usage. No coinage in use. |
-| server | **server** | DBP gives `pelayan`. Malaysian practitioners say `server`; `pelayan` reads as a textbook and is also ambiguous with waiter. Kept `server` per the register rule and the decision recorded here. |
+| server | **server** (English) | DBP gives `pelayan`. Malaysian practitioners say `server`; `pelayan` reads as a textbook and is also ambiguous with waiter. Kept `server` per the register rule and the decision recorded here. |
 | download | `muat turun` | DBP term, in everyday Malaysian use. |
 | upload | not used in this article | n/a |
 | authentication | `pengesahan` | DBP term for authentication. Caveat below: `pengesahan` also covers "verification", so the sentence is written to disambiguate ("cara pengesahan berfungsi"). |
 | API key | `kunci API` | Common Malaysian usage. |
-| credentials | `kredensial` | Common in Malaysian IT writing, but no everyday business usage. **Native reader should check.** Alternative: `kelayakan akses`. |
-| to host | `menghos` | Derived from the loanword `hos`. No DBP verb form in everyday use. **Native reader should check.** Alternative: `mengendalikan server sendiri`. |
-| model weights | `pemberat model` | Used in Malaysian ML writing; some practitioners say `weight` untranslated. **Native reader should check.** |
+| credentials | **credentials** (English) | Term policy rule 2 and 3: hard to translate, no DBP coinage in use. Earlier drafts said `kredensial`; replaced under the policy. |
+| to host / hosting | **hosting** (English) | Term policy rule 2. No coined verb. The noun also replaces the earlier `hos` / `kos hos`. Alternative if a verb is needed: `mengendalikan server sendiri`. |
+| model weights | **model weights** (English) | Term policy rule 2. Earlier drafts said `pemberat model`; defensible but a reach, so the loanword stands. |
 | deprecation policy | `dasar penghentian` | `dasar` for policy. The earlier draft said `polisi`, which is the Indonesian form and has been removed. |
 | benchmark | `penanda aras` | Malaysian government and business usage. |
 | endpoint | `endpoint` | Loanword kept; no Malaysian coinage in current use. |
 | order, courier, payment gateway, inventory, accounting | `pesanan`, `kurier`, `gerbang pembayaran`, `inventori`, `perakaunan` | Common Malaysian business usage. |
+
+Which terms are which: `muat turun`, `pengesahan`, `dasar`, `penanda aras`, `pesanan`, `kurier`, `gerbang pembayaran`, `inventori`, `perakaunan` are DBP or established Malaysian words and stay. `API`, `server`, `endpoint`, `hosting`, `credentials`, `model weights` are English borrowings kept under the term policy, because the BM alternative is a phrase no Malaysian says.
 
 DBP URLs for this article: none opened by me during this pass. The reference list in `ms-register.md` was checked by Chief on 2026-11-19, and I relied on it rather than re-opening PRPM, Istilah Semasa, Kamus DBP or Sah Bahasa. Where a term above says "common Malaysian usage", it was not verified against DBP today and the native reader should confirm it.
 
@@ -57,7 +59,7 @@ DBP URLs for this article: none opened by me during this pass. The reference lis
 
 ## For the native reader
 
-- `kredensial`, `menghos`, `pemberat model`: the three terms I could not settle from common usage alone.
+- `credentials`, `hosting`, `model weights`: settled by the user's term policy as English borrowings. Flagging only so a reader knows it was a decision, not an oversight.
 - `pengesahan` for authentication: correct per DBP, but a reader may hear "verification". If it reads wrong, `pengesahan identiti` is the narrower alternative.
 - `bersepah` and `salin-menyalin` are deliberately colloquial Malaysian. If the house style wants a plainer written register, `tidak teratur` and `kerja menyalin` are the replacements, at some cost in directness.
 - `menelan` (for a cost eating into a budget) is figurative but standard in Malaysian business writing. Flagging it rather than changing it.
