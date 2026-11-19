@@ -6,7 +6,7 @@ Review only. Not rendered, not linked from the page.
 
 | Claim | Source | Checked |
 | --- | --- | --- |
-| DeepSeek Harness version 0.2.2-rc.1 | `node_modules/@deepseek-ai/dsh/package.json` in the npx checkout; https://www.npmjs.com/package/@deepseek-ai/dsh | 2026-11-19 |
+| DeepSeek Harness version 0.2.2-rc.1 | version read by running `--version` on 19 November 2026, cross-checked against the installed package metadata | 2026-11-19 |
 | DSH install is `@deepseek-ai/dsh` booted by profile | wrapper package.json dependency, plus `~/.dsh/profiles` on disk | 2026-11-19 |
 | DSH config is YAML patch layers under `$DSH_HOME/profiles` plus `cordis.patch.yml` | `~/.dsh/cordis.patch.yml` and `~/.dsh/profiles` exist | 2026-11-19 |
 | DSH non-interactive route is a profile including a shipped `headless` one | supplied by Chief from the verified dataset, not re-measured by me | 2026-11-19 |

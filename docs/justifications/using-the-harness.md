@@ -6,7 +6,7 @@ Review only. Not rendered, not linked from the page.
 
 | Claim | Source | Checked |
 | --- | --- | --- |
-| Installed harness is 0.2.2-rc.1 | `node_modules/@deepseek-ai/dsh/package.json` inside the npx checkout | 2026-11-19 |
+| Installed harness is 0.2.2-rc.1 | version read by running `--version` on 19 November 2026, cross-checked against `node_modules/@deepseek-ai/dsh/package.json` | 2026-11-19 |
 | Transcript path shape `~/.dsh/sessions/<dir>/session-<uuid>/session.v4.jsonl.zstd` | directory listing of `~/.dsh/sessions/--home-husni-.dsh-bot-workspace--/` | 2026-11-19 |
 | Transcript is Zstandard-compressed JSON Lines | `file` reports Zstandard data; `zstd -dc` produces one JSON object per line | 2026-11-19 |
 | `session.lock` sits beside the transcript | directory listing shows a 0-byte `session.lock` | 2026-11-19 |
