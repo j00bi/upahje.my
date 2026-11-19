@@ -3,7 +3,6 @@ import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import TopBar from '@/components/layout/TopBar'
 import ArticleToc from '@/components/articles/ArticleToc'
-import ApiFlowFigure from '@/components/articles/ApiFlowFigure'
 import FaqList from '@/components/articles/FaqList'
 import { Markdown } from '@/lib/markdown'
 import { copyFor } from '@/lib/copy'
@@ -128,7 +127,6 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
               </div>
             )}
 
-            <ApiFlowFigure />
 
             <div className="article-body max-w-[68ch]">
               <Markdown source={withoutFaq} />
