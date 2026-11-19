@@ -45,7 +45,7 @@ Four signals, and any one of them is enough to start looking at an API.
 
 ## What does each one actually cost?
 
-Not a like-for-like number, because no public benchmark exists for what Malaysian developers charge for this work, and I am not going to invent one.
+Not a like-for-like number, because no public benchmark exists for what Malaysian developers charge for this work, and we will not invent one.
 
 What can be said honestly is the shape of the bill. A spreadsheet costs time, every week, forever, and it costs the cleanup after each mistake. An API costs a build once, a monthly fee for whatever it calls, and a maintenance event whenever a provider changes something. The build is the visible cost. The time you already spend, and the mistake that already happened, are the ones nobody puts in the sum until the sheet stops being enough.
 

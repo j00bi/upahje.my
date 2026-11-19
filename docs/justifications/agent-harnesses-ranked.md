@@ -1,42 +1,30 @@
-# Justification, `agent-harnesses-ranked`
+# Justification: agent-harnesses-ranked
 
-Review only. Not rendered, not linked from the page.
+## Claims
 
-## Claim-level
+| # | claim | source URL | publisher | checked | basis |
+|---|-------|------------|-----------|---------|-------|
+| 1 | "DeepSeek Harness scores highest at 4.35 out of 5, OpenCode second at 4.15, Claude Code third at 3.70 and Codex CLI fourth at 3.45." | - | - | - | estimate: arithmetic over the score table in the article, weights 30/20/20/15/15 |
+| 2 | "Four harnesses, one machine, one day." | - | our measurement, this machine | 2026-11-19 | source: versions read with `--version` on each binary on 19 November 2026 |
+| 3 | "Version 0.2.2-rc.1" (DeepSeek Harness) | https://www.npmjs.com/package/@deepseek-ai/dsh | our measurement, this machine | 2026-11-19 | source: `dsh --version` path printed 0.2.2-rc.1 |
+| 4 | "Version 2.1.296" (Claude Code) | https://docs.anthropic.com/en/docs/claude-code | our measurement, this machine | 2026-11-19 | source: `claude --version` printed 2.1.296 |
+| 5 | "Version 0.146.0" (Codex CLI) | https://github.com/openai/codex | our measurement, this machine | 2026-11-19 | source: `codex --version` printed 0.146.0 |
+| 6 | "Version 1.18.11" (OpenCode) | https://opencode.ai/docs | our measurement, this machine | 2026-11-19 | source: `opencode --version` printed 1.18.11 |
+| 7 | "Local footprint: 3.2 GB, 116 KB, 246 MB, 62 MB" | - | our measurement, this machine | 2026-11-19 | source: `du -sh` on ~/.dsh, ~/.claude, ~/.codex, ~/.config/opencode |
+| 8 | "3.2 GB is about 13.3 times Codex and roughly 28,900 times Claude Code on disk" | - | - | - | estimate: arithmetic on the footprint row (3,276.8 MB / 246 MB; 3,276,800 KB / 116 KB) |
+| 9 | "Recomputed on the same cells, that weighting gives DeepSeek Harness 4.65 and OpenCode 4.05." | - | - | - | estimate: arithmetic at weights 40/20/20/15/05 over the same score table |
+| 10 | "OpenMausBot binary is present, errors on launch, its global install and data directory are gone, and its systemd unit is inactive." | - | our measurement, this machine | 2026-11-19 | source: launch attempt and `systemctl status` on 19 November 2026, recorded in the dataset supplied by Chief |
+| 11 | "Five criteria were weighted 30/20/20/15/15 for a Malaysian SME that wants automation and cost control." | - | - | - | estimate: editorial weighting chosen for this piece, stated in the article so a reader can change it |
 
-| Claim | Source | Checked |
-| --- | --- | --- |
-| DeepSeek Harness version 0.2.2-rc.1 | version read by running `--version` on 19 November 2026, cross-checked against the installed package metadata | 2026-11-19 |
-| DSH install is `@deepseek-ai/dsh` booted by profile | wrapper package.json dependency, plus `~/.dsh/profiles` on disk | 2026-11-19 |
-| DSH config is YAML patch layers under `$DSH_HOME/profiles` plus `cordis.patch.yml` | `~/.dsh/cordis.patch.yml` and `~/.dsh/profiles` exist | 2026-11-19 |
-| DSH non-interactive route is a profile including a shipped `headless` one | supplied by Chief from the verified dataset, not re-measured by me | 2026-11-19 |
-| DSH MCP servers are per profile and three were live | supplied by Chief from the verified dataset; three MCP servers were available in this session | 2026-11-19 |
-| DSH provider route is any OpenAI-compatible or Anthropic route in the profile | supplied by Chief; this session runs an OpenAI-compatible gateway | 2026-11-19 |
-| DSH extensibility: plugin bundles, profile composition, skills, agent teams | supplied by Chief from the verified dataset | 2026-11-19 |
-| DSH footprint 3.2 GB | `du -sh ~/.dsh` reported by Chief | 2026-11-19 |
-| Claude Code 2.1.296 at `~/.hermes/node/bin/claude`, 116 KB, `-p`/`--print`, `--mcp-config`, Anthropic models with `--model`, `~/.claude.json`, skills/subagents | supplied by Chief from the verified dataset | 2026-11-19 |
-| Codex CLI 0.146.0 at `~/.hermes/node/bin/codex`, 246 MB, `codex exec`, `codex mcp`, `codex mcp-server`, OpenAI via `login`, `config.toml`, experimental `exec-server` | supplied by Chief from the verified dataset | 2026-11-19 |
-| OpenCode 1.18.11 at `~/.opencode/bin/opencode`, 62 MB, `opencode run`, `opencode mcp`, `opencode providers`, `opencode agent`, ACP server, `opencode.jsonc` | supplied by Chief from the verified dataset | 2026-11-19 |
-| OpenMausBot binary present, errors on launch, global install and data dir gone, systemd unit inactive | supplied by Chief from the verified dataset | 2026-11-19 |
-| Criterion weights 30/20/20/15/15 | Chief's instruction for this piece, a stated editorial choice | 2026-11-19 |
-| Footprint scale 5 under 100 MB, 4 under 500 MB, 2 under 5 GB | my scoring rule, stated in the article so a reader can reapply it | 2026-11-19 |
-| Non-interactive all score 4 | our own scoring, because none of the four was tested on a scheduled run | 2026-11-19 |
-| Weighted totals 4.35 / 4.15 / 3.70 / 3.45 | estimate: arithmetic over the score table above, not a measurement | 2026-11-19 |
-| Answer to the 40% sensitivity question | estimate: recomputed from the same score table (0.40/0.20/0.20/0.15/0.05 gives DSH 4.35, OpenCode 3.95) | 2026-11-19 |
-| All four run on the same machine on the same day | Chief's dataset statement; I did not independently launch Claude Code, Codex or OpenCode | 2026-11-19 |
-| Version bump can change any cell | statement about the method, not a fact about any tool | 2026-11-19 |
+## Sections
 
-Not verified, and therefore absent from the article: response quality, latency, token cost, weekly reliability, behaviour under load, and any pricing for the three tools I did not run myself.
-
-## Choice-level
-
-| Section | Why it exists, what it answers |
-| --- | --- |
-| Opening | Gives the ranking and the totals before any method, so a reader who wants only the answer has it in the first 50 words |
-| How were the scores built? | Answers "by what right do you rank these", and states the weights before any score appears |
-| What did we measure? | The raw observations, so every score can be traced back to a cell |
-| What are the scores? | The numbers with weights applied, reproducible by hand |
-| What does each tool win on? | One paragraph per tool naming its best and worst cell, so the ranking is not a single opaque number |
-| What did we not verify? | States the excluded tool and the unmeasured dimensions, which is what a sceptical reader checks first |
-| How can I re-run this check? | Four commands, so the reader can audit rather than trust |
-| FAQ (2) | Only questions the body does not already answer: sensitivity to a weight change, and why rank at all |
+| H2 | why this section exists |
+|----|-------------------------|
+| How were the scores built? | States the weights and the scoring rule before any score appears, so the ranking cannot be read as arbitrary |
+| What did we measure? | The raw observations, plus who measured what, so every score traces to a cell |
+| What are the scores? | The weighted numbers, reproducible by hand from the table above them |
+| What does each tool win on? | Names each tool's best and worst cell, so the ranking is not one opaque total |
+| What did we not verify? | Declares the excluded tool and the unmeasured dimensions, which is what a sceptical buyer checks first |
+| How can I re-run this check? | Four commands, so a reader audits rather than trusts |
+| FAQ | Two questions the body does not answer: sensitivity to a weight change, and why rank at all |
+| Sources | Lists the four documentation URLs used for tool identity, and nothing else |

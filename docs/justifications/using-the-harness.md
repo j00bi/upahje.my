@@ -1,29 +1,25 @@
-# Justification, `using-the-harness`
+# Justification: using-the-harness
 
-Review only. Not rendered, not linked from the page.
+## Claims
 
-## Claim-level
+| # | claim | source URL | publisher | checked | basis |
+|---|-------|------------|-----------|---------|-------|
+| 1 | "In DeepSeek Harness 0.2.2-rc.1 on this machine, one typed message becomes a turn, a turn becomes steps, and every step is written to a file on disk." | https://www.npmjs.com/package/@deepseek-ai/dsh | our measurement, this machine | 2026-11-19 | source: `--version` printed 0.2.2-rc.1; record types read from a decompressed session transcript |
+| 2 | "The transcript for this machine contains these record types, in the order a single exchange produces them: turn/start, step/start, request/header, request/context, assistant/message, tool/call, tool/result, step/end, turn/end." | - | our measurement, this machine | 2026-11-19 | source: `zstd -dc` on session.v4.jsonl.zstd and counting record types |
+| 3 | "The ~/.dsh/sessions path looks like `--home-husni-.dsh-bot-workspace--/session-<uuid>/session.v4.jsonl.zstd`." | - | our measurement, this machine | 2026-11-19 | source: directory listing of ~/.dsh/sessions |
+| 4 | "The transcript is Zstandard-compressed JSON Lines, one record per line before compression." | - | our measurement, this machine | 2026-11-19 | source: `file` reports Zstandard data; `zstd -dc` produces one JSON object per line |
+| 5 | "session.lock sits beside the transcript." | - | our measurement, this machine | 2026-11-19 | source: directory listing shows a 0-byte session.lock |
+| 6 | "The tool/call record has these data fields: turn, step, callId, name, arguments." | - | our measurement, this machine | 2026-11-19 | source: decoded tool/call records from the transcript |
+| 7 | "A task that needs four tools is several exchanges with the model, not one." | - | - | - | estimate: our reading of the step structure, each step carrying its own request/header and request/context |
+| 8 | "What exactly the provider receives inside a request is not something this page measures." | - | - | - | estimate: statement of our own limits, no outbound payload inspection performed |
 
-| Claim | Source | Checked |
-| --- | --- | --- |
-| Installed harness is 0.2.2-rc.1 | version read by running `--version` on 19 November 2026, cross-checked against `node_modules/@deepseek-ai/dsh/package.json` | 2026-11-19 |
-| Transcript path shape `~/.dsh/sessions/<dir>/session-<uuid>/session.v4.jsonl.zstd` | directory listing of `~/.dsh/sessions/--home-husni-.dsh-bot-workspace--/` | 2026-11-19 |
-| Transcript is Zstandard-compressed JSON Lines | `file` reports Zstandard data; `zstd -dc` produces one JSON object per line | 2026-11-19 |
-| `session.lock` sits beside the transcript | directory listing shows a 0-byte `session.lock` | 2026-11-19 |
-| Record types turn/start, step/start, request/header, request/context, assistant/message, tool/call, tool/result, step/end, turn/end | counted from one decompressed session transcript | 2026-11-19 |
-| `tool/call` data fields are turn, step, callId, name, arguments | read from a decoded `tool/call` record | 2026-11-19 |
-| Each step is a separate request | transcript contains `request/header` and `request/context` records inside steps | 2026-11-19 |
-| What the provider receives inside a request is not measured here | no inspection of outbound payloads was performed | 2026-11-19 |
-| Sessions persist after the window closes | session directories remain on disk after prior sessions ended | 2026-11-19 |
-| Whether an installation prunes old sessions is site-specific | not tested; stated as unknown | 2026-11-19 |
+## Sections
 
-## Choice-level
-
-| Section | Why it exists, what it answers |
-| --- | --- |
-| Opening | Defines the harness and stamps the version in the first 60 words, which is the whole promise of the piece |
-| What happens to one message | The concrete flow the brief asked for, using the record names the file actually contains |
-| Where is the conversation stored | The question a business owner asks once they realise a client document went into a chat |
-| What does a tool call look like | Explains who executes: the harness, not the model, which is the point most readers get wrong |
-| What can I check myself | Three commands so the page is auditable instead of authoritative |
-| FAQ (3) | Readability, persistence, and payload scope. Each is absent from the body, and the third is answered with "not measured" rather than a guess |
+| H2 | why this section exists |
+|----|-------------------------|
+| What happens to one message, from typing to answer? | The concrete flow the article promises, using record names the file actually contains |
+| Where is the conversation stored? | The question a business owner asks once a client document has been pasted into a chat |
+| What does a tool call look like in that flow? | Establishes that the harness executes tools, not the model, which most readers assume wrongly |
+| What can I check myself? | Three commands, so the page is auditable instead of authoritative |
+| FAQ | Readability, persistence, and payload scope. None is answered in the body, and the third is answered "not measured" |
+| Sources | One URL, for the package identity only; everything else here is a local measurement |

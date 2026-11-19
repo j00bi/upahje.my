@@ -43,7 +43,7 @@ Perkara penting bagi pemilik perniagaan ialah nombor 7. Tugasan yang memerlukan 
 
 Setiap sesi ialah satu direktori di bawah `.dsh/sessions`, dinamakan sempena folder kerja anda, dan ia menyimpan satu fail transkrip termampat serta satu fail lock.
 
-Pada mesin ini laluannya kelihatan begini: `~/.dsh/sessions/--home-husni-.dsh-bot-workspace--/session-0ec7202e-ac1e-4f02-ab14-bf76b3d29de3/session.v4.jsonl.zstd`. Bacalah sebagai tiga bahagian: slug daripada direktori kerja, kemudian pengenal sesi, kemudian fail. Transkrip itu ialah JSON Lines termampat dengan Zstandard, satu rekod setiap baris sebelum dimampatkan, dan `session.lock` terletak di sebelahnya.
+Pada mesin ini laluannya kelihatan begini: `~/.dsh/sessions/--home-husni-.dsh-bot-workspace--/session-0ec7202e-ac1e-4f02-ab14-bf76b3d29de3/session.v4.jsonl.zstd`. Baca sebagai tiga bahagian: slug daripada direktori kerja, kemudian pengenal sesi, kemudian fail. Transkrip itu ialah JSON Lines termampat dengan Zstandard, satu rekod setiap baris sebelum dimampatkan, dan `session.lock` terletak di sebelahnya.
 
 Itu wajar diketahui sebelum anda menampal kontrak pelanggan ke dalam tetingkap sembang. Perbualan itu ialah fail pada cakera anda sendiri, dalam folder yang dinamakan sempena projek anda, dan ia boleh dibaca dengan satu arahan.
 
@@ -73,7 +73,7 @@ Direktori sesi kekal pada cakera bersama transkripnya, jadi fail itu masih ada s
 
 ### Adakah setiap permintaan menghantar seluruh perbualan kepada model?
 
-Harness merekodkan `request/header` dan `request/context` bagi setiap step, jadi setiap step ialah permintaan berasingan, bukan satu pertukaran panjang. Apa sebenarnya yang diterima pembekal di dalam permintaan itu tidak diukur oleh halaman ini, dan saya tidak akan menekanya.
+Harness merekodkan `request/header` dan `request/context` bagi setiap step, jadi setiap step ialah permintaan berasingan, bukan satu pertukaran panjang. Apa sebenarnya yang diterima pembekal di dalam permintaan itu tidak diukur oleh halaman ini, dan kami tidak akan menekanya.
 
 ---
 

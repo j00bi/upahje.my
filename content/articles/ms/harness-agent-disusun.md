@@ -1,6 +1,6 @@
 ---
-title: "Harness agent disusun: empat CLI yang kami jalankan pada satu mesin"
-description: "DeepSeek Harness, Claude Code, Codex CLI dan OpenCode dinilai 1-5 pada lima kriteria berwajaran, menggunakan hanya apa yang kami ukur pada mesin ini pada 19 November 2026."
+title: "Harness agent disusun: empat CLI yang dipasang pada satu mesin"
+description: "DeepSeek Harness, Claude Code, Codex CLI dan OpenCode dipasang pada satu mesin, dinilai 1-5 pada lima kriteria berwajaran menggunakan hanya apa yang dapat kami baca daripada setiap satu pada 19 November 2026."
 slug: harness-agent-disusun
 translationKey: agent-harnesses-ranked
 date: 2026-11-19
@@ -41,11 +41,13 @@ Setiap tool dinilai 1 hingga 5 pada lima kriteria, dan kriteria itu diberi wajar
 | Kebolehlanjutan | 15% | Mendapat tingkah laku baharu tanpa menunggu pembekal |
 | Jejak operasi | 15% | Cakera, sandaran dan kos mesin bagi pasukan kecil |
 
-Sesuatu sel mendapat 5 hanya apabila pemerhatiannya jelas dan lengkap. Kriteria yang tiada dalam nota kami dilabel "tidak disahkan" dan tidak menyumbang apa-apa, bukan dirata-ratakan kepada nilai tengah yang sopan.
+Sesuatu sel mendapat 5 hanya apabila pemerhatiannya jelas dan lengkap. Kriteria yang tiada dalam nota kami dilabel "tidak disahkan" dan tidak menyumbang apa-apa, bukan dirata-ratakan kepada nilai tengah yang sopan. Kawalan pembekal dan kos, MCP serta kebolehlanjutan ialah skor editorial yang berpaut pada baris setiap tool dalam jadual, bukan kuantiti yang diukur: jadual menyatakan sesuatu tool menyokong sesuatu laluan, bukan sebaik mana ia melakukannya.
 
 ## Apa yang kami ukur?
 
 Empat harness, satu mesin, satu hari. Versi, laluan pemasangan, konfigurasi, permukaan automasi, MCP, pilihan pembekal, kebolehlanjutan dan jejak cakera.
+
+Apa yang diliputi dan tidak: keempat-empatnya dipasang dan dikonfigurasikan pada mesin ini, dan setiap sel di atas dibaca daripada pemasangan itu dengan menjalankan `--version`, `--help` atau memeriksa laluan konfigurasi. Saya menjalankan DeepSeek Harness dari hujung ke hujung dalam sesi ini. Claude Code, Codex dan OpenCode diukur oleh Chief pada mesin yang sama pada hari yang sama, dan saya tidak menggunakan tiga itu dari hujung ke hujung. Jadi ini susunan bagi apa yang dapat kami periksa, bukan dakwaan bahawa keempat-empatnya dijalankan melalui tugasan yang sama.
 
 | | DeepSeek Harness | Claude Code | Codex CLI | OpenCode |
 | --- | --- | --- | --- | --- |
@@ -77,7 +79,7 @@ Jejak cakera dinilai pada skala yang dinyatakan: 5 bagi bawah 100 MB, 4 bagi baw
 
 DeepSeek Harness menang pada pilihan pembekal, MCP dan kebolehlanjutan, dan kalah pada cakera.
 
-Baris pembekalnya satu-satunya yang berbunyi "mana-mana laluan serasi OpenAI atau Anthropic", dan itulah kriteria 30% yang melakukan sebahagian besar kerja. MCP-nya mengikut profil dengan tiga server aktif semasa sesi kami. Kebolehlanjutannya merangkumi bundle plugin, komposisi profil, skills dan agent teams. Sebaliknya, 3.2 GB ialah 27 kali Codex dan 13,000 kali Claude Code pada cakera, sebab itulah ia mendapat 2 pada jejak operasi.
+Baris pembekalnya satu-satunya yang berbunyi "mana-mana laluan serasi OpenAI atau Anthropic", dan itulah kriteria 30% yang melakukan sebahagian besar kerja. MCP-nya mengikut profil dengan tiga server aktif semasa sesi kami. Kebolehlanjutannya merangkumi bundle plugin, komposisi profil, skills dan agent teams. Sebaliknya, 3.2 GB ialah kira-kira 13.3 kali Codex dan sekitar 28,900 kali Claude Code pada cakera, sebab itulah ia mendapat 2 pada jejak operasi.
 
 OpenCode ialah tool paling seimbang dalam set ini: 4, 4, 4, 4, 5, tanpa satu sel lemah.
 
@@ -110,7 +112,7 @@ Empat arahan dan satu semakan fail, dan anda boleh mengaudit setiap nombor dalam
 
 ### Adakah susunan ini berubah jika saya lebih mementingkan kos daripada 30%?
 
-Ya, dan jadual itu membolehkan anda mengiranya semula. Jika kawalan pembekal dan kos dinaikkan kepada 40% dan jejak operasi diturunkan kepada 5%, DeepSeek Harness kekal di tempat pertama dan jurangnya dengan OpenCode melebar, kerana jurang antara mereka hampir semuanya terletak pada kriteria itu.
+Ya, dan jadual itu membolehkan anda mengiranya semula. Jika kawalan pembekal dan kos dinaikkan kepada 40% dan jejak operasi diturunkan kepada 5%, DeepSeek Harness kekal di tempat pertama dan jurangnya dengan OpenCode melebar, kerana jurang antara mereka hampir semuanya terletak pada kriteria itu. Dikira semula pada sel yang sama, wajaran itu memberi DeepSeek Harness 4.65 dan OpenCode 4.05.
 
 ### Mengapa disusun jika nombornya terikat pada versi?
 

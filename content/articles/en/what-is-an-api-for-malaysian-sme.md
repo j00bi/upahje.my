@@ -63,6 +63,8 @@ No public benchmark exists for what Malaysian developers charge for API integrat
 
 ## How do I price the job myself?
 
+Pricing starts before you ask for a quote, with five facts that decide the number.
+
 1. List every system that must talk to which, and in which direction.
 2. Separate read-only work from anything that writes data or moves money.
 3. Ask what happens on a failed call. Silent loss of an order is the expensive outcome.

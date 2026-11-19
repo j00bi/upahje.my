@@ -37,7 +37,7 @@ Two things that fact does not give you: free inference, and permission to ignore
 
 ## What does each option cost per month?
 
-The per-call side can be computed exactly, because vendors publish rates. The self-hosted side depends on GPU rental, which I could verify for one supplier only.
+The per-call side can be computed exactly, because vendors publish rates. The self-hosted side depends on GPU rental, which we could verify for one supplier only.
 
 | Cost line | Pay per call | Run it in-house |
 | --- | --- | --- |

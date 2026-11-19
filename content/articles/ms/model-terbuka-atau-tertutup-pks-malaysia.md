@@ -37,7 +37,7 @@ Dua perkara yang tidak diberikannya: penggunaan percuma, dan kebenaran untuk men
 
 ## Berapa kos setiap pilihan sebulan?
 
-Bahagian bayaran ikut panggilan boleh dikira tepat kerana pembekal menerbitkan kadarnya. Bahagian hosting sendiri bergantung pada sewa GPU, dan saya hanya dapat sahkan kadar seorang pembekal.
+Bahagian bayaran ikut panggilan boleh dikira tepat kerana pembekal menerbitkan kadarnya. Bahagian hosting sendiri bergantung pada sewa GPU, dan kami hanya dapat sahkan kadar seorang pembekal.
 
 | Perkara | Bayar ikut panggilan | Jalankan sendiri |
 | --- | --- | --- |

@@ -40,7 +40,7 @@ API menyampaikan satu maklumat yang ditetapkan antara dua sistem, apabila dimint
 
 ## Apakah beza antara API model tertutup dengan API model terbuka?
 
-API model tertutup ialah API yang anda boleh panggil, tetapi modelnya tidak boleh anda hosting sendiri. API model terbuka pula membolehkan fail model dimuat turun dan dijalankan pada perkakasan yang anda kawal.
+API model tertutup ialah API yang anda boleh panggil, tetapi modelnya tidak boleh anda jalankan sendiri. API model terbuka pula membolehkan fail model dimuat turun dan dijalankan pada perkakasan yang anda kawal.
 
 | Apa yang menentukan | API model tertutup | API model terbuka |
 | --- | --- | --- |
@@ -62,6 +62,8 @@ Bayaran ikut panggilan tidak dikenakan apabila tiada penggunaan. Server pula men
 Tiada penanda aras awam bagi kadar kerja integrasi API di Malaysia setakat November 2026. Sebut harga berubah bergantung pada bilangan endpoint, sama ada integrasi menulis data atau membaca sahaja, cara pengesahan berfungsi, apa yang patut berlaku apabila panggilan gagal, dan betapa bersepahnya data sedia ada anda. Harga yang diberi sebelum lima soalan itu dijawab masih anggaran.
 
 ## Bagaimana saya boleh menilai harga kerja ini sendiri?
+
+Penilaian harga bermula sebelum anda minta sebut harga, dengan lima fakta yang menentukan angkanya.
 
 1. Senaraikan sistem yang perlu berhubung, dengan sistem apa, dan ke arah mana.
 2. Asingkan kerja membaca sahaja daripada kerja yang menulis data atau memindahkan wang.
@@ -89,7 +91,7 @@ Tetapkan tiga perkara secara bertulis sebelum bayaran.
 
 ### Perlu saya ada server sendiri untuk menggunakan API?
 
-Tidak. API tertutup hanya memerlukan sambungan internet dan satu skrip atau aplikasi kecil. Anda memerlukan server hanya jika anda hosting model terbuka sendiri.
+Tidak. API tertutup hanya memerlukan sambungan internet dan satu skrip atau aplikasi kecil. Anda memerlukan server hanya jika anda menjalankan model terbuka itu sendiri.
 
 ### Adakah selamat memberikan kunci API saya kepada freelancer?
 

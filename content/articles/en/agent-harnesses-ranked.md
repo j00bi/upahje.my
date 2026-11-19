@@ -1,6 +1,6 @@
 ---
-title: "Agent harnesses ranked: four CLIs we ran on one machine"
-description: "DeepSeek Harness, Claude Code, Codex CLI and OpenCode scored 1-5 on five weighted criteria, using only what we measured on this machine on 19 November 2026."
+title: "Agent harnesses ranked: four CLIs installed on one machine"
+description: "DeepSeek Harness, Claude Code, Codex CLI and OpenCode installed on one machine, scored 1-5 on five weighted criteria using only what we could read from each on 19 November 2026."
 slug: agent-harnesses-ranked
 translationKey: agent-harnesses-ranked
 date: 2026-11-19
@@ -41,11 +41,13 @@ Each tool was scored 1 to 5 on five criteria, and the criteria were weighted for
 | Extensibility | 15% | Getting more behaviour without waiting for the vendor |
 | Operational footprint | 15% | Disk, backups and machine cost for a small team |
 
-A cell scores 5 only when the observation is explicit and complete. A criterion with nothing in our notes scores "not verified" and contributes nothing, rather than averaging to a polite middle.
+A cell scores 5 only when the observation is explicit and complete. A criterion with nothing in our notes scores "not verified" and contributes nothing, rather than averaging to a polite middle. Provider and cost control, MCP and extensibility are editorial scores anchored to the line each tool has in the table, not measured quantities: the table says a tool supports a route, not how well it does it.
 
 ## What did we measure?
 
 Four harnesses, one machine, one day. Version, install route, config, automation surface, MCP, provider choice, extensibility and disk footprint.
+
+What that does and does not cover: all four were installed and configured on this machine, and every cell above was read from that installation by running `--version`, `--help` or inspecting the config path. I ran DeepSeek Harness end to end myself in this session. Claude Code, Codex and OpenCode were measured by Chief on the same machine the same day, and I did not use those three end to end. So this is a ranking of what we could inspect, not a claim that all four were driven through the same task.
 
 | | DeepSeek Harness | Claude Code | Codex CLI | OpenCode |
 | --- | --- | --- | --- | --- |
@@ -77,7 +79,7 @@ Footprint was scored on a stated scale: 5 for under 100 MB, 4 for under 500 MB, 
 
 DeepSeek Harness wins on provider choice, MCP and extensibility, and loses on disk.
 
-Its provider line is the only one that reads "any OpenAI-compatible or Anthropic route", which is the 30% criterion doing most of the work. Its MCP is per-profile with three servers live during our session. Extensibility covers plugin bundles, profile composition, skills and agent teams. Against that, 3.2 GB is 27 times Codex and 13,000 times Claude Code on disk, which is why it takes a 2 on footprint.
+Its provider line is the only one that reads "any OpenAI-compatible or Anthropic route", which is the 30% criterion doing most of the work. Its MCP is per-profile with three servers live during our session. Extensibility covers plugin bundles, profile composition, skills and agent teams. Against that, 3.2 GB is about 13.3 times Codex and roughly 28,900 times Claude Code on disk, which is why it takes a 2 on footprint.
 
 OpenCode is the most even tool in the set: 4, 4, 4, 4, 5, with no single weak cell.
 
@@ -110,7 +112,7 @@ Four commands and a filesystem check, and you can audit every number in the tabl
 
 ### Does the ranking change if I care about cost more than 30%?
 
-Yes, and the table lets you recompute it. Raising provider and cost control to 40% and dropping footprint to 5% keeps DeepSeek Harness first and widens its lead over OpenCode, because the gap between them sits almost entirely in that criterion.
+Yes, and the table lets you recompute it. Raising provider and cost control to 40% and dropping footprint to 5% keeps DeepSeek Harness first and widens its lead over OpenCode, because the gap between them sits almost entirely in that criterion. Recomputed on the same cells, that weighting gives DeepSeek Harness 4.65 and OpenCode 4.05.
 
 ### Why rank at all if the numbers are version-pinned?
 

@@ -73,7 +73,7 @@ The session directory stays on disk with its transcript, so the file persists af
 
 ### Does every request send the whole conversation to the model?
 
-The harness records a `request/header` and a `request/context` per step, so each step is a separate request rather than one long exchange. What exactly the provider receives inside that request is not something this page measures, and I am not going to guess at it.
+The harness records a `request/header` and a `request/context` per step, so each step is a separate request rather than one long exchange. What exactly the provider receives inside that request is not something this page measures, and we are not going to guess at it.
 
 ---
 
