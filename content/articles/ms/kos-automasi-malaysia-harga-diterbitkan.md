@@ -1,6 +1,6 @@
 ---
 title: "Kos kerja automasi di Malaysia: harga yang diterbitkan, enam sumber"
-description: "Enam penerbit Malaysia, 30 harga diterbitkan untuk kerja automasi dan integrasi, semuanya disemak pada 19 November 2026. Apa yang diterbitkan, apa yang tidak, dan cara membaca unitnya."
+description: "Enam penerbit Malaysia, 30 harga diterbitkan untuk kerja automasi dan integrasi. Harga dibaca pada 19 November 2026; beberapa halaman sumber tiada tarikh terbitan, jadi sesuatu harga mungkin lebih lama daripada artikel ini."
 slug: kos-automasi-malaysia-harga-diterbitkan
 translationKey: automation-rates-malaysia-published
 date: 2026-11-19
