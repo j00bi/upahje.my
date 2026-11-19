@@ -26,6 +26,15 @@ sources:
   - title: "xAI, harga model"
     url: "https://docs.x.ai/docs/pricing"
     checked: 2026-11-19
+  - title: "Anthropic, sokongan PDF (fail)"
+    url: "https://docs.claude.com/en/docs/build-with-claude/pdf-support"
+    checked: 2026-11-19
+  - title: "OpenAI, input fail"
+    url: "https://developers.openai.com/api/docs/guides/file-inputs"
+    checked: 2026-11-19
+  - title: "xAI, function calling"
+    url: "https://docs.x.ai/developers/tools/function-calling"
+    checked: 2026-11-19
 ---
 
 # Claude, ChatGPT, Gemini dan Grok: apa sebenarnya beza antara model tertutup
@@ -53,7 +62,7 @@ Hanya apa yang dinyatakan oleh halaman vendor sendiri. Di mana halaman tidak men
 
 Angka itu datang daripada gambaran model Anthropic, halaman harga API OpenAI, halaman harga DeepSeek, halaman harga AI Studio Google dan halaman harga model xAI, semuanya dibaca pada 19 November 2026.
 
-Dua sel memerlukan nota dan bukan angka. Harga input Haiku 5.5 disyaratkan pada halaman itu untuk prompt hingga 100,000 token. Dan GPT-6.2 Astra serta Sol menilai konteks pendek dan panjang secara berasingan, jadi kedua-duanya dicetak. Sel keupayaan kini membawa URL dokumentasi vendor di belakangnya: sokongan PDF bagi baris Claude, input fail bagi baris GPT, dan function calling bagi grok-4.7.
+Dua sel memerlukan nota dan bukan angka. Harga input Haiku 5.5 disyaratkan pada halaman itu untuk prompt hingga 100,000 token. Dan GPT-6.2 Astra serta Sol menilai konteks pendek dan panjang secara berasingan, jadi kedua-duanya dicetak. Sel keupayaan disokong oleh dokumentasi vendor yang disenaraikan dalam Sumber: sokongan PDF bagi baris Claude, input fail bagi baris GPT, dan function calling bagi grok-4.7.
 
 ## Apa yang tidak diberitahu oleh skor penanda aras?
 
@@ -108,7 +117,7 @@ Nama tidak selaras, dan itu penemuan dan bukan masalah format. Papan pendahulu m
 
 Kami tidak menjalankan penanda aras sendiri. Kami membaca dua, dengan tetapannya, dan kami tidak menganggap mana-mana satu sebagai keputusan kualiti: tiada "lebih bijak" dan tiada "lebih baik untuk pengekodan" di sini.
 
-Juga tiada dengan sengaja: halaman terma Anthropic, OpenAI, DeepSeek dan Google disenaraikan tetapi tidak dibuka, jadi tiada dakwaan dibuat tentang apa yang dibenarkannya; tetingkap konteks gpt-6-luna dan tool calling grok-4.7 ialah "tidak dirakam" atau "belum disahkan"; dan input fail serta PDF belum disahkan bagi kebanyakan baris kerana pusingan ini tidak sampai ke halaman tersebut.
+Juga tiada dengan sengaja: halaman terma Anthropic, OpenAI, DeepSeek dan Google disenaraikan tetapi tidak dibuka, jadi tiada dakwaan dibuat tentang apa yang dibenarkannya; tetingkap konteks gpt-6-luna ialah "tidak dirakam"; dan input fail serta PDF belum disahkan bagi kebanyakan baris kerana pusingan ini tidak sampai ke halaman tersebut.
 
 ## FAQ
 

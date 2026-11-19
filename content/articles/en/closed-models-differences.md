@@ -26,6 +26,15 @@ sources:
   - title: "xAI, models pricing"
     url: "https://docs.x.ai/docs/pricing"
     checked: 2026-11-19
+  - title: "Anthropic, PDF support (files)"
+    url: "https://docs.claude.com/en/docs/build-with-claude/pdf-support"
+    checked: 2026-11-19
+  - title: "OpenAI, file inputs"
+    url: "https://developers.openai.com/api/docs/guides/file-inputs"
+    checked: 2026-11-19
+  - title: "xAI, function calling"
+    url: "https://docs.x.ai/developers/tools/function-calling"
+    checked: 2026-11-19
 ---
 
 # Claude, ChatGPT, Gemini and Grok: what actually differs between the closed models
@@ -53,7 +62,7 @@ Only what the vendor's own pages state. Where a page did not print a figure, the
 
 The figures come from Anthropic's models overview, OpenAI's API pricing page, DeepSeek's pricing page, Google's AI Studio pricing page and xAI's models pricing page, all read on 19 November 2026.
 
-Two cells need a note rather than a number. Haiku 5.5's input price is qualified on the page as applying to prompts up to 100,000 tokens. And GPT-6.2 Astra and Sol price short and long context separately, so both are printed. The capability cells now carry the vendor documentation URL behind them: PDF support for the Claude rows, file inputs for the GPT rows, and function calling for grok-4.7.
+Two cells need a note rather than a number. Haiku 5.5's input price is qualified on the page as applying to prompts up to 100,000 tokens. And GPT-6.2 Astra and Sol price short and long context separately, so both are printed. The capability cells are backed by the vendor documentation listed in Sources: PDF support for the Claude rows, file inputs for the GPT rows, and function calling for grok-4.7.
 
 ## What does a benchmark score not tell you?
 
@@ -108,7 +117,7 @@ The names do not reconcile, and that is a finding rather than a formatting probl
 
 We did not run a benchmark ourselves. We read two, with their settings, and we are not treating either as a quality verdict: there is no "smarter" and no "better at coding" here.
 
-Also absent by design: the Anthropic, OpenAI, DeepSeek and Google terms pages were listed but not opened, so no claim is made about what they permit; gpt-6-luna's context window and grok-4.7's tool calling are "not captured" or "not verified"; grok-4.7's file input is not documented on the pages checked, deepseek-flash's file input is unverified, and Gemini's terms link was listed in the documentation nav but not opened.
+Also absent by design: the Anthropic, OpenAI, DeepSeek and Google terms pages were listed but not opened, so no claim is made about what they permit; gpt-6-luna's context window is "not captured"; grok-4.7's file input is not documented on the pages checked, deepseek-flash's file input is unverified, and Gemini's terms link was listed in the documentation nav but not opened.
 
 ## FAQ
 
