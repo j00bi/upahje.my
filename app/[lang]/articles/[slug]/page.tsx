@@ -4,12 +4,13 @@ import { notFound } from 'next/navigation'
 import TopBar from '@/components/layout/TopBar'
 import ArticleToc from '@/components/articles/ArticleToc'
 import FaqList from '@/components/articles/FaqList'
+import ReadNext from '@/components/articles/ReadNext'
 import { Markdown } from '@/lib/markdown'
 import { copyFor } from '@/lib/copy'
 import { extractFaq } from '@/lib/faq'
 import { cleanText } from '@/lib/text'
 import { articleJsonLd, definedTermJsonLd, faqJsonLd } from '@/lib/jsonld'
-import { extractHeadings, splitFaq, splitShortAnswer } from '@/lib/article-view'
+import { extractHeadings, splitFaq, splitReadNext, splitShortAnswer } from '@/lib/article-view'
 import { articleLanguages, absolute, SITE_NAME } from '@/lib/seo'
 import {
   bodyWithoutTitle,
@@ -69,7 +70,8 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
   const body = bodyWithoutTitle(article.body, article.title)
   const { short, rest } = splitShortAnswer(body)
   const { withoutFaq } = splitFaq(rest)
-  const headings = extractHeadings(withoutFaq)
+  const { body: articleBody, items: readNext } = splitReadNext(withoutFaq)
+  const headings = extractHeadings(articleBody)
   const faq = extractFaq(article.body)
   const otherHref = pair ? `/${pair.lang}/articles/${pair.slug}` : `/${article.lang === 'en' ? 'ms' : 'en'}/articles`
 
@@ -127,9 +129,12 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
               </div>
             )}
 
-
             <div className="article-body max-w-[68ch]">
-              <Markdown source={withoutFaq} />
+              <Markdown source={articleBody} />
+            </div>
+
+            <div className="max-w-[68ch]">
+              <ReadNext label={copy.readNext} items={readNext} />
             </div>
 
             <div className="max-w-[68ch]" style={{ marginTop: 'var(--space-section)' }}>

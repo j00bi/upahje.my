@@ -73,6 +73,6 @@ Then the decision narrows to whether anyone has time to connect it. An API that 
 
 **Read next**
 
-[the definitions pillar](https://upahje.my/en/articles/category/definitions)
+[Definitions, in plain terms](https://upahje.my/en/articles/category/definitions)
 
 [what an API costs to wire up](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)

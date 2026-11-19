@@ -99,6 +99,6 @@ Hanya jika perkakasan itu berada di Malaysia. Menyewa GPU di wilayah lain memind
 
 **Baca seterusnya**
 
-[ruang definisi](https://upahje.my/ms/articles/category/definitions)
+[Definisi, dalam bahasa mudah](https://upahje.my/ms/articles/category/definitions)
 
 [kos menyambungkan API](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)

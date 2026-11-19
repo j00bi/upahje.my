@@ -109,6 +109,6 @@ Not always, but for this kind of work it usually is, because the scope can be wr
 
 **Read next**
 
-[the buying guides pillar](https://upahje.my/en/articles/category/buying-guides)
+[Buying guides](https://upahje.my/en/articles/category/buying-guides)
 
 [what an API costs to wire up](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)

@@ -84,3 +84,41 @@ export function extractHeadings(body: string): TocItem[] {
   }
   return items
 }
+
+export type ReadNextItem = { label: string; href: string }
+
+/**
+ * Pull the publisher's read-next block out of the body so it can render as its
+ * own labelled list instead of running paragraphs. The block starts at a bold
+ * "Read next" / "Baca seterusnya" label, carries at most two writer-supplied
+ * links, and never takes the horizontal rule above it with it.
+ */
+export function splitReadNext(body: string): { body: string; items: ReadNextItem[] } {
+  const lines = body.split(/\r?\n/)
+  const start = lines.findIndex((line) => /^\*\*(read next|baca seterusnya)\*\*\s*$/i.test(line.trim()))
+  if (start < 0) return { body, items: [] }
+
+  // The block is the label, blank lines, and its links. It ends at the first
+  // line that is neither, so a figure or a heading after it is not swallowed.
+  const items: ReadNextItem[] = []
+  let end = lines.length
+  for (let i = start + 1; i < lines.length; i++) {
+    const line = lines[i].trim()
+    if (!line) continue
+    const link = line.match(/^\[([^\]]+)\]\((\S+?)\)$/)
+    if (link && items.length < 2) {
+      items.push({ label: cleanText(link[1].trim()), href: link[2] })
+      continue
+    }
+    end = i
+    break
+  }
+
+  // Swallow the rule and blank lines that open the block.
+  let from = start
+  while (from > 0 && !lines[from - 1].trim()) from -= 1
+  if (from > 0 && /^---+$/.test(lines[from - 1].trim())) from -= 1
+
+  const cleaned = [...lines.slice(0, from), ...lines.slice(end)].join('\n').trim()
+  return { body: cleaned, items: items.slice(0, 2) }
+}

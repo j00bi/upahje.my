@@ -132,6 +132,6 @@ No, and this table cannot tell you that. It lists prices, publishers and dates. 
 
 **Read next**
 
-[the buying guides pillar](https://upahje.my/en/articles/category/buying-guides)
+[Buying guides](https://upahje.my/en/articles/category/buying-guides)
 
 [how to brief an automation job](https://upahje.my/en/articles/how-to-brief-an-automation-job)

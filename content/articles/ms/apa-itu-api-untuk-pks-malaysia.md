@@ -29,6 +29,9 @@ sources:
 
 API ialah cara yang dipersetujui antara dua perisian untuk bertukar data apabila diminta, tanpa perlu ada orang menyalinnya secara manual. Bagi perniagaan kecil di Malaysia, beza utamanya jelas: staf menaip pesanan dari marketplace ke dalam spreadsheet, atau sistem kedai anda menghantar pesanan itu terus ke sistem kurier.
 
+![Kedai anda menghantar pesanan kepada API, API menyampaikannya kepada kurier, dan status penghantaran kembali melalui laluan yang sama](/figures/what-is-an-api-ms.svg)
+*Satu pesanan, keluar melalui API dan kembali sebagai status.*
+
 ## Apakah sebenarnya yang API lakukan untuk perniagaan saya?
 
 API menyampaikan satu maklumat yang ditetapkan antara dua sistem, apabila diminta, dalam bentuk yang telah dipersetujui oleh kedua-dua pihak. MDN menyebutnya kontrak antara aplikasi yang menawarkan API itu dengan apa-apa yang memanggilnya ([MDN, disemak 19 Nov 2026](https://developer.mozilla.org/en-US/docs/Glossary/API)).
@@ -112,6 +115,6 @@ Satu endpoint yang membaca sahaja mengambil masa sekitar sehari untuk pembangun 
 
 **Baca seterusnya**
 
-[ruang definisi](https://upahje.my/ms/articles/category/definitions)
+[Definisi, dalam bahasa mudah](https://upahje.my/ms/articles/category/definitions)
 
 [model terbuka atau tertutup](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)

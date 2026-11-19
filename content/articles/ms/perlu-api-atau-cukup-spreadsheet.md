@@ -73,6 +73,6 @@ Maka keputusannya menyempit kepada sama ada ada orang yang ada masa untuk menyam
 
 **Baca seterusnya**
 
-[ruang definisi](https://upahje.my/ms/articles/category/definitions)
+[Definisi, dalam bahasa mudah](https://upahje.my/ms/articles/category/definitions)
 
 [kos menyambungkan API](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)

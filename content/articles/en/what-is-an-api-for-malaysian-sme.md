@@ -29,6 +29,9 @@ sources:
 
 An API is an agreed way for two pieces of software to exchange data on request, without a person copying it across by hand. For a Malaysian small business, it is the difference between a staff member retyping marketplace orders into a spreadsheet and your store passing each order straight to the courier's system.
 
+![Your store sends an order to the API, the API passes it to the courier, and the delivery status comes back the same way](/figures/what-is-an-api.svg)
+*One order, out through the API and back as a status.*
+
 ## What does an API actually do for my business?
 
 An API carries one defined piece of data between two systems, on request, in a format both sides agreed on. MDN describes it as a contract between the application offering it and whatever calls it ([MDN, checked 19 Nov 2026](https://developer.mozilla.org/en-US/docs/Glossary/API)).
@@ -112,6 +115,6 @@ A single read-only endpoint takes a competent developer about a day. Anything th
 
 **Read next**
 
-[the definitions pillar](https://upahje.my/en/articles/category/definitions)
+[Definitions, in plain terms](https://upahje.my/en/articles/category/definitions)
 
 [open or closed models](https://upahje.my/en/articles/open-vs-closed-models-malaysia)

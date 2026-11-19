@@ -122,6 +122,6 @@ Because a buyer still has to choose this week, and a stated method with a re-run
 
 **Read next**
 
-[the buying guides pillar](https://upahje.my/en/articles/category/buying-guides)
+[Buying guides](https://upahje.my/en/articles/category/buying-guides)
 
 [what an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)

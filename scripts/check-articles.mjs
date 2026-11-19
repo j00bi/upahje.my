@@ -88,6 +88,9 @@ function lintPii() {
   const files = [...walk(ARTICLES_ROOT, /\.(md|mdx)$/)]
   const figuresDir = path.join(process.cwd(), 'figures')
   if (fs.existsSync(figuresDir)) files.push(...walk(figuresDir, /\.mmd$/))
+  // Authored SVGs are served content too: a label or a comment can leak a path.
+  const publicFiguresDir = path.join(process.cwd(), 'public', 'figures')
+  if (fs.existsSync(publicFiguresDir)) files.push(...walk(publicFiguresDir, /\.svg$/))
 
   for (const file of files.sort()) {
     const lines = fs.readFileSync(file, 'utf8').split(/\r?\n/)

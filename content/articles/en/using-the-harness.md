@@ -79,4 +79,4 @@ The harness records a `request/header` and a `request/context` per step, so each
 
 **Read next**
 
-[the definitions pillar](https://upahje.my/en/articles/category/definitions)
+[Definitions, in plain terms](https://upahje.my/en/articles/category/definitions)

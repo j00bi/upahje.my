@@ -79,4 +79,4 @@ Harness merekodkan `request/header` dan `request/context` bagi setiap step, jadi
 
 **Baca seterusnya**
 
-[ruang definisi](https://upahje.my/ms/articles/category/definitions)
+[Definisi, dalam bahasa mudah](https://upahje.my/ms/articles/category/definitions)
