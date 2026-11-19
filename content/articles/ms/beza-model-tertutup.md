@@ -76,7 +76,7 @@ Kerana input dan output dinilai berasingan, satu contoh berkira menjadikan jadua
 
 1. Claude Haiku 5.5: 0.1 juta input × USD 0.10 = USD 0.01, tambah 0.02 juta output × USD 0.50 = USD 0.01, jadi USD 0.02 setiap tugasan.
 2. Claude Fable 5.2: 0.1 juta input × USD 8.00 = USD 0.80, tambah 0.02 juta output × USD 40.00 = USD 0.80, jadi USD 1.60 setiap tugasan.
-3. gemini-4-carbon pada kadar semasa: 0.1 juta input × USD 2.00 = USD 0.20, tambah 0.02 juta output × USD 10.00 = USD 0.20, jadi USD 0.40 setiap tugasan.
+3. gemini-4-carbon pada harga yang dicetak untuk Malaysia sehingga 30 November 2026 (ia berganda kepada USD 4.00 / 20.00 pada 1 Disember): 0.1 juta input × USD 2.00 = USD 0.20, tambah 0.02 juta output × USD 10.00 = USD 0.20, jadi USD 0.40 setiap tugasan hari ini dan USD 0.80 selepas perubahan itu.
 
 Itu jurang 80 kali antara baris termurah dan termahal pada tugasan yang sama, dan setiap angka boleh disemak terhadap harga yang dicetak. Tukar andaian itu dan jumlahnya berubah secara berkadar; pendaraban itulah yang menjadikannya boleh diaudit.
 
