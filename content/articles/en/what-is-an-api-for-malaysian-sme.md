@@ -38,6 +38,9 @@ An API carries one defined piece of data between two systems, on request, in a f
 - A WhatsApp bot asks your inventory system before answering, instead of an answer being written after checking stock by hand.
 - The accounting tool pulls invoices from your store, instead of invoices being retyped.
 
+![Your store sends an order to the API, the API passes it to the courier, and the delivery status comes back the same way](/figures/what-is-an-api.svg)
+*One order, out through the API and back as a status.*
+
 ## What is the difference between an open and a closed model API?
 
 A closed model API is one you can call but never host yourself. An open-weight model API is one whose model files you can download and run on hardware you control.
