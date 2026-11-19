@@ -14,6 +14,12 @@ sources:
   - title: "nightly-labs/openbot, repository metadata and licence file (PolyForm Noncommercial 1.0.0)"
     url: "https://github.com/nightly-labs/openbot"
     checked: 2026-11-19
+  - title: "OpenBot site (the claim that the source is open)"
+    url: "https://openbot.run/"
+    checked: 2026-11-19
+  - title: "MausBot site"
+    url: "https://mausbot.com/"
+    checked: 2026-11-19
   - title: "milind-soni/OpenMausBot, repository metadata (Apache-2.0)"
     url: "https://github.com/milind-soni/OpenMausBot"
     checked: 2026-11-19

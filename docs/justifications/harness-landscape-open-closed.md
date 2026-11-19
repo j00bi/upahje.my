@@ -13,6 +13,14 @@
 | 7 | "`nightly-labs/openbot` is the desktop agent workspace in the table." | https://github.com/nightly-labs/openbot | GitHub | 2026-11-19 | source: repository description |
 | 8 | "`CopilotKit/OpenBot` is an MIT project with 12,887 stars described as an open alternative to closed AI bots" | https://github.com/CopilotKit/OpenBot | GitHub | 2026-11-19 | source: repository metadata read by the scan on 19 November 2026 |
 | 9 | "`ob-f/OpenBot` is a robotics project that puts smartphone brains in toy cars" | https://github.com/ob-f/OpenBot | GitHub | 2026-11-19 | source: repository description read by the scan on 19 November 2026 |
+| 11 | "Grok Bot (xAI) | Always-on agents with their own computer, working inside apps | Closed; signed macOS app, no public repo | Official source, announcement dated 2026-08-11 | Beta" | https://x.ai/news/introducing-grok-bot | xAI | 2026-11-19 | source: Table row Grok Bot |
+| 12 | "Dots (OpenAI) | Always-on agents inside ChatGPT, with their own cloud computer | Closed; no public repo | Official source, announcement dated 2026-09-29 | Live, rolling out to Enterprise from 2026-11-18" | https://openai.com/index/introducing-dots/ | OpenAI | 2026-11-19 | source: Table row Dots |
+| 13 | "DeepSeek Harness | Harness run by a profile, with MCP servers per profile | npm package, see package metadata | Ran here; no longer re-verifiable end to end | Installed 0.2.2-rc.1 on 2026-11-19" | - | our measurement, this machine | 2026-11-19 | source: `dsh --version` printed 0.2.2-rc.1 on 19 November 2026 |
+| 14 | "Claude Code, Codex CLI, OpenCode | CLI harnesses measured on this machine | Proprietary licences | Ran here, 2026-11-19 | Active" | - | our measurement, this machine | 2026-11-19 | source: `--version` on each binary, printed in the ranking piece |
+| 15 | "Apache-2.0, which covers MausBot's main repository, permits commercial use, modification and redistribution, provided you keep the notices." | https://github.com/milind-soni/OpenMausBot | GitHub | 2026-11-19 | source: repository licence field Apache-2.0 |
+| 16 | "OpenBot's code is readable and its site says "The source code of OpenBot is open", and its licence file says you may not use it commercially without paying." | https://openbot.run/ | OpenBot | 2026-11-19 | source: site wording, contradicted by the LICENSE file in the same article |
+| 17 | "Note the split: a second repository, `OpenMausBot/OpenMausBot`, carries MIT and describes itself as a download repo, so read which repository you are actually cloning." | https://github.com/OpenMausBot/OpenMausBot | GitHub | 2026-11-19 | source: repository licence field MIT |
+| 18 | "The payload is gone, there is no systemd unit under that name, and no data directory remains." | - | our measurement, this machine | 2026-11-19 | source: `systemctl status` returned no unit, and the data directories are absent |
 
 ## Sections
 

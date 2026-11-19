@@ -27,6 +27,7 @@
 | 21 | "Gemini 3 Flash (high) | 75.80 | 0.36" | https://www.swebench.com/ | SWE-bench | 2026-11-19 | source: Table 2a row 2, same settings (Verified, Bash Only, mini-SWE-agent) |
 | 22 | "MiniMax M2.5 (high) | 75.80 | 0.07" | https://www.swebench.com/ | SWE-bench | 2026-11-19 | source: Table 2a row 3, same settings |
 | 23 | "Claude 4.6 Opus | 75.60 | 0.55" | https://www.swebench.com/ | SWE-bench | 2026-11-19 | source: Table 2a row 4, same settings |
+| 24 | "3. gemini-4-carbon at the current rate: 0.1 million input × USD 2.00 = USD 0.20, plus 0.02 million output × USD 10.00 = USD 0.20, so USD 0.40 per task." | - | - | - | estimate: arithmetic on the printed gemini-4-carbon rate at the same assumed task size |
 
 ## Sections
 
@@ -35,6 +36,7 @@
 | What does each vendor document? | The only comparable facts: context, price, documented capabilities, file and image support |
 | What do the benchmarks actually say? | Quotes two leaderboards with their settings and names, and states that they do not reconcile with vendor names |
 | What does a benchmark score not tell you? | Separates the leaderboard number from the buying decision |
+| What does one task cost at these rates? | The worked example, so the price table is usable without the reader doing the arithmetic unguided |
 | Where is the lock-in? | Retention, deprecation and export, which no benchmark measures |
 | Which vendor names drift? | The printed-name drift, so a buyer quotes the id the API uses |
 | What did we not measure? | Declares no benchmark run and lists every gap rather than filling it |

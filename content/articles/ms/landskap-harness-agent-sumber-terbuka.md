@@ -14,6 +14,12 @@ sources:
   - title: "nightly-labs/openbot, metadata repositori dan fail lesen (PolyForm Noncommercial 1.0.0)"
     url: "https://github.com/nightly-labs/openbot"
     checked: 2026-11-19
+  - title: "Laman OpenBot (dakwaan bahawa sumbernya terbuka)"
+    url: "https://openbot.run/"
+    checked: 2026-11-19
+  - title: "Laman MausBot"
+    url: "https://mausbot.com/"
+    checked: 2026-11-19
   - title: "milind-soni/OpenMausBot, metadata repositori (Apache-2.0)"
     url: "https://github.com/milind-soni/OpenMausBot"
     checked: 2026-11-19

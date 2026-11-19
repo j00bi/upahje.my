@@ -11,6 +11,7 @@
 | 5 | "The harness runs the tool, not the model. The model chooses a tool and arguments, and the harness performs the call." | - | our measurement, this machine | 2026-11-19 | source: `tool/call` records in a decompressed session transcript, executed by the harness |
 | 6 | "The conversation is written to a file you can read: in this harness, compressed JSON Lines under `.dsh/sessions`." | - | our measurement, this machine | 2026-11-19 | source: directory listing and `zstd -dc` on `session.v4.jsonl.zstd` |
 | 7 | "A framework is a library you build with; a harness is the thing that runs the loop, executes tools and keeps the transcript." | - | - | - | estimate: our definition, contrasting the two words as they are used on the vendor pages read here |
+| 8 | "Agent workspace | OpenBot, MausBot | The product's own word for a harness plus a desktop or a machine per bot" | https://openbot.run/ | OpenBot | 2026-11-19 | source: product wording on the site; MausBot describes a virtual machine per bot in its repo description |
 
 ## Sections
 
