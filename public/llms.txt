@@ -6,14 +6,16 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Concept index
 
+- [Definitions](https://upahje.my/en/articles/category/definitions): The words on a job post, a contract or a payslip — defined plainly. (1 article)
+- [Definisi](https://upahje.my/ms/articles/category/definitions): Istilah dalam iklan kerja, kontrak atau slip gaji — dijelaskan dengan mudah. (1 article)
 
 ## English articles
 
-- (none published yet)
+- [What is an API, explained for a Malaysian small business owner](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme): An API is an agreed way for two software systems to exchange data on request. What that means for a Malaysian SME, open versus closed model APIs, and what it costs to have someone wire one up here.
 
 ## Bahasa Melayu articles
 
-- (none published yet)
+- [Apa itu API, dijelaskan untuk pemilik perniagaan kecil Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia): API ialah cara dua sistem perisian bertukar data apabila diminta. Apa maksudnya bagi PKS Malaysia, beza API model terbuka dengan model tertutup, dan berapa kos untuk upah orang sambungkannya di sini.
 
 ## Notes
 
