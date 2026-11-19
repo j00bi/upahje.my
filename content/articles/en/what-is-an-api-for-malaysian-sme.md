@@ -11,16 +11,16 @@ tags: [definitions, api, sme, malaysia]
 canonical: https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme
 draft: false
 sources:
-  - title: "MDN Web Docs — API (Glossary)"
+  - title: "MDN Web Docs, API glossary"
     url: "https://developer.mozilla.org/en-US/docs/Glossary/API"
     checked: 2026-11-19
-  - title: "Mistral AI — Models overview (open-weight catalogue and licences)"
+  - title: "Mistral AI, models overview (open-weight catalogue and licences)"
     url: "https://docs.mistral.ai/models"
     checked: 2026-11-19
-  - title: "OpenAI — API pricing (per-million-token rates)"
+  - title: "OpenAI, API pricing (per-million-token rates)"
     url: "https://developers.openai.com/api/docs/pricing"
     checked: 2026-11-19
-  - title: "OpenAI — API model catalogue"
+  - title: "OpenAI, API model catalogue"
     url: "https://developers.openai.com/api/docs/models"
     checked: 2026-11-19
 ---
@@ -31,27 +31,21 @@ An API is an agreed way for two pieces of software to exchange data on request, 
 
 ## What does an API actually do for my business?
 
-An API carries one defined piece of data between two systems, on request, in a format both sides already agreed on. MDN describes it as a contract between the application offering it and whatever calls it ([MDN, checked 19 Nov 2026](https://developer.mozilla.org/en-US/docs/Glossary/API)).
+An API carries one defined piece of data between two systems, on request, in a format both sides agreed on. MDN describes it as a contract between the application offering it and whatever calls it ([MDN, checked 19 Nov 2026](https://developer.mozilla.org/en-US/docs/Glossary/API)).
 
-What that contract replaces in ordinary Malaysian SME operations:
-
-- **Orders.** Your site books the courier when an order is paid, instead of staff copying the order into a courier portal.
-- **Payments.** The payment gateway calls your site and marks an order paid, instead of someone checking the bank app to confirm a transfer.
-- **Stock.** A WhatsApp bot asks your inventory system before answering, instead of an answer being written after checking stock by hand.
-- **Accounts.** The accounting tool pulls invoices from your store, instead of invoices being retyped.
-
-The common thread: the API removes a human step that exists only because two systems cannot talk. It does not make either system smarter.
+- Your site books the courier when an order is paid, instead of staff copying the order into a courier portal.
+- The payment gateway calls your site and marks an order paid, instead of someone checking the bank app to confirm a transfer.
+- A WhatsApp bot asks your inventory system before answering, instead of an answer being written after checking stock by hand.
+- The accounting tool pulls invoices from your store, instead of invoices being retyped.
 
 ## What is the difference between an open and a closed model API?
 
-A closed model API is one you can call but never host yourself; an open-weight model API is one whose model files you can download and run on hardware you control.
-
-Six differences decide the choice, in the order they matter to a business owner:
+A closed model API is one you can call but never host yourself. An open-weight model API is one whose model files you can download and run on hardware you control.
 
 | What decides it | Closed model API | Open-weight model API |
 | --- | --- | --- |
 | Where the model runs | The vendor's servers | Your server, or a host you choose |
-| Whether you can obtain the model | No — you get a catalogue and per-token rates | Yes — you download the weights |
+| Whether you can obtain the model | No. You get a catalogue and per-token rates | Yes. You download the weights |
 | What governs use | The vendor's terms of service | A model licence: Apache 2.0, MIT, or a vendor-specific licence |
 | What you pay for | Tokens or requests, and nothing when nobody uses it | Compute and hosting every month, plus someone to run it |
 | Who can change the model under you | The vendor can, within their deprecation policy | Only when you update it yourself |
@@ -59,59 +53,55 @@ Six differences decide the choice, in the order they matter to a business owner:
 
 As of 19 November 2026, Mistral's own catalogue lists all three licence shapes side by side: Mistral Small 4 and the Ministral 3 models under Apache 2.0, Z.ai GLM 5.3 and DeepSeek V4.1 Flash under MIT, and Mistral Large 4 under a vendor-specific "Mistral Ecosystem Open Weight License" ([Mistral docs, checked 19 Nov 2026](https://docs.mistral.ai/models)). Closed vendors publish a model catalogue and rates instead of weights ([OpenAI model catalogue, checked 19 Nov 2026](https://developers.openai.com/api/docs/models)).
 
-Neither is better in the abstract. A closed API is cheaper when your volume is small, because you pay per call and nothing when nobody uses it. An open-weight model only wins once your monthly usage is high enough to beat the cost of the server, and once you have someone who can run it — which for most Malaysian SMEs is the part that decides it.
+## Which one should a small business start with?
 
-## What does it cost to wire an API up in Malaysia?
+Pay per call costs nothing when the volume is zero. A server costs every month whether anyone uses it. That arithmetic is why a closed API is the cheaper start for most small businesses. An open-weight model wins only once your monthly usage is high enough to beat the cost of the machine, and someone on your side can run it. For most Malaysian SMEs the second condition decides it.
 
-There are two bills, not one: the build, paid once to a person, and the running cost, paid every month to the vendor.
+## What does it cost to have someone wire an API up in Malaysia?
 
-**The build.** No public benchmark exists for what Malaysian developers charge specifically for API integration work as of November 2026. What is observable is that quotes vary with the same handful of factors: how many endpoints, whether you need write access or only read, how authentication works, what should happen when a call fails, and how messy your existing data is. Because that is how the price is set, a quote that arrives before those questions are asked is an estimate, not a price.
+No public benchmark exists for what Malaysian developers charge for API integration work as of November 2026. Quotes vary with how many endpoints you need, whether the integration writes data or only reads it, how authentication works, what should happen when a call fails, and how messy your existing data is. A price given before those five questions are answered is an estimate.
 
-**The running cost.** This one can be worked out exactly, because vendors publish rates. Using OpenAI's standard rates for a small current model, GPT-6 Luna, at USD 0.10 per million input tokens and USD 0.50 per million output tokens ([OpenAI pricing, checked 19 Nov 2026](https://developers.openai.com/api/docs/pricing)), a WhatsApp FAQ bot handling 3,000 messages a month — about 600 tokens in and 200 out per message — costs roughly USD 0.48 a month in tokens. Hosting and the developer's time are separate, and the exchange rate you actually pay is set by your card, not by this figure. If the integration runs on your own server, add that bill — it is not estimated here because it depends entirely on which host you pick.
+## How do I price the job myself?
 
-**The bill people forget.** Maintenance. When a vendor retires a model version your integration stops working, and the repair is not free.
-
-To price a job yourself, do this before you ask for a quote:
-
-1. Write down every system that must talk to which, and in which direction.
+1. List every system that must talk to which, and in which direction.
 2. Separate read-only work from anything that writes data or moves money.
-3. Ask what happens on a failed call — silent loss of an order is the expensive outcome.
+3. Ask what happens on a failed call. Silent loss of an order is the expensive outcome.
 4. Ask for a fixed price per integration, not an hourly estimate.
 5. Ask what happens to the code and credentials when the engagement ends.
 
+## What does the bill look like each month?
+
+Vendors publish their rates, so the monthly bill can be calculated rather than guessed. OpenAI's standard rate for a small current model, GPT-6 Luna, is USD 0.10 per million input tokens and USD 0.50 per million output tokens ([OpenAI pricing, checked 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). A WhatsApp FAQ bot handling 3,000 messages a month, at roughly 600 tokens in and 200 out per message, costs about USD 0.48 a month in tokens. Add hosting if the integration runs on your own server, and add the exchange rate your card charges, which is not in these figures. Maintenance belongs in this bill too, because a retired model version stops the integration until someone repairs it.
+
 ## How do I know if I need an API, or just a person doing it manually?
 
-If the task happens a few times a day and a mistake is cheap to fix, keep doing it manually; an API starts to pay when volume or the cost of an error crosses that line.
-
-This next part is our judgement, not a published benchmark: the crossover is usually around the point where someone spends more than an hour a day on the copying, or where a single missed order costs more than a month of the vendor's fee. Below that, a part-time staff member who is careful is the cheaper and more reliable system.
+If the task happens a few times a day and a mistake is cheap to fix, do it manually. An API starts to pay when volume or the cost of an error crosses that line. No published benchmark fixes that line, so this is our judgement: it sits around the point where someone spends more than an hour a day copying, or where one missed order costs more than a month of the vendor's fee. Below that, a careful part-time staff member is cheaper and more reliable.
 
 ## How do I protect myself when I pay someone to build this?
 
-Five things to settle in writing before payment, in this order:
+Settle three things in writing before you pay.
 
-1. **Scope.** Which systems, which endpoints, read or write.
-2. **Ownership of credentials.** API keys belong to your account, never to the developer's. Create a separate key per integration, with a spending limit, and revoke it when the work ends. A key is a password.
-3. **Failure behaviour.** Retry, queue, or alert. Silence is not acceptable for anything involving money or orders.
-4. **Exit.** You get the code and a working test environment, not just a running system on someone else's account.
-5. **Deprecation.** Who updates the integration when the vendor retires the version, and at what price.
+1. Scope. Which systems, which endpoints, read or write.
+2. Failure behaviour. Retry, queue, or alert. Silence is not acceptable for anything involving money or orders.
+3. Exit. You get the code and a working test environment, not a running system on someone else's account.
 
 ## FAQ
 
 ### Do I need my own server to use an API?
 
-No. Using a closed API needs an internet connection and a small script or app, nothing more. You need a server only if you host an open-weight model yourself.
-
-### What happens if a provider changes or shuts down their API?
-
-Your integration stops working until it is updated. The window is the vendor's, not yours — OpenAI, for example, publishes a deprecation timeline linked from its pricing page ([checked 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). The practical defence is keeping the integration thin so it can be pointed at another provider.
+No. A closed API needs an internet connection and a small script or app. You need a server only if you host an open-weight model yourself.
 
 ### Is it safe to give a freelancer my API keys?
 
-Not your main key. Issue a separate key for that integration with a spending limit, keep it out of WhatsApp and email, and revoke it on the last day of the job. A revoked key costs nothing; a leaked one can cost your whole account.
+Not your main key. Issue a separate key for that integration with a spending limit, keep it out of WhatsApp and email, and revoke it on the last day of the job. A revoked key costs nothing. A leaked one can cost your whole account.
+
+### What happens if a provider changes or shuts down their API?
+
+The integration stops working until it is updated. The window belongs to the vendor: OpenAI publishes a deprecation timeline linked from its pricing page ([checked 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Keep the integration thin so it can be pointed at another provider.
 
 ### How long does a first integration take?
 
-For a single read-only endpoint, a competent developer needs about a day. Anything that moves money or writes data needs a week, most of it spent on what happens when calls fail. No published dataset for Malaysian timelines exists, so treat those as working estimates, not measurements.
+A single read-only endpoint takes a competent developer about a day. Anything that moves money or writes data takes a week, most of it spent on what happens when calls fail. No published dataset for Malaysian timelines exists, so these are working estimates.
 
 ---
 
