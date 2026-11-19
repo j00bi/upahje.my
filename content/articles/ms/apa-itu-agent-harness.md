@@ -26,6 +26,9 @@ Semua yang berikut datang daripada pembacaan harness yang dipasang pada mesin in
 
 Harness merekodkan mesej anda sebagai satu turn, kemudian bekerja melalui step; setiap step boleh menghasilkan tool call, dan turn tamat apabila model berhenti meminta tools.
 
+![Gambar aliran: mesej yang ditaip menjadi satu turn, harness menyediakan konteks dan menghantar permintaan, model memulangkan sama ada tool call atau jawapan, hasil tool kembali melalui harness, dan turn yang selesai ditulis ke transkrip](/figures/using-the-harness.svg)
+*Satu mesej, satu turn: model membuat keputusan, harness menjalankannya, dan transkrip menyimpan rekod.*
+
 Transkrip pada mesin ini mengandungi jenis rekod ini, mengikut urutan satu pertukaran:
 
 1. `turn/start` menandakan mesej anda diterima.
