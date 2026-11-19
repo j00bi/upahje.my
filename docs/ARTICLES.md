@@ -175,3 +175,25 @@ NODE_ENV=production npm run build
 ```
 
 See also `DEPLOYMENT.md`.
+
+## Read-next block
+
+Every published article ends its body with a read-next block, placed **before**
+`## FAQ`, separated from the FAQ heading. The words are content, not chrome, so
+they follow the reader's point of view:
+
+- Up to two links. One is fine.
+- Each label is a complete noun phrase or a question a reader would ask, in
+  sentence case, with no trailing period: `What an API costs to wire up in
+  Malaysia`, `Do you need an API, or just a spreadsheet?`
+- No internal vocabulary. Never `pillar`, `category`, `section`, a URL slug, or
+  a repeated `Read more about…` preamble.
+- Both links point at published siblings in the same language. Never the same
+  article, never the other language.
+- A category link may stay, last, labelled by subject: `More on APIs and models`.
+- The same label must not point at two different targets. Two articles may share
+  a label only when they share the target.
+
+Write the block as a short label line, then each link on its own line. Do not
+write it as one sentence: the renderer turns a paragraph into anchors, so a
+comma-separated run of links becomes a run-on of plain text.
