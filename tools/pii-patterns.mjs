@@ -22,5 +22,8 @@ export const PII_PATTERNS = [
   { category: 'local-host', pattern: /\blocalhost:\d+\b/g, fix: 'use the public hostname or a placeholder' },
   { category: 'private-host', pattern: /\btailscale\b/gi, fix: 'remove the private network name' },
   { category: 'private-host', pattern: /\b[\w.-]+\.ts\.net\b/gi, fix: 'remove the private hostname' },
-  { category: 'preview-host', pattern: /\b[\w.-]+\.vercel\.app\b/gi, fix: 'link the canonical domain, not a preview host' },
+  // A bare *.vercel.app can be somebody's production site; only preview-shaped
+  // hosts (our project's branch aliases, or a -git- alias) are a leak.
+  { category: 'preview-host', pattern: /\bupahje-my[\w-]*\.vercel\.app\b/gi, fix: 'link the canonical domain, not a preview host' },
+  { category: 'preview-host', pattern: /\b[\w-]+-git-[\w-]+-[\w-]+\.vercel\.app\b/gi, fix: 'link the canonical domain, not a preview host' },
 ]

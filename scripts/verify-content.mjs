@@ -11,6 +11,7 @@
 const BASE = process.env.BASE || 'http://127.0.0.1:3000'
 const digits = (s) => (s.match(/[\u2014\u2013]/g) || []).length
 const rows = []
+const seen = new Set()
 const failures = []
 
 async function get(path) {
@@ -20,6 +21,8 @@ async function get(path) {
 }
 
 function record(path, res, extra = '') {
+  if (seen.has(path)) return
+  seen.add(path)
   rows.push({ path, status: res.status, dashes: res.dashes, extra })
   if (res.status < 200 || res.status >= 300) failures.push(`${path}: status ${res.status}`)
   else if (res.dashes > 0) failures.push(`${path}: ${res.dashes} em/en dash(es)`)
@@ -39,6 +42,12 @@ for (const path of ['/en', '/ms', '/en/articles', '/ms/articles', '/sitemap.xml'
 const sitemap = (await get('/sitemap.xml')).text
 const robots = (await get('/robots.txt')).text
 const llms = (await get('/llms.txt')).text
+
+// every path the sitemap advertises gets a status and a dash count
+const sitemapPaths = [...sitemap.matchAll(/<loc>https:\/\/upahje\.my(\/[^<]+)<\/loc>/g)].map((m) => m[1])
+for (const path of sitemapPaths) {
+  if (!['/en', '/ms', '/en/articles', '/ms/articles'].includes(path)) record(path, await get(path))
+}
 
 // discover article paths from the indexes and the sitemap
 const articlePaths = new Set()

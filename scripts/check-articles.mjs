@@ -81,12 +81,15 @@ function lintPii() {
     ? new RegExp(`\\b(?:${denylist.map((name) => name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})\\b`, 'gi')
     : null
   let hits = 0
-  const walk = (dir) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+  const walk = (dir, pattern) => fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
     const full = path.join(dir, entry.name)
-    return entry.isDirectory() ? walk(full) : /\.(md|mdx)$/.test(entry.name) ? [full] : []
+    return entry.isDirectory() ? walk(full, pattern) : pattern.test(entry.name) ? [full] : []
   })
+  const files = [...walk(ARTICLES_ROOT, /\.(md|mdx)$/)]
+  const figuresDir = path.join(process.cwd(), 'figures')
+  if (fs.existsSync(figuresDir)) files.push(...walk(figuresDir, /\.mmd$/))
 
-  for (const file of walk(ARTICLES_ROOT).sort()) {
+  for (const file of files.sort()) {
     const lines = fs.readFileSync(file, 'utf8').split(/\r?\n/)
     lines.forEach((line, index) => {
       const report = (category, match, fix) => {
