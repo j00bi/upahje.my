@@ -6,16 +6,18 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Concept index
 
-- [Definitions](https://upahje.my/en/articles/category/definitions): The words on a job post, a contract or a payslip, defined plainly. (1 article)
-- [Definisi](https://upahje.my/ms/articles/category/definitions): Istilah dalam iklan kerja, kontrak atau slip gaji, dijelaskan dengan mudah. (1 article)
+- [Definitions](https://upahje.my/en/articles/category/definitions): The words on a job post, a contract or a payslip, defined plainly. (2 articles)
+- [Definisi](https://upahje.my/ms/articles/category/definitions): Istilah dalam iklan kerja, kontrak atau slip gaji, dijelaskan dengan mudah. (2 articles)
 
 ## English articles
 
+- [Open or closed models: what a Malaysian SME can actually run in-house](https://upahje.my/en/articles/open-vs-closed-models-malaysia): An open-weight model can be downloaded and run on hardware you control. What that costs per month in Malaysia, the volume where it beats paying per call, and the skills it needs.
 - [What is an API, explained for a Malaysian small business owner](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme): An API is a contract that lets two systems exchange data without a human copying it across. What it means for a Malaysian SME, open versus closed models, and the real cost of wiring one up.
 
 ## Bahasa Melayu articles
 
 - [Apa itu API, dijelaskan untuk pemilik perniagaan kecil Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia): API ialah kontrak antara dua sistem untuk bertukar data tanpa perlu ada orang menyalinnya. Apa maksudnya bagi PKS, beza model terbuka dengan tertutup, dan kos sebenar menyambungkannya.
+- [Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia): Model terbuka boleh dimuat turun dan dijalankan pada perkakasan sendiri. Berapa kosnya sebulan, bila ia mula berbaloi berbanding bayaran ikut panggilan, dan kemahiran yang diperlukan.
 
 ## Notes
 
