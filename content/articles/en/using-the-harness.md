@@ -26,6 +26,9 @@ Everything below comes from reading the harness installed on this machine on 19 
 
 The harness records the message as a turn, then works through steps; each step can produce a tool call, and the turn ends when the model stops asking for tools.
 
+![A flow diagram: a typed message becomes a turn, the harness assembles context and sends a request, the model returns either a tool call or an answer, tool results loop back through the harness, and the finished turn is written to the transcript](/figures/using-the-harness.svg)
+*One message, one turn: the model decides, the harness executes, and the transcript keeps the record.*
+
 The transcript for this machine contains these record types, in the order a single exchange produces them:
 
 1. `turn/start` marks the moment your message is accepted.

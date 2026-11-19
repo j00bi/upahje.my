@@ -1,0 +1,14 @@
+---
+title: "The journey of one message through an agent harness"
+---
+flowchart TD
+  A["You type a message"] --> B["Harness records a turn"]
+  B --> C["Harness assembles context"]
+  C --> D["Request to the model"]
+  D --> E{"Tool call?"}
+  E -- yes --> F["Harness runs the tool"]
+  F --> G["Tool result returned"]
+  G --> C
+  E -- no --> H["Assistant answer"]
+  H --> I["Streamed back to you"]
+  I --> J["Turn written to the transcript"]
