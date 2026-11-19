@@ -25,7 +25,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Agent harnesses ranked: four CLIs we ran on one machine
+# Agent harnesses ranked: four CLIs installed on one machine
 
 DeepSeek Harness scores highest at 4.35 out of 5, OpenCode second at 4.15, Claude Code third at 3.70 and Codex CLI fourth at 3.45. The scores come from five weighted criteria, each scored only from observations made on this machine on 19 November 2026. Nothing below is general knowledge about these tools.
 
@@ -87,7 +87,7 @@ It has no 5 outside footprint, and no 3 or lower anywhere. For a small team that
 
 Claude Code wins on footprint and extensibility and is restricted on provider.
 
-At 116 KB it is the smallest install of the four by three orders of magnitude, and its skills plus subagents are the most complete extensibility story we observed. The provider line, "Anthropic models, `--model`", is what holds it to 3.70 despite that.
+At 116 KB it is the smallest install of the four, about 550 times smaller than OpenCode's 62 MB, and its skills plus subagents are the most complete extensibility story we observed. The provider line, "Anthropic models, `--model`", is what holds it to 3.70 despite that.
 
 Codex CLI wins on MCP, because it is the only one of the four documented here as both an MCP client and an MCP server.
 
@@ -108,6 +108,11 @@ Four commands and a filesystem check, and you can audit every number in the tabl
 3. Read the config paths in the table: `$DSH_HOME/profiles`, `~/.claude.json`, `~/.codex/config.toml`, `~/.config/opencode/opencode.jsonc`.
 4. Run `du -sh` on `~/.dsh`, `~/.claude`, `~/.codex` and `~/.config/opencode` for the footprints.
 
+**Read next**
+
+[What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
+
+[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
 ## FAQ
 
 ### Does the ranking change if I care about cost more than 30%?
@@ -118,10 +123,3 @@ Yes, and the table lets you recompute it. Raising provider and cost control to 4
 
 Because a buyer still has to choose this week, and a stated method with a re-run recipe is checkable. The alternative, an unranked list with no weights, hides the same judgement behind prose where nobody can audit it.
 
----
-
-**Read next**
-
-[the buying guides pillar](https://upahje.my/en/articles/category/buying-guides)
-
-[what an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)

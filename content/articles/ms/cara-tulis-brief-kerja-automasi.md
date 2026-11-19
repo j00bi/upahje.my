@@ -91,6 +91,11 @@ Minta setiap freelancer memberi harga bagi lima bahagian yang sama dan menandaka
 
 Kemudian minta kedua-duanya menerangkan ujian penerimaan. Yang boleh menerangkan cara ia berjalan pada data anda telah memahami kerja itu. Yang tidak boleh hanya memberi harga pada satu penerangan.
 
+**Baca seterusnya**
+
+[Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
+
+[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
 ## FAQ
 
 ### Patutkah saya tulis brief sendiri atau biarkan freelancer cadangkan?
@@ -105,10 +110,3 @@ Dapatkan satu contoh sebenar dahulu. Eksport laporan atau baris yang anda mahu d
 
 Tidak sentiasa, tetapi bagi kerja jenis ini biasanya ya, kerana skopnya boleh ditulis. Harga ikut jam sesuai apabila skop memang tidak dapat diketahui di awal, seperti menyiasat mengapa perkhidmatan pihak ketiga gagal. Jika brief itu jelas dan sebut harga masih ikut jam sahaja, tanya bahagian mana yang belum diketahui.
 
----
-
-**Baca seterusnya**
-
-[panduan membeli](https://upahje.my/ms/articles/category/buying-guides)
-
-[kos menyambungkan API](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)

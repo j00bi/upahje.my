@@ -1,6 +1,6 @@
 ---
 title: "What automation work costs in Malaysia: published rates, six sources"
-description: "Six Malaysian publishers, 30 published prices for automation and integration work, all checked on 19 November 2026. What is published, what is not, and how to read the units."
+description: "Six Malaysian publishers, 30 published prices for automation and integration work, checked 19 November 2026 except one page read on 27 October 2026. Several source pages carry no publication date, so a price may be older than this article."
 slug: automation-rates-malaysia-published
 translationKey: automation-rates-malaysia-published
 date: 2026-11-19
@@ -33,11 +33,11 @@ sources:
 
 # What automation work costs in Malaysia: published rates, six sources
 
-Six Malaysian publishers state prices for automation work, and 30 of those prices are collected below with the publisher, unit and date on every row. Five are studios and one is an independent practitioner; the only per-hour figure comes from one freelance profile. Solo freelancers usually quote per job rather than publish, so this table is published supply, not the whole market.
+Published prices for automation work in Malaysia run from RM400 for a simple process build to RM6,000-plus for autonomous task execution. Those figures and 28 more below come from six Malaysian publishers, with the publisher, unit and date on every row. Three are studios, one is a platform vendor selling subscription tiers, one is an independent practitioner, and one is a freelance profile; the only per-hour figure comes from that profile. Solo freelancers usually quote per job rather than publish, so this table is published supply, not the whole market.
 
 ## Who publishes these numbers, and who does not?
 
-The figures below come from pricing pages of Malaysian automation providers and from one Malaysian freelance profile, all read on 19 or 27 October and November 2026 as dated per row.
+The figures below come from pricing pages of Malaysian automation providers and from one Malaysian freelance profile. Every row carries the date it was read: 19 November 2026 for the studio and platform pages, and 27 October 2026 for the independent practitioner's page.
 
 What could not be read matters as much. The global marketplaces are unmeasured here: Upwork returns HTTP 403 with a Cloudflare block, Fiverr returns a bot challenge, Jobstreet returns a Cloudflare interstitial, and Indeed and Maukerja render their listings only in JavaScript. Not one Upwork or Fiverr profile rate could be collected, so nothing here should be read as what a globally-priced freelancer charges. These bands describe the local published-supply layer: agencies with a price list, and one marketplace profile with an hourly rate.
 
@@ -45,7 +45,7 @@ Two further exclusions. Every "quote on request" tier is excluded, because a quo
 
 ## What does a published automation build cost?
 
-Per project, published prices run from RM400 for a simple process build to RM6,000-plus for autonomous task execution. All rows carry the publisher's own unit.
+Per project, published prices run from RM400 for a simple process build at Pang Jun Han to RM6,000-plus for autonomous task execution at Autoflow Solutions. All rows carry the publisher's own unit.
 
 | Task | Rate | Unit | Publisher | Date checked |
 | --- | --- | --- | --- | --- |
@@ -114,6 +114,11 @@ Convert both to the same three numbers before you compare: total cost to a worki
 
 A RM400 session and a RM1,500 project both look small next to a RM6,000 build, and none of them is comparable until you ask how many sessions until it runs, how many months of retainer you will actually pay, and which of the six factors above each quote excludes. Write the answers next to the figures from the same date, and the comparison stops being about which number is lower.
 
+**Read next**
+
+[How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/how-to-brief-an-automation-job)
+
+[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 ## FAQ
 
 ### Is RM60 an hour typical for Malaysian automation freelancers?
@@ -128,10 +133,3 @@ Because they could not be read from here. Upwork returned HTTP 403 with a Cloudf
 
 No, and this table cannot tell you that. It lists prices, publishers and dates. It says nothing about the quality of the work, delivery time, or whether the automation still runs a year later, and none of the six publishers publishes that information.
 
----
-
-**Read next**
-
-[the buying guides pillar](https://upahje.my/en/articles/category/buying-guides)
-
-[how to brief an automation job](https://upahje.my/en/articles/how-to-brief-an-automation-job)

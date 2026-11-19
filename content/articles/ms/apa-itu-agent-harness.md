@@ -26,6 +26,9 @@ Semua yang berikut datang daripada pembacaan harness yang dipasang pada mesin in
 
 Harness merekodkan mesej anda sebagai satu turn, kemudian bekerja melalui step; setiap step boleh menghasilkan tool call, dan turn tamat apabila model berhenti meminta tools.
 
+![Gambar aliran: mesej yang ditaip menjadi satu turn, harness menyediakan konteks dan menghantar permintaan, model memulangkan sama ada tool call atau jawapan, hasil tool kembali melalui harness, dan turn yang selesai ditulis ke transkrip](/figures/using-the-harness.svg)
+*Satu mesej, satu turn: model membuat keputusan, harness menjalankannya, dan transkrip menyimpan rekod.*
+
 Transkrip pada mesin ini mengandungi jenis rekod ini, mengikut urutan satu pertukaran:
 
 1. `turn/start` menandakan mesej anda diterima.
@@ -61,6 +64,11 @@ Tiga arahan, dan anda tidak perlu mempercayai halaman ini untuk menjalankannya.
 2. `ls ~/.dsh/sessions/<folder>/<session>` menunjukkan fail transkrip dan locknya.
 3. `zstd -dc ~/.dsh/sessions/<folder>/<session>/session.v4.jsonl.zstd | head -40` mencetak rekod pertama dalam teks biasa.
 
+**Baca seterusnya**
+
+[Di mana kunci API diletakkan dalam harness, dan di mana ia tidak boleh ada](https://upahje.my/ms/articles/kunci-api-dalam-harness)
+
+[Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
 ## FAQ
 
 ### Bolehkah transkrip itu dibaca oleh manusia?
@@ -75,8 +83,3 @@ Direktori sesi kekal pada cakera bersama transkripnya, jadi fail itu masih ada s
 
 Harness merekodkan `request/header` dan `request/context` bagi setiap step, jadi setiap step ialah permintaan berasingan, bukan satu pertukaran panjang. Apa sebenarnya yang diterima pembekal di dalam permintaan itu tidak diukur oleh halaman ini, dan kami tidak akan menekanya.
 
----
-
-**Baca seterusnya**
-
-[ruang definisi](https://upahje.my/ms/articles/category/definitions)

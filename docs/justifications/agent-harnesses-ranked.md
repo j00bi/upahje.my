@@ -6,11 +6,11 @@
 |---|-------|------------|-----------|---------|-------|
 | 1 | "DeepSeek Harness scores highest at 4.35 out of 5, OpenCode second at 4.15, Claude Code third at 3.70 and Codex CLI fourth at 3.45." | - | - | - | estimate: arithmetic over the score table in the article, weights 30/20/20/15/15 |
 | 2 | "Four harnesses, one machine, one day." | - | our measurement, this machine | 2026-11-19 | source: versions read with `--version` on each binary on 19 November 2026 |
-| 3 | "Version 0.2.2-rc.1" (DeepSeek Harness) | https://www.npmjs.com/package/@deepseek-ai/dsh | our measurement, this machine | 2026-11-19 | source: `dsh --version` path printed 0.2.2-rc.1 |
-| 4 | "Version 2.1.296" (Claude Code) | https://docs.anthropic.com/en/docs/claude-code | our measurement, this machine | 2026-11-19 | source: `claude --version` printed 2.1.296 |
-| 5 | "Version 0.146.0" (Codex CLI) | https://github.com/openai/codex | our measurement, this machine | 2026-11-19 | source: `codex --version` printed 0.146.0 |
-| 6 | "Version 1.18.11" (OpenCode) | https://opencode.ai/docs | our measurement, this machine | 2026-11-19 | source: `opencode --version` printed 1.18.11 |
-| 7 | "Local footprint: 3.2 GB, 116 KB, 246 MB, 62 MB" | - | our measurement, this machine | 2026-11-19 | source: `du -sh` on ~/.dsh, ~/.claude, ~/.codex, ~/.config/opencode |
+| 3 | "Version 0.2.2-rc.1" (DeepSeek Harness) | - | our measurement, this machine | 2026-11-19 | source: `dsh --version` printed 0.2.2-rc.1 |
+| 4 | "Version 2.1.296" (Claude Code) | - | our measurement, this machine | 2026-11-19 | source: `claude --version` printed 2.1.296 |
+| 5 | "Version 0.146.0" (Codex CLI) | - | our measurement, this machine | 2026-11-19 | source: `codex --version` printed 0.146.0 |
+| 6 | "Version 1.18.11" (OpenCode) | - | our measurement, this machine | 2026-11-19 | source: `opencode --version` printed 1.18.11 |
+| 7 | "Local footprint: 3.2 GB, 116 KB, 246 MB, 62 MB" | - | our measurement, this machine | 2026-11-19 | source: `du -sh` ran on ~/.dsh, ~/.claude, ~/.codex and ~/.config/opencode on 19 November 2026 |
 | 8 | "3.2 GB is about 13.3 times Codex and roughly 28,900 times Claude Code on disk" | - | - | - | estimate: arithmetic on the footprint row (3,276.8 MB / 246 MB; 3,276,800 KB / 116 KB) |
 | 9 | "Recomputed on the same cells, that weighting gives DeepSeek Harness 4.65 and OpenCode 4.05." | - | - | - | estimate: arithmetic at weights 40/20/20/15/05 over the same score table |
 | 10 | "OpenMausBot binary is present, errors on launch, its global install and data directory are gone, and its systemd unit is inactive." | - | our measurement, this machine | 2026-11-19 | source: launch attempt and `systemctl status` on 19 November 2026, recorded in the dataset supplied by Chief |

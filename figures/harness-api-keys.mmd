@@ -1,0 +1,18 @@
+---
+title: "Where an API key sits when a harness calls a model"
+---
+flowchart LR
+  A["Your app"] --> B["Harness"]
+  B --> C["Key source<br/>env var or secret store"]
+  C --> D["HTTPS request<br/>key in header"]
+  D --> E["Provider<br/>checks key to account"]
+  E --> F["Model"]
+  F --> E
+  E --> B
+  B --> A
+  subgraph NEVER["Never here"]
+    N1["Chat message"]
+    N2["Committed file"]
+    N3["Screenshot or log"]
+    N4["Client-side code"]
+  end

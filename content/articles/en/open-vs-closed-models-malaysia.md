@@ -81,6 +81,11 @@ This list is our description of the work, not a salary survey or a job specifica
 
 Call an open-weight model before you try to run one. Mistral serves its own open-weight models through an API at USD 0.15 and USD 0.60 per million tokens, which gets you the licence and the model behaviour without buying a GPU or hiring anyone. Self-hosting becomes a question worth asking when your monthly token spend approaches a GPU's monthly cost, or when a data location requirement forces your hand.
 
+**Read next**
+
+[What an API costs to wire up in Malaysia](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
+
+[More on APIs and models](https://upahje.my/en/articles/category/definitions)
 ## FAQ
 
 ### Do I have to run a model myself to use open weights?
@@ -95,10 +100,3 @@ Not usefully. The models in this article are large: Mistral Small 4 has 119 bill
 
 Only if the hardware is in Malaysia. Renting a GPU in another region moves the data there, same as calling a closed API. If data location is your reason to self-host, check where the rented machine actually sits before you commit.
 
----
-
-**Read next**
-
-[the definitions pillar](https://upahje.my/en/articles/category/definitions)
-
-[what an API costs to wire up](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
