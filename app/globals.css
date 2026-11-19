@@ -561,8 +561,8 @@ body {
 
 /* ===========================================
    Article surface tokens
-   Light default; dark is a reader choice set as data-theme before paint.
-   One accent (brand emerald), one neutral family.
+   One light theme: the OS colour scheme never changes it. No toggle, no
+   data-theme attribute, no stored preference. One accent, one neutral family.
    =========================================== */
 
 :root {
@@ -589,17 +589,6 @@ body {
   color-scheme: light;
 }
 
-:root[data-theme='dark'] {
-  --ui-canvas: #12140f;
-  --ui-surface: #171a14;
-  --ui-ink: #e9e7df;
-  --ui-body: #c8c6bd;
-  --ui-muted: #9b9a90;
-  --ui-rule: rgba(233, 231, 223, 0.14);
-  --ui-accent: #9fe870;
-  --ui-topbar: color-mix(in oklab, var(--ui-canvas) 92%, transparent);
-  color-scheme: dark;
-}
 
 .ui-canvas {
   background-color: var(--ui-canvas);
@@ -642,8 +631,7 @@ body {
   .no-print {
     display: none !important;
   }
-  :root,
-  :root[data-theme='dark'] {
+  :root {
     --ui-canvas: #ffffff;
     --ui-surface: #ffffff;
     --ui-ink: #000000;
@@ -712,10 +700,3 @@ summary,
   }
 }
 
-.theme-toggle {
-  display: none;
-}
-
-:root[data-js='on'] .theme-toggle {
-  display: inline-flex;
-}
