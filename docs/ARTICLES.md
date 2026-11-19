@@ -64,14 +64,40 @@ page.
 - Figures: one block of its own, never inside a paragraph.
 
   ```markdown
-  ![Where the API key sits](/figures/api-key-flow.svg)
+  ![Your store sends an order to the API, the API passes it to the courier, and the delivery status comes back the same way](/figures/what-is-an-api.svg)
   *Optional italic caption line, which must not repeat the alt text.*
   ```
 
   SVG only, under `public/figures/`. The renderer reads the SVG's own
   width/height, so the `<img>` ships with intrinsic dimensions (no layout shift),
-  `loading="lazy"`, and a `<figcaption>` from the italic line. The `.drawio` or
-  other source stays in `docs/` or `assets/diagram-sources/`, never in `public/`.
+  `loading="lazy"`, and a `<figcaption>` from the italic line. The source stays
+  in `figures/` (Mermaid) or `assets/diagram-sources/` (authored), never in
+  `public/`.
+
+  ### Mermaid sources
+
+  Diagrams that suit Mermaid are text-defined in `figures/<slug>.mmd` and
+  rendered manually:
+
+  ```bash
+  node scripts/build-figures.mjs           # changed sources only
+  node scripts/build-figures.mjs --force   # all of them
+  ```
+
+  It writes `public/figures/<slug>.svg`; commit the SVG. It is **not** part of
+  the Vercel build, because the build must not depend on Puppeteer. Set
+  `PUPPETEER_EXECUTABLE_PATH` if Chromium is not at `/usr/bin/chromium`.
+
+  Rules for a figure: one per article, never reused; a declared aspect ratio
+  with `<title>`/`<desc>`; if the rendered shape is flatter than about 4:1 it is
+  a ribbon, so re-author it; type must land at 14px or larger at 640px wide;
+  each arrow gets exactly one label and the directions must differ (solid
+  forward, dashed return). No inline `<svg>` in article Markdown and nothing
+  that draws in a shared layout.
+
+  An authored SVG is allowed when Mermaid provably cannot hold the shape (the
+  API article's three-step flow with a return path renders as a 10:1 ribbon in
+  Mermaid). It still goes through the image line and `<figure>` branch.
 - An FAQ at the end, in exactly this shape, so the FAQPage JSON-LD can be
   generated from the visible copy:
 
