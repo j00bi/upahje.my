@@ -60,7 +60,7 @@ Third answer.
 
 [definitions](/en/articles/category/definitions)
 
-![Where the API key sits](/figures/api-key-flow.svg)
+![Where the API key sits](/figures/what-is-an-api.svg)
 *The key travels from the harness to the provider.*
 `
 
@@ -98,8 +98,8 @@ try {
   const questions = faqScript?.mainEntity?.length ?? 0
   const answers = (faqScript?.mainEntity ?? []).map((q) => q.acceptedAnswer.text).join(' ')
   const readNext = /<a[^>]*href="\/en\/articles\/category\/definitions"[^>]*>definitions<\/a>/.test(html)
-  const figure = /<figure[^>]*>[\s\S]*?<img[^>]*src="\/figures\/api-key-flow\.svg"[^>]*>/.test(html)
-  const dimensions = /<img[^>]*src="\/figures\/api-key-flow\.svg"[^>]*width="1080"[^>]*height="620"/.test(html)
+  const figure = /<figure[^>]*>[\s\S]*?<img[^>]*src="\/figures\/what-is-an-api\.svg"[^>]*>/.test(html)
+  const dimensions = /<img[^>]*src="\/figures\/what-is-an-api\.svg"[^>]*width="1040"[^>]*height="320"/.test(html)
   const caption = /<figcaption[^>]*>The key travels from the harness to the provider\.<\/figcaption>/.test(html)
 
   if (!readNext) failures.push('read-next anchor missing from server HTML')
