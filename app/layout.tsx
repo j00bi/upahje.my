@@ -42,7 +42,7 @@ export default function RootLayout({
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "try{document.documentElement.dataset.js='on';if(localStorage.getItem('upahje-theme')==='dark'){document.documentElement.dataset.theme='dark'}}catch(e){}",
+              "try{document.documentElement.dataset.js='on'}catch(e){}",
           }}
         />
         <main>{children}</main>

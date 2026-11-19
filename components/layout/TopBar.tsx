@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import ThemeToggle from '@/components/layout/ThemeToggle'
 import { ARTICLE_CATEGORIES, categoryLabel, LANGUAGES, languageByCode } from '@/lib/articles.mjs'
 
 /**
@@ -60,7 +59,6 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
             </Link>
           ))}
           {languageSwitch}
-          <ThemeToggle />
           <Link href={`/${lang}/articles`} className="ui-link text-[13px] font-semibold" style={{ color: 'var(--ui-ink)' }}>
             Articles
           </Link>
@@ -99,7 +97,6 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
                 <Link href={otherHref} hrefLang={otherLanguage.htmlLang} className="ui-link px-2 py-3 text-[14px] font-semibold">
                   {otherLanguage.native}
                 </Link>
-                <ThemeToggle />
               </div>
             </nav>
           </div>
