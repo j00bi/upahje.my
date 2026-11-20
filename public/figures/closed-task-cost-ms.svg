@@ -2,7 +2,6 @@
   <title id="t">Kos satu tugasan: USD 0.02 hingga USD 1.60 pada beban kerja sama</title>
   <desc id="d">Bar mengikut skala: Haiku 5.5 USD 0.02, Gemini 4 Carbon USD 0.40, Fable 5.2 USD 1.60 setiap tugasan pada 100,000 input dan 20,000 output token.</desc>
   <text x="40" y="46" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" fill="#14160f" text-anchor="start" font-weight="600">Kos satu tugasan: USD 0.02 hingga USD 1.60 pada beban kerja sama</text>
-  <text x="284" y="258" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#6b6f66" text-anchor="end" font-weight="400">USD setiap tugasan</text>
   <line x1="300.0" y1="84" x2="300.0" y2="252" stroke="#cfccc3" stroke-width="1"/>
   <text x="300.0" y="286" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="middle" font-weight="400">0</text>
   <line x1="450.5882352941177" y1="84" x2="450.5882352941177" y2="252" stroke="#cfccc3" stroke-width="1"/>
