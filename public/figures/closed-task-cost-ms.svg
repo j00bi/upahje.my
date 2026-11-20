@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="340" viewBox="0 0 1040 340" role="img" aria-labelledby="t d">
+  <title id="t">Kos satu tugasan: USD 0.02 hingga USD 1.60 pada beban kerja sama</title>
+  <desc id="d">Bar mengikut skala: Haiku 5.5 USD 0.02, Gemini 4 Carbon USD 0.40, Fable 5.2 USD 1.60 setiap tugasan pada 100,000 input dan 20,000 output token.</desc>
+  <text x="40" y="46" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" fill="#14160f" text-anchor="start" font-weight="600">Kos satu tugasan: USD 0.02 hingga USD 1.60 pada beban kerja sama</text>
+  <text x="284" y="258" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="17" fill="#6b6f66" text-anchor="end" font-weight="400">USD setiap tugasan</text>
+  <line x1="300.0" y1="84" x2="300.0" y2="252" stroke="#cfccc3" stroke-width="1"/>
+  <text x="300.0" y="286" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="middle" font-weight="400">0</text>
+  <line x1="450.5882352941177" y1="84" x2="450.5882352941177" y2="252" stroke="#cfccc3" stroke-width="1"/>
+  <text x="450.5882352941177" y="286" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="middle" font-weight="400">0.40</text>
+  <line x1="601.1764705882354" y1="84" x2="601.1764705882354" y2="252" stroke="#cfccc3" stroke-width="1"/>
+  <text x="601.1764705882354" y="286" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="middle" font-weight="400">0.80</text>
+  <line x1="751.7647058823529" y1="84" x2="751.7647058823529" y2="252" stroke="#cfccc3" stroke-width="1"/>
+  <text x="751.7647058823529" y="286" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="middle" font-weight="400">1.20</text>
+  <line x1="902.3529411764706" y1="84" x2="902.3529411764706" y2="252" stroke="#cfccc3" stroke-width="1"/>
+  <text x="902.3529411764706" y="286" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="middle" font-weight="400">1.60</text>
+  <text x="284" y="118" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="end" font-weight="400">Claude Haiku 5.5</text>
+  <rect x="300" y="101" width="7.529411764705856" height="20" rx="4" fill="#1a6b2e"/>
+  <text x="321.52941176470586" y="117" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="start" font-weight="400">USD 0.02</text>
+  <text x="284" y="174" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="end" font-weight="400">Gemini 4 Carbon</text>
+  <rect x="300" y="157" width="150.58823529411768" height="20" rx="4" fill="#14160f"/>
+  <text x="464.5882352941177" y="173" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="start" font-weight="400">USD 0.40</text>
+  <text x="284" y="230" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="end" font-weight="400">Claude Fable 5.2</text>
+  <rect x="300" y="213" width="602.3529411764706" height="20" rx="4" fill="#5a5e54"/>
+  <text x="916.3529411764706" y="229" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="start" font-weight="400">USD 1.60</text>
+</svg>

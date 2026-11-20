@@ -71,6 +71,9 @@ Per project, published prices run from RM400 for a simple process build at Pang 
 | AI task execution retainer | RM600 | per month | Autoflow Solutions | 2026-11-19, page undated |
 | Freelance AI automation and workflow systems, also REST APIs and internal tools | RM60 | per hour | NG Jack Sen, freelancing.my | 2026-11-19, page undated |
 
+![Four publishers' published project price ranges, from RM400 at Pang Jun Han to RM6,000-plus at Autoflow Solutions](/figures/rates-project-prices.svg)
+*Published project prices by publisher: RM400 at the floor, RM6,000-plus at the ceiling.*
+
 ## What does an integration cost?
 
 No Malaysian publisher in this set states a per-integration price, so no per-integration market rate is claimed here. What is published is subscription tiers that include connectors and API integration.

@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="440" viewBox="0 0 1040 440" role="img" aria-labelledby="t d">
+  <title id="t">What one month costs in ringgit: token bills against seats</title>
+  <desc id="d">Log axis. A month of Claude Haiku 5.5 tokens at 150, 900 and 6,000 tasks costs RM0.28, RM1.67 and RM11.11; the three seats cost RM24, RM82.29 and RM99.90.</desc>
+  <text x="40" y="46" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" fill="#14160f" text-anchor="start" font-weight="600">What one month costs in ringgit: token bills against seats</text>
+  <line x1="340.0" y1="80" x2="340.0" y2="348" stroke="#cfccc3" stroke-width="1"/>
+  <text x="340.0" y="382" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="middle" font-weight="400">RM0.10</text>
+  <line x1="519.4658759803624" y1="80" x2="519.4658759803624" y2="348" stroke="#cfccc3" stroke-width="1"/>
+  <text x="519.4658759803624" y="382" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="middle" font-weight="400">RM1</text>
+  <line x1="698.9317519607248" y1="80" x2="698.9317519607248" y2="348" stroke="#cfccc3" stroke-width="1"/>
+  <text x="698.9317519607248" y="382" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="middle" font-weight="400">RM10</text>
+  <line x1="878.3976279410872" y1="80" x2="878.3976279410872" y2="348" stroke="#cfccc3" stroke-width="1"/>
+  <text x="878.3976279410872" y="382" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="middle" font-weight="400">RM100</text>
+  <line x1="340" y1="80" x2="910" y2="80" stroke="#cfccc3" stroke-width="1"/>
+  <text x="324" y="112" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="end" font-weight="400">Tokens, light (150 tasks)</text>
+  <circle cx="420.24960779648575" cy="98" r="9" fill="#1a6b2e"/>
+  <text x="436.24960779648575" y="103" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#3f423c" text-anchor="start" font-weight="400">RM0.28</text>
+  <text x="324" y="156" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="end" font-weight="400">Tokens, daily (900 tasks)</text>
+  <circle cx="559.4358825701186" cy="142" r="9" fill="#1a6b2e"/>
+  <text x="575.4358825701186" y="147" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#3f423c" text-anchor="start" font-weight="400">RM1.67</text>
+  <text x="324" y="200" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="end" font-weight="400">Tokens, heavy (6,000 tasks)</text>
+  <circle cx="707.1358655931656" cy="186" r="9" fill="#1a6b2e"/>
+  <text x="723.1358655931656" y="191" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#3f423c" text-anchor="start" font-weight="400">RM11.11</text>
+  <text x="324" y="244" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="end" font-weight="400">Seat: ChatGPT Go</text>
+  <circle cx="767.1666955120795" cy="230" r="9" fill="none" stroke="#14160f" stroke-width="2.5"/>
+  <circle cx="767.1666955120795" cy="230" r="4.5" fill="#ffffff"/>
+  <text x="783.1666955120795" y="235" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#14160f" text-anchor="start" font-weight="400">RM24</text>
+  <text x="324" y="288" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="end" font-weight="400">Seat: Claude Pro</text>
+  <circle cx="863.2053143267873" cy="274" r="9" fill="none" stroke="#14160f" stroke-width="2.5"/>
+  <circle cx="863.2053143267873" cy="274" r="4.5" fill="#ffffff"/>
+  <text x="879.2053143267873" y="279" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#14160f" text-anchor="start" font-weight="400">RM82.29</text>
+  <text x="324" y="332" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="21" fill="#3f423c" text-anchor="end" font-weight="400">Seat: ChatGPT Plus</text>
+  <circle cx="878.3196479049394" cy="318" r="9" fill="none" stroke="#14160f" stroke-width="2.5"/>
+  <circle cx="878.3196479049394" cy="318" r="4.5" fill="#ffffff"/>
+  <text x="894.3196479049394" y="323" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#14160f" text-anchor="start" font-weight="400">RM99.90</text>
+  <circle cx="340" cy="416" r="8" fill="#1a6b2e"/>
+  <text x="358" y="422" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="start" font-weight="400">tokens</text>
+  <circle cx="460" cy="416" r="8" fill="#14160f"/>
+  <circle cx="460" cy="416" r="4" fill="#ffffff"/>
+  <text x="478" y="422" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="start" font-weight="400">seat</text>
+</svg>

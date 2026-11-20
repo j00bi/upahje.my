@@ -65,6 +65,9 @@ PolyForm Noncommercial 1.0.0, yang meliputi OpenBot, membenarkan penggunaan buka
 
 Produk tertutup yang dihoskan, Grok Bot dan Dots, tidak memberikan kedua-duanya. Anda mendapat akses di bawah terma perkhidmatan, pada infrastruktur vendor, dengan peraturan penyimpanan vendor, dan anda tidak boleh menjalankannya sendiri atau membaca sumbernya.
 
+![Tiga zon: tertutup dan dihoskan bagi Dots dan Grok Bot, sumber tersedia bagi OpenBot di bawah PolyForm Noncommercial, sumber terbuka bagi MausBot di bawah Apache-2.0](/figures/harness-licence-line-ms.svg)
+*Sumber tersedia bukan sumber terbuka: lesen OpenBot bukan komersial, repo utama MausBot Apache-2.0.*
+
 ## Mengapa satu nama memetakan kepada beberapa projek?
 
 Kerana "OpenBot" ialah sekurang-kurangnya empat projek tidak berkaitan, dan yang dipasang pada mesin ini tidak dapat dikenal pasti sekarang.

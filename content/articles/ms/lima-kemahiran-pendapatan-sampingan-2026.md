@@ -72,6 +72,9 @@ Sesuatu kemahiran layak hanya jika sekurang-kurangnya dua senarai dengan bajet r
 
 Kandungan media sosial tidak layak. Ia hanya ada satu senarai bertarikh serta satu kadar setiap jam, dan itu bukan dua senarai, jadi ia tidak dikira sebagai julat kemahiran di sini.
 
+![Kadar yang diterbitkan setiap projek bagi lima kemahiran: suntingan video RM150 hingga RM2,500, reka bentuk grafik RM300 hingga RM1,100, kemasukan data RM50 hingga RM70, panggilan jualan RM700 hingga RM1,000, ujian aplikasi RM330 hingga RM600](/figures/side-income-rates-ms.svg)
+*Kadar yang diterbitkan setiap projek: kemasukan data sehingga RM70, suntingan video hingga RM2,500.*
+
 ## Berapa bayaran suntingan video?
 
 Tiga senarai, RM150 hingga RM2,500 setiap projek, dan julatnya tentang skop bukan kemahiran: satu kelompok percubaan bentuk pendek, satu filem pendek penuh, dan satu peranan merakam serta menyunting.

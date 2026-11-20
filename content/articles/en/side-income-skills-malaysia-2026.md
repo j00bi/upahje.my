@@ -72,6 +72,9 @@ A skill qualified only if at least two listings with a real ringgit budget were 
 
 Social media content did not qualify. It had one dated listing plus one hourly rate, which is not two listings, so it is not counted as a skill band here.
 
+![Five skills' published per-project rates: video editing RM150 to RM2,500, graphic design RM300 to RM1,100, data entry RM50 to RM70, cold calling RM700 to RM1,000, app testing RM330 to RM600](/figures/side-income-rates.svg)
+*Published rates per project: data entry tops out at RM70 while video editing reaches RM2,500.*
+
 ## What does video editing pay?
 
 Three listings, RM150 to RM2,500 per project, and the spread is scope rather than skill: a short-form trial batch, a full short film, and a shoot-and-edit role.

@@ -71,6 +71,9 @@ Mengikut projek, harga yang diterbitkan bermula dari RM400 bagi pembinaan proses
 | Reteria pelaksanaan tugasan AI | RM600 | setiap bulan | Autoflow Solutions | 2026-11-19, halaman tanpa tarikh |
 | Freelance automasi AI dan sistem aliran kerja, juga REST API dan tool dalaman | RM60 | setiap jam | NG Jack Sen, freelancing.my | 2026-11-19, halaman tanpa tarikh |
 
+![Julat harga projek yang diterbitkan oleh empat penerbit, dari RM400 di Pang Jun Han hingga RM6,000 lebih di Autoflow Solutions](/figures/rates-project-prices-ms.svg)
+*Harga projek yang diterbitkan mengikut penerbit: RM400 di bawah, RM6,000 lebih di atas.*
+
 ## Berapa kos satu integrasi?
 
 Tiada penerbit Malaysia dalam set ini menyatakan harga setiap integrasi, jadi tiada kadar pasaran bagi integrasi individu didakwa di sini. Yang diterbitkan ialah tier langganan yang merangkumi penyambung dan integrasi API.

@@ -80,6 +80,9 @@ Kerana input dan output dinilai berasingan, satu contoh berkira menjadikan jadua
 
 Itu jurang 80 kali antara baris termurah dan termahal pada tugasan yang sama, dan setiap angka boleh disemak terhadap harga yang dicetak. Tukar andaian itu dan jumlahnya berubah secara berkadar; pendaraban itulah yang menjadikannya boleh diaudit.
 
+![Tiga bar mengikut skala: Claude Haiku 5.5 USD 0.02, Gemini 4 Carbon USD 0.40, Claude Fable 5.2 USD 1.60 setiap tugasan](/figures/closed-task-cost-ms.svg)
+*Tugasan 100,000 input dan 20,000 output yang sama berharga USD 0.02 pada Haiku 5.5 dan USD 1.60 pada Fable 5.2.*
+
 ## Di mana terletaknya ikatan?
 
 Tiga tempat, dan setiap satu muncul dalam kontrak, bukan dalam penanda aras.

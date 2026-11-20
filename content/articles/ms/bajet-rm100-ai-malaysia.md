@@ -75,6 +75,9 @@ Kos meter yang sama kecil pada penggunaan ringan, tidak bermakna pada penggunaan
 
 Setiap baris ialah tugasan × RM0.00185. Bulan 30 hari diandaikan. Pada penggunaan berat anda membelanjakan kira-kira RM11 sebulan untuk token, yang meninggalkan RM89 daripada RM100 tidak digunakan, dan itulah aritmetik yang menentukan soalan ini bagi kebanyakan orang.
 
+![Enam penanda mendatar pada skala log dari RM0.10 hingga RM100: bil token RM0.28, RM1.67 dan RM11.11 berbanding langganan RM24, RM82.29 dan RM99.90](/figures/rm100-month-cost-ms.svg)
+*Sebulan token berharga bawah RM12 pada setiap tahap penggunaan, berbanding langganan berbayar termurah RM24.*
+
 ## Bagaimana jika saya mahu kedua-duanya?
 
 Maka anda membeli dua perkara, dan versi paling murah ialah tempat duduk lebih kecil campur token, bukan tempat duduk terbesar.

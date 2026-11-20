@@ -65,6 +65,9 @@ PolyForm Noncommercial 1.0.0, which covers OpenBot, permits noncommercial use on
 
 Closed hosted products, Grok Bot and Dots, grant neither. You get access under terms of service, on the vendor's infrastructure, with the vendor's retention rules, and you cannot run them yourself or read the source.
 
+![Three zones: closed and hosted for Dots and Grok Bot, source available for OpenBot under PolyForm Noncommercial, open source for MausBot under Apache-2.0](/figures/harness-licence-line.svg)
+*Source available is not open source: OpenBot's licence is noncommercial, MausBot's main repo is Apache-2.0.*
+
 ## Why does one name map to several projects?
 
 Because "OpenBot" is at least four unrelated projects, and the one installed on this machine cannot now be identified.

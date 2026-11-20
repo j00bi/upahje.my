@@ -80,6 +80,9 @@ Because input and output are priced separately, one worked example makes the tab
 
 That is an 80 times spread between the cheapest and most expensive row on the same task, and every figure is checkable against the printed price. Change the assumption and the totals change proportionally; the multiplication is what makes it auditable.
 
+![Three bars to scale: Claude Haiku 5.5 at USD 0.02, Gemini 4 Carbon at USD 0.40, Claude Fable 5.2 at USD 1.60 per task](/figures/closed-task-cost.svg)
+*The same 100,000-in, 20,000-out task costs USD 0.02 on Haiku 5.5 and USD 1.60 on Fable 5.2.*
+
 ## Where is the lock-in?
 
 Three places, and each shows up in the contract rather than the benchmark.

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="300" viewBox="0 0 1040 300" role="img" aria-labelledby="t d">
+  <title id="t">Apa yang dibenarkan lesen, mengikut produk</title>
+  <desc id="d">Apa yang dibenarkan lesen, mengikut produk</desc>
+  <text x="40" y="46" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="24" fill="#14160f" text-anchor="start" font-weight="600">Apa yang dibenarkan lesen, mengikut produk</text>
+  <rect x="40" y="70" width="300" height="120" rx="10" fill="#efece4"/>
+  <text x="190.0" y="104" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="19" fill="#3f423c" text-anchor="middle" font-weight="600">Tertutup dan dihoskan</text>
+  <rect x="360" y="70" width="340" height="120" rx="10" fill="#f7efdc"/>
+  <text x="530.0" y="104" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="19" fill="#3f423c" text-anchor="middle" font-weight="600">Sumber tersedia, bukan sumber terbuka</text>
+  <rect x="720" y="70" width="280" height="120" rx="10" fill="#e6efe4"/>
+  <text x="860.0" y="104" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="19" fill="#3f423c" text-anchor="middle" font-weight="600">Sumber terbuka pada lesennya</text>
+  <text x="40" y="150" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="23" fill="#14160f" text-anchor="start" font-weight="400">Dots</text>
+  <text x="40" y="178" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="23" fill="#14160f" text-anchor="start" font-weight="400">Grok Bot</text>
+  <text x="380" y="150" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="23" fill="#14160f" text-anchor="start" font-weight="400">OpenBot</text>
+  <text x="380" y="178" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="19" fill="#6b6f66" text-anchor="start" font-weight="400">PolyForm Noncommercial</text>
+  <text x="740" y="150" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="23" fill="#14160f" text-anchor="start" font-weight="400">MausBot (main repo)</text>
+  <text x="740" y="178" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="19" fill="#6b6f66" text-anchor="start" font-weight="400">Apache-2.0</text>
+  <text x="40" y="232" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="18" fill="#6b6f66" text-anchor="start" font-weight="400">MausBot ada repo kedua di bawah MIT. Laman OpenBot menyebut sumbernya terbuka; lesennya PolyForm Noncommercial.</text>
+</svg>
