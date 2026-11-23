@@ -58,7 +58,7 @@
       "descriptionEn": "The day-to-day machinery of a small business.",
       "descriptionMs": "Jentera harian sesebuah perniagaan kecil.",
       "sortOrder": 6,
-      "hidden": true
+      "hidden": false
     }
   ],
   "mapping": {
@@ -152,6 +152,11 @@
     "google-business-profile-fields": {
       "pillar": "marketing",
       "secondary": "operations",
+      "type": "explainer"
+    },
+    "same-data-typed-three-times": {
+      "pillar": "operations",
+      "secondary": "finance",
       "type": "explainer"
     }
   }

@@ -270,6 +270,115 @@ Google does not publish a timeframe on the pages read for this article. What it 
 - Google, appeal Business Profile content and profile restrictions — https://support.google.com/business/answer/13597551 (checked 2026-11-23)
 - Google, Business Profile API reference (locations resource) — https://developers.google.com/my-business/reference/rest/v4/accounts.locations (checked 2026-11-23)
 
+## Where the same data gets typed three times
+
+URL: https://upahje.my/en/articles/same-data-typed-three-times
+Checked: 2026-11-23
+
+Adoption is not the problem. In 2024, 97.2% of Malaysian establishments reported using computers, 95.3% had internet access, and 74.4% had a web presence. The duplication happens one layer back: a customer-facing system that was digitised, and a back office that was not. The same order then exists in two places, and a person reconciles it.
+
+## What do the official numbers say?
+
+Three figures from DOSM's ICT and e-commerce release for establishments, data year 2024, published 2025. They measure adoption, and they measure it well.
+
+| Measure | 2024 | Change from the previous year |
+| --- | --- | --- |
+| Establishments using computers | 97.2% | up 0.6 percentage points from 96.6% |
+| Establishments with internet access | 95.3% | up from 94.0% |
+| Establishments with a web presence | 74.4% | up from 72.7% |
+
+Read them together and the picture is a business that already has a computer, a connection and often a website. What the release does not measure is how many separate systems those establishments run, or how much time goes into moving data between them. That absence matters, and it is the reason this article avoids a number for "hours lost".
+
+## What does the research say about how it is used?
+
+Khazanah Research Institute, with MDEC, published a finding in May 2026 that describes the pattern without counting it, so it is worth quoting rather than paraphrasing: digital tools "are often implemented in isolation and used reactively, driven by immediate operational needs rather than longer-term strategic planning".
+
+The same paper describes "fragmented systems where customer-facing functions are digitised while back-end processes remain manual", and adds that technology use is "typically confined to basic infrastructure and standalone applications, with minimal use of analytics, automation, or enterprise systems". It also names the precursor: "many MSMEs operate with limited documentation, weak record-keeping, and constrained access to financing".
+
+This is a think-tank finding, dated 25 May 2026, not a statistic. It says the shape of the problem, and it is careful not to put a number on it.
+
+## Where does a single order get typed three times?
+
+Follow one order. It arrives as a message, gets written into a quotation, becomes an invoice, and then a delivery order or a job sheet. Each of those documents exists in a system, and in most small businesses the systems do not talk.
+
+The quotation lives in a template. The invoice is issued through accounting software. The delivery order is a form someone prints, or a note in a chat. The stock count is a spreadsheet that one person maintains. Four records of one event, and the only integration is a person remembering which one is current.
+
+That is not a technology failure at the level DOSM measures. Every one of those tools is software. It is a fragmentation failure, exactly the pattern KRI describes, and it costs a business in rework rather than in licences.
+
+## Why does e-Invoice force the point?
+
+Because LHDN now checks the document, not the intent, and the check happens at issuance.
+
+Three rules make that concrete, all from LHDN's own validation documentation and guidelines:
+
+1. **Duplicates are checked.** The Duplicate Document Validator looks for documents submitted recently that are similar or identical, so a second submission of the same invoice is not invisible.
+2. **The taxpayer must be valid on the date of issuance.** The Taxpayer Validator checks that the taxpayers referenced are valid at that date, not at the date someone corrected the record.
+3. **Corrections are time-boxed.** A buyer may reject and a seller may cancel within 72 hours of validation. After that, the only correction is a new e-Invoice in the form of a credit, debit or refund note.
+
+So the invoice data has to be right once, at the source, before an automated system touches it. An automation that copies a wrong supplier code into a submitted invoice does not create a small error; it creates a correction document with its own tax treatment. We covered the filing timeline in [what e-Invoice automation covers](https://upahje.my/en/articles/what-einvoice-automation-covers); this article is about why the data behind it has to be single.
+
+## What does nobody publish?
+
+Three gaps, and they are worth naming because they are the numbers every vendor deck uses.
+
+No published figure gives the number of software systems a typical Malaysian SME runs. DOSM's release covers computers, internet and web presence; there is no application-count question in it.
+
+No published Malaysian figure gives the ringgit cost of duplicated entry or of integration. Vendor pages assert savings without a baseline, which makes the percentage meaningless.
+
+And the two famous "hours lost" numbers are not Malaysian. One is a vendor case study claiming "around 60%" of admin hours removed; another is a vendor case study claiming "20 hours of weekly manual work" cut. The widely repeated "12-16 hours per week" traces to an unsigned blog citing US labour-statistics and consultancy data, which is not a Malaysian measurement and should not be printed as one.
+
+## The checklist you will see quoted
+
+Written process, named owner, clean data source, exception path. That four-part framing is a Malaysian operations consultancy's article, published on its own site with no byline, written about the KRI/MDEC paper. It is a vendor's checklist, not an official one, and no government body publishes those four as a standard. Useful as a way to think; not citable as policy.
+
+## What to do this week?
+
+Five actions, none of which needs a purchase.
+
+1. **Pick one document** you issue often: a quotation, an invoice, a delivery order.
+2. **Follow it end to end**, and write down every place a person retypes something that already existed.
+3. **Count the copies** of that one record, and name who owns which copy.
+4. **Find the field that gets fixed by hand** most often, because that is where the source is wrong.
+5. **Write the exception path** for the one case that happens weekly: what should the system say, and who decides.
+
+## Try it yourself
+
+The smallest runnable version is a one-page map, not a system: a spreadsheet with one row per step of the document, and columns for system, owner, and where the data is retyped.
+
+You need the document, the person who handles it, and an hour. It costs nothing. The bite is that the map will show steps nobody admitted to, including the WhatsApp message that is currently the integration. Write it down anyway; the message is the real process, and automating around it without knowing it is how a project fails.
+
+**Read next**
+
+[What e-Invoice automation covers, and what stays with a person](https://upahje.my/en/articles/what-einvoice-automation-covers)
+
+[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+
+## FAQ
+
+### Is this a software problem or a process problem?
+
+It is a fragmentation problem, and KRI's wording is the accurate one: digitised in front, manual in back. Buying another tool before mapping the handoffs usually adds a fifth copy of the record.
+
+### Do we have to fix this before e-Invoice?
+
+You have to make the invoice data right at issuance, which is a smaller requirement than fixing everything. Start with the fields LHDN validates, then widen.
+
+### How many systems is too many?
+
+Nobody publishes a number, and the count is the wrong question. Two systems that disagree are worse than five that share one record.
+
+### Can we just automate the copy step?
+
+You can, and it is the most common first project. It also preserves the disagreement between systems, which is why the [piece on choosing a first automation](https://upahje.my/en/articles/your-first-automation-wrong-process) argues for mapping first.
+
+### Sources
+
+- DOSM, usage of ICT and e-commerce by establishment, 2025 release (data year 2024) — https://www.dosm.gov.my/portal-main/release-content/usage-of-ict-and-e-commerce-by-establishment2025 (checked 2026-11-23)
+- Khazanah Research Institute with MDEC, from survival to scale (25 May 2026) — https://www.krinstitute.org/press-release/from-survival-to-scale-digitalisation-among-malaysias-micro-and-small-enterprises-remains-broad-but-shallow (checked 2026-11-23)
+- LHDN, MyInvois SDK document validation rules — https://sdk.myinvois.hasil.gov.my/document-validation-rules/ (checked 2026-11-23)
+- LHDN, Garis Panduan e-Invois Versi 4.8 — https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf (checked 2026-11-23)
+- Friction, Malaysia SME digitalisation note (vendor article, no byline) — https://friction.com.my/insights/malaysia-sme-digitalisation-from-survival-to-scale-2026 (checked 2026-11-23)
+
 ## What an AI agent can and cannot do for a Malaysian SME
 
 URL: https://upahje.my/en/articles/what-an-ai-agent-can-do
@@ -2320,6 +2429,115 @@ Sama ada fail ditulis dan ujian lulus, bukan sama ada arahan keluar dengan 0. La
 - OpenCode, dokumentasi langganan Go — https://opencode.ai/docs/console/go (checked 2026-11-23)
 - DeepSeek, harga API — https://api-docs.deepseek.com/quick_start/pricing (checked 2026-11-23)
 - Hacker News, Show HN: Command Code GOAT (5 Ogos 2026) — https://news.ycombinator.com/item?id=49188656 (checked 2026-11-23)
+
+## Di mana data yang sama ditaip tiga kali
+
+URL: https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali
+Checked: 2026-11-23
+
+Penggunaan bukan masalahnya. Pada 2024, 97.2% pertubuhan Malaysia melaporkan menggunakan komputer, 95.3% ada akses internet, dan 74.4% ada kehadiran web. Penduaan berlaku satu lapisan di belakang: sistem yang menghadap pelanggan sudah didigitalkan, dan pejabat belakang tidak. Pesanan yang sama kemudian wujud di dua tempat, dan seseorang mendamaikannya.
+
+## Apa yang sebenarnya dikatakan angka rasmi?
+
+Tiga angka daripada terbitan ICT dan e-dagang DOSM bagi pertubuhan, tahun data 2024, diterbitkan 2025. Ia mengukur penggunaan, dan ia mengukurnya dengan baik.
+
+| Ukuran | 2024 | Perubahan daripada tahun sebelumnya |
+| --- | --- | --- |
+| Pertubuhan menggunakan komputer | 97.2% | naik 0.6 mata peratus daripada 96.6% |
+| Pertubuhan dengan akses internet | 95.3% | naik daripada 94.0% |
+| Pertubuhan dengan kehadiran web | 74.4% | naik daripada 72.7% |
+
+Baca ketiga-tiganya bersama dan gambarannya ialah perniagaan yang sudah ada komputer, sambungan dan selalunya laman web. Apa yang tidak diukur oleh terbitan itu ialah berapa banyak sistem berasingan yang dijalankan pertubuhan tersebut, atau berapa banyak masa digunakan untuk memindahkan data antara sistem itu. Ketiadaan itu penting, dan sebab itulah artikel ini mengelak daripada memberi angka "jam yang hilang".
+
+## Apa yang dikatakan kajian tentang cara ia digunakan?
+
+Khazanah Research Institute bersama MDEC menerbitkan penemuan pada Mei 2026 yang menerangkan coraknya tanpa mengiranya, jadi wajar dipetik dan bukan diolah: alat digital "are often implemented in isolation and used reactively, driven by immediate operational needs rather than longer-term strategic planning".
+
+Kertas yang sama menerangkan "fragmented systems where customer-facing functions are digitised while back-end processes remain manual", dan menambah bahawa penggunaan teknologi "typically confined to basic infrastructure and standalone applications, with minimal use of analytics, automation, or enterprise systems". Ia juga menamakan pelopornya: "many MSMEs operate with limited documentation, weak record-keeping, and constrained access to financing".
+
+Ini penemuan think-tank, bertarikh 25 Mei 2026, bukan statistik. Ia menyatakan bentuk masalahnya, dan ia berhati-hati untuk tidak meletakkan angka padanya.
+
+## Di mana satu pesanan ditaip tiga kali?
+
+Ikut satu pesanan. Ia masuk sebagai mesej, ditulis menjadi sebut harga, menjadi invois, kemudian menjadi pesanan penghantaran atau helaian kerja. Setiap dokumen itu wujud dalam satu sistem, dan dalam kebanyakan perniagaan kecil sistem itu tidak bercakap.
+
+Sebut harga tinggal dalam templat. Invois dikeluarkan melalui perisian perakaunan. Pesanan penghantaran ialah borang yang dicetak seseorang, atau nota dalam sembang. Kiraan stok ialah spreadsheet yang dijaga seorang. Empat rekod bagi satu peristiwa, dan satu-satunya integrasi ialah manusia yang mengingati mana satu yang terkini.
+
+Itu bukan kegagalan teknologi pada tahap yang diukur DOSM. Setiap alat itu perisian. Ia kegagalan fragmentasi, tepat seperti corak yang diterangkan KRI, dan ia menelan kos dalam kerja semula dan bukan dalam lesen.
+
+## Mengapa e-Invoice memaksa perkara ini?
+
+Kerana LHDN kini menyemak dokumen, bukan niat, dan semakan itu berlaku semasa pengeluaran.
+
+Tiga peraturan menjadikannya konkrit, semuanya daripada dokumentasi pengesahan dan garis panduan LHDN sendiri:
+
+1. **Pendua disemak.** Duplicate Document Validator mencari dokumen yang dihantar baru-baru ini yang serupa atau sama, jadi penyerahan kedua invois yang sama tidak tidak kelihatan.
+2. **Pembayar cukai mesti sah pada tarikh pengeluaran.** Taxpayer Validator menyemak bahawa pembayar cukai yang dirujuk sah pada tarikh itu, bukan pada tarikh seseorang membetulkan rekod.
+3. **Pembetulan ada had masa.** Pembeli boleh menolak dan penjual boleh membatalkan dalam 72 jam selepas pengesahan. Selepas itu, satu-satunya pembetulan ialah e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
+
+Jadi data invois mesti betul sekali, di punca, sebelum sistem automatik menyentuhnya. Automasi yang menyalin kod pembekal yang salah ke dalam invois yang diserahkan tidak menghasilkan kesilapan kecil; ia menghasilkan dokumen pembetulan dengan layanan cukainya sendiri. Kami sudah liputi garis masa pemfailan dalam [apa yang diliputi automasi e-Invoice](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi); artikel ini tentang mengapa data di belakangnya mesti tunggal.
+
+## Apa yang tiada siapa terbitkan?
+
+Tiga jurang, dan ia wajar dinamakan kerana itulah angka yang setiap slaid vendor gunakan.
+
+Tiada angka diterbitkan yang memberi bilangan sistem perisian yang dijalankan PKS Malaysia biasa. Terbitan DOSM meliputi komputer, internet dan kehadiran web; tiada soalan kiraan aplikasi di dalamnya.
+
+Tiada angka Malaysia yang diterbitkan memberi kos ringgit bagi kemasukan berulang atau integrasi. Halaman vendor menegaskan penjimatan tanpa garis dasar, dan itu menjadikan peratusannya tidak bermakna.
+
+Dan dua angka "jam yang hilang" yang terkenal itu bukan Malaysia. Satu kajian kes vendor yang mendakwa "around 60%" jam pentadbiran dapat dihapuskan; satu lagi kajian kes vendor yang mendakwa "20 hours of weekly manual work" dapat dikurangkan. Angka "12-16 jam seminggu" yang tersebar luas berasal daripada blog tanpa nama penulis yang memetik data buruh dan perundingan Amerika Syarikat, iaitu bukan ukuran Malaysia dan tidak patut dicetak sebagai satu.
+
+## Senarai semak yang akan anda lihat dipetik
+
+Proses bertulis, pemilik yang dinamakan, sumber data yang bersih, laluan pengecualian. Rangka empat bahagian itu ialah artikel sebuah firma operasi Malaysia, diterbitkan di laman sendiri tanpa nama penulis, ditulis tentang kertas KRI/MDEC. Ia senarai semak vendor, bukan senarai rasmi, dan tiada badan kerajaan menerbitkan empat perkara itu sebagai piawaian. Berguna untuk berfikir; tidak boleh dipetik sebagai polisi.
+
+## Apa yang patut dibuat minggu ini?
+
+Lima tindakan, tiada satu pun memerlukan pembelian.
+
+1. **Pilih satu dokumen** yang kerap anda keluarkan: sebut harga, invois, pesanan penghantaran.
+2. **Ikut ia dari hujung ke hujung**, dan tulis setiap tempat seseorang menaip semula sesuatu yang sudah wujud.
+3. **Kira salinan** rekod itu, dan namakan siapa pemilik salinan mana.
+4. **Cari medan yang paling kerap dibaiki dengan tangan**, kerana di situlah puncanya salah.
+5. **Tulis laluan pengecualian** bagi kes yang berlaku setiap minggu: apa yang patut dikatakan sistem, dan siapa yang memutuskan.
+
+## Cuba sendiri
+
+Versi paling kecil yang boleh dijalankan ialah peta satu halaman, bukan sistem: spreadsheet dengan satu baris bagi setiap langkah dokumen, dan lajur untuk sistem, pemilik, dan tempat data ditaip semula.
+
+Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya tiada. Yang menggigit ialah peta itu akan menunjukkan langkah yang tiada siapa mengaku, termasuk mesej WhatsApp yang kini menjadi integrasi. Tulis juga; mesej itu proses sebenar, dan mengautomasikan di sekelilingnya tanpa mengetahuinya ialah cara projek gagal.
+
+**Baca seterusnya**
+
+[Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi)
+
+[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+
+## FAQ
+
+### Ini masalah perisian atau masalah proses?
+
+Ia masalah fragmentasi, dan perkataan KRI yang tepat: digital di hadapan, manual di belakang. Membeli tool lain sebelum memetakan penyerahan biasanya menambah salinan kelima rekod itu.
+
+### Perlukah kami betulkan ini sebelum e-Invoice?
+
+Anda perlu memastikan data invois betul semasa dikeluarkan, iaitu keperluan yang lebih kecil daripada membetulkan semuanya. Mulakan dengan medan yang disemak LHDN, kemudian luaskan.
+
+### Berapa banyak sistem itu terlalu banyak?
+
+Tiada siapa menerbitkan angka, dan kiraannya soalan yang salah. Dua sistem yang bercanggah lebih buruk daripada lima yang berkongsi satu rekod.
+
+### Bolehkah kami hanya automasikan langkah salinan?
+
+Boleh, dan ia projek pertama yang paling biasa. Ia juga mengekalkan percanggahan antara sistem, dan sebab itulah [artikel tentang memilih automasi pertama](https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk) berhujah supaya memetakan dahulu.
+
+### Sources
+
+- DOSM, penggunaan ICT dan e-dagang oleh pertubuhan, terbitan 2025 (tahun data 2024) — https://www.dosm.gov.my/portal-main/release-content/usage-of-ict-and-e-commerce-by-establishment2025 (checked 2026-11-23)
+- Khazanah Research Institute bersama MDEC, from survival to scale (25 Mei 2026) — https://www.krinstitute.org/press-release/from-survival-to-scale-digitalisation-among-malaysias-micro-and-small-enterprises-remains-broad-but-shallow (checked 2026-11-23)
+- LHDN, peraturan pengesahan dokumen MyInvois SDK — https://sdk.myinvois.hasil.gov.my/document-validation-rules/ (checked 2026-11-23)
+- LHDN, Garis Panduan e-Invois Versi 4.8 — https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf (checked 2026-11-23)
+- Friction, nota digitalisasi PKS Malaysia (artikel vendor, tiada nama penulis) — https://friction.com.my/insights/malaysia-sme-digitalisation-from-survival-to-scale-2026 (checked 2026-11-23)
 
 ## Google Business Profile: medan yang menentukan sama ada anda muncul
 
