@@ -1,37 +1,31 @@
-# Deploy UpahJe.my to Vercel — Dashboard Method
+# Deploying UpahJe.my
 
-## Step 1: Push to GitHub
+The site is a Next.js publication deployed on Vercel from `main`. It needs **no
+secrets to build or run**: content is Markdown in the repository, and the only
+third-party script is Vercel Web Analytics, configured in the dashboard.
+
+Environment variables live in **Vercel → Project → Settings → Environment
+Variables**, never in this repository. If a future feature needs a key, add it
+there and document its name here, without the value.
+
+## Deploy
+
+1. Push to `main` — Vercel builds and deploys on every push.
+2. Watch the deployment in the Vercel dashboard; the build command runs
+   `check-articles`, `generate-llms`, `generate-feeds`, then `next build`.
+3. Verify the result:
 
 ```bash
-git add -A
-git commit -m "ready for production deployment"
-git push origin master
+BASE=https://upahje.my node scripts/verify-content.mjs
 ```
 
-## Step 2: Deploy on Vercel Dashboard
+## Domain
 
-1. Go to https://vercel.com/new
-2. Import the GitHub repo
-3. Framework preset: **Next.js**
-4. Add these environment variables exactly:
+`upahje.my` points at Vercel; DNS is managed at Shinjiru. Nothing in the build
+depends on the DNS provider.
 
-```
-NEXT_PUBLIC_SUPABASE_URL=https://uyzoinyuicsnzqpewqop.supabase.co
-NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-anon-key>
-SUPABASE_SERVICE_ROLE_KEY=<your-service-role-key>
-DATABASE_URL=postgresql://postgres:mpGSip4q0iimyotp@db.uyzoinyuicsnzqpewqop.supabase.co:5432/postgres?sslmode=require
-NEXTAUTH_SECRET=$(openssl rand -base64 32)
-NEXTAUTH_URL=https://upahje-my.vercel.app
-```
+## Analytics
 
-5. Click **Deploy**
-6. Wait ~3 minutes for build to finish
-7. You'll get a live URL like `https://upahje-my.vercel.app`
-
-## Step 3: Connect Custom Domain
-
-1. In Vercel dashboard → Project → Settings → Domains
-2. Add your purchased domain
-3. Follow the DNS instructions Vercel provides
-4. Update `NEXTAUTH_URL` in Vercel env vars to `https://yourdomain.com`
-5. Redeploy
+Enable Web Analytics once in Vercel → Project → Analytics. The code is already
+wired (`@vercel/analytics` in `app/layout.tsx`); with it disabled the script
+endpoint returns 404 and no data is recorded.
