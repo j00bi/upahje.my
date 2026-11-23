@@ -194,3 +194,120 @@ enum EscrowStatus {
   RELEASED
   CANCELLED
 }
+
+enum ArticleType {
+  explainer
+  guide
+  comparison
+  perspective
+}
+
+model Author {
+  id        String    @id @default(cuid())
+  slug      String    @unique
+  name      String
+  bio       String?
+  avatarUrl String?
+  createdAt DateTime  @default(now())
+  articles  Article[]
+
+  @@map("authors")
+}
+
+/// The six editorial pillars. Existing URL categories stay with the content
+/// reader; this table is the structured model and stays hidden until a pillar
+/// has three live pieces.
+model EditorialCategory {
+  id            String    @id @default(cuid())
+  slug          String    @unique
+  nameEn        String
+  nameMs        String
+  descriptionEn String?
+  descriptionMs String?
+  sortOrder     Int       @default(0)
+  hidden        Boolean   @default(false)
+  primaryOf     Article[] @relation("PrimaryCategory")
+  secondaryOf   Article[] @relation("SecondaryCategory")
+
+  @@map("categories")
+}
+
+model Collection {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  titleEn       String
+  titleMs       String
+  descriptionEn String?
+  descriptionMs String?
+  sortOrder     Int      @default(0)
+  createdAt     DateTime @default(now())
+
+  @@map("collections")
+}
+
+model Article {
+  id                  String               @id @default(cuid())
+  translationKey      String               @unique
+  type                ArticleType
+  primaryCategoryId   String
+  secondaryCategoryId String?
+  authorId            String?
+  publishedAt         DateTime?
+  updatedAt           DateTime?
+  draft               Boolean              @default(false)
+  createdAt           DateTime             @default(now())
+  primaryCategory     EditorialCategory    @relation("PrimaryCategory", fields: [primaryCategoryId], references: [id])
+  secondaryCategory   EditorialCategory?   @relation("SecondaryCategory", fields: [secondaryCategoryId], references: [id])
+  author              Author?              @relation(fields: [authorId], references: [id])
+  translations        ArticleTranslation[]
+
+  @@map("articles")
+}
+
+model ArticleTranslation {
+  id             String          @id @default(cuid())
+  articleId      String
+  lang           String
+  slug           String
+  title          String
+  description    String
+  bodyMarkdown   String
+  paragraphCount Int
+  readingMinutes Int
+  canonicalUrl   String?
+  article        Article         @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  sources        ArticleSource[]
+  figures        ArticleFigure[]
+
+  @@unique([articleId, lang])
+  @@unique([lang, slug])
+  @@map("article_translations")
+}
+
+model ArticleSource {
+  id            String             @id @default(cuid())
+  translationId String
+  position      Int
+  title         String
+  url           String
+  checkedAt     DateTime?
+  translation   ArticleTranslation @relation(fields: [translationId], references: [id], onDelete: Cascade)
+
+  @@unique([translationId, position])
+  @@map("article_sources")
+}
+
+model ArticleFigure {
+  id            String             @id @default(cuid())
+  translationId String
+  position      Int
+  src           String
+  alt           String
+  caption       String?
+  width         Int?
+  height        Int?
+  translation   ArticleTranslation @relation(fields: [translationId], references: [id], onDelete: Cascade)
+
+  @@unique([translationId, position])
+  @@map("article_figures")
+}

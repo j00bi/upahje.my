@@ -1,0 +1,29 @@
+{
+  "pillars": [
+    { "slug": "business", "nameEn": "Business", "nameMs": "Perniagaan", "descriptionEn": "How a small business is run, priced and staffed.", "descriptionMs": "Cara perniagaan kecil diurus, diberi harga dan dikendalikan.", "sortOrder": 1, "hidden": false },
+    { "slug": "finance", "nameEn": "Finance", "nameMs": "Kewangan", "descriptionEn": "Money in, money out, and what the tools actually cost.", "descriptionMs": "Wang masuk, wang keluar, dan kos sebenar alat itu.", "sortOrder": 2, "hidden": false },
+    { "slug": "technology", "nameEn": "Technology", "nameMs": "Teknologi", "descriptionEn": "The systems a small business touches, explained without jargon.", "descriptionMs": "Sistem yang disentuh perniagaan kecil, dijelaskan tanpa jargon.", "sortOrder": 3, "hidden": false },
+    { "slug": "automation-ai", "nameEn": "Automation & AI", "nameMs": "Automasi & AI", "descriptionEn": "Work that runs itself, and the decisions behind it.", "descriptionMs": "Kerja yang berjalan sendiri, dan keputusan di sebaliknya.", "sortOrder": 4, "hidden": false },
+    { "slug": "marketing", "nameEn": "Marketing", "nameMs": "Pemasaran", "descriptionEn": "Reaching customers without wasting the budget.", "descriptionMs": "Menjangkau pelanggan tanpa membazir bajet.", "sortOrder": 5, "hidden": true },
+    { "slug": "operations", "nameEn": "Operations", "nameMs": "Operasi", "descriptionEn": "The day-to-day machinery of a small business.", "descriptionMs": "Jentera harian sesebuah perniagaan kecil.", "sortOrder": 6, "hidden": true }
+  ],
+  "mapping": {
+    "what-is-an-api": { "pillar": "technology", "type": "explainer" },
+    "do-you-need-an-api-or-a-spreadsheet": { "pillar": "technology", "type": "explainer" },
+    "harness-api-keys": { "pillar": "technology", "type": "guide" },
+    "open-vs-closed-models": { "pillar": "automation-ai", "secondary": "technology", "type": "explainer" },
+    "using-the-harness": { "pillar": "automation-ai", "type": "explainer" },
+    "agent-harness-vs-ai-harness": { "pillar": "automation-ai", "secondary": "technology", "type": "explainer" },
+    "what-an-ai-agent-can-do": { "pillar": "automation-ai", "secondary": "business", "type": "explainer" },
+    "agent-harnesses-ranked": { "pillar": "automation-ai", "type": "comparison" },
+    "harness-landscape-open-closed": { "pillar": "automation-ai", "type": "comparison" },
+    "closed-models-differences": { "pillar": "automation-ai", "type": "comparison" },
+    "open-models-differences": { "pillar": "automation-ai", "type": "comparison" },
+    "commandcode-opencode-deepseek-numbers": { "pillar": "automation-ai", "secondary": "technology", "type": "comparison" },
+    "automation-rates-malaysia-published": { "pillar": "business", "secondary": "finance", "type": "guide" },
+    "how-to-brief-an-automation-job": { "pillar": "business", "secondary": "operations", "type": "guide" },
+    "rm100-budget": { "pillar": "finance", "secondary": "automation-ai", "type": "guide" },
+    "what-einvoice-automation-covers": { "pillar": "finance", "secondary": "automation-ai", "type": "guide" },
+    "side-income-skills-malaysia-2026": { "pillar": "finance", "secondary": "business", "type": "guide" }
+  }
+}
