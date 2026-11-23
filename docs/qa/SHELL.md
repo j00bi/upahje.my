@@ -17,6 +17,6 @@ Checks run on this build: no horizontal overflow at 375 and 430
 (`scrollWidth === innerWidth`), mobile sheet opens and exposes 8 links, `/en`,
 `/ms`, `/en/articles`, `/privacy` and `/terms` all 200, sitemap still 54 URLs.
 
-The marketplace route group still uses `components/layout/NavBar.tsx`; it is a
-different surface, not a second publication shell. It stays until the
-marketplace routes are retired with your approval.
+Main (`e558175`) has since deleted the marketplace half, including `NavBar`, so
+the only shell components in the tree are `TopBar` and `Footer`. No second
+navigation surface remains.
