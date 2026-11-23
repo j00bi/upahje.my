@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Footer from '@/components/layout/Footer'
-import ArticleCard from '@/components/articles/ArticleCard'
-import CategoryNav from '@/components/articles/CategoryNav'
+import PillarNav from '@/components/articles/PillarNav'
+import ArticlePreview from '@/components/articles/ArticlePreview'
 import TopBar from '@/components/layout/TopBar'
 import Pagination from '@/components/articles/Pagination'
 import { copyFor } from '@/lib/copy'
@@ -18,9 +18,7 @@ export function generateStaticParams() {
   })
 }
 
-function pageNumber(value: string): number {
-  return /^\d+$/.test(value) ? Number(value) : NaN
-}
+const pageNumber = (value: string): number => (/^\d+$/.test(value) ? Number(value) : NaN)
 
 export function generateMetadata({ params }: { params: { lang: string; page: string } }): Metadata {
   const copy = copyFor(params.lang)
@@ -28,10 +26,7 @@ export function generateMetadata({ params }: { params: { lang: string; page: str
   return {
     title: `${copy.journal} - page ${n} - ${SITE_NAME}`,
     description: copy.intro,
-    alternates: {
-      canonical: absolute(`/${params.lang}/articles/page/${n}`),
-      languages: languagesFor(`/articles/page/${n}`),
-    },
+    alternates: { canonical: absolute(`/${params.lang}/articles/page/${n}`), languages: languagesFor(`/articles/page/${n}`) },
     robots: { index: false, follow: true },
     ...social(params.lang, `/${params.lang}/articles/page/${n}`, `${copy.journal} - page ${n} - ${SITE_NAME}`, copy.intro),
   }
@@ -48,20 +43,12 @@ export default function ArticlesPage({ params }: { params: { lang: string; page:
   return (
     <div className="ui-canvas min-h-screen">
       <TopBar lang={lang} otherHref={`/${lang === 'en' ? 'ms' : 'en'}/articles`} />
-      <header className="border-b" style={{ borderColor: 'var(--ui-rule)' }}>
-        <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
-          <h1 className="font-display-xl text-ink">{copy.journal}</h1>
-          <div className="mt-8">
-            <CategoryNav lang={lang} />
-          </div>
-        </div>
+      <header className="container-editorial" style={{ paddingTop: 'var(--space-10)', paddingBottom: 'var(--space-6)' }}>
+        <h1 className="type-h1" style={{ color: 'var(--ui-ink)' }}>{copy.journal}</h1>
+        <div className="mt-6"><PillarNav lang={lang} /></div>
       </header>
-      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
-        <div className="grid gap-6 sm:grid-cols-2">
-          {articles.map((article) => (
-            <ArticleCard key={article.slug} article={article} />
-          ))}
-        </div>
+      <main className="container-editorial" style={{ paddingBottom: 'var(--space-12)' }}>
+        <div>{articles.map((article) => <ArticlePreview key={article.slug} article={article} lang={lang} />)}</div>
         <Pagination page={n} pageCount={pages} lang={lang} />
       </main>
       <Footer lang={lang} />

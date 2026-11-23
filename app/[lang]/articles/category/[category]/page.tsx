@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Footer from '@/components/layout/Footer'
-import ArticleCard from '@/components/articles/ArticleCard'
-import CategoryNav from '@/components/articles/CategoryNav'
+import ArticlePreview from '@/components/articles/ArticlePreview'
+import PillarNav from '@/components/articles/PillarNav'
 import TopBar from '@/components/layout/TopBar'
 import { copyFor } from '@/lib/copy'
 import { definedTermSetJsonLd } from '@/lib/jsonld'
@@ -13,68 +13,82 @@ import {
   categoryLabel,
   languageCodes,
 } from '@/lib/articles.mjs'
-import { SITE_NAME, absolute, categoryLanguages, social } from '@/lib/seo'
+import { articlesForPillar, pillarBySlug, visiblePillars } from '@/lib/pillars.mjs'
+import { SITE_NAME, absolute, categoryLanguages, languagesFor, social } from '@/lib/seo'
 
 export const dynamicParams = false
 
+/** Both the pillar topic pages and the legacy category URLs are generated here. */
 export function generateStaticParams() {
-  return languageCodes.flatMap((lang) =>
-    ARTICLE_CATEGORIES.map((category) => ({ lang, category: category.slug })),
-  )
+  const slugs = new Set([
+    ...visiblePillars().map((pillar) => pillar.slug),
+    ...ARTICLE_CATEGORIES.map((category) => category.slug),
+  ])
+  return languageCodes.flatMap((lang) => [...slugs].map((category) => ({ lang, category })))
+}
+
+function describe(slug: string, lang: string) {
+  const pillar = pillarBySlug(slug)
+  if (pillar) {
+    return {
+      pillar: true as const,
+      label: lang === 'ms' ? pillar.nameMs : pillar.nameEn,
+      blurb: (lang === 'ms' ? pillar.descriptionMs : pillar.descriptionEn) ?? '',
+      articles: articlesForPillar(lang, slug),
+      languages: languagesFor(`/articles/category/${slug}`),
+    }
+  }
+  const category = categoryBySlug(slug)
+  if (!category) return null
+  return {
+    pillar: false as const,
+    label: categoryLabel(category.slug, lang),
+    blurb: category.blurb[lang],
+    articles: articlesInCategory(category.slug, lang),
+    languages: categoryLanguages(category.slug),
+  }
 }
 
 export function generateMetadata({ params }: { params: { lang: string; category: string } }): Metadata {
-  const category = categoryBySlug(params.category)
-  if (!category) return {}
-  const label = categoryLabel(params.category, params.lang)
+  const topic = describe(params.category, params.lang)
+  if (!topic) return {}
   return {
-    title: `${label} - ${SITE_NAME}`,
-    description: category.blurb[params.lang],
-    alternates: {
-      canonical: absolute(`/${params.lang}/articles/category/${params.category}`),
-      languages: categoryLanguages(params.category),
-    },
-    ...social(params.lang, `/${params.lang}/articles/category/${params.category}`, `${label} - ${SITE_NAME}`, category.blurb[params.lang]),
+    title: `${topic.label} - ${SITE_NAME}`,
+    description: topic.blurb,
+    alternates: { canonical: absolute(`/${params.lang}/articles/category/${params.category}`), languages: topic.languages },
+    ...social(params.lang, `/${params.lang}/articles/category/${params.category}`, `${topic.label} - ${SITE_NAME}`, topic.blurb),
   }
 }
 
 export default function CategoryPage({ params }: { params: { lang: string; category: string } }) {
-  const category = categoryBySlug(params.category)
-  if (!category) notFound()
+  const topic = describe(params.category, params.lang)
+  if (!topic) notFound()
   const copy = copyFor(params.lang)
-  const articles = articlesInCategory(category.slug, params.lang)
-  const label = categoryLabel(category.slug, params.lang)
-  const url = absolute(`/${params.lang}/articles/category/${category.slug}`)
+  const url = absolute(`/${params.lang}/articles/category/${params.category}`)
 
   return (
     <div className="ui-canvas min-h-screen">
-      <TopBar lang={params.lang} otherHref={`/${params.lang === 'en' ? 'ms' : 'en'}/articles/category/${category.slug}`} />
-      <header className="border-b" style={{ borderColor: 'var(--ui-rule)' }}>
-        <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 sm:py-14">
-          <h1 className="font-display-xl mt-4 text-ink">{label}</h1>
-          <p className="mt-4 max-w-2xl text-[17px] leading-8 text-body">{category.blurb[params.lang]}</p>
-          <div className="mt-8">
-            <CategoryNav lang={params.lang} active={category.slug} />
-          </div>
-        </div>
+      <TopBar lang={params.lang} otherHref={`/${params.lang === 'en' ? 'ms' : 'en'}/articles/category/${params.category}`} />
+      <header className="container-editorial" style={{ paddingTop: 'var(--space-10)', paddingBottom: 'var(--space-6)' }}>
+        <h1 className="type-h1" style={{ color: 'var(--ui-ink)' }}>{topic.label}</h1>
+        {topic.blurb && (
+          <p className="type-body mt-3" style={{ color: 'var(--ui-body)', maxWidth: 'var(--measure)' }}>{topic.blurb}</p>
+        )}
+        <div className="mt-6"><PillarNav lang={params.lang} active={topic.pillar ? params.category : undefined} /></div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
-        {articles.length === 0 ? (
-          <p className="text-body">{copy.empty}</p>
+      <main className="container-editorial" style={{ paddingBottom: 'var(--space-12)' }}>
+        {topic.articles.length === 0 ? (
+          <p className="type-body py-10" style={{ color: 'var(--ui-muted)', borderTop: '1px solid var(--ui-rule)' }}>{copy.empty}</p>
         ) : (
-          <div className="grid gap-6 sm:grid-cols-2">
-            {articles.map((article) => (
-              <ArticleCard key={article.slug} article={article} />
-            ))}
-          </div>
+          <div>{topic.articles.map((article) => <ArticlePreview key={article.slug} article={article} lang={params.lang} />)}</div>
         )}
       </main>
 
-      {category.slug === 'definitions' && articles.length > 0 && (
+      {!topic.pillar && params.category === 'definitions' && topic.articles.length > 0 && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetJsonLd(label, url, articles)) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermSetJsonLd(topic.label, url, topic.articles)) }}
         />
       )}
 

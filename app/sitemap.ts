@@ -1,5 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { ARTICLE_CATEGORIES, LANGUAGES, publishedArticles } from '@/lib/articles.mjs'
+import { visiblePillars } from '@/lib/pillars.mjs'
 import { SITE } from '@/lib/seo'
 import { REPO_TOPICS } from '@/lib/repos.mjs'
 
@@ -21,6 +22,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       entries.push({ url: `${SITE}/${lang}/repos/${topic.slug}`, changeFrequency: 'weekly', priority: 0.7 })
     }
 
+    for (const pillar of visiblePillars()) {
+      entries.push({ url: `${SITE}/${lang}/articles/category/${pillar.slug}` })
+    }
     for (const category of ARTICLE_CATEGORIES) {
       entries.push({
         url: `${SITE}/${lang}/articles/category/${category.slug}`,
