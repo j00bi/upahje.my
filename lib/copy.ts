@@ -22,6 +22,14 @@ export const COPY = {
     faq: 'FAQ',
     empty: 'No articles published yet.',
     langSwitch: 'Read in',
+    homeHeadline: 'Ideas worth understanding. Knowledge worth using.',
+    homeStandfirst:
+      'An independent Malaysian publication about the technology, money and decisions a small business actually lives with. Written plainly, checked against sources, in English and Bahasa Melayu.',
+    featured: 'Featured',
+    readStory: 'Read the story',
+    topics: 'Explore by topic',
+    allTopics: 'All topics',
+    minRead: 'min read',
   },
   ms: {
     site: 'UpahJe.my',
@@ -45,6 +53,14 @@ export const COPY = {
     faq: 'Soalan lazim',
     empty: 'Belum ada artikel diterbitkan.',
     langSwitch: 'Baca dalam',
+    homeHeadline: 'Idea yang wajar difahami. Ilmu yang wajar digunakan.',
+    homeStandfirst:
+      'Penerbitan bebas Malaysia tentang teknologi, wang dan keputusan yang benar-benar dihadapi perniagaan kecil. Ditulis dengan jelas, disemak dengan sumber, dalam bahasa Inggeris dan Bahasa Melayu.',
+    featured: 'Pilihan editor',
+    readStory: 'Baca artikel',
+    topics: 'Jelajah mengikut topik',
+    allTopics: 'Semua topik',
+    minRead: 'min baca',
   },
 }
 
