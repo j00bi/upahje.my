@@ -53,6 +53,15 @@ This site publishes short, citable articles. Every claim links to a source; ever
 - [Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia): Model terbuka boleh dimuat turun dan dijalankan pada perkakasan sendiri. Berapa kosnya sebulan, bila ia mula berbaloi berbanding bayaran ikut panggilan, dan kemahiran yang diperlukan.
 - [Perlukan API, atau cukup spreadsheet?](https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet): Spreadsheet menang pada jumlah kecil dengan satu pemilik; API menang apabila dua sistem perlu selaras tanpa ada orang menyalin. Tiga keadaan spreadsheet betul, dan empat tanda ia sudah tidak memadai.
 
+## Repo directory
+
+- [Video generation](https://upahje.my/en/repos/video-generation): The models and inference stacks you would actually run, not the app wrappers around them. (14 repos, GitHub API 2026-11-23)
+- [Penjanaan video](https://upahje.my/ms/repos/video-generation): Model dan tindanan inferens yang benar-benar boleh dijalankan, bukan pembungkus aplikasi di sekelilingnya. (14 repo, API GitHub 2026-11-23)
+- [Game development](https://upahje.my/en/repos/game-dev): Engines, frameworks and the asset path underneath them. (18 repos, GitHub API 2026-11-23)
+- [Pembangunan permainan](https://upahje.my/ms/repos/game-dev): Enjin, rangka kerja dan laluan aset di bawahnya. (18 repo, API GitHub 2026-11-23)
+- [Game studio pipeline](https://upahje.my/en/repos/game-studio): The jobs a studio does every week: art, audio, large files, builds. (14 repos, GitHub API 2026-11-23)
+- [Saluran studio permainan](https://upahje.my/ms/repos/game-studio): Kerja yang dibuat studio setiap minggu: seni, audio, fail besar, binaan. (14 repo, API GitHub 2026-11-23)
+
 ## Library
 
 - [Repos, SDKs and price pages](https://upahje.my/en/resources): every repository and price page the articles cite, with its licence and whether we ran it, read it, or only installed it.

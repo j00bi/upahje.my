@@ -13,6 +13,7 @@ import {
   categoryLabel,
   publishedArticles,
 } from '../lib/articles.mjs'
+import { REPO_TOPICS } from '../lib/repos.mjs'
 
 const SITE = 'https://upahje.my'
 const clean = (value) => String(value).replace(/\s*—\s*/g, ' - ').replace(/\s*–\s*/g, '-')
@@ -50,6 +51,13 @@ for (const language of LANGUAGES) {
 }
 
 lines.push(
+  '',
+  '## Repo directory',
+  '',
+  ...REPO_TOPICS.flatMap((t) => [
+    `- [${t.title.en}](${SITE}/en/repos/${t.slug}): ${t.blurb.en} (${t.entries.length} repos, GitHub API 2026-11-23)`,
+    `- [${t.title.ms}](${SITE}/ms/repos/${t.slug}): ${t.blurb.ms} (${t.entries.length} repo, API GitHub 2026-11-23)`,
+  ]),
   '',
   '## Library',
   '',
