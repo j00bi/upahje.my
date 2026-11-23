@@ -59,6 +59,9 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
             </Link>
           ))}
           {languageSwitch}
+          <Link href={`/${lang}/resources`} className="ui-link text-[13px] font-medium">
+            {lang === 'ms' ? 'Pustaka' : 'Library'}
+          </Link>
           <Link href={`/${lang}/articles`} className="ui-link text-[13px] font-semibold" style={{ color: 'var(--ui-ink)' }}>
             Articles
           </Link>
@@ -90,6 +93,9 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
                   {categoryLabel(category.slug, lang)}
                 </Link>
               ))}
+              <Link href={`/${lang}/resources`} className="ui-link rounded-[8px] px-2 py-3 text-[14px]">
+                {lang === 'ms' ? 'Pustaka' : 'Library'}
+              </Link>
               <Link href={`/${lang}/articles`} className="ui-link rounded-[8px] px-2 py-3 text-[14px] font-semibold" style={{ color: 'var(--ui-ink)' }}>
                 Articles
               </Link>

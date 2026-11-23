@@ -14,6 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     const lang = language.code
     entries.push({ url: `${SITE}/${lang}`, changeFrequency: 'weekly', priority: 1 })
     entries.push({ url: `${SITE}/${lang}/articles`, changeFrequency: 'daily', priority: 0.9 })
+    entries.push({ url: `${SITE}/${lang}/resources`, changeFrequency: 'weekly', priority: 0.6 })
 
     for (const category of ARTICLE_CATEGORIES) {
       entries.push({

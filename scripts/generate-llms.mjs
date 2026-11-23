@@ -51,6 +51,11 @@ for (const language of LANGUAGES) {
 
 lines.push(
   '',
+  '## Library',
+  '',
+  `- [Repos, SDKs and price pages](${SITE}/en/resources): every repository and price page the articles cite, with its licence and whether we ran it, read it, or only installed it.`,
+  `- [Repo, SDK dan halaman harga](${SITE}/ms/resources): setiap repo dan halaman harga yang dipetik, dengan lesennya dan sama ada kami menjalankannya, membacanya, atau hanya memasangnya.`,
+  '',
   '## Notes',
   '',
   '- Each article lists its sources and the date they were checked.',

@@ -53,6 +53,11 @@ This site publishes short, citable articles. Every claim links to a source; ever
 - [Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia): Model terbuka boleh dimuat turun dan dijalankan pada perkakasan sendiri. Berapa kosnya sebulan, bila ia mula berbaloi berbanding bayaran ikut panggilan, dan kemahiran yang diperlukan.
 - [Perlukan API, atau cukup spreadsheet?](https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet): Spreadsheet menang pada jumlah kecil dengan satu pemilik; API menang apabila dua sistem perlu selaras tanpa ada orang menyalin. Tiga keadaan spreadsheet betul, dan empat tanda ia sudah tidak memadai.
 
+## Library
+
+- [Repos, SDKs and price pages](https://upahje.my/en/resources): every repository and price page the articles cite, with its licence and whether we ran it, read it, or only installed it.
+- [Repo, SDK dan halaman harga](https://upahje.my/ms/resources): setiap repo dan halaman harga yang dipetik, dengan lesennya dan sama ada kami menjalankannya, membacanya, atau hanya memasangnya.
+
 ## Notes
 
 - Each article lists its sources and the date they were checked.
