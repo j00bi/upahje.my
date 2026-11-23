@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="380" viewBox="0 0 1040 380" role="img" aria-labelledby="rowTitle rowDesc" font-family="Inter, system-ui, -apple-system, sans-serif">
+  <title id="rowTitle">Apa yang terkandung dalam satu baris papan pendahulu, menggunakan entri DeepSeek pada Terminal-bench 4.1</title>
+  <desc id="rowDesc">Empat lajur berlabel model, agent, tetapan dan skor. Baris contoh membaca DeepSeek V4.1 Flash 1017 pada max, dijalankan di bawah Claude Code, pada Terminal-bench 4.1 jadual lalai disusun mengikut kadar penyelesaian, dengan skor 38.5 peratus tambah tolak 3.8 dan 8.2 bilion token. Kaki nota menyatakan CommandCode dan OpenCode tidak muncul sebagai agent pada papan itu.</desc>
+  <rect width="1040" height="380" fill="none"/>
+  <text x="40" y="46" font-size="20" font-weight="600" fill="#14160f">Satu baris papan pendahulu ialah empat medan, bukan satu angka</text>
+  <text x="40" y="72" font-size="14" fill="#63665e">Terminal-bench 4.1, dibaca 23 November 2026. Contoh ini satu-satunya baris yang menamakan model semasa DeepSeek.</text>
+  <g stroke="#e6e2d8" stroke-width="1">
+    <line x1="40" y1="92" x2="1000" y2="92"/>
+    <line x1="40" y1="140" x2="1000" y2="140"/>
+    <line x1="40" y1="264" x2="1000" y2="264"/>
+    <line x1="40" y1="330" x2="1000" y2="330"/>
+  </g>
+  <g font-size="11" font-weight="600" fill="#63665e" letter-spacing=".08em">
+    <text x="40" y="118">MODEL</text>
+    <text x="280" y="118">AGENT</text>
+    <text x="440" y="118">TETAPAN</text>
+    <text x="720" y="118">SKOR</text>
+    <text x="900" y="118">KOS</text>
+  </g>
+  <g font-size="14" fill="#14160f">
+    <text x="40" y="176">DeepSeek V4.1 Flash</text>
+    <text x="40" y="198">1017 (max)</text>
+    <text x="280" y="176" font-weight="600" fill="#1a6b2e">Claude Code</text>
+    <text x="440" y="176">Terminal-bench 4.1</text>
+    <text x="440" y="198" fill="#3f423c">jadual lalai,</text>
+    <text x="440" y="218" fill="#3f423c">disusun ikut kadar</text>
+    <text x="720" y="176" font-weight="600">38.5%</text>
+    <text x="720" y="198" font-size="13" fill="#3f423c">± 3.8%</text>
+    <text x="900" y="176">8.2B tokens</text>
+  </g>
+  <text x="40" y="300" font-size="13" fill="#14160f">Tiada satu pun produk yang dibandingkan muncul dalam lajur agent.</text>
+  <g font-size="13" fill="#3f423c">
+    <text x="40" y="322">CommandCode: tiada dalam senarai agent pada mana-mana papan</text>
+    <text x="520" y="322">OpenCode: tiada dalam senarai agent pada mana-mana papan</text>
+  </g>
+  <text x="40" y="360" font-size="12" fill="#63665e">Sumber: swebench.com dan tbench.ai, dibaca 23 November 2026. Agent dan tetapan menentukan angka mana yang dimiliki oleh skor itu.</text>
+</svg>
