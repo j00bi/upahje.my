@@ -7,7 +7,7 @@ format: teardown
 reader: all
 date: 2026-11-23
 updated: 2026-11-23
-author: "Husni Sarafi"
+author: "Husni Ahmad"
 category: buying-guides
 tags: [teardown, prestasi, rust, malaysia]
 canonical: https://upahje.my/ms/articles/tulis-semula-lima-peratus

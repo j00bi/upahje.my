@@ -5,7 +5,7 @@ slug: kunci-api-dalam-harness
 translationKey: harness-api-keys
 date: 2026-11-19
 updated: 2026-11-19
-author: "Husni Sarafi"
+author: "Husni Ahmad"
 category: buying-guides
 tags: [buying-guides, kunci-api, keselamatan, agent-harness]
 canonical: https://upahje.my/ms/articles/kunci-api-dalam-harness

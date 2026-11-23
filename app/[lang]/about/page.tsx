@@ -17,7 +17,7 @@ const COPY = {
     intro:
       'UpahJe publishes short, sourced articles for people running or building a small business in Malaysia. Every claim carries a source and a date, and where we could not verify something we say so instead of filling the gap.',
     bylines: 'Who writes it',
-    editorName: 'Husni Sarafi',
+    editorName: 'Husni Ahmad',
     editorRole: 'Editor',
     editorBody:
       'Writes the pieces that involve running something: benchmark teardowns, hands-on tests, and opinions. If an article reports a command that was executed or a number measured on a machine, it carries this byline.',
@@ -36,7 +36,7 @@ const COPY = {
     intro:
       'UpahJe menerbitkan artikel pendek bersumber untuk orang yang menjalankan atau membina perniagaan kecil di Malaysia. Setiap dakwaan membawa sumber dan tarikh, dan jika kami tidak dapat mengesahkan sesuatu, kami menyatakannya dan bukan mengisi jurang itu.',
     bylines: 'Siapa yang menulis',
-    editorName: 'Husni Sarafi',
+    editorName: 'Husni Ahmad',
     editorRole: 'Editor',
     editorBody:
       'Menulis artikel yang melibatkan sesuatu yang dijalankan: bedah penanda aras, ujian sendiri, dan pendapat. Jika artikel melaporkan arahan yang dijalankan atau angka yang diukur pada mesin, ia membawa nama ini.',

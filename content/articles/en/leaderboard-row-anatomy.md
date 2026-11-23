@@ -8,7 +8,7 @@ audience: developer
 reader: agent
 date: 2026-11-23
 updated: 2026-11-23
-author: "Husni Sarafi"
+author: "Husni Ahmad"
 category: buying-guides
 tags: [dev-note, benchmarks, coding-agents]
 canonical: https://upahje.my/en/articles/leaderboard-row-anatomy

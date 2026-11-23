@@ -94,7 +94,7 @@ function lintPii() {
     lines.forEach((rawLine, index) => {
       // The editor's public byline is a name, not a leak. Strip the exact author
       // value only; the rest of the line is still scanned.
-      const line = rawLine.replace(/^author:\s*"Husni Sarafi"\s*$/, 'author: "<byline>"')
+      const line = rawLine.replace(/^author:\s*"Husni Ahmad"\s*$/, 'author: "<byline>"')
       const report = (category, match, fix) => {
         hits += 1
         console.error(`${path.relative(process.cwd(), file)}:${index + 1}: ${category}, "${redact(match)}" -> ${fix}`)

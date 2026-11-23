@@ -8,7 +8,7 @@ audience: developer
 reader: agent
 date: 2026-11-23
 updated: 2026-11-23
-author: "Husni Sarafi"
+author: "Husni Ahmad"
 category: buying-guides
 tags: [dev-note, penanda-aras, coding-agent]
 canonical: https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu

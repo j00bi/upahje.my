@@ -5,7 +5,7 @@ slug: harness-api-keys
 translationKey: harness-api-keys
 date: 2026-11-19
 updated: 2026-11-19
-author: "Husni Sarafi"
+author: "Husni Ahmad"
 category: buying-guides
 tags: [buying-guides, api-keys, security, agent-harness]
 canonical: https://upahje.my/en/articles/harness-api-keys
