@@ -11,7 +11,7 @@ import {
   articlesInCategory,
   categoryBlurb,
   featuredArticle,
-  publishedArticles,
+  publicationArticles,
 } from '@/lib/articles.mjs'
 import { SITE_NAME, absolute, languagesFor, social } from '@/lib/seo'
 
@@ -31,7 +31,7 @@ export default function Hub({ params }: { params: { lang: string } }) {
   const other = lang === 'ms' ? 'en' : 'ms'
 
   const featured = featuredArticle(lang)
-  const latest = publishedArticles(lang)
+  const latest = publicationArticles(lang)
     .filter((article) => article.slug !== featured?.slug)
     .slice(0, 5)
   const topics = ARTICLE_CATEGORIES.map((category) => ({

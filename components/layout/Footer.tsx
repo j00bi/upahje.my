@@ -59,6 +59,11 @@ export default function Footer({ lang = 'en' }: { lang?: string }) {
                 {LANGUAGES.find((l) => l.code === other)?.native}
               </Link>
             </li>
+            <li>
+              <Link href={`/${lang}/dev-notes`} className="type-small ui-link" style={linkStyle}>
+                Developer notes
+              </Link>
+            </li>
             <li><Link href="/privacy" className="type-small ui-link" style={linkStyle}>Privacy</Link></li>
             <li><Link href="/terms" className="type-small ui-link" style={linkStyle}>Terms</Link></li>
           </ul>
