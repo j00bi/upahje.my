@@ -49,7 +49,7 @@
       "descriptionEn": "Reaching customers without wasting the budget.",
       "descriptionMs": "Menjangkau pelanggan tanpa membazir bajet.",
       "sortOrder": 5,
-      "hidden": true
+      "hidden": false
     },
     {
       "slug": "operations",
@@ -148,6 +148,11 @@
       "pillar": "business",
       "secondary": "automation-ai",
       "type": "perspective"
+    },
+    "google-business-profile-fields": {
+      "pillar": "marketing",
+      "secondary": "operations",
+      "type": "explainer"
     }
   }
 }
