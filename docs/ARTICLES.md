@@ -51,6 +51,34 @@ match the route; the build does not trust it, so a stale value cannot de-index a
 page.
 
 ## Body
+## Who this is written for
+
+Two readers, and a piece that suits only one of them is not finished.
+
+1. **The SME owner.** Runs the business. Has never built software, will hire the
+   work, and needs to know what it costs in ringgit, what it changes on a
+   Tuesday, and what goes wrong. Assume they know their own trade, not ours.
+2. **The AI hobbyist.** Tinkers on weekends, will try to build it themselves,
+   and wants the smallest thing that works before the polished thing. Assume
+   they can follow instructions but not that they know our vocabulary.
+
+So, in the body:
+
+- Define every term in plain words the first time it appears, in the same
+  sentence, not a later glossary: "an API, which is the way two systems hand data
+  to each other without a person copying it". No acronym survives undefined —
+  API, TIN, FEP, PKPS, KYC, OCR all get the same treatment.
+- Give every number a unit and a comparison a reader can feel: RM1.85 a month is
+  "less than a teh tarik", RM6,000 is "a month of a junior's salary".
+- Include a **"What to do this week"** block: three to five steps the owner can
+  take without buying anything, each one an action with an object.
+- Include a **"Try it yourself"** block for the hobbyist: the smallest runnable
+  version, what it needs (free tier or local), what it costs, and the one thing
+  that will bite them. If a piece has no honest DIY path, say why in one line
+  rather than inventing one.
+- Neither block replaces the evidence: a step that depends on a number still
+  points at the number.
+
 
 - Markdown only. **No MDX components** — the renderer (`lib/markdown.tsx`) is a
   small subset with no runtime.
