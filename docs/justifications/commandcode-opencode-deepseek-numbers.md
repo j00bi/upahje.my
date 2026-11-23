@@ -19,7 +19,11 @@
 | 13 | "Command Code GOAT, $10/month for $70 of credits across 30 models" | https://news.ycombinator.com/item?id=49188656 | Hacker News | 2026-11-23 | source: Table 2, the 5 August 2026 Show HN row |
 | 14 | "`dsh` 0.2.2-rc.1 wrote a small feature in 95.4 seconds across 10 turns and 14 tool calls, produced two files, and the project's own tests passed 3 of 3" | - | our measurement, this machine | 2026-11-23 | source: one run recorded on 23 November 2026; `dsh --version` printed 0.2.2-rc.1 |
 | 15 | "Both refused to write anything in their non-interactive defaults, and both still exited 0." | - | our measurement, this machine | 2026-11-23 | source: same run, exit-code observation on the two other arms |
-| 16 | "its results page at `nazzysar.github.io/deepseek-bench` returns 404, and so does the account root" | - | our measurement, this machine | 2026-11-23 | source: two fetches recorded on 23 November 2026 |
+| 16 | "The archived page, snapshot 25 October 2026, lists DeepSeek Platform, OpenCode Go and CommandCode GOAT, each as a demo path under a vivarium conceit: "A Closed Ecology", "Abyssal Vivarium", "Vivarium Nº 7"" | https://web.archive.org/web/20261025232027/https://nazzysar.github.io/deepseek-benchmarks/ | Internet Archive | 2026-11-23 | source: archived catalog.js, snapshot content dated 2026-10-25; three demo entries with titles and descriptions |
+| 17 | "Each entry carries a title, a description, a path and a tone, and nothing else: no score, duration, token count or cost." | https://web.archive.org/web/20261025232027/https://nazzysar.github.io/deepseek-benchmarks/assets/catalog.js | Internet Archive | 2026-11-23 | source: field list of all three entries in the archived catalog, snapshot dated 2026-10-25 |
+| 18 | "38.5% ± 3.8% | DeepSeek V4.1 Flash 1017 (max), under Claude Code, Terminal-bench 4.1 | Terminal-bench leaderboard, read 23 Nov 2026" | https://www.tbench.ai/ | Terminal-bench | 2026-11-23 | source: Table 1 DeepSeek row with its provenance in the cell |
+| 19 | "$10/month GOAT + processing fee | Up to $100 in credits, CommandCode's tier as printed | Vendor pricing page, read 23 Nov 2026" | https://commandcode.ai/pricing | CommandCode | 2026-11-23 | source: Table 4 GOAT row |
+| 20 | "95.4 s, 10 turns, 14 tool calls, 3/3 tests | One `dsh` run on one task, two files written | Our measurement, 23 Nov 2026" | - | our measurement, this machine | 2026-11-23 | source: the single run recorded on 23 November 2026, `dsh` 0.2.2-rc.1 |
 
 ## Sections
 
@@ -32,6 +36,6 @@
 | What did we run ourselves? | The single labelled run, and the exit-code lesson |
 | What to do this week? | Five no-purchase actions that produce the reader's own row |
 | Try it yourself | Reproduce your own row, with the artefact check |
-| What could we not verify? | Dead results page, DeepSeek chart with no printed values, unpriced fee |
+| What did the comparison actually publish? | The archived demos, the field list as evidence, and the figures we do have with provenance |
 | FAQ | Category error, cross-board comparison, stale Aider, demo check |
 | Sources | Seven URLs, each dated |
