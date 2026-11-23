@@ -45,9 +45,9 @@ Jurang yang wajar dibaca dua kali ialah antara RM3 juta dan RM5 juta. Pengecuali
 
 ## Apa yang sebenarnya diserahkan?
 
-e-Invoice ialah representasi digital bagi transaksi antara penjual dan pembeli, meliputi perniagaan-ke-perniagaan, perniagaan-ke-pengguna dan perniagaan-ke-kerajaan, dan ia dihantar kepada LHDN melalui sistem MyInvois.
+e-Invoice ialah versi digital dokumen yang dikeluarkan penjual, direkodkan dengan LHDN dan bukan sekadar difailkan dalam akaun anda sendiri, meliputi perniagaan-ke-perniagaan, perniagaan-ke-pengguna dan perniagaan-ke-kerajaan, dan ia dihantar kepada LHDN melalui sistem MyInvois.
 
-Empat jenis dokumen dinamakan dalam garis panduan: invois, nota kredit, nota debit dan nota bayaran balik. Ada dua laluan. Portal MyInvois ialah kemasukan manual oleh pembayar cukai. Laluan API didokumenkan untuk sistem ERP pembayar cukai, dalam kata-kata LHDN sendiri, untuk "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, dibaca 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Pengesahan berasingan untuk sistem pembayar cukai dan untuk sistem perantara yang bertindak bagi pihak pembayar cukai, dan ada langkah pengesahan TIN sebelum penyerahan.
+Empat jenis dokumen dinamakan dalam garis panduan: invois, nota kredit, nota debit dan nota bayaran balik. Ada dua laluan. Portal MyInvois ialah kemasukan manual oleh pembayar cukai. Laluan API didokumenkan untuk sistem ERP pembayar cukai, dalam kata-kata LHDN sendiri, untuk "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, dibaca 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Pengesahan berasingan untuk sistem pembayar cukai dan untuk sistem perantara yang bertindak bagi pihak pembayar cukai, dan ada langkah pengesahan TIN sebelum penyerahan. TIN ialah nombor pengenalan pembayar cukai yang dikeluarkan LHDN kepada perniagaan; API ialah sambungan yang digunakan perisian anda untuk menyerahkan dokumen kepada MyInvois tanpa sesiapa menaip semula.
 
 ![Empat langkah yang dilakukan mesin: bina dokumen daripada rekod anda, semak TIN, lulus lapan pengesah, hantar ke MyInvois. Di bawah, dua hasil: dalam 72 jam pembeli boleh menolak atau penjual membatalkan dan mengeluarkan semula; selepas 72 jam pembatalan ditutup dan pembetulan memerlukan nota kredit, debit atau bayaran balik](/figures/apa-yang-automasi-e-invoice-liputi.svg)
 *Empat langkah berjalan setiap penyerahan. Apa berlaku selepas kesilapan bergantung pada jam.*
@@ -77,7 +77,25 @@ Itu ada akibat praktikal untuk reka bentuk automasi: tool patut memerhati jam, b
 
 Garis panduan menyebut Seksyen 120 Akta Cukai Pendapatan 1967, dan ia tidak mencetak angka penalti pada mana-mana halaman yang dapat dibaca. Itu jurang, bukan perkara kecil: artikel ini tidak akan memetik penalti dalam ringgit, kerana tiada jumlah yang diterbitkan ditemui.
 
-Dua mekanisme bertarikh melembutkan pendedahan itu. Tempoh kelonggaran interim terpakai bagi setiap fasa, di mana pembayar cukai boleh mengeluarkan e-Invois konsolidasi bagi semua aktiviti dan e-Invois konsolidasi yang difakturkan sendiri tanpa dokumen bagi setiap transaksi, dan LHDN menyatakan ia tidak akan mendakwa di bawah Seksyen 120 sepanjang tempoh itu dengan syarat dipenuhi. Secara berasingan, program pengesahan sukarela (PKPS) berjalan dari **7 Julai 2026 hingga 31 Disember 2027** bagi pembayar cukai yang terlepas tarikh permulaan wajibnya, menggunakan versi dokumen PKPS 1.2 atau 1.3, dan meliputi semakan serta penguatkuasaan kecuali pendedahan itu melanggar syarat atau melibatkan penipuan, keingkaran sengaja atau kecuaian.
+Dua mekanisme bertarikh melembutkan pendedahan itu. Tempoh kelonggaran interim terpakai bagi setiap fasa, di mana pembayar cukai boleh mengeluarkan e-Invois konsolidasi bagi semua aktiviti dan e-Invois konsolidasi yang difakturkan sendiri tanpa dokumen bagi setiap transaksi, dan LHDN menyatakan ia tidak akan mendakwa di bawah Seksyen 120 sepanjang tempoh itu dengan syarat dipenuhi. Secara berasingan, program pengesahan sukarela, PKPS (Program Pengesahan Sukarela, tetingkap bagi pembayar cukai yang terlepas tarikh permulaan untuk tampil ke hadapan), berjalan dari **7 Julai 2026 hingga 31 Disember 2027** bagi pembayar cukai yang terlepas tarikh permulaan wajibnya, menggunakan versi dokumen PKPS 1.2 atau 1.3, dan meliputi semakan serta penguatkuasaan kecuali pendedahan itu melanggar syarat atau melibatkan penipuan, keingkaran sengaja atau kecuaian.
+
+## Apa yang patut dibuat minggu ini?
+
+Lima tindakan, tiada satu pun memerlukan pembelian.
+
+1. **Cari fasa anda** dalam jadual di atas mengikut jualan tahunan, dan tulis tarikh fasa anda bermula di sebelahnya.
+2. **Semak TIN anda aktif** sebelum apa-apa lagi: nombor pembayar cukai yang salah gagal pengesahan kemudian, bukan semasa menandatangani.
+3. **Eksport satu bulan invois** sebagai fail. Fail itu ialah input yang diperlukan mana-mana tool, dan mengetahui betapa bersepahnya ia membentuk sebut harga.
+4. **Tanya akauntan anda sama ada kelonggaran interim terpakai**, dan dapatkan jawapannya secara bertulis.
+5. **Pilih tiga invois yang anda keluarkan bulan lepas** dan latih soalan 72 jam: siapa yang akan perasan, dan berapa cepat?
+
+## Cuba sendiri
+
+Versi paling kecil yang boleh dijalankan ialah sandbox MyInvois: laman pembangun LHDN membolehkan anda menyerahkan dokumen XML atau JSON sampel dan melihat pengesah mana antara lapan yang gagal.
+
+- **Apa yang diperlukan:** log masuk sandbox daripada laman SDK LHDN, dokumen sampel, dan tool yang boleh menghantar JSON, iaitu teks berstruktur. Tiada perisian berbayar.
+- **Berapa kosnya:** tiada apa-apa pada sandbox. Pengeluaran menelan masa anda, bukan yuran: LHDN tidak mengenakan bayaran setiap penyerahan pada halaman yang dibaca di sini.
+- **Satu perkara yang akan menggigit anda:** pengesah tandatangan. Dokumen yang kelihatan betul kepada anda boleh gagal kerana tandatangan tiada atau cacat, dan teks ralat tidak selalu menyatakan medan mana yang menyebabkannya.
 
 ## Apa yang tidak dapat kami sahkan?
 
