@@ -18,7 +18,7 @@ import { SITE_NAME, absolute, languagesFor, social } from '@/lib/seo'
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const copy = copyFor(params.lang)
   return {
-    title: `${SITE_NAME} - ${copy.tagline}`,
+    title: copy.tagline,
     description: copy.intro,
     alternates: { canonical: absolute(`/${params.lang}`), languages: languagesFor('') },
     ...social(params.lang, `/${params.lang}`, `${SITE_NAME} - ${copy.tagline}`, copy.intro),

@@ -13,8 +13,10 @@ const serifFont = Newsreader({ subsets: ['latin'], variable: '--font-serif', dis
 export const metadata: Metadata = {
   metadataBase: new URL('https://upahje.my'),
   title: {
-    default: 'UpahJe.my - Plain tech answers for Malaysian small businesses',
-    template: '%s - UpahJe.my',
+    // The template adds the brand exactly once. Page-level titles must not
+    // include it, or every title reads "… - UpahJe.my - UpahJe.my".
+    default: 'Plain tech answers for Malaysian small businesses',
+    template: '%s | UpahJe.my',
   },
   description:
     'Short, sourced articles about technology for Malaysian small businesses, in English and Bahasa Melayu.',

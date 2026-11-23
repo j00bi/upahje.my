@@ -24,7 +24,7 @@ export function generateMetadata({ params }: { params: { lang: string; page: str
   const copy = copyFor(params.lang)
   const n = pageNumber(params.page)
   return {
-    title: `${copy.journal} - page ${n} - ${SITE_NAME}`,
+    title: `${copy.journal} - page ${n}`,
     description: copy.intro,
     alternates: { canonical: absolute(`/${params.lang}/articles/page/${n}`), languages: languagesFor(`/articles/page/${n}`) },
     robots: { index: false, follow: true },

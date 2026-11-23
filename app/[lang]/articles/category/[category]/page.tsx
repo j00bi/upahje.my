@@ -56,7 +56,7 @@ export function generateMetadata({ params }: { params: { lang: string; category:
   const topic = describe(params.category, params.lang)
   if (!topic) return {}
   return {
-    title: `${topic.label} - ${SITE_NAME}`,
+    title: topic.label,
     description: topic.blurb,
     alternates: { canonical: absolute(`/${params.lang}/articles/category/${params.category}`), languages: topic.languages },
     ...social(params.lang, `/${params.lang}/articles/category/${params.category}`, `${topic.label} - ${SITE_NAME}`, topic.blurb),
