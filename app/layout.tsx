@@ -1,6 +1,14 @@
 import type { Metadata } from 'next'
+import { Inter, Archivo, Newsreader } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
+
+/* Three families, loaded by next/font so they are self-hosted: no runtime
+   request to Google, no layout shift. Body, display, and a serif reserved for
+   selected display headlines. */
+const bodyFont = Inter({ subsets: ['latin'], variable: '--font-body', display: 'swap' })
+const displayFont = Archivo({ subsets: ['latin'], variable: '--font-display', display: 'swap' })
+const serifFont = Newsreader({ subsets: ['latin'], variable: '--font-serif', display: 'swap', adjustFontFallback: false })
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://upahje.my'),
@@ -38,7 +46,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="ui-canvas" suppressHydrationWarning>
+    <html lang="en" className={`ui-canvas ${bodyFont.variable} ${displayFont.variable} ${serifFont.variable}`} suppressHydrationWarning>
       <body className="ui-canvas">
         <script
           dangerouslySetInnerHTML={{
