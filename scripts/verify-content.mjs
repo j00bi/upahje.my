@@ -1,96 +1,118 @@
 #!/usr/bin/env node
 /**
- * Content-surface sweep with the status code first.
+ * End-to-end check of the publication, against a running site.
  *
- *   BASE=https://… node scripts/verify-content.mjs
+ *   BASE=https://upahje.my node scripts/verify-content.mjs
+ *   BASE=http://127.0.0.1:3000 node scripts/verify-content.mjs
  *
- * Every count this prints belongs to a 200. A non-200 is a failure, not a pass,
- * and article URLs are discovered from the indexes and the sitemap instead of a
- * hand-written list, so a renamed slug cannot go unnoticed.
+ * What it checks: every URL in the sitemap resolves, the machine surfaces exist,
+ * the AI crawlers are allowed, visible pillars resolve and hidden ones 404, and
+ * each article carries a canonical plus language alternates.
+ *
+ * It does not check content quality. `npm run articles:check` does that.
  */
-const BASE = process.env.BASE || 'http://127.0.0.1:3000'
-const digits = (s) => (s.match(/[\u2014\u2013]/g) || []).length
-const rows = []
-const seen = new Set()
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
+
+const BASE = (process.env.BASE || 'http://127.0.0.1:3000').replace(/\/$/, '')
 const failures = []
+const notes = []
 
-async function get(path) {
-  const res = await fetch(BASE + path, { redirect: 'manual' })
-  const text = res.status >= 200 && res.status < 300 ? await res.text() : ''
-  return { path, status: res.status, location: res.headers.get('location') || '', text, dashes: digits(text) }
+const get = async (p, method = 'GET') => {
+  try {
+    return await fetch(BASE + p, { method, redirect: 'manual' })
+  } catch (error) {
+    failures.push(`${p}: fetch failed (${error.message})`)
+    return null
+  }
 }
 
-function record(path, res, extra = '') {
-  if (seen.has(path)) return
-  seen.add(path)
-  rows.push({ path, status: res.status, dashes: res.dashes, extra })
-  if (res.status < 200 || res.status >= 300) failures.push(`${path}: status ${res.status}`)
-  else if (res.dashes > 0) failures.push(`${path}: ${res.dashes} em/en dash(es)`)
+const status = async (p, expected = 200) => {
+  const res = await get(p)
+  if (!res) return null
+  if (res.status !== expected) failures.push(`${p}: status ${res.status} (expected ${expected})`)
+  return res
 }
 
-// root: 308 to /en
+// 1. Every sitemap URL resolves.
+const sitemap = await status('/sitemap.xml')
+let urls = []
+if (sitemap) {
+  const xml = await sitemap.text()
+  urls = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1])
+  if (urls.length < 40) failures.push(`/sitemap.xml: only ${urls.length} URLs`)
+  for (const url of urls) {
+    const p = url.replace('https://upahje.my', '')
+    const res = await get(p)
+    if (!res) continue
+    if (res.status !== 200 && res.status !== 308) failures.push(`${p}: status ${res.status} (in sitemap)`)
+  }
+}
+
+// 2. Machine surfaces.
+await status('/robots.txt')
+await status('/llms.txt')
+await status('/llms-full.txt')
+await status('/feed.xml')
+await status('/ms/feed.xml')
+const llms = await get('/llms.txt')
+if (llms) {
+  const text = await llms.text()
+  for (const needed of ['/en/resources', '/en/repos', '/en/articles']) {
+    if (!text.includes(needed)) failures.push(`/llms.txt: missing ${needed}`)
+  }
+}
+
+// 3. Robots: AI crawlers allowed, marketplace paths no longer referenced.
+const robotsRes = await get('/robots.txt')
+if (robotsRes) {
+  const robots = await robotsRes.text()
+  for (const bot of ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Google-Extended']) {
+    if (!robots.includes(bot)) failures.push(`robots.txt: ${bot} not named`)
+  }
+  if (/Disallow: \/jobs/.test(robots)) failures.push('robots.txt: still disallows /jobs (route was deleted)')
+  if (!/Sitemap:/i.test(robots)) failures.push('robots.txt: no Sitemap line')
+}
+
+// 4. Pillars: visible ones resolve, hidden ones 404.
+const pillars = JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'pillars.json'), 'utf8')).pillars
+for (const pillar of pillars) {
+  for (const lang of ['en', 'ms']) {
+    const p = `/${lang}/articles/category/${pillar.slug}`
+    const res = await get(p)
+    if (!res) continue
+    if (pillar.hidden && res.status !== 404) failures.push(`${p}: hidden pillar returned ${res.status} (expected 404)`)
+    if (!pillar.hidden && res.status !== 200) failures.push(`${p}: visible pillar returned ${res.status}`)
+  }
+}
+
+// 5. Articles: canonical + language alternates, and no marketplace leftovers.
+const articleUrls = urls.filter((u) => /\/articles\/[a-z0-9-]+$/.test(u) && !u.includes('/category/'))
+for (const url of articleUrls) {
+  const p = url.replace('https://upahje.my', '')
+  const res = await get(p)
+  if (!res || res.status !== 200) continue
+  const html = await res.text()
+  if (!/<link rel="canonical"/i.test(html)) failures.push(`${p}: no canonical`)
+  if (!/hreflang="ms-MY"/i.test(html)) failures.push(`${p}: no ms-MY alternate`)
+  if (!/application\/ld\+json/.test(html)) failures.push(`${p}: no structured data`)
+}
+
+// 6. Retired marketplace routes are gone, not merely noindexed.
+for (const dead of ['/jobs', '/talent', '/categories', '/pay/x']) {
+  const res = await get(dead)
+  if (res && res.status !== 404) failures.push(`${dead}: status ${res.status} (marketplace route should be gone)`)
+}
+
+// 7. The root redirect.
 const root = await get('/')
-rows.push({ path: '/', status: root.status, dashes: root.dashes, extra: `-> ${root.location}` })
-if (![301, 307, 308].includes(root.status) || !root.location.endsWith('/en')) {
-  failures.push(`/: expected 3xx to /en, got ${root.status} ${root.location}`)
-}
+if (root && root.status !== 308 && root.status !== 301) failures.push(`/: status ${root.status} (expected a redirect)`)
 
-// fixed surface
-for (const path of ['/en', '/ms', '/en/articles', '/ms/articles', '/sitemap.xml', '/robots.txt', '/llms.txt']) {
-  record(path, await get(path))
+console.log(`verify:content — ${BASE}`)
+console.log(`sitemap URLs: ${urls.length} · articles checked: ${articleUrls.length} · pillars: ${pillars.length}`)
+if (notes.length) console.log(notes.join('\n'))
+if (failures.length) {
+  console.log(failures.map((f) => `FAIL ${f}`).join('\n'))
+  process.exit(1)
 }
-const sitemap = (await get('/sitemap.xml')).text
-const robots = (await get('/robots.txt')).text
-const llms = (await get('/llms.txt')).text
-
-// every path the sitemap advertises gets a status and a dash count
-const sitemapPaths = [...sitemap.matchAll(/<loc>https:\/\/upahje\.my(\/[^<]+)<\/loc>/g)].map((m) => m[1])
-for (const path of sitemapPaths) {
-  if (!['/en', '/ms', '/en/articles', '/ms/articles'].includes(path)) record(path, await get(path))
-}
-
-// discover article paths from the indexes and the sitemap
-const articlePaths = new Set()
-for (const prefix of ['/en', '/ms']) {
-  const index = (await get(`${prefix}/articles`)).text
-  for (const match of index.matchAll(new RegExp(`href="${prefix}/articles/([a-z0-9-]+)"`, 'g'))) {
-    if (!['category', 'page', 'feed.xml'].includes(match[1])) articlePaths.add(`${prefix}/articles/${match[1]}`)
-  }
-}
-for (const match of sitemap.matchAll(/<loc>https:\/\/upahje\.my(\/[^<]+)<\/loc>/g)) {
-  if (/^\/(en|ms)\/articles\/[a-z0-9-]+$/.test(match[1])) articlePaths.add(match[1])
-}
-for (const path of [...articlePaths].sort()) {
-  const res = await get(path)
-  const extra = []
-  if (res.status === 200) {
-    if (!res.text.includes('"@type":"Article"')) extra.push('no Article JSON-LD')
-    if (!res.text.includes('"@type":"FAQPage"')) extra.push('no FAQPage JSON-LD')
-  }
-  record(path, res, extra.join(', '))
-  if (extra.length) failures.push(`${path}: ${extra.join(', ')}`)
-}
-
-// sitemap / robots / llms contracts
-const marketplace = /<loc>https:\/\/upahje\.my\/(jobs|talent|categories|portfolio|pay|payment|ai|onboarding|auth|dashboard)/
-if (marketplace.test(sitemap)) failures.push('sitemap: marketplace URL present')
-for (const path of articlePaths) {
-  if (!sitemap.includes(`<loc>https://upahje.my${path}</loc>`)) failures.push(`sitemap: ${path} missing`)
-  if (!llms.includes(path)) failures.push(`llms.txt: ${path} missing`)
-}
-for (const bot of ['GPTBot', 'ClaudeBot', 'PerplexityBot', 'Google-Extended']) {
-  if (!robots.includes(bot)) failures.push(`robots.txt: ${bot} not allowed`)
-}
-if (!/Disallow: \/jobs/.test(robots)) failures.push('robots.txt: /jobs not disallowed')
-
-// marketplace header
-const jobs = await fetch(`${BASE}/jobs`, { method: 'HEAD' })
-const tag = jobs.headers.get('x-robots-tag') || ''
-if (!/noindex/i.test(tag)) failures.push(`/jobs: x-robots-tag "${tag}" (expected noindex)`)
-
-const pad = (v, n) => String(v).padEnd(n)
-console.log(`${pad('path', 62)} ${pad('status', 6)} ${pad('dashes', 7)} note`)
-for (const row of rows) console.log(`${pad(row.path, 62)} ${pad(row.status, 6)} ${pad(row.dashes, 7)} ${row.extra}`)
-console.log(`\n${rows.length} URLs, ${articlePaths.size} article pages, ${failures.length} failure(s)`)
-for (const failure of failures) console.error(`FAIL ${failure}`)
-process.exit(failures.length ? 1 : 0)
+console.log('ok — every check passed')

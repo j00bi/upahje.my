@@ -1,3 +1,13 @@
+# Superseded — marketplace roadmap
+
+This roadmap predates the pivot to a publication and the deletion of the
+marketplace routes it plans for (auth, onboarding, jobs, matching, escrow).
+M1 to M5 no longer exist in the codebase. The live plan is
+`docs/specs/editorial-redesign.md`, with the phase status in `docs/REBUILD.md`.
+Kept only as history.
+
+---
+
 # UpahJe.my — M0 to M7 Milestone Roadmap (PM Goal)
 
 **Created**: 2026-05-19
