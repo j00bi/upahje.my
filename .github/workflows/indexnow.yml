@@ -1,0 +1,23 @@
+name: IndexNow
+
+# Pings Bing (and anything else that reads IndexNow) with every URL in the live
+# sitemap after a deploy. The wait exists because the script reads the sitemap
+# from production, and Vercel needs a minute or two to promote the build.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Wait for the deploy to be live
+        run: sleep 180
+      - name: Ping IndexNow
+        run: node scripts/indexnow.mjs
