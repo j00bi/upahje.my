@@ -1,19 +1,11 @@
 import type { MetadataRoute } from 'next'
 import { SITE } from '@/lib/seo'
 
-/** Everything that is not content. Kept in sync with next.config.mjs headers. */
-const MARKETPLACE = [
-  '/jobs',
-  '/talent',
-  '/categories',
-  '/portfolio',
-  '/pay',
-  '/payment',
-  '/ai',
-  '/onboarding',
-  '/dashboard',
-  '/auth',
-]
+/**
+ * Nothing is off-limits now that the marketplace routes are gone. The API
+ * prefix stays disallowed for tidiness if an endpoint is added later.
+ */
+const PRIVATE = ['/api/']
 
 const AI_CRAWLERS = [
   'GPTBot',
@@ -26,7 +18,7 @@ const AI_CRAWLERS = [
 ]
 
 export default function robots(): MetadataRoute.Robots {
-  const privatePaths = [...new Set(['/api/', '/admin/', '/auth/callback', ...MARKETPLACE])]
+  const privatePaths = PRIVATE
   return {
     rules: [
       { userAgent: '*', allow: '/', disallow: privatePaths },
