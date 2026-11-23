@@ -69,6 +69,16 @@ export default function Footer({ lang = 'en' }: { lang?: string }) {
                 About
               </Link>
             </li>
+            <li>
+              <Link href={`/${lang}/editorial-policy`} className="type-small ui-link" style={linkStyle}>
+                Editorial policy
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lang}/corrections`} className="type-small ui-link" style={linkStyle}>
+                Corrections
+              </Link>
+            </li>
             <li><Link href="/privacy" className="type-small ui-link" style={linkStyle}>Privacy</Link></li>
             <li><Link href="/terms" className="type-small ui-link" style={linkStyle}>Terms</Link></li>
           </ul>
