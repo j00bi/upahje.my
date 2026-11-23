@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { ARTICLE_CATEGORIES, categoryLabel, categoryPath, LANGUAGES } from '@/lib/articles.mjs'
+import { LANGUAGES } from '@/lib/articles.mjs'
+import { TOPICS, topicLabel } from '@/lib/topics.mjs'
 import { copyFor } from '@/lib/copy'
 
 /**
@@ -28,10 +29,10 @@ export default function Footer({ lang = 'en' }: { lang?: string }) {
         <div>
           <p className="type-label" style={columnLabel}>{copy.categories}</p>
           <ul className="mt-4 space-y-3">
-            {ARTICLE_CATEGORIES.map((category) => (
-              <li key={category.slug}>
-                <Link href={categoryPath(lang, category.slug)} className="type-small ui-link" style={linkStyle}>
-                  {categoryLabel(category.slug, lang)}
+            {TOPICS.map((topic) => (
+              <li key={topic.slug}>
+                <Link href={`/${lang}/topics/${topic.slug}`} className="type-small ui-link" style={linkStyle}>
+                  {topicLabel(topic.slug, lang)}
                 </Link>
               </li>
             ))}
@@ -52,7 +53,20 @@ export default function Footer({ lang = 'en' }: { lang?: string }) {
         </div>
 
         <div>
-          <p className="type-label" style={columnLabel}>Site</p>
+          <p className="type-label" style={columnLabel}>Developer notes</p>
+          <ul className="mt-4 space-y-3">
+            <li>
+              <Link href={`/${lang}/repos`} className="type-small ui-link" style={linkStyle}>
+                Repos
+              </Link>
+            </li>
+            <li>
+              <Link href={`/${lang}/resources`} className="type-small ui-link" style={linkStyle}>
+                Library
+              </Link>
+            </li>
+          </ul>
+          <p className="type-label mt-6" style={columnLabel}>Site</p>
           <ul className="mt-4 space-y-3">
             <li>
               <Link href={`/${other}`} className="type-small ui-link" style={linkStyle}>

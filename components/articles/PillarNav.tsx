@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import { pillarCounts } from '@/lib/pillars.mjs'
+import { topicCounts } from '@/lib/topics.mjs'
 
 /**
- * Topic navigation built from data/pillars.json, with real article counts.
- * Empty pillars never render. Links point at the topic pages.
+ * Topic navigation built from data/topics.json, with real article counts.
+ * Empty topics never render. Links point at the topic pages.
  */
 export default function PillarNav({ lang, active }: { lang: string; active?: string }) {
-  const topics = pillarCounts(lang)
+  const topics = topicCounts(lang)
   return (
     <nav aria-label="Topics" className="flex flex-wrap items-center gap-x-6 gap-y-3">
       <Link href={`/${lang}/articles`} className="type-small ui-link" style={{ color: !active ? 'var(--ui-ink)' : 'var(--ui-muted)', fontWeight: !active ? 600 : 500 }}>
@@ -17,12 +17,12 @@ export default function PillarNav({ lang, active }: { lang: string; active?: str
         return (
           <Link
             key={topic.slug}
-            href={`/${lang}/articles/category/${topic.slug}`}
+            href={`/${lang}/topics/${topic.slug}`}
             aria-current={current ? 'page' : undefined}
             className="type-small ui-link"
             style={{ color: current ? 'var(--ui-ink)' : 'var(--ui-muted)', fontWeight: current ? 600 : 500, boxShadow: current ? 'inset 0 -2px 0 var(--ui-lime)' : undefined }}
           >
-            {topic.nameEn && lang === 'ms' ? topic.nameMs : topic.nameEn}
+            {lang === 'ms' ? topic.ms : topic.en}
             <span className="ml-1.5" style={{ color: 'var(--ui-muted)', fontWeight: 400 }}>{topic.count}</span>
           </Link>
         )

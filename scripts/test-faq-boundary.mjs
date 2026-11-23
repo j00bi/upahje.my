@@ -58,7 +58,7 @@ Third answer.
 
 **Read next**
 
-[definitions](/en/articles/category/definitions)
+[buying](/en/topics/buying)
 
 ![Where the API key sits](/figures/what-is-an-api.svg)
 *The key travels from the harness to the provider.*

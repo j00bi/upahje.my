@@ -14,7 +14,7 @@ import { articleJsonLd, definedTermJsonLd, faqJsonLd } from '@/lib/jsonld'
 import { extractHeadings, splitFaq, splitShortAnswer } from '@/lib/article-view'
 import { articleLanguages, absolute, SITE_NAME, OG_IMAGE } from '@/lib/seo'
 import { REPOS_BY_KEY } from '@/lib/article-repos'
-import { mappingFor, pillarBySlug, relatedArticles } from '@/lib/pillars.mjs'
+import { TOPIC_MAPPING, topicBySlug, relatedFor } from '@/lib/topics.mjs'
 import {
   bodyWithoutTitle,
   categoryBySlug,
@@ -68,10 +68,10 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
   const copy = copyFor(article.lang)
   const pair = translatedArticle(article)
   const legacyCategory = categoryBySlug(article.category)
-  const mapping = mappingFor(article)
-  const pillar = mapping ? pillarBySlug(mapping.pillar) : null
-  const topicLabel = pillar ? (article.lang === 'ms' ? pillar.nameMs : pillar.nameEn) : legacyCategory?.label[article.lang] || article.category
-  const topicHref = pillar ? `/${article.lang}/articles/category/${pillar.slug}` : `/${article.lang}/articles/category/${article.category}`
+  const mapping = TOPIC_MAPPING[article.translationKey]
+  const topicEntry = mapping ? topicBySlug(mapping.topicEntry) : null
+  const topicLabel = topicEntry ? (article.lang === 'ms' ? topicEntry.nameMs : topicEntry.nameEn) : legacyCategory?.label[article.lang] || article.category
+  const topicHref = topicEntry ? `/${article.lang}/topics/${topicEntry.slug}` : `/${article.lang}/topics`
   const url = absolute(`/${article.lang}/articles/${article.slug}`)
 
   const body = bodyWithoutTitle(article.body, article.title)
@@ -79,7 +79,7 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
   const { withoutFaq } = splitFaq(rest)
   const headings = extractHeadings(withoutFaq)
   const faq = extractFaq(article.body)
-  const related = relatedArticles(article)
+  const related = relatedFor(article)
   const otherHref = pair ? `/${pair.lang}/articles/${pair.slug}` : `/${article.lang === 'en' ? 'ms' : 'en'}/articles`
 
   return (

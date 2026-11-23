@@ -6,13 +6,8 @@
  */
 import fs from 'node:fs'
 import path from 'node:path'
-import {
-  ARTICLE_CATEGORIES,
-  LANGUAGES,
-  categoryBlurb,
-  categoryLabel,
-  publishedArticles,
-} from '../lib/articles.mjs'
+import { LANGUAGES, publishedArticles } from '../lib/articles.mjs'
+import { TOPICS, TOPIC_MAPPING, topicBlurb, topicLabel } from '../lib/topics.mjs'
 import { REPO_TOPICS } from '../lib/repos.mjs'
 
 const SITE = 'https://upahje.my'
@@ -28,12 +23,15 @@ const lines = [
   '',
 ]
 
-for (const category of ARTICLE_CATEGORIES) {
+for (const topic of TOPICS) {
   for (const language of LANGUAGES) {
-    const count = publishedArticles(language.code).filter((a) => a.category === category.slug).length
+    const count = publishedArticles(language.code).filter((a) => {
+      const map = TOPIC_MAPPING[a.translationKey]
+      return map && map.topic === topic.slug
+    }).length
     if (!count) continue
     lines.push(
-      `- [${clean(categoryLabel(category.slug, language.code))}](${SITE}/${language.code}/articles/category/${category.slug}): ${clean(categoryBlurb(category.slug, language.code))} (${count} article${count === 1 ? '' : 's'})`,
+      `- [${clean(topicLabel(topic.slug, language.code))}](${SITE}/${language.code}/topics/${topic.slug}): ${clean(topicBlurb(topic.slug, language.code))} (${count} article${count === 1 ? '' : 's'})`,
     )
   }
 }

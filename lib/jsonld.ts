@@ -47,7 +47,7 @@ export function definedTermJsonLd(article: Article, url: string) {
     description: cleanText(article.description),
     url,
     inLanguage: article.lang === 'ms' ? 'ms-MY' : 'en-MY',
-    inDefinedTermSet: { '@type': 'DefinedTermSet', name: `${SITE_NAME} - definitions`, url: absolute(`/${article.lang}/articles/category/definitions`) },
+    inDefinedTermSet: { '@type': 'DefinedTermSet', name: `${SITE_NAME} - definitions`, url: absolute(`/${article.lang}/glossary`) },
   }
 }
 

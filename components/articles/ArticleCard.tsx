@@ -12,7 +12,7 @@ export default function ArticleCard({ article, featured = false }: { article: Ar
       }`}
     >
       <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[11px] font-semibold uppercase tracking-[0.14em]">
-        <Link href={`/${article.lang}/articles/category/${article.category}`} className="text-emerald-700 hover:text-emerald-800">
+        <Link href={`/${article.lang}/topics`} className="text-emerald-700 hover:text-emerald-800">
           {label}
         </Link>
         <span aria-hidden className="text-neutral-300">·</span>

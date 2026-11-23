@@ -1,0 +1,119 @@
+{
+  "topics": [
+    {
+      "slug": "compliance",
+      "en": "Compliance",
+      "ms": "Pematuhan",
+      "blurbEn": "What the rules require, what they do not, and what is unpublished.",
+      "blurbMs": "Apa yang dikehendaki peraturan, apa yang tidak, dan apa yang tidak diterbitkan."
+    },
+    {
+      "slug": "buying",
+      "en": "Buying",
+      "ms": "Pembelian",
+      "blurbEn": "What work costs, how to brief it, and how to compare quotes.",
+      "blurbMs": "Kos kerja, cara menulis brief, dan cara membandingkan sebut harga."
+    },
+    {
+      "slug": "ai-automation",
+      "en": "AI and automation",
+      "ms": "AI dan automasi",
+      "blurbEn": "Agents, models and the loop that runs your request.",
+      "blurbMs": "Agent, model dan gelung yang menjalankan permintaan anda."
+    },
+    {
+      "slug": "operations-growth",
+      "en": "Operations and growth",
+      "ms": "Operasi dan pertumbuhan",
+      "blurbEn": "How the business runs week to week, and where the duplication hides.",
+      "blurbMs": "Cara perniagaan berjalan setiap minggu, dan di mana pertindihan bersembunyi."
+    },
+    {
+      "slug": "freelance",
+      "en": "Freelance",
+      "ms": "Bebas",
+      "blurbEn": "Selling a skill per project, with the listings counted.",
+      "blurbMs": "Menjual kemahiran setiap projek, dengan kiraan senarai."
+    }
+  ],
+  "mapping": {
+    "what-einvoice-automation-covers": {
+      "topic": "compliance"
+    },
+    "automation-rates-malaysia-published": {
+      "topic": "buying"
+    },
+    "how-to-brief-an-automation-job": {
+      "topic": "buying"
+    },
+    "google-business-profile-fields": {
+      "topic": "operations-growth"
+    },
+    "whatsapp-chatbot-costs-malaysia": {
+      "topic": "buying"
+    },
+    "rm100-budget": {
+      "topic": "buying"
+    },
+    "closed-models-differences": {
+      "topic": "buying"
+    },
+    "open-models-differences": {
+      "topic": "buying"
+    },
+    "open-vs-closed-models": {
+      "topic": "buying"
+    },
+    "agent-harnesses-ranked": {
+      "topic": "buying",
+      "secondary": "ai-automation"
+    },
+    "harness-landscape-open-closed": {
+      "topic": "buying",
+      "secondary": "ai-automation"
+    },
+    "commandcode-opencode-deepseek-numbers": {
+      "topic": "buying",
+      "secondary": "ai-automation"
+    },
+    "leaderboard-row-anatomy": {
+      "topic": "ai-automation"
+    },
+    "what-an-ai-agent-can-do": {
+      "topic": "ai-automation"
+    },
+    "using-the-harness": {
+      "topic": "ai-automation"
+    },
+    "agent-harness-vs-ai-harness": {
+      "topic": "ai-automation"
+    },
+    "harness-api-keys": {
+      "topic": "ai-automation"
+    },
+    "same-data-typed-three-times": {
+      "topic": "operations-growth"
+    },
+    "your-first-automation-wrong-process": {
+      "topic": "operations-growth"
+    },
+    "side-income-skills-malaysia-2026": {
+      "topic": "freelance"
+    },
+    "rewrite-the-five-percent": {
+      "topic": "ai-automation"
+    },
+    "what-is-an-api": {
+      "topic": "ai-automation"
+    },
+    "do-you-need-an-api-or-a-spreadsheet": {
+      "topic": "ai-automation"
+    }
+  },
+  "glossary": [
+    "what-is-an-api",
+    "do-you-need-an-api-or-a-spreadsheet",
+    "agent-harness-vs-ai-harness",
+    "using-the-harness"
+  ]
+}

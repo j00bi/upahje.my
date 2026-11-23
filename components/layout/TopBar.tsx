@@ -1,5 +1,6 @@
 import Link from 'next/link'
-import { ARTICLE_CATEGORIES, categoryLabel, LANGUAGES, languageByCode } from '@/lib/articles.mjs'
+import { LANGUAGES, languageByCode } from '@/lib/articles.mjs'
+import { TOPICS, topicLabel } from '@/lib/topics.mjs'
 
 /**
  * Publication header. One line at lg, a native <details> sheet below 768px so
@@ -10,14 +11,12 @@ import { ARTICLE_CATEGORIES, categoryLabel, LANGUAGES, languageByCode } from '@/
 export default function TopBar({ lang, otherHref }: { lang: string; otherHref: string }) {
   const other = lang === 'en' ? 'ms' : 'en'
   const otherLanguage = languageByCode(other)
-  const sections = ARTICLE_CATEGORIES.map((category) => ({
-    href: `/${lang}/articles/category/${category.slug}`,
-    label: categoryLabel(category.slug, lang),
-  }))
-  const more = [
-    { href: `/${lang}/repos`, label: lang === 'ms' ? 'Repo' : 'Repos' },
-    { href: `/${lang}/resources`, label: lang === 'ms' ? 'Pustaka' : 'Library' },
-  ]
+  // Five topics in one link: the topic index carries the counts. Repos and the
+  // library moved to Developer notes in the footer.
+  // One Topics link in the bar: the five topics and their counts live on the
+  // topic pages, where the numbers can be read without a crowded header.
+  const sections = [{ href: `/${lang}/topics`, label: lang === 'ms' ? 'Topik' : 'Topics' }]
+  const more: { href: string; label: string }[] = []
 
   const languageSwitch = (
     <div className="inline-flex h-9 items-center overflow-hidden rounded-[8px] border" role="group" aria-label="Language" style={{ borderColor: 'var(--ui-rule)' }}>

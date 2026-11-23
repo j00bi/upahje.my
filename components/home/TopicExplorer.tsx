@@ -14,7 +14,7 @@ export default function TopicExplorer({ topics, lang, copy }: { topics: { slug: 
       <ul className="mt-6 grid gap-x-10 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
         {topics.map((topic) => (
           <li key={topic.slug}>
-            <Link href={`/${lang}/articles/category/${topic.slug}`} className="ui-link group block">
+            <Link href={`/${lang}/topics/${topic.slug}`} className="ui-link group block">
               <span className="type-h4" style={{ color: 'var(--ui-ink)' }}>{categoryLabel(topic.slug, lang)}</span>
               <span className="type-small ml-2" style={{ color: 'var(--ui-muted)' }}>{topic.count}</span>
               <span className="type-small mt-1 block" style={{ color: 'var(--ui-body)' }}>{topic.blurb}</span>

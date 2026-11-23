@@ -74,15 +74,22 @@ if (robotsRes) {
   if (!/Sitemap:/i.test(robots)) failures.push('robots.txt: no Sitemap line')
 }
 
-// 4. Pillars: visible ones resolve, hidden ones 404.
-const pillars = JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'pillars.json'), 'utf8')).pillars
-for (const pillar of pillars) {
+// 4. Topics: every topic page resolves, and retired category URLs redirect.
+const topics = JSON.parse(readFileSync(path.join(process.cwd(), 'data', 'topics.json'), 'utf8'))
+await status('/en/topics')
+await status('/ms/topics')
+await status('/en/glossary')
+await status('/ms/glossary')
+for (const topic of topics.topics) {
+  for (const lang of ['en', 'ms']) await status(`/${lang}/topics/${topic.slug}`)
+}
+const legacy = { definitions: 'glossary', 'buying-guides': 'buying', 'side-income': 'freelance', business: 'buying', finance: 'compliance', technology: 'ai-automation', 'automation-ai': 'ai-automation', marketing: 'operations-growth', operations: 'operations-growth' }
+for (const [oldSlug, target] of Object.entries(legacy)) {
   for (const lang of ['en', 'ms']) {
-    const p = `/${lang}/articles/category/${pillar.slug}`
+    const p = `/${lang}/articles/category/${oldSlug}`
     const res = await get(p)
     if (!res) continue
-    if (pillar.hidden && res.status !== 404) failures.push(`${p}: hidden pillar returned ${res.status} (expected 404)`)
-    if (!pillar.hidden && res.status !== 200) failures.push(`${p}: visible pillar returned ${res.status}`)
+    if (res.status !== 301 && res.status !== 308) failures.push(`${p}: ${res.status} (expected a 301 to /${lang}/${target})`)
   }
 }
 
@@ -109,7 +116,7 @@ const root = await get('/')
 if (root && root.status !== 308 && root.status !== 301) failures.push(`/: status ${root.status} (expected a redirect)`)
 
 console.log(`verify:content — ${BASE}`)
-console.log(`sitemap URLs: ${urls.length} · articles checked: ${articleUrls.length} · pillars: ${pillars.length}`)
+console.log(`sitemap URLs: ${urls.length} · articles checked: ${articleUrls.length} · topics: ${topics.topics.length}`)
 if (notes.length) console.log(notes.join('\n'))
 if (failures.length) {
   console.log(failures.map((f) => `FAIL ${f}`).join('\n'))

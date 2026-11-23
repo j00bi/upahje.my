@@ -1,20 +1,20 @@
 import Link from 'next/link'
 import { formatDate, isoDate } from '@/lib/articles.mjs'
-import { mappingFor, pillarBySlug } from '@/lib/pillars.mjs'
+import { TOPIC_MAPPING, topicBySlug } from '@/lib/topics.mjs'
 
 /**
  * Archive preview with what a reader needs to choose: topic, headline,
  * standfirst, date, reading time. No card chrome; rows separated by hairlines.
  */
 export default function ArticlePreview({ article, lang }: { article: any; lang: string }) {
-  const map = mappingFor(article)
-  const pillar = map ? pillarBySlug(map.pillar) : null
-  const topic = pillar ? (lang === 'ms' ? pillar.nameMs : pillar.nameEn) : null
+  const map = TOPIC_MAPPING[article.translationKey]
+  const topicEntry = map ? topicBySlug(map.topic) : null
+  const topic = topicEntry ? (lang === 'ms' ? topicEntry.ms : topicEntry.en) : null
   return (
     <article className="py-8" style={{ borderTop: '1px solid var(--ui-rule)' }}>
       <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
         {topic && (
-          <Link href={`/${lang}/articles/category/${pillar.slug}`} className="type-label ui-link" style={{ color: 'var(--ui-accent)' }}>
+          <Link href={`/${lang}/topics/${topicEntry!.slug}`} className="type-label ui-link" style={{ color: 'var(--ui-accent)' }}>
             {topic}
           </Link>
         )}

@@ -1,50 +1,32 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    cpus: 1,
-    webpackBuildWorker: false,
-  },
-  images: {
-    remotePatterns: [
-      { protocol: 'https', hostname: 'i.pravatar.cc' },
-      { protocol: 'https', hostname: 'images.unsplash.com' },
-      { protocol: 'https', hostname: '**.supabase.co' },
-    ],
-  },
+  experimental: { cpus: 1, webpackBuildWorker: false },
+  images: { remotePatterns: [] },
   async redirects() {
-    return [{ source: '/', destination: '/en', permanent: true }];
-  },
-  // Supabase middleware configuration
-  async headers() {
-    // The marketplace routes are kept but retired from the content site: they
-    // are unlinked and must not be indexed or followed. `robots.txt` disallows
-    // them too; the header is what actually reaches engines that ignore robots.
-    const noindex = [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }];
-    const retired = [
-      '/jobs/:path*',
-      '/talent/:path*',
-      '/categories/:path*',
-      '/portfolio/:path*',
-      '/pay/:path*',
-      '/payment/:path*',
-      '/ai/:path*',
-      '/onboarding/:path*',
-      '/dashboard/:path*',
-      '/auth/:path*',
-    ].map((source) => ({ source, headers: noindex }));
+    // Topic taxonomy: the old category URLs are retired and every one of them
+    // 301s to its replacement. Nothing that works today may 404.
+    const legacy = {
+      definitions: 'glossary',
+      'buying-guides': 'buying',
+      'side-income': 'freelance',
+      business: 'buying',
+      finance: 'compliance',
+      technology: 'ai-automation',
+      'automation-ai': 'ai-automation',
+      marketing: 'operations-growth',
+      operations: 'operations-growth',
+    }
     return [
-      {
-        source: '/auth/callback',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'no-store, max-age=0',
-          },
-        ],
-      },
-      ...retired,
-    ];
+      { source: '/', destination: '/en', permanent: true },
+      ...Object.entries(legacy).flatMap(([oldSlug, target]) => {
+        const path = target === 'glossary' ? 'glossary' : `topics/${target}`
+        return [
+          { source: `/en/articles/category/${oldSlug}`, destination: `/en/${path}`, permanent: true },
+          { source: `/ms/articles/category/${oldSlug}`, destination: `/ms/${path}`, permanent: true },
+        ]
+      }),
+    ]
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig

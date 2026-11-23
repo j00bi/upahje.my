@@ -6,12 +6,16 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Concept index
 
-- [Definitions](https://upahje.my/en/articles/category/definitions): The words on a job post, a contract or a payslip, defined plainly. (6 articles)
-- [Definisi](https://upahje.my/ms/articles/category/definitions): Istilah dalam iklan kerja, kontrak atau slip gaji, dijelaskan dengan mudah. (6 articles)
-- [Buying guides](https://upahje.my/en/articles/category/buying-guides): How to scope, compare and pay for local tech work. (14 articles)
-- [Panduan membeli](https://upahje.my/ms/articles/category/buying-guides): Cara menentu skop, membanding dan membayar kerja teknologi tempatan. (14 articles)
-- [Side income](https://upahje.my/en/articles/category/side-income): Turning a skill into a second income, step by step. (1 article)
-- [Pendapatan sampingan](https://upahje.my/ms/articles/category/side-income): Menukar kemahiran menjadi pendapatan kedua, langkah demi langkah. (1 article)
+- [Compliance](https://upahje.my/en/topics/compliance): What the rules require, what they do not, and what is unpublished. (1 article)
+- [Pematuhan](https://upahje.my/ms/topics/compliance): Apa yang dikehendaki peraturan, apa yang tidak, dan apa yang tidak diterbitkan. (1 article)
+- [Buying](https://upahje.my/en/topics/buying): What work costs, how to brief it, and how to compare quotes. (9 articles)
+- [Pembelian](https://upahje.my/ms/topics/buying): Kos kerja, cara menulis brief, dan cara membandingkan sebut harga. (9 articles)
+- [AI and automation](https://upahje.my/en/topics/ai-automation): Agents, models and the loop that runs your request. (7 articles)
+- [AI dan automasi](https://upahje.my/ms/topics/ai-automation): Agent, model dan gelung yang menjalankan permintaan anda. (7 articles)
+- [Operations and growth](https://upahje.my/en/topics/operations-growth): How the business runs week to week, and where the duplication hides. (3 articles)
+- [Operasi dan pertumbuhan](https://upahje.my/ms/topics/operations-growth): Cara perniagaan berjalan setiap minggu, dan di mana pertindihan bersembunyi. (3 articles)
+- [Freelance](https://upahje.my/en/topics/freelance): Selling a skill per project, with the listings counted. (1 article)
+- [Bebas](https://upahje.my/ms/topics/freelance): Menjual kemahiran setiap projek, dengan kiraan senarai. (1 article)
 
 ## English articles
 
