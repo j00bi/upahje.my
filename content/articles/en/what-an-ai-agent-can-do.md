@@ -83,11 +83,11 @@ Four categories, and no amount of prompting changes them.
 
 Two bills, and the smaller one is the one people worry about.
 
-**Running it.** Token rates are published, so this is arithmetic rather than a guess. At 2,000 input and 500 output tokens per task, Claude Haiku 5.5 costs `0.002 million × USD 0.10 = USD 0.0002` for input plus `0.0005 million × USD 0.50 = USD 0.00025` for output, which is USD 0.00045 a task. At the Bank Negara middle rate of **4.1145** (read 19 November 2026), that is about RM0.00185. A thousand tasks a month is **RM1.85**, which is less than one teh tarik.
+**Running it.** Token rates are published, so this is arithmetic rather than a guess. At 2,000 input and 500 output tokens per task, Claude Haiku 5.5 costs `0.002 million × USD 0.10 = USD 0.0002` for input plus `0.0005 million × USD 0.50 = USD 0.00025` for output, which is USD 0.00045 a task. At the Bank Negara middle rate of **4.1145** (read 19 November 2026), that is about RM0.00185. A thousand tasks a month is **RM1.85**. A teh tarik at a mamak is RM2 to RM3, which is our own comparison, not a published index.
 
 **Building it.** Malaysian publishers quote project prices for automation work: **RM400** for a simple process build ([Pang Jun Han, read 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)) and **RM6,000-plus** for autonomous task execution ([Autoflow Solutions, read 23 Nov 2026](https://www.autoflow-solutions.com/my/services)). A starter workflow build from a studio starts at **RM1,500** ([KodeSME, read 23 Nov 2026](https://kodesme.klyihao.com/)).
 
-So the build is hundreds to thousands of ringgit and the running cost is a few ringgit. Anyone quoting you a large monthly token bill for a small business workflow is either wrong or selling something else. What the rate cards do not state is the monthly support fee after launch, so ask for it before you compare quotes.
+So the build is hundreds to thousands of ringgit and the running cost is a few ringgit. If a supplier quotes a large monthly token bill for a small workflow, ask them to show the arithmetic against the published rate; ours takes three lines. What the rate cards do not state is the monthly support fee after launch, so ask for it before you compare quotes.
 
 ## What to do this week?
 

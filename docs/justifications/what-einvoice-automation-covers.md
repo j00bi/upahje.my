@@ -31,5 +31,7 @@
 | What does the 72-hour window change? | The clock, which decides whether a fix is a cancel or a note |
 | What happens if you get it wrong? | The gap on penalties and the two dated reliefs |
 | What could we not verify? | Portal, FAQ, per-phase relaxation dates, guideline version |
+| What to do this week? | Five actions an owner can take with no purchase |
+| Try it yourself | The MyInvois sandbox, its cost, and the validator that bites |
 | FAQ | The RM4m case, intermediaries, human need, and invoices from before the start date |
 | Sources | The four URLs read, each dated |
