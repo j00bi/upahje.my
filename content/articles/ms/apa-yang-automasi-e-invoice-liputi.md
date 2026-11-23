@@ -1,125 +1,116 @@
 ---
-title: "Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia"
-description: "Sejak 1 Januari 2026 semua fasa berkuat kuasa, dan jurang RM3 juta hingga RM5 juta termasuk dalam skop. Apa yang dilakukan oleh penyerahan automatik, apa yang diubah oleh tetingkap 72 jam, dan keputusan mana yang tidak patut diambil oleh tool."
+title: "Ambang e-Invoice kini RM3 juta"
+description: "LHDN menaikkan pengecualian e-Invoice kepada RM3 juta pada 1 September 2026, melepaskan 1.1 juta peniaga. Apa yang diwajibkan, apa yang tidak."
 slug: apa-yang-automasi-e-invoice-liputi
 translationKey: what-einvoice-automation-covers
-date: 2026-11-23
+format: explainer
+reader: all
+date: 2026-11-22
 updated: 2026-11-23
 author: "UpahJe editorial"
 category: buying-guides
-tags: [buying-guides, e-invoice, myinvois, malaysia]
+tags: [e-invoice, myinvois, lhdn, pematuhan]
 canonical: https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi
-draft: false
+draft: true
+featured: true
+changelog:
+  - date: 2026-11-23
+    note: "Ditulis semula berdasarkan ambang RM3 juta yang diumumkan 30 Ogos 2026; versi terdahulu menggunakan jurang RM3 juta hingga RM5 juta sebagai tunjang."
 sources:
-  - title: "LHDN, garis masa pelaksanaan e-Invois (dikemas kini 30 Ogos 2026)"
-    url: "https://www.hasil.gov.my/e-invois/pelaksanaan-e-invois-di-malaysia/garis-masa-pelaksanaan-e-invois/"
+  - title: "Kenyataan media LHDN HASiL/2026/08/30 – 44, AMBANG PENGECUALIAN PELAKSANAAN E-INVOIS DINAIKKAN"
+    url: "https://www.hasil.gov.my/wp-content/uploads/20260830-Kenyataan-Media-HASiL_AMBANG-PENGECUALIAN-E_INVOIS-DINAIKKAN.pdf"
     checked: 2026-11-23
-  - title: "MyInvois SDK, dokumentasi pembangun"
-    url: "https://sdk.myinvois.hasil.gov.my/"
+  - title: "LHDN, halaman program e-Invois"
+    url: "https://www.hasil.gov.my/e-invois"
     checked: 2026-11-23
   - title: "MyInvois SDK, peraturan pengesahan dokumen"
     url: "https://sdk.myinvois.hasil.gov.my/document-validation-rules/"
     checked: 2026-11-23
-  - title: "MyInvois SDK, FAQ (ketersediaan sandbox)"
-    url: "https://sdk.myinvois.hasil.gov.my/faq/"
-    checked: 2026-11-23
-  - title: "LHDN, Garis Panduan Spesifik e-Invois Versi 4.8 (penalti, kelonggaran, PKPS)"
-    url: "https://www.hasil.gov.my/e-invois/"
+  - title: "LHDN, Garis Panduan e-Invois Versi 4.8"
+    url: "https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf"
     checked: 2026-11-23
 ---
 
-# Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia
+# Ambang e-Invoice kini RM3 juta
 
-Semua fasa pembayar cukai kini berkuat kuasa, termasuk fasa antara RM3 juta dan RM5 juta, yang berada di dalam fasa 4 dan di luar pengecualian. Automasi boleh membina, mengesahkan dan menyerahkan dokumen serta mengendalikan tetingkap pembetulan 72 jam. Ia tidak boleh memutuskan sama ada sesuatu transaksi itu luar biasa, dan ia tidak boleh memikul liabiliti undang-undang untuk transaksi yang salah.
+Garisan itu berubah pada 1 September 2026: daripada RM1 juta kepada RM3 juta pendapatan atau jualan tahunan. Kenyataan LHDN sendiri menyatakan perniagaan di bawahnya tidak diwajibkan melaksanakan e-Invoice, dan jumlah peniaga yang mendapat manfaat ialah lebih 1.1 juta. Di atas garisan itu, program ini sudah berjalan sejak 1 Ogos 2024 dan telah merekod 265,379 pembayar cukai serta lebih 1.84 bilion e-Invoice.
 
-## Siapa yang wajib memfailkan, dan sejak bila?
+## Pengecualian itu tertulis dalam kenyataan, bukan disimpulkan
 
-Fasa di bawah ialah fasa LHDN sendiri, daripada halaman garis masa yang menyatakan tarikh kemas kininya sebagai 30 Ogos 2026.
+Peraturannya satu ayat, bukan pengiraan. Kenyataan itu berbunyi: "PMKS dengan pendapatan atau jualan tahunan kurang daripada RM3 juta tidak diwajibkan untuk melaksanakan e-Invois".
 
-| Fasa | Pendapatan atau jualan tahunan | Bermula | Status |
-| --- | --- | --- | --- |
-| 1 | lebih RM100 juta | 1 Ogos 2024 | Berkuat kuasa |
-| 2 | lebih RM25 juta hingga RM100 juta | 1 Januari 2025 | Berkuat kuasa |
-| 3 | lebih RM5 juta hingga RM25 juta | 1 Julai 2025 | Berkuat kuasa |
-| 4 | hingga RM5 juta | 1 Januari 2026 | Berkuat kuasa |
-| Pengecualian | kurang RM3 juta | n/a | Dikecualikan seperti dicetak |
+Tiga perkara mengikut ayat itu, dan hanya tiga.
 
-Sekarang lihat jurang antara RM3 juta dan RM5 juta. Pengecualian berhenti di bawah RM3 juta, dan fasa 4 berjalan hingga RM5 juta, jadi perniagaan yang berputar RM4 juta termasuk dalam skop. Dua baris pada halaman yang sama, dibaca bersama.
+1. Angkanya **RM3 juta**, bukan RM1 juta yang terpakai sebelum 1 September 2026.
+2. Ia mengukur **pendapatan atau jualan tahunan**, bukan untung, bilangan pekerja atau modal berdaftar.
+3. Ia menyebut **tidak diwajibkan**. Ia tidak menyebut dilarang, dan kenyataan yang sama menggalakkan penyertaan sukarela.
 
-## Apa yang diserahkan?
+Perdana Menteri mengumumkan perubahan itu dalam ucapan Hari Kebangsaan 2026, dan LHDN menerbitkan kenyataan pada 30 Ogos 2026, sehari sebelum ia berkuat kuasa.
 
-e-Invoice ialah versi digital dokumen yang dikeluarkan penjual, direkodkan dengan LHDN dan bukan sekadar difailkan dalam akaun anda sendiri, meliputi perniagaan-ke-perniagaan, perniagaan-ke-pengguna dan perniagaan-ke-kerajaan, dan ia dihantar kepada LHDN melalui sistem MyInvois.
+## Angka program sudah besar
 
-Empat jenis dokumen dinamakan dalam garis panduan: invois, nota kredit, nota debit dan nota bayaran balik. Ada dua laluan. Portal MyInvois ialah kemasukan manual oleh pembayar cukai. Laluan API didokumenkan untuk sistem ERP pembayar cukai, dalam kata-kata LHDN sendiri, untuk "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, dibaca 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Pengesahan berasingan untuk sistem pembayar cukai dan untuk sistem perantara yang bertindak bagi pihak pembayar cukai, dan ada langkah pengesahan TIN sebelum penyerahan. TIN ialah nombor pengenalan pembayar cukai yang dikeluarkan LHDN kepada perniagaan; API ialah sambungan yang digunakan perisian anda untuk menyerahkan dokumen kepada MyInvois tanpa sesiapa menaip semula.
+Ini jumlah LHDN sendiri, bukan unjuran.
 
-![Empat langkah yang dilakukan mesin: bina dokumen daripada rekod anda, semak TIN, lulus lapan pengesah, hantar ke MyInvois. Di bawah, dua hasil: dalam 72 jam pembeli boleh menolak atau penjual membatalkan dan mengeluarkan semula; selepas 72 jam pembatalan ditutup dan pembetulan memerlukan nota kredit, debit atau bayaran balik](/figures/apa-yang-automasi-e-invoice-liputi.svg)
-*Empat langkah berjalan setiap penyerahan. Apa berlaku selepas kesilapan bergantung pada jam.*
+| Apa yang dilaporkan kenyataan | Angka |
+| --- | --- |
+| Ambang pengecualian baharu, mulai 1 September 2026 | RM3 juta |
+| Ambang yang digantikan | RM1 juta |
+| Peniaga yang diliputi pengecualian | lebih 1.1 juta |
+| Pembayar cukai dalam program sejak 1 Ogos 2024 | 265,379 |
+| e-Invoice dikeluarkan sejak 1 Ogos 2024 | lebih 1.84 bilion |
 
-## Apa yang boleh diautomasikan?
+Baca dua baris terakhir sebagai penggunaan, bukan pematuhan. Seorang pembayar cukai boleh berdaftar dan mengeluarkan bilangan dokumen yang kecil, dan jumlah itu tidak memberitahu berapa banyak perniagaan benar-benar patuh.
 
-Lapan pengesah berjalan pada setiap penyerahan, dan itulah sebabnya mesin melakukannya lebih baik daripada manusia yang menaip semula: struktur, medan teras, tandatangan, kesahihan pembayar cukai, dokumen rujukan, kod, pendua dan mata wang.
+## Apa yang disemak sistem semasa pengeluaran
 
-| Tugasan | Diautomasikan? | Mengapa |
-| --- | --- | --- |
-| Membina dokumen daripada rekod jualan atau belian anda | Ya | Data itu sudah ada dalam sistem anda |
-| Menyemak TIN sebelum penyerahan | Ya | Ia panggilan API, bukan pertimbangan |
-| Melalui lapan pengesah | Ya | Ia peraturan yang pasti |
-| Menyerahkan dan menyimpan respons LHDN | Ya | Resit untuk disimpan, bukan keputusan |
-| Menandakan pengesahan yang gagal berserta peraturan yang gagal | Ya | Nama peraturan ada dalam respons |
-| Memutuskan sama ada transaksi itu palsu atau benar-benar luar biasa | Tidak | Pertimbangan, dan manusia yang bertanggungjawab |
-| Memilih invois konsolidasi di bawah kelonggaran | Tidak | Keputusan dasar dengan kesan cukai |
-| Meluluskan pembetulan selepas 72 jam | Tidak | Perlukan alasan yang boleh dipertahankan manusia |
+Bagi sesiapa di atas ambang, penyerahan disemak oleh lapan pengesah sebelum diterima: struktur (UBL 2.1 bagi invois), medan teras, tandatangan, kesahihan pembayar cukai, dokumen rujukan, kod, pendua dan mata wang. Semakan pendua mencari dokumen yang dihantar baru-baru ini yang serupa atau sama, dan semakan pembayar cukai menguji kesahihan pada tarikh pengeluaran.
 
-## Apa yang diubah oleh tetingkap 72 jam?
+Itu penting untuk kualiti data, bukan untuk pilihan perisian. Jika data invois salah semasa dikeluarkan, pengesahan menangkapnya, dan laluan pembetulan bukan suntingan. Pembeli boleh menolak dan penjual boleh membatalkan dalam 72 jam selepas pengesahan; selepas itu pembetulan memerlukan e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
 
-Ia mengubah siapa yang membetulkan kesilapan, dan bila. Pembeli boleh memohon penolakan dalam 72 jam selepas pengesahan, dan penjual boleh membatalkan dalam tetingkap yang sama. Selepas 72 jam, pembatalan tidak dibenarkan, dan pembetulan memerlukan e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
+## Penalti disebut, jumlahnya tidak diterbitkan
 
-Jadi tool perlu memerhati jam, bukan hanya penyerahan. Integrasi yang menghantar dokumen dan melupakannya meninggalkan pembetulan kepada sesiapa yang perasan. Itulah cara nota kredit keluar tiga bulan lewat dan muncul semasa audit.
+LHDN menyebut Seksyen 120 Akta Cukai Pendapatan 1967. Tiada angka ringgit dalam kenyataan itu, dan tiada ditemui pada halaman yang disemak. Perniagaan yang memutuskan berapa banyak untuk dibelanjakan pada pematuhan patut menganggapnya sebagai tidak diketahui, bukan sebagai risiko kecil.
 
-## Apa yang berlaku jika tersilap?
+## Jika anda di bawah RM3 juta, tunggu pelanggan meminta
 
-Garis panduan menyebut Seksyen 120 Akta Cukai Pendapatan 1967, dan ia tidak mencetak angka penalti pada mana-mana halaman yang dapat dibaca. Jadi artikel ini tidak akan memetik penalti dalam ringgit. Tiada jumlah yang diterbitkan ditemui.
+Pendapat saya, dinyatakan sekali: perniagaan di bawah ambang tidak patut melaksanakan e-Invoice untuk kepentingannya sendiri. Kewajipan itu sudah ditarik balik, penyertaan sukarela digalakkan tetapi tidak diberi ganjaran, dan kos operasinya nyata. Laksanakannya apabila pelanggan besar atau pembeli kerajaan memintanya, dan kemudian uruskan transaksi pelanggan itu sahaja daripada menukar setiap invois yang anda keluarkan.
 
-Dua mekanisme bertarikh melembutkan pendedahan itu. Tempoh kelonggaran interim terpakai bagi setiap fasa, di mana pembayar cukai boleh mengeluarkan e-Invois konsolidasi bagi semua aktiviti dan e-Invois konsolidasi yang difakturkan sendiri tanpa dokumen bagi setiap transaksi, dan LHDN menyatakan ia tidak akan mendakwa di bawah Seksyen 120 sepanjang tempoh itu dengan syarat dipenuhi. Secara berasingan, program pengesahan sukarela, PKPS (Program Pengesahan Sukarela, tetingkap bagi pembayar cukai yang terlepas tarikh permulaan untuk tampil ke hadapan), berjalan dari **7 Julai 2026 hingga 31 Disember 2027** bagi pembayar cukai yang terlepas tarikh permulaan wajibnya, menggunakan versi dokumen PKPS 1.2 atau 1.3, dan meliputi semakan serta penguatkuasaan kecuali pendedahan itu melanggar syarat atau melibatkan penipuan, keingkaran sengaja atau kecuaian.
+Pengecualiannya ialah perniagaan yang merancang melepasi RM3 juta. Jika hasil hampir dengan garisan itu, menjalankan satu suku e-Invoice secara selari lebih murah daripada menemui kewajipan pada suku ia terpakai.
 
-## Lima perkara ini dahulu
+## Apa yang tidak dapat disahkan
 
-Lima tindakan, tiada satu pun memerlukan pembelian.
+Empat dakwaan yang tersebar dalam panduan dan ulasan tidak ada dalam kenyataan itu, dan tiada satu pun disahkan daripada halaman primer.
 
-1. **Cari fasa anda** dalam jadual di atas mengikut jualan tahunan, dan tulis tarikh fasa anda bermula di sebelahnya.
-2. **Semak TIN anda aktif** sebelum apa-apa lagi: nombor pembayar cukai yang salah gagal pengesahan kemudian, bukan semasa menandatangani.
-3. **Eksport satu bulan invois** sebagai fail. Fail itu ialah input yang diperlukan mana-mana tool, dan mengetahui betapa bersepahnya ia membentuk sebut harga.
-4. **Tanya akauntan anda sama ada kelonggaran interim terpakai**, dan dapatkan jawapannya secara bertulis.
-5. **Pilih tiga invois yang anda keluarkan bulan lepas** dan latih soalan 72 jam: siapa yang akan perasan, dan berapa cepat?
+Peraturan pemilikan kumpulan, yang dilaporkan membatalkan kelayakan perniagaan di bawah RM3 juta yang menjadi sebahagian kumpulan lebih besar, dirujuk kepada perenggan garis panduan yang tidak dibuka.
 
-## Tempat paling murah untuk bermula
+Potongan RM50,000 setahun bagi penyertaan sukarela, yang disebut dalam ulasan bagi tahun taksiran 2024 hingga 2027, hanya muncul dalam sumber sekunder.
 
-Bagi yang suka mencuba, sandbox MyInvois ialah benda paling kecil yang berjalan: laman pembangun LHDN menjalankan sandbox tempat API dan ralat pengesahannya boleh diuji, dan dokumen XML atau JSON sampel akan kembali dengan pengesah yang gagal. Anda perlukan log masuk sandbox daripada laman SDK dan sesuatu yang boleh menghantar JSON, iaitu teks berstruktur, jadi curl atau skrip sepuluh baris sudah cukup. Percubaan itu percuma, dan tiada yuran setiap penyerahan muncul pada mana-mana halaman LHDN yang dibaca untuk artikel ini. Jangkakan pengesah tandatangan yang menyekat anda dahulu. Dokumen yang kelihatan betul kepada anda gagal apabila tandatangan tiada atau cacat, dan teks ralat selalunya tidak menyatakan medan yang menyebabkannya.
+Sama ada perniagaan yang bermula di bawah garisan RM1 juta lama boleh berhenti tidak dijawab dalam kenyataan itu. Panduan itu diam tentang kes sebaliknya.
 
-## Apa yang tidak dapat kami sahkan?
-
-Portal MyInvois sendiri tidak dapat dibaca: tamat masa sambungan, kemudian hanya tajuk halaman, kerana ia aplikasi sebelah klien. Jawapan Soalan Lazim LHDN dimuatkan melalui skrip dan tiada dalam HTML yang dihidangkan. Tarikh setiap fasa di dalam jadual kelonggaran kelihatan grafik dalam PDF dan tidak diekstrak. Dan garis panduan umum yang dibaca ialah versi 4.8; versi umum yang lebih baharu mungkin ada dan tidak disahkan.
-
-**Baca seterusnya**
-
-[Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat)
-
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+Dan tarikh kelonggaran setiap fasa berada dalam grafik dalam PDF garis panduan dan bukan dalam teksnya, jadi ia tidak disalin di sini.
 
 ## FAQ
 
-### Saya berputar RM4 juta setahun. Adakah saya dikecualikan?
+### Adakah pengecualian terpakai kepada perniagaan dengan jualan RM2.9 juta?
 
-Tidak. Pengecualian ialah kurang RM3 juta, dan fasa 4 meliputi hingga RM5 juta, jadi RM4 juta termasuk dalam skop dan telah pun sejak 1 Januari 2026.
+Ia terpakai kepada pendapatan atau jualan tahunan di bawah RM3 juta, jadi RM2.9 juta berada di bawah garisan dan e-Invoice tidak diwajibkan.
 
-### Bolehkah sistem akauntan saya memfailkannya untuk saya?
+### Bolehkah perniagaan di bawah ambang tetap mengeluarkan e-Invoice?
 
-Laluan penyerahan menyokong perantara: LHDN mendokumenkan pengesahan berasingan bagi sistem yang bertindak bagi pihak pembayar cukai. Liabiliti kekal dengan pembayar cukai, jadi soalannya siapa yang menyemak kegagalan, bukan siapa yang menekan butang hantar.
+Boleh. Penyertaan sukarela digalakkan, dan perniagaan boleh melaksanakannya tanpa kewajipan.
 
-### Adakah automasi menghapuskan keperluan untuk manusia?
+### Apa berlaku selepas 72 jam jika invois salah?
 
-Ia menghapuskan penulisan semula, semakan TIN dan perjalanan pergi balik pengesah. Ia tidak menghapuskan orang yang memutuskan sama ada transaksi itu tulen, atau yang meluluskan pembetulan selepas tetingkap 72 jam tamat.
+Pembatalan tidak lagi dibenarkan, dan pembetulannya ialah e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
 
-### Apa jadi kepada invois yang saya keluarkan sebelum fasa saya bermula?
+### Adakah jumlah penalti diterbitkan?
 
-Mekanisme yang diterbitkan bagi permulaan yang terlepas ialah program pengesahan sukarela, berjalan 7 Julai 2026 hingga 31 Disember 2027. Sama ada kes anda layak ialah soalan untuk LHDN atau ejen cukai anda, bukan untuk artikel ini.
+Seksyen 120 Akta Cukai Pendapatan 1967 disebut. Tiada jumlah ringgit diterbitkan dalam kenyataan itu atau pada halaman yang disemak.
+
+---
+
+**Baca seterusnya**
+
+[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali)
+
+[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)

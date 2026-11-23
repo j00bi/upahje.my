@@ -14,13 +14,6 @@
       <description>AI agent menjalankan gelung sendiri: ia membaca tugasan, memanggil tool, menyemak hasil dan mengulang. Apa yang diliputi tanpa penyeliaan, apa yang perlukan tandatangan manusia, dan apa yang tidak patut disentuh.</description>
     </item>
     <item>
-      <title>Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia</title>
-      <link>https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi</link>
-      <guid isPermaLink="true">https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi</guid>
-      <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Sejak 1 Januari 2026 semua fasa berkuat kuasa, dan jurang RM3 juta hingga RM5 juta termasuk dalam skop. Apa yang dilakukan oleh penyerahan automatik, apa yang diubah oleh tetingkap 72 jam, dan keputusan mana yang tidak patut diambil oleh tool.</description>
-    </item>
-    <item>
       <title>Automasi pertama anda bukan proses yang paling anda benci</title>
       <link>https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk</guid>
@@ -28,11 +21,11 @@
       <description>Pendapat. Proses yang paling pemilik benci biasanya proses yang paling buruk untuk diautomasikan dahulu, kerana mengautomasikannya membuang bukti yang anda perlukan dan menyembunyikan pengecualian yang menentukan kos.</description>
     </item>
     <item>
-      <title>CommandCode, OpenCode, DeepSeek: apa sebenarnya yang diukur oleh angka yang diterbitkan</title>
+      <title>CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda</title>
       <link>https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka</guid>
       <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Tiada papan pendahulu menjalankan CommandCode atau OpenCode sebagai agent. SWE-bench dan Terminal-bench menilai model di dalam harness orang lain, jadi perbandingan antara dua CLI ialah kesilapan kategori.</description>
+      <description>Satu CLI berbayar, satu CLI percuma, satu API. Harga yang diterbitkan, perubahannya, dan satu larian yang menunjukkan kod keluar sifar bukan kejayaan.</description>
     </item>
     <item>
       <title>Di mana data yang sama ditaip tiga kali</title>

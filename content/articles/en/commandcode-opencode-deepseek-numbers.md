@@ -1,13 +1,15 @@
 ---
-title: "CommandCode, OpenCode, DeepSeek: what the published numbers actually measure"
-description: "No leaderboard runs CommandCode or OpenCode as the agent. SWE-bench and Terminal-bench score a model inside someone else's harness, so a head-to-head between two CLIs is a category error."
+title: "CommandCode, OpenCode, DeepSeek: three names, three different things"
+description: "One is a paid CLI, one is a free CLI, one is an API. Their published prices, their drift, and one run that shows an exit code of zero is not success."
 slug: commandcode-opencode-deepseek-numbers
 translationKey: commandcode-opencode-deepseek-numbers
 date: 2026-11-23
 updated: 2026-11-23
 author: "UpahJe editorial"
 category: buying-guides
-tags: [buying-guides, coding-agents, benchmarks, malaysia]
+audience: developer
+format: dev-note
+tags: [buying-guides, coding-agents, pricing]
 canonical: https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers
 draft: false
 sources:
@@ -34,40 +36,9 @@ sources:
     checked: 2026-11-23
 ---
 
-# CommandCode, OpenCode, DeepSeek: what the published numbers actually measure
+# CommandCode, OpenCode, DeepSeek: three names, three different things
 
-These are three different kinds of thing. CommandCode is a paid coding CLI. OpenCode is a free, MIT-licensed coding CLI with an optional subscription. DeepSeek is a model vendor with an API. No published leaderboard in this pass ran either CLI as the agent, so a "CommandCode vs OpenCode" score comparison does not exist to be quoted. What exists is DeepSeek's model scored inside someone else's harness.
-
-## What is in a leaderboard row?
-
-![A landscape diagram with columns for model, agent, settings, score and cost. The example row is DeepSeek V4.1 Flash 1017 at max, run under Claude Code on Terminal-bench 4.1, scoring 38.5 percent plus or minus 3.8 with 8.2 billion tokens. A footer states that neither CommandCode nor OpenCode appears in the agent column](/figures/leaderboard-row-anatomy.svg)
-*Read the agent column first: it decides whose number the score is.*
-
-Five things, and the score is only one of them: the model, the agent that drove it, the settings, the score, and the cost. Read the first two before the number.
-
-The Terminal-bench 4.1 page makes this visible because its columns are RANK, MODEL, AGENT, RESOLUTION RATE, RELEASE DATE, TOKENS and COST. The DeepSeek row reads:
-
-| Field | Value as printed |
-| --- | --- |
-| Model | DeepSeek V4.1 Flash 1017 (max) |
-| Agent | Claude Code |
-| Resolution rate | 38.5% ± 3.8% |
-| Tokens | 8.2B |
-| Release date | Oct 17, 2026 |
-
-So the number belongs to a DeepSeek model running under Claude Code. It is not a CommandCode result and not an OpenCode result. Change the agent and the number changes, which is the whole reason the agent column exists.
-
-## Which names appear on the boards at all?
-
-SWE-bench Verified's agent column lists only mini-SWE-agent. Terminal-bench 4.1 lists Claude Code, Codex, Antigravity CLI, GitHub Copilot, Grok Build and mini-SWE-agent. Neither board has CommandCode or OpenCode in the agent column.
-
-The model names are a separate question, and here the answer is thinner than the marketing suggests:
-
-- **SWE-bench Verified** has DeepSeek V3.2 (high) at 70.00% resolved with an average cost of $0.45, and DeepSeek V3.2 Reasoner at 60.00% with an average cost of $0.03. Both under mini-SWE-agent, with the Verified tab, Bash Only checked, sorted by percent resolved.
-- **SWE-bench has no entry for DeepSeek V4.1 Flash or V4 Pro.** That is an absence on the board, not a bad score.
-- **Aider polyglot is stale.** The newest visible run directory is dated 23 August 2025 and the top row is gpt-5 (high) at 88.0% for $29.08. A board that has not seen a 2026 model cannot rank one, so this article does not cite it as current.
-
-The honest summary: the only published score that names DeepSeek's current model puts it at 38.5% ± 3.8% on Terminal-bench 4.1, under Claude Code, with 8.2B tokens. Everything else that sounds like a comparison is a vendor claim or a discussion thread.
+These are three different kinds of thing, and the words matter before the prices do. `dsh` is DeepSeek Harness, the command-line harness we run here. An "arm" is one of the products tried on the same task, and this run had three: CommandCode, OpenCode and DeepSeek through `dsh`. CommandCode is a paid coding CLI. OpenCode is a free, MIT-licensed coding CLI with an optional subscription. DeepSeek is a model vendor with an API. What follows is what each publishes as a price, where those numbers have moved, and what one run showed. The benchmark half, and the reason a "CommandCode vs OpenCode" score does not exist, is a separate developer note.
 
 ## What do the prices look like as published?
 
@@ -122,51 +93,6 @@ There is no honest way to reproduce a leaderboard. What you can reproduce is you
 Take one task, run it in one harness, and write down the same five fields the boards print: the model, the agent, the settings, the score (did the tests pass), and the cost in tokens or ringgit. That is your benchmark, it is comparable to itself next month, and it does not depend on anyone's marketing page.
 
 The one thing that will bite you is the exit code. A run that exits 0 without writing files looks like a pass in every log you have. Check the artefact, every time.
-
-## What did the comparison publish?
-
-Three interactive demos for Round 1, and no numbers. The archived page, snapshot 25 October 2026, lists DeepSeek Platform, OpenCode Go and CommandCode GOAT, each as a demo path under a vivarium conceit: "A Closed Ecology", "Abyssal Vivarium", "Vivarium Nº 7" ([archive, read 23 Nov 2026](https://web.archive.org/web/20261025232027/https://nazzysar.github.io/deepseek-benchmarks/)).
-
-The catalog is the evidence. Each entry carries a title, a description, a path and a tone, and nothing else: no score, duration, token count or cost. That is why loading all three cannot settle speed or price for you.
-
-The demos themselves still exist, in the live repository rather than in the capture. The archive took the gallery, the catalog and the three viewer URLs, and nothing under `rounds/`. The three `rounds/round-1/*/index.html` files are in `nazzysar/deepseek-benchmarks`, and their SHA-256 hashes match that repository's own `rounds/checksums.json` ([repo, read 23 Nov 2026](https://github.com/nazzysar/deepseek-benchmarks)). Scanned for text, they carry in-game numbers only, things like "SEALED 12 · IV · 1887" and "120 × 72 cells", with no build time, token count, cost or score caption.
-
-A demo settles two things. Whether the thing runs in your browser, and whether you like what it made. It does not settle score, cost, tokens or reliability, because none of those was published.
-
-## What do the GOAT sessions show?
-
-They show how the run behaved: retries, elapsed time, steps. The repository `nazzysar/commandcode-goat-ecosystem-sess` holds three redacted session transcripts from the CommandCode GOAT arm, and they are the run's own records rather than a leaderboard row ([repo, read 23 Nov 2026](https://github.com/nazzysar/commandcode-goat-ecosystem-sess)).
-
-| What the records contain | Value |
-| --- | --- |
-| Transcripts | lead, critic, prover: 1,123 / 582 / 1,091 records |
-| Retries in the lead session | 33, of which 23 SERVER, 10 TRANSPORT, 0 TIMEOUT |
-| Retries across the three | 94, split 57 / 37 / 0 |
-| Turns | 5, lasting 7,565.5 s, 2,636.0 s, 150.5 s, 117.6 s and 3.9 s |
-| Elapsed total | 10,473.5 s, about 2 h 55 m |
-| Activity | 161 tool calls, 140 steps, 138 assistant messages, 25 user messages |
-| Model and provider | `deepseek/deepseek-v4.1-flash`, provider `commandcode-goat` |
-
-That is what a hard run looks like from the inside: one turn took over two hours, and the retries are dominated by server and transport faults rather than timeouts. None of it says the output was good. It says the arm kept going.
-
-There are no token counts and no cost fields in those records. Every token field name was searched across the decoded transcripts and found absent, and the site's data model has no cost field either. So no cost comparison can be built from them, and this article does not imply one.
-
-The figures we do have, each with where it came from:
-
-| Figure | What it says | Provenance |
-| --- | --- | --- |
-| 38.5% ± 3.8% | DeepSeek V4.1 Flash 1017 (max), under Claude Code, Terminal-bench 4.1 | Terminal-bench leaderboard, read 23 Nov 2026 |
-| $10/month GOAT + processing fee | Up to $100 in credits, CommandCode's tier as printed | Vendor pricing page, read 23 Nov 2026 |
-| $10/month Go, agent under MIT | OpenCode's optional subscription, and the agent's licence | Vendor docs and repository, read 23 Nov 2026 |
-| 95.4 s, 10 turns, 14 tool calls, 3/3 tests | One `dsh` run on one task, two files written | Our measurement, 23 Nov 2026 |
-
-Two numbers are still absent, and both are narrow. DeepSeek's release note prints a chart with no values in the page text, and CommandCode's processing fee has no figure on any page read.
-
-**Read next**
-
-[Agent harnesses: who makes them, and what is actually open source](https://upahje.my/en/articles/harness-landscape-open-closed)
-
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
 
 ## FAQ
 

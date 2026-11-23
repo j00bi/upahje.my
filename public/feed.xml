@@ -7,11 +7,11 @@
     <language>en-MY</language>
     <atom:link href="https://upahje.my/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
-      <title>CommandCode, OpenCode, DeepSeek: what the published numbers actually measure</title>
+      <title>CommandCode, OpenCode, DeepSeek: three names, three different things</title>
       <link>https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers</link>
       <guid isPermaLink="true">https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers</guid>
       <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
-      <description>No leaderboard runs CommandCode or OpenCode as the agent. SWE-bench and Terminal-bench score a model inside someone else's harness, so a head-to-head between two CLIs is a category error.</description>
+      <description>One is a paid CLI, one is a free CLI, one is an API. Their published prices, their drift, and one run that shows an exit code of zero is not success.</description>
     </item>
     <item>
       <title>Google Business Profile: the fields that decide whether you show up</title>
@@ -33,13 +33,6 @@
       <guid isPermaLink="true">https://upahje.my/en/articles/what-an-ai-agent-can-do</guid>
       <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
       <description>An AI agent runs a loop on its own: it reads a task, calls tools, checks the result and repeats. What that covers unattended, what needs a human signature, and what no agent should touch.</description>
-    </item>
-    <item>
-      <title>What e-Invoice automation covers, and what stays with a person</title>
-      <link>https://upahje.my/en/articles/what-einvoice-automation-covers</link>
-      <guid isPermaLink="true">https://upahje.my/en/articles/what-einvoice-automation-covers</guid>
-      <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Since 1 January 2026 every band is in force, and the RM3m to RM5m gap is in scope. What an automated submission does, what the 72-hour window changes, and which decisions no tool should take.</description>
     </item>
     <item>
       <title>Your first automation should not be your worst process</title>
