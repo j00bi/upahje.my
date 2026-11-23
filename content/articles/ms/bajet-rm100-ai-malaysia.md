@@ -1,5 +1,5 @@
 ---
-title: "Apa yang RM100 sebulan sebenarnya beli dalam AI, di Malaysia"
+title: "Apa yang RM100 sebulan beli dalam AI, di Malaysia"
 description: "RM100 ialah sama ada satu tempat duduk dalam aplikasi langganan, atau satu meter token API, bukan kedua-duanya. Penukaran pada kadar Bank Negara 19 November 2026, tiga tahap penggunaan, dan garis di mana token menang."
 slug: bajet-rm100-ai-malaysia
 translationKey: rm100-budget
@@ -28,15 +28,15 @@ sources:
     checked: 2026-11-19
 ---
 
-# Apa yang RM100 sebulan sebenarnya beli dalam AI, di Malaysia
+# Apa yang RM100 sebulan beli dalam AI, di Malaysia
 
 RM100 membeli salah satu daripada dua perkara berbeza, dan pilihannya bukan tentang model mana yang lebih bijak. Ia membeli tempat duduk dalam aplikasi orang lain, atau meter token untuk perisian yang anda jalankan sendiri. Pada tugasan 2,000 token, RM100 token Claude Haiku 5.5 ialah kira-kira 54,000 tugasan sebulan, manakala ChatGPT Plus berharga RM99.90 dan tidak menyertakan kunci API langsung.
 
-## Apa yang sebenarnya termasuk dalam langganan?
+## Apa yang termasuk dalam langganan?
 
 Pelan pengguna menjual tempat duduk: satu log masuk, satu elaun penggunaan dan antara muka pembekal. Ia tidak memberikan anda kunci API.
 
-Perbezaan itulah keseluruhan keputusannya, dan halaman pembekal menyatakannya dengan jelas. Claude Pro dan ChatGPT Plus tidak menyenaraikan kredit API. Claude Max pada USD 100 dan Claude Ultra pada USD 200 menyertakan kredit API sama dengan harga masing-masing, dan ChatGPT Pro menyertakan kredit API bulanan hingga harga tiernya. Kredit Copilot ialah GitHub AI Credits untuk ciri-cirinya sendiri, bukan akses API. Tiada apa pada halaman itu memberikan harness pihak ketiga satu kunci.
+Halaman pembekal menyatakan perbezaan itu dengan jelas. Claude Pro dan ChatGPT Plus tidak menyenaraikan kredit API. Claude Max pada USD 100 dan Claude Ultra pada USD 200 menyertakan kredit API sama dengan harga masing-masing, dan ChatGPT Pro menyertakan kredit API bulanan hingga harga tiernya. Kredit Copilot ialah GitHub AI Credits untuk ciri-cirinya sendiri, bukan akses API. Tiada apa pada halaman itu memberikan harness pihak ketiga satu kunci.
 
 | Pelan | Harga diterbitkan | Dalam ringgit | Akses API disertakan |
 | --- | --- | --- | --- |
@@ -90,7 +90,7 @@ Di bawah kira-kira 900 tugasan sebulan, tempat duduk lebih berbaloi jika manusia
 
 Di atas kira-kira 6,000 tugasan sebulan, atau bila-bila masa perisian dan bukan manusia yang membuat panggilan, token menang: RM11.11 penggunaan API menggantikan tempat duduk yang tidak boleh melayani harness langsung. Di antaranya, jawapan jujurnya bergantung pada sama ada anda perlukan antara muka atau integrasi, dan beza harganya terlalu kecil untuk menentukannya.
 
-Kedua-dua garis itu bukan cadangan. Ia titik di mana aritmetik bertukar arah, dan kedua-duanya menganggap tugasan 2,000 token.
+Kedua-dua garis itu menganggap tugasan 2,000 token. Ia menandakan titik di mana aritmetik bertukar arah, dan tidak lebih daripada itu.
 
 ## Apa yang tidak dapat kami sahkan?
 

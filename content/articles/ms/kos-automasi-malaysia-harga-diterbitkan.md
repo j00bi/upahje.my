@@ -39,7 +39,7 @@ Harga yang diterbitkan bagi kerja automasi di Malaysia bermula dari RM400 untuk 
 
 Angka di bawah datang daripada halaman harga penyedia automasi Malaysia dan daripada satu profil freelance Malaysia, semuanya dibaca pada 19 atau 27 Oktober dan November 2026 mengikut tarikh setiap baris.
 
-Apa yang tidak dapat dibaca sama pentingnya. Pasaran global tidak diukur di sini: Upwork memulangkan HTTP 403 dengan sekatan Cloudflare, Fiverr memulangkan cabaran bot, Jobstreet memulangkan halaman perantaraan Cloudflare, dan Indeed serta Maukerja hanya memaparkan senarai melalui JavaScript. Tiada satu pun kadar profil Upwork atau Fiverr dapat dikumpul, jadi tiada apa di sini boleh dibaca sebagai kadar freelancer yang dinilai secara global. Jalur ini menerangkan lapisan penawaran tempatan yang diterbitkan: studio yang ada senarai harga, dan satu profil marketplace dengan kadar sejam.
+Pasaran global tidak diukur di sini. Upwork memulangkan HTTP 403 dengan sekatan Cloudflare, Fiverr memulangkan cabaran bot, Jobstreet memulangkan halaman perantaraan Cloudflare, dan Indeed serta Maukerja hanya memaparkan senarai melalui JavaScript. Tiada satu pun kadar profil Upwork atau Fiverr dapat dikumpul, jadi tiada apa di sini boleh dibaca sebagai kadar freelancer yang dinilai secara global. Jalur ini menerangkan lapisan penawaran tempatan yang diterbitkan: studio yang ada senarai harga, dan satu profil marketplace dengan kadar sejam.
 
 Dua lagi pengecualian. Setiap tier "sebut harga atas permintaan" dikecualikan, kerana sebut harga bukan kadar. Profil Freelancer.com yang berharga dalam USD juga dikecualikan, walaupun orangnya Malaysia, kerana angkanya bukan harga Malaysia.
 
@@ -96,7 +96,7 @@ Had itu nyata. Satu-satunya harga pembinaan yang menamakan kerja integrasi dalam
 
 Kerana penerbit menjual perkara yang berbeza: satu sesi masa seseorang, satu projek dengan penghujung yang jelas, atau satu langganan berterusan.
 
-RM400 setiap sesi 4 jam dan RM1,500 setiap projek bukan harga yang bersaing. Yang pertama ialah tenaga kerja, dan anda boleh membeli dua sesi tetapi masih tiada sistem yang berjalan. Yang kedua menganggap skop yang jelas. Yang ketiga, retainer bulanan, membeli perhatian dan bukan hasil. Membandingkannya tanpa menukar kepada apa yang anda sebenarnya dapat ialah cara paling biasa pembeli salah membaca jadual seperti ini.
+RM400 setiap sesi 4 jam dan RM1,500 setiap projek bukan harga yang bersaing. Yang pertama ialah tenaga kerja, dan anda boleh membeli dua sesi tetapi masih tiada sistem yang berjalan. Yang kedua menganggap skop yang jelas. Yang ketiga, retainer bulanan, membeli perhatian dan bukan hasil. Membandingkannya tanpa menukar kepada apa yang anda dapat ialah cara pembeli salah membaca jadual seperti ini.
 
 Tarikh penting atas sebab yang sama. Beberapa halaman tiada tarikh penerbitan, jadi tarikh baris ialah hari harga itu dibaca, bukan hari ia diterbitkan. Harga yang dibaca pada 19 November 2026 mungkin ditulis pada 2025 dan tidak dikemas kini.
 

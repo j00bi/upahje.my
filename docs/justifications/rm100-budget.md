@@ -4,7 +4,7 @@
 
 | # | claim | source URL | publisher | checked | basis |
 |---|-------|------------|-----------|---------|-------|
-| 1 | "RM100 buys one of two different things, and the choice is not about which model is smarter." | - | - | - | estimate: our framing of the seat-versus-meter distinction, no external source claimed |
+| 1 | "RM100 buys one of two things: a seat in someone's app, or a meter of tokens for software you run." | - | - | - | estimate: our framing of the seat-versus-meter distinction, no external source claimed |
 | 2 | "Claude Pro and ChatGPT Plus list no API credits." | https://claude.com/pricing | Anthropic | 2026-11-19 | source: Table 1 rows Claude Pro and ChatGPT Plus, API access column "No" |
 | 3 | "Claude Max at USD 100 and Claude Ultra at USD 200 include API credits equal to their own price" | https://claude.com/pricing | Anthropic | 2026-11-19 | source: Table 1 rows Claude Max and Claude Ultra |
 | 4 | "Copilot's credits are GitHub AI Credits for its own features, not API access." | https://github.com/features/copilot/plans | GitHub | 2026-11-19 | source: Table 1, Copilot Pro row |

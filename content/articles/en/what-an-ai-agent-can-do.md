@@ -81,7 +81,7 @@ Four categories, and no amount of prompting changes them.
 
 ## What does it cost in ringgit?
 
-Two bills, and the smaller one is the one people worry about.
+Two bills. The smaller one gets the attention.
 
 **Running it.** Token rates are published, so this is arithmetic rather than a guess. At 2,000 input and 500 output tokens per task, Claude Haiku 5.5 costs `0.002 million × USD 0.10 = USD 0.0002` for input plus `0.0005 million × USD 0.50 = USD 0.00025` for output, which is USD 0.00045 a task. At the Bank Negara middle rate of **4.1145** (read 19 November 2026), that is about RM0.00185. A thousand tasks a month is **RM1.85**. A teh tarik at a mamak is RM2 to RM3, which is our own comparison, not a published index.
 
@@ -101,15 +101,15 @@ Five actions, none of which needs a purchase or a developer.
 
 ## Try it yourself
 
-The smallest runnable version is a script that reads a CSV of support emails, calls one model per row, and writes a draft reply into a second CSV. It is not an agent yet, and that is the point: it proves the loop before you add tools.
+The smallest runnable version is a script that reads a CSV of support emails, calls one model per row, and writes a draft reply into a second CSV. It is not an agent yet. That is deliberate, because it proves the loop before you add tools.
 
 - **What it needs:** a file of sample rows, an API key (a string that identifies your account to the model provider), and about 20 lines of Python. No server.
 - **What it costs:** at 2,000 input and 500 output tokens per row, about **RM0.00185 a row**, so a hundred rows is under 20 sen.
-- **The one thing that will bite you:** a model reading a CSV column will happily mis-parse an empty cell and invent a customer name. Log every input row beside its output, or you will debug the wrong half.
+- **Where it breaks first:** a model reading a CSV column will happily mis-parse an empty cell and invent a customer name. Log every input row beside its output, or you will debug the wrong half.
 
 ## How do I tell a demo from something that keeps running?
 
-A demo works once, in front of you. Something that keeps running survives a bad day. Six checks, and the answers are things, not adjectives.
+A demo works once, in front of you. Something that keeps running survives a bad day. Six checks. Each answer should be a thing someone can show you.
 
 1. **Show me the transcript.** A working agent records what it did, step by step. If there is no log, there is no evidence it ran.
 2. **What happens when a step fails?** Retry, queue or alert. Silence is not an answer.

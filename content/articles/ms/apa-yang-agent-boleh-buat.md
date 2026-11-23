@@ -78,7 +78,7 @@ Empat kategori, dan tiada prompt boleh mengubahnya.
 
 ## Berapa kosnya dalam ringgit?
 
-Dua bil, dan yang lebih kecil ialah yang orang risaukan.
+Dua bil. Yang lebih kecil itu yang dapat perhatian.
 
 **Menjalankannya.** Kadar token diterbitkan, jadi ini aritmetik dan bukan tekaan. Pada 2,000 token input dan 500 output setiap tugasan, Claude Haiku 5.5 menelan `0.002 juta × USD 0.10 = USD 0.0002` untuk input tambah `0.0005 juta × USD 0.50 = USD 0.00025` untuk output, iaitu USD 0.00045 setiap tugasan. Pada kadar tengah Bank Negara **4.1145** (dibaca 19 November 2026), itu kira-kira RM0.00185. Seribu tugasan sebulan ialah **RM1.85**. Teh tarik di mamak berharga RM2 hingga RM3, dan itu perbandingan kami sendiri, bukan indeks yang diterbitkan.
 
@@ -98,15 +98,15 @@ Lima tindakan, tiada satu pun memerlukan pembelian atau pembangun.
 
 ## Cuba sendiri
 
-Versi paling kecil yang boleh dijalankan ialah skrip yang membaca CSV e-mel sokongan, memanggil satu model bagi setiap baris, dan menulis draf balasan ke CSV kedua. Ia belum agent, dan itulah maksudnya: ia membuktikan gelung sebelum anda menambah tool.
+Versi paling kecil yang boleh dijalankan ialah skrip yang membaca CSV e-mel sokongan, memanggil satu model bagi setiap baris, dan menulis draf balasan ke CSV kedua. Ia belum agent. Itu disengajakan, kerana ia membuktikan gelung sebelum anda menambah tool.
 
 - **Apa yang diperlukan:** fail baris sampel, kunci API (rentetan yang mengenal pasti akaun anda kepada pembekal model), dan kira-kira 20 baris Python. Tiada server.
 - **Berapa kosnya:** pada 2,000 token input dan 500 output setiap baris, kira-kira **RM0.00185 sebaris**, jadi seratus baris kurang daripada 20 sen.
-- **Satu perkara yang akan menggigit anda:** model yang membaca lajur CSV akan tersalah tafsir sel kosong dan mencipta nama pelanggan. Log setiap baris input di sebelah outputnya, jika tidak anda akan menyahpepijat separuh yang salah.
+- **Di mana ia mula rosak:** model yang membaca lajur CSV akan tersalah tafsir sel kosong dan mencipta nama pelanggan. Log setiap baris input di sebelah outputnya, jika tidak anda akan menyahpepijat separuh yang salah.
 
 ## Bagaimana saya membezakan demo daripada yang terus berjalan?
 
-Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari yang buruk. Enam semakan, dan jawapannya benda, bukan kata sifat.
+Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari yang buruk. Enam semakan. Setiap jawapan patut berupa benda yang boleh ditunjukkan.
 
 1. **Tunjukkan transkripnya.** Agent yang berfungsi merekod apa yang dilakukannya, langkah demi langkah. Jika tiada log, tiada bukti ia berjalan.
 2. **Apa berlaku apabila satu langkah gagal?** Cuba semula, masuk baris gilir, atau beri amaran. Diam bukan jawapan.

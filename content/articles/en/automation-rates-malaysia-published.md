@@ -39,7 +39,7 @@ Published prices for automation work in Malaysia run from RM400 for a simple pro
 
 The figures below come from pricing pages of Malaysian automation providers and from one Malaysian freelance profile. Every row carries the date it was read: 19 November 2026 for the studio and platform pages, and 27 October 2026 for the independent practitioner's page.
 
-What could not be read matters as much. The global marketplaces are unmeasured here: Upwork returns HTTP 403 with a Cloudflare block, Fiverr returns a bot challenge, Jobstreet returns a Cloudflare interstitial, and Indeed and Maukerja render their listings only in JavaScript. Not one Upwork or Fiverr profile rate could be collected, so nothing here should be read as what a globally-priced freelancer charges. These bands describe the local published-supply layer: agencies with a price list, and one marketplace profile with an hourly rate.
+The global marketplaces are unmeasured here. Upwork returns HTTP 403 with a Cloudflare block, Fiverr returns a bot challenge, Jobstreet returns a Cloudflare interstitial, and Indeed and Maukerja render their listings only in JavaScript. Not one Upwork or Fiverr profile rate could be collected, so nothing here should be read as what a globally-priced freelancer charges. These bands describe the local published-supply layer: agencies with a price list, and one marketplace profile with an hourly rate.
 
 Two further exclusions. Every "quote on request" tier is excluded, because a quote is not a rate. Freelancer.com profiles that price in USD are excluded, even where the person is Malaysian, because the number is not a Malaysian price.
 
@@ -78,7 +78,7 @@ Per project, published prices run from RM400 for a simple process build at Pang 
 
 No Malaysian publisher in this set states a per-integration price, so no per-integration market rate is claimed here. What is published is subscription tiers that include connectors and API integration.
 
-That limit is real. The one build price that names integration work in the deliverable is a 3 to 5 workflow project from RM4,000. KodeSME's custom tier advertises integrations with existing systems and prices them as "Quote". BlueAura describes a one-time implementation fee without a number. A buyer asking "what does one API integration cost in Malaysia" will not get an answer from published pages, and this article will not invent one.
+No Malaysian publisher in this set prices one integration. The one build price that names integration work in the deliverable is a 3 to 5 workflow project from RM4,000. KodeSME's custom tier advertises integrations with existing systems and prices them as "Quote". BlueAura describes a one-time implementation fee without a number. A buyer asking "what does one API integration cost in Malaysia" will not get an answer from published pages, and this article will not invent one.
 
 | Task | Rate | Unit | Publisher | Date checked |
 | --- | --- | --- | --- | --- |
@@ -96,7 +96,7 @@ That limit is real. The one build price that names integration work in the deliv
 
 Because the publishers are selling different things: a session of someone's time, a project with a defined end, or an ongoing subscription.
 
-RM400 per 4-hour session and RM1,500 per project are not competing prices. The first is labour, and you can buy two sessions and still have no working system. The second assumes a defined scope. The third, a monthly retainer, buys attention rather than delivery. Comparing them without converting to what you actually get is the most common way a buyer misreads a table like this.
+RM400 per 4-hour session and RM1,500 per project are not competing prices. The first is labour, and you can buy two sessions and still have no working system. The second assumes a defined scope. The third, a monthly retainer, buys attention rather than delivery. Comparing them without converting to what you get is how buyers misread a table like this.
 
 The dates matter for the same reason. Several pages carry no publication date, so the row date is the day the price was read, not the day it was published. A price read on 19 November 2026 may have been written in 2025 and not updated.
 
@@ -115,7 +115,7 @@ Six things, and each one appears in the table above as a different tier rather t
 
 Convert both to the same three numbers before you compare: total cost to a working system, monthly cost after launch, and what each one excludes.
 
-A RM400 session and a RM1,500 project both look small next to a RM6,000 build, and none of them is comparable until you ask how many sessions until it runs, how many months of retainer you will actually pay, and which of the six factors above each quote excludes. Write the answers next to the figures from the same date, and the comparison stops being about which number is lower.
+A RM400 session and a RM1,500 project both look small next to a RM6,000 build, and none of them is comparable until you ask how many sessions until it runs, how many months of retainer you will pay, and which of the six factors above each quote excludes. Write the answers next to the figures from the same date, and the comparison stops being about which number is lower.
 
 **Read next**
 

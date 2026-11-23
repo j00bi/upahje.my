@@ -46,7 +46,7 @@ Fasa di bawah ialah fasa LHDN sendiri, daripada halaman garis masa yang menyatak
 
 Sekarang lihat jurang antara RM3 juta dan RM5 juta. Pengecualian berhenti di bawah RM3 juta, dan fasa 4 berjalan hingga RM5 juta, jadi perniagaan yang berputar RM4 juta termasuk dalam skop. Dua baris pada halaman yang sama, dibaca bersama. Saya pernah bertemu pemilik yang membaca baris pengecualian sahaja dan berhenti di situ.
 
-## Apa yang sebenarnya diserahkan?
+## Apa yang diserahkan?
 
 e-Invoice ialah versi digital dokumen yang dikeluarkan penjual, direkodkan dengan LHDN dan bukan sekadar difailkan dalam akaun anda sendiri, meliputi perniagaan-ke-perniagaan, perniagaan-ke-pengguna dan perniagaan-ke-kerajaan, dan ia dihantar kepada LHDN melalui sistem MyInvois.
 
@@ -78,11 +78,11 @@ Jadi tool perlu memerhati jam, bukan hanya penyerahan. Integrasi yang menghantar
 
 ## Apa yang berlaku jika tersilap?
 
-Garis panduan menyebut Seksyen 120 Akta Cukai Pendapatan 1967, dan ia tidak mencetak angka penalti pada mana-mana halaman yang dapat dibaca. Itu jurang, bukan perkara kecil: artikel ini tidak akan memetik penalti dalam ringgit, kerana tiada jumlah yang diterbitkan ditemui.
+Garis panduan menyebut Seksyen 120 Akta Cukai Pendapatan 1967, dan ia tidak mencetak angka penalti pada mana-mana halaman yang dapat dibaca. Jadi artikel ini tidak akan memetik penalti dalam ringgit. Tiada jumlah yang diterbitkan ditemui.
 
 Dua mekanisme bertarikh melembutkan pendedahan itu. Tempoh kelonggaran interim terpakai bagi setiap fasa, di mana pembayar cukai boleh mengeluarkan e-Invois konsolidasi bagi semua aktiviti dan e-Invois konsolidasi yang difakturkan sendiri tanpa dokumen bagi setiap transaksi, dan LHDN menyatakan ia tidak akan mendakwa di bawah Seksyen 120 sepanjang tempoh itu dengan syarat dipenuhi. Secara berasingan, program pengesahan sukarela, PKPS (Program Pengesahan Sukarela, tetingkap bagi pembayar cukai yang terlepas tarikh permulaan untuk tampil ke hadapan), berjalan dari **7 Julai 2026 hingga 31 Disember 2027** bagi pembayar cukai yang terlepas tarikh permulaan wajibnya, menggunakan versi dokumen PKPS 1.2 atau 1.3, dan meliputi semakan serta penguatkuasaan kecuali pendedahan itu melanggar syarat atau melibatkan penipuan, keingkaran sengaja atau kecuaian.
 
-## Apa yang patut dibuat minggu ini?
+## Lima perkara ini dahulu
 
 Lima tindakan, tiada satu pun memerlukan pembelian.
 
@@ -92,13 +92,9 @@ Lima tindakan, tiada satu pun memerlukan pembelian.
 4. **Tanya akauntan anda sama ada kelonggaran interim terpakai**, dan dapatkan jawapannya secara bertulis.
 5. **Pilih tiga invois yang anda keluarkan bulan lepas** dan latih soalan 72 jam: siapa yang akan perasan, dan berapa cepat?
 
-## Cuba sendiri
+## Tempat paling murah untuk bermula
 
-Versi paling kecil yang boleh dijalankan ialah sandbox MyInvois: laman pembangun LHDN menyediakan sandbox untuk menguji API dan ralat pengesahannya, dan ia menyatakan portal pengeluaran tidak boleh digunakan di situ ([FAQ MyInvois SDK, dibaca 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/faq/)).
-
-- **Apa yang diperlukan:** log masuk sandbox daripada laman SDK LHDN, dokumen sampel, dan tool yang boleh menghantar JSON, iaitu teks berstruktur. Tiada perisian berbayar.
-- **Berapa kosnya:** tiada apa-apa pada sandbox. Tiada bayaran setiap penyerahan muncul pada mana-mana halaman LHDN yang dibaca untuk artikel ini, jadi kos pengeluaran ialah masa anda, bukan caj.
-- **Satu perkara yang akan menggigit anda:** pengesah tandatangan. Dokumen yang kelihatan betul kepada anda boleh gagal kerana tandatangan tiada atau cacat, dan teks ralat tidak selalu menyatakan medan mana yang menyebabkannya.
+Bagi yang suka mencuba, sandbox MyInvois ialah benda paling kecil yang berjalan: laman pembangun LHDN menjalankan sandbox tempat API dan ralat pengesahannya boleh diuji, dan dokumen XML atau JSON sampel akan kembali dengan pengesah yang gagal. Anda perlukan log masuk sandbox daripada laman SDK dan sesuatu yang boleh menghantar JSON, iaitu teks berstruktur, jadi curl atau skrip sepuluh baris sudah cukup. Percubaan itu percuma, dan tiada yuran setiap penyerahan muncul pada mana-mana halaman LHDN yang dibaca untuk artikel ini. Jangkakan pengesah tandatangan yang menyekat anda dahulu. Dokumen yang kelihatan betul kepada anda gagal apabila tandatangan tiada atau cacat, dan teks ralat selalunya tidak menyatakan medan yang menyebabkannya.
 
 ## Apa yang tidak dapat kami sahkan?
 

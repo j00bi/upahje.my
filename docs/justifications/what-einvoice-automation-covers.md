@@ -19,19 +19,19 @@
 | 13 | "LHDN states it will not prosecute under Section 120 during that period provided the conditions are met" | https://www.hasil.gov.my/e-invois/ | LHDN | 2026-11-23 | source: Table 4, no-prosecution row, §16.3 |
 | 14 | "The MyInvois Portal itself could not be read: a connection timeout, then only the page title, because it is a client-side application." | - | our measurement, this machine | 2026-11-23 | source: two fetch attempts recorded on 23 November 2026 |
 | 15 | "TIN is the taxpayer identification number LHDN issues to a business; the API is the connection your software uses to hand a document to MyInvois without anyone retyping it." | https://sdk.myinvois.hasil.gov.my/ | MyInvois SDK (LHDN) | 2026-11-23 | source: TIN validation API and the API integration description on the SDK site |
-| 16 | "No per-submission fee appears on any LHDN page read for this article" | https://sdk.myinvois.hasil.gov.my/ | MyInvois SDK (LHDN) | 2026-11-23 | estimate: no per-submission fee printed on the SDK pages read; absence noted rather than assumed |
+| 16 | "no per-submission fee appears on any LHDN page read for this article" | https://sdk.myinvois.hasil.gov.my/faq/ | MyInvois SDK (LHDN) | 2026-11-23 | estimate: no per-submission fee printed on the LHDN pages read; absence noted, not assumed |
 
 ## Sections
 
 | H2 | why this section exists |
 |----|-------------------------|
 | Who has to file, and since when? | The phase table and the RM3m to RM5m gap, which is the trap a reader would otherwise fall into |
-| What is actually submitted? | The document types and the two routes, so a buyer knows which one they are buying |
+| What gets submitted? | The document types and the two routes, so a buyer knows which one they are buying |
 | What can be automated? | The capability table, split by what a machine may decide and what it may not |
 | What does the 72-hour window change? | The clock, which decides whether a fix is a cancel or a note |
 | What happens if you get it wrong? | The gap on penalties and the two dated reliefs |
 | What could we not verify? | Portal, FAQ, per-phase relaxation dates, guideline version |
-| What to do this week? | Five actions an owner can take with no purchase |
-| Try it yourself | The MyInvois sandbox, its cost, and the validator that bites |
+| Do these five things first | Five actions an owner can take with no purchase |
+| The cheapest place to start | The MyInvois sandbox, its cost, and the validator that bites |
 | FAQ | The RM4m case, intermediaries, human need, and invoices from before the start date |
 | Sources | The four URLs read, each dated |
