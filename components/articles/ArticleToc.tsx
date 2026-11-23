@@ -1,18 +1,17 @@
 'use client'
 
 import Link from 'next/link'
-import { motion, useReducedMotion } from 'motion/react'
 import { useEffect, useState } from 'react'
 
 export type TocItem = { id: string; label: string }
 
 /**
  * Table of contents: plain links in the HTML, so it works with JS disabled.
- * The client part adds the one allowed scroll reveal and marks the section in
- * view with aria-current. Motion collapses under prefers-reduced-motion.
+ * The entrance is a CSS animation whose final state is visible, never an
+ * inline opacity from JS. The client part marks the section in view with
+ * aria-current; the reveal collapses under prefers-reduced-motion.
  */
 export default function ArticleToc({ items }: { items: TocItem[] }) {
-  const reduce = useReducedMotion()
   const [active, setActive] = useState<string | null>(null)
 
   useEffect(() => {
@@ -38,14 +37,7 @@ export default function ArticleToc({ items }: { items: TocItem[] }) {
   if (!items.length) return null
 
   return (
-    <motion.nav
-      aria-label="On this page"
-      initial={reduce ? false : { opacity: 0, y: 6 }}
-      whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
-      className="flex flex-col gap-0.5"
-    >
+    <nav aria-label="On this page" className="toc-reveal flex flex-col gap-0.5">
       {items.map((item) => {
         const current = item.id === active
         return (
@@ -64,6 +56,6 @@ export default function ArticleToc({ items }: { items: TocItem[] }) {
           </Link>
         )
       })}
-    </motion.nav>
+    </nav>
   )
 }
