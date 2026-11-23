@@ -30,6 +30,9 @@ export function generateStaticParams() {
 function describe(slug: string, lang: string) {
   const pillar = pillarBySlug(slug)
   if (pillar) {
+    // A hidden pillar has no articles yet and must not exist as a page: an
+    // empty topic is worse than a missing one.
+    if (pillar.hidden) return null
     return {
       pillar: true as const,
       label: lang === 'ms' ? pillar.nameMs : pillar.nameEn,
