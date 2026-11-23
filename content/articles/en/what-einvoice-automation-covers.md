@@ -42,9 +42,9 @@ The bands below are LHDN's own, from a timeline page that states its update date
 | 2 | more than RM25 million up to RM100 million | 1 January 2025 | In force |
 | 3 | more than RM5 million up to RM25 million | 1 July 2025 | In force |
 | 4 | up to RM5 million | 1 January 2026 | In force |
-| Exemption | less than RM3 million | — | Exempt as printed |
+| Exemption | less than RM3 million | n/a | Exempt as printed |
 
-The gap worth reading twice is between RM3 million and RM5 million. The exemption covers less than RM3 million, and phase 4 covers up to RM5 million, so a business turning over RM4 million is in scope. That is not an interpretation: it is what the two lines on the same page say together.
+Now look at the gap between RM3 million and RM5 million. The exemption stops below RM3 million and phase 4 runs up to RM5 million, so a business turning over RM4 million is in scope. Two lines on the same page, read together.
 
 ## What is actually submitted?
 
@@ -74,7 +74,7 @@ Eight validators run on every submission, and they are the reason a machine does
 
 It changes who fixes a mistake, and when. A buyer may request rejection within 72 hours of validation, and a seller may cancel within the same window. After 72 hours, cancellation is not allowed, and a correction requires a new e-Invoice in the form of a credit, debit or refund note.
 
-That has a practical consequence for automation design: the tool should watch the clock, not just the submission. An integration that only posts documents and forgets them will leave corrections to whoever notices, which is how businesses end up issuing a note months late.
+The tool therefore has to watch the clock, not only the submission. An integration that posts documents and forgets them leaves corrections to whoever notices. That is how a credit note goes out three months late and turns up in an audit.
 
 ## What happens if you get it wrong?
 

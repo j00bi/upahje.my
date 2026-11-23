@@ -1,0 +1,14 @@
+---
+title: "Which WhatsApp reply is free, which is charged, and at what rate"
+---
+flowchart LR
+  A["Customer messages you"] --> B["24-hour window opens"]
+  B --> C{"You reply inside 24 hours?"}
+  C -- "yes" --> D["Service message, RM0.0564<br/>first 1,000 per number per month free"]
+  C -- "no" --> E["Template: marketing RM0.3467<br/>utility or authentication RM0.0564"]
+  classDef ok fill:#e8f2ea,stroke:#1a6b2e,color:#14160f
+  classDef paid fill:#fdf6e6,stroke:#a97b16,color:#14160f
+  classDef neutral fill:#f4f2ee,stroke:#63665e,color:#3f423c
+  class A,B neutral
+  class D ok
+  class E paid

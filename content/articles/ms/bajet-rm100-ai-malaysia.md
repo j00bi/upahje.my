@@ -56,7 +56,7 @@ Setiap angka ringgit sama ada diterbitkan dalam MYR oleh pembekal, atau ditukar 
 
 Anthropic menerbitkan Claude Haiku 5.5 pada USD 0.10 setiap juta token input dan USD 0.50 setiap juta token output, dengan angka input pada halaman itu disyaratkan untuk prompt hingga 100,000 token.
 
-Itulah meternya. Untuk membandingkannya dengan langganan, artikel ini perlu menetapkan saiz tugasan, dan saiz itu andaian bukan ukuran: 2,000 token input dan 500 token output setiap tugasan. Jika tugasan anda lebih panjang, setiap angka di bawah turun secara berkadar.
+Jadi itulah meternya. Untuk membandingkannya dengan langganan, saya perlu menetapkan saiz tugasan, dan saiz itu andaian, bukan ukuran: 2,000 token input dan 500 token output setiap tugasan. Tugasan lebih panjang, dan setiap angka di bawah turun secara berkadar.
 
 1. Input: 2,000 token ÷ 1,000,000 = 0.002 juta, × USD 0.10 = USD 0.0002.
 2. Output: 500 token ÷ 1,000,000 = 0.0005 juta, × USD 0.50 = USD 0.00025.

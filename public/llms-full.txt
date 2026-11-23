@@ -13,7 +13,7 @@ An AI agent runs a loop by itself: it reads a task, calls tools, looks at the re
 
 ## What is an agent, as opposed to a chatbot?
 
-An agent acts between steps; a chatbot only answers. The difference is that an agent has tools it can call (a tool is one thing it is allowed to do, such as look up an order or send an email), a loop that continues after a tool returns, and a transcript, meaning a written record of what it did.
+A chatbot answers. An agent answers, then does something about it, which is why it needs tools it can call (a tool is one thing it is allowed to do, such as look up an order or send an email), a loop that continues after a tool returns, and a transcript, meaning a written record of what it did.
 
 Anthropic's own wording for the layer that runs this is an agent harness, which is the program that holds the conversation and runs the tools, defined as "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([Claude Code docs, read 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Two consequences follow for a small business: the agent can touch real systems, and the harness, not the model, decides what it is allowed to touch.
 
@@ -44,7 +44,7 @@ Approval work is work where the cost of a wrong action is not recoverable by re-
 | Changing prices, stock levels or availability | A wrong price is honoured, not corrected |
 | Anything legal or regulatory: e-Invoice submissions, contracts, filings | The liability sits with the business, not the agent |
 
-The practical shape is: let the agent prepare, and let a person approve. An agent that drafts a refund and waits for a click saves the typing without taking the risk.
+So let the agent prepare and let a person approve. An agent that drafts a refund and waits for a click saves the typing and takes none of the risk. I would not run one any other way, and the vendor demos that skip the approval step are the ones to be suspicious of.
 
 ## What can it not do at all?
 
@@ -144,9 +144,9 @@ The bands below are LHDN's own, from a timeline page that states its update date
 | 2 | more than RM25 million up to RM100 million | 1 January 2025 | In force |
 | 3 | more than RM5 million up to RM25 million | 1 July 2025 | In force |
 | 4 | up to RM5 million | 1 January 2026 | In force |
-| Exemption | less than RM3 million | — | Exempt as printed |
+| Exemption | less than RM3 million | n/a | Exempt as printed |
 
-The gap worth reading twice is between RM3 million and RM5 million. The exemption covers less than RM3 million, and phase 4 covers up to RM5 million, so a business turning over RM4 million is in scope. That is not an interpretation: it is what the two lines on the same page say together.
+Now look at the gap between RM3 million and RM5 million. The exemption stops below RM3 million and phase 4 runs up to RM5 million, so a business turning over RM4 million is in scope. Two lines on the same page, read together.
 
 ## What is actually submitted?
 
@@ -176,7 +176,7 @@ Eight validators run on every submission, and they are the reason a machine does
 
 It changes who fixes a mistake, and when. A buyer may request rejection within 72 hours of validation, and a seller may cancel within the same window. After 72 hours, cancellation is not allowed, and a correction requires a new e-Invoice in the form of a credit, debit or refund note.
 
-That has a practical consequence for automation design: the tool should watch the clock, not just the submission. An integration that only posts documents and forgets them will leave corrections to whoever notices, which is how businesses end up issuing a note months late.
+The tool therefore has to watch the clock, not only the submission. An integration that posts documents and forgets them leaves corrections to whoever notices. That is how a credit note goes out three months late and turns up in an audit.
 
 ## What happens if you get it wrong?
 
@@ -467,7 +467,7 @@ Per project, published prices run from RM400 for a simple process build at Pang 
 
 No Malaysian publisher in this set states a per-integration price, so no per-integration market rate is claimed here. What is published is subscription tiers that include connectors and API integration.
 
-That is a real limit, not a formatting choice. The one build price that names integration work as part of the deliverable is a 3 to 5 workflow project from RM4,000. KodeSME's custom tier advertises integrations with existing systems and prices them as "Quote". BlueAura describes a one-time implementation fee without a number. A buyer asking "what does one API integration cost in Malaysia" will not get an answer from published pages, and this article will not invent one.
+That limit is real. The one build price that names integration work in the deliverable is a 3 to 5 workflow project from RM4,000. KodeSME's custom tier advertises integrations with existing systems and prices them as "Quote". BlueAura describes a one-time implementation fee without a number. A buyer asking "what does one API integration cost in Malaysia" will not get an answer from published pages, and this article will not invent one.
 
 | Task | Rate | Unit | Publisher | Date checked |
 | --- | --- | --- | --- | --- |
@@ -1563,7 +1563,7 @@ Kerja kelulusan ialah kerja yang kos tindakan salahnya tidak pulih dengan menjal
 | Mengubah harga, tahap stok atau ketersediaan | Harga yang salah dihormati, bukan dibetulkan |
 | Apa-apa yang berunsur undang-undang atau kawal selia: penyerahan e-Invoice, kontrak, pemfailan | Liabiliti terletak pada perniagaan, bukan pada agent |
 
-Bentuk praktikalnya: biarkan agent menyediakan, dan biarkan manusia meluluskan. Agent yang menyediakan bayaran balik dan menunggu klik menjimatkan penulisan tanpa mengambil risiko.
+Jadi biarkan agent menyediakan, dan manusia meluluskan. Agent yang menyediakan bayaran balik dan menunggu klik menjimatkan penulisan tanpa mengambil risiko. Saya tidak akan menjalankannya dengan cara lain, dan demo vendor yang melangkau langkah kelulusan itu yang patut anda syak.
 
 ## Apa yang tidak boleh dibuatnya sama sekali?
 
@@ -1578,11 +1578,11 @@ Empat kategori, dan tiada prompt boleh mengubahnya.
 
 Dua bil, dan yang lebih kecil ialah yang orang risaukan.
 
-**Menjalankannya.** Kadar token diterbitkan, jadi ini aritmetik dan bukan tekaan. Pada 2,000 token input dan 500 output setiap tugasan, Claude Haiku 5.5 menelan `0.002 juta × USD 0.10 = USD 0.0002` untuk input tambah `0.0005 juta × USD 0.50 = USD 0.00025` untuk output, iaitu USD 0.00045 setiap tugasan. Pada kadar tengah Bank Negara **4.1145** (dibaca 19 November 2026), itu kira-kira RM0.00185. Seribu tugasan sebulan ialah **RM1.85**. Teh tarik di mamak berharga RM2 hingga RM3, dan itu perbandingan kami sendiri, bukan indeks yang diterbitkan.
+**Menjalankannya.** Kadar token diterbitkan, jadi ini aritmetik dan bukan tekaan. Pada 2,000 token input dan 500 output setiap tugasan, Claude Haiku 5.5 menelan `0.002 juta × USD 0.10 = USD 0.0002` untuk input tambah `0.0005 juta × USD 0.50 = USD 0.00025` untuk output, iaitu USD 0.00045 setiap tugasan. Pada kadar tengah Bank Negara **4.1145** (dibaca 19 November 2026), itu kira-kira RM0.00185. Seribu tugasan sebulan ialah **RM1.85**, iaitu kurang daripada satu teh tarik.
 
 **Membinanya.** Penerbit Malaysia memetik harga projek untuk kerja automasi: **RM400** bagi pembinaan proses mudah ([Pang Jun Han, dibaca 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)) dan **RM6,000 lebih** bagi pelaksanaan tugasan autonomi ([Autoflow Solutions, dibaca 23 Nov 2026](https://www.autoflow-solutions.com/my/services)). Pembinaan aliran kerja permulaan daripada studio bermula pada **RM1,500** ([KodeSME, dibaca 23 Nov 2026](https://kodesme.klyihao.com/)).
 
-Jadi pembinaan beratus hingga beribu ringgit dan kos menjalankannya beberapa ringgit. Jika pembekal menyebut bil token bulanan yang besar untuk aliran kerja kecil, minta dia tunjukkan aritmetiknya terhadap kadar yang diterbitkan; aritmetik kami hanya tiga baris. Apa yang tidak dinyatakan oleh kad kadar ialah yuran sokongan bulanan selepas pelancaran, jadi tanyakan sebelum membandingkan sebut harga.
+Jadi pembinaan beratus hingga beribu ringgit, dan kos menjalankannya beberapa ringgit. Sesiapa yang memberi anda bil token bulanan yang besar untuk aliran kerja perniagaan kecil sama ada silap, atau menjual sesuatu yang lain. Apa yang tidak dinyatakan oleh kad kadar ialah yuran sokongan bulanan selepas pelancaran, jadi tanyakan sebelum membandingkan sebut harga.
 
 ## Apa yang patut dibuat minggu ini?
 
@@ -1662,9 +1662,9 @@ Fasa di bawah ialah fasa LHDN sendiri, daripada halaman garis masa yang menyatak
 | 2 | lebih RM25 juta hingga RM100 juta | 1 Januari 2025 | Berkuat kuasa |
 | 3 | lebih RM5 juta hingga RM25 juta | 1 Julai 2025 | Berkuat kuasa |
 | 4 | hingga RM5 juta | 1 Januari 2026 | Berkuat kuasa |
-| Pengecualian | kurang RM3 juta | — | Dikecualikan seperti dicetak |
+| Pengecualian | kurang RM3 juta | n/a | Dikecualikan seperti dicetak |
 
-Jurang yang wajar dibaca dua kali ialah antara RM3 juta dan RM5 juta. Pengecualian meliputi kurang RM3 juta, dan fasa 4 meliputi hingga RM5 juta, jadi perniagaan yang berputar RM4 juta termasuk dalam skop. Itu bukan tafsiran: itulah yang dikatakan oleh dua baris pada halaman yang sama apabila dibaca bersama.
+Sekarang lihat jurang antara RM3 juta dan RM5 juta. Pengecualian berhenti di bawah RM3 juta, dan fasa 4 berjalan hingga RM5 juta, jadi perniagaan yang berputar RM4 juta termasuk dalam skop. Dua baris pada halaman yang sama, dibaca bersama.
 
 ## Apa yang sebenarnya diserahkan?
 
@@ -1694,7 +1694,7 @@ Lapan pengesah berjalan pada setiap penyerahan, dan itulah sebabnya mesin melaku
 
 Ia mengubah siapa yang membetulkan kesilapan, dan bila. Pembeli boleh memohon penolakan dalam 72 jam selepas pengesahan, dan penjual boleh membatalkan dalam tetingkap yang sama. Selepas 72 jam, pembatalan tidak dibenarkan, dan pembetulan memerlukan e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
 
-Itu ada akibat praktikal untuk reka bentuk automasi: tool patut memerhati jam, bukan hanya penyerahan. Integrasi yang hanya menghantar dokumen dan melupakannya akan meninggalkan pembetulan kepada sesiapa yang perasan, dan itulah cara perniagaan mengeluarkan nota berbulan-bulan lewat.
+Jadi tool perlu memerhati jam, bukan hanya penyerahan. Integrasi yang menghantar dokumen dan melupakannya meninggalkan pembetulan kepada sesiapa yang perasan. Itulah cara nota kredit keluar tiga bulan lewat dan muncul semasa audit.
 
 ## Apa yang berlaku jika tersilap?
 
@@ -2030,7 +2030,7 @@ Setiap angka ringgit sama ada diterbitkan dalam MYR oleh pembekal, atau ditukar 
 
 Anthropic menerbitkan Claude Haiku 5.5 pada USD 0.10 setiap juta token input dan USD 0.50 setiap juta token output, dengan angka input pada halaman itu disyaratkan untuk prompt hingga 100,000 token.
 
-Itulah meternya. Untuk membandingkannya dengan langganan, artikel ini perlu menetapkan saiz tugasan, dan saiz itu andaian bukan ukuran: 2,000 token input dan 500 token output setiap tugasan. Jika tugasan anda lebih panjang, setiap angka di bawah turun secara berkadar.
+Jadi itulah meternya. Untuk membandingkannya dengan langganan, saya perlu menetapkan saiz tugasan, dan saiz itu andaian, bukan ukuran: 2,000 token input dan 500 token output setiap tugasan. Tugasan lebih panjang, dan setiap angka di bawah turun secara berkadar.
 
 1. Input: 2,000 token ÷ 1,000,000 = 0.002 juta, × USD 0.10 = USD 0.0002.
 2. Output: 500 token ÷ 1,000,000 = 0.0005 juta, × USD 0.50 = USD 0.00025.
@@ -2562,7 +2562,7 @@ Mengikut projek, harga yang diterbitkan bermula dari RM400 bagi pembinaan proses
 
 Tiada penerbit Malaysia dalam set ini menyatakan harga setiap integrasi, jadi tiada kadar pasaran bagi integrasi individu didakwa di sini. Yang diterbitkan ialah tier langganan yang merangkumi penyambung dan integrasi API.
 
-Itu had sebenar, bukan pilihan format. Satu-satunya harga pembinaan yang menamakan kerja integrasi sebagai sebahagian daripada hasilnya ialah projek 3 hingga 5 aliran dari RM4,000. Tier tersuai KodeSME mengiklankan integrasi dengan sistem sedia ada dan meletakkan harganya sebagai "Quote". BlueAura menerangkan yuran pelaksanaan sekali tanpa angka. Pembeli yang bertanya "berapa kos satu integrasi API di Malaysia" tidak akan mendapat jawapan daripada halaman yang diterbitkan, dan artikel ini tidak akan mencipta satu.
+Had itu nyata. Satu-satunya harga pembinaan yang menamakan kerja integrasi dalam hasilnya ialah projek 3 hingga 5 aliran dari RM4,000. Tier tersuai KodeSME mengiklankan integrasi dengan sistem sedia ada dan meletakkan harganya sebagai "Quote". BlueAura menerangkan yuran pelaksanaan sekali tanpa angka. Pembeli yang bertanya "berapa kos satu integrasi API di Malaysia" tidak akan mendapat jawapan daripada halaman yang diterbitkan, dan artikel ini tidak akan mencipta satu.
 
 | Tugasan | Kadar | Unit | Penerbit | Tarikh disemak |
 | --- | --- | --- | --- | --- |

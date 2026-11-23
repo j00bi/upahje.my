@@ -1,0 +1,14 @@
+---
+title: "Balasan WhatsApp mana percuma, mana dicaj, dan pada kadar berapa"
+---
+flowchart LR
+  A["Pelanggan menghantar mesej"] --> B["Tetingkap 24 jam dibuka"]
+  B --> C{"Anda membalas dalam 24 jam?"}
+  C -- "ya" --> D["Mesej servis, RM0.0564<br/>1,000 pertama setiap nombor sebulan percuma"]
+  C -- "tidak" --> E["Templat: pemasaran RM0.3467<br/>utiliti atau pengesahan RM0.0564"]
+  classDef ok fill:#e8f2ea,stroke:#1a6b2e,color:#14160f
+  classDef paid fill:#fdf6e6,stroke:#a97b16,color:#14160f
+  classDef neutral fill:#f4f2ee,stroke:#63665e,color:#3f423c
+  class A,B neutral
+  class D ok
+  class E paid

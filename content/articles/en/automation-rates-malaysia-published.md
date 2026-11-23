@@ -78,7 +78,7 @@ Per project, published prices run from RM400 for a simple process build at Pang 
 
 No Malaysian publisher in this set states a per-integration price, so no per-integration market rate is claimed here. What is published is subscription tiers that include connectors and API integration.
 
-That is a real limit, not a formatting choice. The one build price that names integration work as part of the deliverable is a 3 to 5 workflow project from RM4,000. KodeSME's custom tier advertises integrations with existing systems and prices them as "Quote". BlueAura describes a one-time implementation fee without a number. A buyer asking "what does one API integration cost in Malaysia" will not get an answer from published pages, and this article will not invent one.
+That limit is real. The one build price that names integration work in the deliverable is a 3 to 5 workflow project from RM4,000. KodeSME's custom tier advertises integrations with existing systems and prices them as "Quote". BlueAura describes a one-time implementation fee without a number. A buyer asking "what does one API integration cost in Malaysia" will not get an answer from published pages, and this article will not invent one.
 
 | Task | Rate | Unit | Publisher | Date checked |
 | --- | --- | --- | --- | --- |

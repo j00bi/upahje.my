@@ -37,7 +37,7 @@ An AI agent runs a loop by itself: it reads a task, calls tools, looks at the re
 
 ## What is an agent, as opposed to a chatbot?
 
-An agent acts between steps; a chatbot only answers. The difference is that an agent has tools it can call (a tool is one thing it is allowed to do, such as look up an order or send an email), a loop that continues after a tool returns, and a transcript, meaning a written record of what it did.
+A chatbot answers. An agent answers, then does something about it, which is why it needs tools it can call (a tool is one thing it is allowed to do, such as look up an order or send an email), a loop that continues after a tool returns, and a transcript, meaning a written record of what it did.
 
 Anthropic's own wording for the layer that runs this is an agent harness, which is the program that holds the conversation and runs the tools, defined as "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([Claude Code docs, read 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Two consequences follow for a small business: the agent can touch real systems, and the harness, not the model, decides what it is allowed to touch.
 
@@ -68,7 +68,7 @@ Approval work is work where the cost of a wrong action is not recoverable by re-
 | Changing prices, stock levels or availability | A wrong price is honoured, not corrected |
 | Anything legal or regulatory: e-Invoice submissions, contracts, filings | The liability sits with the business, not the agent |
 
-The practical shape is: let the agent prepare, and let a person approve. An agent that drafts a refund and waits for a click saves the typing without taking the risk.
+So let the agent prepare and let a person approve. An agent that drafts a refund and waits for a click saves the typing and takes none of the risk. I would not run one any other way, and the vendor demos that skip the approval step are the ones to be suspicious of.
 
 ## What can it not do at all?
 

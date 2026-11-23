@@ -65,7 +65,7 @@ Kerja kelulusan ialah kerja yang kos tindakan salahnya tidak pulih dengan menjal
 | Mengubah harga, tahap stok atau ketersediaan | Harga yang salah dihormati, bukan dibetulkan |
 | Apa-apa yang berunsur undang-undang atau kawal selia: penyerahan e-Invoice, kontrak, pemfailan | Liabiliti terletak pada perniagaan, bukan pada agent |
 
-Bentuk praktikalnya: biarkan agent menyediakan, dan biarkan manusia meluluskan. Agent yang menyediakan bayaran balik dan menunggu klik menjimatkan penulisan tanpa mengambil risiko.
+Jadi biarkan agent menyediakan, dan manusia meluluskan. Agent yang menyediakan bayaran balik dan menunggu klik menjimatkan penulisan tanpa mengambil risiko. Saya tidak akan menjalankannya dengan cara lain, dan demo vendor yang melangkau langkah kelulusan itu yang patut anda syak.
 
 ## Apa yang tidak boleh dibuatnya sama sekali?
 
@@ -80,11 +80,11 @@ Empat kategori, dan tiada prompt boleh mengubahnya.
 
 Dua bil, dan yang lebih kecil ialah yang orang risaukan.
 
-**Menjalankannya.** Kadar token diterbitkan, jadi ini aritmetik dan bukan tekaan. Pada 2,000 token input dan 500 output setiap tugasan, Claude Haiku 5.5 menelan `0.002 juta × USD 0.10 = USD 0.0002` untuk input tambah `0.0005 juta × USD 0.50 = USD 0.00025` untuk output, iaitu USD 0.00045 setiap tugasan. Pada kadar tengah Bank Negara **4.1145** (dibaca 19 November 2026), itu kira-kira RM0.00185. Seribu tugasan sebulan ialah **RM1.85**. Teh tarik di mamak berharga RM2 hingga RM3, dan itu perbandingan kami sendiri, bukan indeks yang diterbitkan.
+**Menjalankannya.** Kadar token diterbitkan, jadi ini aritmetik dan bukan tekaan. Pada 2,000 token input dan 500 output setiap tugasan, Claude Haiku 5.5 menelan `0.002 juta × USD 0.10 = USD 0.0002` untuk input tambah `0.0005 juta × USD 0.50 = USD 0.00025` untuk output, iaitu USD 0.00045 setiap tugasan. Pada kadar tengah Bank Negara **4.1145** (dibaca 19 November 2026), itu kira-kira RM0.00185. Seribu tugasan sebulan ialah **RM1.85**, iaitu kurang daripada satu teh tarik.
 
 **Membinanya.** Penerbit Malaysia memetik harga projek untuk kerja automasi: **RM400** bagi pembinaan proses mudah ([Pang Jun Han, dibaca 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)) dan **RM6,000 lebih** bagi pelaksanaan tugasan autonomi ([Autoflow Solutions, dibaca 23 Nov 2026](https://www.autoflow-solutions.com/my/services)). Pembinaan aliran kerja permulaan daripada studio bermula pada **RM1,500** ([KodeSME, dibaca 23 Nov 2026](https://kodesme.klyihao.com/)).
 
-Jadi pembinaan beratus hingga beribu ringgit dan kos menjalankannya beberapa ringgit. Jika pembekal menyebut bil token bulanan yang besar untuk aliran kerja kecil, minta dia tunjukkan aritmetiknya terhadap kadar yang diterbitkan; aritmetik kami hanya tiga baris. Apa yang tidak dinyatakan oleh kad kadar ialah yuran sokongan bulanan selepas pelancaran, jadi tanyakan sebelum membandingkan sebut harga.
+Jadi pembinaan beratus hingga beribu ringgit, dan kos menjalankannya beberapa ringgit. Sesiapa yang memberi anda bil token bulanan yang besar untuk aliran kerja perniagaan kecil sama ada silap, atau menjual sesuatu yang lain. Apa yang tidak dinyatakan oleh kad kadar ialah yuran sokongan bulanan selepas pelancaran, jadi tanyakan sebelum membandingkan sebut harga.
 
 ## Apa yang patut dibuat minggu ini?
 
