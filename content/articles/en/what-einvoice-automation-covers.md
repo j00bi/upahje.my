@@ -1,125 +1,116 @@
 ---
-title: "What e-Invoice automation covers, and what stays with a person"
-description: "Since 1 January 2026 every band is in force, and the RM3m to RM5m gap is in scope. What an automated submission does, what the 72-hour window changes, and which decisions no tool should take."
+title: "The e-Invoice threshold is now RM3 million"
+description: "LHDN raised the e-Invoice exemption to RM3 million on 1 September 2026, freeing 1.1 million traders. What is required, what is not, and what is unpublished."
 slug: what-einvoice-automation-covers
 translationKey: what-einvoice-automation-covers
+format: explainer
+reader: all
 date: 2026-11-23
 updated: 2026-11-23
 author: "UpahJe editorial"
 category: buying-guides
-tags: [buying-guides, e-invoice, myinvois, malaysia]
+tags: [e-invoice, myinvois, lhdn, compliance]
 canonical: https://upahje.my/en/articles/what-einvoice-automation-covers
-draft: false
+draft: true
+featured: true
+changelog:
+  - date: 2026-11-23
+    note: "Rewritten around the RM3 million threshold announced on 30 August 2026; prior version used the RM3m-to-RM5m gap as its spine."
 sources:
-  - title: "LHDN, e-Invoice implementation timeline (updated 30 August 2026)"
-    url: "https://www.hasil.gov.my/e-invois/pelaksanaan-e-invois-di-malaysia/garis-masa-pelaksanaan-e-invois/"
+  - title: "LHDN media statement HASiL/2026/08/30 – 44, AMBANG PENGECUALIAN PELAKSANAAN E-INVOIS DINAIKKAN"
+    url: "https://www.hasil.gov.my/wp-content/uploads/20260830-Kenyataan-Media-HASiL_AMBANG-PENGECUALIAN-E_INVOIS-DINAIKKAN.pdf"
     checked: 2026-11-23
-  - title: "MyInvois SDK, developer documentation"
-    url: "https://sdk.myinvois.hasil.gov.my/"
+  - title: "LHDN, e-Invois programme page"
+    url: "https://www.hasil.gov.my/e-invois"
     checked: 2026-11-23
   - title: "MyInvois SDK, document validation rules"
     url: "https://sdk.myinvois.hasil.gov.my/document-validation-rules/"
     checked: 2026-11-23
-  - title: "MyInvois SDK, FAQ (sandbox availability)"
-    url: "https://sdk.myinvois.hasil.gov.my/faq/"
-    checked: 2026-11-23
-  - title: "LHDN, Garis Panduan Spesifik e-Invois Versi 4.8 (penalties, relaxation, PKPS)"
-    url: "https://www.hasil.gov.my/e-invois/"
+  - title: "LHDN, Garis Panduan e-Invois Versi 4.8"
+    url: "https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf"
     checked: 2026-11-23
 ---
 
-# What e-Invoice automation covers, and what stays with a person
+# The e-Invoice threshold is now RM3 million
 
-Every taxpayer band is now in force, including the band between RM3 million and RM5 million, which sits inside phase 4 and outside the exemption. Automation can create, validate and submit the document and handle the 72-hour correction window. It cannot decide whether a transaction is unusual, and it cannot carry the legal liability for a wrong one.
+The line moved on 1 September 2026: from RM1 million to RM3 million of annual revenue or sales. LHDN's own statement says businesses below it are not required to implement e-Invoice, and puts the number of traders who benefit at more than 1.1 million. Above the line, the programme has been running since 1 August 2024 and has already logged 265,379 taxpayers and more than 1.84 billion e-Invoices.
 
-## Who has to file, and since when?
+## The exemption is written in the statement, not implied
 
-The bands below are LHDN's own, from a timeline page that states its update date as 30 August 2026.
+The rule is a sentence, not a calculation. The statement reads: "PMKS dengan pendapatan atau jualan tahunan kurang daripada RM3 juta tidak diwajibkan untuk melaksanakan e-Invois", which is MSMEs with annual revenue or sales below RM3 million are not required to implement e-Invoice.
 
-| Phase | Annual income or sales | Started | Status |
-| --- | --- | --- | --- |
-| 1 | more than RM100 million | 1 August 2024 | In force |
-| 2 | more than RM25 million up to RM100 million | 1 January 2025 | In force |
-| 3 | more than RM5 million up to RM25 million | 1 July 2025 | In force |
-| 4 | up to RM5 million | 1 January 2026 | In force |
-| Exemption | less than RM3 million | n/a | Exempt as printed |
+Three things follow from that sentence, and only three.
 
-Now look at the gap between RM3 million and RM5 million. The exemption stops below RM3 million and phase 4 runs up to RM5 million, so a business turning over RM4 million is in scope. Two lines on the same page, read together.
+1. The number is **RM3 million**, not the RM1 million that applied before 1 September 2026.
+2. It measures **annual revenue or sales**, not profit, headcount or registered capital.
+3. It says **not required**. It does not say prohibited, and the same statement encourages voluntary participation.
 
-## What gets submitted?
+The Prime Minister announced the change in the 2026 National Day address, and LHDN published the statement on 30 August 2026, one day before it took effect.
 
-![Four steps the machine performs: build the document from your records, check the TIN, pass eight validators, submit to MyInvois. Below, two outcomes: within 72 hours a buyer may reject or a seller cancel and reissue; after 72 hours cancellation is closed and a correction needs a credit, debit or refund note](/figures/what-einvoice-automation-covers.svg)
-*Four steps run every submission. What happens after a mistake depends on the clock.*
+## The programme numbers are already large
 
-An e-Invoice is the digital version of the document a seller issues, recorded with LHDN rather than only filed in your own accounts, covering business-to-business, business-to-consumer and business-to-government, and it goes to LHDN through the MyInvois system.
+These are LHDN's own totals, not a projection.
 
-Four document types are named in the guideline: invoice, credit note, debit note and refund note. Two routes exist. The MyInvois Portal is manual entry by the taxpayer. The API route is documented for taxpayer ERP systems, in LHDN's own words, to "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, read 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Authentication is separate for taxpayer systems and for intermediary systems acting on a taxpayer's behalf, and there is a TIN validation step available before submission. TIN is the taxpayer identification number LHDN issues to a business; the API is the connection your software uses to hand a document to MyInvois without anyone retyping it.
+| What the statement reports | Figure |
+| --- | --- |
+| New exemption threshold, from 1 September 2026 | RM3 million |
+| Threshold it replaced | RM1 million |
+| Traders covered by the exemption | more than 1.1 million |
+| Taxpayers in the programme since 1 August 2024 | 265,379 |
+| e-Invoices issued since 1 August 2024 | more than 1.84 billion |
 
-## What can be automated?
+Read the last two rows as adoption, not compliance. A taxpayer can be registered and issue a modest number of documents, and the totals say nothing about how many businesses are fully compliant.
 
-Eight validators run on every submission, and they are the reason a machine does this better than a person retyping: structure, core fields, signature, taxpayer validity, referenced documents, codes, duplicates and currency.
+## What the system checks at issuance
 
-| Task | Automated? | Why |
-| --- | --- | --- |
-| Building the document from your sales or purchase record | Yes | The data already exists in your system |
-| Checking the TIN before submission | Yes | It is an API call, not a judgement |
-| Passing the eight validators | Yes | They are deterministic rules |
-| Submitting and storing the LHDN response | Yes | A receipt to keep, not a decision |
-| Flagging a failed validation with the rule that failed | Yes | The rule name is in the response |
-| Deciding whether a transaction is fake or genuinely unusual | No | A judgement, and one a human is liable for |
-| Choosing consolidated invoicing under the relaxation | No | A policy decision with tax consequences |
-| Approving a correction after 72 hours | No | Needs a reason a person can defend |
+For anyone above the threshold, the submission is checked by eight validators before it is accepted: structure (UBL 2.1 for invoices), core fields, signature, taxpayer validity, referenced documents, codes, duplicates and currency. The duplicate check looks for documents submitted recently that are similar or identical, and the taxpayer check tests validity at the date of issuance.
 
-## What does the 72-hour window change?
+That matters for data quality rather than for software choice. If the invoice data is wrong at the moment of issuance, the validation catches it, and the correction path is not an edit. A buyer may reject and a seller may cancel within 72 hours of validation; after that, a correction requires a new e-Invoice in the form of a credit, debit or refund note.
 
-It changes who fixes a mistake, and when. A buyer may request rejection within 72 hours of validation, and a seller may cancel within the same window. After 72 hours, cancellation is not allowed, and a correction requires a new e-Invoice in the form of a credit, debit or refund note.
+## The penalty is cited, and the amount is not published
 
-The tool therefore has to watch the clock, not only the submission. An integration that posts documents and forgets them leaves corrections to whoever notices. That is how a credit note goes out three months late and turns up in an audit.
+LHDN cites Section 120 of the Income Tax Act 1967. No ringgit figure appears in the statement, and none was found on the pages checked. A business deciding how much to spend on compliance should treat that as an unknown rather than as a small risk.
 
-## What happens if you get it wrong?
+## If you are under RM3 million, wait for a customer to ask
 
-The guidelines cite Section 120 of the Income Tax Act 1967, and they do not print a penalty figure on any page that could be read. So this article will not quote a ringgit penalty. No published amount was found.
+My opinion, stated once: a business below the threshold should not adopt e-Invoice for its own sake. The requirement is lifted, voluntary participation is encouraged but not rewarded, and the operational cost is real. Adopt it when a large customer or a government buyer requires it, and then handle that customer's transactions rather than converting every invoice you issue.
 
-Two dated mechanisms do soften the exposure. An interim relaxation period applies per phase, during which taxpayers may issue consolidated e-Invoices for all activities and consolidated self-billed e-Invoices without a document per transaction, and LHDN states it will not prosecute under Section 120 during that period provided the conditions are met. Separately, the voluntary disclosure programme, PKPS (Program Pengesahan Sukarela, a window for taxpayers who missed their start date to come forward), runs from **7 July 2026 to 31 December 2027** for taxpayers who missed their mandatory start date, using document versions PKPS 1.2 or 1.3, and covers reviews and enforcement unless the disclosure breaches requirements or involves fraud, wilful default or negligence.
+The exception is a business planning to cross RM3 million. If revenue is close to the line, running one quarter of e-Invoice in parallel is cheaper than discovering the obligation in the quarter it applies.
 
-## Do these five things first
+## What could not be verified
 
-Five actions, none of which needs a purchase.
+Four claims that circulate in guidance and commentary are not in the statement, and none was confirmed from a primary page.
 
-1. **Find your band** in the table above by your annual sales, and write the date your phase started next to it.
-2. **Check your TIN is live** before anything else: a wrong taxpayer number fails validation later, not at signing.
-3. **Export one month of invoices** as a file. That file is the input any tool will need, and knowing how bad it is shapes the quote.
-4. **Ask your accountant whether the interim relaxation applies to you**, and get the answer in writing.
-5. **Pick three invoices you issued last month** and rehearse the 72-hour question: who would have noticed, and how fast?
+The group-ownership rule, reported as disqualifying a sub-RM3 million business that belongs to a larger group, is cited to a guideline paragraph that was not opened.
 
-## The cheapest place to start
+The RM50,000 annual deduction for voluntary adoption, mentioned in commentary for years of assessment 2024 to 2027, appears only in secondary sources.
 
-For a tinkerer, the MyInvois sandbox is the smallest thing that runs: LHDN's developer site runs a sandbox where the APIs and their validation errors can be exercised, and a sample XML or JSON document comes back with the validator that failed. You need a sandbox login from the SDK site and something that can POST JSON, which is structured text, so curl or a ten-line script will do. It costs nothing to try, and no per-submission fee appears on any LHDN page read for this article. Expect the signature validator to stop you first. A document that looks right to you fails when the signature is missing or malformed, and the error text often does not name the offending field.
+Whether a business that started under the old RM1 million line may stop is not answered in the statement. The guidance is silent on the reverse case.
 
-## What could we not verify?
-
-The MyInvois Portal itself could not be read: a connection timeout, then only the page title, because it is a client-side application. LHDN's FAQ answers are loaded by script and were not present in the served HTML. The per-phase dates inside the relaxation table appear to be a graphic in the PDF and were not extracted. And the general guideline read was version 4.8; a newer general version may exist and was not confirmed.
-
-**Read next**
-
-[What an AI agent can and cannot do for a Malaysian SME](https://upahje.my/en/articles/what-an-ai-agent-can-do)
-
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+And the per-phase relaxation dates sit in a graphic in the guideline PDF rather than in its text, so they are not reproduced here.
 
 ## FAQ
 
-### I turn over RM4 million a year. Am I exempt?
+### Does the exemption apply to a business with RM2.9 million in sales?
 
-No. The exemption is below RM3 million, and phase 4 covers up to RM5 million, so RM4 million is in scope and has been since 1 January 2026.
+It applies to annual revenue or sales below RM3 million, so RM2.9 million is below the line and e-Invoice is not required.
 
-### Can my accountant's system file it for me?
+### Can a business below the threshold still issue e-Invoices?
 
-The submission route supports intermediaries: LHDN documents separate authentication for systems acting on a taxpayer's behalf. Liability stays with the taxpayer, so the question is who reviews failures, not who presses submit.
+Yes. Voluntary participation is encouraged, and a business may adopt the system without an obligation.
 
-### Does automation remove the need for a person?
+### What happens after 72 hours if an invoice is wrong?
 
-It removes the typing, the TIN check and the validator round trips. It does not remove the person who decides whether a transaction is genuine, or who signs off a correction after the 72-hour window closes.
+Cancellation is no longer allowed, and the correction is a new e-Invoice in the form of a credit, debit or refund note.
 
-### What happens to invoices I issued before my phase started?
+### Is there a published penalty amount?
 
-The published mechanism for a missed start is the voluntary disclosure programme, running 7 July 2026 to 31 December 2027. Whether your case qualifies is a question for LHDN or your tax agent, not for this article.
+Section 120 of the Income Tax Act 1967 is cited. No ringgit amount is published in the statement or on the pages checked.
+
+---
+
+**Read next**
+
+[Where the same data gets typed three times](https://upahje.my/en/articles/same-data-typed-three-times)
+
+[More on buying automation](https://upahje.my/en/articles/category/buying-guides)

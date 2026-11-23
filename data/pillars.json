@@ -158,6 +158,16 @@
       "pillar": "operations",
       "secondary": "finance",
       "type": "explainer"
+    },
+    "leaderboard-row-anatomy": {
+      "pillar": "automation-ai",
+      "secondary": null,
+      "type": "comparison"
+    },
+    "rewrite-the-five-percent": {
+      "pillar": "technology",
+      "secondary": null,
+      "type": "perspective"
     }
   }
 }

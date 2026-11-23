@@ -4,43 +4,12 @@
 
 # English
 
-## CommandCode, OpenCode, DeepSeek: what the published numbers actually measure
+## CommandCode, OpenCode, DeepSeek: three names, three different things
 
 URL: https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers
 Checked: 2026-11-23
 
-These are three different kinds of thing. CommandCode is a paid coding CLI. OpenCode is a free, MIT-licensed coding CLI with an optional subscription. DeepSeek is a model vendor with an API. No published leaderboard in this pass ran either CLI as the agent, so a "CommandCode vs OpenCode" score comparison does not exist to be quoted. What exists is DeepSeek's model scored inside someone else's harness.
-
-## What is in a leaderboard row?
-
-![A landscape diagram with columns for model, agent, settings, score and cost. The example row is DeepSeek V4.1 Flash 1017 at max, run under Claude Code on Terminal-bench 4.1, scoring 38.5 percent plus or minus 3.8 with 8.2 billion tokens. A footer states that neither CommandCode nor OpenCode appears in the agent column](/figures/leaderboard-row-anatomy.svg)
-*Read the agent column first: it decides whose number the score is.*
-
-Five things, and the score is only one of them: the model, the agent that drove it, the settings, the score, and the cost. Read the first two before the number.
-
-The Terminal-bench 4.1 page makes this visible because its columns are RANK, MODEL, AGENT, RESOLUTION RATE, RELEASE DATE, TOKENS and COST. The DeepSeek row reads:
-
-| Field | Value as printed |
-| --- | --- |
-| Model | DeepSeek V4.1 Flash 1017 (max) |
-| Agent | Claude Code |
-| Resolution rate | 38.5% ± 3.8% |
-| Tokens | 8.2B |
-| Release date | Oct 17, 2026 |
-
-So the number belongs to a DeepSeek model running under Claude Code. It is not a CommandCode result and not an OpenCode result. Change the agent and the number changes, which is the whole reason the agent column exists.
-
-## Which names appear on the boards at all?
-
-SWE-bench Verified's agent column lists only mini-SWE-agent. Terminal-bench 4.1 lists Claude Code, Codex, Antigravity CLI, GitHub Copilot, Grok Build and mini-SWE-agent. Neither board has CommandCode or OpenCode in the agent column.
-
-The model names are a separate question, and here the answer is thinner than the marketing suggests:
-
-- **SWE-bench Verified** has DeepSeek V3.2 (high) at 70.00% resolved with an average cost of $0.45, and DeepSeek V3.2 Reasoner at 60.00% with an average cost of $0.03. Both under mini-SWE-agent, with the Verified tab, Bash Only checked, sorted by percent resolved.
-- **SWE-bench has no entry for DeepSeek V4.1 Flash or V4 Pro.** That is an absence on the board, not a bad score.
-- **Aider polyglot is stale.** The newest visible run directory is dated 23 August 2025 and the top row is gpt-5 (high) at 88.0% for $29.08. A board that has not seen a 2026 model cannot rank one, so this article does not cite it as current.
-
-The honest summary: the only published score that names DeepSeek's current model puts it at 38.5% ± 3.8% on Terminal-bench 4.1, under Claude Code, with 8.2B tokens. Everything else that sounds like a comparison is a vendor claim or a discussion thread.
+These are three different kinds of thing, and the words matter before the prices do. `dsh` is DeepSeek Harness, the command-line harness we run here. An "arm" is one of the products tried on the same task, and this run had three: CommandCode, OpenCode and DeepSeek through `dsh`. CommandCode is a paid coding CLI. OpenCode is a free, MIT-licensed coding CLI with an optional subscription. DeepSeek is a model vendor with an API. What follows is what each publishes as a price, where those numbers have moved, and what one run showed. The benchmark half, and the reason a "CommandCode vs OpenCode" score does not exist, is a separate developer note.
 
 ## What do the prices look like as published?
 
@@ -95,51 +64,6 @@ There is no honest way to reproduce a leaderboard. What you can reproduce is you
 Take one task, run it in one harness, and write down the same five fields the boards print: the model, the agent, the settings, the score (did the tests pass), and the cost in tokens or ringgit. That is your benchmark, it is comparable to itself next month, and it does not depend on anyone's marketing page.
 
 The one thing that will bite you is the exit code. A run that exits 0 without writing files looks like a pass in every log you have. Check the artefact, every time.
-
-## What did the comparison publish?
-
-Three interactive demos for Round 1, and no numbers. The archived page, snapshot 25 October 2026, lists DeepSeek Platform, OpenCode Go and CommandCode GOAT, each as a demo path under a vivarium conceit: "A Closed Ecology", "Abyssal Vivarium", "Vivarium Nº 7" ([archive, read 23 Nov 2026](https://web.archive.org/web/20261025232027/https://nazzysar.github.io/deepseek-benchmarks/)).
-
-The catalog is the evidence. Each entry carries a title, a description, a path and a tone, and nothing else: no score, duration, token count or cost. That is why loading all three cannot settle speed or price for you.
-
-The demos themselves still exist, in the live repository rather than in the capture. The archive took the gallery, the catalog and the three viewer URLs, and nothing under `rounds/`. The three `rounds/round-1/*/index.html` files are in `nazzysar/deepseek-benchmarks`, and their SHA-256 hashes match that repository's own `rounds/checksums.json` ([repo, read 23 Nov 2026](https://github.com/nazzysar/deepseek-benchmarks)). Scanned for text, they carry in-game numbers only, things like "SEALED 12 · IV · 1887" and "120 × 72 cells", with no build time, token count, cost or score caption.
-
-A demo settles two things. Whether the thing runs in your browser, and whether you like what it made. It does not settle score, cost, tokens or reliability, because none of those was published.
-
-## What do the GOAT sessions show?
-
-They show how the run behaved: retries, elapsed time, steps. The repository `nazzysar/commandcode-goat-ecosystem-sess` holds three redacted session transcripts from the CommandCode GOAT arm, and they are the run's own records rather than a leaderboard row ([repo, read 23 Nov 2026](https://github.com/nazzysar/commandcode-goat-ecosystem-sess)).
-
-| What the records contain | Value |
-| --- | --- |
-| Transcripts | lead, critic, prover: 1,123 / 582 / 1,091 records |
-| Retries in the lead session | 33, of which 23 SERVER, 10 TRANSPORT, 0 TIMEOUT |
-| Retries across the three | 94, split 57 / 37 / 0 |
-| Turns | 5, lasting 7,565.5 s, 2,636.0 s, 150.5 s, 117.6 s and 3.9 s |
-| Elapsed total | 10,473.5 s, about 2 h 55 m |
-| Activity | 161 tool calls, 140 steps, 138 assistant messages, 25 user messages |
-| Model and provider | `deepseek/deepseek-v4.1-flash`, provider `commandcode-goat` |
-
-That is what a hard run looks like from the inside: one turn took over two hours, and the retries are dominated by server and transport faults rather than timeouts. None of it says the output was good. It says the arm kept going.
-
-There are no token counts and no cost fields in those records. Every token field name was searched across the decoded transcripts and found absent, and the site's data model has no cost field either. So no cost comparison can be built from them, and this article does not imply one.
-
-The figures we do have, each with where it came from:
-
-| Figure | What it says | Provenance |
-| --- | --- | --- |
-| 38.5% ± 3.8% | DeepSeek V4.1 Flash 1017 (max), under Claude Code, Terminal-bench 4.1 | Terminal-bench leaderboard, read 23 Nov 2026 |
-| $10/month GOAT + processing fee | Up to $100 in credits, CommandCode's tier as printed | Vendor pricing page, read 23 Nov 2026 |
-| $10/month Go, agent under MIT | OpenCode's optional subscription, and the agent's licence | Vendor docs and repository, read 23 Nov 2026 |
-| 95.4 s, 10 turns, 14 tool calls, 3/3 tests | One `dsh` run on one task, two files written | Our measurement, 23 Nov 2026 |
-
-Two numbers are still absent, and both are narrow. DeepSeek's release note prints a chart with no values in the page text, and CommandCode's processing fee has no figure on any page read.
-
-**Read next**
-
-[Agent harnesses: who makes them, and what is actually open source](https://upahje.my/en/articles/harness-landscape-open-closed)
-
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
 
 ## FAQ
 
@@ -501,113 +425,6 @@ The task your team does most often that has a clear finish line and a cheap mist
 - Pang Jun Han, AI automation pricing (published project rates) — https://pangjunhan.vercel.app/ai-automation (checked 2026-11-23)
 - Autoflow Solutions, services (autonomous task execution pricing) — https://www.autoflow-solutions.com/my/services (checked 2026-11-23)
 - KodeSME, automation pricing — https://kodesme.klyihao.com/ (checked 2026-11-23)
-
-## What e-Invoice automation covers, and what stays with a person
-
-URL: https://upahje.my/en/articles/what-einvoice-automation-covers
-Checked: 2026-11-23
-
-Every taxpayer band is now in force, including the band between RM3 million and RM5 million, which sits inside phase 4 and outside the exemption. Automation can create, validate and submit the document and handle the 72-hour correction window. It cannot decide whether a transaction is unusual, and it cannot carry the legal liability for a wrong one.
-
-## Who has to file, and since when?
-
-The bands below are LHDN's own, from a timeline page that states its update date as 30 August 2026.
-
-| Phase | Annual income or sales | Started | Status |
-| --- | --- | --- | --- |
-| 1 | more than RM100 million | 1 August 2024 | In force |
-| 2 | more than RM25 million up to RM100 million | 1 January 2025 | In force |
-| 3 | more than RM5 million up to RM25 million | 1 July 2025 | In force |
-| 4 | up to RM5 million | 1 January 2026 | In force |
-| Exemption | less than RM3 million | n/a | Exempt as printed |
-
-Now look at the gap between RM3 million and RM5 million. The exemption stops below RM3 million and phase 4 runs up to RM5 million, so a business turning over RM4 million is in scope. Two lines on the same page, read together.
-
-## What gets submitted?
-
-![Four steps the machine performs: build the document from your records, check the TIN, pass eight validators, submit to MyInvois. Below, two outcomes: within 72 hours a buyer may reject or a seller cancel and reissue; after 72 hours cancellation is closed and a correction needs a credit, debit or refund note](/figures/what-einvoice-automation-covers.svg)
-*Four steps run every submission. What happens after a mistake depends on the clock.*
-
-An e-Invoice is the digital version of the document a seller issues, recorded with LHDN rather than only filed in your own accounts, covering business-to-business, business-to-consumer and business-to-government, and it goes to LHDN through the MyInvois system.
-
-Four document types are named in the guideline: invoice, credit note, debit note and refund note. Two routes exist. The MyInvois Portal is manual entry by the taxpayer. The API route is documented for taxpayer ERP systems, in LHDN's own words, to "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, read 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Authentication is separate for taxpayer systems and for intermediary systems acting on a taxpayer's behalf, and there is a TIN validation step available before submission. TIN is the taxpayer identification number LHDN issues to a business; the API is the connection your software uses to hand a document to MyInvois without anyone retyping it.
-
-## What can be automated?
-
-Eight validators run on every submission, and they are the reason a machine does this better than a person retyping: structure, core fields, signature, taxpayer validity, referenced documents, codes, duplicates and currency.
-
-| Task | Automated? | Why |
-| --- | --- | --- |
-| Building the document from your sales or purchase record | Yes | The data already exists in your system |
-| Checking the TIN before submission | Yes | It is an API call, not a judgement |
-| Passing the eight validators | Yes | They are deterministic rules |
-| Submitting and storing the LHDN response | Yes | A receipt to keep, not a decision |
-| Flagging a failed validation with the rule that failed | Yes | The rule name is in the response |
-| Deciding whether a transaction is fake or genuinely unusual | No | A judgement, and one a human is liable for |
-| Choosing consolidated invoicing under the relaxation | No | A policy decision with tax consequences |
-| Approving a correction after 72 hours | No | Needs a reason a person can defend |
-
-## What does the 72-hour window change?
-
-It changes who fixes a mistake, and when. A buyer may request rejection within 72 hours of validation, and a seller may cancel within the same window. After 72 hours, cancellation is not allowed, and a correction requires a new e-Invoice in the form of a credit, debit or refund note.
-
-The tool therefore has to watch the clock, not only the submission. An integration that posts documents and forgets them leaves corrections to whoever notices. That is how a credit note goes out three months late and turns up in an audit.
-
-## What happens if you get it wrong?
-
-The guidelines cite Section 120 of the Income Tax Act 1967, and they do not print a penalty figure on any page that could be read. So this article will not quote a ringgit penalty. No published amount was found.
-
-Two dated mechanisms do soften the exposure. An interim relaxation period applies per phase, during which taxpayers may issue consolidated e-Invoices for all activities and consolidated self-billed e-Invoices without a document per transaction, and LHDN states it will not prosecute under Section 120 during that period provided the conditions are met. Separately, the voluntary disclosure programme, PKPS (Program Pengesahan Sukarela, a window for taxpayers who missed their start date to come forward), runs from **7 July 2026 to 31 December 2027** for taxpayers who missed their mandatory start date, using document versions PKPS 1.2 or 1.3, and covers reviews and enforcement unless the disclosure breaches requirements or involves fraud, wilful default or negligence.
-
-## Do these five things first
-
-Five actions, none of which needs a purchase.
-
-1. **Find your band** in the table above by your annual sales, and write the date your phase started next to it.
-2. **Check your TIN is live** before anything else: a wrong taxpayer number fails validation later, not at signing.
-3. **Export one month of invoices** as a file. That file is the input any tool will need, and knowing how bad it is shapes the quote.
-4. **Ask your accountant whether the interim relaxation applies to you**, and get the answer in writing.
-5. **Pick three invoices you issued last month** and rehearse the 72-hour question: who would have noticed, and how fast?
-
-## The cheapest place to start
-
-For a tinkerer, the MyInvois sandbox is the smallest thing that runs: LHDN's developer site runs a sandbox where the APIs and their validation errors can be exercised, and a sample XML or JSON document comes back with the validator that failed. You need a sandbox login from the SDK site and something that can POST JSON, which is structured text, so curl or a ten-line script will do. It costs nothing to try, and no per-submission fee appears on any LHDN page read for this article. Expect the signature validator to stop you first. A document that looks right to you fails when the signature is missing or malformed, and the error text often does not name the offending field.
-
-## What could we not verify?
-
-The MyInvois Portal itself could not be read: a connection timeout, then only the page title, because it is a client-side application. LHDN's FAQ answers are loaded by script and were not present in the served HTML. The per-phase dates inside the relaxation table appear to be a graphic in the PDF and were not extracted. And the general guideline read was version 4.8; a newer general version may exist and was not confirmed.
-
-**Read next**
-
-[What an AI agent can and cannot do for a Malaysian SME](https://upahje.my/en/articles/what-an-ai-agent-can-do)
-
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
-
-## FAQ
-
-### I turn over RM4 million a year. Am I exempt?
-
-No. The exemption is below RM3 million, and phase 4 covers up to RM5 million, so RM4 million is in scope and has been since 1 January 2026.
-
-### Can my accountant's system file it for me?
-
-The submission route supports intermediaries: LHDN documents separate authentication for systems acting on a taxpayer's behalf. Liability stays with the taxpayer, so the question is who reviews failures, not who presses submit.
-
-### Does automation remove the need for a person?
-
-It removes the typing, the TIN check and the validator round trips. It does not remove the person who decides whether a transaction is genuine, or who signs off a correction after the 72-hour window closes.
-
-### What happens to invoices I issued before my phase started?
-
-The published mechanism for a missed start is the voluntary disclosure programme, running 7 July 2026 to 31 December 2027. Whether your case qualifies is a question for LHDN or your tax agent, not for this article.
-
-### Sources
-
-- LHDN, e-Invoice implementation timeline (updated 30 August 2026) — https://www.hasil.gov.my/e-invois/pelaksanaan-e-invois-di-malaysia/garis-masa-pelaksanaan-e-invois/ (checked 2026-11-23)
-- MyInvois SDK, developer documentation — https://sdk.myinvois.hasil.gov.my/ (checked 2026-11-23)
-- MyInvois SDK, document validation rules — https://sdk.myinvois.hasil.gov.my/document-validation-rules/ (checked 2026-11-23)
-- MyInvois SDK, FAQ (sandbox availability) — https://sdk.myinvois.hasil.gov.my/faq/ (checked 2026-11-23)
-- LHDN, Garis Panduan Spesifik e-Invois Versi 4.8 (penalties, relaxation, PKPS) — https://www.hasil.gov.my/e-invois/ (checked 2026-11-23)
 
 ## Your first automation should not be your worst process
 
@@ -2087,113 +1904,6 @@ Tugasan yang paling kerap dibuat pasukan anda, yang ada garisan penamat jelas da
 - Pang Jun Han, harga automasi AI (kadar projek yang diterbitkan) — https://pangjunhan.vercel.app/ai-automation (checked 2026-11-23)
 - KodeSME, harga automasi — https://kodesme.klyihao.com/ (checked 2026-11-23)
 
-## Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia
-
-URL: https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi
-Checked: 2026-11-23
-
-Semua fasa pembayar cukai kini berkuat kuasa, termasuk fasa antara RM3 juta dan RM5 juta, yang berada di dalam fasa 4 dan di luar pengecualian. Automasi boleh membina, mengesahkan dan menyerahkan dokumen serta mengendalikan tetingkap pembetulan 72 jam. Ia tidak boleh memutuskan sama ada sesuatu transaksi itu luar biasa, dan ia tidak boleh memikul liabiliti undang-undang untuk transaksi yang salah.
-
-## Siapa yang wajib memfailkan, dan sejak bila?
-
-Fasa di bawah ialah fasa LHDN sendiri, daripada halaman garis masa yang menyatakan tarikh kemas kininya sebagai 30 Ogos 2026.
-
-| Fasa | Pendapatan atau jualan tahunan | Bermula | Status |
-| --- | --- | --- | --- |
-| 1 | lebih RM100 juta | 1 Ogos 2024 | Berkuat kuasa |
-| 2 | lebih RM25 juta hingga RM100 juta | 1 Januari 2025 | Berkuat kuasa |
-| 3 | lebih RM5 juta hingga RM25 juta | 1 Julai 2025 | Berkuat kuasa |
-| 4 | hingga RM5 juta | 1 Januari 2026 | Berkuat kuasa |
-| Pengecualian | kurang RM3 juta | n/a | Dikecualikan seperti dicetak |
-
-Sekarang lihat jurang antara RM3 juta dan RM5 juta. Pengecualian berhenti di bawah RM3 juta, dan fasa 4 berjalan hingga RM5 juta, jadi perniagaan yang berputar RM4 juta termasuk dalam skop. Dua baris pada halaman yang sama, dibaca bersama.
-
-## Apa yang diserahkan?
-
-e-Invoice ialah versi digital dokumen yang dikeluarkan penjual, direkodkan dengan LHDN dan bukan sekadar difailkan dalam akaun anda sendiri, meliputi perniagaan-ke-perniagaan, perniagaan-ke-pengguna dan perniagaan-ke-kerajaan, dan ia dihantar kepada LHDN melalui sistem MyInvois.
-
-Empat jenis dokumen dinamakan dalam garis panduan: invois, nota kredit, nota debit dan nota bayaran balik. Ada dua laluan. Portal MyInvois ialah kemasukan manual oleh pembayar cukai. Laluan API didokumenkan untuk sistem ERP pembayar cukai, dalam kata-kata LHDN sendiri, untuk "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, dibaca 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Pengesahan berasingan untuk sistem pembayar cukai dan untuk sistem perantara yang bertindak bagi pihak pembayar cukai, dan ada langkah pengesahan TIN sebelum penyerahan. TIN ialah nombor pengenalan pembayar cukai yang dikeluarkan LHDN kepada perniagaan; API ialah sambungan yang digunakan perisian anda untuk menyerahkan dokumen kepada MyInvois tanpa sesiapa menaip semula.
-
-![Empat langkah yang dilakukan mesin: bina dokumen daripada rekod anda, semak TIN, lulus lapan pengesah, hantar ke MyInvois. Di bawah, dua hasil: dalam 72 jam pembeli boleh menolak atau penjual membatalkan dan mengeluarkan semula; selepas 72 jam pembatalan ditutup dan pembetulan memerlukan nota kredit, debit atau bayaran balik](/figures/apa-yang-automasi-e-invoice-liputi.svg)
-*Empat langkah berjalan setiap penyerahan. Apa berlaku selepas kesilapan bergantung pada jam.*
-
-## Apa yang boleh diautomasikan?
-
-Lapan pengesah berjalan pada setiap penyerahan, dan itulah sebabnya mesin melakukannya lebih baik daripada manusia yang menaip semula: struktur, medan teras, tandatangan, kesahihan pembayar cukai, dokumen rujukan, kod, pendua dan mata wang.
-
-| Tugasan | Diautomasikan? | Mengapa |
-| --- | --- | --- |
-| Membina dokumen daripada rekod jualan atau belian anda | Ya | Data itu sudah ada dalam sistem anda |
-| Menyemak TIN sebelum penyerahan | Ya | Ia panggilan API, bukan pertimbangan |
-| Melalui lapan pengesah | Ya | Ia peraturan yang pasti |
-| Menyerahkan dan menyimpan respons LHDN | Ya | Resit untuk disimpan, bukan keputusan |
-| Menandakan pengesahan yang gagal berserta peraturan yang gagal | Ya | Nama peraturan ada dalam respons |
-| Memutuskan sama ada transaksi itu palsu atau benar-benar luar biasa | Tidak | Pertimbangan, dan manusia yang bertanggungjawab |
-| Memilih invois konsolidasi di bawah kelonggaran | Tidak | Keputusan dasar dengan kesan cukai |
-| Meluluskan pembetulan selepas 72 jam | Tidak | Perlukan alasan yang boleh dipertahankan manusia |
-
-## Apa yang diubah oleh tetingkap 72 jam?
-
-Ia mengubah siapa yang membetulkan kesilapan, dan bila. Pembeli boleh memohon penolakan dalam 72 jam selepas pengesahan, dan penjual boleh membatalkan dalam tetingkap yang sama. Selepas 72 jam, pembatalan tidak dibenarkan, dan pembetulan memerlukan e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
-
-Jadi tool perlu memerhati jam, bukan hanya penyerahan. Integrasi yang menghantar dokumen dan melupakannya meninggalkan pembetulan kepada sesiapa yang perasan. Itulah cara nota kredit keluar tiga bulan lewat dan muncul semasa audit.
-
-## Apa yang berlaku jika tersilap?
-
-Garis panduan menyebut Seksyen 120 Akta Cukai Pendapatan 1967, dan ia tidak mencetak angka penalti pada mana-mana halaman yang dapat dibaca. Jadi artikel ini tidak akan memetik penalti dalam ringgit. Tiada jumlah yang diterbitkan ditemui.
-
-Dua mekanisme bertarikh melembutkan pendedahan itu. Tempoh kelonggaran interim terpakai bagi setiap fasa, di mana pembayar cukai boleh mengeluarkan e-Invois konsolidasi bagi semua aktiviti dan e-Invois konsolidasi yang difakturkan sendiri tanpa dokumen bagi setiap transaksi, dan LHDN menyatakan ia tidak akan mendakwa di bawah Seksyen 120 sepanjang tempoh itu dengan syarat dipenuhi. Secara berasingan, program pengesahan sukarela, PKPS (Program Pengesahan Sukarela, tetingkap bagi pembayar cukai yang terlepas tarikh permulaan untuk tampil ke hadapan), berjalan dari **7 Julai 2026 hingga 31 Disember 2027** bagi pembayar cukai yang terlepas tarikh permulaan wajibnya, menggunakan versi dokumen PKPS 1.2 atau 1.3, dan meliputi semakan serta penguatkuasaan kecuali pendedahan itu melanggar syarat atau melibatkan penipuan, keingkaran sengaja atau kecuaian.
-
-## Lima perkara ini dahulu
-
-Lima tindakan, tiada satu pun memerlukan pembelian.
-
-1. **Cari fasa anda** dalam jadual di atas mengikut jualan tahunan, dan tulis tarikh fasa anda bermula di sebelahnya.
-2. **Semak TIN anda aktif** sebelum apa-apa lagi: nombor pembayar cukai yang salah gagal pengesahan kemudian, bukan semasa menandatangani.
-3. **Eksport satu bulan invois** sebagai fail. Fail itu ialah input yang diperlukan mana-mana tool, dan mengetahui betapa bersepahnya ia membentuk sebut harga.
-4. **Tanya akauntan anda sama ada kelonggaran interim terpakai**, dan dapatkan jawapannya secara bertulis.
-5. **Pilih tiga invois yang anda keluarkan bulan lepas** dan latih soalan 72 jam: siapa yang akan perasan, dan berapa cepat?
-
-## Tempat paling murah untuk bermula
-
-Bagi yang suka mencuba, sandbox MyInvois ialah benda paling kecil yang berjalan: laman pembangun LHDN menjalankan sandbox tempat API dan ralat pengesahannya boleh diuji, dan dokumen XML atau JSON sampel akan kembali dengan pengesah yang gagal. Anda perlukan log masuk sandbox daripada laman SDK dan sesuatu yang boleh menghantar JSON, iaitu teks berstruktur, jadi curl atau skrip sepuluh baris sudah cukup. Percubaan itu percuma, dan tiada yuran setiap penyerahan muncul pada mana-mana halaman LHDN yang dibaca untuk artikel ini. Jangkakan pengesah tandatangan yang menyekat anda dahulu. Dokumen yang kelihatan betul kepada anda gagal apabila tandatangan tiada atau cacat, dan teks ralat selalunya tidak menyatakan medan yang menyebabkannya.
-
-## Apa yang tidak dapat kami sahkan?
-
-Portal MyInvois sendiri tidak dapat dibaca: tamat masa sambungan, kemudian hanya tajuk halaman, kerana ia aplikasi sebelah klien. Jawapan Soalan Lazim LHDN dimuatkan melalui skrip dan tiada dalam HTML yang dihidangkan. Tarikh setiap fasa di dalam jadual kelonggaran kelihatan grafik dalam PDF dan tidak diekstrak. Dan garis panduan umum yang dibaca ialah versi 4.8; versi umum yang lebih baharu mungkin ada dan tidak disahkan.
-
-**Baca seterusnya**
-
-[Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat)
-
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
-
-## FAQ
-
-### Saya berputar RM4 juta setahun. Adakah saya dikecualikan?
-
-Tidak. Pengecualian ialah kurang RM3 juta, dan fasa 4 meliputi hingga RM5 juta, jadi RM4 juta termasuk dalam skop dan telah pun sejak 1 Januari 2026.
-
-### Bolehkah sistem akauntan saya memfailkannya untuk saya?
-
-Laluan penyerahan menyokong perantara: LHDN mendokumenkan pengesahan berasingan bagi sistem yang bertindak bagi pihak pembayar cukai. Liabiliti kekal dengan pembayar cukai, jadi soalannya siapa yang menyemak kegagalan, bukan siapa yang menekan butang hantar.
-
-### Adakah automasi menghapuskan keperluan untuk manusia?
-
-Ia menghapuskan penulisan semula, semakan TIN dan perjalanan pergi balik pengesah. Ia tidak menghapuskan orang yang memutuskan sama ada transaksi itu tulen, atau yang meluluskan pembetulan selepas tetingkap 72 jam tamat.
-
-### Apa jadi kepada invois yang saya keluarkan sebelum fasa saya bermula?
-
-Mekanisme yang diterbitkan bagi permulaan yang terlepas ialah program pengesahan sukarela, berjalan 7 Julai 2026 hingga 31 Disember 2027. Sama ada kes anda layak ialah soalan untuk LHDN atau ejen cukai anda, bukan untuk artikel ini.
-
-### Sources
-
-- LHDN, garis masa pelaksanaan e-Invois (dikemas kini 30 Ogos 2026) — https://www.hasil.gov.my/e-invois/pelaksanaan-e-invois-di-malaysia/garis-masa-pelaksanaan-e-invois/ (checked 2026-11-23)
-- MyInvois SDK, dokumentasi pembangun — https://sdk.myinvois.hasil.gov.my/ (checked 2026-11-23)
-- MyInvois SDK, peraturan pengesahan dokumen — https://sdk.myinvois.hasil.gov.my/document-validation-rules/ (checked 2026-11-23)
-- MyInvois SDK, FAQ (ketersediaan sandbox) — https://sdk.myinvois.hasil.gov.my/faq/ (checked 2026-11-23)
-- LHDN, Garis Panduan Spesifik e-Invois Versi 4.8 (penalti, kelonggaran, PKPS) — https://www.hasil.gov.my/e-invois/ (checked 2026-11-23)
-
 ## Automasi pertama anda bukan proses yang paling anda benci
 
 URL: https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk
@@ -2265,43 +1975,12 @@ Jejaki kegagalan sahaja. Satu baris setiap kali sesuatu silap, dengan apa yang b
 
 Proses dengan garisan penamat jelas, kesilapan yang murah dan kelihatan, dan pemilik di sebelah sana. Membosankan itulah maksudnya: yang pertama ialah tempat anda belajar cara membeli dan cara menyelenggara, bukan tempat anda membuat penjimatan tahunan.
 
-## CommandCode, OpenCode, DeepSeek: apa sebenarnya yang diukur oleh angka yang diterbitkan
+## CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda
 
 URL: https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka
 Checked: 2026-11-23
 
-Ini tiga jenis benda berbeza. CommandCode ialah CLI pengekodan berbayar. OpenCode ialah CLI pengekodan percuma berlesen MIT dengan langganan pilihan. DeepSeek ialah vendor model dengan API. Tiada papan pendahulu yang diterbitkan dalam pusingan ini menjalankan mana-mana CLI itu sebagai agent, jadi perbandingan skor "CommandCode lawan OpenCode" tidak wujud untuk dipetik. Yang ada ialah model DeepSeek yang dinilai di dalam harness orang lain.
-
-## Apa yang ada dalam satu baris papan pendahulu?
-
-Lima perkara, dan skor hanyalah satu daripadanya: model, agent yang memandunya, tetapan, skor, dan kos. Baca dua yang pertama sebelum angka.
-
-Halaman Terminal-bench 4.1 menjadikan ini jelas kerana lajurnya ialah RANK, MODEL, AGENT, RESOLUTION RATE, RELEASE DATE, TOKENS dan COST. Baris DeepSeek berbunyi:
-
-![Gambar landskap dengan lajur model, agent, tetapan, skor dan kos. Baris contoh ialah DeepSeek V4.1 Flash 1017 pada max, dijalankan di bawah Claude Code pada Terminal-bench 4.1, dengan skor 38.5 peratus tambah tolak 3.8 dan 8.2 bilion token. Kaki nota menyatakan tiada satu pun CommandCode atau OpenCode muncul dalam lajur agent](/figures/anatomi-baris-papan-pendahulu.svg)
-*Baca lajur agent dahulu: ia menentukan angka siapa yang dimiliki oleh skor itu.*
-
-| Medan | Nilai seperti dicetak |
-| --- | --- |
-| Model | DeepSeek V4.1 Flash 1017 (max) |
-| Agent | Claude Code |
-| Kadar penyelesaian | 38.5% ± 3.8% |
-| Token | 8.2B |
-| Tarikh keluaran | Okt 17, 2026 |
-
-Jadi angka itu milik model DeepSeek yang berjalan di bawah Claude Code. Ia bukan hasil CommandCode dan bukan hasil OpenCode. Tukar agent, angkanya berubah, dan itulah sebabnya lajur agent wujud.
-
-## Nama mana yang benar-benar ada pada papan?
-
-Lajur agent SWE-bench Verified hanya menyenaraikan mini-SWE-agent. Terminal-bench 4.1 menyenaraikan Claude Code, Codex, Antigravity CLI, GitHub Copilot, Grok Build dan mini-SWE-agent. Tiada satu pun papan meletakkan CommandCode atau OpenCode dalam lajur agent.
-
-Nama model pula soalan berasingan, dan jawapannya lebih nipis daripada yang disarankan pemasaran:
-
-- **SWE-bench Verified** ada DeepSeek V3.2 (high) pada 70.00% selesai dengan kos purata $0.45, dan DeepSeek V3.2 Reasoner pada 60.00% dengan kos purata $0.03. Kedua-duanya di bawah mini-SWE-agent, tab Verified, Bash Only ditanda, disusun mengikut peratus selesai.
-- **SWE-bench tiada entri untuk DeepSeek V4.1 Flash atau V4 Pro.** Itu ketiadaan pada papan, bukan skor buruk.
-- **Aider polyglot sudah lapuk.** Direktori larian terbaharu yang kelihatan bertarikh 23 Ogos 2025 dan baris teratasnya gpt-5 (high) pada 88.0% untuk $29.08. Papan yang belum melihat model 2026 tidak boleh menyusunnya, jadi artikel ini tidak memetiknya sebagai semasa.
-
-Ringkasan jujurnya: satu-satunya skor yang diterbitkan dan menamakan model semasa DeepSeek meletakkannya pada 38.5% ± 3.8% di Terminal-bench 4.1, di bawah Claude Code, dengan 8.2B token. Selebihnya yang berbunyi seperti perbandingan ialah dakwaan vendor atau benang perbincangan.
+Ini tiga jenis benda berbeza, dan perkataannya penting sebelum harganya. `dsh` ialah DeepSeek Harness, harness baris arahan yang kami jalankan di sini. "Lengan" pula ialah salah satu produk yang dicuba pada tugasan yang sama, dan larian ini ada tiga: CommandCode, OpenCode dan DeepSeek melalui `dsh`. CommandCode ialah CLI pengekodan berbayar. OpenCode ialah CLI pengekodan percuma berlesen MIT dengan langganan pilihan. DeepSeek ialah vendor model dengan API. Apa yang menyusul ialah harga yang diterbitkan setiap satu, di mana angkanya sudah bergerak, dan apa yang ditunjukkan satu larian. Bahagian penanda aras, dan sebab perbandingan skor "CommandCode lawan OpenCode" tidak wujud, ialah nota pembangun yang berasingan.
 
 ## Bagaimana rupa harganya seperti diterbitkan?
 
@@ -2356,51 +2035,6 @@ Tiada cara jujur untuk menghasilkan semula papan pendahulu. Yang boleh anda hasi
 Ambil satu tugasan, jalankannya dalam satu harness, dan catat lima medan yang sama seperti papan cetak: model, agent, tetapan, skor (adakah ujian lulus), dan kos dalam token atau ringgit. Itu penanda aras anda, ia setara dengan dirinya bulan depan, dan ia tidak bergantung pada halaman pemasaran sesiapa.
 
 Satu perkara yang akan menggigit anda ialah kod keluar. Larian yang keluar dengan 0 tanpa menulis fail kelihatan lulus dalam setiap log anda. Periksa artifaknya, setiap kali.
-
-## Apa yang diterbitkan oleh perbandingan itu?
-
-Tiga demo interaktif untuk Pusingan 1, dan tiada angka. Halaman arkib, petikan 25 Oktober 2026, menyenaraikan DeepSeek Platform, OpenCode Go dan CommandCode GOAT, setiap satu sebagai laluan demo di bawah konsep vivarium: "A Closed Ecology", "Abyssal Vivarium", "Vivarium Nº 7" ([arkib, dibaca 23 Nov 2026](https://web.archive.org/web/20261025232027/https://nazzysar.github.io/deepseek-benchmarks/)).
-
-Katalog itu ialah buktinya. Setiap entri membawa tajuk, penerangan, laluan dan tone, dan tiada apa-apa lagi: tiada skor, tempoh, kiraan token atau kos. Sebab itulah memuatkan ketiga-tiganya tidak boleh menentukan kelajuan atau harga untuk anda.
-
-Demo itu sendiri masih ada, dalam repositori hidup dan bukan dalam petikan arkib. Arkib mengambil galeri, katalog dan tiga URL pemapar, dan tiada apa-apa di bawah `rounds/`. Ketiga-tiga fail `rounds/round-1/*/index.html` ada dalam `nazzysar/deepseek-benchmarks`, dan hash SHA-256 mereka sepadan dengan `rounds/checksums.json` repositori itu sendiri ([repo, dibaca 23 Nov 2026](https://github.com/nazzysar/deepseek-benchmarks)). Apabila diimbas untuk teks, ia membawa angka dalam permainan sahaja, seperti "SEALED 12 · IV · 1887" dan "120 × 72 cells", tanpa kapsyen masa bina, kiraan token, kos atau skor.
-
-Demo menentukan dua perkara. Sama ada ia berjalan dalam pelayar anda, dan sama ada anda suka hasilnya. Ia tidak menentukan skor, kos, token atau kebolehpercayaan, kerana tiada satu pun daripada itu diterbitkan.
-
-## Apa yang ditunjukkan oleh sesi GOAT?
-
-Ia menunjukkan bagaimana larian itu berkelakuan: cubaan semula, masa, langkah. Repositori `nazzysar/commandcode-goat-ecosystem-sess` menyimpan tiga transkrip sesi yang telah disunting daripada lengan CommandCode GOAT, dan ia rekod larian itu sendiri dan bukan baris papan pendahulu ([repo, dibaca 23 Nov 2026](https://github.com/nazzysar/commandcode-goat-ecosystem-sess)).
-
-| Apa yang ada dalam rekod | Nilai |
-| --- | --- |
-| Transkrip | lead, critic, prover: 1,123 / 582 / 1,091 rekod |
-| Cuba semula dalam sesi lead | 33, iaitu 23 SERVER, 10 TRANSPORT, 0 TIMEOUT |
-| Cuba semula merentas ketiga-tiganya | 94, terbahagi 57 / 37 / 0 |
-| Turn | 5, berlangsung 7,565.5 s, 2,636.0 s, 150.5 s, 117.6 s dan 3.9 s |
-| Jumlah masa | 10,473.5 s, kira-kira 2 jam 55 minit |
-| Aktiviti | 161 tool call, 140 step, 138 mesej assistant, 25 mesej pengguna |
-| Model dan pembekal | `deepseek/deepseek-v4.1-flash`, pembekal `commandcode-goat` |
-
-Itulah rupa larian yang sukar dari dalam: satu turn mengambil lebih dua jam, dan cubaan semula didominasi kerosakan server dan pengangkutan dan bukan tamat masa. Tiada satu pun daripada itu mengatakan outputnya bagus. Ia mengatakan lengan itu terus berjalan.
-
-Tiada kiraan token dan tiada medan kos dalam rekod itu. Setiap nama medan token dicari merentas transkrip yang dinyahkod dan tiada, dan model data laman itu juga tiada medan kos. Jadi tiada perbandingan kos boleh dibina daripadanya, dan artikel ini tidak mengimplikasikan satu.
-
-Angka yang ada pada kami, setiap satu dengan asalnya:
-
-| Angka | Apa maksudnya | Asal |
-| --- | --- | --- |
-| 38.5% ± 3.8% | DeepSeek V4.1 Flash 1017 (max), di bawah Claude Code, Terminal-bench 4.1 | Papan pendahulu Terminal-bench, dibaca 23 Nov 2026 |
-| $10/bulan GOAT + yuran pemprosesan | Sehingga $100 kredit, tier CommandCode seperti dicetak | Halaman harga vendor, dibaca 23 Nov 2026 |
-| $10/bulan Go, agent di bawah MIT | Langganan pilihan OpenCode, dan lesen agent itu | Dokumentasi vendor dan repositori, dibaca 23 Nov 2026 |
-| 95.4 s, 10 turn, 14 tool call, 3/3 ujian | Satu larian `dsh` pada satu tugasan, dua fail ditulis | Ukuran kami, 23 Nov 2026 |
-
-Dua angka masih tiada, dan kedua-duanya sempit. Nota keluaran DeepSeek mencetak carta tanpa nilai dalam teks halaman, dan yuran pemprosesan CommandCode tiada angka pada mana-mana halaman yang dibaca.
-
-**Baca seterusnya**
-
-[Harness agent: siapa yang membuatnya, dan apa yang benar-benar sumber terbuka](https://upahje.my/ms/articles/landskap-harness-agent-sumber-terbuka)
-
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
 
 ## FAQ
 

@@ -4,8 +4,8 @@
 
 | # | claim | source URL | publisher | checked | basis |
 |---|-------|------------|-----------|---------|-------|
-| 1 | "a marketing message is **RM0.3467**, and utility, authentication and service messages are **RM0.0564** each, with the first **1,000 service messages per business phone number per month free**" | https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing | Meta | 2026-11-23 | source: MYR rate card row Malaysia, and the free-tier section |
-| 2 | "A Malaysian vendor then charges roughly **RM200 to RM1,500 a month** to run the bot." | https://alwayson.my/blog/whatsapp-chatbot-pricing | AlwaysON | 2026-11-23 | source: Table 4, total-cost range |
+| 1 | "a marketing message is RM0.3467, and utility, authentication and service messages are RM0.0564 each, with the first 1,000 service messages per business phone number per month free" | https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing | Meta | 2026-11-23 | source: MYR rate card row Malaysia, and the free-tier section |
+| 2 | "A Malaysian vendor then charges roughly RM200 to RM1,500 a month to run the bot." | https://alwayson.my/blog/whatsapp-chatbot-pricing | AlwaysON | 2026-11-23 | source: Table 4, total-cost range |
 | 3 | "Marketing | 0.3467 | 0.086 | Promotions, re-engagement, offers" | https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing | Meta | 2026-11-23 | source: Table 2, marketing row, MYR and USD cards |
 | 4 | "Service | 0.0564 | 0.014 | Replies inside the customer service window" | https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing | Meta | 2026-11-23 | source: Table 2, service row |
 | 5 | "Authentication, international | 0.1685 | 0.0418 | Passcodes delivered outside the domestic route" | https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing | Meta | 2026-11-23 | source: Table 2, authentication-international row |

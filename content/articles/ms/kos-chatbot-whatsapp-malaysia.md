@@ -30,7 +30,7 @@ sources:
 
 # Kos chatbot WhatsApp di Malaysia, setiap mesej dan setiap bulan
 
-Meta mengenakan caj setiap mesej yang dihantar, dalam ringgit, pada kad yang diterbitkan: mesej pemasaran **RM0.3467**, dan mesej utiliti, pengesahan serta servis **RM0.0564** setiap satu, dengan **1,000 mesej servis pertama bagi setiap nombor perniagaan sebulan percuma**. Vendor Malaysia kemudian mengenakan kira-kira **RM200 hingga RM1,500 sebulan** untuk menjalankan bot. Tetingkap 24 jam menentukan kadar Meta yang terpakai pada sesuatu balasan.
+Meta mengenakan caj setiap mesej yang dihantar, dalam ringgit, pada kad yang diterbitkan: mesej pemasaran RM0.3467, dan mesej utiliti, pengesahan serta servis RM0.0564 setiap satu, dengan 1,000 mesej servis pertama bagi setiap nombor perniagaan sebulan percuma. Vendor Malaysia kemudian mengenakan kira-kira RM200 hingga RM1,500 sebulan untuk menjalankan bot. Tetingkap 24 jam menentukan kadar Meta yang terpakai pada sesuatu balasan.
 
 ## Bagaimana Meta mengenakan caj untuk mesej WhatsApp?
 
