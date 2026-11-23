@@ -37,9 +37,9 @@ An AI agent runs a loop by itself: it reads a task, calls tools, looks at the re
 
 ## What is an agent, as opposed to a chatbot?
 
-An agent acts between steps; a chatbot only answers. The difference is that an agent has tools it can call, a loop that continues after a tool returns, and a transcript of what it did.
+An agent acts between steps; a chatbot only answers. The difference is that an agent has tools it can call (a tool is one thing it is allowed to do, such as look up an order or send an email), a loop that continues after a tool returns, and a transcript, meaning a written record of what it did.
 
-Anthropic's own wording for the layer that runs this is an agent harness that "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([Claude Code docs, read 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Two consequences follow for a small business: the agent can touch real systems, and the harness, not the model, decides what it is allowed to touch.
+Anthropic's own wording for the layer that runs this is an agent harness, which is the program that holds the conversation and runs the tools, defined as "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([Claude Code docs, read 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Two consequences follow for a small business: the agent can touch real systems, and the harness, not the model, decides what it is allowed to touch.
 
 ## What can it do unattended?
 
@@ -83,11 +83,29 @@ Four categories, and no amount of prompting changes them.
 
 Two bills, and the smaller one is the one people worry about.
 
-**Running it.** Token rates are published, so this is arithmetic rather than a guess. At 2,000 input and 500 output tokens per task, Claude Haiku 5.5 costs `0.002 million × USD 0.10 = USD 0.0002` for input plus `0.0005 million × USD 0.50 = USD 0.00025` for output, which is USD 0.00045 a task. At the Bank Negara middle rate of **4.1145** (read 19 November 2026), that is about RM0.00185. A thousand tasks a month is **RM1.85**.
+**Running it.** Token rates are published, so this is arithmetic rather than a guess. At 2,000 input and 500 output tokens per task, Claude Haiku 5.5 costs `0.002 million × USD 0.10 = USD 0.0002` for input plus `0.0005 million × USD 0.50 = USD 0.00025` for output, which is USD 0.00045 a task. At the Bank Negara middle rate of **4.1145** (read 19 November 2026), that is about RM0.00185. A thousand tasks a month is **RM1.85**, which is less than one teh tarik.
 
 **Building it.** Malaysian publishers quote project prices for automation work: **RM400** for a simple process build ([Pang Jun Han, read 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)) and **RM6,000-plus** for autonomous task execution ([Autoflow Solutions, read 23 Nov 2026](https://www.autoflow-solutions.com/my/services)). A starter workflow build from a studio starts at **RM1,500** ([KodeSME, read 23 Nov 2026](https://kodesme.klyihao.com/)).
 
 So the build is hundreds to thousands of ringgit and the running cost is a few ringgit. Anyone quoting you a large monthly token bill for a small business workflow is either wrong or selling something else. What the rate cards do not state is the monthly support fee after launch, so ask for it before you compare quotes.
+
+## What to do this week?
+
+Five actions, none of which needs a purchase or a developer.
+
+1. **Write down the one task you would automate first**, and what "done" looks like for it, in one sentence.
+2. **Count how often it happens** for a week, on paper. Under five times a day, the case is weak.
+3. **List the systems it touches** and whether the agent would only read from them or also write.
+4. **Find the failure that would hurt**, and decide whether a person should approve before it happens.
+5. **Ask two suppliers the six checks below**, and compare the answers rather than the prices.
+
+## Try it yourself
+
+The smallest runnable version is a script that reads a CSV of support emails, calls one model per row, and writes a draft reply into a second CSV. It is not an agent yet, and that is the point: it proves the loop before you add tools.
+
+- **What it needs:** a file of sample rows, an API key (a string that identifies your account to the model provider), and about 20 lines of Python. No server.
+- **What it costs:** at 2,000 input and 500 output tokens per row, about **RM0.00185 a row**, so a hundred rows is under 20 sen.
+- **The one thing that will bite you:** a model reading a CSV column will happily mis-parse an empty cell and invent a customer name. Log every input row beside its output, or you will debug the wrong half.
 
 ## How do I tell a demo from something that keeps running?
 

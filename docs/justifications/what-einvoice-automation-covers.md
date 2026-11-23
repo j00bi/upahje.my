@@ -15,9 +15,11 @@
 | 9 | "A buyer may request rejection within 72 hours of validation, and a seller may cancel within the same window." | https://www.hasil.gov.my/e-invois/ | LHDN | 2026-11-23 | source: guideline §2.3.6 as recorded in Table 3, 72-hour rule |
 | 10 | "After 72 hours, cancellation is not allowed, and a correction requires a new e-Invoice in the form of a credit, debit or refund note." | https://www.hasil.gov.my/e-invois/ | LHDN | 2026-11-23 | source: same rule row |
 | 11 | "The guidelines cite Section 120 of the Income Tax Act 1967, and they do not print a penalty figure on any page that could be read." | https://www.hasil.gov.my/e-invois/ | LHDN | 2026-11-23 | source: guideline §16.3 and Table 5, penalty amount not published |
-| 12 | "the voluntary disclosure programme runs from **7 July 2026 to 31 December 2027** for taxpayers who missed their mandatory start date" | https://www.hasil.gov.my/e-invois/ | LHDN | 2026-11-23 | source: Table 4 PKPS row, §17.1 |
+| 12 | "the voluntary disclosure programme, PKPS (Program Pengesahan Sukarela, a window for taxpayers who missed their start date to come forward), runs from **7 July 2026 to 31 December 2027** for taxpayers who missed their mandatory start date" | https://www.hasil.gov.my/e-invois/ | LHDN | 2026-11-23 | source: Table 4 PKPS row, §17.1 |
 | 13 | "LHDN states it will not prosecute under Section 120 during that period provided the conditions are met" | https://www.hasil.gov.my/e-invois/ | LHDN | 2026-11-23 | source: Table 4, no-prosecution row, §16.3 |
 | 14 | "The MyInvois Portal itself could not be read: a connection timeout, then only the page title, because it is a client-side application." | - | our measurement, this machine | 2026-11-23 | source: two fetch attempts recorded on 23 November 2026 |
+| 15 | "TIN is the taxpayer identification number LHDN issues to a business; the API is the connection your software uses to hand a document to MyInvois without anyone retyping it." | https://sdk.myinvois.hasil.gov.my/ | MyInvois SDK (LHDN) | 2026-11-23 | source: TIN validation API and the API integration description on the SDK site |
+| 16 | "No per-submission fee appears on any LHDN page read for this article" | https://sdk.myinvois.hasil.gov.my/ | MyInvois SDK (LHDN) | 2026-11-23 | estimate: no per-submission fee printed on the SDK pages read; absence noted rather than assumed |
 
 ## Sections
 

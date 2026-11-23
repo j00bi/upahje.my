@@ -13,9 +13,9 @@ An AI agent runs a loop by itself: it reads a task, calls tools, looks at the re
 
 ## What is an agent, as opposed to a chatbot?
 
-An agent acts between steps; a chatbot only answers. The difference is that an agent has tools it can call, a loop that continues after a tool returns, and a transcript of what it did.
+An agent acts between steps; a chatbot only answers. The difference is that an agent has tools it can call (a tool is one thing it is allowed to do, such as look up an order or send an email), a loop that continues after a tool returns, and a transcript, meaning a written record of what it did.
 
-Anthropic's own wording for the layer that runs this is an agent harness that "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([Claude Code docs, read 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Two consequences follow for a small business: the agent can touch real systems, and the harness, not the model, decides what it is allowed to touch.
+Anthropic's own wording for the layer that runs this is an agent harness, which is the program that holds the conversation and runs the tools, defined as "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([Claude Code docs, read 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Two consequences follow for a small business: the agent can touch real systems, and the harness, not the model, decides what it is allowed to touch.
 
 ## What can it do unattended?
 
@@ -59,11 +59,29 @@ Four categories, and no amount of prompting changes them.
 
 Two bills, and the smaller one is the one people worry about.
 
-**Running it.** Token rates are published, so this is arithmetic rather than a guess. At 2,000 input and 500 output tokens per task, Claude Haiku 5.5 costs `0.002 million × USD 0.10 = USD 0.0002` for input plus `0.0005 million × USD 0.50 = USD 0.00025` for output, which is USD 0.00045 a task. At the Bank Negara middle rate of **4.1145** (read 19 November 2026), that is about RM0.00185. A thousand tasks a month is **RM1.85**.
+**Running it.** Token rates are published, so this is arithmetic rather than a guess. At 2,000 input and 500 output tokens per task, Claude Haiku 5.5 costs `0.002 million × USD 0.10 = USD 0.0002` for input plus `0.0005 million × USD 0.50 = USD 0.00025` for output, which is USD 0.00045 a task. At the Bank Negara middle rate of **4.1145** (read 19 November 2026), that is about RM0.00185. A thousand tasks a month is **RM1.85**, which is less than one teh tarik.
 
 **Building it.** Malaysian publishers quote project prices for automation work: **RM400** for a simple process build ([Pang Jun Han, read 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)) and **RM6,000-plus** for autonomous task execution ([Autoflow Solutions, read 23 Nov 2026](https://www.autoflow-solutions.com/my/services)). A starter workflow build from a studio starts at **RM1,500** ([KodeSME, read 23 Nov 2026](https://kodesme.klyihao.com/)).
 
 So the build is hundreds to thousands of ringgit and the running cost is a few ringgit. Anyone quoting you a large monthly token bill for a small business workflow is either wrong or selling something else. What the rate cards do not state is the monthly support fee after launch, so ask for it before you compare quotes.
+
+## What to do this week?
+
+Five actions, none of which needs a purchase or a developer.
+
+1. **Write down the one task you would automate first**, and what "done" looks like for it, in one sentence.
+2. **Count how often it happens** for a week, on paper. Under five times a day, the case is weak.
+3. **List the systems it touches** and whether the agent would only read from them or also write.
+4. **Find the failure that would hurt**, and decide whether a person should approve before it happens.
+5. **Ask two suppliers the six checks below**, and compare the answers rather than the prices.
+
+## Try it yourself
+
+The smallest runnable version is a script that reads a CSV of support emails, calls one model per row, and writes a draft reply into a second CSV. It is not an agent yet, and that is the point: it proves the loop before you add tools.
+
+- **What it needs:** a file of sample rows, an API key (a string that identifies your account to the model provider), and about 20 lines of Python. No server.
+- **What it costs:** at 2,000 input and 500 output tokens per row, about **RM0.00185 a row**, so a hundred rows is under 20 sen.
+- **The one thing that will bite you:** a model reading a CSV column will happily mis-parse an empty cell and invent a customer name. Log every input row beside its output, or you will debug the wrong half.
 
 ## How do I tell a demo from something that keeps running?
 
@@ -135,9 +153,9 @@ The gap worth reading twice is between RM3 million and RM5 million. The exemptio
 ![Four steps the machine performs: build the document from your records, check the TIN, pass eight validators, submit to MyInvois. Below, two outcomes: within 72 hours a buyer may reject or a seller cancel and reissue; after 72 hours cancellation is closed and a correction needs a credit, debit or refund note](/figures/what-einvoice-automation-covers.svg)
 *Four steps run every submission. What happens after a mistake depends on the clock.*
 
-An e-Invoice is the digital representation of a transaction between seller and buyer, covering business-to-business, business-to-consumer and business-to-government, and it goes to LHDN through the MyInvois system.
+An e-Invoice is the digital version of the document a seller issues, recorded with LHDN rather than only filed in your own accounts, covering business-to-business, business-to-consumer and business-to-government, and it goes to LHDN through the MyInvois system.
 
-Four document types are named in the guideline: invoice, credit note, debit note and refund note. Two routes exist. The MyInvois Portal is manual entry by the taxpayer. The API route is documented for taxpayer ERP systems, in LHDN's own words, to "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, read 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Authentication is separate for taxpayer systems and for intermediary systems acting on a taxpayer's behalf, and there is a TIN validation step available before submission.
+Four document types are named in the guideline: invoice, credit note, debit note and refund note. Two routes exist. The MyInvois Portal is manual entry by the taxpayer. The API route is documented for taxpayer ERP systems, in LHDN's own words, to "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, read 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Authentication is separate for taxpayer systems and for intermediary systems acting on a taxpayer's behalf, and there is a TIN validation step available before submission. TIN is the taxpayer identification number LHDN issues to a business; the API is the connection your software uses to hand a document to MyInvois without anyone retyping it.
 
 ## What can be automated?
 
@@ -164,7 +182,25 @@ That has a practical consequence for automation design: the tool should watch th
 
 The guidelines cite Section 120 of the Income Tax Act 1967, and they do not print a penalty figure on any page that could be read. That is a gap, not a small detail: this article will not quote a ringgit penalty, because no published amount was found.
 
-Two dated mechanisms do soften the exposure. An interim relaxation period applies per phase, during which taxpayers may issue consolidated e-Invoices for all activities and consolidated self-billed e-Invoices without a document per transaction, and LHDN states it will not prosecute under Section 120 during that period provided the conditions are met. Separately, the voluntary disclosure programme runs from **7 July 2026 to 31 December 2027** for taxpayers who missed their mandatory start date, using document versions PKPS 1.2 or 1.3, and covers reviews and enforcement unless the disclosure breaches requirements or involves fraud, wilful default or negligence.
+Two dated mechanisms do soften the exposure. An interim relaxation period applies per phase, during which taxpayers may issue consolidated e-Invoices for all activities and consolidated self-billed e-Invoices without a document per transaction, and LHDN states it will not prosecute under Section 120 during that period provided the conditions are met. Separately, the voluntary disclosure programme, PKPS (Program Pengesahan Sukarela, a window for taxpayers who missed their start date to come forward), runs from **7 July 2026 to 31 December 2027** for taxpayers who missed their mandatory start date, using document versions PKPS 1.2 or 1.3, and covers reviews and enforcement unless the disclosure breaches requirements or involves fraud, wilful default or negligence.
+
+## What to do this week?
+
+Five actions, none of which needs a purchase.
+
+1. **Find your band** in the table above by your annual sales, and write the date your phase started next to it.
+2. **Check your TIN is live** before anything else: a wrong taxpayer number fails validation later, not at signing.
+3. **Export one month of invoices** as a file. That file is the input any tool will need, and knowing how bad it is shapes the quote.
+4. **Ask your accountant whether the interim relaxation applies to you**, and get the answer in writing.
+5. **Pick three invoices you issued last month** and rehearse the 72-hour question: who would have noticed, and how fast?
+
+## Try it yourself
+
+The smallest runnable version is the MyInvois sandbox: LHDN's developer site runs a sandbox where the APIs and their validation errors can be exercised, and it states that the production portal cannot be used there ([MyInvois SDK FAQ, read 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/faq/)).
+
+- **What it needs:** a sandbox login from LHDN's SDK site, a sample document, and a tool that can POST JSON, which is just structured text. No paid software.
+- **What it costs:** nothing on the sandbox. No per-submission fee appears on any LHDN page read for this article, so the production cost is your time, not a charge.
+- **The one thing that will bite you:** the signature validator. A document that looks correct to you can fail because the signature is missing or malformed, and the error text does not always say which field caused it.
 
 ## What could we not verify?
 
@@ -199,6 +235,7 @@ The published mechanism for a missed start is the voluntary disclosure programme
 - LHDN, e-Invoice implementation timeline (updated 30 August 2026) — https://www.hasil.gov.my/e-invois/pelaksanaan-e-invois-di-malaysia/garis-masa-pelaksanaan-e-invois/ (checked 2026-11-23)
 - MyInvois SDK, developer documentation — https://sdk.myinvois.hasil.gov.my/ (checked 2026-11-23)
 - MyInvois SDK, document validation rules — https://sdk.myinvois.hasil.gov.my/document-validation-rules/ (checked 2026-11-23)
+- MyInvois SDK, FAQ (sandbox availability) — https://sdk.myinvois.hasil.gov.my/faq/ (checked 2026-11-23)
 - LHDN, Garis Panduan Spesifik e-Invois Versi 4.8 (penalties, relaxation, PKPS) — https://www.hasil.gov.my/e-invois/ (checked 2026-11-23)
 
 ## Agent harness, AI harness, agent framework: what the words mean
@@ -1495,9 +1532,9 @@ AI agent menjalankan gelung sendiri: ia membaca tugasan, memanggil tool, melihat
 
 ## Apa itu agent, berbanding chatbot?
 
-Agent bertindak antara langkah; chatbot hanya menjawab. Bezanya ialah agent mempunyai tool yang boleh dipanggil, gelung yang berterusan selepas tool memulangkan hasil, dan transkrip tentang apa yang telah dilakukannya.
+Agent bertindak antara langkah; chatbot hanya menjawab. Bezanya ialah agent mempunyai tool yang boleh dipanggil (tool ialah satu perkara yang dibenarkan untuk dilakukannya, seperti menyemak pesanan atau menghantar e-mel), gelung yang berterusan selepas tool memulangkan hasil, dan transkrip, iaitu rekod bertulis tentang apa yang telah dilakukannya.
 
-Anthropic menamakan lapisan yang menjalankan ini sebagai agent harness yang "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([dokumentasi Claude Code, dibaca 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Dua akibat untuk perniagaan kecil: agent boleh menyentuh sistem sebenar, dan harness, bukan model, menentukan apa yang dibenarkannya sentuh.
+Anthropic menamakan lapisan yang menjalankan ini sebagai agent harness, iaitu program yang memegang perbualan dan menjalankan tool, yang "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([dokumentasi Claude Code, dibaca 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Dua akibat untuk perniagaan kecil: agent boleh menyentuh sistem sebenar, dan harness, bukan model, menentukan apa yang dibenarkannya sentuh.
 
 ## Apa yang boleh dibuatnya tanpa penyeliaan?
 
@@ -1541,11 +1578,29 @@ Empat kategori, dan tiada prompt boleh mengubahnya.
 
 Dua bil, dan yang lebih kecil ialah yang orang risaukan.
 
-**Menjalankannya.** Kadar token diterbitkan, jadi ini aritmetik dan bukan tekaan. Pada 2,000 token input dan 500 output setiap tugasan, Claude Haiku 5.5 menelan `0.002 juta × USD 0.10 = USD 0.0002` untuk input tambah `0.0005 juta × USD 0.50 = USD 0.00025` untuk output, iaitu USD 0.00045 setiap tugasan. Pada kadar tengah Bank Negara **4.1145** (dibaca 19 November 2026), itu kira-kira RM0.00185. Seribu tugasan sebulan ialah **RM1.85**.
+**Menjalankannya.** Kadar token diterbitkan, jadi ini aritmetik dan bukan tekaan. Pada 2,000 token input dan 500 output setiap tugasan, Claude Haiku 5.5 menelan `0.002 juta × USD 0.10 = USD 0.0002` untuk input tambah `0.0005 juta × USD 0.50 = USD 0.00025` untuk output, iaitu USD 0.00045 setiap tugasan. Pada kadar tengah Bank Negara **4.1145** (dibaca 19 November 2026), itu kira-kira RM0.00185. Seribu tugasan sebulan ialah **RM1.85**, iaitu kurang daripada satu teh tarik.
 
 **Membinanya.** Penerbit Malaysia memetik harga projek untuk kerja automasi: **RM400** bagi pembinaan proses mudah ([Pang Jun Han, dibaca 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)) dan **RM6,000 lebih** bagi pelaksanaan tugasan autonomi ([Autoflow Solutions, dibaca 23 Nov 2026](https://www.autoflow-solutions.com/my/services)). Pembinaan aliran kerja permulaan daripada studio bermula pada **RM1,500** ([KodeSME, dibaca 23 Nov 2026](https://kodesme.klyihao.com/)).
 
 Jadi pembinaan beratus hingga beribu ringgit dan kos menjalankannya beberapa ringgit. Sesiapa yang memberi anda bil token bulanan yang besar untuk aliran kerja perniagaan kecil sama ada silap atau menjual sesuatu yang lain. Apa yang tidak dinyatakan oleh kad kadar ialah yuran sokongan bulanan selepas pelancaran, jadi tanyakan sebelum membandingkan sebut harga.
+
+## Apa yang patut dibuat minggu ini?
+
+Lima tindakan, tiada satu pun memerlukan pembelian atau pembangun.
+
+1. **Tulis tugasan pertama yang anda mahu automasikan**, dan apa maksud "selesai" baginya, dalam satu ayat.
+2. **Kira berapa kerap ia berlaku** selama seminggu, di atas kertas. Bawah lima kali sehari, kesnya lemah.
+3. **Senaraikan sistem yang disentuhnya** dan sama ada agent hanya membaca atau juga menulis.
+4. **Cari kegagalan yang akan menyakitkan**, dan tentukan sama ada manusia patut meluluskan sebelum ia berlaku.
+5. **Tanya dua pembekal enam semakan di bawah**, dan bandingkan jawapannya, bukan harganya.
+
+## Cuba sendiri
+
+Versi paling kecil yang boleh dijalankan ialah skrip yang membaca CSV e-mel sokongan, memanggil satu model bagi setiap baris, dan menulis draf balasan ke CSV kedua. Ia belum agent, dan itulah maksudnya: ia membuktikan gelung sebelum anda menambah tool.
+
+- **Apa yang diperlukan:** fail baris sampel, kunci API (rentetan yang mengenal pasti akaun anda kepada pembekal model), dan kira-kira 20 baris Python. Tiada server.
+- **Berapa kosnya:** pada 2,000 token input dan 500 output setiap baris, kira-kira **RM0.00185 sebaris**, jadi seratus baris kurang daripada 20 sen.
+- **Satu perkara yang akan menggigit anda:** model yang membaca lajur CSV akan tersalah tafsir sel kosong dan mencipta nama pelanggan. Log setiap baris input di sebelah outputnya, jika tidak anda akan menyahpepijat separuh yang salah.
 
 ## Bagaimana saya membezakan demo daripada yang terus berjalan?
 
@@ -1613,9 +1668,9 @@ Jurang yang wajar dibaca dua kali ialah antara RM3 juta dan RM5 juta. Pengecuali
 
 ## Apa yang sebenarnya diserahkan?
 
-e-Invoice ialah representasi digital bagi transaksi antara penjual dan pembeli, meliputi perniagaan-ke-perniagaan, perniagaan-ke-pengguna dan perniagaan-ke-kerajaan, dan ia dihantar kepada LHDN melalui sistem MyInvois.
+e-Invoice ialah versi digital dokumen yang dikeluarkan penjual, direkodkan dengan LHDN dan bukan sekadar difailkan dalam akaun anda sendiri, meliputi perniagaan-ke-perniagaan, perniagaan-ke-pengguna dan perniagaan-ke-kerajaan, dan ia dihantar kepada LHDN melalui sistem MyInvois.
 
-Empat jenis dokumen dinamakan dalam garis panduan: invois, nota kredit, nota debit dan nota bayaran balik. Ada dua laluan. Portal MyInvois ialah kemasukan manual oleh pembayar cukai. Laluan API didokumenkan untuk sistem ERP pembayar cukai, dalam kata-kata LHDN sendiri, untuk "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, dibaca 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Pengesahan berasingan untuk sistem pembayar cukai dan untuk sistem perantara yang bertindak bagi pihak pembayar cukai, dan ada langkah pengesahan TIN sebelum penyerahan.
+Empat jenis dokumen dinamakan dalam garis panduan: invois, nota kredit, nota debit dan nota bayaran balik. Ada dua laluan. Portal MyInvois ialah kemasukan manual oleh pembayar cukai. Laluan API didokumenkan untuk sistem ERP pembayar cukai, dalam kata-kata LHDN sendiri, untuk "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, dibaca 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Pengesahan berasingan untuk sistem pembayar cukai dan untuk sistem perantara yang bertindak bagi pihak pembayar cukai, dan ada langkah pengesahan TIN sebelum penyerahan. TIN ialah nombor pengenalan pembayar cukai yang dikeluarkan LHDN kepada perniagaan; API ialah sambungan yang digunakan perisian anda untuk menyerahkan dokumen kepada MyInvois tanpa sesiapa menaip semula.
 
 ![Empat langkah yang dilakukan mesin: bina dokumen daripada rekod anda, semak TIN, lulus lapan pengesah, hantar ke MyInvois. Di bawah, dua hasil: dalam 72 jam pembeli boleh menolak atau penjual membatalkan dan mengeluarkan semula; selepas 72 jam pembatalan ditutup dan pembetulan memerlukan nota kredit, debit atau bayaran balik](/figures/apa-yang-automasi-e-invoice-liputi.svg)
 *Empat langkah berjalan setiap penyerahan. Apa berlaku selepas kesilapan bergantung pada jam.*
@@ -1645,7 +1700,25 @@ Itu ada akibat praktikal untuk reka bentuk automasi: tool patut memerhati jam, b
 
 Garis panduan menyebut Seksyen 120 Akta Cukai Pendapatan 1967, dan ia tidak mencetak angka penalti pada mana-mana halaman yang dapat dibaca. Itu jurang, bukan perkara kecil: artikel ini tidak akan memetik penalti dalam ringgit, kerana tiada jumlah yang diterbitkan ditemui.
 
-Dua mekanisme bertarikh melembutkan pendedahan itu. Tempoh kelonggaran interim terpakai bagi setiap fasa, di mana pembayar cukai boleh mengeluarkan e-Invois konsolidasi bagi semua aktiviti dan e-Invois konsolidasi yang difakturkan sendiri tanpa dokumen bagi setiap transaksi, dan LHDN menyatakan ia tidak akan mendakwa di bawah Seksyen 120 sepanjang tempoh itu dengan syarat dipenuhi. Secara berasingan, program pengesahan sukarela (PKPS) berjalan dari **7 Julai 2026 hingga 31 Disember 2027** bagi pembayar cukai yang terlepas tarikh permulaan wajibnya, menggunakan versi dokumen PKPS 1.2 atau 1.3, dan meliputi semakan serta penguatkuasaan kecuali pendedahan itu melanggar syarat atau melibatkan penipuan, keingkaran sengaja atau kecuaian.
+Dua mekanisme bertarikh melembutkan pendedahan itu. Tempoh kelonggaran interim terpakai bagi setiap fasa, di mana pembayar cukai boleh mengeluarkan e-Invois konsolidasi bagi semua aktiviti dan e-Invois konsolidasi yang difakturkan sendiri tanpa dokumen bagi setiap transaksi, dan LHDN menyatakan ia tidak akan mendakwa di bawah Seksyen 120 sepanjang tempoh itu dengan syarat dipenuhi. Secara berasingan, program pengesahan sukarela, PKPS (Program Pengesahan Sukarela, tetingkap bagi pembayar cukai yang terlepas tarikh permulaan untuk tampil ke hadapan), berjalan dari **7 Julai 2026 hingga 31 Disember 2027** bagi pembayar cukai yang terlepas tarikh permulaan wajibnya, menggunakan versi dokumen PKPS 1.2 atau 1.3, dan meliputi semakan serta penguatkuasaan kecuali pendedahan itu melanggar syarat atau melibatkan penipuan, keingkaran sengaja atau kecuaian.
+
+## Apa yang patut dibuat minggu ini?
+
+Lima tindakan, tiada satu pun memerlukan pembelian.
+
+1. **Cari fasa anda** dalam jadual di atas mengikut jualan tahunan, dan tulis tarikh fasa anda bermula di sebelahnya.
+2. **Semak TIN anda aktif** sebelum apa-apa lagi: nombor pembayar cukai yang salah gagal pengesahan kemudian, bukan semasa menandatangani.
+3. **Eksport satu bulan invois** sebagai fail. Fail itu ialah input yang diperlukan mana-mana tool, dan mengetahui betapa bersepahnya ia membentuk sebut harga.
+4. **Tanya akauntan anda sama ada kelonggaran interim terpakai**, dan dapatkan jawapannya secara bertulis.
+5. **Pilih tiga invois yang anda keluarkan bulan lepas** dan latih soalan 72 jam: siapa yang akan perasan, dan berapa cepat?
+
+## Cuba sendiri
+
+Versi paling kecil yang boleh dijalankan ialah sandbox MyInvois: laman pembangun LHDN menyediakan sandbox untuk menguji API dan ralat pengesahannya, dan ia menyatakan portal pengeluaran tidak boleh digunakan di situ ([FAQ MyInvois SDK, dibaca 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/faq/)).
+
+- **Apa yang diperlukan:** log masuk sandbox daripada laman SDK LHDN, dokumen sampel, dan tool yang boleh menghantar JSON, iaitu teks berstruktur. Tiada perisian berbayar.
+- **Berapa kosnya:** tiada apa-apa pada sandbox. Tiada bayaran setiap penyerahan muncul pada mana-mana halaman LHDN yang dibaca untuk artikel ini, jadi kos pengeluaran ialah masa anda, bukan caj.
+- **Satu perkara yang akan menggigit anda:** pengesah tandatangan. Dokumen yang kelihatan betul kepada anda boleh gagal kerana tandatangan tiada atau cacat, dan teks ralat tidak selalu menyatakan medan mana yang menyebabkannya.
 
 ## Apa yang tidak dapat kami sahkan?
 
@@ -1680,6 +1753,7 @@ Mekanisme yang diterbitkan bagi permulaan yang terlepas ialah program pengesahan
 - LHDN, garis masa pelaksanaan e-Invois (dikemas kini 30 Ogos 2026) — https://www.hasil.gov.my/e-invois/pelaksanaan-e-invois-di-malaysia/garis-masa-pelaksanaan-e-invois/ (checked 2026-11-23)
 - MyInvois SDK, dokumentasi pembangun — https://sdk.myinvois.hasil.gov.my/ (checked 2026-11-23)
 - MyInvois SDK, peraturan pengesahan dokumen — https://sdk.myinvois.hasil.gov.my/document-validation-rules/ (checked 2026-11-23)
+- MyInvois SDK, FAQ (ketersediaan sandbox) — https://sdk.myinvois.hasil.gov.my/faq/ (checked 2026-11-23)
 - LHDN, Garis Panduan Spesifik e-Invois Versi 4.8 (penalti, kelonggaran, PKPS) — https://www.hasil.gov.my/e-invois/ (checked 2026-11-23)
 
 ## Agent harness, AI harness, agent framework: apa maksud istilah ini

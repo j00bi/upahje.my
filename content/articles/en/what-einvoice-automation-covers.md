@@ -20,6 +20,9 @@ sources:
   - title: "MyInvois SDK, document validation rules"
     url: "https://sdk.myinvois.hasil.gov.my/document-validation-rules/"
     checked: 2026-11-23
+  - title: "MyInvois SDK, FAQ (sandbox availability)"
+    url: "https://sdk.myinvois.hasil.gov.my/faq/"
+    checked: 2026-11-23
   - title: "LHDN, Garis Panduan Spesifik e-Invois Versi 4.8 (penalties, relaxation, PKPS)"
     url: "https://www.hasil.gov.my/e-invois/"
     checked: 2026-11-23
@@ -48,9 +51,9 @@ The gap worth reading twice is between RM3 million and RM5 million. The exemptio
 ![Four steps the machine performs: build the document from your records, check the TIN, pass eight validators, submit to MyInvois. Below, two outcomes: within 72 hours a buyer may reject or a seller cancel and reissue; after 72 hours cancellation is closed and a correction needs a credit, debit or refund note](/figures/what-einvoice-automation-covers.svg)
 *Four steps run every submission. What happens after a mistake depends on the clock.*
 
-An e-Invoice is the digital representation of a transaction between seller and buyer, covering business-to-business, business-to-consumer and business-to-government, and it goes to LHDN through the MyInvois system.
+An e-Invoice is the digital version of the document a seller issues, recorded with LHDN rather than only filed in your own accounts, covering business-to-business, business-to-consumer and business-to-government, and it goes to LHDN through the MyInvois system.
 
-Four document types are named in the guideline: invoice, credit note, debit note and refund note. Two routes exist. The MyInvois Portal is manual entry by the taxpayer. The API route is documented for taxpayer ERP systems, in LHDN's own words, to "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, read 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Authentication is separate for taxpayer systems and for intermediary systems acting on a taxpayer's behalf, and there is a TIN validation step available before submission.
+Four document types are named in the guideline: invoice, credit note, debit note and refund note. Two routes exist. The MyInvois Portal is manual entry by the taxpayer. The API route is documented for taxpayer ERP systems, in LHDN's own words, to "integrate with MyInvois System to automate the document processing" ([MyInvois SDK, read 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/)). Authentication is separate for taxpayer systems and for intermediary systems acting on a taxpayer's behalf, and there is a TIN validation step available before submission. TIN is the taxpayer identification number LHDN issues to a business; the API is the connection your software uses to hand a document to MyInvois without anyone retyping it.
 
 ## What can be automated?
 
@@ -77,7 +80,25 @@ That has a practical consequence for automation design: the tool should watch th
 
 The guidelines cite Section 120 of the Income Tax Act 1967, and they do not print a penalty figure on any page that could be read. That is a gap, not a small detail: this article will not quote a ringgit penalty, because no published amount was found.
 
-Two dated mechanisms do soften the exposure. An interim relaxation period applies per phase, during which taxpayers may issue consolidated e-Invoices for all activities and consolidated self-billed e-Invoices without a document per transaction, and LHDN states it will not prosecute under Section 120 during that period provided the conditions are met. Separately, the voluntary disclosure programme runs from **7 July 2026 to 31 December 2027** for taxpayers who missed their mandatory start date, using document versions PKPS 1.2 or 1.3, and covers reviews and enforcement unless the disclosure breaches requirements or involves fraud, wilful default or negligence.
+Two dated mechanisms do soften the exposure. An interim relaxation period applies per phase, during which taxpayers may issue consolidated e-Invoices for all activities and consolidated self-billed e-Invoices without a document per transaction, and LHDN states it will not prosecute under Section 120 during that period provided the conditions are met. Separately, the voluntary disclosure programme, PKPS (Program Pengesahan Sukarela, a window for taxpayers who missed their start date to come forward), runs from **7 July 2026 to 31 December 2027** for taxpayers who missed their mandatory start date, using document versions PKPS 1.2 or 1.3, and covers reviews and enforcement unless the disclosure breaches requirements or involves fraud, wilful default or negligence.
+
+## What to do this week?
+
+Five actions, none of which needs a purchase.
+
+1. **Find your band** in the table above by your annual sales, and write the date your phase started next to it.
+2. **Check your TIN is live** before anything else: a wrong taxpayer number fails validation later, not at signing.
+3. **Export one month of invoices** as a file. That file is the input any tool will need, and knowing how bad it is shapes the quote.
+4. **Ask your accountant whether the interim relaxation applies to you**, and get the answer in writing.
+5. **Pick three invoices you issued last month** and rehearse the 72-hour question: who would have noticed, and how fast?
+
+## Try it yourself
+
+The smallest runnable version is the MyInvois sandbox: LHDN's developer site runs a sandbox where the APIs and their validation errors can be exercised, and it states that the production portal cannot be used there ([MyInvois SDK FAQ, read 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/faq/)).
+
+- **What it needs:** a sandbox login from LHDN's SDK site, a sample document, and a tool that can POST JSON, which is just structured text. No paid software.
+- **What it costs:** nothing on the sandbox. No per-submission fee appears on any LHDN page read for this article, so the production cost is your time, not a charge.
+- **The one thing that will bite you:** the signature validator. A document that looks correct to you can fail because the signature is missing or malformed, and the error text does not always say which field caused it.
 
 ## What could we not verify?
 
