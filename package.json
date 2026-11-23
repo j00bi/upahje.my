@@ -11,12 +11,13 @@
     "db:migrate": "prisma migrate dev",
     "db:seed": "prisma db seed",
     "db:reset": "prisma migrate reset",
-    "prebuild": "node scripts/generate-llms.mjs",
+    "prebuild": "node scripts/generate-llms.mjs && node scripts/generate-feeds.mjs",
     "articles:llms": "node scripts/generate-llms.mjs",
     "articles:check": "node scripts/check-articles.mjs",
     "verify:content": "node scripts/verify-content.mjs",
     "test:faq-boundary": "node scripts/test-faq-boundary.mjs",
-    "indexnow": "node scripts/indexnow.mjs"
+    "indexnow": "node scripts/indexnow.mjs",
+    "feeds": "node scripts/generate-feeds.mjs"
   },
   "dependencies": {
     "@prisma/client": "^5.13.0",

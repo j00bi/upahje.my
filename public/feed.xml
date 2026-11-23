@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>English — UpahJe.my</title>
+    <link>https://upahje.my/en</link>
+    <description>Plain, sourced answers about technology for Malaysian small businesses.</description>
+    <language>en-MY</language>
+    <atom:link href="https://upahje.my/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>What an AI agent can and cannot do for a Malaysian SME</title>
+      <link>https://upahje.my/en/articles/what-an-ai-agent-can-do</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/what-an-ai-agent-can-do</guid>
+      <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
+      <description>An AI agent runs a loop on its own: it reads a task, calls tools, checks the result and repeats. What that covers unattended, what needs a human signature, and what no agent should touch.</description>
+    </item>
+    <item>
+      <title>What e-Invoice automation covers, and what stays with a person</title>
+      <link>https://upahje.my/en/articles/what-einvoice-automation-covers</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/what-einvoice-automation-covers</guid>
+      <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Since 1 January 2026 every band is in force, and the RM3m to RM5m gap is in scope. What an automated submission does, what the 72-hour window changes, and which decisions no tool should take.</description>
+    </item>
+    <item>
+      <title>Agent harness, AI harness, agent framework: what the words mean</title>
+      <link>https://upahje.my/en/articles/agent-harness-vs-ai-harness</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/agent-harness-vs-ai-harness</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>An agent harness runs the agent loop: it executes tool calls, holds the transcript, applies permissions. Vendors say agent harness. AI harness is not a term they use. A table of who says what.</description>
+    </item>
+    <item>
+      <title>Agent harnesses ranked: four CLIs installed on one machine</title>
+      <link>https://upahje.my/en/articles/agent-harnesses-ranked</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/agent-harnesses-ranked</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>DeepSeek Harness, Claude Code, Codex CLI and OpenCode installed on one machine, scored 1-5 on five weighted criteria using only what we could read from each on 19 November 2026.</description>
+    </item>
+    <item>
+      <title>What automation work costs in Malaysia: published rates, six sources</title>
+      <link>https://upahje.my/en/articles/automation-rates-malaysia-published</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/automation-rates-malaysia-published</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Four Malaysian studios, one independent practitioner and one freelance profile: 30 published prices for automation and integration work, checked 19 November 2026 except one page read on 27 October 2026. Several source pages carry no publication date, so a price may be older than this article.</description>
+    </item>
+    <item>
+      <title>Claude, ChatGPT, Gemini and Grok: what actually differs between the closed models</title>
+      <link>https://upahje.my/en/articles/closed-models-differences</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/closed-models-differences</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Not the benchmark score, which no current leaderboard here can settle. What you are stuck with: context window, price per token and the documented capabilities. Every cell sourced or marked not captured, and where the terms pages were not opened, the article says so.</description>
+    </item>
+    <item>
+      <title>Do you need an API, or just a spreadsheet?</title>
+      <link>https://upahje.my/en/articles/do-you-need-an-api-or-a-spreadsheet</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/do-you-need-an-api-or-a-spreadsheet</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>A spreadsheet wins at low volume with one owner; an API wins when two systems must stay in sync without anyone copying. The three cases where a sheet is right, and the four signals it has stopped scaling.</description>
+    </item>
+    <item>
+      <title>Where your API key goes in a harness, and where it must never go</title>
+      <link>https://upahje.my/en/articles/harness-api-keys</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/harness-api-keys</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>A harness reads your key from an environment variable or its credential store when it calls the provider. What the key authenticates, the four places it must never appear, and what to do when it leaks.</description>
+    </item>
+    <item>
+      <title>Agent harnesses: who makes them, and what is actually open source</title>
+      <link>https://upahje.my/en/articles/harness-landscape-open-closed</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/harness-landscape-open-closed</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Grok Bot and Dots are closed hosted products. OpenBot and MausBot are source-available projects, and only one of them is open source on its own licence. A table with the licence and the evidence level on every row.</description>
+    </item>
+    <item>
+      <title>How to brief an automation job so you don't pay twice</title>
+      <link>https://upahje.my/en/articles/how-to-brief-an-automation-job</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/how-to-brief-an-automation-job</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Five things a freelancer needs before quoting, a reusable brief template, and the acceptance test to agree before work starts. Written for a Malaysian SME buying automation for the first time.</description>
+    </item>
+    <item>
+      <title>Open-weight models: Qwen, DeepSeek, Mistral and Kimi, and what the licence lets you do</title>
+      <link>https://upahje.my/en/articles/open-models-differences</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/open-models-differences</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Four open-weight families, five model cards, four licence shapes. MIT on DeepSeek, a custom Qwen licence, Mistral's own open-weight licence. What each permits and what the model costs to rent.</description>
+    </item>
+    <item>
+      <title>Open or closed models: what a Malaysian SME can actually run in-house</title>
+      <link>https://upahje.my/en/articles/open-vs-closed-models-malaysia</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/open-vs-closed-models-malaysia</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>An open-weight model can be downloaded and run on hardware you control. What that costs per month in Malaysia, the volume where it beats paying per call, and the skills it needs.</description>
+    </item>
+    <item>
+      <title>What RM100 a month buys you in AI, in Malaysia</title>
+      <link>https://upahje.my/en/articles/rm100-budget</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/rm100-budget</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>RM100 is either a seat in a subscription app or a meter of API tokens, never both. The conversion at Bank Negara's 19 November 2026 rate, three worked usage levels, and the line where tokens win.</description>
+    </item>
+    <item>
+      <title>Five side-income skills in Malaysia that actually pay in 2026</title>
+      <link>https://upahje.my/en/articles/side-income-skills-malaysia-2026</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/side-income-skills-malaysia-2026</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing. Rates, counts and dates from 11 listings.</description>
+    </item>
+    <item>
+      <title>What an agent harness is, and what it does with your request</title>
+      <link>https://upahje.my/en/articles/using-the-harness</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/using-the-harness</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>A harness sits between you and the model: it holds the conversation, runs the tools, sends each request and streams the answer. What one message looks like inside DeepSeek Harness 0.2.2-rc.1.</description>
+    </item>
+    <item>
+      <title>What is an API, explained for a Malaysian small business owner</title>
+      <link>https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme</guid>
+      <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
+      <description>An API is a contract that lets two systems exchange data without a human copying it across. What it means for a Malaysian SME, open versus closed models, and the real cost of wiring one up.</description>
+    </item>
+  </channel>
+</rss>
