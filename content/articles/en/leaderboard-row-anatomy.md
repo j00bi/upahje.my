@@ -33,7 +33,7 @@ sources:
 
 # What a leaderboard row actually measures
 
-Five things, and the score is only one of them: the model, the agent that drove it, the settings, the score, and the cost. Read the first two before the number. The Terminal-bench row for DeepSeek reads 38.5% ± 3.8% under **Claude Code**, with 8.2 billion tokens, which makes it a DeepSeek model's result inside someone else's harness.
+Five things, and the score is only one of them: the model, the agent that drove it, the settings, the score, and the cost. Read the first two before the number. The Terminal-bench row for DeepSeek reads 38.5% ± 3.8% under Claude Code, with 8.2 billion tokens, which makes it a DeepSeek model's result inside someone else's harness.
 
 ## What is in a leaderboard row?
 

@@ -30,7 +30,7 @@ sources:
 
 # What a WhatsApp chatbot costs in Malaysia, per message and per month
 
-Meta charges per delivered message, in ringgit, on a published card: a marketing message is **RM0.3467**, and utility, authentication and service messages are **RM0.0564** each, with the first **1,000 service messages per business phone number per month free**. A Malaysian vendor then charges roughly **RM200 to RM1,500 a month** to run the bot. The 24-hour window decides which of Meta's two prices applies to a given reply.
+Meta charges per delivered message, in ringgit, on a published card: a marketing message is RM0.3467, and utility, authentication and service messages are RM0.0564 each, with the first 1,000 service messages per business phone number per month free. A Malaysian vendor then charges roughly RM200 to RM1,500 a month to run the bot. The 24-hour window decides which of Meta's two prices applies to a given reply.
 
 ## How does Meta charge for WhatsApp messages?
 

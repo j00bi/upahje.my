@@ -5,7 +5,7 @@ slug: what-einvoice-automation-covers
 translationKey: what-einvoice-automation-covers
 format: explainer
 reader: all
-date: 2026-11-22
+date: 2026-11-23
 updated: 2026-11-23
 author: "UpahJe editorial"
 category: buying-guides

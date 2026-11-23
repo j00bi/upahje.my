@@ -33,7 +33,7 @@ sources:
 
 # Apa yang sebenarnya diukur oleh satu baris papan pendahulu
 
-Lima perkara, dan skor hanyalah satu: model, agent yang memandunya, tetapan, skor, dan kos. Baca dua yang pertama sebelum angka. Baris Terminal-bench bagi DeepSeek berbunyi 38.5% ± 3.8% di bawah **Claude Code**, dengan 8.2 bilion token, jadi ia hasil model DeepSeek di dalam harness orang lain.
+Lima perkara, dan skor hanyalah satu: model, agent yang memandunya, tetapan, skor, dan kos. Baca dua yang pertama sebelum angka. Baris Terminal-bench bagi DeepSeek berbunyi 38.5% ± 3.8% di bawah Claude Code, dengan 8.2 bilion token, jadi ia hasil model DeepSeek di dalam harness orang lain.
 
 ## Apa yang ada dalam satu baris papan pendahulu?
 
