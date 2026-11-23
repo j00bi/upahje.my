@@ -121,13 +121,26 @@ Tiada cara jujur untuk menghasilkan semula papan pendahulu. Yang boleh anda hasi
 
 Ambil satu tugasan, jalankannya dalam satu harness, dan catat lima medan yang sama seperti papan cetak: model, agent, tetapan, skor (adakah ujian lulus), dan kos dalam token atau ringgit. Itu penanda aras anda, ia setara dengan dirinya bulan depan, dan ia tidak bergantung pada halaman pemasaran sesiapa.
 
-Kod keluar akan mengelirukan anda. Larian yang keluar dengan 0 tanpa menulis fail kelihatan lulus dalam setiap log anda. Periksa artifaknya, setiap kali.
+Satu perkara yang akan menggigit anda ialah kod keluar. Larian yang keluar dengan 0 tanpa menulis fail kelihatan lulus dalam setiap log anda. Periksa artifaknya, setiap kali.
 
-## Apa yang tidak dapat kami sahkan?
+## Apa yang diterbitkan oleh perbandingan itu?
 
-Benang X yang membandingkan ketiga-tiga lengan masih ada, tetapi halaman hasilnya di `nazzysar.github.io/deepseek-bench` memulangkan 404, begitu juga akar akaun itu. Teks benang itu sendiri menyatakan larian CommandCode "failed on me after many retries". Tiada skor, kos atau tempoh muncul dalam teks benang, jadi perbandingan itu tidak boleh dibina semula daripada apa yang tinggal.
+Tiga demo interaktif untuk Pusingan 1, dan tiada angka. Halaman arkib, petikan 25 Oktober 2026, menyenaraikan DeepSeek Platform, OpenCode Go dan CommandCode GOAT, setiap satu sebagai laluan demo di bawah konsep vivarium: "A Closed Ecology", "Abyssal Vivarium", "Vivarium Nº 7" ([arkib, dibaca 23 Nov 2026](https://web.archive.org/web/20261025232027/https://nazzysar.github.io/deepseek-benchmarks/)).
 
-Nota keluaran DeepSeek sendiri menunjukkan carta bertajuk "DeepSWE v1.1 Pass@1 vs. cost per task", diuji dengan harness mini-swe-v2, dan tidak mencetak nilai angka dalam teks halaman. Dan yuran pemprosesan CommandCode dicetak tanpa angka pada setiap tier berbayar.
+Katalog itu ialah buktinya. Setiap entri membawa tajuk, penerangan, laluan dan tone, dan tiada apa-apa lagi: tiada skor, tempoh, kiraan token atau kos. Sebab itulah memuatkan ketiga-tiganya tidak boleh menentukan kelajuan atau harga untuk anda.
+
+Demo menentukan dua perkara. Sama ada ia berjalan dalam pelayar anda, dan sama ada anda suka hasilnya. Ia tidak menentukan skor, kos, token atau kebolehpercayaan, kerana tiada satu pun daripada itu diterbitkan.
+
+Angka yang ada pada kami, setiap satu dengan asalnya:
+
+| Angka | Apa maksudnya | Asal |
+| --- | --- | --- |
+| 38.5% ± 3.8% | DeepSeek V4.1 Flash 1017 (max), di bawah Claude Code, Terminal-bench 4.1 | Papan pendahulu Terminal-bench, dibaca 23 Nov 2026 |
+| $10/bulan GOAT + yuran pemprosesan | Sehingga $100 kredit, tier CommandCode seperti dicetak | Halaman harga vendor, dibaca 23 Nov 2026 |
+| $10/bulan Go, agent di bawah MIT | Langganan pilihan OpenCode, dan lesen agent itu | Dokumentasi vendor dan repositori, dibaca 23 Nov 2026 |
+| 95.4 s, 10 turn, 14 tool call, 3/3 ujian | Satu larian `dsh` pada satu tugasan, dua fail ditulis | Ukuran kami, 23 Nov 2026 |
+
+Dua angka masih tiada, dan kedua-duanya sempit. Nota keluaran DeepSeek mencetak carta tanpa nilai dalam teks halaman, dan yuran pemprosesan CommandCode tiada angka pada mana-mana halaman yang dibaca.
 
 **Baca seterusnya**
 

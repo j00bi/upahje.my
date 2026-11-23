@@ -121,13 +121,26 @@ There is no honest way to reproduce a leaderboard. What you can reproduce is you
 
 Take one task, run it in one harness, and write down the same five fields the boards print: the model, the agent, the settings, the score (did the tests pass), and the cost in tokens or ringgit. That is your benchmark, it is comparable to itself next month, and it does not depend on anyone's marketing page.
 
-The exit code will mislead you. A run that exits 0 without writing files looks like a pass in every log you have. Check the artefact, every time.
+The one thing that will bite you is the exit code. A run that exits 0 without writing files looks like a pass in every log you have. Check the artefact, every time.
 
-## What could we not verify?
+## What did the comparison publish?
 
-The X thread that compared all three arms survives, but its results page at `nazzysar.github.io/deepseek-bench` returns 404, and so does the account root. The thread's own text says the CommandCode run "failed on me after many retries". No scores, costs or durations appear in the thread text, so the comparison cannot be reconstructed from what remains.
+Three interactive demos for Round 1, and no numbers. The archived page, snapshot 25 October 2026, lists DeepSeek Platform, OpenCode Go and CommandCode GOAT, each as a demo path under a vivarium conceit: "A Closed Ecology", "Abyssal Vivarium", "Vivarium Nº 7" ([archive, read 23 Nov 2026](https://web.archive.org/web/20261025232027/https://nazzysar.github.io/deepseek-benchmarks/)).
 
-DeepSeek's own release note shows a chart titled "DeepSWE v1.1 Pass@1 vs. cost per task", tested with the mini-swe-v2 harness, and prints no numeric values in the page text. And CommandCode's processing fee is printed without a figure on every paid tier.
+The catalog is the evidence. Each entry carries a title, a description, a path and a tone, and nothing else: no score, duration, token count or cost. That is why loading all three cannot settle speed or price for you.
+
+A demo settles two things. Whether the thing runs in your browser, and whether you like what it made. It does not settle score, cost, tokens or reliability, because none of those was published.
+
+The figures we do have, each with where it came from:
+
+| Figure | What it says | Provenance |
+| --- | --- | --- |
+| 38.5% ± 3.8% | DeepSeek V4.1 Flash 1017 (max), under Claude Code, Terminal-bench 4.1 | Terminal-bench leaderboard, read 23 Nov 2026 |
+| $10/month GOAT + processing fee | Up to $100 in credits, CommandCode's tier as printed | Vendor pricing page, read 23 Nov 2026 |
+| $10/month Go, agent under MIT | OpenCode's optional subscription, and the agent's licence | Vendor docs and repository, read 23 Nov 2026 |
+| 95.4 s, 10 turns, 14 tool calls, 3/3 tests | One `dsh` run on one task, two files written | Our measurement, 23 Nov 2026 |
+
+Two numbers are still absent, and both are narrow. DeepSeek's release note prints a chart with no values in the page text, and CommandCode's processing fee has no figure on any page read.
 
 **Read next**
 
@@ -149,6 +162,6 @@ No. Different benchmark, different agent, different task set. The two numbers do
 
 Because its newest visible run is dated 23 August 2025. A stale board cannot say anything about a 2026 model, and citing it would be worse than leaving it out.
 
-### How do I check a coding-agent demo before trusting it?
+### What is the one thing to check before trusting a coding-agent demo?
 
 Whether files were written and tests passed, not whether the command exited 0. Our own run showed two harnesses exiting cleanly without writing anything.
