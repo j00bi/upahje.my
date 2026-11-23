@@ -8,13 +8,14 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 - [Definitions](https://upahje.my/en/articles/category/definitions): The words on a job post, a contract or a payslip, defined plainly. (6 articles)
 - [Definisi](https://upahje.my/ms/articles/category/definitions): Istilah dalam iklan kerja, kontrak atau slip gaji, dijelaskan dengan mudah. (6 articles)
-- [Buying guides](https://upahje.my/en/articles/category/buying-guides): How to scope, compare and pay for local tech work. (9 articles)
-- [Panduan membeli](https://upahje.my/ms/articles/category/buying-guides): Cara menentu skop, membanding dan membayar kerja teknologi tempatan. (9 articles)
+- [Buying guides](https://upahje.my/en/articles/category/buying-guides): How to scope, compare and pay for local tech work. (10 articles)
+- [Panduan membeli](https://upahje.my/ms/articles/category/buying-guides): Cara menentu skop, membanding dan membayar kerja teknologi tempatan. (10 articles)
 - [Side income](https://upahje.my/en/articles/category/side-income): Turning a skill into a second income, step by step. (1 article)
 - [Pendapatan sampingan](https://upahje.my/ms/articles/category/side-income): Menukar kemahiran menjadi pendapatan kedua, langkah demi langkah. (1 article)
 
 ## English articles
 
+- [CommandCode, OpenCode, DeepSeek: what the published numbers actually measure](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers): No leaderboard runs CommandCode or OpenCode as the agent. SWE-bench and Terminal-bench score a model inside someone else's harness, so a head-to-head between two CLIs is a category error.
 - [What an AI agent can and cannot do for a Malaysian SME](https://upahje.my/en/articles/what-an-ai-agent-can-do): An AI agent runs a loop on its own: it reads a task, calls tools, checks the result and repeats. What that covers unattended, what needs a human signature, and what no agent should touch.
 - [What e-Invoice automation covers, and what stays with a person](https://upahje.my/en/articles/what-einvoice-automation-covers): Since 1 January 2026 every band is in force, and the RM3m to RM5m gap is in scope. What an automated submission does, what the 72-hour window changes, and which decisions no tool should take.
 - [Agent harness, AI harness, agent framework: what the words mean](https://upahje.my/en/articles/agent-harness-vs-ai-harness): An agent harness runs the agent loop: it executes tool calls, holds the transcript, applies permissions. Vendors say agent harness. AI harness is not a term they use. A table of who says what.
@@ -36,6 +37,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 - [Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat): AI agent menjalankan gelung sendiri: ia membaca tugasan, memanggil tool, menyemak hasil dan mengulang. Apa yang diliputi tanpa penyeliaan, apa yang perlukan tandatangan manusia, dan apa yang tidak patut disentuh.
 - [Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi): Sejak 1 Januari 2026 semua fasa berkuat kuasa, dan jurang RM3 juta hingga RM5 juta termasuk dalam skop. Apa yang dilakukan oleh penyerahan automatik, apa yang diubah oleh tetingkap 72 jam, dan keputusan mana yang tidak patut diambil oleh tool.
+- [CommandCode, OpenCode, DeepSeek: apa sebenarnya yang diukur oleh angka yang diterbitkan](https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka): Tiada papan pendahulu menjalankan CommandCode atau OpenCode sebagai agent. SWE-bench dan Terminal-bench menilai model di dalam harness orang lain, jadi perbandingan antara dua CLI ialah kesilapan kategori.
 - [Agent harness, AI harness, agent framework: apa maksud istilah ini](https://upahje.my/ms/articles/agent-harness-atau-ai-harness): Agent harness menjalankan gelung agent: ia melaksanakan tool call, menyimpan transkrip, menguatkuasakan kebenaran. Vendor menulis agent harness. AI harness bukan istilah yang mereka guna.
 - [Apa itu agent harness, dan apa yang dilakukannya dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness): Harness berada antara anda dan model: ia menyimpan perbualan, menjalankan tools, menghantar permintaan dan menstrim jawapan. Rupa satu mesej di dalam DeepSeek Harness 0.2.2-rc.1.
 - [Apa itu API, dijelaskan untuk pemilik perniagaan kecil Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia): API ialah kontrak antara dua sistem untuk bertukar data tanpa perlu ada orang menyalinnya. Apa maksudnya bagi PKS, beza model terbuka dengan tertutup, dan kos sebenar menyambungkannya.
