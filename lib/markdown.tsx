@@ -176,11 +176,27 @@ export function Markdown({ source }: { source: string }): ReactNode {
         quote.push(lines[i].replace(/^>\s?/, ''))
         i += 1
       }
-      blocks.push(
-        <blockquote key={key++} className={QUOTE}>
-          {renderInline(quote.join(' '), `q${key}`)}
-        </blockquote>,
-      )
+      const text = quote.join(' ').trim()
+      const special = text.match(/^\*\*(takeaway|callout)(?::\*\*|\*\*:)\s*([\s\S]*)$/i)
+      if (special) {
+        const kind = special[1].toLowerCase()
+        blocks.push(
+          <aside
+            key={key++}
+            className={`editorial-block editorial-${kind}`}
+            aria-label={kind === 'takeaway' ? 'Takeaway' : 'Note'}
+          >
+            <p className="type-label" style={{ color: 'var(--ui-muted)' }}>{kind === 'takeaway' ? 'Takeaway' : 'Note'}</p>
+            <p className="type-body mt-2">{renderInline(special[2].trim(), `q${key}`)}</p>
+          </aside>,
+        )
+      } else {
+        blocks.push(
+          <blockquote key={key++} className={QUOTE}>
+            {renderInline(text, `q${key}`)}
+          </blockquote>,
+        )
+      }
       continue
     }
 
