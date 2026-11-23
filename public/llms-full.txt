@@ -57,7 +57,7 @@ Four categories, and no amount of prompting changes them.
 
 ## What does it cost in ringgit?
 
-Two bills, and the smaller one is the one people worry about.
+Two bills. The smaller one gets the attention.
 
 **Running it.** Token rates are published, so this is arithmetic rather than a guess. At 2,000 input and 500 output tokens per task, Claude Haiku 5.5 costs `0.002 million × USD 0.10 = USD 0.0002` for input plus `0.0005 million × USD 0.50 = USD 0.00025` for output, which is USD 0.00045 a task. At the Bank Negara middle rate of **4.1145** (read 19 November 2026), that is about RM0.00185. A thousand tasks a month is **RM1.85**. A teh tarik at a mamak is RM2 to RM3, which is our own comparison, not a published index.
 
@@ -77,15 +77,15 @@ Five actions, none of which needs a purchase or a developer.
 
 ## Try it yourself
 
-The smallest runnable version is a script that reads a CSV of support emails, calls one model per row, and writes a draft reply into a second CSV. It is not an agent yet, and that is the point: it proves the loop before you add tools.
+The smallest runnable version is a script that reads a CSV of support emails, calls one model per row, and writes a draft reply into a second CSV. It is not an agent yet. That is deliberate, because it proves the loop before you add tools.
 
 - **What it needs:** a file of sample rows, an API key (a string that identifies your account to the model provider), and about 20 lines of Python. No server.
 - **What it costs:** at 2,000 input and 500 output tokens per row, about **RM0.00185 a row**, so a hundred rows is under 20 sen.
-- **The one thing that will bite you:** a model reading a CSV column will happily mis-parse an empty cell and invent a customer name. Log every input row beside its output, or you will debug the wrong half.
+- **Where it breaks first:** a model reading a CSV column will happily mis-parse an empty cell and invent a customer name. Log every input row beside its output, or you will debug the wrong half.
 
 ## How do I tell a demo from something that keeps running?
 
-A demo works once, in front of you. Something that keeps running survives a bad day. Six checks, and the answers are things, not adjectives.
+A demo works once, in front of you. Something that keeps running survives a bad day. Six checks. Each answer should be a thing someone can show you.
 
 1. **Show me the transcript.** A working agent records what it did, step by step. If there is no log, there is no evidence it ran.
 2. **What happens when a step fails?** Retry, queue or alert. Silence is not an answer.
@@ -148,7 +148,7 @@ The bands below are LHDN's own, from a timeline page that states its update date
 
 Now look at the gap between RM3 million and RM5 million. The exemption stops below RM3 million and phase 4 runs up to RM5 million, so a business turning over RM4 million is in scope. Two lines on the same page, read together.
 
-## What is actually submitted?
+## What gets submitted?
 
 ![Four steps the machine performs: build the document from your records, check the TIN, pass eight validators, submit to MyInvois. Below, two outcomes: within 72 hours a buyer may reject or a seller cancel and reissue; after 72 hours cancellation is closed and a correction needs a credit, debit or refund note](/figures/what-einvoice-automation-covers.svg)
 *Four steps run every submission. What happens after a mistake depends on the clock.*
@@ -180,11 +180,11 @@ The tool therefore has to watch the clock, not only the submission. An integrati
 
 ## What happens if you get it wrong?
 
-The guidelines cite Section 120 of the Income Tax Act 1967, and they do not print a penalty figure on any page that could be read. That is a gap, not a small detail: this article will not quote a ringgit penalty, because no published amount was found.
+The guidelines cite Section 120 of the Income Tax Act 1967, and they do not print a penalty figure on any page that could be read. So this article will not quote a ringgit penalty. No published amount was found.
 
 Two dated mechanisms do soften the exposure. An interim relaxation period applies per phase, during which taxpayers may issue consolidated e-Invoices for all activities and consolidated self-billed e-Invoices without a document per transaction, and LHDN states it will not prosecute under Section 120 during that period provided the conditions are met. Separately, the voluntary disclosure programme, PKPS (Program Pengesahan Sukarela, a window for taxpayers who missed their start date to come forward), runs from **7 July 2026 to 31 December 2027** for taxpayers who missed their mandatory start date, using document versions PKPS 1.2 or 1.3, and covers reviews and enforcement unless the disclosure breaches requirements or involves fraud, wilful default or negligence.
 
-## What to do this week?
+## Do these five things first
 
 Five actions, none of which needs a purchase.
 
@@ -194,13 +194,9 @@ Five actions, none of which needs a purchase.
 4. **Ask your accountant whether the interim relaxation applies to you**, and get the answer in writing.
 5. **Pick three invoices you issued last month** and rehearse the 72-hour question: who would have noticed, and how fast?
 
-## Try it yourself
+## The cheapest place to start
 
-The smallest runnable version is the MyInvois sandbox: LHDN's developer site runs a sandbox where the APIs and their validation errors can be exercised, and it states that the production portal cannot be used there ([MyInvois SDK FAQ, read 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/faq/)).
-
-- **What it needs:** a sandbox login from LHDN's SDK site, a sample document, and a tool that can POST JSON, which is just structured text. No paid software.
-- **What it costs:** nothing on the sandbox. No per-submission fee appears on any LHDN page read for this article, so the production cost is your time, not a charge.
-- **The one thing that will bite you:** the signature validator. A document that looks correct to you can fail because the signature is missing or malformed, and the error text does not always say which field caused it.
+For a tinkerer, the MyInvois sandbox is the smallest thing that runs: LHDN's developer site runs a sandbox where the APIs and their validation errors can be exercised, and a sample XML or JSON document comes back with the validator that failed. You need a sandbox login from the SDK site and something that can POST JSON, which is structured text, so curl or a ten-line script will do. It costs nothing to try, and no per-submission fee appears on any LHDN page read for this article. Expect the signature validator to stop you first. A document that looks right to you fails when the signature is missing or malformed, and the error text often does not name the offending field.
 
 ## What could we not verify?
 
@@ -428,7 +424,7 @@ Published prices for automation work in Malaysia run from RM400 for a simple pro
 
 The figures below come from pricing pages of Malaysian automation providers and from one Malaysian freelance profile. Every row carries the date it was read: 19 November 2026 for the studio and platform pages, and 27 October 2026 for the independent practitioner's page.
 
-What could not be read matters as much. The global marketplaces are unmeasured here: Upwork returns HTTP 403 with a Cloudflare block, Fiverr returns a bot challenge, Jobstreet returns a Cloudflare interstitial, and Indeed and Maukerja render their listings only in JavaScript. Not one Upwork or Fiverr profile rate could be collected, so nothing here should be read as what a globally-priced freelancer charges. These bands describe the local published-supply layer: agencies with a price list, and one marketplace profile with an hourly rate.
+The global marketplaces are unmeasured here. Upwork returns HTTP 403 with a Cloudflare block, Fiverr returns a bot challenge, Jobstreet returns a Cloudflare interstitial, and Indeed and Maukerja render their listings only in JavaScript. Not one Upwork or Fiverr profile rate could be collected, so nothing here should be read as what a globally-priced freelancer charges. These bands describe the local published-supply layer: agencies with a price list, and one marketplace profile with an hourly rate.
 
 Two further exclusions. Every "quote on request" tier is excluded, because a quote is not a rate. Freelancer.com profiles that price in USD are excluded, even where the person is Malaysian, because the number is not a Malaysian price.
 
@@ -467,7 +463,7 @@ Per project, published prices run from RM400 for a simple process build at Pang 
 
 No Malaysian publisher in this set states a per-integration price, so no per-integration market rate is claimed here. What is published is subscription tiers that include connectors and API integration.
 
-That limit is real. The one build price that names integration work in the deliverable is a 3 to 5 workflow project from RM4,000. KodeSME's custom tier advertises integrations with existing systems and prices them as "Quote". BlueAura describes a one-time implementation fee without a number. A buyer asking "what does one API integration cost in Malaysia" will not get an answer from published pages, and this article will not invent one.
+No Malaysian publisher in this set prices one integration. The one build price that names integration work in the deliverable is a 3 to 5 workflow project from RM4,000. KodeSME's custom tier advertises integrations with existing systems and prices them as "Quote". BlueAura describes a one-time implementation fee without a number. A buyer asking "what does one API integration cost in Malaysia" will not get an answer from published pages, and this article will not invent one.
 
 | Task | Rate | Unit | Publisher | Date checked |
 | --- | --- | --- | --- | --- |
@@ -485,7 +481,7 @@ That limit is real. The one build price that names integration work in the deliv
 
 Because the publishers are selling different things: a session of someone's time, a project with a defined end, or an ongoing subscription.
 
-RM400 per 4-hour session and RM1,500 per project are not competing prices. The first is labour, and you can buy two sessions and still have no working system. The second assumes a defined scope. The third, a monthly retainer, buys attention rather than delivery. Comparing them without converting to what you actually get is the most common way a buyer misreads a table like this.
+RM400 per 4-hour session and RM1,500 per project are not competing prices. The first is labour, and you can buy two sessions and still have no working system. The second assumes a defined scope. The third, a monthly retainer, buys attention rather than delivery. Comparing them without converting to what you get is how buyers misread a table like this.
 
 The dates matter for the same reason. Several pages carry no publication date, so the row date is the day the price was read, not the day it was published. A price read on 19 November 2026 may have been written in 2025 and not updated.
 
@@ -504,7 +500,7 @@ Six things, and each one appears in the table above as a different tier rather t
 
 Convert both to the same three numbers before you compare: total cost to a working system, monthly cost after launch, and what each one excludes.
 
-A RM400 session and a RM1,500 project both look small next to a RM6,000 build, and none of them is comparable until you ask how many sessions until it runs, how many months of retainer you will actually pay, and which of the six factors above each quote excludes. Write the answers next to the figures from the same date, and the comparison stops being about which number is lower.
+A RM400 session and a RM1,500 project both look small next to a RM6,000 build, and none of them is comparable until you ask how many sessions until it runs, how many months of retainer you will pay, and which of the six factors above each quote excludes. Write the answers next to the figures from the same date, and the comparison stops being about which number is lower.
 
 **Read next**
 
@@ -1139,18 +1135,18 @@ Only if the hardware is in Malaysia. Renting a GPU in another region moves the d
 - OpenAI, API pricing (per-million-token rates) — https://developers.openai.com/api/docs/pricing (checked 2026-11-19)
 - DigitalOcean, GPU Droplets pricing — https://www.digitalocean.com/pricing/gpu-droplets (checked 2026-11-19)
 
-## What RM100 a month actually buys you in AI, in Malaysia
+## What RM100 a month buys you in AI, in Malaysia
 
 URL: https://upahje.my/en/articles/rm100-budget
 Checked: 2026-11-19
 
-RM100 buys one of two different things, and the choice is not about which model is smarter. It buys a seat in someone's app, or a meter of tokens for software you run. At a stated 2,000-token task, RM100 of Claude Haiku 5.5 tokens is about 54,000 tasks a month, while ChatGPT Plus costs RM99.90 and includes no API key at all.
+RM100 buys one of two things: a seat in someone's app, or a meter of tokens for software you run. Which model wins a leaderboard is a different question. At a stated 2,000-token task, RM100 of Claude Haiku 5.5 tokens is about 54,000 tasks a month, while ChatGPT Plus costs RM99.90 and includes no API key at all.
 
-## What does a subscription actually include?
+## What does a subscription include?
 
 A consumer plan sells you a seat: a login, a usage allowance and the vendor's interface. It does not hand you an API key.
 
-That distinction is the whole decision, and the vendor pages say it plainly. Claude Pro and ChatGPT Plus list no API credits. Claude Max at USD 100 and Claude Ultra at USD 200 include API credits equal to their own price, and ChatGPT Pro includes monthly API credits up to its tier price. Copilot's credits are GitHub AI Credits for its own features, not API access. Nothing on these pages grants a third-party harness a key.
+The vendor pages make the distinction plainly. Claude Pro and ChatGPT Plus list no API credits. Claude Max at USD 100 and Claude Ultra at USD 200 include API credits equal to their own price, and ChatGPT Pro includes monthly API credits up to its tier price. Copilot's credits are GitHub AI Credits for its own features, not API access. Nothing on these pages grants a third-party harness a key.
 
 | Plan | Published price | In ringgit | API access included |
 | --- | --- | --- | --- |
@@ -1204,7 +1200,7 @@ Below roughly 900 tasks a month, a seat is the better buy if a human is doing th
 
 Above roughly 6,000 tasks a month, or any time software rather than a person is making the calls, tokens win: RM11.11 of API usage replaces a seat that cannot serve a harness at all. Between those two, the honest answer is that it depends on whether you need an interface or an integration, and the price difference is too small to decide it.
 
-Neither line is a recommendation. They are the points where the arithmetic changes sign, and both assume the 2,000-token task.
+Both lines assume the 2,000-token task. They mark where the arithmetic changes sign, and nothing else.
 
 ## What could we not verify?
 
@@ -1576,13 +1572,13 @@ Empat kategori, dan tiada prompt boleh mengubahnya.
 
 ## Berapa kosnya dalam ringgit?
 
-Dua bil, dan yang lebih kecil ialah yang orang risaukan.
+Dua bil. Yang lebih kecil itu yang dapat perhatian.
 
-**Menjalankannya.** Kadar token diterbitkan, jadi ini aritmetik dan bukan tekaan. Pada 2,000 token input dan 500 output setiap tugasan, Claude Haiku 5.5 menelan `0.002 juta × USD 0.10 = USD 0.0002` untuk input tambah `0.0005 juta × USD 0.50 = USD 0.00025` untuk output, iaitu USD 0.00045 setiap tugasan. Pada kadar tengah Bank Negara **4.1145** (dibaca 19 November 2026), itu kira-kira RM0.00185. Seribu tugasan sebulan ialah **RM1.85**, iaitu kurang daripada satu teh tarik.
+**Menjalankannya.** Kadar token diterbitkan, jadi ini aritmetik dan bukan tekaan. Pada 2,000 token input dan 500 output setiap tugasan, Claude Haiku 5.5 menelan `0.002 juta × USD 0.10 = USD 0.0002` untuk input tambah `0.0005 juta × USD 0.50 = USD 0.00025` untuk output, iaitu USD 0.00045 setiap tugasan. Pada kadar tengah Bank Negara **4.1145** (dibaca 19 November 2026), itu kira-kira RM0.00185. Seribu tugasan sebulan ialah **RM1.85**. Teh tarik di mamak berharga RM2 hingga RM3, dan itu perbandingan kami sendiri, bukan indeks yang diterbitkan.
 
 **Membinanya.** Penerbit Malaysia memetik harga projek untuk kerja automasi: **RM400** bagi pembinaan proses mudah ([Pang Jun Han, dibaca 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)) dan **RM6,000 lebih** bagi pelaksanaan tugasan autonomi ([Autoflow Solutions, dibaca 23 Nov 2026](https://www.autoflow-solutions.com/my/services)). Pembinaan aliran kerja permulaan daripada studio bermula pada **RM1,500** ([KodeSME, dibaca 23 Nov 2026](https://kodesme.klyihao.com/)).
 
-Jadi pembinaan beratus hingga beribu ringgit, dan kos menjalankannya beberapa ringgit. Sesiapa yang memberi anda bil token bulanan yang besar untuk aliran kerja perniagaan kecil sama ada silap, atau menjual sesuatu yang lain. Apa yang tidak dinyatakan oleh kad kadar ialah yuran sokongan bulanan selepas pelancaran, jadi tanyakan sebelum membandingkan sebut harga.
+Jadi pembinaan beratus hingga beribu ringgit dan kos menjalankannya beberapa ringgit. Jika pembekal menyebut bil token bulanan yang besar untuk aliran kerja kecil, minta dia tunjukkan aritmetiknya terhadap kadar yang diterbitkan; aritmetik kami hanya tiga baris. Apa yang tidak dinyatakan oleh kad kadar ialah yuran sokongan bulanan selepas pelancaran, jadi tanyakan sebelum membandingkan sebut harga.
 
 ## Apa yang patut dibuat minggu ini?
 
@@ -1596,15 +1592,15 @@ Lima tindakan, tiada satu pun memerlukan pembelian atau pembangun.
 
 ## Cuba sendiri
 
-Versi paling kecil yang boleh dijalankan ialah skrip yang membaca CSV e-mel sokongan, memanggil satu model bagi setiap baris, dan menulis draf balasan ke CSV kedua. Ia belum agent, dan itulah maksudnya: ia membuktikan gelung sebelum anda menambah tool.
+Versi paling kecil yang boleh dijalankan ialah skrip yang membaca CSV e-mel sokongan, memanggil satu model bagi setiap baris, dan menulis draf balasan ke CSV kedua. Ia belum agent. Itu disengajakan, kerana ia membuktikan gelung sebelum anda menambah tool.
 
 - **Apa yang diperlukan:** fail baris sampel, kunci API (rentetan yang mengenal pasti akaun anda kepada pembekal model), dan kira-kira 20 baris Python. Tiada server.
 - **Berapa kosnya:** pada 2,000 token input dan 500 output setiap baris, kira-kira **RM0.00185 sebaris**, jadi seratus baris kurang daripada 20 sen.
-- **Satu perkara yang akan menggigit anda:** model yang membaca lajur CSV akan tersalah tafsir sel kosong dan mencipta nama pelanggan. Log setiap baris input di sebelah outputnya, jika tidak anda akan menyahpepijat separuh yang salah.
+- **Di mana ia mula rosak:** model yang membaca lajur CSV akan tersalah tafsir sel kosong dan mencipta nama pelanggan. Log setiap baris input di sebelah outputnya, jika tidak anda akan menyahpepijat separuh yang salah.
 
 ## Bagaimana saya membezakan demo daripada yang terus berjalan?
 
-Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari yang buruk. Enam semakan, dan jawapannya benda, bukan kata sifat.
+Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari yang buruk. Enam semakan. Setiap jawapan patut berupa benda yang boleh ditunjukkan.
 
 1. **Tunjukkan transkripnya.** Agent yang berfungsi merekod apa yang dilakukannya, langkah demi langkah. Jika tiada log, tiada bukti ia berjalan.
 2. **Apa berlaku apabila satu langkah gagal?** Cuba semula, masuk baris gilir, atau beri amaran. Diam bukan jawapan.
@@ -1666,7 +1662,7 @@ Fasa di bawah ialah fasa LHDN sendiri, daripada halaman garis masa yang menyatak
 
 Sekarang lihat jurang antara RM3 juta dan RM5 juta. Pengecualian berhenti di bawah RM3 juta, dan fasa 4 berjalan hingga RM5 juta, jadi perniagaan yang berputar RM4 juta termasuk dalam skop. Dua baris pada halaman yang sama, dibaca bersama.
 
-## Apa yang sebenarnya diserahkan?
+## Apa yang diserahkan?
 
 e-Invoice ialah versi digital dokumen yang dikeluarkan penjual, direkodkan dengan LHDN dan bukan sekadar difailkan dalam akaun anda sendiri, meliputi perniagaan-ke-perniagaan, perniagaan-ke-pengguna dan perniagaan-ke-kerajaan, dan ia dihantar kepada LHDN melalui sistem MyInvois.
 
@@ -1698,11 +1694,11 @@ Jadi tool perlu memerhati jam, bukan hanya penyerahan. Integrasi yang menghantar
 
 ## Apa yang berlaku jika tersilap?
 
-Garis panduan menyebut Seksyen 120 Akta Cukai Pendapatan 1967, dan ia tidak mencetak angka penalti pada mana-mana halaman yang dapat dibaca. Itu jurang, bukan perkara kecil: artikel ini tidak akan memetik penalti dalam ringgit, kerana tiada jumlah yang diterbitkan ditemui.
+Garis panduan menyebut Seksyen 120 Akta Cukai Pendapatan 1967, dan ia tidak mencetak angka penalti pada mana-mana halaman yang dapat dibaca. Jadi artikel ini tidak akan memetik penalti dalam ringgit. Tiada jumlah yang diterbitkan ditemui.
 
 Dua mekanisme bertarikh melembutkan pendedahan itu. Tempoh kelonggaran interim terpakai bagi setiap fasa, di mana pembayar cukai boleh mengeluarkan e-Invois konsolidasi bagi semua aktiviti dan e-Invois konsolidasi yang difakturkan sendiri tanpa dokumen bagi setiap transaksi, dan LHDN menyatakan ia tidak akan mendakwa di bawah Seksyen 120 sepanjang tempoh itu dengan syarat dipenuhi. Secara berasingan, program pengesahan sukarela, PKPS (Program Pengesahan Sukarela, tetingkap bagi pembayar cukai yang terlepas tarikh permulaan untuk tampil ke hadapan), berjalan dari **7 Julai 2026 hingga 31 Disember 2027** bagi pembayar cukai yang terlepas tarikh permulaan wajibnya, menggunakan versi dokumen PKPS 1.2 atau 1.3, dan meliputi semakan serta penguatkuasaan kecuali pendedahan itu melanggar syarat atau melibatkan penipuan, keingkaran sengaja atau kecuaian.
 
-## Apa yang patut dibuat minggu ini?
+## Lima perkara ini dahulu
 
 Lima tindakan, tiada satu pun memerlukan pembelian.
 
@@ -1712,13 +1708,9 @@ Lima tindakan, tiada satu pun memerlukan pembelian.
 4. **Tanya akauntan anda sama ada kelonggaran interim terpakai**, dan dapatkan jawapannya secara bertulis.
 5. **Pilih tiga invois yang anda keluarkan bulan lepas** dan latih soalan 72 jam: siapa yang akan perasan, dan berapa cepat?
 
-## Cuba sendiri
+## Tempat paling murah untuk bermula
 
-Versi paling kecil yang boleh dijalankan ialah sandbox MyInvois: laman pembangun LHDN menyediakan sandbox untuk menguji API dan ralat pengesahannya, dan ia menyatakan portal pengeluaran tidak boleh digunakan di situ ([FAQ MyInvois SDK, dibaca 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/faq/)).
-
-- **Apa yang diperlukan:** log masuk sandbox daripada laman SDK LHDN, dokumen sampel, dan tool yang boleh menghantar JSON, iaitu teks berstruktur. Tiada perisian berbayar.
-- **Berapa kosnya:** tiada apa-apa pada sandbox. Tiada bayaran setiap penyerahan muncul pada mana-mana halaman LHDN yang dibaca untuk artikel ini, jadi kos pengeluaran ialah masa anda, bukan caj.
-- **Satu perkara yang akan menggigit anda:** pengesah tandatangan. Dokumen yang kelihatan betul kepada anda boleh gagal kerana tandatangan tiada atau cacat, dan teks ralat tidak selalu menyatakan medan mana yang menyebabkannya.
+Bagi yang suka mencuba, sandbox MyInvois ialah benda paling kecil yang berjalan: laman pembangun LHDN menjalankan sandbox tempat API dan ralat pengesahannya boleh diuji, dan dokumen XML atau JSON sampel akan kembali dengan pengesah yang gagal. Anda perlukan log masuk sandbox daripada laman SDK dan sesuatu yang boleh menghantar JSON, iaitu teks berstruktur, jadi curl atau skrip sepuluh baris sudah cukup. Percubaan itu percuma, dan tiada yuran setiap penyerahan muncul pada mana-mana halaman LHDN yang dibaca untuk artikel ini. Jangkakan pengesah tandatangan yang menyekat anda dahulu. Dokumen yang kelihatan betul kepada anda gagal apabila tandatangan tiada atau cacat, dan teks ralat selalunya tidak menyatakan medan yang menyebabkannya.
 
 ## Apa yang tidak dapat kami sahkan?
 
@@ -1999,18 +1991,18 @@ Satu endpoint yang membaca sahaja mengambil masa sekitar sehari untuk pembangun 
 - OpenAI, harga API (kadar setiap juta token) — https://developers.openai.com/api/docs/pricing (checked 2026-11-19)
 - OpenAI, katalog model API — https://developers.openai.com/api/docs/models (checked 2026-11-19)
 
-## Apa yang RM100 sebulan sebenarnya beli dalam AI, di Malaysia
+## Apa yang RM100 sebulan beli dalam AI, di Malaysia
 
 URL: https://upahje.my/ms/articles/bajet-rm100-ai-malaysia
 Checked: 2026-11-19
 
 RM100 membeli salah satu daripada dua perkara berbeza, dan pilihannya bukan tentang model mana yang lebih bijak. Ia membeli tempat duduk dalam aplikasi orang lain, atau meter token untuk perisian yang anda jalankan sendiri. Pada tugasan 2,000 token, RM100 token Claude Haiku 5.5 ialah kira-kira 54,000 tugasan sebulan, manakala ChatGPT Plus berharga RM99.90 dan tidak menyertakan kunci API langsung.
 
-## Apa yang sebenarnya termasuk dalam langganan?
+## Apa yang termasuk dalam langganan?
 
 Pelan pengguna menjual tempat duduk: satu log masuk, satu elaun penggunaan dan antara muka pembekal. Ia tidak memberikan anda kunci API.
 
-Perbezaan itulah keseluruhan keputusannya, dan halaman pembekal menyatakannya dengan jelas. Claude Pro dan ChatGPT Plus tidak menyenaraikan kredit API. Claude Max pada USD 100 dan Claude Ultra pada USD 200 menyertakan kredit API sama dengan harga masing-masing, dan ChatGPT Pro menyertakan kredit API bulanan hingga harga tiernya. Kredit Copilot ialah GitHub AI Credits untuk ciri-cirinya sendiri, bukan akses API. Tiada apa pada halaman itu memberikan harness pihak ketiga satu kunci.
+Halaman pembekal menyatakan perbezaan itu dengan jelas. Claude Pro dan ChatGPT Plus tidak menyenaraikan kredit API. Claude Max pada USD 100 dan Claude Ultra pada USD 200 menyertakan kredit API sama dengan harga masing-masing, dan ChatGPT Pro menyertakan kredit API bulanan hingga harga tiernya. Kredit Copilot ialah GitHub AI Credits untuk ciri-cirinya sendiri, bukan akses API. Tiada apa pada halaman itu memberikan harness pihak ketiga satu kunci.
 
 | Pelan | Harga diterbitkan | Dalam ringgit | Akses API disertakan |
 | --- | --- | --- | --- |
@@ -2064,7 +2056,7 @@ Di bawah kira-kira 900 tugasan sebulan, tempat duduk lebih berbaloi jika manusia
 
 Di atas kira-kira 6,000 tugasan sebulan, atau bila-bila masa perisian dan bukan manusia yang membuat panggilan, token menang: RM11.11 penggunaan API menggantikan tempat duduk yang tidak boleh melayani harness langsung. Di antaranya, jawapan jujurnya bergantung pada sama ada anda perlukan antara muka atau integrasi, dan beza harganya terlalu kecil untuk menentukannya.
 
-Kedua-dua garis itu bukan cadangan. Ia titik di mana aritmetik bertukar arah, dan kedua-duanya menganggap tugasan 2,000 token.
+Kedua-dua garis itu menganggap tugasan 2,000 token. Ia menandakan titik di mana aritmetik bertukar arah, dan tidak lebih daripada itu.
 
 ## Apa yang tidak dapat kami sahkan?
 
@@ -2292,7 +2284,7 @@ Hanya dengan amaran. Google menjualnya melalui bundel yang merangkumi storan dan
 
 **Baca seterusnya**
 
-[Apa yang RM100 sebulan sebenarnya beli dalam AI](https://upahje.my/ms/articles/bajet-rm100-ai-malaysia)
+[Apa yang RM100 sebulan beli dalam AI](https://upahje.my/ms/articles/bajet-rm100-ai-malaysia)
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
 
@@ -2523,7 +2515,7 @@ Harga yang diterbitkan bagi kerja automasi di Malaysia bermula dari RM400 untuk 
 
 Angka di bawah datang daripada halaman harga penyedia automasi Malaysia dan daripada satu profil freelance Malaysia, semuanya dibaca pada 19 atau 27 Oktober dan November 2026 mengikut tarikh setiap baris.
 
-Apa yang tidak dapat dibaca sama pentingnya. Pasaran global tidak diukur di sini: Upwork memulangkan HTTP 403 dengan sekatan Cloudflare, Fiverr memulangkan cabaran bot, Jobstreet memulangkan halaman perantaraan Cloudflare, dan Indeed serta Maukerja hanya memaparkan senarai melalui JavaScript. Tiada satu pun kadar profil Upwork atau Fiverr dapat dikumpul, jadi tiada apa di sini boleh dibaca sebagai kadar freelancer yang dinilai secara global. Jalur ini menerangkan lapisan penawaran tempatan yang diterbitkan: studio yang ada senarai harga, dan satu profil marketplace dengan kadar sejam.
+Pasaran global tidak diukur di sini. Upwork memulangkan HTTP 403 dengan sekatan Cloudflare, Fiverr memulangkan cabaran bot, Jobstreet memulangkan halaman perantaraan Cloudflare, dan Indeed serta Maukerja hanya memaparkan senarai melalui JavaScript. Tiada satu pun kadar profil Upwork atau Fiverr dapat dikumpul, jadi tiada apa di sini boleh dibaca sebagai kadar freelancer yang dinilai secara global. Jalur ini menerangkan lapisan penawaran tempatan yang diterbitkan: studio yang ada senarai harga, dan satu profil marketplace dengan kadar sejam.
 
 Dua lagi pengecualian. Setiap tier "sebut harga atas permintaan" dikecualikan, kerana sebut harga bukan kadar. Profil Freelancer.com yang berharga dalam USD juga dikecualikan, walaupun orangnya Malaysia, kerana angkanya bukan harga Malaysia.
 
@@ -2580,7 +2572,7 @@ Had itu nyata. Satu-satunya harga pembinaan yang menamakan kerja integrasi dalam
 
 Kerana penerbit menjual perkara yang berbeza: satu sesi masa seseorang, satu projek dengan penghujung yang jelas, atau satu langganan berterusan.
 
-RM400 setiap sesi 4 jam dan RM1,500 setiap projek bukan harga yang bersaing. Yang pertama ialah tenaga kerja, dan anda boleh membeli dua sesi tetapi masih tiada sistem yang berjalan. Yang kedua menganggap skop yang jelas. Yang ketiga, retainer bulanan, membeli perhatian dan bukan hasil. Membandingkannya tanpa menukar kepada apa yang anda sebenarnya dapat ialah cara paling biasa pembeli salah membaca jadual seperti ini.
+RM400 setiap sesi 4 jam dan RM1,500 setiap projek bukan harga yang bersaing. Yang pertama ialah tenaga kerja, dan anda boleh membeli dua sesi tetapi masih tiada sistem yang berjalan. Yang kedua menganggap skop yang jelas. Yang ketiga, retainer bulanan, membeli perhatian dan bukan hasil. Membandingkannya tanpa menukar kepada apa yang anda dapat ialah cara pembeli salah membaca jadual seperti ini.
 
 Tarikh penting atas sebab yang sama. Beberapa halaman tiada tarikh penerbitan, jadi tarikh baris ialah hari harga itu dibaca, bukan hari ia diterbitkan. Harga yang dibaca pada 19 November 2026 mungkin ditulis pada 2025 dan tidak dikemas kini.
 

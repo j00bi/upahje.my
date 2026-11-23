@@ -46,7 +46,7 @@ The bands below are LHDN's own, from a timeline page that states its update date
 
 Now look at the gap between RM3 million and RM5 million. The exemption stops below RM3 million and phase 4 runs up to RM5 million, so a business turning over RM4 million is in scope. Two lines on the same page, read together.
 
-## What is actually submitted?
+## What gets submitted?
 
 ![Four steps the machine performs: build the document from your records, check the TIN, pass eight validators, submit to MyInvois. Below, two outcomes: within 72 hours a buyer may reject or a seller cancel and reissue; after 72 hours cancellation is closed and a correction needs a credit, debit or refund note](/figures/what-einvoice-automation-covers.svg)
 *Four steps run every submission. What happens after a mistake depends on the clock.*
@@ -78,11 +78,11 @@ The tool therefore has to watch the clock, not only the submission. An integrati
 
 ## What happens if you get it wrong?
 
-The guidelines cite Section 120 of the Income Tax Act 1967, and they do not print a penalty figure on any page that could be read. That is a gap, not a small detail: this article will not quote a ringgit penalty, because no published amount was found.
+The guidelines cite Section 120 of the Income Tax Act 1967, and they do not print a penalty figure on any page that could be read. So this article will not quote a ringgit penalty. No published amount was found.
 
 Two dated mechanisms do soften the exposure. An interim relaxation period applies per phase, during which taxpayers may issue consolidated e-Invoices for all activities and consolidated self-billed e-Invoices without a document per transaction, and LHDN states it will not prosecute under Section 120 during that period provided the conditions are met. Separately, the voluntary disclosure programme, PKPS (Program Pengesahan Sukarela, a window for taxpayers who missed their start date to come forward), runs from **7 July 2026 to 31 December 2027** for taxpayers who missed their mandatory start date, using document versions PKPS 1.2 or 1.3, and covers reviews and enforcement unless the disclosure breaches requirements or involves fraud, wilful default or negligence.
 
-## What to do this week?
+## Do these five things first
 
 Five actions, none of which needs a purchase.
 
@@ -92,13 +92,9 @@ Five actions, none of which needs a purchase.
 4. **Ask your accountant whether the interim relaxation applies to you**, and get the answer in writing.
 5. **Pick three invoices you issued last month** and rehearse the 72-hour question: who would have noticed, and how fast?
 
-## Try it yourself
+## The cheapest place to start
 
-The smallest runnable version is the MyInvois sandbox: LHDN's developer site runs a sandbox where the APIs and their validation errors can be exercised, and it states that the production portal cannot be used there ([MyInvois SDK FAQ, read 23 Nov 2026](https://sdk.myinvois.hasil.gov.my/faq/)).
-
-- **What it needs:** a sandbox login from LHDN's SDK site, a sample document, and a tool that can POST JSON, which is just structured text. No paid software.
-- **What it costs:** nothing on the sandbox. No per-submission fee appears on any LHDN page read for this article, so the production cost is your time, not a charge.
-- **The one thing that will bite you:** the signature validator. A document that looks correct to you can fail because the signature is missing or malformed, and the error text does not always say which field caused it.
+For a tinkerer, the MyInvois sandbox is the smallest thing that runs: LHDN's developer site runs a sandbox where the APIs and their validation errors can be exercised, and a sample XML or JSON document comes back with the validator that failed. You need a sandbox login from the SDK site and something that can POST JSON, which is structured text, so curl or a ten-line script will do. It costs nothing to try, and no per-submission fee appears on any LHDN page read for this article. Expect the signature validator to stop you first. A document that looks right to you fails when the signature is missing or malformed, and the error text often does not name the offending field.
 
 ## What could we not verify?
 

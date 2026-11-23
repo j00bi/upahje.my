@@ -140,6 +140,6 @@ Hanya dengan amaran. Google menjualnya melalui bundel yang merangkumi storan dan
 
 **Baca seterusnya**
 
-[Apa yang RM100 sebulan sebenarnya beli dalam AI](https://upahje.my/ms/articles/bajet-rm100-ai-malaysia)
+[Apa yang RM100 sebulan beli dalam AI](https://upahje.my/ms/articles/bajet-rm100-ai-malaysia)
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)

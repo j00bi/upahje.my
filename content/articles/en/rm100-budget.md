@@ -1,5 +1,5 @@
 ---
-title: "What RM100 a month actually buys you in AI, in Malaysia"
+title: "What RM100 a month buys you in AI, in Malaysia"
 description: "RM100 is either a seat in a subscription app or a meter of API tokens, never both. The conversion at Bank Negara's 19 November 2026 rate, three worked usage levels, and the line where tokens win."
 slug: rm100-budget
 translationKey: rm100-budget
@@ -28,15 +28,15 @@ sources:
     checked: 2026-11-19
 ---
 
-# What RM100 a month actually buys you in AI, in Malaysia
+# What RM100 a month buys you in AI, in Malaysia
 
-RM100 buys one of two different things, and the choice is not about which model is smarter. It buys a seat in someone's app, or a meter of tokens for software you run. At a stated 2,000-token task, RM100 of Claude Haiku 5.5 tokens is about 54,000 tasks a month, while ChatGPT Plus costs RM99.90 and includes no API key at all.
+RM100 buys one of two things: a seat in someone's app, or a meter of tokens for software you run. Which model wins a leaderboard is a different question. At a stated 2,000-token task, RM100 of Claude Haiku 5.5 tokens is about 54,000 tasks a month, while ChatGPT Plus costs RM99.90 and includes no API key at all.
 
-## What does a subscription actually include?
+## What does a subscription include?
 
 A consumer plan sells you a seat: a login, a usage allowance and the vendor's interface. It does not hand you an API key.
 
-That distinction is the whole decision, and the vendor pages say it plainly. Claude Pro and ChatGPT Plus list no API credits. Claude Max at USD 100 and Claude Ultra at USD 200 include API credits equal to their own price, and ChatGPT Pro includes monthly API credits up to its tier price. Copilot's credits are GitHub AI Credits for its own features, not API access. Nothing on these pages grants a third-party harness a key.
+The vendor pages make the distinction plainly. Claude Pro and ChatGPT Plus list no API credits. Claude Max at USD 100 and Claude Ultra at USD 200 include API credits equal to their own price, and ChatGPT Pro includes monthly API credits up to its tier price. Copilot's credits are GitHub AI Credits for its own features, not API access. Nothing on these pages grants a third-party harness a key.
 
 | Plan | Published price | In ringgit | API access included |
 | --- | --- | --- | --- |
@@ -90,7 +90,7 @@ Below roughly 900 tasks a month, a seat is the better buy if a human is doing th
 
 Above roughly 6,000 tasks a month, or any time software rather than a person is making the calls, tokens win: RM11.11 of API usage replaces a seat that cannot serve a harness at all. Between those two, the honest answer is that it depends on whether you need an interface or an integration, and the price difference is too small to decide it.
 
-Neither line is a recommendation. They are the points where the arithmetic changes sign, and both assume the 2,000-token task.
+Both lines assume the 2,000-token task. They mark where the arithmetic changes sign, and nothing else.
 
 ## What could we not verify?
 
