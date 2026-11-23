@@ -3,80 +3,72 @@ import { ARTICLE_CATEGORIES, categoryLabel, categoryPath, LANGUAGES } from '@/li
 import { copyFor } from '@/lib/copy'
 
 /**
- * Content-site footer. The marketplace links (jobs, talent, categories, auth)
- * were removed with the pivot; the routes still exist but are unlinked and
- * noindexed until the user decides whether to delete them.
+ * Editorial footer. Forest field, paper text, no marketplace links: those routes
+ * still exist but stay unlinked and noindexed. Only links that resolve are here.
  */
 export default function Footer({ lang = 'en' }: { lang?: string }) {
   const copy = copyFor(lang)
   const other = lang === 'ms' ? 'en' : 'ms'
+  const year = new Date().getFullYear()
+  const columnLabel = { color: 'rgba(250,249,245,0.62)' }
+  const linkStyle = { color: 'rgba(250,249,245,0.82)' }
 
   return (
-    <footer className="footer">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4 mb-12">
-          <div>
-            <div className="text-lg font-bold tracking-tight mb-4" style={{ color: 'var(--color-canvas)' }}>
-              {copy.site}
-            </div>
-            <p className="text-sm leading-relaxed" style={{ color: 'rgba(255,255,255,0.5)' }}>
-              {copy.tagline}
-            </p>
-          </div>
-
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.16em] mb-4" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              {copy.journal}
-            </div>
-            <ul className="space-y-3 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              {LANGUAGES.map((language) => (
-                <li key={language.code}>
-                  <Link href={`/${language.code}/articles`} className="hover:text-white transition-colors" hrefLang={language.htmlLang}>
-                    {language.native}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.16em] mb-4" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              {copy.categories}
-            </div>
-            <ul className="space-y-3 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              {ARTICLE_CATEGORIES.map((category) => (
-                <li key={category.slug}>
-                  <Link href={categoryPath(lang, category.slug)} className="hover:text-white transition-colors">
-                    {categoryLabel(category.slug, lang)}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <div className="text-xs font-semibold uppercase tracking-[0.16em] mb-4" style={{ color: 'rgba(255,255,255,0.45)' }}>
-              Site
-            </div>
-            <ul className="space-y-3 text-sm" style={{ color: 'rgba(255,255,255,0.75)' }}>
-              <li>
-                <Link href={`/${other}`} className="hover:text-white transition-colors">
-                  {LANGUAGES.find((l) => l.code === other)?.native}
-                </Link>
-              </li>
-              <li>
-                <Link href="/privacy" className="hover:text-white transition-colors">
-                  Privacy
-                </Link>
-              </li>
-              <li>
-                <Link href="/terms" className="hover:text-white transition-colors">
-                  Terms
-                </Link>
-              </li>
-            </ul>
-          </div>
+    <footer style={{ background: 'var(--ui-forest)', color: 'rgba(250,249,245,0.82)' }}>
+      <div className="container-editorial grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+        <div className="max-w-sm">
+          <p className="type-h3" style={{ color: 'var(--ui-paper)', letterSpacing: '-0.02em' }}>
+            UpahJe<span style={{ color: 'rgba(250,249,245,0.55)' }}>.my</span>
+          </p>
+          <p className="type-small mt-4" style={{ color: 'rgba(250,249,245,0.66)' }}>
+            {copy.tagline}
+          </p>
         </div>
+
+        <div>
+          <p className="type-label" style={columnLabel}>{copy.categories}</p>
+          <ul className="mt-4 space-y-3">
+            {ARTICLE_CATEGORIES.map((category) => (
+              <li key={category.slug}>
+                <Link href={categoryPath(lang, category.slug)} className="type-small ui-link" style={linkStyle}>
+                  {categoryLabel(category.slug, lang)}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="type-label" style={columnLabel}>{copy.journal}</p>
+          <ul className="mt-4 space-y-3">
+            {LANGUAGES.map((language) => (
+              <li key={language.code}>
+                <Link href={`/${language.code}/articles`} hrefLang={language.htmlLang} className="type-small ui-link" style={linkStyle}>
+                  {language.native}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="type-label" style={columnLabel}>Site</p>
+          <ul className="mt-4 space-y-3">
+            <li>
+              <Link href={`/${other}`} className="type-small ui-link" style={linkStyle}>
+                {LANGUAGES.find((l) => l.code === other)?.native}
+              </Link>
+            </li>
+            <li><Link href="/privacy" className="type-small ui-link" style={linkStyle}>Privacy</Link></li>
+            <li><Link href="/terms" className="type-small ui-link" style={linkStyle}>Terms</Link></li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="container-editorial border-t py-6" style={{ borderColor: 'rgba(250,249,245,0.16)' }}>
+        <p className="type-small" style={{ color: 'rgba(250,249,245,0.55)' }}>
+          © {year} UpahJe.my. Practical knowledge, clearly explained.
+        </p>
       </div>
     </footer>
   )
