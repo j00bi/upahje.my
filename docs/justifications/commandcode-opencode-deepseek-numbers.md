@@ -24,6 +24,15 @@
 | 18 | "38.5% ± 3.8% | DeepSeek V4.1 Flash 1017 (max), under Claude Code, Terminal-bench 4.1 | Terminal-bench leaderboard, read 23 Nov 2026" | https://www.tbench.ai/ | Terminal-bench | 2026-11-23 | source: Table 1 DeepSeek row with its provenance in the cell |
 | 19 | "$10/month GOAT + processing fee | Up to $100 in credits, CommandCode's tier as printed | Vendor pricing page, read 23 Nov 2026" | https://commandcode.ai/pricing | CommandCode | 2026-11-23 | source: Table 4 GOAT row |
 | 20 | "95.4 s, 10 turns, 14 tool calls, 3/3 tests | One `dsh` run on one task, two files written | Our measurement, 23 Nov 2026" | - | our measurement, this machine | 2026-11-23 | source: the single run recorded on 23 November 2026, `dsh` 0.2.2-rc.1 |
+| 21 | "The three `rounds/round-1/*/index.html` files are in `nazzysar/deepseek-benchmarks`, and their SHA-256 hashes match that repository's own `rounds/checksums.json`" | https://github.com/nazzysar/deepseek-benchmarks | our measurement, this machine | 2026-11-23 | source: fetched all three files and compared SHA-256 against rounds/checksums.json on 23 November 2026 |
+| 22 | "They show how the run behaved: retries, elapsed time, steps." | https://github.com/nazzysar/commandcode-goat-ecosystem-sess | nazzysar (repository) | 2026-11-23 | source: repository README and the three session transcripts |
+| 23 | "lead, critic, prover: 1,123 / 582 / 1,091 records" | https://github.com/nazzysar/commandcode-goat-ecosystem-sess | our measurement, this machine | 2026-11-23 | source: `zstd -dc` on each transcript, line count on 23 November 2026 |
+| 24 | "33, of which 23 SERVER, 10 TRANSPORT, 0 TIMEOUT" | https://github.com/nazzysar/commandcode-goat-ecosystem-sess | nazzysar (repository) | 2026-11-23 | source: retry records in the lead transcript as decoded for this article |
+| 25 | "5, lasting 7,565.5 s, 2,636.0 s, 150.5 s, 117.6 s and 3.9 s" | https://github.com/nazzysar/commandcode-goat-ecosystem-sess | nazzysar (repository) | 2026-11-23 | source: turn records in the transcripts; durations as printed |
+| 26 | "10,473.5 s, about 2 h 55 m" | - | - | - | estimate: arithmetic, sum of the five printed durations |
+| 27 | "161 tool calls, 140 steps, 138 assistant messages, 25 user messages" | https://github.com/nazzysar/commandcode-goat-ecosystem-sess | nazzysar (repository) | 2026-11-23 | source: record-type counts across the three transcripts |
+| 28 | "`deepseek/deepseek-v4.1-flash`, provider `commandcode-goat`" | https://github.com/nazzysar/commandcode-goat-ecosystem-sess | nazzysar (repository) | 2026-11-23 | source: model and provider fields in the session records |
+| 29 | "There are no token counts and no cost fields in those records." | https://github.com/nazzysar/commandcode-goat-ecosystem-sess | nazzysar (repository) | 2026-11-23 | source: search of every token field name across the decoded transcripts, and the site data model, both empty |
 
 ## Sections
 
@@ -36,6 +45,7 @@
 | What did we run ourselves? | The single labelled run, and the exit-code lesson |
 | What to do this week? | Five no-purchase actions that produce the reader's own row |
 | Try it yourself | Reproduce your own row, with the artefact check |
-| What did the comparison actually publish? | The archived demos, the field list as evidence, and the figures we do have with provenance |
+| What did the comparison actually publish? | The archived catalog, the checksum-verified demos, the field list as evidence, and the figures we do have with provenance |
+| What do the GOAT sessions show? | The reliability profile from the run's own records, and the absence of token and cost fields |
 | FAQ | Category error, cross-board comparison, stale Aider, demo check |
 | Sources | Seven URLs, each dated |
