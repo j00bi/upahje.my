@@ -78,7 +78,7 @@ Mengikut projek, harga yang diterbitkan bermula dari RM400 bagi pembinaan proses
 
 Tiada penerbit Malaysia dalam set ini menyatakan harga setiap integrasi, jadi tiada kadar pasaran bagi integrasi individu didakwa di sini. Yang diterbitkan ialah tier langganan yang merangkumi penyambung dan integrasi API.
 
-Itu had sebenar, bukan pilihan format. Satu-satunya harga pembinaan yang menamakan kerja integrasi sebagai sebahagian daripada hasilnya ialah projek 3 hingga 5 aliran dari RM4,000. Tier tersuai KodeSME mengiklankan integrasi dengan sistem sedia ada dan meletakkan harganya sebagai "Quote". BlueAura menerangkan yuran pelaksanaan sekali tanpa angka. Pembeli yang bertanya "berapa kos satu integrasi API di Malaysia" tidak akan mendapat jawapan daripada halaman yang diterbitkan, dan artikel ini tidak akan mencipta satu.
+Had itu nyata. Satu-satunya harga pembinaan yang menamakan kerja integrasi dalam hasilnya ialah projek 3 hingga 5 aliran dari RM4,000. Tier tersuai KodeSME mengiklankan integrasi dengan sistem sedia ada dan meletakkan harganya sebagai "Quote". BlueAura menerangkan yuran pelaksanaan sekali tanpa angka. Pembeli yang bertanya "berapa kos satu integrasi API di Malaysia" tidak akan mendapat jawapan daripada halaman yang diterbitkan, dan artikel ini tidak akan mencipta satu.
 
 | Tugasan | Kadar | Unit | Penerbit | Tarikh disemak |
 | --- | --- | --- | --- | --- |

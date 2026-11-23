@@ -42,9 +42,9 @@ Fasa di bawah ialah fasa LHDN sendiri, daripada halaman garis masa yang menyatak
 | 2 | lebih RM25 juta hingga RM100 juta | 1 Januari 2025 | Berkuat kuasa |
 | 3 | lebih RM5 juta hingga RM25 juta | 1 Julai 2025 | Berkuat kuasa |
 | 4 | hingga RM5 juta | 1 Januari 2026 | Berkuat kuasa |
-| Pengecualian | kurang RM3 juta | — | Dikecualikan seperti dicetak |
+| Pengecualian | kurang RM3 juta | n/a | Dikecualikan seperti dicetak |
 
-Jurang yang wajar dibaca dua kali ialah antara RM3 juta dan RM5 juta. Pengecualian meliputi kurang RM3 juta, dan fasa 4 meliputi hingga RM5 juta, jadi perniagaan yang berputar RM4 juta termasuk dalam skop. Itu bukan tafsiran: itulah yang dikatakan oleh dua baris pada halaman yang sama apabila dibaca bersama.
+Sekarang lihat jurang antara RM3 juta dan RM5 juta. Pengecualian berhenti di bawah RM3 juta, dan fasa 4 berjalan hingga RM5 juta, jadi perniagaan yang berputar RM4 juta termasuk dalam skop. Dua baris pada halaman yang sama, dibaca bersama. Saya pernah bertemu pemilik yang membaca baris pengecualian sahaja dan berhenti di situ.
 
 ## Apa yang sebenarnya diserahkan?
 
@@ -74,7 +74,7 @@ Lapan pengesah berjalan pada setiap penyerahan, dan itulah sebabnya mesin melaku
 
 Ia mengubah siapa yang membetulkan kesilapan, dan bila. Pembeli boleh memohon penolakan dalam 72 jam selepas pengesahan, dan penjual boleh membatalkan dalam tetingkap yang sama. Selepas 72 jam, pembatalan tidak dibenarkan, dan pembetulan memerlukan e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
 
-Itu ada akibat praktikal untuk reka bentuk automasi: tool patut memerhati jam, bukan hanya penyerahan. Integrasi yang hanya menghantar dokumen dan melupakannya akan meninggalkan pembetulan kepada sesiapa yang perasan, dan itulah cara perniagaan mengeluarkan nota berbulan-bulan lewat.
+Jadi tool perlu memerhati jam, bukan hanya penyerahan. Integrasi yang menghantar dokumen dan melupakannya meninggalkan pembetulan kepada sesiapa yang perasan. Itulah cara nota kredit keluar tiga bulan lewat dan muncul semasa audit.
 
 ## Apa yang berlaku jika tersilap?
 

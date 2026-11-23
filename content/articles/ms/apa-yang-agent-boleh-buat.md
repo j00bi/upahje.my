@@ -65,7 +65,7 @@ Kerja kelulusan ialah kerja yang kos tindakan salahnya tidak pulih dengan menjal
 | Mengubah harga, tahap stok atau ketersediaan | Harga yang salah dihormati, bukan dibetulkan |
 | Apa-apa yang berunsur undang-undang atau kawal selia: penyerahan e-Invoice, kontrak, pemfailan | Liabiliti terletak pada perniagaan, bukan pada agent |
 
-Bentuk praktikalnya: biarkan agent menyediakan, dan biarkan manusia meluluskan. Agent yang menyediakan bayaran balik dan menunggu klik menjimatkan penulisan tanpa mengambil risiko.
+Jadi biarkan agent menyediakan, dan manusia meluluskan. Agent yang menyediakan bayaran balik dan menunggu klik menjimatkan penulisan tanpa mengambil risiko. Saya tidak akan menjalankannya dengan cara lain, dan demo vendor yang melangkau langkah kelulusan itu yang patut anda syak.
 
 ## Apa yang tidak boleh dibuatnya sama sekali?
 

@@ -12,7 +12,7 @@
 | 6 | "**RM6,000-plus** for autonomous task execution" | https://www.autoflow-solutions.com/my/services | Autoflow Solutions | 2026-11-23 | source: published AI task execution tier, RM6,000-plus per project |
 | 7 | "A starter workflow build from a studio starts at **RM1,500**" | https://kodesme.klyihao.com/ | KodeSME | 2026-11-23 | source: published starter tier, RM1,500 from |
 | 8 | "What the rate cards do not state is the monthly support fee after launch" | - | - | - | estimate: our reading of the price lists, which publish build tiers but no support line for this scope |
-| 9 | "An agent acts between steps; a chatbot only answers." | - | - | - | estimate: our definition, built on the harness wording quoted above |
+| 9 | "A chatbot answers. An agent answers, then does something about it, which is why it needs tools it can call" | - | - | - | estimate: our definition, built on the harness wording quoted above |
 | 10 | "Every agent produces a plausible wrong answer sometimes." | - | - | - | estimate: our judgement from operating agents, stated as a limit rather than a measurement |
 | 11 | "at 2,000 input and 500 output tokens per row, about **RM0.00185 a row**, so a hundred rows is under 20 sen" | https://docs.claude.com/en/docs/about-claude/models/overview | Anthropic | 2026-11-23 | estimate: arithmetic at the printed Haiku 5.5 rate and the BNM 4.1145 rate, same task size as above |
 | 12 | "A teh tarik at a mamak is RM2 to RM3, which is our own comparison, not a published index." | - | - | - | estimate: our comparison, priced against a typical RM2 to RM3 teh tarik in Kuala Lumpur, not a published index |
