@@ -11,6 +11,7 @@ import { cleanText } from '@/lib/text'
 import { articleJsonLd, definedTermJsonLd, faqJsonLd } from '@/lib/jsonld'
 import { extractHeadings, splitFaq, splitShortAnswer } from '@/lib/article-view'
 import { articleLanguages, absolute, SITE_NAME, OG_IMAGE } from '@/lib/seo'
+import { REPOS_BY_KEY } from '@/lib/article-repos'
 import {
   bodyWithoutTitle,
   categoryBySlug,
@@ -136,6 +137,24 @@ export default function ArticlePage({ params }: { params: { lang: string; slug: 
             <div className="max-w-[68ch]" style={{ marginTop: 'var(--space-section)' }}>
               <FaqList items={faq} />
             </div>
+
+            {REPOS_BY_KEY[article.translationKey] && (
+              <section aria-labelledby="repos" className="max-w-[68ch]" style={{ marginTop: 'var(--space-sources)' }}>
+                <h2 id="repos" className="text-[13px] font-semibold" style={{ color: 'var(--ui-ink)' }}>
+                  {article.lang === 'ms' ? 'Repo dan SDK' : 'Repos and SDKs'}
+                </h2>
+                <ul className="mt-4 space-y-2 text-[14px] leading-6">
+                  {REPOS_BY_KEY[article.translationKey]!.map((repo) => (
+                    <li key={repo.url} className="flex flex-wrap gap-x-2">
+                      <a href={repo.url} target="_blank" rel="noopener noreferrer" className="ui-link font-medium" style={{ color: 'var(--ui-accent)' }}>
+                        {repo.name}
+                      </a>
+                      <span style={{ color: 'var(--ui-muted)' }}>{repo.note[article.lang === 'ms' ? 'ms' : 'en']}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             {article.sources.length > 0 && (
               <section aria-labelledby="sources" className="max-w-[68ch]" style={{ marginTop: 'var(--space-sources)' }}>
