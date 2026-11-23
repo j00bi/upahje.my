@@ -1,0 +1,17 @@
+---
+title: "Tugasan agent mana berjalan sendiri, mana perlukan manusia, mana bukan kerja agent"
+---
+flowchart TD
+  A["Satu tugasan masuk"] --> B{"Boleh diundur, dan datanya ada?"}
+  B -- "ya" --> C["Agent menjalankannya sendiri"]
+  B -- "tidak" --> D{"Wang, kelulusan, atau tindakan tak boleh diundur?"}
+  D -- "ya" --> E["Agent menyediakannya, manusia meluluskan"]
+  D -- "tidak" --> F{"Perlukan pertimbangan, undang-undang, atau tenaga fizikal?"}
+  F -- "ya" --> G["Bukan kerja agent"]
+  F -- "tidak" --> H["Agent bertanya satu soalan, kemudian jalan"]
+  classDef ok fill:#e8f2ea,stroke:#1a6b2e,color:#14160f
+  classDef human fill:#fdf6e6,stroke:#a97b16,color:#14160f
+  classDef no fill:#f4f2ee,stroke:#63665e,color:#3f423c
+  class C,H ok
+  class E human
+  class G no
