@@ -62,3 +62,26 @@ lines.push(
 const out = path.join(process.cwd(), 'public', 'llms.txt')
 fs.writeFileSync(out, lines.join('\n'))
 console.log(`llms.txt: ${out} (${publishedArticles('en').length} en, ${publishedArticles('ms').length} ms articles)`)
+
+// llms-full.txt: the full text of every published article, so an answer engine
+// can read the corpus in one request instead of fetching 32 pages.
+const full = ['# UpahJe.my, full text', '', '> Every published article, both languages, with its sources. Generated; do not edit.', '']
+for (const language of LANGUAGES) {
+  full.push(`# ${language.native}`, '')
+  for (const article of publishedArticles(language.code)) {
+    full.push(`## ${clean(article.title)}`, '')
+    full.push(`URL: ${SITE}/${language.code}/articles/${article.slug}`)
+    full.push(`Checked: ${article.updated || article.date}`, '')
+    full.push(String(article.body || '').replace(/^#\s+.*\n/, '').trim(), '')
+    if (article.sources?.length) {
+      full.push('### Sources', '')
+      for (const source of article.sources) {
+        full.push(`- ${clean(source.title)} — ${source.url} (checked ${source.checked})`)
+      }
+      full.push('')
+    }
+  }
+}
+const fullOut = path.join(process.cwd(), 'public', 'llms-full.txt')
+fs.writeFileSync(fullOut, full.join('\n'))
+console.log(`llms-full.txt: ${fullOut} (${publishedArticles('en').length + publishedArticles('ms').length} articles)`)

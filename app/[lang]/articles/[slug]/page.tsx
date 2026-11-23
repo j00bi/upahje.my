@@ -10,7 +10,7 @@ import { extractFaq } from '@/lib/faq'
 import { cleanText } from '@/lib/text'
 import { articleJsonLd, definedTermJsonLd, faqJsonLd } from '@/lib/jsonld'
 import { extractHeadings, splitFaq, splitShortAnswer } from '@/lib/article-view'
-import { articleLanguages, absolute, SITE_NAME } from '@/lib/seo'
+import { articleLanguages, absolute, SITE_NAME, OG_IMAGE } from '@/lib/seo'
 import {
   bodyWithoutTitle,
   categoryBySlug,
@@ -50,8 +50,9 @@ export function generateMetadata({ params }: { params: { lang: string; slug: str
       modifiedTime: article.updated || article.date,
       authors: [cleanText(article.author)],
       tags: article.tags.map(cleanText),
+      images: [OG_IMAGE],
     },
-    twitter: { card: 'summary', title, description },
+    twitter: { card: 'summary_large_image', title, description, images: [OG_IMAGE.url] },
   }
 }
 

@@ -37,6 +37,13 @@ export const categoryLanguages = (category: string) => ({
 export const htmlLang = (lang: string) => LANGUAGES.find((l) => l.code === lang)?.htmlLang || 'en-MY'
 
 /** OpenGraph + Twitter for one page in one language. */
+export const OG_IMAGE = {
+  url: `${SITE}/og.png`,
+  width: 1200,
+  height: 630,
+  alt: 'UpahJe.my: plain, sourced answers about technology for Malaysian small businesses.',
+}
+
 export function social(lang: string, path: string, title: string, description: string) {
   return {
     openGraph: {
@@ -46,7 +53,8 @@ export function social(lang: string, path: string, title: string, description: s
       siteName: SITE_NAME,
       locale: lang === 'ms' ? 'ms_MY' : 'en_MY',
       type: 'website' as const,
+      images: [OG_IMAGE],
     },
-    twitter: { card: 'summary' as const, title, description },
+    twitter: { card: 'summary_large_image' as const, title, description, images: [OG_IMAGE.url] },
   }
 }
