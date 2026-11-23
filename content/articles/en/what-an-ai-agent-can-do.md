@@ -5,7 +5,7 @@ slug: what-an-ai-agent-can-do
 translationKey: what-an-ai-agent-can-do
 date: 2026-11-23
 updated: 2026-11-23
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: definitions
 tags: [definitions, ai-agent, automation, malaysia]
 canonical: https://upahje.my/en/articles/what-an-ai-agent-can-do

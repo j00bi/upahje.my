@@ -5,7 +5,7 @@ slug: agent-harnesses-ranked
 translationKey: agent-harnesses-ranked
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "Husni Sarafi"
 category: buying-guides
 tags: [buying-guides, agent-harness, comparison, malaysia]
 canonical: https://upahje.my/en/articles/agent-harnesses-ranked

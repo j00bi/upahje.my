@@ -5,7 +5,7 @@ slug: open-vs-closed-models-malaysia
 translationKey: open-vs-closed-models
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: definitions
 tags: [definitions, ai-models, self-hosting, malaysia]
 canonical: https://upahje.my/en/articles/open-vs-closed-models-malaysia

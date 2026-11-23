@@ -5,7 +5,7 @@ slug: side-income-skills-malaysia-2026
 translationKey: side-income-skills-malaysia-2026
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: side-income
 tags: [side-income, malaysia, freelance, rates]
 canonical: https://upahje.my/en/articles/side-income-skills-malaysia-2026

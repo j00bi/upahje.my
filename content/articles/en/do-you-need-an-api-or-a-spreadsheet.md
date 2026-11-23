@@ -5,7 +5,7 @@ slug: do-you-need-an-api-or-a-spreadsheet
 translationKey: do-you-need-an-api-or-a-spreadsheet
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: definitions
 tags: [definitions, api, spreadsheet, decision, malaysia]
 canonical: https://upahje.my/en/articles/do-you-need-an-api-or-a-spreadsheet

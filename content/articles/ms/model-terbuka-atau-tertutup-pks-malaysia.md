@@ -5,7 +5,7 @@ slug: model-terbuka-atau-tertutup-pks-malaysia
 translationKey: open-vs-closed-models
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: definitions
 tags: [definitions, model-ai, hosting-sendiri, malaysia]
 canonical: https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia

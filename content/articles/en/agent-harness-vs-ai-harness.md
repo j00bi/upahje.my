@@ -5,7 +5,7 @@ slug: agent-harness-vs-ai-harness
 translationKey: agent-harness-vs-ai-harness
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: definitions
 tags: [definitions, agent-harness, terminology, malaysia]
 canonical: https://upahje.my/en/articles/agent-harness-vs-ai-harness

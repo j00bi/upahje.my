@@ -5,7 +5,7 @@ slug: data-sama-ditaip-tiga-kali
 translationKey: same-data-typed-three-times
 date: 2026-11-23
 updated: 2026-11-23
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: buying-guides
 tags: [operations, kemasukan-data, e-invoice, malaysia]
 canonical: https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali

@@ -5,7 +5,7 @@ slug: lima-kemahiran-pendapatan-sampingan-2026
 translationKey: side-income-skills-malaysia-2026
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: side-income
 tags: [side-income, malaysia, freelance, kadar]
 canonical: https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026

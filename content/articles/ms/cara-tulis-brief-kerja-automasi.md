@@ -5,7 +5,7 @@ slug: cara-tulis-brief-kerja-automasi
 translationKey: how-to-brief-an-automation-job
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, automasi, brief, freelancer, malaysia]
 canonical: https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi

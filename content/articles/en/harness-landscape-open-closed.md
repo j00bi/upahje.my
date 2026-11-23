@@ -5,7 +5,7 @@ slug: harness-landscape-open-closed
 translationKey: harness-landscape-open-closed
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, agent-harness, licence, malaysia]
 canonical: https://upahje.my/en/articles/harness-landscape-open-closed

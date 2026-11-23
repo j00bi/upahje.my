@@ -7,11 +7,25 @@
     <language>ms-MY</language>
     <atom:link href="https://upahje.my/ms/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
+      <title>Apa yang sebenarnya diukur oleh satu baris papan pendahulu</title>
+      <link>https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu</link>
+      <guid isPermaLink="true">https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu</guid>
+      <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
+      <description>SWE-bench dan Terminal-bench menilai model di dalam harness orang lain. Baris DeepSeek ialah contoh kerjanya, dan larian di belakangnya ada profil kebolehpercayaan sendiri.</description>
+    </item>
+    <item>
       <title>Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia</title>
       <link>https://upahje.my/ms/articles/apa-yang-agent-boleh-buat</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/apa-yang-agent-boleh-buat</guid>
       <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
       <description>AI agent menjalankan gelung sendiri: ia membaca tugasan, memanggil tool, menyemak hasil dan mengulang. Apa yang diliputi tanpa penyeliaan, apa yang perlukan tandatangan manusia, dan apa yang tidak patut disentuh.</description>
+    </item>
+    <item>
+      <title>Ambang e-Invoice kini RM3 juta</title>
+      <link>https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi</link>
+      <guid isPermaLink="true">https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi</guid>
+      <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
+      <description>LHDN menaikkan pengecualian e-Invoice kepada RM3 juta pada 1 September 2026, melepaskan 1.1 juta peniaga. Apa yang diwajibkan, apa yang tidak.</description>
     </item>
     <item>
       <title>Automasi pertama anda bukan proses yang paling anda benci</title>

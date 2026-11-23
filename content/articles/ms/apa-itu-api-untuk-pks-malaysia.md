@@ -5,7 +5,7 @@ slug: apa-itu-api-untuk-pks-malaysia
 translationKey: what-is-an-api
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: definitions
 tags: [definitions, api, pks, malaysia]
 canonical: https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia

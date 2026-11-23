@@ -5,7 +5,7 @@ slug: what-is-an-api-for-malaysian-sme
 translationKey: what-is-an-api
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: definitions
 tags: [definitions, api, sme, malaysia]
 canonical: https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme

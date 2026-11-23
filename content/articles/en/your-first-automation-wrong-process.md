@@ -5,7 +5,7 @@ slug: your-first-automation-wrong-process
 translationKey: your-first-automation-wrong-process
 date: 2026-11-23
 updated: 2026-11-23
-author: "UpahJe editorial"
+author: "Husni Sarafi"
 category: buying-guides
 tags: [perspective, automation, sme, malaysia]
 canonical: https://upahje.my/en/articles/your-first-automation-wrong-process

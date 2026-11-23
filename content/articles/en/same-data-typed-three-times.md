@@ -5,7 +5,7 @@ slug: same-data-typed-three-times
 translationKey: same-data-typed-three-times
 date: 2026-11-23
 updated: 2026-11-23
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: buying-guides
 tags: [operations, data-entry, e-invoice, malaysia]
 canonical: https://upahje.my/en/articles/same-data-typed-three-times

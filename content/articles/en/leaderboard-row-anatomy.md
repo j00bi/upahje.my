@@ -8,11 +8,11 @@ audience: developer
 reader: agent
 date: 2026-11-23
 updated: 2026-11-23
-author: "UpahJe editorial"
+author: "Husni Sarafi"
 category: buying-guides
 tags: [dev-note, benchmarks, coding-agents]
 canonical: https://upahje.my/en/articles/leaderboard-row-anatomy
-draft: true
+draft: false
 sources:
   - title: "SWE-bench leaderboard, Verified tab"
     url: "https://www.swebench.com/"

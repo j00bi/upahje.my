@@ -5,7 +5,7 @@ slug: perlu-api-atau-cukup-spreadsheet
 translationKey: do-you-need-an-api-or-a-spreadsheet
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: definitions
 tags: [definitions, api, spreadsheet, keputusan, malaysia]
 canonical: https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet

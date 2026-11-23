@@ -8,8 +8,8 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 - [Definitions](https://upahje.my/en/articles/category/definitions): The words on a job post, a contract or a payslip, defined plainly. (6 articles)
 - [Definisi](https://upahje.my/ms/articles/category/definitions): Istilah dalam iklan kerja, kontrak atau slip gaji, dijelaskan dengan mudah. (6 articles)
-- [Buying guides](https://upahje.my/en/articles/category/buying-guides): How to scope, compare and pay for local tech work. (12 articles)
-- [Panduan membeli](https://upahje.my/ms/articles/category/buying-guides): Cara menentu skop, membanding dan membayar kerja teknologi tempatan. (12 articles)
+- [Buying guides](https://upahje.my/en/articles/category/buying-guides): How to scope, compare and pay for local tech work. (14 articles)
+- [Panduan membeli](https://upahje.my/ms/articles/category/buying-guides): Cara menentu skop, membanding dan membayar kerja teknologi tempatan. (14 articles)
 - [Side income](https://upahje.my/en/articles/category/side-income): Turning a skill into a second income, step by step. (1 article)
 - [Pendapatan sampingan](https://upahje.my/ms/articles/category/side-income): Menukar kemahiran menjadi pendapatan kedua, langkah demi langkah. (1 article)
 
@@ -17,8 +17,10 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 - [CommandCode, OpenCode, DeepSeek: three names, three different things](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers): One is a paid CLI, one is a free CLI, one is an API. Their published prices, their drift, and one run that shows an exit code of zero is not success.
 - [Google Business Profile: the fields that decide whether you show up](https://upahje.my/en/articles/google-business-profile-fields): Google documents the name rules, the category rules, hours, service areas and what triggers suspension. What an SME should fix first, and the four fields that get profiles restricted.
+- [What a leaderboard row actually measures](https://upahje.my/en/articles/leaderboard-row-anatomy): SWE-bench and Terminal-bench score a model inside someone else's harness. The DeepSeek row is the worked example, and the run behind it has its own reliability profile.
 - [Where the same data gets typed three times](https://upahje.my/en/articles/same-data-typed-three-times): Malaysian adoption is not the problem: 97.2% of establishments use computers. The duplication sits between a digitised front office and a manual back office, and e-Invoice now forces one record to be right at issuance.
 - [What an AI agent can and cannot do for a Malaysian SME](https://upahje.my/en/articles/what-an-ai-agent-can-do): An AI agent runs a loop on its own: it reads a task, calls tools, checks the result and repeats. What that covers unattended, what needs a human signature, and what no agent should touch.
+- [The e-Invoice threshold is now RM3 million](https://upahje.my/en/articles/what-einvoice-automation-covers): LHDN raised the e-Invoice exemption to RM3 million on 1 September 2026, freeing 1.1 million traders. What is required, what is not, and what is unpublished.
 - [Your first automation should not be your worst process](https://upahje.my/en/articles/your-first-automation-wrong-process): Opinion. The process an owner hates most is usually the worst one to automate first, because automating it removes the evidence you need and hides the exceptions that decide the cost.
 - [Agent harness, AI harness, agent framework: what the words mean](https://upahje.my/en/articles/agent-harness-vs-ai-harness): An agent harness runs the agent loop: it executes tool calls, holds the transcript, applies permissions. Vendors say agent harness. AI harness is not a term they use. A table of who says what.
 - [Agent harnesses ranked: four CLIs installed on one machine](https://upahje.my/en/articles/agent-harnesses-ranked): DeepSeek Harness, Claude Code, Codex CLI and OpenCode installed on one machine, scored 1-5 on five weighted criteria using only what we could read from each on 19 November 2026.
@@ -37,7 +39,9 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Bahasa Melayu articles
 
+- [Apa yang sebenarnya diukur oleh satu baris papan pendahulu](https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu): SWE-bench dan Terminal-bench menilai model di dalam harness orang lain. Baris DeepSeek ialah contoh kerjanya, dan larian di belakangnya ada profil kebolehpercayaan sendiri.
 - [Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat): AI agent menjalankan gelung sendiri: ia membaca tugasan, memanggil tool, menyemak hasil dan mengulang. Apa yang diliputi tanpa penyeliaan, apa yang perlukan tandatangan manusia, dan apa yang tidak patut disentuh.
+- [Ambang e-Invoice kini RM3 juta](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi): LHDN menaikkan pengecualian e-Invoice kepada RM3 juta pada 1 September 2026, melepaskan 1.1 juta peniaga. Apa yang diwajibkan, apa yang tidak.
 - [Automasi pertama anda bukan proses yang paling anda benci](https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk): Pendapat. Proses yang paling pemilik benci biasanya proses yang paling buruk untuk diautomasikan dahulu, kerana mengautomasikannya membuang bukti yang anda perlukan dan menyembunyikan pengecualian yang menentukan kos.
 - [CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda](https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka): Satu CLI berbayar, satu CLI percuma, satu API. Harga yang diterbitkan, perubahannya, dan satu larian yang menunjukkan kod keluar sifar bukan kejayaan.
 - [Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali): Penggunaan bukan masalahnya: 97.2% pertubuhan Malaysia guna komputer. Penduaan berlaku antara pejabat hadapan yang sudah digital dan pejabat belakang yang masih manual, dan e-Invoice kini memaksa satu rekod betul semasa dikeluarkan.

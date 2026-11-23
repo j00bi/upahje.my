@@ -5,7 +5,7 @@ slug: harness-agent-disusun
 translationKey: agent-harnesses-ranked
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "Husni Sarafi"
 category: buying-guides
 tags: [buying-guides, agent-harness, perbandingan, malaysia]
 canonical: https://upahje.my/ms/articles/harness-agent-disusun

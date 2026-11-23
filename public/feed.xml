@@ -21,6 +21,13 @@
       <description>Google documents the name rules, the category rules, hours, service areas and what triggers suspension. What an SME should fix first, and the four fields that get profiles restricted.</description>
     </item>
     <item>
+      <title>What a leaderboard row actually measures</title>
+      <link>https://upahje.my/en/articles/leaderboard-row-anatomy</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/leaderboard-row-anatomy</guid>
+      <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
+      <description>SWE-bench and Terminal-bench score a model inside someone else's harness. The DeepSeek row is the worked example, and the run behind it has its own reliability profile.</description>
+    </item>
+    <item>
       <title>Where the same data gets typed three times</title>
       <link>https://upahje.my/en/articles/same-data-typed-three-times</link>
       <guid isPermaLink="true">https://upahje.my/en/articles/same-data-typed-three-times</guid>
@@ -33,6 +40,13 @@
       <guid isPermaLink="true">https://upahje.my/en/articles/what-an-ai-agent-can-do</guid>
       <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
       <description>An AI agent runs a loop on its own: it reads a task, calls tools, checks the result and repeats. What that covers unattended, what needs a human signature, and what no agent should touch.</description>
+    </item>
+    <item>
+      <title>The e-Invoice threshold is now RM3 million</title>
+      <link>https://upahje.my/en/articles/what-einvoice-automation-covers</link>
+      <guid isPermaLink="true">https://upahje.my/en/articles/what-einvoice-automation-covers</guid>
+      <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
+      <description>LHDN raised the e-Invoice exemption to RM3 million on 1 September 2026, freeing 1.1 million traders. What is required, what is not, and what is unpublished.</description>
     </item>
     <item>
       <title>Your first automation should not be your worst process</title>

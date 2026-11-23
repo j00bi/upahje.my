@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: `${SITE}/${lang}`, changeFrequency: 'weekly', priority: 1 })
     entries.push({ url: `${SITE}/${lang}/articles`, changeFrequency: 'daily', priority: 0.9 })
     entries.push({ url: `${SITE}/${lang}/resources`, changeFrequency: 'weekly', priority: 0.6 })
+    entries.push({ url: `${SITE}/${lang}/about`, changeFrequency: 'monthly', priority: 0.4 })
     entries.push({ url: `${SITE}/${lang}/repos`, changeFrequency: 'weekly', priority: 0.7 })
     for (const topic of REPO_TOPICS) {
       entries.push({ url: `${SITE}/${lang}/repos/${topic.slug}`, changeFrequency: 'weekly', priority: 0.7 })

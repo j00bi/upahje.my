@@ -5,7 +5,7 @@ slug: beza-model-tertutup
 translationKey: closed-models-differences
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, model-tertutup, harga, malaysia]
 canonical: https://upahje.my/ms/articles/beza-model-tertutup

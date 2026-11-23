@@ -5,7 +5,7 @@ slug: medan-google-business-profile
 translationKey: google-business-profile-fields
 date: 2026-11-23
 updated: 2026-11-23
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: buying-guides
 tags: [marketing, google-business-profile, carian-setempat, malaysia]
 canonical: https://upahje.my/ms/articles/medan-google-business-profile

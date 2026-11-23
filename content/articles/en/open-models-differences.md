@@ -5,7 +5,7 @@ slug: open-models-differences
 translationKey: open-models-differences
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, open-weight, licence, malaysia]
 canonical: https://upahje.my/en/articles/open-models-differences

@@ -64,6 +64,11 @@ export default function Footer({ lang = 'en' }: { lang?: string }) {
                 Developer notes
               </Link>
             </li>
+            <li>
+              <Link href={`/${lang}/about`} className="type-small ui-link" style={linkStyle}>
+                About
+              </Link>
+            </li>
             <li><Link href="/privacy" className="type-small ui-link" style={linkStyle}>Privacy</Link></li>
             <li><Link href="/terms" className="type-small ui-link" style={linkStyle}>Terms</Link></li>
           </ul>

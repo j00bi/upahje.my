@@ -7,11 +7,11 @@ format: explainer
 reader: all
 date: 2026-11-23
 updated: 2026-11-23
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: buying-guides
 tags: [e-invoice, myinvois, lhdn, pematuhan]
 canonical: https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi
-draft: true
+draft: false
 featured: true
 changelog:
   - date: 2026-11-23

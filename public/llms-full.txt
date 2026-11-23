@@ -194,6 +194,74 @@ Google does not publish a timeframe on the pages read for this article. What it 
 - Google, appeal Business Profile content and profile restrictions — https://support.google.com/business/answer/13597551 (checked 2026-11-23)
 - Google, Business Profile API reference (locations resource) — https://developers.google.com/my-business/reference/rest/v4/accounts.locations (checked 2026-11-23)
 
+## What a leaderboard row actually measures
+
+URL: https://upahje.my/en/articles/leaderboard-row-anatomy
+Checked: 2026-11-23
+
+Five things, and the score is only one of them: the model, the agent that drove it, the settings, the score, and the cost. Read the first two before the number. The Terminal-bench row for DeepSeek reads 38.5% ± 3.8% under Claude Code, with 8.2 billion tokens, which makes it a DeepSeek model's result inside someone else's harness.
+
+## What is in a leaderboard row?
+
+![A landscape diagram with columns for model, agent, settings, score and cost. The example row is DeepSeek V4.1 Flash 1017 at max, run under Claude Code on Terminal-bench 4.1, scoring 38.5 percent plus or minus 3.8 with 8.2 billion tokens. A footer states that neither CommandCode nor OpenCode appears in the agent column](/figures/leaderboard-row-anatomy.svg)
+*Read the agent column first: it decides whose number the score is.*
+
+The Terminal-bench page prints its columns as RANK, MODEL, AGENT, RESOLUTION RATE, RELEASE DATE, TOKENS and COST. The DeepSeek row reads:
+
+| Field | Value as printed |
+| --- | --- |
+| Model | DeepSeek V4.1 Flash 1017 (max) |
+| Agent | Claude Code |
+| Resolution rate | 38.5% ± 3.8% |
+| Tokens | 8.2B |
+| Release date | Oct 17, 2026 |
+
+Change the agent and the number changes, which is why the column exists.
+
+## Which names appear on the boards at all
+
+SWE-bench Verified's agent column lists only mini-SWE-agent. Terminal-bench 4.1 lists Claude Code, Codex, Antigravity CLI, GitHub Copilot, Grok Build and mini-SWE-agent. Neither board has CommandCode or OpenCode in the agent column.
+
+The model names are a separate question, and thinner than the marketing suggests. SWE-bench Verified has DeepSeek V3.2 (high) at 70.00% resolved with an average cost of $0.45, and DeepSeek V3.2 Reasoner at 60.00% with an average cost of $0.03, both under mini-SWE-agent. SWE-bench has no entry for DeepSeek V4.1 Flash or V4 Pro: an absence on the board, not a bad score. Aider polyglot's newest visible run directory is dated 23 August 2025 and its top row is gpt-5 (high) at 88.0% for $29.08, which is not a current reading.
+
+## What the comparison published, and what the run records
+
+The archived page, snapshot 25 October 2026, lists three interactive demos for Round 1: DeepSeek Platform, OpenCode Go and CommandCode GOAT, each a demo path under a vivarium conceit. The catalog is the evidence: each entry carries a title, a description, a path and a tone, and no score, duration, token count or cost. The demos themselves live in `nazzysar/deepseek-benchmarks`, and their SHA-256 hashes match that repository's `rounds/checksums.json`; scanned for text, they carry in-game numbers only, with no build time, token count, cost or score caption.
+
+The GOAT arm's own session records are more informative than its demo. Three redacted transcripts in `nazzysar/commandcode-goat-ecosystem-sess` carry 1,123, 582 and 1,091 records. The lead session retried 33 times: 23 SERVER, 10 TRANSPORT, 0 TIMEOUT; across the three, 94 retries split 57 / 37 / 0. Five turns lasted 7,565.5 s, 2,636.0 s, 150.5 s, 117.6 s and 3.9 s, totalling 10,473.5 s, about 2 h 55 m. The run made 161 tool calls, 140 steps, 138 assistant messages and 25 user messages, on `deepseek/deepseek-v4.1-flash` through provider `commandcode-goat`.
+
+That is a reliability profile, and it says nothing about output quality. There are no token counts and no cost fields in those records, and the site's data model has no cost field, so no cost comparison can be built from them.
+
+## FAQ
+
+### Can a Terminal-bench score be compared with a SWE-bench score?
+
+No. Different benchmark, different agent, different task set. The numbers do not share a scale.
+
+### Why is the 38.5% figure not a CommandCode or OpenCode result?
+
+Because the agent column says Claude Code. The model is DeepSeek's; the harness that drove it is not either CLI.
+
+### What does the GOAT session record prove?
+
+That the arm kept going through 94 retries and nearly three hours. It does not prove the output was good, and it contains no token or cost data.
+
+---
+
+**Read next**
+
+[CommandCode, OpenCode, DeepSeek: three names, three different things](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers)
+
+[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+
+### Sources
+
+- SWE-bench leaderboard, Verified tab — https://www.swebench.com/ (checked 2026-11-23)
+- Terminal-bench 4.1 leaderboard — https://www.tbench.ai/ (checked 2026-11-23)
+- Internet Archive snapshot of the comparison site (25 October 2026) — https://web.archive.org/web/20261025232027/https://nazzysar.github.io/deepseek-benchmarks/ (checked 2026-11-23)
+- nazzysar/commandcode-goat-ecosystem-sess, session transcripts — https://github.com/nazzysar/commandcode-goat-ecosystem-sess (checked 2026-11-23)
+- nazzysar/deepseek-benchmarks, repository and checksums — https://github.com/nazzysar/deepseek-benchmarks (checked 2026-11-23)
+
 ## Where the same data gets typed three times
 
 URL: https://upahje.my/en/articles/same-data-typed-three-times
@@ -425,6 +493,100 @@ The task your team does most often that has a clear finish line and a cheap mist
 - Pang Jun Han, AI automation pricing (published project rates) — https://pangjunhan.vercel.app/ai-automation (checked 2026-11-23)
 - Autoflow Solutions, services (autonomous task execution pricing) — https://www.autoflow-solutions.com/my/services (checked 2026-11-23)
 - KodeSME, automation pricing — https://kodesme.klyihao.com/ (checked 2026-11-23)
+
+## The e-Invoice threshold is now RM3 million
+
+URL: https://upahje.my/en/articles/what-einvoice-automation-covers
+Checked: 2026-11-23
+
+The line moved on 1 September 2026: from RM1 million to RM3 million of annual revenue or sales. LHDN's own statement says businesses below it are not required to implement e-Invoice, and puts the number of traders who benefit at more than 1.1 million. Above the line, the programme has been running since 1 August 2024 and has already logged 265,379 taxpayers and more than 1.84 billion e-Invoices.
+
+## The exemption is written in the statement, not implied
+
+The rule is a sentence, not a calculation. The statement reads: "PMKS dengan pendapatan atau jualan tahunan kurang daripada RM3 juta tidak diwajibkan untuk melaksanakan e-Invois", which is MSMEs with annual revenue or sales below RM3 million are not required to implement e-Invoice.
+
+Three things follow from that sentence, and only three.
+
+1. The number is **RM3 million**, not the RM1 million that applied before 1 September 2026.
+2. It measures **annual revenue or sales**, not profit, headcount or registered capital.
+3. It says **not required**. It does not say prohibited, and the same statement encourages voluntary participation.
+
+The Prime Minister announced the change in the 2026 National Day address, and LHDN published the statement on 30 August 2026, one day before it took effect.
+
+## The programme numbers are already large
+
+These are LHDN's own totals, not a projection.
+
+| What the statement reports | Figure |
+| --- | --- |
+| New exemption threshold, from 1 September 2026 | RM3 million |
+| Threshold it replaced | RM1 million |
+| Traders covered by the exemption | more than 1.1 million |
+| Taxpayers in the programme since 1 August 2024 | 265,379 |
+| e-Invoices issued since 1 August 2024 | more than 1.84 billion |
+
+Read the last two rows as adoption, not compliance. A taxpayer can be registered and issue a modest number of documents, and the totals say nothing about how many businesses are fully compliant.
+
+## What the system checks at issuance
+
+For anyone above the threshold, the submission is checked by eight validators before it is accepted: structure (UBL 2.1 for invoices), core fields, signature, taxpayer validity, referenced documents, codes, duplicates and currency. The duplicate check looks for documents submitted recently that are similar or identical, and the taxpayer check tests validity at the date of issuance.
+
+That matters for data quality rather than for software choice. If the invoice data is wrong at the moment of issuance, the validation catches it, and the correction path is not an edit. A buyer may reject and a seller may cancel within 72 hours of validation; after that, a correction requires a new e-Invoice in the form of a credit, debit or refund note.
+
+## The penalty is cited, and the amount is not published
+
+LHDN cites Section 120 of the Income Tax Act 1967. No ringgit figure appears in the statement, and none was found on the pages checked. A business deciding how much to spend on compliance should treat that as an unknown rather than as a small risk.
+
+## If you are under RM3 million, wait for a customer to ask
+
+My opinion, stated once: a business below the threshold should not adopt e-Invoice for its own sake. The requirement is lifted, voluntary participation is encouraged but not rewarded, and the operational cost is real. Adopt it when a large customer or a government buyer requires it, and then handle that customer's transactions rather than converting every invoice you issue.
+
+The exception is a business planning to cross RM3 million. If revenue is close to the line, running one quarter of e-Invoice in parallel is cheaper than discovering the obligation in the quarter it applies.
+
+## What could not be verified
+
+Four claims that circulate in guidance and commentary are not in the statement, and none was confirmed from a primary page.
+
+The group-ownership rule, reported as disqualifying a sub-RM3 million business that belongs to a larger group, is cited to a guideline paragraph that was not opened.
+
+The RM50,000 annual deduction for voluntary adoption, mentioned in commentary for years of assessment 2024 to 2027, appears only in secondary sources.
+
+Whether a business that started under the old RM1 million line may stop is not answered in the statement. The guidance is silent on the reverse case.
+
+And the per-phase relaxation dates sit in a graphic in the guideline PDF rather than in its text, so they are not reproduced here.
+
+## FAQ
+
+### Does the exemption apply to a business with RM2.9 million in sales?
+
+It applies to annual revenue or sales below RM3 million, so RM2.9 million is below the line and e-Invoice is not required.
+
+### Can a business below the threshold still issue e-Invoices?
+
+Yes. Voluntary participation is encouraged, and a business may adopt the system without an obligation.
+
+### What happens after 72 hours if an invoice is wrong?
+
+Cancellation is no longer allowed, and the correction is a new e-Invoice in the form of a credit, debit or refund note.
+
+### Is there a published penalty amount?
+
+Section 120 of the Income Tax Act 1967 is cited. No ringgit amount is published in the statement or on the pages checked.
+
+---
+
+**Read next**
+
+[Where the same data gets typed three times](https://upahje.my/en/articles/same-data-typed-three-times)
+
+[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+
+### Sources
+
+- LHDN media statement HASiL/2026/08/30-44, AMBANG PENGECUALIAN PELAKSANAAN E-INVOIS DINAIKKAN — https://www.hasil.gov.my/wp-content/uploads/20260830-Kenyataan-Media-HASiL_AMBANG-PENGECUALIAN-E_INVOIS-DINAIKKAN.pdf (checked 2026-11-23)
+- LHDN, e-Invois programme page — https://www.hasil.gov.my/e-invois (checked 2026-11-23)
+- MyInvois SDK, document validation rules — https://sdk.myinvois.hasil.gov.my/document-validation-rules/ (checked 2026-11-23)
+- LHDN, Garis Panduan e-Invois Versi 4.8 — https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf (checked 2026-11-23)
 
 ## Your first automation should not be your worst process
 
@@ -1782,6 +1944,74 @@ A single read-only endpoint takes a competent developer about a day. Anything th
 
 # Bahasa Melayu
 
+## Apa yang sebenarnya diukur oleh satu baris papan pendahulu
+
+URL: https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu
+Checked: 2026-11-23
+
+Lima perkara, dan skor hanyalah satu: model, agent yang memandunya, tetapan, skor, dan kos. Baca dua yang pertama sebelum angka. Baris Terminal-bench bagi DeepSeek berbunyi 38.5% ± 3.8% di bawah Claude Code, dengan 8.2 bilion token, jadi ia hasil model DeepSeek di dalam harness orang lain.
+
+## Apa yang ada dalam satu baris papan pendahulu?
+
+![Gambar landskap dengan lajur model, agent, tetapan, skor dan kos. Baris contoh ialah DeepSeek V4.1 Flash 1017 pada max, dijalankan di bawah Claude Code pada Terminal-bench 4.1, dengan skor 38.5 peratus tambah tolak 3.8 dan 8.2 bilion token. Kaki nota menyatakan tiada satu pun CommandCode atau OpenCode muncul dalam lajur agent](/figures/anatomi-baris-papan-pendahulu.svg)
+*Baca lajur agent dahulu: ia menentukan angka siapa yang dimiliki oleh skor itu.*
+
+Halaman Terminal-bench mencetak lajurnya sebagai RANK, MODEL, AGENT, RESOLUTION RATE, RELEASE DATE, TOKENS dan COST. Baris DeepSeek berbunyi:
+
+| Medan | Nilai seperti dicetak |
+| --- | --- |
+| Model | DeepSeek V4.1 Flash 1017 (max) |
+| Agent | Claude Code |
+| Kadar penyelesaian | 38.5% ± 3.8% |
+| Token | 8.2B |
+| Tarikh keluaran | Okt 17, 2026 |
+
+Tukar agent dan angkanya berubah, dan itulah sebabnya lajur itu wujud.
+
+## Nama mana yang benar-benar ada pada papan
+
+Lajur agent SWE-bench Verified hanya menyenaraikan mini-SWE-agent. Terminal-bench 4.1 menyenaraikan Claude Code, Codex, Antigravity CLI, GitHub Copilot, Grok Build dan mini-SWE-agent. Tiada satu pun papan meletakkan CommandCode atau OpenCode dalam lajur agent.
+
+Nama model pula soalan berasingan, dan lebih nipis daripada yang disarankan pemasaran. SWE-bench Verified ada DeepSeek V3.2 (high) pada 70.00% selesai dengan kos purata $0.45, dan DeepSeek V3.2 Reasoner pada 60.00% dengan kos purata $0.03, kedua-duanya di bawah mini-SWE-agent. SWE-bench tiada entri untuk DeepSeek V4.1 Flash atau V4 Pro: ketiadaan pada papan, bukan skor buruk. Direktori larian terbaharu Aider polyglot yang kelihatan bertarikh 23 Ogos 2025 dan baris teratasnya gpt-5 (high) pada 88.0% untuk $29.08, iaitu bukan bacaan semasa.
+
+## Apa yang diterbitkan oleh perbandingan itu, dan apa yang direkod larian
+
+Halaman arkib, petikan 25 Oktober 2026, menyenaraikan tiga demo interaktif untuk Pusingan 1: DeepSeek Platform, OpenCode Go dan CommandCode GOAT, setiap satu laluan demo di bawah konsep vivarium. Katalog itu buktinya: setiap entri membawa tajuk, penerangan, laluan dan tone, dan tiada skor, tempoh, kiraan token atau kos. Demo itu sendiri ada dalam `nazzysar/deepseek-benchmarks`, dan hash SHA-256 mereka sepadan dengan `rounds/checksums.json` repositori itu; apabila diimbas untuk teks, ia membawa angka dalam permainan sahaja, tanpa kapsyen masa bina, kiraan token, kos atau skor.
+
+Rekod sesi lengan GOAT lebih memberi maklumat daripada demonya. Tiga transkrip yang disunting dalam `nazzysar/commandcode-goat-ecosystem-sess` membawa 1,123, 582 dan 1,091 rekod. Sesi lead mencuba semula 33 kali: 23 SERVER, 10 TRANSPORT, 0 TIMEOUT; merentas ketiga-tiganya, 94 cubaan semula terbahagi 57 / 37 / 0. Lima turn berlangsung 7,565.5 s, 2,636.0 s, 150.5 s, 117.6 s dan 3.9 s, berjumlah 10,473.5 s, kira-kira 2 jam 55 minit. Larian itu membuat 161 tool call, 140 step, 138 mesej assistant dan 25 mesej pengguna, pada `deepseek/deepseek-v4.1-flash` melalui pembekal `commandcode-goat`.
+
+Itu profil kebolehpercayaan, dan ia tidak mengatakan apa-apa tentang kualiti output. Tiada kiraan token dan tiada medan kos dalam rekod itu, dan model data laman itu juga tiada medan kos, jadi tiada perbandingan kos boleh dibina daripadanya.
+
+## FAQ
+
+### Bolehkah skor Terminal-bench dibandingkan dengan skor SWE-bench?
+
+Tidak. Penanda aras berbeza, agent berbeza, set tugasan berbeza. Angka itu tidak berkongsi skala.
+
+### Mengapa angka 38.5% bukan hasil CommandCode atau OpenCode?
+
+Kerana lajur agent menyatakan Claude Code. Modelnya milik DeepSeek; harness yang memandunya bukan mana-mana CLI itu.
+
+### Apa yang dibuktikan oleh rekod sesi GOAT?
+
+Bahawa lengan itu terus berjalan melalui 94 cubaan semula dan hampir tiga jam. Ia tidak membuktikan outputnya bagus, dan ia tiada data token atau kos.
+
+---
+
+**Baca seterusnya**
+
+[CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda](https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka)
+
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
+
+### Sources
+
+- Papan pendahulu SWE-bench, tab Verified — https://www.swebench.com/ (checked 2026-11-23)
+- Papan pendahulu Terminal-bench 4.1 — https://www.tbench.ai/ (checked 2026-11-23)
+- Petikan Internet Archive bagi laman perbandingan (25 Oktober 2026) — https://web.archive.org/web/20261025232027/https://nazzysar.github.io/deepseek-benchmarks/ (checked 2026-11-23)
+- nazzysar/commandcode-goat-ecosystem-sess, transkrip sesi — https://github.com/nazzysar/commandcode-goat-ecosystem-sess (checked 2026-11-23)
+- nazzysar/deepseek-benchmarks, repositori dan checksum — https://github.com/nazzysar/deepseek-benchmarks (checked 2026-11-23)
+
 ## Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia
 
 URL: https://upahje.my/ms/articles/apa-yang-agent-boleh-buat
@@ -1903,6 +2133,100 @@ Tugasan yang paling kerap dibuat pasukan anda, yang ada garisan penamat jelas da
 - Bank Negara Malaysia, API kadar pertukaran awam (kadar tengah USD/MYR 4.1145, 19 November 2026) — https://api.bnm.gov.my/public/exchange-rate (checked 2026-11-23)
 - Pang Jun Han, harga automasi AI (kadar projek yang diterbitkan) — https://pangjunhan.vercel.app/ai-automation (checked 2026-11-23)
 - KodeSME, harga automasi — https://kodesme.klyihao.com/ (checked 2026-11-23)
+
+## Ambang e-Invoice kini RM3 juta
+
+URL: https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi
+Checked: 2026-11-23
+
+Garisan itu berubah pada 1 September 2026: daripada RM1 juta kepada RM3 juta pendapatan atau jualan tahunan. Kenyataan LHDN sendiri menyatakan perniagaan di bawahnya tidak diwajibkan melaksanakan e-Invoice, dan jumlah peniaga yang mendapat manfaat ialah lebih 1.1 juta. Di atas garisan itu, program ini sudah berjalan sejak 1 Ogos 2024 dan telah merekod 265,379 pembayar cukai serta lebih 1.84 bilion e-Invoice.
+
+## Pengecualian itu tertulis dalam kenyataan, bukan disimpulkan
+
+Peraturannya satu ayat, bukan pengiraan. Kenyataan itu berbunyi: "PMKS dengan pendapatan atau jualan tahunan kurang daripada RM3 juta tidak diwajibkan untuk melaksanakan e-Invois".
+
+Tiga perkara mengikut ayat itu, dan hanya tiga.
+
+1. Angkanya **RM3 juta**, bukan RM1 juta yang terpakai sebelum 1 September 2026.
+2. Ia mengukur **pendapatan atau jualan tahunan**, bukan untung, bilangan pekerja atau modal berdaftar.
+3. Ia menyebut **tidak diwajibkan**. Ia tidak menyebut dilarang, dan kenyataan yang sama menggalakkan penyertaan sukarela.
+
+Perdana Menteri mengumumkan perubahan itu dalam ucapan Hari Kebangsaan 2026, dan LHDN menerbitkan kenyataan pada 30 Ogos 2026, sehari sebelum ia berkuat kuasa.
+
+## Angka program sudah besar
+
+Ini jumlah LHDN sendiri, bukan unjuran.
+
+| Apa yang dilaporkan kenyataan | Angka |
+| --- | --- |
+| Ambang pengecualian baharu, mulai 1 September 2026 | RM3 juta |
+| Ambang yang digantikan | RM1 juta |
+| Peniaga yang diliputi pengecualian | lebih 1.1 juta |
+| Pembayar cukai dalam program sejak 1 Ogos 2024 | 265,379 |
+| e-Invoice dikeluarkan sejak 1 Ogos 2024 | lebih 1.84 bilion |
+
+Baca dua baris terakhir sebagai penggunaan, bukan pematuhan. Seorang pembayar cukai boleh berdaftar dan mengeluarkan bilangan dokumen yang kecil, dan jumlah itu tidak memberitahu berapa banyak perniagaan benar-benar patuh.
+
+## Apa yang disemak sistem semasa pengeluaran
+
+Bagi sesiapa di atas ambang, penyerahan disemak oleh lapan pengesah sebelum diterima: struktur (UBL 2.1 bagi invois), medan teras, tandatangan, kesahihan pembayar cukai, dokumen rujukan, kod, pendua dan mata wang. Semakan pendua mencari dokumen yang dihantar baru-baru ini yang serupa atau sama, dan semakan pembayar cukai menguji kesahihan pada tarikh pengeluaran.
+
+Itu penting untuk kualiti data, bukan untuk pilihan perisian. Jika data invois salah semasa dikeluarkan, pengesahan menangkapnya, dan laluan pembetulan bukan suntingan. Pembeli boleh menolak dan penjual boleh membatalkan dalam 72 jam selepas pengesahan; selepas itu pembetulan memerlukan e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
+
+## Penalti disebut, jumlahnya tidak diterbitkan
+
+LHDN menyebut Seksyen 120 Akta Cukai Pendapatan 1967. Tiada angka ringgit dalam kenyataan itu, dan tiada ditemui pada halaman yang disemak. Perniagaan yang memutuskan berapa banyak untuk dibelanjakan pada pematuhan patut menganggapnya sebagai tidak diketahui, bukan sebagai risiko kecil.
+
+## Jika anda di bawah RM3 juta, tunggu pelanggan meminta
+
+Pendapat saya, dinyatakan sekali: perniagaan di bawah ambang tidak patut melaksanakan e-Invoice untuk kepentingannya sendiri. Kewajipan itu sudah ditarik balik, penyertaan sukarela digalakkan tetapi tidak diberi ganjaran, dan kos operasinya nyata. Laksanakannya apabila pelanggan besar atau pembeli kerajaan memintanya, dan kemudian uruskan transaksi pelanggan itu sahaja daripada menukar setiap invois yang anda keluarkan.
+
+Pengecualiannya ialah perniagaan yang merancang melepasi RM3 juta. Jika hasil hampir dengan garisan itu, menjalankan satu suku e-Invoice secara selari lebih murah daripada menemui kewajipan pada suku ia terpakai.
+
+## Apa yang tidak dapat disahkan
+
+Empat dakwaan yang tersebar dalam panduan dan ulasan tidak ada dalam kenyataan itu, dan tiada satu pun disahkan daripada halaman primer.
+
+Peraturan pemilikan kumpulan, yang dilaporkan membatalkan kelayakan perniagaan di bawah RM3 juta yang menjadi sebahagian kumpulan lebih besar, dirujuk kepada perenggan garis panduan yang tidak dibuka.
+
+Potongan RM50,000 setahun bagi penyertaan sukarela, yang disebut dalam ulasan bagi tahun taksiran 2024 hingga 2027, hanya muncul dalam sumber sekunder.
+
+Sama ada perniagaan yang bermula di bawah garisan RM1 juta lama boleh berhenti tidak dijawab dalam kenyataan itu. Panduan itu diam tentang kes sebaliknya.
+
+Dan tarikh kelonggaran setiap fasa berada dalam grafik dalam PDF garis panduan dan bukan dalam teksnya, jadi ia tidak disalin di sini.
+
+## FAQ
+
+### Adakah pengecualian terpakai kepada perniagaan dengan jualan RM2.9 juta?
+
+Ia terpakai kepada pendapatan atau jualan tahunan di bawah RM3 juta, jadi RM2.9 juta berada di bawah garisan dan e-Invoice tidak diwajibkan.
+
+### Bolehkah perniagaan di bawah ambang tetap mengeluarkan e-Invoice?
+
+Boleh. Penyertaan sukarela digalakkan, dan perniagaan boleh melaksanakannya tanpa kewajipan.
+
+### Apa berlaku selepas 72 jam jika invois salah?
+
+Pembatalan tidak lagi dibenarkan, dan pembetulannya ialah e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
+
+### Adakah jumlah penalti diterbitkan?
+
+Seksyen 120 Akta Cukai Pendapatan 1967 disebut. Tiada jumlah ringgit diterbitkan dalam kenyataan itu atau pada halaman yang disemak.
+
+---
+
+**Baca seterusnya**
+
+[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali)
+
+[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+
+### Sources
+
+- Kenyataan media LHDN HASiL/2026/08/30-44, AMBANG PENGECUALIAN PELAKSANAAN E-INVOIS DINAIKKAN — https://www.hasil.gov.my/wp-content/uploads/20260830-Kenyataan-Media-HASiL_AMBANG-PENGECUALIAN-E_INVOIS-DINAIKKAN.pdf (checked 2026-11-23)
+- LHDN, halaman program e-Invois — https://www.hasil.gov.my/e-invois (checked 2026-11-23)
+- MyInvois SDK, peraturan pengesahan dokumen — https://sdk.myinvois.hasil.gov.my/document-validation-rules/ (checked 2026-11-23)
+- LHDN, Garis Panduan e-Invois Versi 4.8 — https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf (checked 2026-11-23)
 
 ## Automasi pertama anda bukan proses yang paling anda benci
 

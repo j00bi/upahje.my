@@ -5,7 +5,7 @@ slug: commandcode-opencode-deepseek-angka
 translationKey: commandcode-opencode-deepseek-numbers
 date: 2026-11-23
 updated: 2026-11-23
-author: "UpahJe editorial"
+author: "Husni Sarafi"
 category: buying-guides
 audience: developer
 format: dev-note

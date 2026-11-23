@@ -5,7 +5,7 @@ slug: kos-chatbot-whatsapp-malaysia
 translationKey: whatsapp-chatbot-costs-malaysia
 date: 2026-11-23
 updated: 2026-11-23
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, whatsapp, chatbot, harga, malaysia]
 canonical: https://upahje.my/ms/articles/kos-chatbot-whatsapp-malaysia

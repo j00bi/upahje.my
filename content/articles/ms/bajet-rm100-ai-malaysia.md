@@ -5,7 +5,7 @@ slug: bajet-rm100-ai-malaysia
 translationKey: rm100-budget
 date: 2026-11-19
 updated: 2026-11-19
-author: "UpahJe editorial"
+author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, harga, langganan, malaysia]
 canonical: https://upahje.my/ms/articles/bajet-rm100-ai-malaysia
