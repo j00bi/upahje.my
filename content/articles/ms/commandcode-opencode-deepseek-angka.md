@@ -129,7 +129,27 @@ Tiga demo interaktif untuk Pusingan 1, dan tiada angka. Halaman arkib, petikan 2
 
 Katalog itu ialah buktinya. Setiap entri membawa tajuk, penerangan, laluan dan tone, dan tiada apa-apa lagi: tiada skor, tempoh, kiraan token atau kos. Sebab itulah memuatkan ketiga-tiganya tidak boleh menentukan kelajuan atau harga untuk anda.
 
+Demo itu sendiri masih ada, dalam repositori hidup dan bukan dalam petikan arkib. Arkib mengambil galeri, katalog dan tiga URL pemapar, dan tiada apa-apa di bawah `rounds/`. Ketiga-tiga fail `rounds/round-1/*/index.html` ada dalam `nazzysar/deepseek-benchmarks`, dan hash SHA-256 mereka sepadan dengan `rounds/checksums.json` repositori itu sendiri ([repo, dibaca 23 Nov 2026](https://github.com/nazzysar/deepseek-benchmarks)). Apabila diimbas untuk teks, ia membawa angka dalam permainan sahaja, seperti "SEALED 12 · IV · 1887" dan "120 × 72 cells", tanpa kapsyen masa bina, kiraan token, kos atau skor.
+
 Demo menentukan dua perkara. Sama ada ia berjalan dalam pelayar anda, dan sama ada anda suka hasilnya. Ia tidak menentukan skor, kos, token atau kebolehpercayaan, kerana tiada satu pun daripada itu diterbitkan.
+
+## Apa yang ditunjukkan oleh sesi GOAT?
+
+Ia menunjukkan bagaimana larian itu berkelakuan: cubaan semula, masa, langkah. Repositori `nazzysar/commandcode-goat-ecosystem-sess` menyimpan tiga transkrip sesi yang telah disunting daripada lengan CommandCode GOAT, dan ia rekod larian itu sendiri dan bukan baris papan pendahulu ([repo, dibaca 23 Nov 2026](https://github.com/nazzysar/commandcode-goat-ecosystem-sess)).
+
+| Apa yang ada dalam rekod | Nilai |
+| --- | --- |
+| Transkrip | lead, critic, prover: 1,123 / 582 / 1,091 rekod |
+| Cuba semula dalam sesi lead | 33, iaitu 23 SERVER, 10 TRANSPORT, 0 TIMEOUT |
+| Cuba semula merentas ketiga-tiganya | 94, terbahagi 57 / 37 / 0 |
+| Turn | 5, berlangsung 7,565.5 s, 2,636.0 s, 150.5 s, 117.6 s dan 3.9 s |
+| Jumlah masa | 10,473.5 s, kira-kira 2 jam 55 minit |
+| Aktiviti | 161 tool call, 140 step, 138 mesej assistant, 25 mesej pengguna |
+| Model dan pembekal | `deepseek/deepseek-v4.1-flash`, pembekal `commandcode-goat` |
+
+Itulah rupa larian yang sukar dari dalam: satu turn mengambil lebih dua jam, dan cubaan semula didominasi kerosakan server dan pengangkutan dan bukan tamat masa. Tiada satu pun daripada itu mengatakan outputnya bagus. Ia mengatakan lengan itu terus berjalan.
+
+Tiada kiraan token dan tiada medan kos dalam rekod itu. Setiap nama medan token dicari merentas transkrip yang dinyahkod dan tiada, dan model data laman itu juga tiada medan kos. Jadi tiada perbandingan kos boleh dibina daripadanya, dan artikel ini tidak mengimplikasikan satu.
 
 Angka yang ada pada kami, setiap satu dengan asalnya:
 

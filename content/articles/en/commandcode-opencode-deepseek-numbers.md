@@ -129,7 +129,27 @@ Three interactive demos for Round 1, and no numbers. The archived page, snapshot
 
 The catalog is the evidence. Each entry carries a title, a description, a path and a tone, and nothing else: no score, duration, token count or cost. That is why loading all three cannot settle speed or price for you.
 
+The demos themselves still exist, in the live repository rather than in the capture. The archive took the gallery, the catalog and the three viewer URLs, and nothing under `rounds/`. The three `rounds/round-1/*/index.html` files are in `nazzysar/deepseek-benchmarks`, and their SHA-256 hashes match that repository's own `rounds/checksums.json` ([repo, read 23 Nov 2026](https://github.com/nazzysar/deepseek-benchmarks)). Scanned for text, they carry in-game numbers only, things like "SEALED 12 · IV · 1887" and "120 × 72 cells", with no build time, token count, cost or score caption.
+
 A demo settles two things. Whether the thing runs in your browser, and whether you like what it made. It does not settle score, cost, tokens or reliability, because none of those was published.
+
+## What do the GOAT sessions show?
+
+They show how the run behaved: retries, elapsed time, steps. The repository `nazzysar/commandcode-goat-ecosystem-sess` holds three redacted session transcripts from the CommandCode GOAT arm, and they are the run's own records rather than a leaderboard row ([repo, read 23 Nov 2026](https://github.com/nazzysar/commandcode-goat-ecosystem-sess)).
+
+| What the records contain | Value |
+| --- | --- |
+| Transcripts | lead, critic, prover: 1,123 / 582 / 1,091 records |
+| Retries in the lead session | 33, of which 23 SERVER, 10 TRANSPORT, 0 TIMEOUT |
+| Retries across the three | 94, split 57 / 37 / 0 |
+| Turns | 5, lasting 7,565.5 s, 2,636.0 s, 150.5 s, 117.6 s and 3.9 s |
+| Elapsed total | 10,473.5 s, about 2 h 55 m |
+| Activity | 161 tool calls, 140 steps, 138 assistant messages, 25 user messages |
+| Model and provider | `deepseek/deepseek-v4.1-flash`, provider `commandcode-goat` |
+
+That is what a hard run looks like from the inside: one turn took over two hours, and the retries are dominated by server and transport faults rather than timeouts. None of it says the output was good. It says the arm kept going.
+
+There are no token counts and no cost fields in those records. Every token field name was searched across the decoded transcripts and found absent, and the site's data model has no cost field either. So no cost comparison can be built from them, and this article does not imply one.
 
 The figures we do have, each with where it came from:
 
