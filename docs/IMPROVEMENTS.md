@@ -28,7 +28,7 @@ use the same rows and method, and single runs are noisy (samples swing by up to
 INP is not measured yet: no interaction script exists. That is a backlog item,
 not a pass.
 
-Current correctness state: 10 published pairs, 20 article pages, 30 sitemap
+Current correctness state: 14 published pairs, 28 article pages, 38 sitemap
 URLs. `npm run articles:check` green (Malay register and PII clean);
 `npm run verify:content` sweeps every sitemap URL, status first, 0 failures;
 `npm run test:faq-boundary` green; `NODE_ENV=production npm run build` green.
@@ -44,19 +44,31 @@ Known open items, not yet fixed:
   script used here lives outside the repo; moving it into `scripts/` is next.
 
 ## Last change
-
-`feat/read-next-figures` (pending merge): the FAQ-boundary fixture now points at
-the figure that exists (`what-is-an-api.svg`, 1040x320) instead of the deleted
-`api-key-flow.svg`, so the test can run in CI; the job is wired as a GitHub
-Actions workflow on pull requests. Adds `scripts/build-figures.mjs` for
-`figures/*.mmd` to `public/figures/*.svg` (manual, never in the Vercel build),
-documents the figure rules, and gives the Malay API article a translated SVG so
-its labels are not English. Records this baseline.
+2026-11-19:
+- **Decimal lede (hotfix).** The short-answer split treated every `[.!?]` as a
+  sentence end, so six live pages printed `4. 35`, `3. 70`, `0. 2. 2-rc. 1` and
+  `RM99. 90`. A boundary now needs whitespace plus a capital or digit, or end of
+  text. Before: 6 of 28 article pages wrong; after: 0, literals intact, and the
+  fixture asserts `4.35`, `0.2.2-rc.1`, `USD 100` and the absence of `4. 35`.
+- **Figure type (accessibility).** The API figure renders 686 px wide at 1280
+  from a 1040 px source, so 17 px labels displayed at 11.2 px (14 px at 9.2 px).
+  At 22 px they display at 14.5 px; all nine text runs per language re-measured
+  inside their boxes. Residual: 7.3 px at 390 px, which needs a taller mobile
+  layout, not larger type.
+- **CI.** The FAQ-boundary job ran red on main for a clean-runner reason, not
+  the test: the fixture build prerenders `/auth/*`, which constructs a Supabase
+  client at import. Build-only placeholders fixed it; main runs are green.
+- **Dead theme CSS.** Removed the two `.theme-toggle` rules and the `data-js`
+  gate left after the light-only change.
 
 ## Next
 
-1. Re-measure the four baseline pages after this branch merges, same method,
-   and record the after column here.
+0. **TOC without JS (next branch).** The SSR nav ships
+   `style="opacity:0;transform:translateY(6px)"`, so 0 of 8 in-page links are
+   visible with scripts disabled. Target 8 of 8, measured at 1280 px, with the
+   scrollspy left as enhancement.
+1. Re-measure the four baseline pages, same method, and record an after column
+   here; the baseline above is still the `716af6b` numbers.
 2. Move the vitals runner into `scripts/measure-vitals.mjs`, including INP
    (click and keypress probes), so a measurement is reproducible in one command.
 3. Check preview deployment protection in the Vercel dashboard; until then
@@ -76,3 +88,8 @@ its labels are not English. Records this baseline.
 - A second read-next renderer: the publisher's line already moved the block
   before the FAQ and it renders as label plus links. Rebuilding it in React
   would fork the same content into two implementations.
+- A `/en` hub LCP branch: the hub loads less than the article (6 scripts /
+  118 KB versus 9 / 191 KB), LCP equals FCP on both hubs, and the gap tracked
+  TTFB samples from 0.5 s to 7.1 s. Tuning it would be chasing network noise;
+  if performance is taken next, inlining the single render-blocking CSS request
+  is the lever that helps both pages and can be measured honestly.
