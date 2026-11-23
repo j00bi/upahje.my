@@ -66,6 +66,24 @@ pages built for reading, topic pages, search, collections, newsletter.
   resources, sponsored-slot rules with disclosure.
 - **Gate:** one send, one opt-out, one measurement of article engagement.
 
+## Superseded: the Postgres content model is deferred
+
+This plan was written before the marketplace half of the site was deleted, when
+Prisma and Supabase were still in the tree. The user approved removing them on
+2026-11-23, so the phase 1 database work is withdrawn:
+
+- **Markdown stays canonical.** Content lives in `content/articles/`, the loader
+  in `lib/articles.mjs` stays the reader, and git stays the history.
+- **No Prisma, no Supabase, no editorial tables** until there is a CMS that a
+  non-technical editor actually uses. At that point the schema is a new decision,
+  not a resurrection of this one.
+- The pillar and type mapping lives in `data/pillars.json` and is applied at
+  render time. Phase 8 extends frontmatter with optional `featured`, `cover`,
+  `coverAlt`, `coverCredit`, `type` only.
+- The authoritative implementation document is
+  `docs/specs/editorial-redesign.md`; where this file and that one disagree, the
+  spec wins.
+
 ## Taxonomy
 
 Six pillars: Business, Finance, Technology, Automation & AI, Marketing,
