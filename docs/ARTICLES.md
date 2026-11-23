@@ -51,6 +51,26 @@ match the route; the build does not trust it, so a stale value cannot de-index a
 page.
 
 ## Body
+## Numbers and provenance
+
+A number in a sentence needs a source and a label saying what kind of source it
+is. Four kinds, named in the sentence or the row it sits in:
+
+- **leaderboard** — read on a date, with the settings that produced it
+  (agent filter, sort order, token count).
+- **vendor** — the company's own page. Attribute it to the vendor in the same
+  sentence; a vendor claim is not an independent measurement.
+- **thread / post** — someone's published result. Name the account and the date,
+  and say it is their run, not ours.
+- **archive** — the page is gone and the figure comes from a dated snapshot.
+  Say so, and give the snapshot date.
+
+A paragraph that says a comparison "cannot be reconstructed" is not a finding.
+Search the archive, the thread, the repo and the vendor page first; if a figure
+still does not exist, state the absence in one sentence and move on. Never print
+a number whose provenance cannot be named, and never let a gap section stand in
+for the search that would have filled it.
+
 ## Who this is written for
 
 Two readers, and a piece that suits only one of them is not finished.
