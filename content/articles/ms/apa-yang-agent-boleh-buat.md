@@ -14,8 +14,8 @@ sources:
   - title: "Anthropic, gambaran Agent SDK (takrif agent harness)"
     url: "https://code.claude.com/docs/en/agent-sdk/overview"
     checked: 2026-11-23
-  - title: "Anthropic, gambaran model (harga Claude Haiku 5.5)"
-    url: "https://docs.claude.com/en/docs/about-claude/models/overview"
+  - title: "Anthropic, harga API Claude (Claude Haiku 5.5)"
+    url: "https://docs.claude.com/en/docs/about-claude/pricing"
     checked: 2026-11-23
   - title: "Bank Negara Malaysia, API kadar pertukaran awam (kadar tengah USD/MYR 4.1145, 19 November 2026)"
     url: "https://api.bnm.gov.my/public/exchange-rate"
@@ -42,8 +42,8 @@ Anthropic menamakan lapisan yang menjalankan ini sebagai agent harness yang "run
 
 Kerja tanpa penyeliaan ialah kerja yang kesilapannya murah dilihat dan murah diundur.
 
-![Gambar keputusan: tugasan yang boleh diundur dan datanya ada berjalan sendiri; tugasan yang memindahkan wang atau tidak boleh diundur disediakan oleh agent dan diluluskan manusia; tugasan yang perlukan pertimbangan, undang-undang atau kehadiran fizikal bukan kerja agent](/figures/apa-yang-agent-boleh-buat.svg)
-*Tiga hasil, diputuskan sebelum mana-mana tool dipilih.*
+![Tiga panel: kerja yang berjalan sendiri seperti menyusun peti masuk; kerja yang disediakan agent untuk diluluskan manusia seperti bayaran balik dan mesej pelanggan; kerja yang bukan untuk agent seperti pertimbangan dan kerja fizikal](/figures/apa-yang-agent-boleh-buat.svg)
+*Susun kerja sebelum memilih tool: sendiri, disediakan, dan bukan kerja agent.*
 
 | Apa yang dibuatnya sendiri | Mengapa ia layak |
 | --- | --- |
@@ -82,7 +82,7 @@ Dua bil, dan yang lebih kecil ialah yang orang risaukan.
 
 **Menjalankannya.** Kadar token diterbitkan, jadi ini aritmetik dan bukan tekaan. Pada 2,000 token input dan 500 output setiap tugasan, Claude Haiku 5.5 menelan `0.002 juta × USD 0.10 = USD 0.0002` untuk input tambah `0.0005 juta × USD 0.50 = USD 0.00025` untuk output, iaitu USD 0.00045 setiap tugasan. Pada kadar tengah Bank Negara **4.1145** (dibaca 19 November 2026), itu kira-kira RM0.00185. Seribu tugasan sebulan ialah **RM1.85**.
 
-**Membinanya.** Studio Malaysia menerbitkan harga projek untuk kerja automasi, dari **RM400** bagi pembinaan proses mudah hingga **RM6,000 lebih** bagi pelaksanaan tugasan autonomi ([Pang Jun Han, dibaca 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)). Pembinaan aliran kerja permulaan daripada studio bermula pada **RM1,500** ([KodeSME, dibaca 23 Nov 2026](https://kodesme.klyihao.com/)).
+**Membinanya.** Penerbit Malaysia memetik harga projek untuk kerja automasi: **RM400** bagi pembinaan proses mudah ([Pang Jun Han, dibaca 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)) dan **RM6,000 lebih** bagi pelaksanaan tugasan autonomi ([Autoflow Solutions, dibaca 23 Nov 2026](https://www.autoflow-solutions.com/my/services)). Pembinaan aliran kerja permulaan daripada studio bermula pada **RM1,500** ([KodeSME, dibaca 23 Nov 2026](https://kodesme.klyihao.com/)).
 
 Jadi pembinaan beratus hingga beribu ringgit dan kos menjalankannya beberapa ringgit. Sesiapa yang memberi anda bil token bulanan yang besar untuk aliran kerja perniagaan kecil sama ada silap atau menjual sesuatu yang lain. Apa yang tidak dinyatakan oleh kad kadar ialah yuran sokongan bulanan selepas pelancaran, jadi tanyakan sebelum membandingkan sebut harga.
 
@@ -96,6 +96,12 @@ Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari ya
 4. **Siapa memiliki kunci dan akaun?** Anda, dalam akaun anda, boleh dibatalkan.
 5. **Apa berlaku apabila vendor mengubah sesuatu?** Tanya siapa yang membaikinya dan pada harga berapa.
 6. **Siapa yang mengawasinya bulan depan?** Agent tanpa pemilik berhenti diselenggara pada minggu selepas invois dibayar.
+
+**Baca seterusnya**
+
+[Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
+
+[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
 
 ## FAQ
 
@@ -114,11 +120,3 @@ Ia boleh menyediakannya, dan ia tidak patut menyerahkannya tanpa semakan. Liabil
 ### Apa perkara pertama yang wajar diautomasikan?
 
 Tugasan yang paling kerap dibuat pasukan anda, yang ada garisan penamat jelas dan kesilapan yang murah: kemasukan invois, penyalinan pesanan, atau menyusun peti masuk. Mulakan di tempat hasil yang salah kelihatan petang itu juga.
-
----
-
-**Baca seterusnya**
-
-[Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
-
-[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)

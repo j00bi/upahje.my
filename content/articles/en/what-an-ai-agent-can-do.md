@@ -14,14 +14,17 @@ sources:
   - title: "Anthropic, Agent SDK overview (agent harness definition)"
     url: "https://code.claude.com/docs/en/agent-sdk/overview"
     checked: 2026-11-23
-  - title: "Anthropic, models overview (Claude Haiku 5.5 pricing)"
-    url: "https://docs.claude.com/en/docs/about-claude/models/overview"
+  - title: "Anthropic, Claude API pricing (Claude Haiku 5.5)"
+    url: "https://docs.claude.com/en/docs/about-claude/pricing"
     checked: 2026-11-23
   - title: "Bank Negara Malaysia, public exchange-rate API (USD/MYR middle rate 4.1145, 19 November 2026)"
     url: "https://api.bnm.gov.my/public/exchange-rate"
     checked: 2026-11-23
   - title: "Pang Jun Han, AI automation pricing (published project rates)"
     url: "https://pangjunhan.vercel.app/ai-automation"
+    checked: 2026-11-23
+  - title: "Autoflow Solutions, services (autonomous task execution pricing)"
+    url: "https://www.autoflow-solutions.com/my/services"
     checked: 2026-11-23
   - title: "KodeSME, automation pricing"
     url: "https://kodesme.klyihao.com/"
@@ -40,8 +43,8 @@ Anthropic's own wording for the layer that runs this is an agent harness that "r
 
 ## What can it do unattended?
 
-![A decision diagram: a task that is reversible with data in hand runs unattended; a task that moves money or cannot be undone is prepared by the agent and approved by a person; a task that needs judgement, law or a physical presence is not agent work](/figures/what-an-ai-agent-can-do.svg)
-*Three outcomes, decided before any tool is chosen.*
+![Three panels: work that runs unattended such as sorting an inbox; work the agent prepares for a human to approve such as refunds and customer messages; work that is not for an agent such as judgement calls and physical tasks](/figures/what-an-ai-agent-can-do.svg)
+*Sort the work before you choose a tool: unattended, prepared, and not agent work.*
 
 Unattended work is work where a wrong answer is cheap to spot and cheap to undo.
 
@@ -82,7 +85,7 @@ Two bills, and the smaller one is the one people worry about.
 
 **Running it.** Token rates are published, so this is arithmetic rather than a guess. At 2,000 input and 500 output tokens per task, Claude Haiku 5.5 costs `0.002 million × USD 0.10 = USD 0.0002` for input plus `0.0005 million × USD 0.50 = USD 0.00025` for output, which is USD 0.00045 a task. At the Bank Negara middle rate of **4.1145** (read 19 November 2026), that is about RM0.00185. A thousand tasks a month is **RM1.85**.
 
-**Building it.** Malaysian studios publish project prices for automation work, from **RM400** for a simple process build to **RM6,000-plus** for autonomous task execution ([Pang Jun Han, read 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)). A starter workflow build from a studio starts at **RM1,500** ([KodeSME, read 23 Nov 2026](https://kodesme.klyihao.com/)).
+**Building it.** Malaysian publishers quote project prices for automation work: **RM400** for a simple process build ([Pang Jun Han, read 23 Nov 2026](https://pangjunhan.vercel.app/ai-automation)) and **RM6,000-plus** for autonomous task execution ([Autoflow Solutions, read 23 Nov 2026](https://www.autoflow-solutions.com/my/services)). A starter workflow build from a studio starts at **RM1,500** ([KodeSME, read 23 Nov 2026](https://kodesme.klyihao.com/)).
 
 So the build is hundreds to thousands of ringgit and the running cost is a few ringgit. Anyone quoting you a large monthly token bill for a small business workflow is either wrong or selling something else. What the rate cards do not state is the monthly support fee after launch, so ask for it before you compare quotes.
 
@@ -96,6 +99,12 @@ A demo works once, in front of you. Something that keeps running survives a bad 
 4. **Who owns the keys and the accounts?** Yours, in your account, revocable.
 5. **What happens when the vendor changes something?** Ask who fixes it and at what price.
 6. **Who is watching it next month?** An agent with no owner stops being maintained the week after the invoice is paid.
+
+**Read next**
+
+[What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
+
+[More on APIs and models](https://upahje.my/en/articles/category/definitions)
 
 ## FAQ
 
@@ -114,11 +123,3 @@ It can prepare them, and it should not submit them unreviewed. The liability for
 ### What is the first thing worth automating?
 
 The task your team does most often that has a clear finish line and a cheap mistake: invoice entry, order copying, or triaging an inbox. Start where a wrong result is visible the same afternoon.
-
----
-
-**Read next**
-
-[What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
-
-[More on APIs and models](https://upahje.my/en/articles/category/definitions)
