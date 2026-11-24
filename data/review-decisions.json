@@ -133,5 +133,14 @@
     "note": null,
     "decided_at": "2026-11-24T05:02:33.869Z",
     "commit": "f9a5cfff283a5670b16afede178e016999029751"
+  },
+  {
+    "slug": "blender-mcp-scene-tools",
+    "lang": "en",
+    "action": "approve",
+    "reason": null,
+    "note": null,
+    "decided_at": "2026-11-24T05:02:45.547Z",
+    "commit": "a0b885e5d31eb023e6bf6b3f475694fb6ba19a30"
   }
 ]
