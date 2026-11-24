@@ -1,6 +1,6 @@
 ---
-title: "Lima kemahiran pendapatan sampingan di Malaysia yang benar-benar membayar pada 2026"
-description: "Lima kemahiran melepasi syarat dua senarai pada satu-satunya platform freelance Malaysia yang halaman awamnya boleh dibaca: suntingan video, reka bentuk grafik, kemasukan data, panggilan jualan dan ujian aplikasi. Kadar, kiraan dan tarikh daripada 11 senarai."
+title: "Lima kemahiran sampingan yang bayar pada 2026"
+description: "Lima kemahiran melepasi syarat dua senarai pada satu-satunya platform freelance Malaysia yang boleh dibaca, dengan kadar, kiraan dan tarikh daripada 11 senarai."
 slug: lima-kemahiran-pendapatan-sampingan-2026
 translationKey: side-income-skills-malaysia-2026
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: side-income
 tags: [side-income, malaysia, freelance, kadar]
 canonical: https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "freelancing.my, senarai suntingan video, penyunting filem pendek"
     url: "https://freelancing.my/project/looking-for-freelance-short-film-editor/"

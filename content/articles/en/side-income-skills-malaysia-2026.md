@@ -1,6 +1,6 @@
 ---
-title: "Five side-income skills in Malaysia that actually pay in 2026"
-description: "Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing. Rates, counts and dates from 11 listings."
+title: "Five side-income skills in Malaysia that pay in 2026"
+description: "Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read, with rates, counts and dates from 11 listings."
 slug: side-income-skills-malaysia-2026
 translationKey: side-income-skills-malaysia-2026
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: side-income
 tags: [side-income, malaysia, freelance, rates]
 canonical: https://upahje.my/en/articles/side-income-skills-malaysia-2026
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "freelancing.my, video editing listing, short film editor"
     url: "https://freelancing.my/project/looking-for-freelance-short-film-editor/"
