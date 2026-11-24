@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import ArticleView from '@/components/articles/ArticleView'
-import { articleLanguages, absolute, SITE_NAME, OG_IMAGE } from '@/lib/seo'
+import { articleLanguages, absolute, SITE_NAME } from '@/lib/seo'
 import { cleanText } from '@/lib/text'
 import { getArticle, languageCodes, publishedArticles, translatedArticle } from '@/lib/articles.mjs'
 
@@ -33,9 +33,8 @@ export function generateMetadata({ params }: { params: { lang: string; slug: str
       modifiedTime: article.updated || article.date,
       authors: [cleanText(article.author)],
       tags: article.tags.map(cleanText),
-      images: [OG_IMAGE],
     },
-    twitter: { card: 'summary_large_image', title, description, images: [OG_IMAGE.url] },
+    twitter: { card: 'summary_large_image', title, description },
   }
 }
 
