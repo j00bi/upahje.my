@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Review pages read drafts from disk at request time; trace the corpus so a
+  // serverless build can render them (git history is not traced).
+  outputFileTracingIncludes: {
+    '/[lang]/review': ['./content/articles/**'],
+    '/[lang]/review/[slug]': ['./content/articles/**'],
+  },
   experimental: { cpus: 1, webpackBuildWorker: false },
   images: { remotePatterns: [] },
   async redirects() {

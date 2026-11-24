@@ -5,7 +5,7 @@ import { SITE } from '@/lib/seo'
  * Nothing is off-limits now that the marketplace routes are gone. The API
  * prefix stays disallowed for tidiness if an endpoint is added later.
  */
-const PRIVATE = ['/api/']
+const PRIVATE = ['/api/', '/en/review', '/ms/review', '/*/review/*']
 
 const AI_CRAWLERS = [
   'GPTBot',
