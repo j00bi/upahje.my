@@ -1,6 +1,6 @@
 ---
 title: "Tiada platform penghantaran menerbitkan komisennya"
-description: "Grab dan foodpanda tidak mencetak kadar peniaga. Angka yang boleh dipetik cuma julat MyCC bagi foodpanda, dan pada 25% pesanan RM25 tinggal RM8.50."
+description: "Grab dan foodpanda tidak mencetak kadar peniaga. Angka yang boleh dipetik cuma julat MyCC, dan pada 25% pesanan RM25 tinggal RM8.50 sebelum kos buruh."
 slug: komisen-penghantaran-malaysia
 translationKey: delivery-commission-malaysia
 format: explainer
@@ -37,7 +37,7 @@ Grab dan foodpanda tidak mencetak komisen peniaga pada mana-mana halaman yang bo
 
 ## Platform tidak menerbitkan apa-apa
 
-Halaman peniaga Grab Malaysia menjual programnya tanpa kadar: perkataan komisen tidak muncul dalam teks yang dihidangkan, dan tiada kad kadar pada halaman itu. Halaman peniaga foodpanda memulangkan HTTP 403 kepada klien ini, jadi kadarnya tidak boleh dibaca langsung.
+Halaman peniaga Grab Malaysia menjual programnya tanpa kadar: perkataan komisen tidak muncul dalam teks yang dipaparkan, dan tiada kad kadar pada halaman itu. Halaman peniaga foodpanda memulangkan HTTP 403 kepada klien ini, jadi kadarnya tidak boleh dibaca langsung.
 
 Itu penting kerana ayat biasa dalam panduan Malaysia, bahawa GrabFood mengambil peratusan tertentu, bukan kadar yang diterbitkan. Ia kontrak peniaga, anggaran vendor, atau cerita orang, dan tiada satu pun boleh disemak oleh pembaca yang sedang memutuskan sama ada mahu menandatangani.
 
@@ -79,7 +79,7 @@ Kadar GrabFood: tiada keputusan MyCC dan tiada halaman platform, jadi tiada apa 
 4. Siapa menetapkan fi penghantaran dan siapa menyimpannya.
 5. Kadar bagi bakul kecil, dalam ringgit, pada harga menu anda.
 
-Pendapat saya, dinyatakan sekali: platform yang enggan meletakkan kadarnya di sebelah bakul yang dikira sedang memberitahu sesuatu. Jawapan jujur kepada "apa yang saya tinggal pada pesanan RM25" ialah satu angka, dan halaman jualan yang enggan mengeluarkannya meminta anda menandatangani kontrak yang tidak boleh anda harga.
+Pendapat saya, dinyatakan sekali: platform yang enggan meletakkan kadarnya di sebelah bakul yang sudah dikira memberitahu sesuatu. Jawapan jujur kepada "apa yang saya tinggal pada pesanan RM25" ialah satu angka, dan halaman jualan yang enggan mengeluarkannya meminta anda menandatangani kontrak yang tidak boleh anda harga.
 
 ---
 
