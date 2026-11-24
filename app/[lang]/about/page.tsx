@@ -16,6 +16,7 @@ const COPY = {
     description: 'An independent Malaysian publication about the technology, money and operations decisions a small business actually makes.',
     intro:
       'UpahJe publishes short, sourced articles for people running or building a small business in Malaysia. Every claim carries a source and a date, and where we could not verify something we say so instead of filling the gap.',
+    independence: 'We do not accept payment for coverage, placement or reviews.',
     bylines: 'Who writes it',
     editorName: 'Husni Ahmad',
     editorRole: 'Editor',
@@ -35,6 +36,7 @@ const COPY = {
     description: 'Penerbitan bebas Malaysia tentang keputusan teknologi, wang dan operasi yang sebenarnya dibuat perniagaan kecil.',
     intro:
       'UpahJe menerbitkan artikel pendek bersumber untuk orang yang menjalankan atau membina perniagaan kecil di Malaysia. Setiap dakwaan membawa sumber dan tarikh, dan jika kami tidak dapat mengesahkan sesuatu, kami menyatakannya dan bukan mengisi jurang itu.',
+    independence: 'Kami tidak menerima bayaran untuk liputan, penempatan atau ulasan.',
     bylines: 'Siapa yang menulis',
     editorName: 'Husni Ahmad',
     editorRole: 'Editor',
@@ -76,6 +78,7 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
       <main id="main" className="container-editorial" style={{ paddingTop: 'var(--space-12)', paddingBottom: 'var(--space-12)' }}>
         <h1 className="type-h1" style={{ color: 'var(--ui-ink)' }}>{copy.title}</h1>
         <p className="type-body mt-5" style={{ color: 'var(--ui-body)', maxWidth: 'var(--measure)' }}>{copy.intro}</p>
+        <p className="type-body mt-3" style={{ color: 'var(--ui-body)', maxWidth: 'var(--measure)' }}>{copy.independence}</p>
 
         <h2 className="type-h3 mt-12" style={{ color: 'var(--ui-ink)' }}>{copy.bylines}</h2>
         <dl className="mt-5" style={{ maxWidth: 'var(--measure)' }}>
