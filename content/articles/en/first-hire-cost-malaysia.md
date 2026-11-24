@@ -15,7 +15,7 @@ canonical: https://upahje.my/en/articles/first-hire-cost-malaysia
 draft: true
 changelog:
   - date: 2026-11-24
-    note: "First published. HRD Corp thresholds and the SKBBK requirement for hires after 31 August 2026 added the same day, once both pages could be read."
+    note: "First published. HRD Corp thresholds and the SKBBK requirement for hires after 31 August 2026 added the same day, once both pages could be read; the PCB line now says the LHDN page gives no remittance date, rather than that the page could not be read."
 sources:
   - title: "KWSP, employer mandatory contribution (rates, Third Schedule rounding, 15th-of-the-month payment)"
     url: "https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution"
@@ -31,6 +31,9 @@ sources:
     checked: 2026-11-24
   - title: "HRD Corp, registered employers (levy thresholds, 0.5% and 1%, Form 1 review)"
     url: "https://hrdcorp.gov.my/registered-employers"
+    checked: 2026-11-24
+  - title: "LHDN, monthly tax deduction page (mechanism and channels, no remittance date)"
+    url: "https://www.hasil.gov.my/en/majikan/pembayaran-pcb/"
     checked: 2026-11-24
 ---
 
@@ -77,7 +80,7 @@ At RM2,000 the same arithmetic gives an employer cost of RM2,299.00 and an emplo
 
 The HRD Corp levy starts at five Malaysian employees: optional at five to nine at 0.5%, compulsory at ten at 1%, with Form 1 reviewed within 30 days. A first hire sits below both bands, which is why no levy appears in the totals above.
 
-PCB, the monthly tax deduction, is computed from LHDN's MTD schedule. The page I tried returned 404, so the take-home figures above are before tax, and this article does not estimate a tax number.
+PCB, the monthly tax deduction, is computed from LHDN's MTD schedule. The page read documents the mechanism, the free submission channels and the payment routes, and it gives no remittance due date; anyone quoting a date for it is citing the MTD rules, not that page. The take-home figures above are before tax, and this article does not estimate a tax number.
 
 ## What to do before the first payslip
 
