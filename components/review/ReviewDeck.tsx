@@ -16,14 +16,13 @@ const REASONS = [
 
 export default function ReviewDeck({ cards, token }: { cards: DeckCard[]; token: string }) {
   const [index, setIndex] = useState(0)
-  const [drag, setDrag] = useState({ x: 0, y: 0, active: false })
   const [pending, setPending] = useState<Pending | null>(null)
   const [choosing, setChoosing] = useState<Action | null>(null)
   const [reason, setReason] = useState('off-topic')
   const [note, setNote] = useState('')
   const [status, setStatus] = useState<string>('')
   const [busy, setBusy] = useState(false)
-  const start = useRef<{ x: number; y: number } | null>(null)
+  const body = useRef<HTMLDivElement | null>(null)
   const card = cards[index]
 
   const commit = useCallback(async (action: Action, why?: string, text?: string) => {
@@ -42,7 +41,8 @@ export default function ReviewDeck({ cards, token }: { cards: DeckCard[]; token:
         return
       }
       setStatus(action === 'approve' ? 'Approved and queued for publish' : action === 'reject' ? 'Rejected, stays a draft' : 'Marked needs work')
-      setIndex((i) => i + 1)
+      setIndex((i) => Math.min(i + 1, cards.length - 1))
+      body.current?.scrollTo({ top: 0 })
     } catch {
       setStatus('decision failed: network error')
     } finally {
@@ -50,7 +50,7 @@ export default function ReviewDeck({ cards, token }: { cards: DeckCard[]; token:
       setPending(null)
       setChoosing(null)
     }
-  }, [card, token])
+  }, [card, cards.length, token])
 
   const schedule = (action: Action, why?: string, text?: string) => {
     if (!card) return
@@ -63,12 +63,26 @@ export default function ReviewDeck({ cards, token }: { cards: DeckCard[]; token:
     return () => clearTimeout(timer)
   }, [pending, commit])
 
+  const go = useCallback((delta: number) => {
+    setIndex((i) => Math.max(0, Math.min(cards.length - 1, i + delta)))
+    body.current?.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [cards.length])
+
+  const scrollBy = useCallback((dy: number) => {
+    body.current?.scrollBy({ top: dy, behavior: 'smooth' })
+  }, [])
+
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
       if (pending || choosing) return
-      if (event.key === 'ArrowRight') schedule('approve')
-      if (event.key === 'ArrowLeft') schedule('reject')
-      if (event.key === 'ArrowUp') { event.preventDefault(); setChoosing('needs-work') }
+      const key = event.key
+      if (key === 'ArrowRight') { event.preventDefault(); go(1) }
+      else if (key === 'ArrowLeft') { event.preventDefault(); go(-1) }
+      else if (key === 'ArrowDown') { event.preventDefault(); scrollBy(280) }
+      else if (key === 'ArrowUp') { event.preventDefault(); scrollBy(-280) }
+      else if (key.toLowerCase() === 'a') schedule('approve')
+      else if (key.toLowerCase() === 'r') setChoosing('reject')
+      else if (key.toLowerCase() === 'n') setChoosing('needs-work')
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -82,63 +96,70 @@ export default function ReviewDeck({ cards, token }: { cards: DeckCard[]; token:
     )
   }
 
-  const onPointerDown = (event: React.PointerEvent) => {
-    if (pending || busy) return
-    start.current = { x: event.clientX, y: event.clientY }
-    setDrag({ x: 0, y: 0, active: true })
-    ;(event.target as HTMLElement).setPointerCapture?.(event.pointerId)
-  }
-  const onPointerMove = (event: React.PointerEvent) => {
-    if (!start.current) return
-    setDrag({ x: event.clientX - start.current.x, y: event.clientY - start.current.y, active: true })
-  }
-  const onPointerUp = () => {
-    if (!start.current) return
-    const { x, y } = drag
-    start.current = null
-    setDrag({ x: 0, y: 0, active: false })
-    if (x > 90) schedule('approve')
-    else if (x < -90) schedule('reject')
-    else if (y < -90) setChoosing('needs-work')
-  }
-
   return (
     <div className="ui-canvas" style={{ position: 'fixed', inset: 0, zIndex: 70, display: 'flex', flexDirection: 'column' }}>
-      <div className="container-editorial flex items-center justify-between" style={{ paddingTop: 'var(--space-4)', paddingBottom: 'var(--space-3)' }}>
-        <span className="type-label" style={{ color: 'var(--ui-muted)' }}>Draft deck</span>
+      <div className="container-editorial flex items-center justify-between" style={{ paddingTop: 'var(--space-4)', paddingBottom: 'var(--space-3)', gap: 8 }}>
+        <button
+          type="button"
+          className="share-button type-small"
+          disabled={index === 0}
+          onClick={() => go(-1)}
+          style={{ opacity: index === 0 ? 0.4 : 1 }}
+        >
+          ← Previous card
+        </button>
         <span className="type-small" style={{ color: 'var(--ui-muted)' }}>{index + 1} of {cards.length}</span>
+        <button
+          type="button"
+          className="share-button type-small"
+          disabled={index === cards.length - 1}
+          onClick={() => go(1)}
+          style={{ opacity: index === cards.length - 1 ? 0.4 : 1 }}
+        >
+          Next card →
+        </button>
       </div>
 
-      <div className="container-editorial" style={{ flex: 1, display: 'flex', alignItems: 'stretch', paddingBottom: 'var(--space-4)' }}>
+      <div className="container-editorial" style={{ flex: 1, display: 'flex', alignItems: 'stretch', paddingBottom: 'var(--space-3)', minHeight: 0 }}>
         <article
-          onPointerDown={onPointerDown}
-          onPointerMove={onPointerMove}
-          onPointerUp={onPointerUp}
-          onPointerCancel={onPointerUp}
           style={{
             flex: 1,
             maxWidth: 'var(--measure)',
             margin: '0 auto',
-            touchAction: 'none',
-            userSelect: 'none',
-            transform: `translate(${drag.x}px, ${drag.y}px) rotate(${drag.x / 40}deg)`,
-            transition: drag.active ? 'none' : 'transform 160ms var(--ui-ease)',
             border: '1px solid var(--ui-rule)',
             background: 'var(--ui-surface)',
-            padding: 'var(--space-6)',
-            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            minHeight: 0,
           }}
         >
-          <div className="flex items-center justify-between">
-            <span className="type-label" style={{ color: 'var(--ui-accent)' }}>{card.lang.toUpperCase()} · {card.verify ? 'BLOCKED' : 'draft'}</span>
-            <span className="type-small" style={{ color: 'var(--ui-muted)' }}>{card.words} words · {card.sources} sources · {card.gaps} gaps</span>
+          <div ref={body} style={{ overflowY: 'auto', WebkitOverflowScrolling: 'touch', padding: 'var(--space-6)', flex: 1, minHeight: 0 }}>
+            <div className="flex items-center justify-between">
+              <span className="type-label" style={{ color: 'var(--ui-accent)' }}>{card.lang.toUpperCase()} · {card.verify ? 'BLOCKED' : 'draft'}</span>
+              <span className="type-small" style={{ color: 'var(--ui-muted)' }}>{card.words} words · {card.sources} sources · {card.gaps} gaps</span>
+            </div>
+            <h1 className="type-h2 mt-3" style={{ color: 'var(--ui-ink)' }}>{card.title}</h1>
+            <p className="type-small mt-2" style={{ color: 'var(--ui-body)' }}>{card.standfirst}</p>
+            <p className="type-body mt-4" style={{ color: 'var(--ui-body)', whiteSpace: 'pre-wrap' }}>{card.excerpt}…</p>
+            <a
+              href={`/${card.lang}/review/${card.slug}?k=${encodeURIComponent(token)}`}
+              className="share-button type-small mt-4"
+              style={{ display: 'inline-block' }}
+            >
+              Read the full draft →
+            </a>
+            {card.verify && (
+              <p className="type-small mt-4" style={{ color: '#a33127', fontWeight: 600 }}>Approve blocked: unresolved {card.verify}</p>
+            )}
           </div>
-          <h1 className="type-h2 mt-3" style={{ color: 'var(--ui-ink)' }}>{card.title}</h1>
-          <p className="type-small mt-2" style={{ color: 'var(--ui-body)' }}>{card.standfirst}</p>
-          <p className="type-body mt-4" style={{ color: 'var(--ui-body)', whiteSpace: 'pre-wrap' }}>{card.excerpt}…</p>
-          {card.verify && (
-            <p className="type-small mt-4" style={{ color: '#a33127', fontWeight: 600 }}>Approve blocked: unresolved {card.verify}</p>
-          )}
+
+          <div
+            className="flex items-center justify-center gap-2"
+            style={{ borderTop: '1px solid var(--ui-rule)', padding: 'var(--space-2)' }}
+          >
+            <button type="button" className="share-button type-small" onClick={() => scrollBy(-300)}>↑ Scroll up</button>
+            <button type="button" className="share-button type-small" onClick={() => scrollBy(300)}>↓ Scroll down</button>
+          </div>
         </article>
       </div>
 
@@ -166,11 +187,15 @@ export default function ReviewDeck({ cards, token }: { cards: DeckCard[]; token:
             </div>
           </div>
         ) : (
-          <div className="flex flex-wrap items-center gap-2" style={{ borderTop: '1px solid var(--ui-rule)', paddingTop: 'var(--space-3)' }}>
-            <button type="button" className="share-button type-small" disabled={busy} onClick={() => schedule('approve')}>Approve</button>
-            <button type="button" className="share-button type-small" disabled={busy} onClick={() => setChoosing('reject')}>Reject</button>
-            <button type="button" className="share-button type-small" disabled={busy} onClick={() => setChoosing('needs-work')}>Needs work</button>
-            <span className="type-small" style={{ color: 'var(--ui-muted)' }}>← reject · → approve · ↑ needs work</span>
+          <div style={{ borderTop: '1px solid var(--ui-rule)', paddingTop: 'var(--space-3)' }}>
+            <div className="flex flex-wrap items-center gap-2">
+              <button type="button" className="share-button type-small" disabled={busy} onClick={() => schedule('approve')}>Approve</button>
+              <button type="button" className="share-button type-small" disabled={busy} onClick={() => setChoosing('reject')}>Reject</button>
+              <button type="button" className="share-button type-small" disabled={busy} onClick={() => setChoosing('needs-work')}>Needs work</button>
+            </div>
+            <p className="type-small mt-2" style={{ color: 'var(--ui-muted)' }}>
+              Keys: ← → move between cards · ↑ ↓ scroll the draft · A approve · R reject · N needs work
+            </p>
           </div>
         )}
         {status && <p className="type-small mt-2" role="status" style={{ color: 'var(--ui-muted)' }}>{status}</p>}
