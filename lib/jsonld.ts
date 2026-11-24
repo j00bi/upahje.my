@@ -25,6 +25,28 @@ export function articleJsonLd(article: Article, url: string) {
   }
 }
 
+/**
+ * Breadcrumb trail for an article: home, its topic, then the piece itself.
+ * Answer engines and search both read this to place a page in a hierarchy, and
+ * an article with no crumbs is a orphan page to a crawler.
+ */
+export function breadcrumbJsonLd(article: Article, topic: { label: string; href: string } | null) {
+  const home = { name: article.lang === 'ms' ? 'Utama' : 'Home', url: absolute(`/${article.lang}`) }
+  const trail: Array<{ name: string; url: string }> = [home]
+  if (topic) trail.push({ name: topic.label, url: absolute(topic.href) })
+  trail.push({ name: cleanText(article.title), url: absolute(`/${article.lang}/articles/${article.slug}`) })
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: trail.map((crumb, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: crumb.name,
+      item: crumb.url,
+    })),
+  }
+}
+
 /** FAQPage generated from the visible FAQ section, never hand-written. */
 export function faqJsonLd(faq: ArticleFaq[]) {
   return {

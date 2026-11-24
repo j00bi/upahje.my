@@ -9,7 +9,7 @@ import { Markdown } from '@/lib/markdown'
 import { copyFor } from '@/lib/copy'
 import { extractFaq } from '@/lib/faq'
 import { cleanText } from '@/lib/text'
-import { articleJsonLd, definedTermJsonLd, faqJsonLd } from '@/lib/jsonld'
+import { articleJsonLd, breadcrumbJsonLd, definedTermJsonLd, faqJsonLd } from '@/lib/jsonld'
 import { extractHeadings, splitFaq, splitShortAnswer } from '@/lib/article-view'
 import { articleLanguages, absolute, SITE_NAME, OG_IMAGE } from '@/lib/seo'
 import { REPOS_BY_KEY } from '@/lib/article-repos'
@@ -202,6 +202,7 @@ export default function ArticleView({ article, draftBanner }: { article: any; dr
       </main>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd(article, url)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(article, { label: topicLabel, href: topicHref })) }} />
       {faq.length > 0 && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faq)) }} />}
       {article.category === 'definitions' && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermJsonLd(article, url)) }} />}
     </div>

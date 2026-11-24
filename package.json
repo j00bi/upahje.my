@@ -15,7 +15,8 @@
     "indexnow": "node scripts/indexnow.mjs",
     "schema": "node content/schema.mjs",
     "schema:strict": "node content/schema.mjs --strict",
-    "schema:baseline": "node content/schema.mjs --write-baseline"
+    "schema:baseline": "node content/schema.mjs --write-baseline",
+    "geo:audit": "node scripts/geo-audit.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
