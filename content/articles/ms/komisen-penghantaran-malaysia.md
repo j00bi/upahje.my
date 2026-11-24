@@ -13,6 +13,10 @@ tags: [buying-guides, penghantaran, komisen, malaysia]
 cardFigure: "Pada 25%, pesanan RM25 tinggal RM8.50"
 canonical: https://upahje.my/ms/articles/komisen-penghantaran-malaysia
 draft: true
+review:
+  state: rejected
+  reason: "off-topic"
+  at: 2026-11-24T05:02:21.580Z
 changelog:
   - date: 2026-11-24
     note: "Mula diterbitkan."
