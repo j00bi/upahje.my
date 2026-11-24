@@ -1,6 +1,6 @@
 ---
-title: "Claude, ChatGPT, Gemini and Grok: what actually differs between the closed models"
-description: "Not the benchmark score, which no current leaderboard here can settle. What you are stuck with: context window, price per token and the documented capabilities. Every cell sourced or marked not captured, and where the terms pages were not opened, the article says so."
+title: "Claude, ChatGPT, Gemini, Grok: what differs"
+description: "Scores settle little here. What you are stuck with is context window, price per token and documented capability, every cell sourced or marked not captured."
 slug: closed-models-differences
 translationKey: closed-models-differences
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: buying-guides
 tags: [buying-guides, closed-models, pricing, malaysia]
 canonical: https://upahje.my/en/articles/closed-models-differences
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "Anthropic, models overview"
     url: "https://docs.claude.com/en/docs/about-claude/models/overview"

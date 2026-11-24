@@ -1,6 +1,6 @@
 ---
-title: "What a WhatsApp chatbot costs in Malaysia, per message and per month"
-description: "Marketing messages cost RM0.3467 each in Malaysia, service and utility RM0.0564 with the first 1,000 free, and vendors charge RM200 to RM1,500 a month. What the 24-hour window changes, and where the published sources disagree."
+title: "WhatsApp chatbot costs in Malaysia, per message"
+description: "Marketing messages RM0.3467 in Malaysia, service and utility RM0.0564 with the first 1,000 free, vendors RM200 to RM1,500 a month, and two sources disagree."
 cardFigure: "RM0.3467 per marketing message; RM200 to RM1,500 a month"
 slug: whatsapp-chatbot-costs-malaysia
 translationKey: whatsapp-chatbot-costs-malaysia
@@ -11,6 +11,9 @@ category: buying-guides
 tags: [buying-guides, whatsapp, chatbot, pricing, malaysia]
 canonical: https://upahje.my/en/articles/whatsapp-chatbot-costs-malaysia
 draft: true
+changelog:
+  - date: 2026-11-23
+    note: "First published."
 sources:
   - title: "Meta, WhatsApp pricing documentation (per-message billing, 24-hour window, free tier, FEP)"
     url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"

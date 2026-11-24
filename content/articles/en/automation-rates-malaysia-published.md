@@ -1,6 +1,6 @@
 ---
-title: "What automation work costs in Malaysia: published rates, six sources"
-description: "Four Malaysian studios, one independent practitioner and one freelance profile: 30 published prices for automation and integration work, checked 19 November 2026 except one page read on 27 October 2026. Several source pages carry no publication date, so a price may be older than this article."
+title: "Automation work in Malaysia: the published rates"
+description: "Thirty published prices for automation work from four Malaysian studios, one independent and one freelancer, checked November 2026. Some pages undated."
 cardFigure: "Automation work runs from RM400 to RM6,000-plus"
 slug: automation-rates-malaysia-published
 translationKey: automation-rates-malaysia-published
@@ -11,6 +11,9 @@ category: buying-guides
 tags: [buying-guides, automation, rates, malaysia]
 canonical: https://upahje.my/en/articles/automation-rates-malaysia-published
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "KodeSME, automation pricing"
     url: "https://kodesme.klyihao.com/"

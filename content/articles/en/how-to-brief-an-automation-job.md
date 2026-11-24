@@ -1,8 +1,9 @@
 ---
 title: "How to brief an automation job so you don't pay twice"
-description: "Five things a freelancer needs before quoting, a reusable brief template, and the acceptance test to agree before work starts. Written for a Malaysian SME buying automation for the first time."
+description: "Five things a freelancer needs before quoting, a reusable brief template, and the acceptance test to agree before work starts, written for a Malaysian SME."
 slug: how-to-brief-an-automation-job
 translationKey: how-to-brief-an-automation-job
+format: perspective
 date: 2026-11-19
 updated: 2026-11-19
 author: "UpahJe Desk"
@@ -10,6 +11,9 @@ category: buying-guides
 tags: [buying-guides, automation, briefing, freelancer, malaysia]
 canonical: https://upahje.my/en/articles/how-to-brief-an-automation-job
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 ---
 
 # How to brief an automation job so you don't pay twice
@@ -105,4 +109,6 @@ Get one real example first. Export the report or the row you want reproduced, an
 ### Is a fixed price always better than hourly?
 
 Not always, but for this kind of work it usually is, because the scope can be written down. Hourly suits work where the scope genuinely cannot be known in advance, such as investigating why a third-party service fails. If the brief is clear and the quote is still hourly only, ask what part is unknown.
+---
 
+This piece carries no sources, because it is our own procedure rather than a report: how we commission automation work, and the brief we hand out. No published standard or vendor document is being described, and no figure here is a measurement.

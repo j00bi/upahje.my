@@ -1,5 +1,5 @@
 ---
-title: "CommandCode, OpenCode, DeepSeek: three names, three different things"
+title: "CommandCode, OpenCode, DeepSeek: three different things"
 description: "One is a paid CLI, one is a free CLI, one is an API. Their published prices, their drift, and one run that shows an exit code of zero is not success."
 slug: commandcode-opencode-deepseek-numbers
 translationKey: commandcode-opencode-deepseek-numbers
@@ -12,6 +12,9 @@ format: dev-note
 tags: [buying-guides, coding-agents, pricing]
 canonical: https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "First published."
 sources:
   - title: "SWE-bench leaderboard, Verified tab"
     url: "https://www.swebench.com/"

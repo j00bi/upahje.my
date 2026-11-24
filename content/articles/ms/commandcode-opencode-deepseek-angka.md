@@ -12,6 +12,9 @@ format: dev-note
 tags: [buying-guides, coding-agent, harga]
 canonical: https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "Mula diterbitkan."
 sources:
   - title: "Papan pendahulu SWE-bench, tab Verified"
     url: "https://www.swebench.com/"

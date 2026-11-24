@@ -1,6 +1,6 @@
 ---
-title: "Harness agent: siapa yang membuatnya, dan apa yang benar-benar sumber terbuka"
-description: "Grok Bot dan Dots ialah produk tertutup yang dihoskan. OpenBot dan MausBot ialah projek sumber tersedia, dan hanya satu daripadanya sumber terbuka pada lesennya sendiri. Jadual dengan lesen dan tahap bukti pada setiap baris."
+title: "Harness agent: siapa buat, mana satu sumber terbuka"
+description: "Grok Bot dan Dots produk tertutup dihoskan. OpenBot dan MausBot sumber tersedia, hanya satu sumber terbuka pada lesen sendiri; setiap baris ada lesen dan bukti."
 slug: landskap-harness-agent-sumber-terbuka
 translationKey: harness-landscape-open-closed
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: buying-guides
 tags: [buying-guides, agent-harness, lesen, malaysia]
 canonical: https://upahje.my/ms/articles/landskap-harness-agent-sumber-terbuka
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "nightly-labs/openbot, metadata repositori dan fail lesen (PolyForm Noncommercial 1.0.0)"
     url: "https://github.com/nightly-labs/openbot"

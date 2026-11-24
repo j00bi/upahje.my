@@ -1,6 +1,6 @@
 ---
-title: "Harness agent disusun: empat CLI yang dipasang pada satu mesin"
-description: "DeepSeek Harness, Claude Code, Codex CLI dan OpenCode dipasang pada satu mesin, dinilai 1-5 pada lima kriteria berwajaran menggunakan hanya apa yang dapat kami baca daripada setiap satu pada 19 November 2026."
+title: "Harness agent disusun: empat CLI pada satu mesin"
+description: "DeepSeek Harness, Claude Code, Codex CLI dan OpenCode dinilai 1-5 pada lima kriteria, menggunakan hanya apa yang ditunjukkan setiap satu pada 19 November 2026."
 slug: harness-agent-disusun
 translationKey: agent-harnesses-ranked
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: buying-guides
 tags: [buying-guides, agent-harness, perbandingan, malaysia]
 canonical: https://upahje.my/ms/articles/harness-agent-disusun
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "Metadata pakej DeepSeek Harness (@deepseek-ai/dsh 0.2.2-rc.1)"
     url: "https://www.npmjs.com/package/@deepseek-ai/dsh"

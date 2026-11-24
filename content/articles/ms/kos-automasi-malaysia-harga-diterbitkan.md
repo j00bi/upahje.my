@@ -1,6 +1,6 @@
 ---
-title: "Kos kerja automasi di Malaysia: harga yang diterbitkan, enam sumber"
-description: "Empat studio Malaysia, satu pengamal bebas dan satu profil freelance: 30 harga diterbitkan untuk kerja automasi dan integrasi, disemak 19 November 2026 kecuali satu halaman dibaca pada 27 Oktober 2026. Beberapa halaman sumber tiada tarikh terbitan, jadi sesuatu harga mungkin lebih lama daripada artikel ini."
+title: "Kos kerja automasi di Malaysia: harga diterbitkan"
+description: "30 harga kerja automasi dari empat studio, satu pengamal bebas dan satu freelancer, disemak November 2026; beberapa halaman tiada tarikh."
 cardFigure: "Kerja automasi bermula RM400 hingga RM6,000 lebih"
 slug: kos-automasi-malaysia-harga-diterbitkan
 translationKey: automation-rates-malaysia-published
@@ -11,6 +11,9 @@ category: buying-guides
 tags: [buying-guides, automasi, kadar, malaysia]
 canonical: https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "KodeSME, harga automasi"
     url: "https://kodesme.klyihao.com/"

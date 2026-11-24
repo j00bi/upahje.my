@@ -1,6 +1,6 @@
 ---
-title: "Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia"
-description: "Model terbuka boleh dimuat turun dan dijalankan pada perkakasan sendiri. Berapa kosnya sebulan, bila ia mula berbaloi berbanding bayaran ikut panggilan, dan kemahiran yang diperlukan."
+title: "Model terbuka atau tertutup: apa PKS boleh jalankan"
+description: "Model terbuka boleh dimuat turun dan dijalankan pada perkakasan sendiri: kos sebulan, jumlah di mana ia kalahkan bayaran ikut panggilan, dan kemahiran."
 slug: model-terbuka-atau-tertutup-pks-malaysia
 translationKey: open-vs-closed-models
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: definitions
 tags: [definitions, model-ai, hosting-sendiri, malaysia]
 canonical: https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "Mistral AI, halaman model Mistral Small 4 (parameter, lesen, harga API)"
     url: "https://docs.mistral.ai/models/mistral-small-4-0-26-03"

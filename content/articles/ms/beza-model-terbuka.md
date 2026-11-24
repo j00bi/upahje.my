@@ -1,6 +1,6 @@
 ---
-title: "Model terbuka: Qwen, DeepSeek, Mistral dan Kimi, dan apa yang dibenarkan oleh lesennya"
-description: "Empat keluarga terbuka, lima kad model, empat bentuk lesen. MIT pada DeepSeek, lesen Qwen tersuai, lesen terbuka Mistral sendiri. Apa yang dibenarkan dan kos menyewanya."
+title: "Qwen, DeepSeek, Mistral, Kimi: apa lesen benarkan"
+description: "Empat keluarga, lima kad model, empat bentuk lesen: MIT pada DeepSeek, lesen Qwen tersuai, lesen terbuka Mistral sendiri. Apa yang dibenarkan dan kos sewa."
 slug: beza-model-terbuka
 translationKey: open-models-differences
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: buying-guides
 tags: [buying-guides, model-terbuka, lesen, malaysia]
 canonical: https://upahje.my/ms/articles/beza-model-terbuka
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "Kad model dan lesen DeepSeek-V4.1-Flash-1017"
     url: "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"

@@ -1,8 +1,9 @@
 ---
-title: "Cara menulis brief kerja automasi supaya anda tidak bayar dua kali"
-description: "Lima perkara yang freelancer perlukan sebelum memberi sebut harga, templat brief yang boleh diguna semula, dan ujian penerimaan yang perlu dipersetujui sebelum kerja bermula."
+title: "Cara menulis brief kerja automasi"
+description: "Lima perkara yang freelancer perlukan sebelum memberi sebut harga, templat brief boleh guna semula, dan ujian penerimaan dipersetujui sebelum kerja bermula."
 slug: cara-tulis-brief-kerja-automasi
 translationKey: how-to-brief-an-automation-job
+format: perspective
 date: 2026-11-19
 updated: 2026-11-19
 author: "UpahJe Desk"
@@ -10,6 +11,9 @@ category: buying-guides
 tags: [buying-guides, automasi, brief, freelancer, malaysia]
 canonical: https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 ---
 
 # Cara menulis brief kerja automasi supaya anda tidak bayar dua kali
@@ -105,4 +109,6 @@ Dapatkan satu contoh sebenar dahulu. Eksport laporan atau baris yang anda mahu d
 ### Adakah harga tetap sentiasa lebih baik daripada ikut jam?
 
 Tidak sentiasa, tetapi bagi kerja jenis ini biasanya ya, kerana skopnya boleh ditulis. Harga ikut jam sesuai apabila skop memang tidak dapat diketahui di awal, seperti menyiasat mengapa perkhidmatan pihak ketiga gagal. Jika brief itu jelas dan sebut harga masih ikut jam sahaja, tanya bahagian mana yang belum diketahui.
+---
 
+Artikel ini tiada sumber kerana ia prosedur kami sendiri, bukan laporan: cara kami menempah kerja automasi dan brief yang kami berikan. Tiada piawaian terbitan atau dokumen vendor yang digambarkan, dan tiada angka di sini yang merupakan ukuran.

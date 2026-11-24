@@ -1,6 +1,6 @@
 ---
-title: "Open-weight models: Qwen, DeepSeek, Mistral and Kimi, and what the licence lets you do"
-description: "Four open-weight families, five model cards, four licence shapes. MIT on DeepSeek, a custom Qwen licence, Mistral's own open-weight licence. What each permits and what the model costs to rent."
+title: "Qwen, DeepSeek, Mistral, Kimi: what the licence allows"
+description: "Four open-weight families, five model cards, four licence shapes: MIT on DeepSeek, a custom Qwen licence, Mistral's own. What each permits and its rental cost."
 slug: open-models-differences
 translationKey: open-models-differences
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: buying-guides
 tags: [buying-guides, open-weight, licence, malaysia]
 canonical: https://upahje.my/en/articles/open-models-differences
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "DeepSeek-V4.1-Flash-1017 model card and licence"
     url: "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017"

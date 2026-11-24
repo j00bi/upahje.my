@@ -1,6 +1,6 @@
 ---
-title: "Open or closed models: what a Malaysian SME can actually run in-house"
-description: "An open-weight model can be downloaded and run on hardware you control. What that costs per month in Malaysia, the volume where it beats paying per call, and the skills it needs."
+title: "Open or closed models: what an SME can run in-house"
+description: "An open-weight model can be downloaded and run on hardware you control: cost per month in Malaysia, the volume where it beats per-call pricing, and the skills."
 slug: open-vs-closed-models-malaysia
 translationKey: open-vs-closed-models
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: definitions
 tags: [definitions, ai-models, self-hosting, malaysia]
 canonical: https://upahje.my/en/articles/open-vs-closed-models-malaysia
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "Mistral AI, Mistral Small 4 model page (parameters, licence, API price)"
     url: "https://docs.mistral.ai/models/mistral-small-4-0-26-03"

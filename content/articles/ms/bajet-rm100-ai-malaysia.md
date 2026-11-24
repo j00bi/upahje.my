@@ -1,6 +1,6 @@
 ---
 title: "Apa yang RM100 sebulan beli dalam AI, di Malaysia"
-description: "RM100 ialah sama ada satu tempat duduk dalam aplikasi langganan, atau satu meter token API, bukan kedua-duanya. Penukaran pada kadar Bank Negara 19 November 2026, tiga tahap penggunaan, dan garis di mana token menang."
+description: "RM100 beli tempat duduk dalam aplikasi langganan, atau meter token API. Penukaran pada kadar Bank Negara 19 November 2026, tiga tahap guna, bila token menang."
 cardFigure: "RM100 token Haiku 5.5 beli kira-kira 54,000 tugasan sebulan"
 slug: bajet-rm100-ai-malaysia
 translationKey: rm100-budget
@@ -11,6 +11,9 @@ category: buying-guides
 tags: [buying-guides, harga, langganan, malaysia]
 canonical: https://upahje.my/ms/articles/bajet-rm100-ai-malaysia
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "Claude, harga"
     url: "https://claude.com/pricing"

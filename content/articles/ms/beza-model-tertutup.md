@@ -1,6 +1,6 @@
 ---
-title: "Claude, ChatGPT, Gemini dan Grok: apa sebenarnya beza antara model tertutup"
-description: "Bukan skor penanda aras, yang tiada papan pendahulu semasa dapat dipastikan di sini. Apa yang anda terikat dengannya: tetingkap konteks, harga setiap token dan keupayaan yang didokumenkan. Setiap sel bersumber atau ditanda tidak dirakam, dan jika halaman terma tidak dibuka, artikel menyatakannya."
+title: "Claude, ChatGPT, Gemini dan Grok: apa yang berbeza"
+description: "Skor penanda aras tidak memutuskan banyak di sini. Yang terikat: tetingkap konteks, harga token dan keupayaan didokumenkan, setiap sel bersumber atau ditanda."
 slug: beza-model-tertutup
 translationKey: closed-models-differences
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: buying-guides
 tags: [buying-guides, model-tertutup, harga, malaysia]
 canonical: https://upahje.my/ms/articles/beza-model-tertutup
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "Anthropic, gambaran model"
     url: "https://docs.claude.com/en/docs/about-claude/models/overview"

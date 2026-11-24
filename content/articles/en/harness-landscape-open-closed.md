@@ -1,6 +1,6 @@
 ---
-title: "Agent harnesses: who makes them, and what is actually open source"
-description: "Grok Bot and Dots are closed hosted products. OpenBot and MausBot are source-available projects, and only one of them is open source on its own licence. A table with the licence and the evidence level on every row."
+title: "Agent harnesses: who makes them, what is open"
+description: "Grok Bot and Dots are closed hosted products. OpenBot and MausBot are source-available, and only one is open source on its own licence; a licence row for each."
 slug: harness-landscape-open-closed
 translationKey: harness-landscape-open-closed
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: buying-guides
 tags: [buying-guides, agent-harness, licence, malaysia]
 canonical: https://upahje.my/en/articles/harness-landscape-open-closed
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "nightly-labs/openbot, repository metadata and licence file (PolyForm Noncommercial 1.0.0)"
     url: "https://github.com/nightly-labs/openbot"

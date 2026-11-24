@@ -1,6 +1,6 @@
 ---
 title: "Agent harnesses ranked: four CLIs installed on one machine"
-description: "DeepSeek Harness, Claude Code, Codex CLI and OpenCode installed on one machine, scored 1-5 on five weighted criteria using only what we could read from each on 19 November 2026."
+description: "DeepSeek Harness, Claude Code, Codex CLI and OpenCode scored 1-5 on five weighted criteria, using only what each showed us on 19 November 2026."
 slug: agent-harnesses-ranked
 translationKey: agent-harnesses-ranked
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: buying-guides
 tags: [buying-guides, agent-harness, comparison, malaysia]
 canonical: https://upahje.my/en/articles/agent-harnesses-ranked
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "DeepSeek Harness package metadata (@deepseek-ai/dsh 0.2.2-rc.1)"
     url: "https://www.npmjs.com/package/@deepseek-ai/dsh"
