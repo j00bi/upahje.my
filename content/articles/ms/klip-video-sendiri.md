@@ -43,9 +43,9 @@ Angka ringgit di atas ialah penukaran, bukan harga Malaysia. Tiada penerbit yang
 
 ## Dua repo tiba pada minggu yang sama
 
-`neonclipping` dicipta pada 19 November 2026 dan mempunyai 2,312 bintang ketika saya membacanya: MIT, Python, "paste a link, get captioned 9:16 clips in about two minutes". `PeakCut` dicipta pada 14 November 2026 dan mempunyai 1,848 bintang: MIT, Python, kendiri, bawa kunci AI sendiri.
+`neonclipping` dicipta pada 19 November 2026 dan mempunyai 2,313 bintang setakat 24 November 2026: MIT, Python, "paste a link, get captioned 9:16 clips in about two minutes". `PeakCut` dicipta pada 14 November 2026 dan mempunyai 1,848 bintang setakat 24 November 2026: MIT, Python, kendiri, bawa kunci AI sendiri.
 
-Kedua-duanya muda, kedua-duanya masih bergerak, dan kedua-duanya sudah melepasi angka bintang yang tersebar ketika pelancaran, yang mengingatkan bahawa kiraan bintang berusia lima hari ialah dakwaan, bukan fakta.
+Kedua-duanya muda, kedua-duanya masih bergerak, dan kedua-duanya sudah melepasi angka bintang yang tersebar ketika pelancaran, yang mengingatkan bahawa kiraan bintang hanya benar pada minit ia dibaca: `neonclipping` bergerak satu antara pek dan semakan ini.
 
 ## Apa kos laluan percuma sebaliknya
 
@@ -61,7 +61,7 @@ Angka itu mesin penulis, bukan mesin anda dan bukan laptop Malaysia. Kad yang le
 | Ringgit sebulan, ditukar pada 4.1185 | 61.78 | 0 | 0 |
 | Fi lesen | tiada | 0, MIT | 0, MIT |
 | Masa setiap klip, seperti diterbitkan | tidak dicetak | 97 s untuk strim 85 minit | tidak dicetak |
-| Bintang GitHub, 24 November 2026 | tiada | 2,312 | 1,848 |
+| Bintang GitHub, setakat 24 November 2026 | tiada | 2,313 | 1,848 |
 | Sari kata Melayu dibuktikan | tiada | belum dibuktikan | Inggeris sahaja |
 
 Dua sifar itu kos lesen, bukan kos keseluruhan. Masa anda dan mesin itu nyata, dan jadual ini tidak boleh menilai keduanya untuk anda.
@@ -74,9 +74,11 @@ Dua sifar itu kos lesen, bukan kos keseluruhan. Masa anda dan mesin itu nyata, d
 
 ## Jumlah di mana membatalkan berbaloi
 
-Pendapat saya, dinyatakan sekali: di bawah kira-kira empat klip sebulan, langganan RM61.78 lebih murah daripada satu malam anda. Melebihi itu, kiraannya berpaling, kerana pemasangan hanya sekali dan kos marginal klip kesepuluh ialah minit, bukan ringgit.
+Kiraannya: RM61.78 membeli empat klip sebulan pada RM15.45 setiap satu, lapan pada RM7.72, dan dua belas pada RM5.15. Kos marginal laluan percuma ialah 97 saat GPU bagi sumber 85 minit, jadi dua belas klip menelan kira-kira sembilan belas minit masa mesin sebulan.
 
-Angka yang menentukan bukan harganya, tetapi berapa klip yang anda benar-benar terbitkan sebulan, dan kebanyakan orang yang membeli alat ini sudah tahu jawapannya dua.
+Dua belas klip ialah angka yang saya gunakan, dan itu pertimbangan, bukan penemuan bersumber. Di bawahnya, anda membayar RM5 hingga RM15 sekeping untuk kemudahan; di atasnya, kos laluan percuma tetap dan langganan tidak membeli apa-apa yang mesin anda sendiri tidak boleh buat.
+
+Pemasangan tetap satu malam. Itu kos sebenar di pihak percuma, dan ia dibayar sekali.
 
 ## Apa yang perlu dibuat minggu ini
 

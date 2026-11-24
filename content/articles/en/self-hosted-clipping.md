@@ -43,9 +43,9 @@ The ringgit figure above is a conversion, not a Malaysian price. No publisher se
 
 ## Two repos arrived in the same week
 
-`neonclipping` was created on 19 November 2026 and had 2,312 stars when I read it: MIT, Python, "paste a link, get captioned 9:16 clips in about two minutes". `PeakCut` was created on 14 November 2026 and had 1,848 stars: MIT, Python, self-hosted, bring your own AI key.
+`neonclipping` was created on 19 November 2026 and has 2,313 stars as of 24 November 2026: MIT, Python, "paste a link, get captioned 9:16 clips in about two minutes". `PeakCut` was created on 14 November 2026 and has 1,848 stars as of 24 November 2026: MIT, Python, self-hosted, bring your own AI key.
 
-Both are young, both are moving, and both are already past the star counts that circulated when they launched, which is a reminder that a five-day-old star count is a claim and not a fact.
+Both are young, both are moving, and both are already past the star counts that circulated when they launched, which is a reminder that a star count is true for the minute it is read: `neonclipping` moved by one between the packet and this check.
 
 ## What the free path costs instead
 
@@ -61,7 +61,7 @@ That figure is the author's machine, not yours and not a Malaysian laptop's. A s
 | Ringgit per month, converted at 4.1185 | 61.78 | 0 | 0 |
 | Licence fee | n/a | 0, MIT | 0, MIT |
 | Time per clip, as published | not printed | 97 s for an 85-minute stream | not printed |
-| GitHub stars, 24 November 2026 | n/a | 2,312 | 1,848 |
+| GitHub stars, as of 24 November 2026 | n/a | 2,313 | 1,848 |
 | Malay captions demonstrated | n/a | unproven | English only |
 
 The two zeroes are licence costs, not total costs. Your time and the machine are real, and the table cannot price them for you.
@@ -74,9 +74,11 @@ The two zeroes are licence costs, not total costs. Your time and the machine are
 
 ## The volume where cancelling pays
 
-My opinion, stated once: below about four clips a month, the RM61.78 subscription is cheaper than your evening. Above that, the maths turns, because the install is one evening and the marginal cost of the tenth clip is minutes rather than ringgit.
+The arithmetic: RM61.78 buys four clips a month at RM15.45 each, eight at RM7.72, and twelve at RM5.15. The free path's marginal cost is 97 seconds of GPU per 85-minute source, so twelve clips cost about nineteen minutes of machine time for the month.
 
-The number that decides it is not the price, it is how many clips you actually publish in a month, and most people who buy these tools already know the answer is two.
+Twelve clips is the number I would use, and it is a judgement rather than a sourced finding. Below it, you are paying RM5 to RM15 a clip for convenience; above it, the free path's cost is fixed and the subscription buys nothing you cannot do on the machine you already own.
+
+The instalment is one evening either way. That is the real cost on the free side, and it is paid once.
 
 ## What to do this week
 
