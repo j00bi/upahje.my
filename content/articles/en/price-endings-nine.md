@@ -13,6 +13,10 @@ tags: [buying-guides, pricing, retail, malaysia]
 cardFigure: "Three field experiments, no published effect size"
 canonical: https://upahje.my/en/articles/price-endings-nine
 draft: true
+review:
+  state: rejected
+  reason: "other"
+  at: 2026-11-24T04:26:34.328Z
 changelog:
   - date: 2026-11-24
     note: "First published."
