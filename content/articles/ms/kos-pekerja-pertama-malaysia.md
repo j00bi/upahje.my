@@ -12,7 +12,7 @@ category: definitions
 tags: [definitions, gaji, epf, socso, malaysia]
 cardFigure: "Pekerja RM3,000 berharga RM3,448.50 sebulan"
 canonical: https://upahje.my/ms/articles/kos-pekerja-pertama-malaysia
-draft: true
+draft: false
 changelog:
   - date: 2026-11-24
     note: "Mula diterbitkan. Ambang HRD Corp dan keperluan SKBBK bagi pekerja selepas 31 Ogos 2026 ditambah pada hari yang sama; baris PCB kini menyatakan halaman LHDN tiada tarikh remitan, bukan bahawa halaman itu tidak dapat dibaca."
