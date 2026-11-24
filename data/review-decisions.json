@@ -124,5 +124,14 @@
     "note": null,
     "decided_at": "2026-11-24T05:02:21.580Z",
     "commit": "981df18e359599c3c0014a1ba3880df524ff2180"
+  },
+  {
+    "slug": "coding-assistant-cost-malaysia",
+    "lang": "en",
+    "action": "approve",
+    "reason": null,
+    "note": null,
+    "decided_at": "2026-11-24T05:02:33.869Z",
+    "commit": "f9a5cfff283a5670b16afede178e016999029751"
   }
 ]
