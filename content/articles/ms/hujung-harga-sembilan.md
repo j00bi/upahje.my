@@ -13,6 +13,10 @@ tags: [buying-guides, harga, runcit, malaysia]
 cardFigure: "Tiga eksperimen lapangan, tiada saiz kesan"
 canonical: https://upahje.my/ms/articles/hujung-harga-sembilan
 draft: true
+review:
+  state: rejected
+  reason: "weak-hook"
+  at: 2026-11-24T05:00:51.058Z
 changelog:
   - date: 2026-11-24
     note: "Mula diterbitkan."
