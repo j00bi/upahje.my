@@ -25,5 +25,14 @@
     "note": null,
     "decided_at": "2026-11-24T04:26:41.986Z",
     "commit": "f04955c6d7e8a974f431611f96a7376fc1f63bc9"
+  },
+  {
+    "slug": "price-endings-nine",
+    "lang": "en",
+    "action": "reject",
+    "reason": null,
+    "note": null,
+    "decided_at": "2026-11-24T04:26:58.612Z",
+    "commit": "b95e31e0166c64e536143b66baa848cea677cb8a"
   }
 ]
