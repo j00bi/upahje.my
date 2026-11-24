@@ -13,10 +13,6 @@ tags: [buying-guides, video, klip, kendiri, malaysia]
 cardFigure: "USD 15 sebulan ialah RM61.78, jika ditukar"
 canonical: https://upahje.my/ms/articles/klip-video-sendiri
 draft: true
-review:
-  state: needs-work
-  note: "probe"
-  at: 2026-11-24T04:22:02.689Z
 changelog:
   - date: 2026-11-24
     note: "Mula diterbitkan."
