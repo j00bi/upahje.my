@@ -97,5 +97,14 @@
     "note": null,
     "decided_at": "2026-11-24T05:01:03.406Z",
     "commit": "203b4d8e0c4012ac8fbce575154b9730af4c7c2f"
+  },
+  {
+    "slug": "delivery-commission-malaysia",
+    "lang": "en",
+    "action": "reject",
+    "reason": "off-topic",
+    "note": null,
+    "decided_at": "2026-11-24T05:01:36.217Z",
+    "commit": "fd4e2f9226d965e8f177e558edd54955c93c7fb7"
   }
 ]
