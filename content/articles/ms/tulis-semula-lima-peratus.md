@@ -11,7 +11,7 @@ author: "Husni Ahmad"
 category: buying-guides
 tags: [teardown, prestasi, rust, malaysia]
 canonical: https://upahje.my/ms/articles/tulis-semula-lima-peratus
-draft: true
+draft: false
 changelog:
   - date: 2026-11-23
     note: "Mula diterbitkan."

@@ -10,7 +10,7 @@ author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, whatsapp, chatbot, pricing, malaysia]
 canonical: https://upahje.my/en/articles/whatsapp-chatbot-costs-malaysia
-draft: true
+draft: false
 changelog:
   - date: 2026-11-23
     note: "First published."

@@ -11,7 +11,7 @@ author: "Husni Ahmad"
 category: buying-guides
 tags: [teardown, performance, rust, malaysia]
 canonical: https://upahje.my/en/articles/rewrite-the-five-percent
-draft: true
+draft: false
 changelog:
   - date: 2026-11-23
     note: "First published."

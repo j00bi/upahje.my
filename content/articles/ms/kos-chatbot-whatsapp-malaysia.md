@@ -10,7 +10,7 @@ author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, whatsapp, chatbot, harga, malaysia]
 canonical: https://upahje.my/ms/articles/kos-chatbot-whatsapp-malaysia
-draft: true
+draft: false
 changelog:
   - date: 2026-11-23
     note: "Mula diterbitkan."

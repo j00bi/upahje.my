@@ -262,6 +262,81 @@ That the arm kept going through 94 retries and nearly three hours. It does not p
 - nazzysar/commandcode-goat-ecosystem-sess, session transcripts — https://github.com/nazzysar/commandcode-goat-ecosystem-sess (checked 2026-11-23)
 - nazzysar/deepseek-benchmarks, repository and checksums — https://github.com/nazzysar/deepseek-benchmarks (checked 2026-11-23)
 
+## Don't rewrite your site. Rewrite the 5%.
+
+URL: https://upahje.my/en/articles/rewrite-the-five-percent
+Checked: 2026-11-23
+
+Two repositories published five days apart carry 11,327 stars and give opposite advice. One says port the whole app to Rust, piece by piece. The other says port only the 5% that is slow. Both are MIT, and both are right. What decides which one you need is not your stack.
+
+## Two MIT repos, five days apart, argue opposite fixes
+
+`rust-anything`, created 16 November 2026, has 8,516 stars. Its description promises the whole application: rewrite it in Rust one piece at a time, checked against the original's recorded behaviour at every step. Its README claims one port: Prettier, "19x faster", with "15,861 of 17,224 recorded runs" in Rust and every run byte-identical.
+
+`fast-anything`, created 21 November 2026, has 2,811 stars. Its description argues against that scope: don't rewrite it in Rust, rewrite the 5% that's slow, port the hot functions, prove they behave the same.
+
+They disagree about scope, and money follows scope.
+
+## One ports the whole app; the other ports one function
+
+`rust-anything` records what your app does, your agent writes the replacement piece by piece, and each piece is checked against the recording before the next.
+
+`fast-anything` profiles the app, ranks functions by time and portability, records up to 500 real calls of the function it picks, derives edge cases, and replays them. Nothing is enabled until every case matches, floats to within 1e-9, errors where the original errors. Its recorder caps at 500 calls; the README shows a wrong port caught by "148 of 500" recorded calls.
+
+Neither repo was executed for this article. The figures are theirs; the mechanisms show in their source.
+
+## The test is whether the slowness is one function or every request
+
+One question decides the camp, and it is not app size.
+
+If ten requests pass through one function, you have a 5% problem in a whole-app costume. Profile it, port that function, prove equivalence, ship. The rest of the app stays put, so the blast radius is one function and the rollback is a flag.
+
+If every part is uniformly mediocre, there is no single hot function; there are forty, each slow by the same margin. That is a rewrite problem, and one function moves the number by almost nothing.
+
+| Your symptom | The camp that fits | What it publishes as evidence | What goes wrong if you pick wrong |
+| --- | --- | --- | --- |
+| One endpoint, one script, one image transform dominates the runtime | fast-anything | 500 recorded calls replayed per port; 148 of 500 caught one wrong port | Nothing, if the function is pure. If it touches I/O, it will refuse and you have lost a day |
+| The same code path appears in every request | fast-anything, applied twice | Same 500-call verification, per function | You fix the first hotspot and the second appears; two ports, not one |
+| Every screen feels slow, no single hotspot | rust-anything | 15,861 of 17,224 recorded runs in Rust, every run byte-identical | Months of porting, a compile step in the loop, and a rewrite still half done |
+| The slow part is a query or an unoptimised asset | neither | — | You port code around a database problem and the database stays slow |
+
+The last row is the common mistake: a 4-second page can be one uncompressed hero image, and no amount of Rust will touch it.
+
+## For an SME site, the answer is the 5%
+
+My opinion, stated once: for a Malaysian small-business site, the slow thing is almost always one image, one query, or one blocking script, and the correct response is to fix that and stop. A full port is a decision for a team with a profiling budget and a release process. For a shop with five pages and a product list, an eleven-thousand-star framework is not the constraint.
+
+Before you accept a quote to rebuild, ask which function or query is slow and what number it produces. A developer who cannot name it is quoting a rewrite, and a rewrite has no end date.
+
+## Measure three things before you believe either camp
+
+Three numbers, any one of which can end the project.
+
+1. **Largest contentful paint** for your product page on a throttled 4G profile. If the image is the element, the fix is an image, not a language.
+2. **The slowest query in your database log** for a normal week. If one query is seconds and the rest milliseconds, you have found the 5%.
+3. **The largest asset the page downloads**, by byte size. A 2 MB image on a five-page site is a five-minute fix that beats a rewrite.
+
+They cost nothing, take an evening, and give you the vocabulary to reject the expensive answer.
+
+## A rewrite has no end date; a five-percent port does
+
+A whole-app port ends when the last module is checked, a date nobody can promise. A single-function port ends when the recorded calls match: a condition, not a schedule.
+
+If your slowness is one function, take the small port. If it is everywhere, price the rewrite honestly, months included. The expensive mistake is buying the big fix for the small problem.
+
+---
+
+**Read next**
+
+[What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
+
+[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+
+### Sources
+
+- rust-anything, repository and README (MIT) — https://github.com/erkamyaman/rust-anything (checked 2026-11-23)
+- fast-anything, repository and README (MIT) — https://github.com/EL4CTEO/fast-anything (checked 2026-11-23)
+
 ## Where the same data gets typed three times
 
 URL: https://upahje.my/en/articles/same-data-typed-three-times
@@ -587,6 +662,148 @@ Section 120 of the Income Tax Act 1967 is cited. No ringgit amount is published 
 - LHDN, e-Invois programme page — https://www.hasil.gov.my/e-invois (checked 2026-11-23)
 - MyInvois SDK, document validation rules — https://sdk.myinvois.hasil.gov.my/document-validation-rules/ (checked 2026-11-23)
 - LHDN, Garis Panduan e-Invois Versi 4.8 — https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf (checked 2026-11-23)
+
+## WhatsApp chatbot costs in Malaysia, per message
+
+URL: https://upahje.my/en/articles/whatsapp-chatbot-costs-malaysia
+Checked: 2026-11-24
+
+A WhatsApp bot in Malaysia costs nothing up to 1,000 service messages a month per business phone number, and nothing at all for messages a customer sends you. Past that allowance, a marketing template is RM0.3467, utility, authentication and service are RM0.0564 each, and a Malaysian vendor adds RM200 to RM1,500 a month to run the bot.
+
+## What is free and what is billed
+
+Three different bills arrive at a WhatsApp bot, and they come from two different companies. Meta's card covers the per-message charges; your vendor's invoice covers everything else.
+
+| What | Status | Who bills it |
+| --- | --- | --- |
+| The WhatsApp Business app | Free | Nobody |
+| Messages a customer sends you | Never charged | Nobody |
+| The first 1,000 service messages per number per calendar month | Free, no rollover | Nobody |
+| Any message inside the open 24-hour window | Free | Nobody |
+| Marketing templates | RM0.3467 each | Meta |
+| Authentication templates | RM0.0564 each | Meta |
+| Utility templates outside the window | RM0.0564 each | Meta |
+| Service messages past the 1,000 allowance | RM0.0564 each | Meta |
+| Meta Business Agent messages | Billed per million tokens | Meta |
+| BSP markup, hosting and seats | The vendor's own fee | Your vendor |
+
+The allowance is per business phone number and resets each calendar month; unused messages do not carry over. Service messages past it have been charged since 1 October 2026.
+
+## How does Meta charge for WhatsApp messages?
+
+Per message, per category, and only when the message is delivered. The unit is not a conversation and not a session.
+
+Three rules from Meta's pricing page set the bill, all effective from 1 October 2026 for the rate card used here:
+
+1. **Charged on delivery only.** "Businesses are only charged when a message is delivered. Meta does not charge for messages sent."
+2. **One direction only.** Business-to-user messages are charged; messages from users to the business are not.
+3. **One category per message.** A message has one of five categories, so it can incur at most one charge.
+
+The five categories are marketing, utility, authentication, service, and Meta Business Agent, which Meta introduced on 1 July 2026 and prices in tokens rather than per message.
+
+## What does one message cost in Malaysia?
+
+These are the published MYR prices, not conversions. Meta publishes a separate card for each currency, and the Malaysian buyer should quote the MYR one.
+
+| Category | Price per delivered message (MYR) | Price on the USD card | What it is for |
+| --- | --- | --- | --- |
+| Marketing | 0.3467 | 0.086 | Promotions, re-engagement, offers |
+| Utility | 0.0564 | 0.014 | Order updates, receipts, appointment reminders |
+| Authentication | 0.0564 | 0.014 | One-time passcodes |
+| Authentication, international | 0.1685 | 0.0418 | Passcodes delivered outside the domestic route |
+| Service | 0.0564 | 0.014 | Replies inside the customer service window |
+
+The MYR and USD cards move together at about 4.03, but the MYR figure is the one Meta publishes for Malaysia, so no exchange rate is applied in this article. Both cards carry the same effective date: 1 October 2026.
+
+## Why does the 24-hour window change the bill?
+
+![A left-to-right diagram: a customer message opens a 24-hour window; a reply inside it is a service message at RM0.0564 with the first 1,000 per number per month free; a message after the window closes must be a template, at RM0.3467 for marketing or RM0.0564 for utility and authentication](/figures/whatsapp-chatbot-costs-malaysia.svg)
+*The clock, not the message text, decides which rate applies.*
+
+Because a free-form reply is only allowed inside it, and outside it you must use a paid template.
+
+The customer service window opens and resets with each user message, and lasts 24 hours. Inside it, a business may send non-template messages, which are service messages. Outside it, the only way to start a conversation is a template, which falls into marketing, utility or authentication.
+
+The practical shape: a customer asks a question, you answer inside 24 hours as a service message, and that answer sits inside the free tier for the first 1,000 a month. If you follow up three days later with a promotion, that is a marketing template at RM0.3467 per delivered message.
+
+## Why the two Meta pages look like they disagree
+
+The WhatsApp Business marketing site says "we do not charge for service messages, or for utility messages businesses send in response to users". Meta's developer pricing page prices service at RM0.0564 with the first 1,000 free.
+
+There is no contradiction once the allowance and the clock are applied. A reply to a customer sits inside the open 24-hour window, where nothing is charged, and the first 1,000 service messages each month are free on top of that. The marketing page is describing the common case; the developer page is describing the tariff behind it. A business only meets the RM0.0564 service rate after 1,000 service messages in a month.
+
+One genuine difference remains. Meta's documentation says a free entry point window "may remain open for up to 7 days", while the marketing site says "for the following 3 days (72 hours), all of your messages are not charged". Plan on 3 days, because that is the shorter promise and the only one a business can rely on without overestimating free volume.
+
+## What does a Malaysian vendor charge?
+
+Three publishers, three shapes. These are build-and-subscription prices, not message rates, and Meta bills its messages separately.
+
+| Publisher | What is published | Price | Unit |
+| --- | --- | --- | --- |
+| AIRS | AI agent on the business's own WhatsApp number, no setup fee for standard onboarding | from RM599 | per month, per outlet |
+| The Crunch | Self-serve route | up to RM999 | per month; built systems quoted on scope |
+| AlwaysON | Total cost of a chatbot for a Malaysian small business | RM200 to RM1,500 | per month, total range |
+
+AIRS also states the market band as RM300 to RM3,000-plus per month, and AlwaysON notes that platform fees are "only 40-60% of the total cost", which is a useful warning: the subscription is not the whole bill.
+
+## What to do this week?
+
+Five actions, none of which needs a purchase.
+
+1. **Export last month's outbound WhatsApp messages** and tag each one marketing, utility, authentication or service.
+2. **Count the service messages** and compare against 1,000 per number. If you are under it, most of your bill may be zero.
+3. **Find the messages you send outside the 24-hour window.** Those are the marketing templates at RM0.3467 each, and they dominate small bills.
+4. **Multiply the marketing count by 0.3467** and the paid service count by 0.0564, and compare that total with RM200 to RM1,500 of vendor fees.
+5. **Ask each vendor whether their price includes Meta's message charges**, and get the answer in writing, because the two bills come from different companies.
+
+## Try it yourself
+
+The smallest runnable version is not a bot at all: it is a script that prices your own last month from the published card, so you know the volume before you talk to a vendor.
+
+- **What it needs:** a CSV of your outbound messages with a category column, and a spreadsheet or 15 lines of Python that multiplies counts by 0.3467 and 0.0564. No Meta account.
+- **What it costs:** nothing, and it answers the only question that matters, which is whether your volume is a rounding error or a real monthly cost.
+- **The one thing that will bite you:** counting messages you *sent* rather than messages *delivered*, and counting user-to-business messages, which Meta does not charge at all.
+
+There is no honest free sandbox path documented in the pages read for this article, so this block stops at pricing your own data rather than inventing a test setup.
+
+## What could we not verify?
+
+The dedicated international-authentication page was not opened, so that row rests on the Malaysia card alone. Utility and authentication volume tiers exist, but the tier files were not parsed, so any figure above list price is absent. Meta Business Agent is priced per million tokens with no Malaysia-specific per-message figure published, so no per-interaction cost is claimed. Only one of the three Malaysian vendors publishes a from-price with no setup fee; the other two quote on scope, so no market-wide build fee can be stated.
+
+## FAQ
+
+### Is one message really RM0.3467?
+
+Only a marketing message, and only when it is delivered. Utility, authentication and service are RM0.0564, and the first 1,000 service messages per number per month are free.
+
+### Do I pay when a customer messages me?
+
+No. Meta charges business-to-user messages only, so the customer's message is free to receive, and your reply is charged according to the category it falls into.
+
+### What is the 24-hour window in plain terms?
+
+It is a clock that starts when a customer messages you. Inside that day you can reply freely as a service message; after it closes, any new message must be a paid template.
+
+### Do vendor prices include Meta's message charges?
+
+Most do not, and the ones read here say so separately. Meta bills the messages to your own account, so budget the vendor fee and the message bill as two lines.
+
+---
+
+**Read next**
+
+[What e-Invoice automation covers, and what stays with a person](https://upahje.my/en/articles/what-einvoice-automation-covers)
+
+[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+
+### Sources
+
+- Meta, WhatsApp pricing (per-message billing, 24-hour window, free tier, FEP) — https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing (checked 2026-11-24)
+- Meta, MYR list rates for Malaysia linked from the pricing page, effective 1 October 2026 — https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing (checked 2026-11-24)
+- WhatsApp Business, platform pricing (the free-service and 3-day FEP claims) — https://whatsappbusiness.com/products/platform-pricing/ (checked 2026-11-23)
+- AIRS, WhatsApp AI chatbot price — https://airs.my/answers/whatsapp-ai-chatbot-malaysia-price (checked 2026-11-23)
+- The Crunch, WhatsApp chatbot Malaysia — https://thecrunch.io/whatsapp-chatbot-malaysia/ (checked 2026-11-23)
+- AlwaysON, WhatsApp chatbot pricing — https://alwayson.my/blog/whatsapp-chatbot-pricing (checked 2026-11-23)
 
 ## Your first automation should not be your worst process
 
@@ -2511,6 +2728,148 @@ Boleh, dan ia projek pertama yang paling biasa. Ia juga mengekalkan percanggahan
 - LHDN, Garis Panduan e-Invois Versi 4.8 — https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf (checked 2026-11-23)
 - Friction, nota digitalisasi PKS Malaysia (artikel vendor, tiada nama penulis) — https://friction.com.my/insights/malaysia-sme-digitalisation-from-survival-to-scale-2026 (checked 2026-11-23)
 
+## Kos chatbot WhatsApp: setiap mesej, setiap bulan
+
+URL: https://upahje.my/ms/articles/kos-chatbot-whatsapp-malaysia
+Checked: 2026-11-24
+
+Chatbot WhatsApp di Malaysia tidak menelan apa-apa sehingga 1,000 mesej servis sebulan bagi setiap nombor perniagaan, dan tidak menelan apa-apa untuk mesej yang pelanggan hantar kepada anda. Melepasi elaun itu, templat pemasaran RM0.3467, utiliti, pengesahan dan servis RM0.0564 setiap satu, dan vendor Malaysia menambah RM200 hingga RM1,500 sebulan untuk menjalankan bot.
+
+## Apa yang percuma dan apa yang dicaj
+
+Tiga bil berbeza sampai ke satu chatbot WhatsApp, dan ia datang daripada dua syarikat berbeza. Kad Meta meliputi caj setiap mesej; invois vendor anda meliputi selebihnya.
+
+| Perkara | Status | Siapa yang mengenakan caj |
+| --- | --- | --- |
+| Aplikasi WhatsApp Business | Percuma | Tiada |
+| Mesej yang pelanggan hantar kepada anda | Tidak pernah dicaj | Tiada |
+| 1,000 mesej servis pertama bagi setiap nombor sebulan | Percuma, tanpa baki terbawa | Tiada |
+| Apa-apa mesej di dalam tetingkap 24 jam yang terbuka | Percuma | Tiada |
+| Templat pemasaran | RM0.3467 setiap satu | Meta |
+| Templat pengesahan | RM0.0564 setiap satu | Meta |
+| Templat utiliti di luar tetingkap | RM0.0564 setiap satu | Meta |
+| Mesej servis melepasi elaun 1,000 | RM0.0564 setiap satu | Meta |
+| Mesej Meta Business Agent | Dicaj setiap juta token | Meta |
+| Tokokan BSP, hosting dan tempat duduk | Fi vendor itu sendiri | Vendor anda |
+
+Elaun itu dikira bagi setiap nombor perniagaan dan ditetapkan semula setiap bulan kalendar; mesej yang tidak digunakan tidak terbawa ke bulan berikutnya. Mesej servis melepasi elaun dicaj sejak 1 Oktober 2026.
+
+## Bagaimana Meta mengenakan caj untuk mesej WhatsApp?
+
+Setiap mesej, mengikut kategori, dan hanya apabila mesej itu dihantar kepada penerima. Unitnya bukan perbualan dan bukan sesi.
+
+Tiga peraturan daripada halaman harga Meta menetapkan bil, semuanya berkuat kuasa dari 1 Oktober 2026 bagi kad kadar yang digunakan di sini:
+
+1. **Dicaj hanya apabila dihantar.** "Businesses are only charged when a message is delivered. Meta does not charge for messages sent."
+2. **Satu arah sahaja.** Mesej perniagaan-ke-pengguna dicaj; mesej daripada pengguna kepada perniagaan tidak.
+3. **Satu kategori setiap mesej.** Mesej mempunyai satu daripada lima kategori, jadi ia boleh dikenakan paling banyak satu caj.
+
+Lima kategori itu ialah pemasaran, utiliti, pengesahan, servis dan Meta Business Agent, yang diperkenalkan Meta pada 1 Julai 2026 dan dinilai dalam token dan bukan setiap mesej.
+
+## Berapa kos satu mesej di Malaysia?
+
+Ini harga MYR yang diterbitkan, bukan penukaran. Meta menerbitkan kad berasingan bagi setiap mata wang, dan pembeli Malaysia patut memetik kad MYR.
+
+| Kategori | Harga setiap mesej dihantar (MYR) | Harga pada kad USD | Untuk apa |
+| --- | --- | --- | --- |
+| Pemasaran | 0.3467 | 0.086 | Promosi, penglibatan semula, tawaran |
+| Utiliti | 0.0564 | 0.014 | Kemas kini pesanan, resit, peringatan janji temu |
+| Pengesahan | 0.0564 | 0.014 | Kod sekali guna |
+| Pengesahan, antarabangsa | 0.1685 | 0.0418 | Kod yang dihantar di luar laluan domestik |
+| Servis | 0.0564 | 0.014 | Balasan dalam tetingkap servis pelanggan |
+
+Kad MYR dan USD bergerak bersama pada kira-kira 4.03, tetapi angka MYR ialah yang diterbitkan Meta untuk Malaysia, jadi tiada kadar tukaran dikenakan dalam artikel ini. Kedua-dua kad membawa tarikh kuat kuasa yang sama: 1 Oktober 2026.
+
+## Mengapa tetingkap 24 jam mengubah bil?
+
+Kerana balasan bebas hanya dibenarkan di dalamnya, dan di luarnya anda mesti menggunakan templat berbayar.
+
+Tetingkap servis pelanggan dibuka dan ditetapkan semula dengan setiap mesej pengguna, dan bertahan 24 jam. Di dalamnya, perniagaan boleh menghantar mesej bukan templat, iaitu mesej servis. Di luarnya, satu-satunya cara memulakan perbualan ialah templat, yang termasuk dalam pemasaran, utiliti atau pengesahan.
+
+Bentuk praktikalnya: pelanggan bertanya, anda menjawab dalam 24 jam sebagai mesej servis, dan jawapan itu berada dalam tier percuma bagi 1,000 pertama sebulan. Jika anda menyusul tiga hari kemudian dengan promosi, itu templat pemasaran pada RM0.3467 setiap mesej dihantar.
+
+![Gambar dari kiri ke kanan: mesej pelanggan membuka tetingkap 24 jam; balasan di dalamnya ialah mesej servis pada RM0.0564 dengan 1,000 pertama setiap nombor sebulan percuma; mesej selepas tetingkap ditutup mesti templat, pada RM0.3467 untuk pemasaran atau RM0.0564 untuk utiliti dan pengesahan](/figures/kos-chatbot-whatsapp-malaysia.svg)
+*Jam, bukan teks mesej, menentukan kadar mana yang terpakai.*
+
+## Mengapa dua halaman Meta kelihatan bercanggah
+
+Laman pemasaran WhatsApp Business menyatakan "we do not charge for service messages, or for utility messages businesses send in response to users". Halaman harga pembangun Meta meletakkan harga servis pada RM0.0564 dengan 1,000 pertama percuma.
+
+Tiada percanggahan apabila elaun dan jam dikenakan. Balasan kepada pelanggan berada di dalam tetingkap 24 jam yang terbuka, di mana tiada caj, dan 1,000 mesej servis pertama setiap bulan percuma di atas itu. Halaman pemasaran menerangkan kes biasa; halaman pembangun menerangkan tarif di belakangnya. Sesuatu perniagaan hanya bertemu kadar servis RM0.0564 selepas 1,000 mesej servis dalam sebulan.
+
+Satu perbezaan sebenar masih ada. Dokumentasi Meta menyatakan tetingkap titik masuk percuma "may remain open for up to 7 days", manakala laman pemasaran menyatakan "for the following 3 days (72 hours), all of your messages are not charged". Rancang untuk 3 hari, kerana itulah janji yang lebih pendek dan satu-satunya yang boleh dipegang tanpa melebihkan jumlah percuma.
+
+## Berapa yang dikenakan vendor Malaysia?
+
+Tiga penerbit, tiga bentuk. Ini harga bina-dan-langganan, bukan kadar mesej, dan Meta membil mesejnya secara berasingan.
+
+| Penerbit | Apa yang diterbitkan | Harga | Unit |
+| --- | --- | --- | --- |
+| AIRS | Agent AI pada nombor WhatsApp perniagaan sendiri, tiada yuran persediaan bagi onboarding standard | dari RM599 | sebulan, setiap cawangan |
+| The Crunch | Laluan layan diri | hingga RM999 | sebulan; sistem yang dibina disebut harga mengikut skop |
+| AlwaysON | Jumlah kos chatbot bagi perniagaan kecil Malaysia | RM200 hingga RM1,500 | sebulan, julat keseluruhan |
+
+AIRS juga menyatakan julat pasaran sebagai RM300 hingga RM3,000 lebih sebulan, dan AlwaysON menyatakan yuran platform "only 40-60% of the total cost", iaitu amaran berguna: langganan bukan keseluruhan bil.
+
+## Apa yang patut dibuat minggu ini?
+
+Lima tindakan, tiada satu pun memerlukan pembelian.
+
+1. **Eksport mesej WhatsApp keluar bulan lepas** dan tandakan setiap satu sebagai pemasaran, utiliti, pengesahan atau servis.
+2. **Kira mesej servis** dan bandingkan dengan 1,000 setiap nombor. Jika anda di bawahnya, sebahagian besar bil anda mungkin sifar.
+3. **Cari mesej yang anda hantar di luar tetingkap 24 jam.** Itulah templat pemasaran pada RM0.3467 setiap satu, dan ia mendominasi bil kecil.
+4. **Darab kiraan pemasaran dengan 0.3467** dan kiraan servis berbayar dengan 0.0564, dan bandingkan jumlah itu dengan RM200 hingga RM1,500 yuran vendor.
+5. **Tanya setiap vendor sama ada harga mereka termasuk caj mesej Meta**, dan dapatkan jawapannya secara bertulis, kerana dua bil itu datang daripada dua syarikat berbeza.
+
+## Cuba sendiri
+
+Versi paling kecil yang boleh dijalankan bukan bot langsung: ia skrip yang menilai bulan lepas anda daripada kad yang diterbitkan, supaya anda tahu jumlahnya sebelum bercakap dengan vendor.
+
+- **Apa yang diperlukan:** CSV mesej keluar anda dengan lajur kategori, dan spreadsheet atau 15 baris Python yang mendarab kiraan dengan 0.3467 dan 0.0564. Tiada akaun Meta.
+- **Berapa kosnya:** tiada, dan ia menjawab satu-satunya soalan yang penting, iaitu sama ada jumlah anda itu kecil atau kos bulanan sebenar.
+- **Satu perkara yang akan menggigit anda:** mengira mesej yang anda *hantar* dan bukan yang *dihantar kepada penerima*, dan mengira mesej pengguna-ke-perniagaan, yang tidak dicaj Meta langsung.
+
+Tiada laluan sandbox percuma yang didokumenkan dalam halaman yang dibaca untuk artikel ini, jadi blok ini berhenti pada menilai data anda sendiri daripada mencipta persediaan ujian.
+
+## Apa yang tidak dapat kami sahkan?
+
+Halaman pengesahan antarabangsa yang khusus tidak dibuka, jadi baris itu bergantung pada kad Malaysia sahaja. Tier volum utiliti dan pengesahan wujud, tetapi fail tier tidak dihuraikan, jadi apa-apa angka melebihi harga senarai tiada. Meta Business Agent dinilai setiap juta token tanpa angka setiap interaksi untuk Malaysia yang diterbitkan, jadi tiada kos setiap interaksi didakwa. Hanya satu daripada tiga vendor Malaysia menerbitkan harga dari-dengan-tiada-yuran-persediaan; dua lagi menyebut harga mengikut skop, jadi tiada yuran binaan pasaran boleh dinyatakan.
+
+## FAQ
+
+### Adakah satu mesej benar-benar RM0.3467?
+
+Hanya mesej pemasaran, dan hanya apabila ia dihantar kepada penerima. Utiliti, pengesahan dan servis RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan percuma.
+
+### Adakah saya dicaj apabila pelanggan menghantar mesej?
+
+Tidak. Meta mengenakan caj untuk mesej perniagaan-ke-pengguna sahaja, jadi mesej pelanggan percuma diterima, dan balasan anda dicaj mengikut kategori yang dikenainya.
+
+### Apa itu tetingkap 24 jam dalam bahasa mudah?
+
+Ia jam yang bermula apabila pelanggan menghantar mesej kepada anda. Dalam tempoh itu anda boleh membalas dengan bebas sebagai mesej servis. Selepas jam itu tamat, apa-apa mesej baharu mesti templat berbayar.
+
+### Adakah harga vendor termasuk caj mesej Meta?
+
+Kebanyakannya tidak, dan yang dibaca di sini menyatakannya secara berasingan. Meta membil mesej kepada akaun anda sendiri, jadi bajetkan yuran vendor dan bil mesej sebagai dua baris.
+
+---
+
+**Baca seterusnya**
+
+[Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi)
+
+[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+
+### Sources
+
+- Meta, harga WhatsApp (bil setiap mesej, tetingkap 24 jam, tier percuma, FEP) — https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing (checked 2026-11-24)
+- Meta, kadar senarai MYR untuk Malaysia yang dipautkan dari halaman harga, berkuat kuasa 1 Oktober 2026 — https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing (checked 2026-11-24)
+- WhatsApp Business, harga platform (dakwaan mesej servis percuma dan FEP 3 hari) — https://whatsappbusiness.com/products/platform-pricing/ (checked 2026-11-23)
+- AIRS, harga chatbot AI WhatsApp — https://airs.my/answers/whatsapp-ai-chatbot-malaysia-price (checked 2026-11-23)
+- The Crunch, chatbot WhatsApp Malaysia — https://thecrunch.io/whatsapp-chatbot-malaysia/ (checked 2026-11-23)
+- AlwaysON, harga chatbot WhatsApp — https://alwayson.my/blog/whatsapp-chatbot-pricing (checked 2026-11-23)
+
 ## Google Business Profile: medan penentu sama ada anda muncul
 
 URL: https://upahje.my/ms/articles/medan-google-business-profile
@@ -2611,6 +2970,81 @@ Google tidak menerbitkan tempoh pada halaman yang dibaca untuk artikel ini. Yang
 - Google, baiki profil yang digantung atau dilumpuhkan — https://support.google.com/business/answer/4569145 (checked 2026-11-23)
 - Google, rayuan kandungan dan sekatan profil perniagaan — https://support.google.com/business/answer/13597551 (checked 2026-11-23)
 - Google, rujukan API Business Profile (sumber locations) — https://developers.google.com/my-business/reference/rest/v4/accounts.locations (checked 2026-11-23)
+
+## Jangan tulis semula laman anda. Tulis semula 5% itu.
+
+URL: https://upahje.my/ms/articles/tulis-semula-lima-peratus
+Checked: 2026-11-23
+
+Dua repositori diterbitkan lima hari selang membawa 11,327 bintang antara keduanya dan memberi nasihat bertentangan. Satu berkata pindahkan seluruh aplikasi ke Rust, sekeping demi sekeping. Satu lagi berkata pindahkan hanya 5% yang lambat. Kedua-duanya MIT. Kedua-duanya betul, dan yang menentukan pilihan anda bukanlah stack anda.
+
+## Dua repo MIT, lima hari selang, berhujah pembetulan bertentangan
+
+`rust-anything` dicipta pada 16 November 2026 dan mempunyai 8,516 bintang. Penerangannya janji tentang keseluruhan aplikasi: tulis semula dalam Rust sekeping demi sekeping, disemak terhadap tingkah laku asal. README-nya menuntut satu pindahan: Prettier, "19x faster", dengan "15,861 of 17,224 recorded runs" dalam Rust dan setiap larian byte-identical.
+
+`fast-anything` dicipta pada 21 November 2026 dengan 2,811 bintang. Penerangannya menentang skop repo pertama: jangan tulis semula dalam Rust, tulis semula 5% yang lambat, pindahkan fungsi panas, buktikan tingkah laku sama.
+
+Kedua-duanya berselisih tentang skop, iaitu tempat wang pergi.
+
+## Satu pindahkan seluruh aplikasi; satu lagi pindahkan satu fungsi
+
+`rust-anything` merekod apa yang aplikasi anda lakukan, kemudian agent pengekodan anda menulis pengganti Rust sekeping demi sekeping, dan setiap keping disemak terhadap rekod itu sebelum keping seterusnya bermula.
+
+`fast-anything` memprofil aplikasi yang sedang berjalan, menyusun fungsi mengikut masa dan kemudahan dipindahkan, merekod sehingga 500 panggilan sebenar bagi satu fungsi yang dipilih, menerbitkan kes tepi daripada panggilan itu, dan memainkannya semula. Tiada apa diaktifkan sehingga setiap kes sepadan, float dalam 1e-9, ralat di tempat asal meralat. Perekod dalam sumbernya dihadkan pada 500 panggilan; demo README-nya menunjukkan pindahan salah ditangkap oleh "148 of 500" panggilan yang direkod.
+
+Tiada satu pun repo dijalankan untuk artikel ini. Angkanya milik mereka; mekanismenya kelihatan dalam sumber dan README.
+
+## Ujiannya ialah sama ada kelambatan itu satu fungsi atau setiap permintaan
+
+Satu soalan menentukan kem, dan soalan itu bukan "besar mana aplikasinya".
+
+Jika sepuluh permintaan melalui fungsi yang sama, anda ada masalah 5% yang menyamar sebagai masalah seluruh aplikasi. Profil, pindahkan fungsi itu, buktikan kesetaraan, hantar. Selebihnya aplikasi kekal di tempatnya, jadi radius letupan itu satu fungsi dan pembatalannya satu flag.
+
+Jika setiap bahagian aplikasi sama-sama sederhana, fungsi panas tidak bersembunyi; ada empat puluh daripadanya, masing-masing lambat dengan margin yang sama. Itu masalah tulis semula, dan memindahkan satu fungsi akan menggerakkan angkanya hampir tiada.
+
+| Gejala anda | Kem yang padan | Bukti yang diterbitkan | Apa yang rosak jika salah pilih |
+| --- | --- | --- | --- |
+| Satu endpoint, satu skrip, satu transformasi imej mendominasi masa jalan | fast-anything | 500 panggilan direkod dimainkan semula setiap pindahan; 148 daripada 500 menangkap satu pindahan salah | Tiada, jika fungsi itu tulen. Jika ia menyentuh I/O, ia akan menolak dan anda kehilangan sehari |
+| Laluan kod yang sama muncul dalam setiap permintaan | fast-anything, digunakan dua kali | Pengesahan 500 panggilan yang sama, setiap fungsi | Anda betulkan titik panas pertama dan yang kedua muncul; dua pindahan, bukan satu |
+| Setiap skrin terasa lambat, tiada titik panas tunggal | rust-anything | 15,861 daripada 17,224 larian direkod dalam Rust, setiap larian byte-identical | Berbulan-bulan memindahkan, langkah kompil dalam gelung, dan tulis semula yang masih separuh siap |
+| Bahagian lambat itu query atau aset yang tidak dioptimumkan | kedua-duanya tidak | — | Anda memindahkan kod di sekeliling masalah pangkalan data dan pangkalan data kekal lambat |
+
+Baris terakhir itulah yang pembeli selalu tersalah. Halaman 4 saat boleh jadi satu imej hero yang tidak dimampatkan, dan tiada jumlah Rust akan menyentuhnya.
+
+## Bagi laman PKS, jawapannya 5% itu
+
+Pendapat saya, dinyatakan sekali: bagi laman perniagaan kecil Malaysia, perkara yang lambat hampir selalu satu imej, satu query, atau satu skrip yang menyekat, dan tindak balas yang betul ialah betulkan itu dan berhenti. Pindahan penuh ke Rust ialah keputusan untuk pasukan yang ada bajet profiling dan proses pelepasan. Bagi kedai dengan laman lima halaman dan senarai produk, kerangka sebelas ribu bintang bukanlah kekangannya.
+
+Kesorotan itu lebih penting daripada pendapatnya. Sebelum anda menerima sebut harga untuk membina semula, tanya fungsi atau query mana yang lambat, dan angka apa yang dihasilkannya. Pembangun yang tidak dapat menamakannya sedang memberi sebut harga untuk tulis semula, dan tulis semula tiada tarikh tamat.
+
+## Ukur tiga perkara sebelum percaya mana-mana kem
+
+Tiga angka, dan mana-mana satu boleh menghantar anda pulang tanpa projek.
+
+1. **Largest contentful paint** bagi halaman produk anda pada profil 4G yang dihadkan. Jika elemennya imej hero, pembetulannya imej, bukan bahasa.
+2. **Query paling lambat dalam log pangkalan data anda** bagi satu minggu biasa. Jika satu query mengambil saat dan yang lain milisaat, anda telah jumpa 5% itu.
+3. **Aset terbesar yang dimuat turun halaman**, mengikut saiz bait. Imej 2 MB pada laman lima halaman ialah pembetulan lima minit yang mengalahkan tulis semula.
+
+Tiga angka itu kosnya tiada dan mengambil masa satu petang. Ia juga memberi anda perkataan untuk menolak jawapan yang mahal.
+
+## Tulis semula tiada tarikh tamat; pindahan lima peratus ada
+
+Asimetri itulah keseluruhan keputusan. Pindahan seluruh aplikasi tamat apabila modul terakhir disemak, iaitu tarikh yang tiada siapa boleh janjikan pada permulaan. Pindahan satu fungsi tamat apabila panggilan yang direkod sepadan, iaitu syarat, bukan jadual.
+
+Jika kelambatan anda satu fungsi, ambil pindahan kecil. Jika ia di merata tempat, nilaikan tulis semula dengan jujur, termasuk bulan-bulan ia berjalan. Kesilapan mahal ialah membeli pembetulan besar untuk masalah kecil.
+
+---
+
+**Baca seterusnya**
+
+[Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
+
+[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+
+### Sources
+
+- rust-anything, repositori dan README (MIT) — https://github.com/erkamyaman/rust-anything (checked 2026-11-23)
+- fast-anything, repositori dan README (MIT) — https://github.com/EL4CTEO/fast-anything (checked 2026-11-23)
 
 ## Agent harness, AI harness, agent framework: maksudnya
 
