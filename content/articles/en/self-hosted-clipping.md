@@ -12,7 +12,7 @@ category: buying-guides
 tags: [buying-guides, video, clipping, self-hosted, malaysia]
 cardFigure: "USD 15 a month is RM61.78, if you convert it"
 canonical: https://upahje.my/en/articles/self-hosted-clipping
-draft: true
+draft: false
 changelog:
   - date: 2026-11-24
     note: "First published."
