@@ -1,7 +1,8 @@
 import { ImageResponse } from 'next/og'
 import { OG_FONTS } from '@/lib/og-fonts.generated.mjs'
-import { formatDate, getArticle, languageCodes, publishedArticles, verifiedOn } from '@/lib/articles.mjs'
-import { TOPIC_MAPPING, topicBySlug } from '@/lib/topics.mjs'
+import { formatDate, languageCodes, publishedArticles } from '@/lib/articles.mjs'
+import { topicBySlug } from '@/lib/topics.mjs'
+import { OG_DATA } from '@/lib/og-data.generated.mjs'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
@@ -28,14 +29,14 @@ const fonts = [
  * article's own sources, never today.
  */
 export default async function Image({ params }: { params: { lang: string; slug: string } }) {
-  const article = getArticle(params.lang, params.slug)
   const lang = params.lang
-  const topic = article ? TOPIC_MAPPING[article.translationKey] : null
-  const topicEntry = topic ? topicBySlug(topic.topic) : null
+  // Data frozen at build: the serverless bundle cannot be missing a module it
+  // imports, which it demonstrably was when the card read the corpus from disk.
+  const card = (OG_DATA as Record<string, { title: string; topic: string | null; verified: string | null }>)[`${lang}/${params.slug}`]
+  const topicEntry = card?.topic ? topicBySlug(card.topic) : null
   const topicLabel = topicEntry ? (lang === 'ms' ? topicEntry.ms : topicEntry.en) : ''
-  const verified = article ? verifiedOn(article) : null
-  const title = article?.title ?? 'UpahJe.my'
-  const checked = verified ? formatDate(verified, lang) : null
+  const title = card?.title ?? 'UpahJe.my'
+  const checked = card?.verified ? formatDate(card.verified, lang) : null
 
   return new ImageResponse(
     (

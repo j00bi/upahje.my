@@ -8,9 +8,6 @@ const nextConfig = {
     outputFileTracingIncludes: {
       '/[lang]/review': ['./content/articles/**'],
       '/[lang]/review/[slug]': ['./content/articles/**'],
-      // The social card reads the article from the corpus at render time; without
-      // this trace the serverless bundle has no content and every card 500s.
-      '/[lang]/articles/[slug]/opengraph-image': ['./content/articles/**'],
     },
   },
   images: { remotePatterns: [] },
