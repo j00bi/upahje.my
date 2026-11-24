@@ -13,6 +13,10 @@ tags: [buying-guides, delivery, commission, malaysia]
 cardFigure: "At 25%, a RM25 order leaves RM8.50"
 canonical: https://upahje.my/en/articles/delivery-commission-malaysia
 draft: true
+review:
+  state: rejected
+  reason: "off-topic"
+  at: 2026-11-24T05:01:36.217Z
 changelog:
   - date: 2026-11-24
     note: "First published."
