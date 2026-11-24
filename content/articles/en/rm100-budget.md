@@ -1,6 +1,7 @@
 ---
 title: "What RM100 a month buys you in AI, in Malaysia"
 description: "RM100 is either a seat in a subscription app or a meter of API tokens, never both. The conversion at Bank Negara's 19 November 2026 rate, three worked usage levels, and the line where tokens win."
+cardFigure: "RM100 of tokens buys about 54,000 tasks a month"
 slug: rm100-budget
 translationKey: rm100-budget
 date: 2026-11-19

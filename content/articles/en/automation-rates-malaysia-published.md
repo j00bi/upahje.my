@@ -1,6 +1,7 @@
 ---
 title: "What automation work costs in Malaysia: published rates, six sources"
 description: "Four Malaysian studios, one independent practitioner and one freelance profile: 30 published prices for automation and integration work, checked 19 November 2026 except one page read on 27 October 2026. Several source pages carry no publication date, so a price may be older than this article."
+cardFigure: "Automation work runs from RM400 to RM6,000-plus"
 slug: automation-rates-malaysia-published
 translationKey: automation-rates-malaysia-published
 date: 2026-11-19

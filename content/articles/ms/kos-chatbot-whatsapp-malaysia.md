@@ -1,6 +1,7 @@
 ---
 title: "Kos chatbot WhatsApp di Malaysia, setiap mesej dan setiap bulan"
 description: "Mesej pemasaran RM0.3467 setiap satu di Malaysia, servis dan utiliti RM0.0564 dengan 1,000 pertama percuma, dan vendor mengenakan RM200 hingga RM1,500 sebulan. Apa yang diubah tetingkap 24 jam, dan di mana sumber yang diterbitkan bercanggah."
+cardFigure: "Mesej pemasaran RM0.3467; RM200 hingga RM1,500 sebulan"
 slug: kos-chatbot-whatsapp-malaysia
 translationKey: whatsapp-chatbot-costs-malaysia
 date: 2026-11-23
