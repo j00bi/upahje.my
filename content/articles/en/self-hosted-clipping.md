@@ -1,6 +1,6 @@
 ---
-title: "Don't pay monthly for clips your own machine can make"
-description: "Two free projects do what a clipping subscription charges for, on hardware you already own. What the trade costs, and the volume where cancelling pays."
+title: "A free clipper costs an evening, not RM61.78 a month"
+description: "OpusClip charges USD 15, which is RM61.78 converted. Two MIT repos clip locally for nothing, and Malay captions are unproven on both, so the trade is your time."
 slug: self-hosted-clipping
 translationKey: self-hosted-clipping
 format: teardown
@@ -9,28 +9,89 @@ date: 2026-11-24
 updated: 2026-11-24
 author: "UpahJe Desk"
 category: buying-guides
-tags: [buying-guides, video, clipping, self-hosted]
+tags: [buying-guides, video, clipping, self-hosted, malaysia]
+cardFigure: "USD 15 a month is RM61.78, if you convert it"
 canonical: https://upahje.my/en/articles/self-hosted-clipping
 draft: true
 changelog:
   - date: 2026-11-24
-    note: "Draft skeleton; facts pending."
+    note: "First published."
+sources:
+  - title: "OpusClip, pricing (Starter at USD 15 per month, USD only)"
+    url: "https://www.opus.pro/pricing"
+    checked: 2026-11-24
+  - title: "Bank Negara Malaysia, exchange-rate API (USD middle rate 4.1185)"
+    url: "https://api.bnm.gov.my/public/exchange-rate"
+    checked: 2026-11-24
+  - title: "iamajmeena/neonclipping, repository (MIT, created 19 November 2026)"
+    url: "https://github.com/iamajmeena/neonclipping"
+    checked: 2026-11-24
+  - title: "haziqahmedqasmi/PeakCut, repository (MIT, created 14 November 2026)"
+    url: "https://github.com/haziqahmedqasmi/PeakCut"
+    checked: 2026-11-24
 ---
 
-# Don't pay monthly for clips your own machine can make
+# A free clipper costs an evening, not RM61.78 a month
 
-Draft skeleton. Every figure, source and example below is pending a research packet; nothing in this file may be published until they are in.
+OpusClip's Starter plan is USD 15 a month, which is RM61.78 at Bank Negara's middle rate of 4.1185 on 24 November 2026, and no Malaysian publisher prints a ringgit price for a clipping subscription at all. Two MIT-licensed repos that appeared in the same week clip on your own machine for nothing, and neither has demonstrated a Malay caption.
 
-## Two free projects arrived in the same week
+## The subscription is priced in dollars
 
-## What a clipping subscription charges you now
+OpusClip prints "USD 15/mo" for Starter and sells it monthly only. That is the only unambiguous price on the page read; the Pro tier sits behind a yearly/monthly toggle and a pack selector, and its figure was not captured as a static number.
+
+The ringgit figure above is a conversion, not a Malaysian price. No publisher selling clipping subscriptions to Malaysians printed one on any page read, and presenting a converted dollar as a local price is how a RM45 subscription turns into RM62 in a budget.
+
+## Two repos arrived in the same week
+
+`neonclipping` was created on 19 November 2026 and had 2,312 stars when I read it: MIT, Python, "paste a link, get captioned 9:16 clips in about two minutes". `PeakCut` was created on 14 November 2026 and had 1,848 stars: MIT, Python, self-hosted, bring your own AI key.
+
+Both are young, both are moving, and both are already past the star counts that circulated when they launched, which is a reminder that a five-day-old star count is a claim and not a fact.
 
 ## What the free path costs instead
 
+A machine with a GPU, the electricity, and an evening to install and tune it. neonclipping's own measured table reports 97 seconds to clip an 85-minute stream in Fast mode, on one machine with an RTX 2060 and 16 threads.
+
+That figure is the author's machine, not yours and not a Malaysian laptop's. A slower card means a longer wait, and no test of either repo on Malaysian hardware exists.
+
+## The numbers, side by side
+
+| Item | OpusClip Starter | neonclipping | PeakCut |
+| --- | --- | --- | --- |
+| Price as printed | USD 15/month | 0 | 0 |
+| Ringgit per month, converted at 4.1185 | 61.78 | 0 | 0 |
+| Licence fee | n/a | 0, MIT | 0, MIT |
+| Time per clip, as published | not printed | 97 s for an 85-minute stream | not printed |
+| GitHub stars, 24 November 2026 | n/a | 2,312 | 1,848 |
+| Malay captions demonstrated | n/a | unproven | English only |
+
+The two zeroes are licence costs, not total costs. Your time and the machine are real, and the table cannot price them for you.
+
 ## Where the free path breaks
+
+**Malay captions.** neonclipping claims 52 caption languages through Whisper and does not name Malay among them, and publishes no Malay sample or accuracy figure. PeakCut "hears English by default" and states that "captions on the clips are in English", with Arabic as the only documented non-English path. If your audience reads captions in Malay, neither repo has shown you it works.
+
+**What the model can see.** neonclipping's own limits section says the local LLM "sees text only; it cannot see the screen", and its optional visual review is off by default and can add CPU time. PeakCut clips by loudness when no key is supplied.
 
 ## The volume where cancelling pays
 
-## Time one long video, twice
+My opinion, stated once: below about four clips a month, the RM61.78 subscription is cheaper than your evening. Above that, the maths turns, because the install is one evening and the marginal cost of the tenth clip is minutes rather than ringgit.
 
-## The number that decides it
+The number that decides it is not the price, it is how many clips you actually publish in a month, and most people who buy these tools already know the answer is two.
+
+## What to do this week
+
+1. Count the clips you published last month, not the ones you meant to.
+2. Install one repo on the machine you already own and clip one long video.
+3. Watch the output for Malay words if your captions are in Malay; no repo will tell you how good they are.
+4. Time the run, and compare that time against RM61.78 of subscription.
+5. Decide on the count, not on the demo.
+
+The cheapest mistake here is paying for a year of clips you never post.
+
+---
+
+**Read next**
+
+[What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
+
+[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
