@@ -11,7 +11,7 @@ author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, harga, agent-pengekodan, malaysia]
 canonical: https://upahje.my/ms/articles/kos-pembantu-pengekodan-malaysia
-draft: true
+draft: false
 changelog:
   - date: 2026-11-24
     note: "Kerangka draf; fakta belum masuk."
