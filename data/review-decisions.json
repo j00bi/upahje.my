@@ -115,5 +115,14 @@
     "note": null,
     "decided_at": "2026-11-24T05:02:03.564Z",
     "commit": "1160c7366bd07d548449e41920d18d4d914c92e0"
+  },
+  {
+    "slug": "komisen-penghantaran-malaysia",
+    "lang": "ms",
+    "action": "reject",
+    "reason": "off-topic",
+    "note": null,
+    "decided_at": "2026-11-24T05:02:21.580Z",
+    "commit": "981df18e359599c3c0014a1ba3880df524ff2180"
   }
 ]
