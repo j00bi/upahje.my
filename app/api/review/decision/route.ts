@@ -83,7 +83,7 @@ export async function POST(request: Request) {
     if (nextReview) newFrontmatter = withReviewBlock(newFrontmatter, nextReview)
     next = newFrontmatter + rest
 
-    const articleCommit = await writeFile(rel, next, `review(${lang}/${slug}): ${action}${reason ? ` (${reason})` : ''}`)
+    const articleCommit = await writeFile(rel, next, `review(${lang}/${slug}): ${action}${reason ? ` (${reason})` : ''}`, file.sha)
 
     const decisionsFile = await readFile(DECISIONS)
     const decisions = decisionsFile ? JSON.parse(decisionsFile.content) : []
