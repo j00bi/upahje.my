@@ -15,7 +15,7 @@ canonical: https://upahje.my/ms/articles/kos-pekerja-pertama-malaysia
 draft: true
 changelog:
   - date: 2026-11-24
-    note: "Mula diterbitkan."
+    note: "Mula diterbitkan. Ambang HRD Corp dan keperluan SKBBK bagi pekerja selepas 31 Ogos 2026 ditambah pada hari yang sama, setelah kedua-dua halaman dapat dibaca."
 sources:
   - title: "KWSP, caruman wajib majikan (kadar, pembundaran Jadual Ketiga, bayaran 15 haribulan)"
     url: "https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution"
@@ -26,8 +26,11 @@ sources:
   - title: "PERKESO, kadar caruman (SOCSO 1.75%/0.5%, siling RM6,000, kategori kedua)"
     url: "https://www.perkeso.gov.my/en/our-services/employer-employee/kadar-caruman.html"
     checked: 2026-11-24
-  - title: "PERKESO, LINDUNG 24 Jam (ditanggung pekerja, kadar berperingkat, tetingkap tarik diri)"
+  - title: "PERKESO, LINDUNG 24 Jam (ditanggung pekerja, kadar berperingkat, SKBBK untuk pekerja baharu selepas 31 Ogos 2026)"
     url: "https://www.perkeso.gov.my/en/our-services/protection/lindung-24-jam.html"
+    checked: 2026-11-24
+  - title: "HRD Corp, majikan berdaftar (ambang levi, 0.5% dan 1%, semakan Borang 1)"
+    url: "https://hrdcorp.gov.my/registered-employers"
     checked: 2026-11-24
 ---
 
@@ -53,7 +56,7 @@ LINDUNG 24 Jam melindungi kemalangan di luar kerja dan tidak berkaitan pekerjaan
 
 Ia berperingkat: 0.75% untuk dua tahun pertama, 1.0% untuk tiga tahun berikutnya, dan 1.25% dari tahun keenam. Pekerja yang sudah dalam senarai gaji kekal dalam skim itu melainkan mereka menarik diri dalam tetingkap 13 Julai hingga 31 Ogos 2026.
 
-Pekerja pertama yang menyertai hari ini tidak mempunyai tetingkap sebegitu di belakangnya, dan halaman yang dibaca tidak menyatakan cara pekerja baharu menarik diri, jadi anggap potongan itu sebahagian daripada slip gaji.
+Pekerja pertama yang menyertai hari ini tidak mendapat tetingkap itu. Halaman PERKESO sendiri menyatakan pekerja tempatan yang diambil bekerja pertama kali selepas 31 Ogos 2026 dikehendaki menyumbang di bawah SKBBK, jadi 0.75% itu berada pada slip gaji dari bulan pertama.
 
 ## Rupa pekerja RM3,000 itu
 
@@ -72,7 +75,7 @@ Pada RM2,000, aritmetik yang sama memberi kos majikan RM2,299.00 dan potongan pe
 
 ## Dua baris tanpa angka di sini
 
-Levi HRD Corp terpakai kepada majikan melebihi sesuatu ambang bilangan pekerja, dan tiada pekerja pertama mencapainya. Halamannya memulangkan cabaran Cloudflare kepada dua klien hari ini, jadi tiada kadar dicetak di sini dan bukannya kadar daripada ingatan.
+Levi HRD Corp bermula pada lima pekerja Malaysia: pilihan pada lima hingga sembilan pada 0.5%, wajib pada sepuluh pada 1%, dengan Borang 1 disemak dalam tempoh 30 hari. Pekerja pertama berada di bawah kedua-dua jalur, sebab itulah tiada levi dalam jumlah di atas.
 
 PCB, potongan cukai bulanan, dikira daripada jadual MTD LHDN. Halaman yang saya cuba memulangkan 404, jadi angka bawa pulang di atas adalah sebelum cukai, dan artikel ini tidak menganggar angka cukai.
 
