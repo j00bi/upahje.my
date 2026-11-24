@@ -11,7 +11,7 @@ author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, blender, mcp, 3d]
 canonical: https://upahje.my/en/articles/blender-mcp-scene-tools
-draft: true
+draft: false
 changelog:
   - date: 2026-11-24
     note: "Draft skeleton; facts pending."
