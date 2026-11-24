@@ -38,7 +38,9 @@ export default function Hub({ params }: { params: { lang: string } }) {
   const freelance = section('freelance', lang, featuredSlug)
   const counts = new Map(topicCounts(lang).map((topic) => [topic.slug, topic.count]))
 
-  const einvoice = compliance[0]
+  // The CTA names the e-Invoice exemption, so it must resolve independently of the
+  // sections: the featured article is deliberately excluded from those lists.
+  const einvoice = articlesForTopic(lang, 'compliance')[0]
   const exempt = einvoice
     ? extractHeadings(bodyWithoutTitle(einvoice.body, einvoice.title)).find((heading) => /exempt|pengecualian/i.test(heading.label))
     : null
