@@ -15,7 +15,7 @@ canonical: https://upahje.my/en/articles/first-hire-cost-malaysia
 draft: true
 changelog:
   - date: 2026-11-24
-    note: "First published."
+    note: "First published. HRD Corp thresholds and the SKBBK requirement for hires after 31 August 2026 added the same day, once both pages could be read."
 sources:
   - title: "KWSP, employer mandatory contribution (rates, Third Schedule rounding, 15th-of-the-month payment)"
     url: "https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution"
@@ -26,8 +26,11 @@ sources:
   - title: "PERKESO, contribution rate (SOCSO 1.75%/0.5%, RM6,000 ceiling, second category)"
     url: "https://www.perkeso.gov.my/en/our-services/employer-employee/kadar-caruman.html"
     checked: 2026-11-24
-  - title: "PERKESO, LINDUNG 24 Jam (employee-borne, phased rates, opt-out window)"
+  - title: "PERKESO, LINDUNG 24 Jam (employee-borne, phased rates, SKBBK for new hires after 31 August 2026)"
     url: "https://www.perkeso.gov.my/en/our-services/protection/lindung-24-jam.html"
+    checked: 2026-11-24
+  - title: "HRD Corp, registered employers (levy thresholds, 0.5% and 1%, Form 1 review)"
+    url: "https://hrdcorp.gov.my/registered-employers"
     checked: 2026-11-24
 ---
 
@@ -53,7 +56,7 @@ LINDUNG 24 Jam covers accidents outside work and not related to the job, around 
 
 It is phased: 0.75% for the first two years, 1.0% for the next three, and 1.25% from the sixth year. Employees already on the payroll stayed in the scheme unless they opted out during the window that ran from 13 July to 31 August 2026.
 
-A first hire joining today has no such window behind them, and the page read does not say how a new joiner opts out, so treat the deduction as part of the payslip.
+A first hire joining today does not get that window. PERKESO's own page states that local employees employed for the first time after 31 August 2026 are required to contribute under SKBBK, so the 0.75% belongs on the payslip from the first month.
 
 ## What the RM3,000 hire looks like
 
@@ -72,7 +75,7 @@ At RM2,000 the same arithmetic gives an employer cost of RM2,299.00 and an emplo
 
 ## Two lines with no number here
 
-The HRD Corp levy applies to employers above a headcount threshold, and no first hire reaches it. Its page returned a Cloudflare challenge to two clients today, so no rate is printed here rather than a rate from memory.
+The HRD Corp levy starts at five Malaysian employees: optional at five to nine at 0.5%, compulsory at ten at 1%, with Form 1 reviewed within 30 days. A first hire sits below both bands, which is why no levy appears in the totals above.
 
 PCB, the monthly tax deduction, is computed from LHDN's MTD schedule. The page I tried returned 404, so the take-home figures above are before tax, and this article does not estimate a tax number.
 
