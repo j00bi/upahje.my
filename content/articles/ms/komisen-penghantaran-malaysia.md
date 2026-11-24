@@ -1,6 +1,6 @@
 ---
 title: "Tiada platform penghantaran menerbitkan komisennya"
-description: "Grab dan foodpanda tidak mencetak kadar peniaga. Angka yang boleh dipetik cuma julat MyCC, dan pada 25% pesanan RM25 tinggal RM8.50 sebelum kos buruh."
+description: "Tiada platform mencetak kadar peniaga. Angka yang boleh dipetik cuma julat MyCC bagi foodpanda, dan pada 25% pesanan RM25 tinggal RM8.50 sebelum kos buruh."
 slug: komisen-penghantaran-malaysia
 translationKey: delivery-commission-malaysia
 format: explainer
