@@ -11,7 +11,7 @@ author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, harga, coding-agents, malaysia]
 canonical: https://upahje.my/en/articles/coding-assistant-cost-malaysia
-draft: false
+draft: true
 changelog:
   - date: 2026-11-24
     note: "Draft skeleton; facts pending."

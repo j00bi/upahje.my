@@ -11,7 +11,7 @@ author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, blender, mcp, 3d]
 canonical: https://upahje.my/ms/articles/alat-blender-mcp
-draft: false
+draft: true
 changelog:
   - date: 2026-11-24
     note: "Kerangka draf; fakta belum masuk."

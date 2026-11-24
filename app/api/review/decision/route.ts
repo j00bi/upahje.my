@@ -57,6 +57,21 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'blocked: unresolved [VERIFY]', line: `${article.file}:${verify + 1}` }, { status: 409 })
   }
 
+  // A swipe must not publish a scaffold. Three independent signs that a file is
+  // not a piece yet: it says so, it cites nothing, or it is too short to argue.
+  if (action === 'approve') {
+    const isSkeleton = /draft skeleton|kerangka draf/i.test(article.body)
+    if (isSkeleton) {
+      return NextResponse.json({ error: 'blocked: this file is still a skeleton', detail: 'it says so under the H1' }, { status: 409 })
+    }
+    if (article.sources.length < 2) {
+      return NextResponse.json({ error: 'blocked: fewer than two sources', detail: `${article.sources.length} in frontmatter` }, { status: 409 })
+    }
+    if ((article.wordCount || 0) < 400) {
+      return NextResponse.json({ error: 'blocked: too short to be a piece', detail: `${article.wordCount} words` }, { status: 409 })
+    }
+  }
+
   if (!process.env.GITHUB_TOKEN) {
     return NextResponse.json({ ok: false, configured: false, message: 'publishing is not configured yet (GITHUB_TOKEN missing)' })
   }
