@@ -103,27 +103,52 @@ Existing files stay valid unchanged. Adding a field to a subset is safe, and the
 
 ## Validation rules
 
-What the loader enforces today:
+Enforced in the build by `content/schema.mjs`, which runs in `prebuild` (so
+`npm run build` runs it) and in `npm run articles:check` in strict mode.
 
-| Check | Today |
+Rules, in the corpus's own field names (no `publishedAt`/`verifiedOn` renames):
+
+| Field | Rule |
 | --- | --- |
-| Missing `title`, `description`, `date`, `author` on a published article | error |
-| Unknown or missing `category` | error |
-| `date` in the future | error |
-| Missing frontmatter delimiters, unparsable YAML | error |
-| Duplicate `translationKey` in the same language | later file wins silently, no error |
+| `title`, `description`, `slug`, `translationKey`, `date`, `canonical`, `author` | required, non-empty string |
+| `title` | at most 60 characters |
+| `description` | 110 to 160 characters |
+| `sources` | at least 2 entries, unless `draft: true`, `format: perspective` or `opinion: true` |
+| each source | `title`, an http(s) `url`, and a `checked` date in `YYYY-MM-DD` |
+| `regulatory: true` | at least one source with `primary: true` |
+| `changelog` | at least one `{ date, note }` entry, date in `YYYY-MM-DD` |
+| `canonical` | must equal `https://upahje.my/<lang>/articles/<slug>` |
+| `translationKey` | must be unique within a language |
 
-Proposed additions, in the order they would catch real mistakes:
+Every failure names the file, the field, the actual value or length, and the
+expected range, for example:
 
-1. **Duplicate slug** across the two language folders, or two files whose `slug` frontmatter disagrees with its filename.
-2. **Missing translation pair** where `translationKey` exists on one side only, reported as a warning rather than an error, because an unpaired article is legal.
-3. **Broken figure path**: any `/figures/<name>.svg` referenced in the body that is not present in `public/figures/`.
-4. **Invalid category**: already enforced, keep the error message naming the three valid values.
-5. **`featured: true` on more than one article per language.** Today the homepage would have to pick arbitrarily; this must be a hard error once `featured` exists.
-6. **`cover` without `coverAlt`**, since an image without alt text is an accessibility defect rather than a style choice.
-7. **`type` outside the four editorial formats**, once the field is adopted.
-8. **Malformed dates** beyond the future-date check: reject anything that is not `YYYY-MM-DD`.
-9. **Empty body after frontmatter**, and a body with no H1 or more than one.
-10. **A source row missing `title`, `url` or `checked`.**
+```
+en/agent-harness-vs-ai-harness.md: description = 192 chars; expected 110 to 160
+en/zzz-probe.md: sources = 0 entries; expected at least 2 (or format: perspective / opinion: true, or draft: true)
+```
 
-Rules 1, 3, 5 and 6 are the ones worth building first: each maps to a defect that has either happened in this project or would publish a broken page.
+### Two modes
+
+- **Baseline (default).** `content/schema-baseline.json` records today's
+  violations, one `file::field` line each. The build fails on any violation not
+  in that file and prints only the count of known ones:
+  `schema: ok, 123 known violation(s), run npm run schema:strict to see them`.
+  New content that breaks a rule cannot ship.
+- **Strict.** `npm run schema:strict` or `STRICT_SCHEMA=1` fails on everything,
+  including baseline entries, and prints counts by rule. It is what
+  `articles:check` runs, so Publisher sees the real list. It is deliberately
+  not wired into `build` until the corpus is cleared.
+
+`npm run schema:baseline` regenerates the baseline after a deliberate cleanup;
+`npm run schema` runs the default mode directly.
+
+Known corpus state at the time the gate landed (46 files, 23 pairs): 44 missing
+`changelog`, 42 descriptions out of range, 27 titles over 60, 10 files with
+fewer than 2 sources, 0 missing `date`. Those are the baseline entries; each
+disappears from the list as Publisher fixes it, and strict then starts failing
+on fewer files.
+
+Future rules, not enforced yet: duplicate slug across languages, missing
+translation pair as a warning, broken figure path, more than one `featured: true`
+per language, `cover` without `coverAlt`.

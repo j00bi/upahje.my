@@ -8,7 +8,7 @@ export type ArticleCategory = {
   blurb: Record<string, string>
 }
 
-export type ArticleSource = { title: string; url: string; checked?: string }
+export type ArticleSource = { title: string; url: string; checked?: string; primary?: boolean }
 
 export type Article = {
   lang: string
@@ -26,6 +26,9 @@ export type Article = {
   draft: boolean
   /** Optional short ringgit figure for homepage cards; must already appear in the body. */
   cardFigure?: string
+  regulatory?: boolean
+  opinion?: boolean
+  changelog?: { date: string; note: string }[]
   body: string
   wordCount: number
   readingTime: number
