@@ -56,13 +56,13 @@ Tiga bil berbeza sampai ke satu chatbot WhatsApp, dan ia datang daripada dua sya
 | Templat utiliti di luar tetingkap | RM0.0564 setiap satu | Meta |
 | Mesej servis melepasi elaun 1,000 | RM0.0564 setiap satu | Meta |
 | Mesej Meta Business Agent | Dicaj setiap juta token | Meta |
-| Tokokan BSP, hosting dan tempat duduk | Fi vendor itu sendiri | Vendor anda |
+| Tokokan BSP, hosting dan lesen pengguna | Fi vendor itu sendiri | Vendor anda |
 
 Elaun itu dikira bagi setiap nombor perniagaan dan ditetapkan semula setiap bulan kalendar; mesej yang tidak digunakan tidak terbawa ke bulan berikutnya. Mesej servis melepasi elaun dicaj sejak 1 Oktober 2026.
 
 ## Bagaimana Meta mengenakan caj untuk mesej WhatsApp?
 
-Setiap mesej, mengikut kategori, dan hanya apabila mesej itu dihantar kepada penerima. Unitnya bukan perbualan dan bukan sesi.
+Setiap mesej, mengikut kategori, dan hanya apabila mesej itu sampai kepada penerima. Unitnya bukan perbualan dan bukan sesi.
 
 Tiga peraturan daripada halaman harga Meta menetapkan bil, semuanya berkuat kuasa dari 1 Oktober 2026 bagi kad kadar yang digunakan di sini:
 
@@ -145,7 +145,7 @@ Halaman pengesahan antarabangsa yang khusus tidak dibuka, jadi baris itu bergant
 
 ### Adakah satu mesej benar-benar RM0.3467?
 
-Hanya mesej pemasaran, dan hanya apabila ia dihantar kepada penerima. Utiliti, pengesahan dan servis RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan percuma.
+Hanya mesej pemasaran, dan hanya apabila ia sampai kepada penerima. Utiliti, pengesahan dan servis RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan percuma.
 
 ### Adakah saya dicaj apabila pelanggan menghantar mesej?
 
