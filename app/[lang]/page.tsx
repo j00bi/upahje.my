@@ -4,7 +4,7 @@ import Footer from '@/components/layout/Footer'
 import TopBar from '@/components/layout/TopBar'
 import FeaturedStory from '@/components/home/FeaturedStory'
 import StoryCard from '@/components/home/StoryCard'
-import { copyFor } from '@/lib/copy'
+import { copyFor, homeFor } from '@/lib/copy'
 import { featuredArticle, publicationArticles, getPublishedArticle, bodyWithoutTitle } from '@/lib/articles.mjs'
 import { articlesForTopic, topicCounts } from '@/lib/topics.mjs'
 import { extractHeadings } from '@/lib/article-view'
@@ -12,26 +12,30 @@ import { SITE_NAME, absolute, languagesFor, social } from '@/lib/seo'
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const copy = copyFor(params.lang)
+  const home = homeFor(params.lang)
   return {
     title: `${SITE_NAME} - ${copy.tagline}`,
-    description: copy.homeSub,
+    description: home.sub,
     alternates: { canonical: absolute(`/${params.lang}`), languages: languagesFor('') },
-    ...social(params.lang, `/${params.lang}`, `${SITE_NAME} - ${copy.tagline}`, copy.homeSub),
+    ...social(params.lang, `/${params.lang}`, `${SITE_NAME} - ${copy.tagline}`, home.sub),
   }
 }
 
-const section = (slug: string, lang: string, limit = 3) => articlesForTopic(lang, slug).slice(0, limit)
+const section = (slug: string, lang: string, exclude: string | undefined, limit = 3) =>
+  articlesForTopic(lang, slug).filter((article) => article.slug !== exclude).slice(0, limit)
 
 export default function Hub({ params }: { params: { lang: string } }) {
   const lang = params.lang
   const copy = copyFor(lang)
+  const home = homeFor(lang)
   const other = lang === 'ms' ? 'en' : 'ms'
 
   const featured = featuredArticle(lang)
-  const compliance = section('compliance', lang)
-  const buying = section('buying', lang)
-  const ai = section('ai-automation', lang)
-  const freelance = section('freelance', lang)
+  const featuredSlug = featured?.slug
+  const compliance = section('compliance', lang, featuredSlug)
+  const buying = section('buying', lang, featuredSlug)
+  const ai = section('ai-automation', lang, featuredSlug)
+  const freelance = section('freelance', lang, featuredSlug)
   const counts = new Map(topicCounts(lang).map((topic) => [topic.slug, topic.count]))
 
   const einvoice = compliance[0]
@@ -42,34 +46,35 @@ export default function Hub({ params }: { params: { lang: string } }) {
     ? `/${lang}/articles/${einvoice.slug}${exempt ? `#${exempt.id}` : ''}`
     : `/${lang}/articles`
 
-  const blocks = [
-    { slug: 'compliance', title: copy.rulesChanged, items: compliance },
-    { slug: 'buying', title: copy.whatToBuy, items: buying },
-    { slug: 'ai-automation', title: copy.whereToStartAi, items: ai },
-    { slug: 'freelance', title: copy.forFreelancers, items: freelance },
+  const sections = [
+    { slug: 'compliance', title: home.sections.rules, items: compliance },
+    { slug: 'buying', title: home.sections.buying, items: buying },
+    { slug: 'ai-automation', title: home.sections.ai, items: ai },
+    { slug: 'freelance', title: home.sections.freelancers, items: freelance },
   ]
+  const blocks = sections.filter((block) => block.items.length > 0)
 
   return (
     <div className="ui-canvas min-h-screen">
       <TopBar lang={lang} otherHref={`/${lang === 'en' ? 'ms' : 'en'}`} />
 
       <header className="container-editorial" style={{ paddingTop: 'var(--space-10)', paddingBottom: 'var(--space-8)' }}>
-        <h1 className="type-display" style={{ color: 'var(--ui-ink)', maxWidth: '20ch' }}>{copy.homeH1}</h1>
-        <p className="type-body mt-5" style={{ color: 'var(--ui-body)', maxWidth: 'var(--measure)' }}>{copy.homeSub}</p>
+        <h1 className="type-display" style={{ color: 'var(--ui-ink)', maxWidth: '20ch' }}>{home.h1}</h1>
+        <p className="type-body mt-5" style={{ color: 'var(--ui-body)', maxWidth: 'var(--measure)' }}>{home.sub}</p>
         <div className="mt-7 flex flex-wrap items-center gap-3">
           <Link
             href={startHref}
             className="type-small inline-flex items-center rounded-[10px] px-5 py-3"
             style={{ background: 'var(--ui-forest)', color: 'var(--ui-paper)', fontWeight: 600 }}
           >
-            {copy.startHere}
+            {home.startCta}
           </Link>
           <Link
             href={`/${lang}/articles`}
             className="type-small inline-flex items-center rounded-[10px] px-5 py-3"
             style={{ border: '1px solid var(--ui-rule)', color: 'var(--ui-ink)', fontWeight: 600 }}
           >
-            {copy.browseAll}
+            {home.browseCta}
           </Link>
         </div>
       </header>
@@ -100,14 +105,14 @@ export default function Hub({ params }: { params: { lang: string } }) {
         ))}
 
         <section aria-labelledby="how-we-check" className="mt-16" style={{ borderTop: '1px solid var(--ui-rule)', paddingTop: 'var(--space-6)' }}>
-          <h2 id="how-we-check" className="type-h2" style={{ color: 'var(--ui-ink)' }}>{copy.howWeCheck}</h2>
+          <h2 id="how-we-check" className="type-h2" style={{ color: 'var(--ui-ink)' }}>{home.sections.howWeCheck}</h2>
           <ul className="mt-4 space-y-1">
-            {copy.howWeCheckLines.map((line) => (
+            {home.howWeCheck.map((line) => (
               <li key={line} className="type-body" style={{ color: 'var(--ui-body)' }}>{line}</li>
             ))}
           </ul>
-          <Link href={`/${lang}/editorial-policy`} className="type-small ui-link mt-4 inline-block" style={{ color: 'var(--ui-accent)', fontWeight: 600 }}>
-            {copy.readPolicy}
+          <Link href={`/${lang}${home.policyPath}`} className="type-small ui-link mt-4 inline-block" style={{ color: 'var(--ui-accent)', fontWeight: 600 }}>
+            {lang === 'ms' ? 'Baca dasar editorial' : 'Read the editorial policy'}
           </Link>
         </section>
 
