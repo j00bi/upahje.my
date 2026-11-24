@@ -1,6 +1,6 @@
 ---
 title: "Di mana data yang sama ditaip tiga kali"
-description: "Penggunaan bukan masalahnya: 97.2% pertubuhan Malaysia guna komputer. Penduaan berlaku antara pejabat hadapan yang sudah digital dan pejabat belakang yang masih manual, dan e-Invoice kini memaksa satu rekod betul semasa dikeluarkan."
+description: "97.2% pertubuhan guna komputer, jadi penggunaan bukan masalah. Penduaan antara pejabat hadapan digital dan belakang manual, dan e-Invoice memaksa rekod betul."
 slug: data-sama-ditaip-tiga-kali
 translationKey: same-data-typed-three-times
 date: 2026-11-23
@@ -10,6 +10,9 @@ category: buying-guides
 tags: [operations, kemasukan-data, e-invoice, malaysia]
 canonical: https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "Mula diterbitkan."
 sources:
   - title: "DOSM, penggunaan ICT dan e-dagang oleh pertubuhan, terbitan 2025 (tahun data 2024)"
     url: "https://www.dosm.gov.my/portal-main/release-content/usage-of-ict-and-e-commerce-by-establishment2025"

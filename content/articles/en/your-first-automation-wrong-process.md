@@ -1,8 +1,9 @@
 ---
 title: "Your first automation should not be your worst process"
-description: "Opinion. The process an owner hates most is usually the worst one to automate first, because automating it removes the evidence you need and hides the exceptions that decide the cost."
+description: "Opinion. The process an owner hates most is often the worst to automate first: automating it removes evidence and hides the exceptions that decide the cost."
 slug: your-first-automation-wrong-process
 translationKey: your-first-automation-wrong-process
+format: perspective
 date: 2026-11-23
 updated: 2026-11-23
 author: "Husni Ahmad"
@@ -10,6 +11,9 @@ category: buying-guides
 tags: [perspective, automation, sme, malaysia]
 canonical: https://upahje.my/en/articles/your-first-automation-wrong-process
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "First published."
 sources: []
 ---
 
@@ -80,3 +84,6 @@ Track the failures only. One line whenever something goes wrong, with what happe
 ### What makes a good first automation?
 
 A process with a clear finish line, a cheap and visible mistake, and someone who owns it on the other side. Boring is the point: the first one is where you learn the buying and the maintenance, not where you make the annual saving.
+---
+
+This piece carries no sources because it is an argument, not a report: a position on which process to automate first, drawn from how these projects fail. No figure in it is a measurement and none is borrowed from another article.

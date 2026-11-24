@@ -1,6 +1,6 @@
 ---
-title: "Google Business Profile: medan yang menentukan sama ada anda muncul"
-description: "Google mendokumenkan peraturan nama, peraturan kategori, waktu operasi, kawasan perkhidmatan dan apa yang mencetuskan penggantungan. Apa yang patut PKS betulkan dahulu, dan empat medan yang menyebabkan profil dihadkan."
+title: "Google Business Profile: medan penentu sama ada anda muncul"
+description: "Google mendokumenkan peraturan nama, kategori, waktu dan pencetus penggantungan; apa patut PKS betulkan dahulu, dan empat medan yang menghadkan profil."
 slug: medan-google-business-profile
 translationKey: google-business-profile-fields
 date: 2026-11-23
@@ -10,22 +10,30 @@ category: buying-guides
 tags: [marketing, google-business-profile, carian-setempat, malaysia]
 canonical: https://upahje.my/ms/articles/medan-google-business-profile
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "Mula diterbitkan."
 sources:
   - title: "Google, garis panduan mewakili perniagaan anda di Google"
     url: "https://support.google.com/business/answer/3038177"
     checked: 2026-11-23
+    primary: true
   - title: "Google, perniagaan kawasan perkhidmatan"
     url: "https://support.google.com/business/answer/3038163"
     checked: 2026-11-23
+    primary: true
   - title: "Google, baiki profil yang digantung atau dilumpuhkan"
     url: "https://support.google.com/business/answer/4569145"
     checked: 2026-11-23
+    primary: true
   - title: "Google, rayuan kandungan dan sekatan profil perniagaan"
     url: "https://support.google.com/business/answer/13597551"
     checked: 2026-11-23
+    primary: true
   - title: "Google, rujukan API Business Profile (sumber locations)"
     url: "https://developers.google.com/my-business/reference/rest/v4/accounts.locations"
     checked: 2026-11-23
+    primary: true
 ---
 
 # Google Business Profile: medan yang menentukan sama ada anda muncul

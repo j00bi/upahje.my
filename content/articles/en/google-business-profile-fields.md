@@ -1,6 +1,6 @@
 ---
-title: "Google Business Profile: the fields that decide whether you show up"
-description: "Google documents the name rules, the category rules, hours, service areas and what triggers suspension. What an SME should fix first, and the four fields that get profiles restricted."
+title: "Google Business Profile: the fields that decide visibility"
+description: "Google documents name rules, category rules, hours and what triggers suspension: what an SME should fix first, and the four fields that get restricted."
 slug: google-business-profile-fields
 translationKey: google-business-profile-fields
 date: 2026-11-23
@@ -10,22 +10,30 @@ category: buying-guides
 tags: [marketing, google-business-profile, local-seo, malaysia]
 canonical: https://upahje.my/en/articles/google-business-profile-fields
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "First published."
 sources:
   - title: "Google, guidelines for representing your business on Google"
     url: "https://support.google.com/business/answer/3038177"
     checked: 2026-11-23
+    primary: true
   - title: "Google, service-area businesses"
     url: "https://support.google.com/business/answer/3038163"
     checked: 2026-11-23
+    primary: true
   - title: "Google, fix suspended or disabled profiles"
     url: "https://support.google.com/business/answer/4569145"
     checked: 2026-11-23
+    primary: true
   - title: "Google, appeal Business Profile content and profile restrictions"
     url: "https://support.google.com/business/answer/13597551"
     checked: 2026-11-23
+    primary: true
   - title: "Google, Business Profile API reference (locations resource)"
     url: "https://developers.google.com/my-business/reference/rest/v4/accounts.locations"
     checked: 2026-11-23
+    primary: true
 ---
 
 # Google Business Profile: the fields that decide whether you show up

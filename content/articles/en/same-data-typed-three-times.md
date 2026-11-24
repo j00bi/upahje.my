@@ -1,6 +1,6 @@
 ---
 title: "Where the same data gets typed three times"
-description: "Malaysian adoption is not the problem: 97.2% of establishments use computers. The duplication sits between a digitised front office and a manual back office, and e-Invoice now forces one record to be right at issuance."
+description: "97.2% of establishments use computers. The duplication sits between a digitised front office and a manual back office, and e-Invoice forces one record right."
 slug: same-data-typed-three-times
 translationKey: same-data-typed-three-times
 date: 2026-11-23
@@ -10,6 +10,9 @@ category: buying-guides
 tags: [operations, data-entry, e-invoice, malaysia]
 canonical: https://upahje.my/en/articles/same-data-typed-three-times
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "First published."
 sources:
   - title: "DOSM, usage of ICT and e-commerce by establishment, 2025 release (data year 2024)"
     url: "https://www.dosm.gov.my/portal-main/release-content/usage-of-ict-and-e-commerce-by-establishment2025"

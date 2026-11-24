@@ -1,8 +1,9 @@
 ---
 title: "Automasi pertama anda bukan proses yang paling anda benci"
-description: "Pendapat. Proses yang paling pemilik benci biasanya proses yang paling buruk untuk diautomasikan dahulu, kerana mengautomasikannya membuang bukti yang anda perlukan dan menyembunyikan pengecualian yang menentukan kos."
+description: "Pendapat. Proses yang paling dibenci pemilik selalunya yang paling buruk untuk diautomasikan: ia membuang bukti dan menyembunyikan pengecualian penentu kos."
 slug: automasi-pertama-bukan-proses-terburuk
 translationKey: your-first-automation-wrong-process
+format: perspective
 date: 2026-11-23
 updated: 2026-11-23
 author: "Husni Ahmad"
@@ -10,6 +11,9 @@ category: buying-guides
 tags: [perspective, automasi, pks, malaysia]
 canonical: https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "Mula diterbitkan."
 sources: []
 ---
 
@@ -80,3 +84,6 @@ Jejaki kegagalan sahaja. Satu baris setiap kali sesuatu silap, dengan apa yang b
 ### Apa yang menjadikan automasi pertama yang baik?
 
 Proses dengan garisan penamat jelas, kesilapan yang murah dan kelihatan, dan pemilik di sebelah sana. Membosankan itulah maksudnya: yang pertama ialah tempat anda belajar cara membeli dan cara menyelenggara, bukan tempat anda membuat penjimatan tahunan.
+---
+
+Artikel ini tiada sumber kerana ia hujah, bukan laporan: pendirian tentang proses mana yang patut diautomasikan dahulu, berdasarkan cara projek sebegini gagal. Tiada angka di sini yang merupakan ukuran dan tiada yang dipinjam daripada artikel lain.
