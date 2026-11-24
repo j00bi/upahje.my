@@ -53,8 +53,9 @@ if (sitemap) {
 await status('/robots.txt')
 await status('/llms.txt')
 await status('/llms-full.txt')
-await status('/feed.xml')
+await status('/en/feed.xml')
 await status('/ms/feed.xml')
+await status('/feed.xml')
 const llms = await get('/llms.txt')
 if (llms) {
   const text = await llms.text()

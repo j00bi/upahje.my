@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "node content/schema.mjs --strict && node scripts/build-og-fonts.mjs && node scripts/build-og-data.mjs && node scripts/check-articles.mjs && node scripts/generate-llms.mjs && node scripts/generate-feeds.mjs && next build",
+  "buildCommand": "node content/schema.mjs --strict && node scripts/build-og-fonts.mjs && node scripts/build-og-data.mjs && node scripts/check-articles.mjs && node scripts/generate-llms.mjs && next build",
   "outputDirectory": ".next",
   "framework": "nextjs"
 }

@@ -20,7 +20,7 @@ export default function LanguageLayout({
   params: { lang: string }
 }) {
   if (!isLanguage(params.lang)) notFound()
-  const feed = params.lang === 'ms' ? '/ms/feed.xml' : '/feed.xml'
+  const feed = `/${params.lang}/feed.xml`
   return (
     <div lang={languageByCode(params.lang).htmlLang}>
       <link rel="alternate" type="application/rss+xml" title={`UpahJe.my ${params.lang.toUpperCase()} feed`} href={feed} />

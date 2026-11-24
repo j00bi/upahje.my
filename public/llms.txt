@@ -79,6 +79,11 @@ This site publishes short, citable articles. Every claim links to a source; ever
 - [Repos, SDKs and price pages](https://upahje.my/en/resources): every repository and price page the articles cite, with its licence and whether we ran it, read it, or only installed it.
 - [Repo, SDK dan halaman harga](https://upahje.my/ms/resources): setiap repo dan halaman harga yang dipetik, dengan lesennya dan sama ada kami menjalankannya, membacanya, atau hanya memasangnya.
 
+## Feeds
+
+- [English RSS](https://upahje.my/en/feed.xml): every published English article, newest first.
+- [Malay RSS](https://upahje.my/ms/feed.xml): every published Malay article, newest first.
+
 ## Notes
 
 - Each article lists its sources and the date they were checked.
