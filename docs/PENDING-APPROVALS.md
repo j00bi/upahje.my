@@ -4,7 +4,7 @@ One line per draft, newest first. Review links are gated by `REVIEW_TOKEN`, whic
 
 _Updated 2026-11-24._
 
-**Six drafts are skeletons, not pieces.** Structure only, no figures, no sources yet: they are waiting on research packets and must not be approved until the facts are in. Each carries a line under its H1 saying so.
+**Eight drafts:** six skeletons with no facts yet, and one finished pair — the first-hire piece — which is ready to read. The six skeletons are structure only; they must not be approved until the facts are in. Structure only, no figures, no sources yet: they are waiting on research packets and must not be approved until the facts are in. Each carries a line under its H1 saying so.
 
 | Date | Lang | Title | One-line thesis | Review |
 | --- | --- | --- | --- | --- |
@@ -14,6 +14,8 @@ _Updated 2026-11-24._
 | 2026-11-24 | ms | Aplikasi 3D anda kini menerima arahan dalam bahasa Inggeris | Laluan MCP membolehkan ejen memacu Blender; artikel ini tentang batasnya, kerana ejen tidak nampak render yang diubahnya. | `/ms/review/alat-blender-mcp?k=…` |
 | 2026-11-24 | en | What a coding assistant costs a Malaysian small business | Published tier prices at a stated rate and date, and one question answered: should you pay at all. | `/en/review/coding-assistant-cost-malaysia?k=…` |
 | 2026-11-24 | ms | Kos pembantu pengekodan untuk perniagaan kecil Malaysia | Harga tier yang diterbitkan pada kadar dan tarikh yang dinyatakan, dan satu soalan: perlukah anda bayar. | `/ms/review/kos-pembantu-pengekodan-malaysia?k=…` |
+| 2026-11-24 | en | A first hire at RM3,000 costs RM3,448.50 a month | EPF, SOCSO, EIS and the LINDUNG 24 Jam line, on a RM3,000 salary, with HRD Corp left out because a first hire is below its threshold. | `/en/review/first-hire-cost-malaysia?k=…` |
+| 2026-11-24 | ms | Pekerja pertama bergaji RM3,000 berharga RM3,448.50 | EPF, SOCSO, EIS dan baris LINDUNG 24 Jam pada gaji RM3,000; HRD Corp tidak dimasukkan kerana pekerja pertama di bawah ambangnya. | `/ms/review/kos-pekerja-pertama-malaysia?k=…` |
 
 ## Shipped
 
