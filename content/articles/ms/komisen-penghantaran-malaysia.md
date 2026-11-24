@@ -53,11 +53,11 @@ Keputusan itu sendiri bertarikh 11 September 2023; senarai kes membawa 13 Septem
 
 Aritmetik di bawah menggunakan hujung atas 25% dan titik tengah 20%, dengan pembungkusan RM1.50 setiap pesanan dan kos makanan 35% daripada harga menu. Pembungkusan dan kos makanan ialah andaian, bukan angka yang diterbitkan; komisen ialah julat pengawal selia.
 
-| Bakul | Komisen pada 25% | Komisen pada 20% | Pembungkusan | Kos makanan pada 35% | Baki sebelum upah dan sewa, pada 25% / 20% |
-| --- | --- | --- | --- | --- | --- |
-| RM15 | RM3.75 | RM3.00 | RM1.50 | RM5.25 | RM4.50 / RM5.25 |
-| RM25 | RM6.25 | RM5.00 | RM1.50 | RM8.75 | RM8.50 / RM9.75 |
-| RM45 | RM11.25 | RM9.00 | RM1.50 | RM15.75 | RM16.50 / RM18.75 |
+| Bakul | Komisen pada 25% | Komisen pada 20% | Pembungkusan | Baki selepas komisen dan pembungkusan, pada 25% / 20% | Kos makanan pada 35% | Baki sebelum upah dan sewa, pada 25% / 20% |
+| --- | --- | --- | --- | --- | --- | --- |
+| RM15 | RM3.75 | RM3.00 | RM1.50 | RM9.75 / RM10.50 | RM5.25 | RM4.50 / RM5.25 |
+| RM25 | RM6.25 | RM5.00 | RM1.50 | RM17.25 / RM18.50 | RM8.75 | RM8.50 / RM9.75 |
+| RM45 | RM11.25 | RM9.00 | RM1.50 | RM32.25 / RM34.50 | RM15.75 | RM16.50 / RM18.75 |
 
 Baca lajur terakhir sebagai apa yang tinggal untuk membayar tukang masak, sewa, gas dan stok pembungkusan. Pada pesanan RM15 di hujung julat, ia RM4.50, yang bukan margin; ia amaran bahawa bakul kecil menanggung kos tetap dengan teruk.
 

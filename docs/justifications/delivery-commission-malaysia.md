@@ -21,6 +21,9 @@
 | 15 | "neither platform page states who sets it or who keeps it" | - | our measurement, this machine | 2026-11-24 | estimate: absence check of both merchant pages for delivery-fee treatment |
 | 16 | "no MyCC decision and no platform page" | - | our measurement, this machine | 2026-11-24 | estimate: absence check for a GrabFood rate |
 | 17 | "a platform that will not put the rate beside a worked basket is telling you something" | - | - | - | opinion: stated once in the reader's interest |
+| 18 | "RM9.75 / RM10.50" | - | - | 2026-11-24 | estimate: RM15 less commission at 25% and 20%, less RM1.50 packaging, table net column |
+| 19 | "RM17.25 / RM18.50" | - | - | 2026-11-24 | estimate: RM25 less commission at 25% and 20%, less RM1.50 packaging, table net column |
+| 20 | "RM32.25 / RM34.50" | - | - | 2026-11-24 | estimate: RM45 less commission at 25% and 20%, less RM1.50 packaging, table net column |
 
 ## Sections
 
@@ -28,6 +31,6 @@
 |----|-------------------------|
 | The platforms publish nothing | The absence, established before any number appears |
 | The regulator's numbers are bands, and the names are redacted | What MyCC does publish, and the date discrepancy between the decision and the case list |
-| What the top of the band costs on a real basket | The one numeric table, with packaging and food cost labelled as assumptions |
+| What the top of the band costs on a real basket | The one numeric table, commission then packaging then food cost, each cell reproducible |
 | What is not published | Promo co-funding, delivery fee, GrabFood rate |
 | What to ask before signing | Five questions that produce a checkable number |

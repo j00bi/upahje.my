@@ -53,13 +53,13 @@ The decision itself is dated 11 September 2023; the case list carries 13 Septemb
 
 The arithmetic below applies the 25% upper edge and a 20% midpoint, with packaging at RM1.50 per order and food cost at 35% of menu price. Packaging and food cost are assumptions, not published figures; commission is the regulator's band.
 
-| Basket | Commission at 25% | Commission at 20% | Packaging | Food cost at 35% | Left before labour and rent, at 25% / 20% |
-| --- | --- | --- | --- | --- | --- |
-| RM15 | RM3.75 | RM3.00 | RM1.50 | RM5.25 | RM4.50 / RM5.25 |
-| RM25 | RM6.25 | RM5.00 | RM1.50 | RM8.75 | RM8.50 / RM9.75 |
-| RM45 | RM11.25 | RM9.00 | RM1.50 | RM15.75 | RM16.50 / RM18.75 |
+| Basket | Commission at 25% | Commission at 20% | Packaging | Net after commission and packaging, at 25% / 20% | Food cost at 35% | Left before labour and rent, at 25% / 20% |
+| --- | --- | --- | --- | --- | --- | --- |
+| RM15 | RM3.75 | RM3.00 | RM1.50 | RM9.75 / RM10.50 | RM5.25 | RM4.50 / RM5.25 |
+| RM25 | RM6.25 | RM5.00 | RM1.50 | RM17.25 / RM18.50 | RM8.75 | RM8.50 / RM9.75 |
+| RM45 | RM11.25 | RM9.00 | RM1.50 | RM32.25 / RM34.50 | RM15.75 | RM16.50 / RM18.75 |
 
-Read the last column as what is left to pay for the cook, the rent, the gas and the packaging stock. On a RM15 order at the top of the band it is RM4.50, which is not a margin; it is a warning that small baskets carry fixed costs badly.
+Each row subtracts commission, then packaging, then food cost, in that order, so a reader can redo any cell with a calculator. Read the last column as what is left to pay for the cook, the rent and the gas. On a RM15 order at the top of the band it is RM4.50, which is not a margin; it is a warning that small baskets carry fixed costs badly.
 
 The 35% food cost is the weakest number here, and it is ours. A business with a different food cost should redo the row with its own figure, which is why it is in a column of its own rather than folded into a total.
 
