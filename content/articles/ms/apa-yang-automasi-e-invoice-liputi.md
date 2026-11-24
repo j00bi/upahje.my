@@ -13,6 +13,7 @@ tags: [e-invoice, myinvois, lhdn, pematuhan]
 canonical: https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi
 draft: false
 featured: true
+regulatory: true
 changelog:
   - date: 2026-11-23
     note: "Ditulis semula berdasarkan ambang RM3 juta yang diumumkan 30 Ogos 2026; versi terdahulu menggunakan jurang RM3 juta hingga RM5 juta sebagai tunjang."
@@ -20,15 +21,19 @@ sources:
   - title: "Kenyataan media LHDN HASiL/2026/08/30 – 44, AMBANG PENGECUALIAN PELAKSANAAN E-INVOIS DINAIKKAN"
     url: "https://www.hasil.gov.my/wp-content/uploads/20260830-Kenyataan-Media-HASiL_AMBANG-PENGECUALIAN-E_INVOIS-DINAIKKAN.pdf"
     checked: 2026-11-23
+    primary: true
   - title: "LHDN, halaman program e-Invois"
     url: "https://www.hasil.gov.my/e-invois"
     checked: 2026-11-23
+    primary: true
   - title: "MyInvois SDK, peraturan pengesahan dokumen"
     url: "https://sdk.myinvois.hasil.gov.my/document-validation-rules/"
     checked: 2026-11-23
+    primary: true
   - title: "LHDN, Garis Panduan e-Invois Versi 4.8"
     url: "https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf"
     checked: 2026-11-23
+    primary: true
 ---
 
 # Ambang e-Invoice kini RM3 juta

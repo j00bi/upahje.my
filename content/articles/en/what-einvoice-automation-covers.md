@@ -13,6 +13,7 @@ tags: [e-invoice, myinvois, lhdn, compliance]
 canonical: https://upahje.my/en/articles/what-einvoice-automation-covers
 draft: false
 featured: true
+regulatory: true
 changelog:
   - date: 2026-11-23
     note: "Rewritten around the RM3 million threshold announced on 30 August 2026; prior version used the RM3m-to-RM5m gap as its spine."
@@ -20,15 +21,19 @@ sources:
   - title: "LHDN media statement HASiL/2026/08/30 – 44, AMBANG PENGECUALIAN PELAKSANAAN E-INVOIS DINAIKKAN"
     url: "https://www.hasil.gov.my/wp-content/uploads/20260830-Kenyataan-Media-HASiL_AMBANG-PENGECUALIAN-E_INVOIS-DINAIKKAN.pdf"
     checked: 2026-11-23
+    primary: true
   - title: "LHDN, e-Invois programme page"
     url: "https://www.hasil.gov.my/e-invois"
     checked: 2026-11-23
+    primary: true
   - title: "MyInvois SDK, document validation rules"
     url: "https://sdk.myinvois.hasil.gov.my/document-validation-rules/"
     checked: 2026-11-23
+    primary: true
   - title: "LHDN, Garis Panduan e-Invois Versi 4.8"
     url: "https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf"
     checked: 2026-11-23
+    primary: true
 ---
 
 # The e-Invoice threshold is now RM3 million
