@@ -40,7 +40,7 @@ Kedua-duanya berselisih tentang skop, iaitu tempat wang pergi.
 
 `rust-anything` merekod apa yang aplikasi anda lakukan, kemudian agent pengekodan anda menulis pengganti Rust sekeping demi sekeping, dan setiap keping disemak terhadap rekod itu sebelum keping seterusnya bermula.
 
-`fast-anything` memprofil aplikasi yang sedang berjalan, menyusun fungsi mengikut masa dan kemudahan dipindahkan, merekod sehingga 500 panggilan sebenar bagi satu fungsi yang dipilih, menerbitkan kes tepi daripada panggilan itu, dan memainkannya semula. Tiada apa diaktifkan sehingga setiap kes sepadan, float dalam 1e-9, ralat di tempat asal dibetulkan. Perekod dalam sumbernya dihadkan pada 500 panggilan; demo README-nya menunjukkan pindahan salah ditangkap oleh "148 of 500" panggilan yang direkod.
+`fast-anything` memprofil aplikasi yang sedang berjalan, menyusun fungsi mengikut masa dan kemudahan dipindahkan, merekod sehingga 500 panggilan sebenar bagi satu fungsi yang dipilih, menerbitkan kes tepi daripada panggilan itu, dan memainkannya semula. Tiada apa diaktifkan sehingga setiap kes sepadan, float dalam 1e-9, dan ralat di tempat asal kekal ralat. Perekod dalam sumbernya dihadkan pada 500 panggilan; demo README-nya menunjukkan pindahan salah ditangkap oleh "148 of 500" panggilan yang direkod.
 
 Tiada satu pun repo dijalankan untuk artikel ini. Angkanya milik mereka; mekanismenya kelihatan dalam sumber dan README.
 
