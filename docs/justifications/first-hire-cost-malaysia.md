@@ -20,7 +20,7 @@
 | 14 | "RM373.50" | - | - | 2026-11-24 | estimate: sum of the employee column, table total |
 | 15 | "At RM2,000 the same arithmetic gives an employer cost of RM2,299.00 and an employee deduction of RM249.00." | - | - | 2026-11-24 | estimate: same rates at RM2,000; EPF RM260 + SOCSO RM35 + EIS RM4, employee EPF RM220 + SOCSO RM10 + EIS RM4 + LINDUNG RM15 |
 | 16 | "optional at five to nine at 0.5%, compulsory at ten at 1%, with Form 1 reviewed within 30 days" | https://hrdcorp.gov.my/registered-employers | HRD Corp | 2026-11-24 | source: registered-employers page, levy thresholds and Form 1 review window |
-| 17 | "The page I tried returned 404" | - | our measurement, this machine | 2026-11-24 | source: one fetch of an LHDN MTD page, 404, 24 November 2026 |
+| 17 | "it gives no remittance due date" | https://www.hasil.gov.my/en/majikan/pembayaran-pcb/ | LHDN | 2026-11-24 | estimate: absence check of the MTD page, both language versions read in full; the page documents the mechanism, e-Data PCB, e-PCB and e-CP39, and the payment routes, and prints no deadline |
 | 18 | "the salary is the smaller number in this decision" | - | - | - | opinion: stated once in the reader's interest, no source claimed |
 
 ## Sections

@@ -15,7 +15,7 @@ canonical: https://upahje.my/ms/articles/kos-pekerja-pertama-malaysia
 draft: true
 changelog:
   - date: 2026-11-24
-    note: "Mula diterbitkan. Ambang HRD Corp dan keperluan SKBBK bagi pekerja selepas 31 Ogos 2026 ditambah pada hari yang sama, setelah kedua-dua halaman dapat dibaca."
+    note: "Mula diterbitkan. Ambang HRD Corp dan keperluan SKBBK bagi pekerja selepas 31 Ogos 2026 ditambah pada hari yang sama; baris PCB kini menyatakan halaman LHDN tiada tarikh remitan, bukan bahawa halaman itu tidak dapat dibaca."
 sources:
   - title: "KWSP, caruman wajib majikan (kadar, pembundaran Jadual Ketiga, bayaran 15 haribulan)"
     url: "https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution"
@@ -31,6 +31,9 @@ sources:
     checked: 2026-11-24
   - title: "HRD Corp, majikan berdaftar (ambang levi, 0.5% dan 1%, semakan Borang 1)"
     url: "https://hrdcorp.gov.my/registered-employers"
+    checked: 2026-11-24
+  - title: "LHDN, halaman potongan cukai bulanan (mekanisme dan saluran, tiada tarikh remitan)"
+    url: "https://www.hasil.gov.my/en/majikan/pembayaran-pcb/"
     checked: 2026-11-24
 ---
 
@@ -77,7 +80,7 @@ Pada RM2,000, aritmetik yang sama memberi kos majikan RM2,299.00 dan potongan pe
 
 Levi HRD Corp bermula pada lima pekerja Malaysia: pilihan pada lima hingga sembilan pada 0.5%, wajib pada sepuluh pada 1%, dengan Borang 1 disemak dalam tempoh 30 hari. Pekerja pertama berada di bawah kedua-dua jalur, sebab itulah tiada levi dalam jumlah di atas.
 
-PCB, potongan cukai bulanan, dikira daripada jadual MTD LHDN. Halaman yang saya cuba memulangkan 404, jadi angka bawa pulang di atas adalah sebelum cukai, dan artikel ini tidak menganggar angka cukai.
+PCB, potongan cukai bulanan, dikira daripada jadual MTD LHDN. Halaman yang dibaca menerangkan mekanisme, saluran penyerahan percuma dan laluan bayaran, dan ia tidak memberikan tarikh akhir remitan; sesiapa yang memetik tarikh untuknya sedang merujuk peraturan MTD, bukan halaman itu. Angka bawa pulang di atas adalah sebelum cukai, dan artikel ini tidak menganggar angka cukai.
 
 ## Apa yang perlu dibuat sebelum slip gaji pertama
 
