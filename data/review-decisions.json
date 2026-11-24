@@ -61,5 +61,14 @@
     "note": null,
     "decided_at": "2026-11-24T04:59:54.183Z",
     "commit": "4d02ff4bca917b497b379c0a42e6fc9fc370a250"
+  },
+  {
+    "slug": "self-hosted-clipping",
+    "lang": "en",
+    "action": "approve",
+    "reason": null,
+    "note": null,
+    "decided_at": "2026-11-24T05:00:12.351Z",
+    "commit": "68094b63449d9ddb874ab6eb6b92ff497b86f6ff"
   }
 ]
