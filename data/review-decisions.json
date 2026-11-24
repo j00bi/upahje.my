@@ -106,5 +106,14 @@
     "note": null,
     "decided_at": "2026-11-24T05:01:36.217Z",
     "commit": "fd4e2f9226d965e8f177e558edd54955c93c7fb7"
+  },
+  {
+    "slug": "kos-pekerja-pertama-malaysia",
+    "lang": "ms",
+    "action": "approve",
+    "reason": null,
+    "note": null,
+    "decided_at": "2026-11-24T05:02:03.564Z",
+    "commit": "1160c7366bd07d548449e41920d18d4d914c92e0"
   }
 ]
