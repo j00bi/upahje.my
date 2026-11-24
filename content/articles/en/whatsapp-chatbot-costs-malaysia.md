@@ -1,7 +1,7 @@
 ---
 title: "WhatsApp chatbot costs in Malaysia, per message"
-description: "Marketing messages RM0.3467 in Malaysia, service and utility RM0.0564 with the first 1,000 free, vendors RM200 to RM1,500 a month, and two sources disagree."
-cardFigure: "RM0.3467 per marketing message; RM200 to RM1,500 a month"
+description: "Free to 1,000 service messages a month and free for anything a customer sends. Marketing costs RM0.3467, and a Malaysian vendor adds RM200 to RM1,500."
+cardFigure: "Free to 1,000 service messages; RM0.3467 marketing"
 slug: whatsapp-chatbot-costs-malaysia
 translationKey: whatsapp-chatbot-costs-malaysia
 date: 2026-11-23
@@ -14,10 +14,15 @@ draft: true
 changelog:
   - date: 2026-11-23
     note: "First published."
+  - date: 2026-11-24
+    note: "Corrected the paid/free framing: Meta's MYR card is now cited directly, and the service-message clause is reconciled with the 1,000-message allowance instead of being reported as a disagreement."
 sources:
-  - title: "Meta, WhatsApp pricing documentation (per-message billing, 24-hour window, free tier, FEP)"
+  - title: "Meta, WhatsApp pricing (per-message billing, 24-hour window, free tier, FEP)"
     url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
-    checked: 2026-11-23
+    checked: 2026-11-24
+  - title: "Meta, MYR list rates for Malaysia linked from the pricing page, effective 1 October 2026"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
+    checked: 2026-11-24
   - title: "WhatsApp Business, platform pricing (the free-service and 3-day FEP claims)"
     url: "https://whatsappbusiness.com/products/platform-pricing/"
     checked: 2026-11-23
@@ -34,7 +39,26 @@ sources:
 
 # What a WhatsApp chatbot costs in Malaysia, per message and per month
 
-Meta charges per delivered message, in ringgit, on a published card: a marketing message is RM0.3467, and utility, authentication and service messages are RM0.0564 each, with the first 1,000 service messages per business phone number per month free. A Malaysian vendor then charges roughly RM200 to RM1,500 a month to run the bot. The 24-hour window decides which of Meta's two prices applies to a given reply.
+A WhatsApp bot in Malaysia costs nothing up to 1,000 service messages a month per business phone number, and nothing at all for messages a customer sends you. Past that allowance, a marketing template is RM0.3467, utility, authentication and service are RM0.0564 each, and a Malaysian vendor adds RM200 to RM1,500 a month to run the bot.
+
+## What is free and what is billed
+
+Three different bills arrive at a WhatsApp bot, and they come from two different companies. Meta's card covers the per-message charges; your vendor's invoice covers everything else.
+
+| What | Status | Who bills it |
+| --- | --- | --- |
+| The WhatsApp Business app | Free | Nobody |
+| Messages a customer sends you | Never charged | Nobody |
+| The first 1,000 service messages per number per calendar month | Free, no rollover | Nobody |
+| Any message inside the open 24-hour window | Free | Nobody |
+| Marketing templates | RM0.3467 each | Meta |
+| Authentication templates | RM0.0564 each | Meta |
+| Utility templates outside the window | RM0.0564 each | Meta |
+| Service messages past the 1,000 allowance | RM0.0564 each | Meta |
+| Meta Business Agent messages | Billed per million tokens | Meta |
+| BSP markup, hosting and seats | The vendor's own fee | Your vendor |
+
+The allowance is per business phone number and resets each calendar month; unused messages do not carry over. Service messages past it have been charged since 1 October 2026.
 
 ## How does Meta charge for WhatsApp messages?
 
@@ -73,15 +97,13 @@ The customer service window opens and resets with each user message, and lasts 2
 
 The practical shape: a customer asks a question, you answer inside 24 hours as a service message, and that answer sits inside the free tier for the first 1,000 a month. If you follow up three days later with a promotion, that is a marketing template at RM0.3467 per delivered message.
 
-## Where do the published sources disagree?
+## Why the two Meta pages look like they disagree
 
-Two places, and both change what a buyer should budget for.
+The WhatsApp Business marketing site says "we do not charge for service messages, or for utility messages businesses send in response to users". Meta's developer pricing page prices service at RM0.0564 with the first 1,000 free.
 
-**Service messages: free, or RM0.0564?** The WhatsApp Business site says "we do not charge for service messages, or for utility messages businesses send in response to users". Meta's documentation and both rate cards price service at RM0.0564 with the first 1,000 messages per business phone number per month free. The only reading that reconciles them is the free tier: service is priced, and most small businesses never leave the free 1,000. The site's absolute wording does not match its own card.
+There is no contradiction once the allowance and the clock are applied. A reply to a customer sits inside the open 24-hour window, where nothing is charged, and the first 1,000 service messages each month are free on top of that. The marketing page is describing the common case; the developer page is describing the tariff behind it. A business only meets the RM0.0564 service rate after 1,000 service messages in a month.
 
-**Free entry point window: 3 days or 7 days?** Meta's documentation says the FEP window "may remain open for up to 7 days". The WhatsApp Business site says "for the following 3 days (72 hours), all of your messages are not charged". Both are dated the same day here. The conservative planning assumption is 3 days, because the shorter claim is the one a business can act on without overestimating free volume.
-
-A third disagreement is not resolved at all: the site says utility messages sent in response to a user are not charged, while the documentation describes utility as a fixed per-message rate. This article does not pick a winner; it flags that the two pages describe the same message differently.
+One genuine difference remains. Meta's documentation says a free entry point window "may remain open for up to 7 days", while the marketing site says "for the following 3 days (72 hours), all of your messages are not charged". Plan on 3 days, because that is the shorter promise and the only one a business can rely on without overestimating free volume.
 
 ## What does a Malaysian vendor charge?
 

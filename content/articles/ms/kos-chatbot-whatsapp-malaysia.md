@@ -1,7 +1,7 @@
 ---
 title: "Kos chatbot WhatsApp: setiap mesej, setiap bulan"
-description: "Mesej pemasaran RM0.3467 di Malaysia, servis dan utiliti RM0.0564 dengan 1,000 pertama percuma, vendor RM200 hingga RM1,500 sebulan, dan dua sumber bercanggah."
-cardFigure: "Mesej pemasaran RM0.3467; RM200 hingga RM1,500 sebulan"
+description: "Percuma hingga 1,000 mesej servis sebulan dan percuma untuk mesej pelanggan. Pemasaran RM0.3467; vendor Malaysia menambah RM200 hingga RM1,500."
+cardFigure: "Percuma 1,000 mesej servis; pemasaran RM0.3467"
 slug: kos-chatbot-whatsapp-malaysia
 translationKey: whatsapp-chatbot-costs-malaysia
 date: 2026-11-23
@@ -14,10 +14,15 @@ draft: true
 changelog:
   - date: 2026-11-23
     note: "Mula diterbitkan."
+  - date: 2026-11-24
+    note: "Membetulkan rangka percuma/berbayar: kad MYR Meta kini dipetik terus, dan klausa mesej servis diselaraskan dengan elaun 1,000 mesej, bukan dilaporkan sebagai percanggahan."
 sources:
-  - title: "Meta, dokumentasi harga WhatsApp (bil setiap mesej, tetingkap 24 jam, tier percuma, FEP)"
+  - title: "Meta, harga WhatsApp (bil setiap mesej, tetingkap 24 jam, tier percuma, FEP)"
     url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
-    checked: 2026-11-23
+    checked: 2026-11-24
+  - title: "Meta, kadar senarai MYR untuk Malaysia yang dipautkan dari halaman harga, berkuat kuasa 1 Oktober 2026"
+    url: "https://developers.facebook.com/documentation/business-messaging/whatsapp/pricing"
+    checked: 2026-11-24
   - title: "WhatsApp Business, harga platform (dakwaan mesej servis percuma dan FEP 3 hari)"
     url: "https://whatsappbusiness.com/products/platform-pricing/"
     checked: 2026-11-23
@@ -34,7 +39,26 @@ sources:
 
 # Kos chatbot WhatsApp di Malaysia, setiap mesej dan setiap bulan
 
-Meta mengenakan caj setiap mesej yang dihantar, dalam ringgit, pada kad yang diterbitkan: mesej pemasaran RM0.3467, dan mesej utiliti, pengesahan serta servis RM0.0564 setiap satu, dengan 1,000 mesej servis pertama bagi setiap nombor perniagaan sebulan percuma. Vendor Malaysia kemudian mengenakan kira-kira RM200 hingga RM1,500 sebulan untuk menjalankan bot. Tetingkap 24 jam menentukan kadar Meta yang terpakai pada sesuatu balasan.
+Chatbot WhatsApp di Malaysia tidak menelan apa-apa sehingga 1,000 mesej servis sebulan bagi setiap nombor perniagaan, dan tidak menelan apa-apa untuk mesej yang pelanggan hantar kepada anda. Melepasi elaun itu, templat pemasaran RM0.3467, utiliti, pengesahan dan servis RM0.0564 setiap satu, dan vendor Malaysia menambah RM200 hingga RM1,500 sebulan untuk menjalankan bot.
+
+## Apa yang percuma dan apa yang dicaj
+
+Tiga bil berbeza sampai ke satu chatbot WhatsApp, dan ia datang daripada dua syarikat berbeza. Kad Meta meliputi caj setiap mesej; invois vendor anda meliputi selebihnya.
+
+| Perkara | Status | Siapa yang mengenakan caj |
+| --- | --- | --- |
+| Aplikasi WhatsApp Business | Percuma | Tiada |
+| Mesej yang pelanggan hantar kepada anda | Tidak pernah dicaj | Tiada |
+| 1,000 mesej servis pertama bagi setiap nombor sebulan | Percuma, tanpa baki terbawa | Tiada |
+| Apa-apa mesej di dalam tetingkap 24 jam yang terbuka | Percuma | Tiada |
+| Templat pemasaran | RM0.3467 setiap satu | Meta |
+| Templat pengesahan | RM0.0564 setiap satu | Meta |
+| Templat utiliti di luar tetingkap | RM0.0564 setiap satu | Meta |
+| Mesej servis melepasi elaun 1,000 | RM0.0564 setiap satu | Meta |
+| Mesej Meta Business Agent | Dicaj setiap juta token | Meta |
+| Tokokan BSP, hosting dan tempat duduk | Fi vendor itu sendiri | Vendor anda |
+
+Elaun itu dikira bagi setiap nombor perniagaan dan ditetapkan semula setiap bulan kalendar; mesej yang tidak digunakan tidak terbawa ke bulan berikutnya. Mesej servis melepasi elaun dicaj sejak 1 Oktober 2026.
 
 ## Bagaimana Meta mengenakan caj untuk mesej WhatsApp?
 
@@ -73,15 +97,13 @@ Bentuk praktikalnya: pelanggan bertanya, anda menjawab dalam 24 jam sebagai mese
 ![Gambar dari kiri ke kanan: mesej pelanggan membuka tetingkap 24 jam; balasan di dalamnya ialah mesej servis pada RM0.0564 dengan 1,000 pertama setiap nombor sebulan percuma; mesej selepas tetingkap ditutup mesti templat, pada RM0.3467 untuk pemasaran atau RM0.0564 untuk utiliti dan pengesahan](/figures/kos-chatbot-whatsapp-malaysia.svg)
 *Jam, bukan teks mesej, menentukan kadar mana yang terpakai.*
 
-## Di mana sumber yang diterbitkan bercanggah?
+## Mengapa dua halaman Meta kelihatan bercanggah
 
-Dua tempat, dan kedua-duanya mengubah apa yang patut dibajetkan pembeli.
+Laman pemasaran WhatsApp Business menyatakan "we do not charge for service messages, or for utility messages businesses send in response to users". Halaman harga pembangun Meta meletakkan harga servis pada RM0.0564 dengan 1,000 pertama percuma.
 
-**Mesej servis: percuma, atau RM0.0564?** Laman WhatsApp Business menyatakan "we do not charge for service messages, or for utility messages businesses send in response to users". Dokumentasi Meta dan kedua-dua kad kadar meletakkan harga servis pada RM0.0564 dengan 1,000 mesej pertama bagi setiap nombor perniagaan sebulan percuma. Satu-satunya bacaan yang menyelaraskan kedua-duanya ialah tier percuma: servis ada harganya, dan kebanyakan perniagaan kecil tidak melepasi 1,000 percuma itu. Perkataan mutlak di laman itu tidak sepadan dengan kadnya sendiri.
+Tiada percanggahan apabila elaun dan jam dikenakan. Balasan kepada pelanggan berada di dalam tetingkap 24 jam yang terbuka, di mana tiada caj, dan 1,000 mesej servis pertama setiap bulan percuma di atas itu. Halaman pemasaran menerangkan kes biasa; halaman pembangun menerangkan tarif di belakangnya. Sesuatu perniagaan hanya bertemu kadar servis RM0.0564 selepas 1,000 mesej servis dalam sebulan.
 
-**Tetingkap titik masuk percuma: 3 hari atau 7 hari?** Dokumentasi Meta menyatakan tetingkap FEP "may remain open for up to 7 days". Laman WhatsApp Business menyatakan "for the following 3 days (72 hours), all of your messages are not charged". Kedua-duanya bertarikh hari yang sama di sini. Andaian perancangan yang selamat ialah 3 hari, kerana dakwaan yang lebih pendek itulah yang boleh diambil tindakan tanpa melebihkan jumlah percuma.
-
-Percanggahan ketiga tidak diselesaikan langsung: laman itu menyatakan mesej utiliti yang dihantar sebagai balasan kepada pengguna tidak dicaj, manakala dokumentasi menerangkan utiliti sebagai kadar tetap setiap mesej. Artikel ini tidak memilih pemenang; ia menandakan bahawa dua halaman menerangkan mesej yang sama secara berbeza.
+Satu perbezaan sebenar masih ada. Dokumentasi Meta menyatakan tetingkap titik masuk percuma "may remain open for up to 7 days", manakala laman pemasaran menyatakan "for the following 3 days (72 hours), all of your messages are not charged". Rancang untuk 3 hari, kerana itulah janji yang lebih pendek dan satu-satunya yang boleh dipegang tanpa melebihkan jumlah percuma.
 
 ## Berapa yang dikenakan vendor Malaysia?
 
