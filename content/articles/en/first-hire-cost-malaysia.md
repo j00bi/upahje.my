@@ -12,7 +12,7 @@ category: definitions
 tags: [definitions, payroll, epf, socso, malaysia]
 cardFigure: "A RM3,000 hire costs RM3,448.50 a month"
 canonical: https://upahje.my/en/articles/first-hire-cost-malaysia
-draft: true
+draft: false
 changelog:
   - date: 2026-11-24
     note: "First published. HRD Corp thresholds and the SKBBK requirement for hires after 31 August 2026 added the same day, once both pages could be read; the PCB line now says the LHDN page gives no remittance date, rather than that the page could not be read."
