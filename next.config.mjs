@@ -6,8 +6,8 @@ const nextConfig = {
     cpus: 1,
     webpackBuildWorker: false,
     outputFileTracingIncludes: {
-      '/[lang]/review': ['./content/articles/**'],
-      '/[lang]/review/[slug]': ['./content/articles/**'],
+      '/[lang]/review': ['./content/articles/**', './data/**'],
+      '/[lang]/review/[slug]': ['./content/articles/**', './data/**'],
     },
   },
   images: { remotePatterns: [] },

@@ -1,17 +1,10 @@
 import { ImageResponse } from 'next/og'
 import { OG_FONTS } from '@/lib/og-fonts.generated.mjs'
-import { formatDate, languageCodes, publishedArticles } from '@/lib/articles.mjs'
-import { topicBySlug } from '@/lib/topics.mjs'
-import { OG_DATA } from '@/lib/og-data.generated.mjs'
+import { OG_DATA, OG_TOPICS } from '@/lib/og-data.generated.mjs'
 
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 export const alt = 'UpahJe.my article card'
-
-/** Render every published article's card at build time, not per request. */
-export function generateStaticParams() {
-  return languageCodes.flatMap((lang) => publishedArticles(lang).map((article) => ({ lang, slug: article.slug })))
-}
 
 /** Base64 from prebuild, so no filesystem read happens at render time. */
 const buffer = (b64: string) => Uint8Array.from(Buffer.from(b64, 'base64')).buffer
@@ -32,11 +25,11 @@ export default async function Image({ params }: { params: { lang: string; slug: 
   const lang = params.lang
   // Data frozen at build: the serverless bundle cannot be missing a module it
   // imports, which it demonstrably was when the card read the corpus from disk.
-  const card = (OG_DATA as Record<string, { title: string; topic: string | null; verified: string | null }>)[`${lang}/${params.slug}`]
-  const topicEntry = card?.topic ? topicBySlug(card.topic) : null
-  const topicLabel = topicEntry ? (lang === 'ms' ? topicEntry.ms : topicEntry.en) : ''
+  const card = (OG_DATA as Record<string, { title: string; topic: string | null; checked: { en: string | null; ms: string | null } }>)[`${lang}/${params.slug}`]
+  const topics = OG_TOPICS as Record<string, { en: string; ms: string }>
+  const topicLabel = card?.topic ? (topics[card.topic]?.[lang === 'ms' ? 'ms' : 'en'] ?? '') : ''
   const title = card?.title ?? 'UpahJe.my'
-  const checked = card?.verified ? formatDate(card.verified, lang) : null
+  const checked = card?.checked?.[lang === 'ms' ? 'ms' : 'en'] ?? null
 
   return new ImageResponse(
     (
