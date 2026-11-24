@@ -117,3 +117,42 @@ export const COPY = {
 }
 
 export const copyFor = (lang: string) => COPY[lang === 'ms' ? 'ms' : 'en']
+
+/**
+ * Homepage copy for the T6 rebuild. One object so the layout can import it whole;
+ * `policyPath` is the language-less route, the page composes `/${lang}${policyPath}`.
+ */
+export const HOME_COPY = {
+  en: {
+    h1: 'Plain answers on tax, tech and tools for Malaysian small businesses.',
+    sub: 'Short articles checked against LHDN, Google and vendor documentation. Every claim shows its source and the date we last checked it. In English and Bahasa Melayu.',
+    startCta: 'Start here: are you exempt from e-Invoice?',
+    browseCta: 'Browse all articles',
+    sections: {
+      rules: 'Rules that changed this year',
+      buying: 'What to buy, and what it should cost',
+      ai: 'Where to start with AI and automation',
+      freelancers: 'For freelancers',
+      howWeCheck: 'How we check',
+    },
+    howWeCheck: ['Primary source first.', 'Every figure dated.', 'We list what we could not verify.'],
+    policyPath: '/editorial-policy',
+  },
+  ms: {
+    h1: 'Jawapan lugas tentang cukai, teknologi dan alat untuk perniagaan kecil Malaysia.',
+    sub: 'Artikel pendek yang disemak dengan LHDN, Google dan dokumentasi vendor. Setiap dakwaan memaparkan sumbernya dan tarikh semakan terakhir. Dalam bahasa Inggeris dan Bahasa Melayu.',
+    startCta: 'Mula di sini: semak pengecualian e-Invoice anda',
+    browseCta: 'Semua artikel',
+    sections: {
+      rules: 'Peraturan yang berubah tahun ini',
+      buying: 'Apa yang patut dibeli, dan berapa harganya',
+      ai: 'Dari mana mula dengan AI dan automasi',
+      freelancers: 'Untuk pekerja bebas',
+      howWeCheck: 'Cara kami menyemak',
+    },
+    howWeCheck: ['Sumber utama diutamakan.', 'Setiap angka bertarikh.', 'Kami senaraikan apa yang tidak dapat disahkan.'],
+    policyPath: '/editorial-policy',
+  },
+}
+
+export const homeFor = (lang: string) => HOME_COPY[lang === 'ms' ? 'ms' : 'en']

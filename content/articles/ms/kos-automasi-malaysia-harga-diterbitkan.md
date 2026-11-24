@@ -1,6 +1,7 @@
 ---
 title: "Kos kerja automasi di Malaysia: harga yang diterbitkan, enam sumber"
 description: "Empat studio Malaysia, satu pengamal bebas dan satu profil freelance: 30 harga diterbitkan untuk kerja automasi dan integrasi, disemak 19 November 2026 kecuali satu halaman dibaca pada 27 Oktober 2026. Beberapa halaman sumber tiada tarikh terbitan, jadi sesuatu harga mungkin lebih lama daripada artikel ini."
+cardFigure: "Kerja automasi bermula RM400 hingga RM6,000 lebih"
 slug: kos-automasi-malaysia-harga-diterbitkan
 translationKey: automation-rates-malaysia-published
 date: 2026-11-19

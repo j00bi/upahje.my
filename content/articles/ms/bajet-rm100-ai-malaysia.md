@@ -1,6 +1,7 @@
 ---
 title: "Apa yang RM100 sebulan beli dalam AI, di Malaysia"
 description: "RM100 ialah sama ada satu tempat duduk dalam aplikasi langganan, atau satu meter token API, bukan kedua-duanya. Penukaran pada kadar Bank Negara 19 November 2026, tiga tahap penggunaan, dan garis di mana token menang."
+cardFigure: "RM100 token Haiku 5.5 beli kira-kira 54,000 tugasan sebulan"
 slug: bajet-rm100-ai-malaysia
 translationKey: rm100-budget
 date: 2026-11-19

@@ -24,6 +24,8 @@ export type Article = {
   canonical?: string
   sources: ArticleSource[]
   draft: boolean
+  /** Optional short ringgit figure for homepage cards; must already appear in the body. */
+  cardFigure?: string
   body: string
   wordCount: number
   readingTime: number
