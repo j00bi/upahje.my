@@ -1,6 +1,6 @@
 ---
-title: "Di mana kunci API anda diletakkan dalam harness, dan di mana ia tidak boleh ada"
-description: "Harness membaca kunci anda daripada pemboleh ubah persekitaran atau stor credentialsnya apabila memanggil pembekal. Apa yang disahkan kunci itu, empat tempat ia tidak boleh muncul, dan apa yang perlu dibuat apabila ia bocor."
+title: "Di mana kunci API diletakkan, dan di mana tidak"
+description: "Harness membaca kunci daripada pemboleh ubah persekitaran atau stor kelayakan. Apa yang kunci itu sahkan, empat tempat terlarang, dan langkah jika ia bocor."
 slug: kunci-api-dalam-harness
 translationKey: harness-api-keys
 date: 2026-11-19
@@ -10,10 +10,16 @@ category: buying-guides
 tags: [buying-guides, kunci-api, keselamatan, agent-harness]
 canonical: https://upahje.my/ms/articles/kunci-api-dalam-harness
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "Metadata pakej DeepSeek Harness (tingkah laku stor credentials yang diperhatikan pada mesin ini)"
     url: "https://www.npmjs.com/package/@deepseek-ai/dsh"
     checked: 2026-11-19
+  - title: "OpenAI, amalan terbaik keselamatan kunci API"
+    url: "https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety"
+    checked: 2026-11-24
 ---
 
 # Di mana kunci API anda diletakkan dalam harness, dan di mana ia tidak boleh ada

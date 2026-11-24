@@ -1,6 +1,6 @@
 ---
-title: "Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia"
-description: "AI agent menjalankan gelung sendiri: ia membaca tugasan, memanggil tool, menyemak hasil dan mengulang. Apa yang diliputi tanpa penyeliaan, apa yang perlukan tandatangan manusia, dan apa yang tidak patut disentuh."
+title: "Apa yang AI agent boleh buat untuk PKS Malaysia"
+description: "AI agent menjalankan gelung sendiri: baca tugasan, panggil tool, ulang. Apa yang dibuat tanpa penyeliaan, apa yang perlukan manusia, apa yang jangan disentuh."
 slug: apa-yang-agent-boleh-buat
 translationKey: what-an-ai-agent-can-do
 date: 2026-11-23
@@ -10,6 +10,9 @@ category: definitions
 tags: [definitions, ai-agent, automasi, malaysia]
 canonical: https://upahje.my/ms/articles/apa-yang-agent-boleh-buat
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "Mula diterbitkan."
 sources:
   - title: "Anthropic, gambaran Agent SDK (takrif agent harness)"
     url: "https://code.claude.com/docs/en/agent-sdk/overview"

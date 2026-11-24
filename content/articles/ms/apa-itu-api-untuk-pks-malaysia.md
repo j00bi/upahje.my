@@ -1,6 +1,6 @@
 ---
-title: "Apa itu API, dijelaskan untuk pemilik perniagaan kecil Malaysia"
-description: "API ialah kontrak antara dua sistem untuk bertukar data tanpa perlu ada orang menyalinnya. Apa maksudnya bagi PKS, beza model terbuka dengan tertutup, dan kos sebenar menyambungkannya."
+title: "Apa itu API, untuk pemilik perniagaan kecil Malaysia"
+description: "API ialah kontrak antara dua sistem untuk bertukar data tanpa orang menyalinnya. Maksudnya bagi PKS, beza model terbuka dengan tertutup, dan kos menyambungnya."
 slug: apa-itu-api-untuk-pks-malaysia
 translationKey: what-is-an-api
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: definitions
 tags: [definitions, api, pks, malaysia]
 canonical: https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "MDN Web Docs, glosari API"
     url: "https://developer.mozilla.org/en-US/docs/Glossary/API"

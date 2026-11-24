@@ -1,6 +1,6 @@
 ---
-title: "Agent harness, AI harness, agent framework: what the words mean"
-description: "An agent harness runs the agent loop: it executes tool calls, holds the transcript, applies permissions. Vendors say agent harness. AI harness is not a term they use. A table of who says what."
+title: "Agent harness, AI harness, agent framework: what they mean"
+description: "An agent harness runs the loop: it executes tool calls, holds the transcript, applies permissions. Vendors say agent harness; AI harness is not their term."
 slug: agent-harness-vs-ai-harness
 translationKey: agent-harness-vs-ai-harness
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: definitions
 tags: [definitions, agent-harness, terminology, malaysia]
 canonical: https://upahje.my/en/articles/agent-harness-vs-ai-harness
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "Claude Code docs, Agent SDK overview (hosted agent harness)"
     url: "https://code.claude.com/docs/en/agent-sdk/overview"

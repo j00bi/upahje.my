@@ -1,6 +1,6 @@
 ---
-title: "Where your API key goes in a harness, and where it must never go"
-description: "A harness reads your key from an environment variable or its credential store when it calls the provider. What the key authenticates, the four places it must never appear, and what to do when it leaks."
+title: "Where an API key goes in a harness, and where never"
+description: "A harness reads your key from an environment variable or its store. What the key authenticates, four places it must never appear, and what to do if it leaks."
 slug: harness-api-keys
 translationKey: harness-api-keys
 date: 2026-11-19
@@ -10,10 +10,16 @@ category: buying-guides
 tags: [buying-guides, api-keys, security, agent-harness]
 canonical: https://upahje.my/en/articles/harness-api-keys
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "DeepSeek Harness package metadata (credential storage behaviour observed on this machine)"
     url: "https://www.npmjs.com/package/@deepseek-ai/dsh"
     checked: 2026-11-19
+  - title: "OpenAI, best practices for API key safety"
+    url: "https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety"
+    checked: 2026-11-24
 ---
 
 # Where your API key goes in a harness, and where it must never go

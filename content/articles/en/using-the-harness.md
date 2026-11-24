@@ -1,6 +1,6 @@
 ---
 title: "What an agent harness is, and what it does with your request"
-description: "A harness sits between you and the model: it holds the conversation, runs the tools, sends each request and streams the answer. What one message looks like inside DeepSeek Harness 0.2.2-rc.1."
+description: "A harness sits between you and the model: it holds the conversation, runs tools, sends each request and streams the answer. What one message looks like."
 slug: using-the-harness
 translationKey: using-the-harness
 date: 2026-11-19
@@ -10,10 +10,16 @@ category: definitions
 tags: [definitions, agent-harness, deepseek-harness, malaysia]
 canonical: https://upahje.my/en/articles/using-the-harness
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "DeepSeek Harness package metadata (@deepseek-ai/dsh 0.2.2-rc.1, installed on this machine)"
     url: "https://www.npmjs.com/package/@deepseek-ai/dsh"
     checked: 2026-11-19
+  - title: "DeepSeek API docs, your first API call"
+    url: "https://api-docs.deepseek.com/"
+    checked: 2026-11-24
 ---
 
 # What an agent harness is, and what it does with your request

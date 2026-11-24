@@ -1,6 +1,6 @@
 ---
-title: "Apa itu agent harness, dan apa yang dilakukannya dengan permintaan anda"
-description: "Harness berada antara anda dan model: ia menyimpan perbualan, menjalankan tools, menghantar permintaan dan menstrim jawapan. Rupa satu mesej di dalam DeepSeek Harness 0.2.2-rc.1."
+title: "Apa itu agent harness, dan apa yang ia buat"
+description: "Harness berada antara anda dan model: ia menyimpan perbualan, menjalankan tools, menghantar permintaan dan menstrim jawapan. Rupa satu mesej di dalamnya."
 slug: apa-itu-agent-harness
 translationKey: using-the-harness
 date: 2026-11-19
@@ -10,10 +10,16 @@ category: definitions
 tags: [definitions, agent-harness, deepseek-harness, malaysia]
 canonical: https://upahje.my/ms/articles/apa-itu-agent-harness
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "Metadata pakej DeepSeek Harness (@deepseek-ai/dsh 0.2.2-rc.1, dipasang pada mesin ini)"
     url: "https://www.npmjs.com/package/@deepseek-ai/dsh"
     checked: 2026-11-19
+  - title: "DeepSeek API docs, panggilan API pertama"
+    url: "https://api-docs.deepseek.com/"
+    checked: 2026-11-24
 ---
 
 # Apa itu agent harness, dan apa yang dilakukannya dengan permintaan anda

@@ -1,6 +1,6 @@
 ---
 title: "Apa yang sebenarnya diukur oleh satu baris papan pendahulu"
-description: "SWE-bench dan Terminal-bench menilai model di dalam harness orang lain. Baris DeepSeek ialah contoh kerjanya, dan larian di belakangnya ada profil kebolehpercayaan sendiri."
+description: "SWE-bench dan Terminal-bench menilai model di dalam harness orang lain. Baris DeepSeek contohnya, dan larian di belakangnya ada profil kebolehpercayaan."
 slug: anatomi-baris-papan-pendahulu
 translationKey: leaderboard-row-anatomy
 format: dev-note
@@ -13,6 +13,9 @@ category: buying-guides
 tags: [dev-note, penanda-aras, coding-agent]
 canonical: https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "Mula diterbitkan."
 sources:
   - title: "Papan pendahulu SWE-bench, tab Verified"
     url: "https://www.swebench.com/"

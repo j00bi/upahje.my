@@ -1,6 +1,6 @@
 ---
 title: "Jangan tulis semula laman anda. Tulis semula 5% itu."
-description: "Dua repo MIT diterbitkan lima hari selang, 11,327 bintang antara keduanya, memberi nasihat bertentangan untuk aplikasi yang lambat. Perselisihan itulah yang berguna: ia memberitahu pembetulan mana yang masalah anda perlukan."
+description: "Dua repo MIT lima hari selang, 11,327 bintang, nasihat bertentangan untuk aplikasi lambat. Perselisihan itu menunjukkan pembetulan mana yang diperlukan."
 slug: tulis-semula-lima-peratus
 translationKey: rewrite-the-five-percent
 format: teardown
@@ -12,6 +12,9 @@ category: buying-guides
 tags: [teardown, prestasi, rust, malaysia]
 canonical: https://upahje.my/ms/articles/tulis-semula-lima-peratus
 draft: true
+changelog:
+  - date: 2026-11-23
+    note: "Mula diterbitkan."
 sources:
   - title: "rust-anything, repositori dan README (MIT)"
     url: "https://github.com/erkamyaman/rust-anything"

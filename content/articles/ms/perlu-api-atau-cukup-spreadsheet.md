@@ -1,8 +1,9 @@
 ---
-title: "Perlukan API, atau cukup spreadsheet?"
-description: "Spreadsheet menang pada jumlah kecil dengan satu pemilik; API menang apabila dua sistem perlu selaras tanpa ada orang menyalin. Tiga keadaan spreadsheet betul, dan empat tanda ia sudah tidak memadai."
+title: "API atau spreadsheet: pilih ikut jumlah"
+description: "Spreadsheet menang pada jumlah kecil, satu pemilik; API menang apabila dua sistem harus selaras. Tiga keadaan spreadsheet betul, empat tanda ia tidak memadai."
 slug: perlu-api-atau-cukup-spreadsheet
 translationKey: do-you-need-an-api-or-a-spreadsheet
+format: perspective
 date: 2026-11-19
 updated: 2026-11-19
 author: "UpahJe Desk"
@@ -10,6 +11,9 @@ category: definitions
 tags: [definitions, api, spreadsheet, keputusan, malaysia]
 canonical: https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 ---
 
 # Perlukan API, atau cukup spreadsheet?
@@ -69,4 +73,6 @@ Tidak semestinya. Spreadsheet dalam pemacu kongsi dengan kawalan akses ialah too
 ### Bagaimana jika tool sedia ada pasukan saya sudah ada API?
 
 Maka keputusannya menyempit kepada sama ada ada orang yang ada masa untuk menyambungkannya. API yang tiada siapa sambungkan tidak bernilai apa-apa, dan tool tanpa API yang digunakan setiap hari lebih bernilai daripada tool yang lebih baik tetapi tidak digunakan.
+---
 
+Artikel ini tiada sumber kerana ia hujah daripada kes, bukan laporan: antara dua cara, mana lebih sesuai dengan jumlah anda. Tiada penanda aras awam bagi kos pemaju Malaysia menyambung API, jadi tiada angka kos dicetak di sini dan tiada yang dipinjam.

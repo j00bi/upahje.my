@@ -1,6 +1,6 @@
 ---
-title: "Agent harness, AI harness, agent framework: apa maksud istilah ini"
-description: "Agent harness menjalankan gelung agent: ia melaksanakan tool call, menyimpan transkrip, menguatkuasakan kebenaran. Vendor menulis agent harness. AI harness bukan istilah yang mereka guna."
+title: "Agent harness, AI harness, agent framework: maksudnya"
+description: "Agent harness menjalankan gelung agent: melaksanakan tool call, menyimpan transkrip, menguatkuasakan kebenaran. Vendor guna agent harness, bukan AI harness."
 slug: agent-harness-atau-ai-harness
 translationKey: agent-harness-vs-ai-harness
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: definitions
 tags: [definitions, agent-harness, istilah, malaysia]
 canonical: https://upahje.my/ms/articles/agent-harness-atau-ai-harness
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "Mula diterbitkan."
 sources:
   - title: "Dokumentasi Claude Code, gambaran Agent SDK (hosted agent harness)"
     url: "https://code.claude.com/docs/en/agent-sdk/overview"

@@ -1,6 +1,6 @@
 ---
-title: "What is an API, explained for a Malaysian small business owner"
-description: "An API is a contract that lets two systems exchange data without a human copying it across. What it means for a Malaysian SME, open versus closed models, and the real cost of wiring one up."
+title: "What is an API, for a Malaysian small business owner"
+description: "An API is a contract that lets two systems exchange data without a human copying it. What it means for a Malaysian SME, open versus closed models, and the cost."
 slug: what-is-an-api-for-malaysian-sme
 translationKey: what-is-an-api
 date: 2026-11-19
@@ -10,6 +10,9 @@ category: definitions
 tags: [definitions, api, sme, malaysia]
 canonical: https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 sources:
   - title: "MDN Web Docs, API glossary"
     url: "https://developer.mozilla.org/en-US/docs/Glossary/API"

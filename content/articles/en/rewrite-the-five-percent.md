@@ -1,6 +1,6 @@
 ---
 title: "Don't rewrite your site. Rewrite the 5%."
-description: "Two MIT repos published five days apart, 11,327 stars between them, prescribe opposite fixes for a slow app. The disagreement is the useful part: it tells you which fix your problem needs."
+description: "Two MIT repos five days apart, 11,327 stars between them, prescribe opposite fixes for a slow app. The disagreement tells you which fix your problem needs."
 slug: rewrite-the-five-percent
 translationKey: rewrite-the-five-percent
 format: teardown
@@ -12,6 +12,9 @@ category: buying-guides
 tags: [teardown, performance, rust, malaysia]
 canonical: https://upahje.my/en/articles/rewrite-the-five-percent
 draft: true
+changelog:
+  - date: 2026-11-23
+    note: "First published."
 sources:
   - title: "rust-anything, repository and README (MIT)"
     url: "https://github.com/erkamyaman/rust-anything"

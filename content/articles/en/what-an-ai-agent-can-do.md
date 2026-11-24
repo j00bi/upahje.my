@@ -1,6 +1,6 @@
 ---
 title: "What an AI agent can and cannot do for a Malaysian SME"
-description: "An AI agent runs a loop on its own: it reads a task, calls tools, checks the result and repeats. What that covers unattended, what needs a human signature, and what no agent should touch."
+description: "An AI agent runs a loop on its own: reads a task, calls tools, checks, repeats. What that covers unattended, what needs a human, and what none should touch."
 slug: what-an-ai-agent-can-do
 translationKey: what-an-ai-agent-can-do
 date: 2026-11-23
@@ -10,6 +10,9 @@ category: definitions
 tags: [definitions, ai-agent, automation, malaysia]
 canonical: https://upahje.my/en/articles/what-an-ai-agent-can-do
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "First published."
 sources:
   - title: "Anthropic, Agent SDK overview (agent harness definition)"
     url: "https://code.claude.com/docs/en/agent-sdk/overview"

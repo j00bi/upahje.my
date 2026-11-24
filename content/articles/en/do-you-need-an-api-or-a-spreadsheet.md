@@ -1,8 +1,9 @@
 ---
-title: "Do you need an API, or just a spreadsheet?"
-description: "A spreadsheet wins at low volume with one owner; an API wins when two systems must stay in sync without anyone copying. The three cases where a sheet is right, and the four signals it has stopped scaling."
+title: "API or spreadsheet: which fits your volume"
+description: "A spreadsheet wins at low volume with one owner; an API wins when two systems must sync. Three cases where a sheet is right, four signals it stopped scaling."
 slug: do-you-need-an-api-or-a-spreadsheet
 translationKey: do-you-need-an-api-or-a-spreadsheet
+format: perspective
 date: 2026-11-19
 updated: 2026-11-19
 author: "UpahJe Desk"
@@ -10,6 +11,9 @@ category: definitions
 tags: [definitions, api, spreadsheet, decision, malaysia]
 canonical: https://upahje.my/en/articles/do-you-need-an-api-or-a-spreadsheet
 draft: false
+changelog:
+  - date: 2026-11-19
+    note: "First published."
 ---
 
 # Do you need an API, or just a spreadsheet?
@@ -69,4 +73,6 @@ Not inherently. A spreadsheet that lives in a shared drive with access controls 
 ### What if my team already uses a tool that has an API?
 
 Then the decision narrows to whether anyone has time to connect it. An API that nobody wires up is worth nothing, and a tool with no API that people use daily is worth more than a better tool sitting unused.
+---
 
+This piece carries no sources, because it is an argument from cases rather than a report: which of two setups fits your volume. No public benchmark exists for what Malaysian developers charge to wire an API, so no cost figure is printed here and none is borrowed.

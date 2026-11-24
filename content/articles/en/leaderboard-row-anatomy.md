@@ -1,6 +1,6 @@
 ---
 title: "What a leaderboard row actually measures"
-description: "SWE-bench and Terminal-bench score a model inside someone else's harness. The DeepSeek row is the worked example, and the run behind it has its own reliability profile."
+description: "SWE-bench and Terminal-bench score a model inside someone else's harness. The DeepSeek row is the example, and the run behind it has a reliability profile."
 slug: leaderboard-row-anatomy
 translationKey: leaderboard-row-anatomy
 format: dev-note
@@ -13,6 +13,9 @@ category: buying-guides
 tags: [dev-note, benchmarks, coding-agents]
 canonical: https://upahje.my/en/articles/leaderboard-row-anatomy
 draft: false
+changelog:
+  - date: 2026-11-23
+    note: "First published."
 sources:
   - title: "SWE-bench leaderboard, Verified tab"
     url: "https://www.swebench.com/"
