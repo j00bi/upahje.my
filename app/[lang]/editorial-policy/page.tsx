@@ -13,13 +13,13 @@ export function generateStaticParams() {
 const COPY = {
   en: {
     title: 'Editorial policy',
-    description: 'How UpahJe decides what to publish, where its money comes from, and how it uses AI in production. No affiliate links, no paid placement.',
+    description: 'How UpahJe decides what to publish, where its money comes from, and how it uses AI in production. No affiliate links or paid placement today.',
     editor: 'Editor',
     editorLine: 'Husni Ahmad is the editor and is accountable for everything published here.',
     contact: 'Contact',
-    contactLine: 'hello@upahje.my',
+    contactLine: 'husni@upahje.my',
     moneyTitle: 'How this is funded',
-    moneyBody: 'There are no affiliate links on this site and no paid placement. No vendor has paid for an article, a ranking, a mention or a link, and none has reviewed a draft before publication. If that ever changes, it will be disclosed at the top of the affected article, not in a footer.',
+    moneyBody: 'There are no affiliate links on this site and no paid placement today. No vendor has paid for an article, a ranking, a mention or a link, and none has reviewed a draft before publication. If that ever changes, the disclosure will appear inline at the affected link and on this page, with the date it changed.',
     evidenceTitle: 'What a claim needs',
     evidenceBody: 'Every number carries a source and the date that source was checked. Where we could not verify something, the article says so and names what is missing rather than filling the gap. A vendor page is cited as a vendor page, never as independent evidence.',
     aiTitle: 'AI use',
@@ -29,13 +29,13 @@ const COPY = {
   },
   ms: {
     title: 'Dasar editorial',
-    description: 'Bagaimana UpahJe memutuskan apa yang diterbitkan, dari mana wangnya datang, dan bagaimana AI digunakan. Tiada pautan afiliasi, tiada penempatan berbayar.',
+    description: 'Bagaimana UpahJe memutuskan apa yang diterbitkan, dari mana wangnya datang, dan bagaimana AI digunakan. Tiada pautan afiliasi atau penempatan berbayar buat masa ini.',
     editor: 'Editor',
     editorLine: 'Husni Ahmad ialah editor dan bertanggungjawab atas semua yang diterbitkan di sini.',
     contact: 'Hubungi',
-    contactLine: 'hello@upahje.my',
+    contactLine: 'husni@upahje.my',
     moneyTitle: 'Bagaimana ini dibiayai',
-    moneyBody: 'Tiada pautan afiliasi di laman ini dan tiada penempatan berbayar. Tiada vendor membayar untuk artikel, kedudukan, sebutan atau pautan, dan tiada yang menyemak draf sebelum terbit. Jika itu berubah, ia akan dinyatakan di bahagian atas artikel berkenaan, bukan di footer.',
+    moneyBody: 'Tiada pautan afiliasi di laman ini dan tiada penempatan berbayar buat masa ini. Tiada vendor membayar untuk artikel, kedudukan, sebutan atau pautan, dan tiada yang menyemak draf sebelum terbit. Jika itu berubah, pendedahannya akan muncul terus pada pautan berkenaan dan di halaman ini, dengan tarikh ia berubah.',
     evidenceTitle: 'Apa yang diperlukan oleh sesuatu dakwaan',
     evidenceBody: 'Setiap angka membawa sumber dan tarikh sumber itu disemak. Jika kami tidak dapat mengesahkan sesuatu, artikel menyatakannya dan menamakan apa yang tiada dan bukan mengisi jurang itu. Halaman vendor dipetik sebagai halaman vendor, tidak pernah sebagai bukti bebas.',
     aiTitle: 'Penggunaan AI',
@@ -73,7 +73,7 @@ export default function EditorialPolicy({ params }: { params: { lang: string } }
           <h2 className="type-h3 mt-8" style={{ color: 'var(--ui-ink)' }}>{copy.editor}</h2>
           <p className="type-body mt-2" style={{ color: 'var(--ui-body)' }}>{copy.editorLine}</p>
           <p className="type-body mt-1" style={{ color: 'var(--ui-body)' }}>
-            {copy.contact}: <a href="mailto:hello@upahje.my" className="ui-link" style={{ color: 'var(--ui-accent)' }}>{copy.contactLine}</a>
+            {copy.contact}: <a href="mailto:husni@upahje.my" className="ui-link" style={{ color: 'var(--ui-accent)' }}>{copy.contactLine}</a>
           </p>
 
           <h2 className="type-h3 mt-10" style={{ color: 'var(--ui-ink)' }}>{copy.moneyTitle}</h2>

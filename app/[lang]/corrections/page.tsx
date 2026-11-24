@@ -15,7 +15,7 @@ const COPY = {
     title: 'Corrections',
     description: 'How to report an error in an UpahJe article, and what happens next: acknowledged within two business days, fixed or explained within seven.',
     body: 'If something on this site is wrong, tell us. Send the article URL, the sentence, and what the correct version should be.',
-    contact: 'hello@upahje.my',
+    contact: 'corrections@upahje.my',
     slaTitle: 'What happens next',
     sla: [
       'We acknowledge your message within two business days.',
@@ -33,7 +33,7 @@ const COPY = {
     title: 'Pembetulan',
     description: 'Cara melaporkan kesilapan dalam artikel UpahJe, dan apa yang berlaku selepas itu: diakui dalam dua hari bekerja, dibetulkan atau dijelaskan dalam tujuh hari.',
     body: 'Jika ada yang salah di laman ini, beritahu kami. Sertakan URL artikel, ayat berkenaan, dan versi yang betul sepatutnya.',
-    contact: 'hello@upahje.my',
+    contact: 'corrections@upahje.my',
     slaTitle: 'Apa yang berlaku selepas itu',
     sla: [
       'Kami mengakui mesej anda dalam dua hari bekerja.',
@@ -76,7 +76,7 @@ export default function Corrections({ params }: { params: { lang: string } }) {
         <div style={{ maxWidth: 'var(--measure)' }}>
           <p className="type-body mt-5" style={{ color: 'var(--ui-body)' }}>{copy.body}</p>
           <p className="type-body mt-2" style={{ color: 'var(--ui-body)' }}>
-            <a href="mailto:hello@upahje.my" className="ui-link" style={{ color: 'var(--ui-accent)' }}>{copy.contact}</a>
+            <a href="mailto:corrections@upahje.my" className="ui-link" style={{ color: 'var(--ui-accent)' }}>{copy.contact}</a>
           </p>
 
           <h2 className="type-h3 mt-10" style={{ color: 'var(--ui-ink)' }}>{copy.slaTitle}</h2>
