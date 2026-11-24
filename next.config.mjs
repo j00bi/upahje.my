@@ -8,9 +8,6 @@ const nextConfig = {
     outputFileTracingIncludes: {
       '/[lang]/review': ['./content/articles/**'],
       '/[lang]/review/[slug]': ['./content/articles/**'],
-      // The social cards read self-hosted TTFs at render time; without this the
-      // serverless bundle has no fonts and every card 500s.
-      '/[lang]/articles/[slug]/opengraph-image': ['./assets/fonts/**'],
     },
   },
   images: { remotePatterns: [] },

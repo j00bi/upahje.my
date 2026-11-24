@@ -1,6 +1,5 @@
 import { ImageResponse } from 'next/og'
-import { readFileSync } from 'node:fs'
-import path from 'node:path'
+import { OG_FONTS } from '@/lib/og-fonts.generated.mjs'
 import { formatDate, getArticle, languageCodes, publishedArticles, verifiedOn } from '@/lib/articles.mjs'
 import { TOPIC_MAPPING, topicBySlug } from '@/lib/topics.mjs'
 
@@ -13,12 +12,13 @@ export function generateStaticParams() {
   return languageCodes.flatMap((lang) => publishedArticles(lang).map((article) => ({ lang, slug: article.slug })))
 }
 
-const font = (name: string) => readFileSync(path.join(process.cwd(), 'assets', 'fonts', name))
+/** Base64 from prebuild, so no filesystem read happens at render time. */
+const buffer = (b64: string) => Uint8Array.from(Buffer.from(b64, 'base64')).buffer
 const fonts = [
-  { name: 'Inter', data: font('inter-400.ttf'), weight: 400 as const, style: 'normal' as const },
-  { name: 'Inter', data: font('inter-600.ttf'), weight: 600 as const, style: 'normal' as const },
-  { name: 'Archivo', data: font('archivo-600.ttf'), weight: 600 as const, style: 'normal' as const },
-  { name: 'Newsreader', data: font('newsreader-500.ttf'), weight: 500 as const, style: 'normal' as const },
+  { name: 'Inter', data: buffer(OG_FONTS.inter400), weight: 400 as const, style: 'normal' as const },
+  { name: 'Inter', data: buffer(OG_FONTS.inter600), weight: 600 as const, style: 'normal' as const },
+  { name: 'Archivo', data: buffer(OG_FONTS.archivo600), weight: 600 as const, style: 'normal' as const },
+  { name: 'Newsreader', data: buffer(OG_FONTS.newsreader500), weight: 500 as const, style: 'normal' as const },
 ]
 
 /**
