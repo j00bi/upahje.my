@@ -70,5 +70,14 @@
     "note": null,
     "decided_at": "2026-11-24T05:00:12.351Z",
     "commit": "68094b63449d9ddb874ab6eb6b92ff497b86f6ff"
+  },
+  {
+    "slug": "alat-blender-mcp",
+    "lang": "ms",
+    "action": "approve",
+    "reason": null,
+    "note": null,
+    "decided_at": "2026-11-24T05:00:32.626Z",
+    "commit": "e36c66c45259f0155e9fb07c48ddbd5dcb595304"
   }
 ]
