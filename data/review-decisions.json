@@ -88,5 +88,14 @@
     "note": null,
     "decided_at": "2026-11-24T05:00:51.058Z",
     "commit": "7b82dcf3b8b43a8367b6ffc7caf17ad81e16bf14"
+  },
+  {
+    "slug": "kos-pembantu-pengekodan-malaysia",
+    "lang": "ms",
+    "action": "approve",
+    "reason": null,
+    "note": null,
+    "decided_at": "2026-11-24T05:01:03.406Z",
+    "commit": "203b4d8e0c4012ac8fbce575154b9730af4c7c2f"
   }
 ]
