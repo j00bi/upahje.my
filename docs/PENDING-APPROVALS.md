@@ -4,7 +4,7 @@ One line per draft, newest first. Review links are gated by `REVIEW_TOKEN`, whic
 
 _Updated 2026-11-24._
 
-**Ten drafts:** six skeletons with no facts yet, and two finished pairs — first-hire costs and self-hosted clipping — which are ready to read. The six skeletons are structure only; they must not be approved until the facts are in. Structure only, no figures, no sources yet: they are waiting on research packets and must not be approved until the facts are in. Each carries a line under its H1 saying so.
+**Twelve drafts:** six skeletons with no facts yet, and three finished pairs — first-hire costs, self-hosted clipping (parked) and price endings — which are ready to read. The six skeletons are structure only; they must not be approved until the facts are in. Structure only, no figures, no sources yet: they are waiting on research packets and must not be approved until the facts are in. Each carries a line under its H1 saying so.
 
 | Date | Lang | Title | One-line thesis | Review |
 | --- | --- | --- | --- | --- |
@@ -18,6 +18,8 @@ _Updated 2026-11-24._
 | 2026-11-24 | ms | Pekerja pertama bergaji RM3,000 berharga RM3,448.50 | EPF, SOCSO, EIS dan baris LINDUNG 24 Jam pada gaji RM3,000; HRD Corp tidak dimasukkan kerana pekerja pertama di bawah ambangnya. | `/ms/review/kos-pekerja-pertama-malaysia?k=…` |
 | 2026-11-24 | en | A free clipper costs an evening, not RM61.78 a month | No Malaysian publisher prints a ringgit clipping price, and neither repo has shown Malay captions work; the arithmetic says twelve clips a month is where cancelling pays. | `/en/review/self-hosted-clipping?k=…` |
 | 2026-11-24 | ms | Klip percuma berharga satu malam, bukan RM61.78 sebulan | Tiada penerbit Malaysia mencetak harga klip dalam ringgit, dan tiada repo membuktikan sari kata Melayu; aritmetiknya menunjukkan dua belas klip sebulan titik di mana membatalkan langganan berbaloi. | `/ms/review/klip-video-sendiri?k=…` |
+| 2026-11-24 | en | A 9-ending moves a new item, and nobody has measured it here | Three US field experiments show 9-endings lift demand, more on new items and less beside a sale cue; no effect size and no Malaysian data are published. | `/en/review/price-endings-nine?k=…` |
+| 2026-11-24 | ms | Hujung 9 menggerakkan barang baharu, dan tiada sesiapa mengukurnya di sini | Tiga eksperimen lapangan AS menunjukkan hujung 9 menaikkan permintaan, lebih pada barang baharu dan kurang bila ada isyarat jualan; tiada saiz kesan dan tiada data Malaysia. | `/ms/review/hujung-harga-sembilan?k=…` |
 
 ## Shipped
 
