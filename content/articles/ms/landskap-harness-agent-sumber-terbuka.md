@@ -26,9 +26,6 @@ sources:
   - title: "milind-soni/OpenMausBot, metadata repositori (Apache-2.0)"
     url: "https://github.com/milind-soni/OpenMausBot"
     checked: 2026-11-19
-  - title: "OpenMausBot/OpenMausBot, repositori muat turun (MIT)"
-    url: "https://github.com/OpenMausBot/OpenMausBot"
-    checked: 2026-11-19
   - title: "xAI, pengenalan Grok Bot"
     url: "https://x.ai/news/introducing-grok-bot"
     checked: 2026-11-19
@@ -51,7 +48,7 @@ Satu baris bagi setiap produk, dengan tahap bukti dinyatakan, kerana tiga daripa
 | Produk | Apa ia | Lesen atau terma | Tahap bukti | Status | Sumber |
 | --- | --- | --- | --- | --- | --- |
 | OpenBot (nightly-labs) | Ruang kerja desktop setempat untuk rakan AI berterusan, dengan marketplace plugin | PolyForm Noncommercial 1.0.0; medan lesen repositori menunjukkan NOASSERTION | Sumber rasmi, dibaca 2026-11-19 | Aktif, push 2026-11-19, 9,037 bintang | [github.com/nightly-labs/openbot](https://github.com/nightly-labs/openbot) |
-| MausBot (OpenMausBot) | Alternatif Grok Bot sumber terbuka dengan mesin maya untuk bot | Apache-2.0 pada repositori utama; repositori muat turun berasingan membawa MIT | Sumber rasmi, dibaca 2026-11-19 | Aktif, push 2026-11-18, 25,485 bintang | [github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) |
+| MausBot (OpenMausBot) | Alternatif Grok Bot sumber terbuka dengan mesin maya untuk bot | Apache-2.0 pada repositori utama; repositori muat turun MIT yang pernah dipetik di sini tidak lagi wujud | Sumber rasmi, dibaca 2026-11-19 | Aktif, push 2026-11-18, 25,485 bintang | [github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) |
 | Grok Bot (xAI) | Agent sentiasa hidup dengan komputer sendiri, bekerja dalam aplikasi | Tertutup; aplikasi macOS bertandatangan, tiada repositori awam | Sumber rasmi, pengumuman bertarikh 2026-08-11 | Beta | [x.ai/news/introducing-grok-bot](https://x.ai/news/introducing-grok-bot) |
 | Dots (OpenAI) | Agent sentiasa hidup dalam ChatGPT, dengan komputer awan sendiri | Tertutup; tiada repositori awam | Sumber rasmi, pengumuman bertarikh 2026-09-29 | Hidup, dilancarkan kepada Enterprise dari 2026-11-18 | [openai.com/index/introducing-dots](https://openai.com/index/introducing-dots/) |
 | DeepSeek Harness | Harness yang dijalankan oleh profil, dengan server MCP mengikut profil | Pakej npm, lihat metadata pakej | Dijalankan di sini; tidak boleh disahkan semula sepenuhnya | Dipasang 0.2.2-rc.1 pada 2026-11-19 | [npmjs.com/package/@deepseek-ai/dsh](https://www.npmjs.com/package/@deepseek-ai/dsh) |
@@ -103,7 +100,7 @@ Tidak, walaupun lamannya menulis kod sumbernya terbuka. Fail lesen repositori ia
 
 ### Adakah MausBot sumber terbuka?
 
-Repositori utama MausBot ialah Apache-2.0, iaitu sumber terbuka dan membenarkan penggunaan komersial. Perhatikan perpecahannya: repositori kedua, `OpenMausBot/OpenMausBot`, membawa MIT dan menyebut dirinya repositori muat turun, jadi baca repositori mana yang anda sebenarnya klon.
+Repositori utama MausBot ialah Apache-2.0, iaitu sumber terbuka dan membenarkan penggunaan komersial. Repositori kedua yang menyebut dirinya repositori muat turun MIT pernah dipetik di sini sehingga 24 November 2026, apabila pautan itu memulangkan 404 dan organisasi GitHub di belakangnya tidak lagi wujud, jadi perpecahan itu tidak boleh disemak lagi dan repositori muat turun itu tidak dipetik.
 
 ### Adakah harness sumber terbuka bermakna model sumber terbuka?
 

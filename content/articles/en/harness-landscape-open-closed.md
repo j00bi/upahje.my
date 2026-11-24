@@ -26,9 +26,6 @@ sources:
   - title: "milind-soni/OpenMausBot, repository metadata (Apache-2.0)"
     url: "https://github.com/milind-soni/OpenMausBot"
     checked: 2026-11-19
-  - title: "OpenMausBot/OpenMausBot, download repository (MIT)"
-    url: "https://github.com/OpenMausBot/OpenMausBot"
-    checked: 2026-11-19
   - title: "xAI, introducing Grok Bot"
     url: "https://x.ai/news/introducing-grok-bot"
     checked: 2026-11-19
@@ -51,7 +48,7 @@ One row per product, with the evidence level stated, because three of these were
 | Product | What it is | Licence or terms | Evidence level | Status | Source |
 | --- | --- | --- | --- | --- | --- |
 | OpenBot (nightly-labs) | Local-first desktop workspace for persistent AI teammates, with a plugin marketplace | PolyForm Noncommercial 1.0.0; repo licence field reads NOASSERTION | Official source, read 2026-11-19 | Active, pushed 2026-11-19, 9,037 stars | [github.com/nightly-labs/openbot](https://github.com/nightly-labs/openbot) |
-| MausBot (OpenMausBot) | Open-source Grok Bot alternative with a virtual machine bots can use | Apache-2.0 on the main repo; a separate download repo carries MIT | Official source, read 2026-11-19 | Active, pushed 2026-11-18, 25,485 stars | [github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) |
+| MausBot (OpenMausBot) | Open-source Grok Bot alternative with a virtual machine bots can use | Apache-2.0 on the main repo; the MIT download repo previously cited here no longer resolves | Official source, read 2026-11-19 | Active, pushed 2026-11-18, 25,485 stars | [github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) |
 | Grok Bot (xAI) | Always-on agents with their own computer, working inside apps | Closed; signed macOS app, no public repo | Official source, announcement dated 2026-08-11 | Beta | [x.ai/news/introducing-grok-bot](https://x.ai/news/introducing-grok-bot) |
 | Dots (OpenAI) | Always-on agents inside ChatGPT, with their own cloud computer | Closed; no public repo | Official source, announcement dated 2026-09-29 | Live, rolling out to Enterprise from 2026-11-18 | [openai.com/index/introducing-dots](https://openai.com/index/introducing-dots/) |
 | DeepSeek Harness | Harness run by a profile, with MCP servers per profile | npm package, see package metadata | Ran here; no longer re-verifiable end to end | Installed 0.2.2-rc.1 on 2026-11-19 | [npmjs.com/package/@deepseek-ai/dsh](https://www.npmjs.com/package/@deepseek-ai/dsh) |
@@ -103,7 +100,7 @@ No, despite its site saying the source code is open. The repository's licence fi
 
 ### Is MausBot open source?
 
-MausBot's main repository is Apache-2.0, which is open source and permits commercial use. Note the split: a second repository, `OpenMausBot/OpenMausBot`, carries MIT and describes itself as a download repo, so read which repository you are actually cloning.
+MausBot's main repository is Apache-2.0, which is open source and permits commercial use. A second repository described itself as an MIT download repo and was cited here until 24 November 2026, when that link returned 404 and the GitHub organisation behind it no longer resolves, so the split can no longer be checked and the download repo is not cited.
 
 ### Does an open-source harness mean an open-source model?
 

@@ -1,6 +1,6 @@
 ---
 title: "Don't rewrite your site. Rewrite the 5%."
-description: "Two MIT repos five days apart, 11,327 stars between them, prescribe opposite fixes for a slow app. The disagreement tells you which fix your problem needs."
+description: "Two MIT repos five days apart, 11,986 stars between them on 24 November 2026, prescribe opposite fixes for a slow app. The disagreement says which you need."
 slug: rewrite-the-five-percent
 translationKey: rewrite-the-five-percent
 format: teardown
@@ -26,13 +26,13 @@ sources:
 
 # Don't rewrite your site. Rewrite the 5%.
 
-Two repositories published five days apart carry 11,327 stars and give opposite advice. One says port the whole app to Rust, piece by piece. The other says port only the 5% that is slow. Both are MIT, and both are right. What decides which one you need is not your stack.
+Two repositories published five days apart carry 11,986 stars between them as of 24 November 2026, and give opposite advice. One says port the whole app to Rust, piece by piece. The other says port only the 5% that is slow. Both are MIT, and both are right. What decides which one you need is not your stack.
 
 ## Two MIT repos, five days apart, argue opposite fixes
 
-`rust-anything`, created 16 November 2026, has 8,516 stars. Its description promises the whole application: rewrite it in Rust one piece at a time, checked against the original's recorded behaviour at every step. Its README claims one port: Prettier, "19x faster", with "15,861 of 17,224 recorded runs" in Rust and every run byte-identical.
+`rust-anything`, created 16 November 2026, has 8,782 stars as of 24 November 2026. Its description promises the whole application: rewrite it in Rust one piece at a time, checked against the original's recorded behaviour at every step. Its README claims one port: Prettier, "19x faster", with "15,861 of 17,224 recorded runs" in Rust and every run byte-identical.
 
-`fast-anything`, created 21 November 2026, has 2,811 stars. Its description argues against that scope: don't rewrite it in Rust, rewrite the 5% that's slow, port the hot functions, prove they behave the same.
+`fast-anything`, created 21 November 2026, has 3,204 stars as of 24 November 2026. Its description argues against that scope: don't rewrite it in Rust, rewrite the 5% that's slow, port the hot functions, prove they behave the same.
 
 They disagree about scope, and money follows scope.
 

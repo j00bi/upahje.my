@@ -19,7 +19,7 @@
 | 14 | "Claude Code, Codex CLI, OpenCode | CLI harnesses measured on this machine | Proprietary licences | Ran here, 2026-11-19 | Active" | - | our measurement, this machine | 2026-11-19 | source: `--version` on each binary, printed in the ranking piece |
 | 15 | "Apache-2.0, which covers MausBot's main repository, permits commercial use, modification and redistribution, provided you keep the notices." | https://github.com/milind-soni/OpenMausBot | GitHub | 2026-11-19 | source: repository licence field Apache-2.0 |
 | 16 | "OpenBot's code is readable and its site says "The source code of OpenBot is open", and its licence file says you may not use it commercially without paying." | https://openbot.run/ | OpenBot | 2026-11-19 | source: site wording, contradicted by the LICENSE file in the same article |
-| 17 | "Note the split: a second repository, `OpenMausBot/OpenMausBot`, carries MIT and describes itself as a download repo, so read which repository you are actually cloning." | https://github.com/OpenMausBot/OpenMausBot | GitHub | 2026-11-19 | source: repository licence field MIT |
+| 17 | "Repositori kedua yang menyebut dirinya repositori muat turun MIT pernah dipetik di sini sehingga 24 November 2026" | https://github.com/OpenMausBot/OpenMausBot | GitHub | 2026-11-24 | source: the URL returned 404 on 24 November 2026 and the organisation page returned 404 the same day, so the claim is now recorded as no longer checkable |
 | 18 | "The payload is gone, there is no systemd unit under that name, and no data directory remains." | - | our measurement, this machine | 2026-11-19 | source: `systemctl status` returned no unit, and the data directories are absent |
 
 ## Sections

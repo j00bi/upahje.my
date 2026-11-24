@@ -10,7 +10,7 @@
 | 4 | "Copilot's credits are GitHub AI Credits for its own features, not API access." | https://github.com/features/copilot/plans | GitHub | 2026-11-19 | source: Table 1, Copilot Pro row |
 | 5 | "ChatGPT Plus at RM99.90 includes no API credits" | https://chatgpt.com/pricing | OpenAI | 2026-11-19 | source: Table 1, ChatGPT Plus row |
 | 6 | "Anthropic publishes Claude Haiku 5.5 at USD 0.10 per million input tokens and USD 0.50 per million output tokens" | https://docs.claude.com/en/docs/about-claude/pricing | Anthropic | 2026-11-19 | source: Table 3, Claude Haiku 5.5 row |
-| 7 | "Every ringgit figure is either published in MYR by the vendor, or converted at the Bank Negara Malaysia middle rate of 4.1145 on 19 November 2026." | https://api.bnm.gov.my/public/exchange-rate | Bank Negara Malaysia | 2026-11-19 | source: Table 7 rate line and conversion column |
+| 7 | "Every ringgit figure is either published in MYR by the vendor, or converted at the Bank Negara Malaysia middle rate of 4.1145 on 19 November 2026." | https://www.bnm.gov.my/exchange-rates | Bank Negara Malaysia | 2026-11-24 | source: Table 7 rate line and conversion column |
 | 8 | "One task: USD 0.00045, which is RM0.00185 at 4.1145." | - | - | - | estimate: arithmetic, (2,000/1,000,000 x 0.10) + (500/1,000,000 x 0.50), multiplied by 4.1145 |
 | 9 | "RM100 ÷ RM0.00185 = about 54,000 tasks." | - | - | - | estimate: arithmetic, 100 divided by 0.00185 |
 | 10 | "Light | 5 | 150 | 0.28" | - | - | - | estimate: arithmetic, 150 tasks x RM0.00185 |

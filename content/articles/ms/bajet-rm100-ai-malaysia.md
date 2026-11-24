@@ -17,19 +17,19 @@ changelog:
 sources:
   - title: "Claude, harga"
     url: "https://claude.com/pricing"
-    checked: 2026-11-19
+    checked: 2026-11-24
   - title: "ChatGPT, harga"
     url: "https://chatgpt.com/pricing"
-    checked: 2026-11-19
+    checked: 2026-11-24
   - title: "GitHub Copilot, pelan"
     url: "https://github.com/features/copilot/plans"
-    checked: 2026-11-19
+    checked: 2026-11-24
   - title: "Anthropic, harga API Claude"
     url: "https://docs.claude.com/en/docs/about-claude/pricing"
-    checked: 2026-11-19
-  - title: "Bank Negara Malaysia, API kadar pertukaran awam (kadar tengah USD/MYR 4.1145)"
-    url: "https://api.bnm.gov.my/public/exchange-rate"
-    checked: 2026-11-19
+    checked: 2026-11-24
+  - title: "Bank Negara Malaysia, kadar pertukaran (kadar tengah USD yang dipetik ialah kadar yang diterbitkan 19 November 2026; halaman memaparkan kadar terkini)"
+    url: "https://www.bnm.gov.my/exchange-rates"
+    checked: 2026-11-24
 ---
 
 # Apa yang RM100 sebulan beli dalam AI, di Malaysia
