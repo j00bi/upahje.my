@@ -10,7 +10,7 @@
 | 4 | "First, the $9 ending raised demand in all three experiments." | https://ideas.repec.org/a/kap/qmktec/v1y2003i1p93-110.html | RePEc record of the 2003 paper | 2026-11-24 | source: abstract, first conclusion |
 | 5 | "The abstract publishes no effect size, and the full text is paywalled" | https://link.springer.com/article/10.1023/A:1023581927405 | Springer abstract | 2026-11-24 | source: abstract read in full; paywall observed on the full text |
 | 6 | "RM2.90 and RM19.90 are everywhere in Malaysian retail, which shows the convention, not its effect." | - | - | - | opinion: the article's own observation of market convention, no study claimed |
-| 7 | "No Malaysian field experiment on price endings surfaced in this pass, and no regulator publishes a retail price-ending study." | - | our reading, this machine | 2026-11-24 | estimate: absence check, 24 November 2026 |
+| 7 | "No Malaysian field experiment on price endings surfaced in our search, and no regulator publishes a retail price-ending study." | - | our reading, this machine | 2026-11-24 | estimate: absence check, 24 November 2026 |
 | 8 | "The zero in that table is the row a Malaysian owner should read twice." | - | - | - | opinion: the article's reading of the absence |
 | 9 | "the 9 is a test, not a policy" | - | - | - | opinion: stated once in the reader's interest |
 | 10 | "3" | https://ideas.repec.org/a/kap/qmktec/v1y2003i1p93-110.html | RePEc record of the 2003 paper | 2026-11-24 | source: evidence table row, number of field experiments in the abstract |

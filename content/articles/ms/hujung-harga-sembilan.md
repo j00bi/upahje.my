@@ -37,7 +37,7 @@ Pertama, hujung $9 menaikkan permintaan dalam ketiga-tiga eksperimen. Kedua, ken
 
 ## Kesannya bersyarat, dan penulis sendiri berkata begitu
 
-Ayat ketiga dalam abstrak ialah yang berguna untuk kedai: "There is also some evidence that $9 price endings are less effective when retailers use 'Sale' cues." Pagar itu kata-kata penulis sendiri.
+Ayat ketiga dalam abstrak ialah yang berguna untuk kedai: "There is also some evidence that $9 price endings are less effective when retailers use 'Sale' cues." Hedge itu kata-kata penulis sendiri.
 
 Bacaan itu sepadan dengan cara tanda harga berfungsi. Jika pelekat merah sudah memberitahu pelanggan harga itu rendah, angka 9 di hujung ialah isyarat kedua yang menyatakan perkara sama, dan dua isyarat tidak menggandakan kesan. Penulis menawarkan penjelasan, bukan bukti: harga berhujung 9 "may be more effective when customers have limited information, which may in turn help to explain why retailers do not use $9 price endings on every item."
 
@@ -45,7 +45,7 @@ Bacaan itu sepadan dengan cara tanda harga berfungsi. Jika pelekat merah sudah m
 
 Abstrak tidak menerbitkan saiz kesan, dan teks penuh berbayar, jadi angka "24% lebih jualan" yang tersebar bersama nama kertas ini tidak dapat disemak di sini dan tidak dicetak. Penemuan arah ialah apa yang bukti sokong: hujung harga menggerakkan permintaan, dengan syarat di atas.
 
-Itulah had jujur satu keputusan Amerika berusia dua dekad, dan keputusan harga Malaysia yang dibuat atasnya ialah extrapolasi.
+Itulah had jujur satu keputusan Amerika berusia dua dekad, dan keputusan harga Malaysia yang dibuat atasnya ialah ekstrapolasi.
 
 ## Malaysia ada konvensyennya, bukan datanya
 

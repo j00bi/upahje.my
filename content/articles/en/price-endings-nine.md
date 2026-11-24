@@ -45,11 +45,11 @@ That reading fits how a price tag works. If a red sticker already tells the cust
 
 The abstract publishes no effect size, and the full text is paywalled, so the "24% more sales" figure that circulates with this paper's name cannot be checked here and is not printed. A directional finding is what the evidence supports: endings moved demand, with the conditions above.
 
-That is the honest limits of a two-decade-old American result, and a Malaysian price decision made on it is an extrapolation.
+Those are the honest limits of a two-decade-old American result, and a Malaysian price decision made on it is an extrapolation.
 
 ## Malaysia has the convention and not the data
 
-RM2.90 and RM19.90 are everywhere in Malaysian retail, which shows the convention, not its effect. No Malaysian field experiment on price endings surfaced in this pass, and no regulator publishes a retail price-ending study.
+RM2.90 and RM19.90 are everywhere in Malaysian retail, which shows the convention, not its effect. No Malaysian field experiment on price endings surfaced in our search, and no regulator publishes a retail price-ending study.
 
 | What is published | Value | Where |
 | --- | --- | --- |
