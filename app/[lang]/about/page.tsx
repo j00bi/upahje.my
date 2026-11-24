@@ -26,6 +26,7 @@ const COPY = {
     deskRole: 'House byline',
     deskBody:
       'UpahJe Desk is a house byline for pieces produced with AI assistance and reviewed by the editor. It is not a person, and it claims no credentials.',
+    contactLabel: 'Reach the editor',
     corrections: 'Corrections',
     correctionsBody:
       'If something here is wrong, tell us and we will fix it and note the change. A correction is a normal event, not an embarrassment.',
@@ -46,6 +47,7 @@ const COPY = {
     deskRole: 'Nama rumah',
     deskBody:
       'UpahJe Desk ialah nama rumah untuk artikel yang dihasilkan dengan bantuan AI dan disemak oleh editor. Ia bukan seorang individu, dan ia tidak mendakwa sebarang kelayakan.',
+    contactLabel: 'Hubungi editor',
     corrections: 'Pembetulan',
     correctionsBody:
       'Jika ada yang salah di sini, beritahu kami dan kami akan betulkan serta catat perubahannya. Pembetulan ialah perkara biasa, bukan sesuatu yang memalukan.',
@@ -91,6 +93,10 @@ export default function AboutPage({ params }: { params: { lang: string } }) {
           </dt>
           <dd className="type-small mt-1" style={{ color: 'var(--ui-body)' }}>{copy.deskBody}</dd>
         </dl>
+
+        <p className="type-small mt-8" style={{ color: 'var(--ui-body)' }}>
+          {copy.contactLabel}: <a href="mailto:husni@upahje.my" className="ui-link" style={{ color: 'var(--ui-accent)' }}>husni@upahje.my</a>
+        </p>
 
         <h2 className="type-h3 mt-12" style={{ color: 'var(--ui-ink)' }}>{copy.corrections}</h2>
         <p className="type-body mt-3" style={{ color: 'var(--ui-body)', maxWidth: 'var(--measure)' }}>{copy.correctionsBody}</p>
