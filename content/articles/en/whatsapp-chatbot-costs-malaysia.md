@@ -5,7 +5,7 @@ cardFigure: "Free to 1,000 service messages; RM0.3467 marketing"
 slug: whatsapp-chatbot-costs-malaysia
 translationKey: whatsapp-chatbot-costs-malaysia
 date: 2026-11-23
-updated: 2026-11-23
+updated: 2026-11-24
 author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, whatsapp, chatbot, pricing, malaysia]

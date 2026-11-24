@@ -5,7 +5,7 @@ cardFigure: "Percuma 1,000 mesej servis; pemasaran RM0.3467"
 slug: kos-chatbot-whatsapp-malaysia
 translationKey: whatsapp-chatbot-costs-malaysia
 date: 2026-11-23
-updated: 2026-11-23
+updated: 2026-11-24
 author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, whatsapp, chatbot, harga, malaysia]
