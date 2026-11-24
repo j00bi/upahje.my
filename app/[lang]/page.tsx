@@ -3,27 +3,24 @@ import Link from 'next/link'
 import Footer from '@/components/layout/Footer'
 import TopBar from '@/components/layout/TopBar'
 import FeaturedStory from '@/components/home/FeaturedStory'
-import LatestList from '@/components/home/LatestList'
-import TopicExplorer from '@/components/home/TopicExplorer'
+import StoryCard from '@/components/home/StoryCard'
 import { copyFor } from '@/lib/copy'
-import {
-  ARTICLE_CATEGORIES,
-  articlesInCategory,
-  categoryBlurb,
-  featuredArticle,
-  publicationArticles,
-} from '@/lib/articles.mjs'
+import { featuredArticle, publicationArticles, getPublishedArticle, bodyWithoutTitle } from '@/lib/articles.mjs'
+import { articlesForTopic, topicCounts } from '@/lib/topics.mjs'
+import { extractHeadings } from '@/lib/article-view'
 import { SITE_NAME, absolute, languagesFor, social } from '@/lib/seo'
 
 export function generateMetadata({ params }: { params: { lang: string } }): Metadata {
   const copy = copyFor(params.lang)
   return {
-    title: copy.tagline,
-    description: copy.intro,
+    title: `${SITE_NAME} - ${copy.tagline}`,
+    description: copy.homeSub,
     alternates: { canonical: absolute(`/${params.lang}`), languages: languagesFor('') },
-    ...social(params.lang, `/${params.lang}`, `${SITE_NAME} - ${copy.tagline}`, copy.intro),
+    ...social(params.lang, `/${params.lang}`, `${SITE_NAME} - ${copy.tagline}`, copy.homeSub),
   }
 }
+
+const section = (slug: string, lang: string, limit = 3) => articlesForTopic(lang, slug).slice(0, limit)
 
 export default function Hub({ params }: { params: { lang: string } }) {
   const lang = params.lang
@@ -31,50 +28,90 @@ export default function Hub({ params }: { params: { lang: string } }) {
   const other = lang === 'ms' ? 'en' : 'ms'
 
   const featured = featuredArticle(lang)
-  const latest = publicationArticles(lang)
-    .filter((article) => article.slug !== featured?.slug)
-    .slice(0, 5)
-  const topics = ARTICLE_CATEGORIES.map((category) => ({
-    slug: category.slug,
-    count: articlesInCategory(category.slug, lang).length,
-    blurb: categoryBlurb(category.slug, lang),
-  })).filter((topic) => topic.count > 0)
+  const compliance = section('compliance', lang)
+  const buying = section('buying', lang)
+  const ai = section('ai-automation', lang)
+  const freelance = section('freelance', lang)
+  const counts = new Map(topicCounts(lang).map((topic) => [topic.slug, topic.count]))
+
+  const einvoice = compliance[0]
+  const exempt = einvoice
+    ? extractHeadings(bodyWithoutTitle(einvoice.body, einvoice.title)).find((heading) => /exempt|pengecualian/i.test(heading.label))
+    : null
+  const startHref = einvoice
+    ? `/${lang}/articles/${einvoice.slug}${exempt ? `#${exempt.id}` : ''}`
+    : `/${lang}/articles`
+
+  const blocks = [
+    { slug: 'compliance', title: copy.rulesChanged, items: compliance },
+    { slug: 'buying', title: copy.whatToBuy, items: buying },
+    { slug: 'ai-automation', title: copy.whereToStartAi, items: ai },
+    { slug: 'freelance', title: copy.forFreelancers, items: freelance },
+  ]
 
   return (
     <div className="ui-canvas min-h-screen">
       <TopBar lang={lang} otherHref={`/${lang === 'en' ? 'ms' : 'en'}`} />
 
-      <header className="container-editorial" style={{ paddingTop: 'var(--space-12)', paddingBottom: 'var(--space-10)' }}>
-        <p className="type-label" style={{ color: 'var(--ui-muted)' }}>
-          {lang === 'ms' ? 'Penerbitan pengetahuan bebas' : 'An independent knowledge publication'}
-        </p>
-        <h1 className="type-display mt-4" style={{ color: 'var(--ui-ink)', maxWidth: '22ch' }}>
-          {copy.homeHeadline}
-        </h1>
-        <p className="type-body mt-6" style={{ color: 'var(--ui-body)', maxWidth: 'var(--measure)' }}>
-          {copy.homeStandfirst}
-        </p>
-        <Link
-          href={`/${lang}/articles`}
-          className="type-small ui-link mt-8 inline-flex items-center gap-2"
-          style={{ color: 'var(--ui-accent)', fontWeight: 600 }}
-        >
-          {copy.journal}
-          <span aria-hidden>→</span>
-        </Link>
+      <header className="container-editorial" style={{ paddingTop: 'var(--space-10)', paddingBottom: 'var(--space-8)' }}>
+        <h1 className="type-display" style={{ color: 'var(--ui-ink)', maxWidth: '20ch' }}>{copy.homeH1}</h1>
+        <p className="type-body mt-5" style={{ color: 'var(--ui-body)', maxWidth: 'var(--measure)' }}>{copy.homeSub}</p>
+        <div className="mt-7 flex flex-wrap items-center gap-3">
+          <Link
+            href={startHref}
+            className="type-small inline-flex items-center rounded-[10px] px-5 py-3"
+            style={{ background: 'var(--ui-forest)', color: 'var(--ui-paper)', fontWeight: 600 }}
+          >
+            {copy.startHere}
+          </Link>
+          <Link
+            href={`/${lang}/articles`}
+            className="type-small inline-flex items-center rounded-[10px] px-5 py-3"
+            style={{ border: '1px solid var(--ui-rule)', color: 'var(--ui-ink)', fontWeight: 600 }}
+          >
+            {copy.browseAll}
+          </Link>
+        </div>
       </header>
 
-      <main id="main" className="container-editorial" style={{ paddingBottom: 'var(--space-16)' }}>
-        {featured ? (
-          <FeaturedStory article={featured} copy={copy} />
-        ) : (
-          <p className="type-body" style={{ color: 'var(--ui-muted)' }}>{copy.empty}</p>
-        )}
+      <main className="container-editorial" style={{ paddingBottom: 'var(--space-16)' }}>
+        {featured && <FeaturedStory article={featured} copy={copy} />}
 
-        <LatestList items={latest} lang={lang} copy={copy} />
-        <TopicExplorer topics={topics} lang={lang} copy={copy} />
+        {blocks.map((block) => (
+          <section key={block.slug} aria-labelledby={`section-${block.slug}`} className="mt-14">
+            <div className="flex flex-wrap items-baseline justify-between gap-2" style={{ borderTop: '1px solid var(--ui-rule)', paddingTop: 'var(--space-4)' }}>
+              <h2 id={`section-${block.slug}`} className="type-h2" style={{ color: 'var(--ui-ink)' }}>{block.title}</h2>
+              {counts.get(block.slug) ? (
+                <Link href={`/${lang}/topics/${block.slug}`} className="type-small ui-link" style={{ color: 'var(--ui-accent)' }}>
+                  {String(copy.seeAll)} <span style={{ color: 'var(--ui-muted)' }}>{String(counts.get(block.slug) ?? '')}</span>
+                </Link>
+              ) : null}
+            </div>
+            {block.items.length === 0 ? (
+              <p className="type-small mt-4" style={{ color: 'var(--ui-muted)' }}>{copy.empty}</p>
+            ) : (
+              <div className="mt-6 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                {block.items.map((article) => (
+                  <StoryCard key={article.slug} article={article} lang={lang} copy={copy} />
+                ))}
+              </div>
+            )}
+          </section>
+        ))}
 
-        <section aria-labelledby="who" className="mt-16" style={{ borderTop: '1px solid var(--ui-rule)', paddingTop: 'var(--space-6)' }}>
+        <section aria-labelledby="how-we-check" className="mt-16" style={{ borderTop: '1px solid var(--ui-rule)', paddingTop: 'var(--space-6)' }}>
+          <h2 id="how-we-check" className="type-h2" style={{ color: 'var(--ui-ink)' }}>{copy.howWeCheck}</h2>
+          <ul className="mt-4 space-y-1">
+            {copy.howWeCheckLines.map((line) => (
+              <li key={line} className="type-body" style={{ color: 'var(--ui-body)' }}>{line}</li>
+            ))}
+          </ul>
+          <Link href={`/${lang}/editorial-policy`} className="type-small ui-link mt-4 inline-block" style={{ color: 'var(--ui-accent)', fontWeight: 600 }}>
+            {copy.readPolicy}
+          </Link>
+        </section>
+
+        <section aria-labelledby="who" className="mt-14" style={{ borderTop: '1px solid var(--ui-rule)', paddingTop: 'var(--space-6)' }}>
           <h2 id="who" className="type-h3" style={{ color: 'var(--ui-ink)' }}>{copy.whoTitle}</h2>
           <p className="type-body mt-3" style={{ color: 'var(--ui-body)', maxWidth: 'var(--measure)' }}>{copy.whoBody}</p>
           <p className="type-small mt-4" style={{ color: 'var(--ui-muted)' }}>
