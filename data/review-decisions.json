@@ -7,5 +7,14 @@
     "note": "probe",
     "decided_at": "2026-11-24T04:22:02.689Z",
     "commit": "e204d0d6322322a6efc64aa755486b42f21e1930"
+  },
+  {
+    "slug": "price-endings-nine",
+    "lang": "en",
+    "action": "reject",
+    "reason": null,
+    "note": null,
+    "decided_at": "2026-11-24T04:26:34.328Z",
+    "commit": "b434eb660025cd8b19cfd8fe6138ce55597f5bdf"
   }
 ]
