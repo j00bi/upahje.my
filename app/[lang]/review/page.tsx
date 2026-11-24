@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Footer from '@/components/layout/Footer'
 import TopBar from '@/components/layout/TopBar'
-import { allArticles, formatDate } from '@/lib/articles.mjs'
+import { allArticles, formatDate, languageCodes } from '@/lib/articles.mjs'
 import { copyFor } from '@/lib/copy'
 import { requireReview, couldNotVerifyCount, lastTouched, thesis } from '@/lib/review'
 
@@ -16,7 +16,11 @@ export default function ReviewIndex({ params, searchParams }: { params: { lang: 
   requireReview(searchParams.k)
   const lang = params.lang
   const copy = copyFor(lang)
-  const drafts = allArticles(lang).filter((article) => article.draft)
+  // One list, both languages: a language column is only meaningful if the page
+  // is not already filtered by language, and an approver should see everything.
+  const drafts = languageCodes
+    .flatMap((code) => allArticles(code).filter((article) => article.draft))
+    .sort((a, b) => String(b.date).localeCompare(String(a.date)))
 
   return (
     <div className="ui-canvas min-h-screen">
@@ -35,9 +39,9 @@ export default function ReviewIndex({ params, searchParams }: { params: { lang: 
               const touched = lastTouched(article.file)
               return (
                 <article key={article.slug} className="py-6" style={{ borderBottom: '1px solid var(--ui-rule)' }}>
-                  <p className="type-label" style={{ color: 'var(--ui-accent)' }}>{article.lang.toUpperCase()} · draft</p>
+                  <p className="type-label" style={{ color: 'var(--ui-accent)' }}>{article.lang === 'ms' ? 'Bahasa Melayu' : 'English'} · {lang === 'ms' ? 'draf' : 'draft'}</p>
                   <h2 className="type-h3 mt-2" style={{ color: 'var(--ui-ink)' }}>
-                    <a href={`/${lang}/review/${article.slug}?k=${searchParams.k}`} className="ui-link" style={{ color: 'var(--ui-ink)' }}>{article.title}</a>
+                    <a href={`/${article.lang}/review/${article.slug}?k=${searchParams.k}`} className="ui-link" style={{ color: 'var(--ui-ink)' }}>{article.title}</a>
                   </h2>
                   <p className="type-small mt-2" style={{ color: 'var(--ui-body)' }}>{thesis(article.description)}</p>
                   <dl className="type-small mt-3 flex flex-wrap gap-x-6 gap-y-1" style={{ color: 'var(--ui-muted)' }}>

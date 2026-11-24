@@ -11,14 +11,14 @@
       <link>https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu</guid>
       <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
-      <description>SWE-bench dan Terminal-bench menilai model di dalam harness orang lain. Baris DeepSeek ialah contoh kerjanya, dan larian di belakangnya ada profil kebolehpercayaan sendiri.</description>
+      <description>SWE-bench dan Terminal-bench menilai model di dalam harness orang lain. Baris DeepSeek contohnya, dan larian di belakangnya ada profil kebolehpercayaan.</description>
     </item>
     <item>
-      <title>Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia</title>
+      <title>Apa yang AI agent boleh buat untuk PKS Malaysia</title>
       <link>https://upahje.my/ms/articles/apa-yang-agent-boleh-buat</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/apa-yang-agent-boleh-buat</guid>
       <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
-      <description>AI agent menjalankan gelung sendiri: ia membaca tugasan, memanggil tool, menyemak hasil dan mengulang. Apa yang diliputi tanpa penyeliaan, apa yang perlukan tandatangan manusia, dan apa yang tidak patut disentuh.</description>
+      <description>AI agent menjalankan gelung sendiri: baca tugasan, panggil tool, ulang. Apa yang dibuat tanpa penyeliaan, apa yang perlukan manusia, apa yang jangan disentuh.</description>
     </item>
     <item>
       <title>Ambang e-Invoice kini RM3 juta</title>
@@ -32,7 +32,7 @@
       <link>https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk</guid>
       <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Pendapat. Proses yang paling pemilik benci biasanya proses yang paling buruk untuk diautomasikan dahulu, kerana mengautomasikannya membuang bukti yang anda perlukan dan menyembunyikan pengecualian yang menentukan kos.</description>
+      <description>Pendapat. Proses yang paling dibenci pemilik selalunya yang paling buruk untuk diautomasikan: ia membuang bukti dan menyembunyikan pengecualian penentu kos.</description>
     </item>
     <item>
       <title>CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda</title>
@@ -46,112 +46,112 @@
       <link>https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali</guid>
       <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Penggunaan bukan masalahnya: 97.2% pertubuhan Malaysia guna komputer. Penduaan berlaku antara pejabat hadapan yang sudah digital dan pejabat belakang yang masih manual, dan e-Invoice kini memaksa satu rekod betul semasa dikeluarkan.</description>
+      <description>97.2% pertubuhan guna komputer, jadi penggunaan bukan masalah. Penduaan antara pejabat hadapan digital dan belakang manual, dan e-Invoice memaksa rekod betul.</description>
     </item>
     <item>
-      <title>Google Business Profile: medan yang menentukan sama ada anda muncul</title>
+      <title>Google Business Profile: medan penentu sama ada anda muncul</title>
       <link>https://upahje.my/ms/articles/medan-google-business-profile</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/medan-google-business-profile</guid>
       <pubDate>Sun, 22 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Google mendokumenkan peraturan nama, peraturan kategori, waktu operasi, kawasan perkhidmatan dan apa yang mencetuskan penggantungan. Apa yang patut PKS betulkan dahulu, dan empat medan yang menyebabkan profil dihadkan.</description>
+      <description>Google mendokumenkan peraturan nama, kategori, waktu dan pencetus penggantungan; apa patut PKS betulkan dahulu, dan empat medan yang menghadkan profil.</description>
     </item>
     <item>
-      <title>Agent harness, AI harness, agent framework: apa maksud istilah ini</title>
+      <title>Agent harness, AI harness, agent framework: maksudnya</title>
       <link>https://upahje.my/ms/articles/agent-harness-atau-ai-harness</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/agent-harness-atau-ai-harness</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Agent harness menjalankan gelung agent: ia melaksanakan tool call, menyimpan transkrip, menguatkuasakan kebenaran. Vendor menulis agent harness. AI harness bukan istilah yang mereka guna.</description>
+      <description>Agent harness menjalankan gelung agent: melaksanakan tool call, menyimpan transkrip, menguatkuasakan kebenaran. Vendor guna agent harness, bukan AI harness.</description>
     </item>
     <item>
-      <title>Apa itu agent harness, dan apa yang dilakukannya dengan permintaan anda</title>
+      <title>Apa itu agent harness, dan apa yang ia buat</title>
       <link>https://upahje.my/ms/articles/apa-itu-agent-harness</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/apa-itu-agent-harness</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Harness berada antara anda dan model: ia menyimpan perbualan, menjalankan tools, menghantar permintaan dan menstrim jawapan. Rupa satu mesej di dalam DeepSeek Harness 0.2.2-rc.1.</description>
+      <description>Harness berada antara anda dan model: ia menyimpan perbualan, menjalankan tools, menghantar permintaan dan menstrim jawapan. Rupa satu mesej di dalamnya.</description>
     </item>
     <item>
-      <title>Apa itu API, dijelaskan untuk pemilik perniagaan kecil Malaysia</title>
+      <title>Apa itu API, untuk pemilik perniagaan kecil Malaysia</title>
       <link>https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>API ialah kontrak antara dua sistem untuk bertukar data tanpa perlu ada orang menyalinnya. Apa maksudnya bagi PKS, beza model terbuka dengan tertutup, dan kos sebenar menyambungkannya.</description>
+      <description>API ialah kontrak antara dua sistem untuk bertukar data tanpa orang menyalinnya. Maksudnya bagi PKS, beza model terbuka dengan tertutup, dan kos menyambungnya.</description>
     </item>
     <item>
       <title>Apa yang RM100 sebulan beli dalam AI, di Malaysia</title>
       <link>https://upahje.my/ms/articles/bajet-rm100-ai-malaysia</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/bajet-rm100-ai-malaysia</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>RM100 ialah sama ada satu tempat duduk dalam aplikasi langganan, atau satu meter token API, bukan kedua-duanya. Penukaran pada kadar Bank Negara 19 November 2026, tiga tahap penggunaan, dan garis di mana token menang.</description>
+      <description>RM100 beli tempat duduk dalam aplikasi langganan, atau meter token API. Penukaran pada kadar Bank Negara 19 November 2026, tiga tahap guna, bila token menang.</description>
     </item>
     <item>
-      <title>Model terbuka: Qwen, DeepSeek, Mistral dan Kimi, dan apa yang dibenarkan oleh lesennya</title>
+      <title>Qwen, DeepSeek, Mistral, Kimi: apa lesen benarkan</title>
       <link>https://upahje.my/ms/articles/beza-model-terbuka</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/beza-model-terbuka</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Empat keluarga terbuka, lima kad model, empat bentuk lesen. MIT pada DeepSeek, lesen Qwen tersuai, lesen terbuka Mistral sendiri. Apa yang dibenarkan dan kos menyewanya.</description>
+      <description>Empat keluarga, lima kad model, empat bentuk lesen: MIT pada DeepSeek, lesen Qwen tersuai, lesen terbuka Mistral sendiri. Apa yang dibenarkan dan kos sewa.</description>
     </item>
     <item>
-      <title>Claude, ChatGPT, Gemini dan Grok: apa sebenarnya beza antara model tertutup</title>
+      <title>Claude, ChatGPT, Gemini dan Grok: apa yang berbeza</title>
       <link>https://upahje.my/ms/articles/beza-model-tertutup</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/beza-model-tertutup</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Bukan skor penanda aras, yang tiada papan pendahulu semasa dapat dipastikan di sini. Apa yang anda terikat dengannya: tetingkap konteks, harga setiap token dan keupayaan yang didokumenkan. Setiap sel bersumber atau ditanda tidak dirakam, dan jika halaman terma tidak dibuka, artikel menyatakannya.</description>
+      <description>Skor penanda aras tidak memutuskan banyak di sini. Yang terikat: tetingkap konteks, harga token dan keupayaan didokumenkan, setiap sel bersumber atau ditanda.</description>
     </item>
     <item>
-      <title>Cara menulis brief kerja automasi supaya anda tidak bayar dua kali</title>
+      <title>Cara menulis brief kerja automasi</title>
       <link>https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Lima perkara yang freelancer perlukan sebelum memberi sebut harga, templat brief yang boleh diguna semula, dan ujian penerimaan yang perlu dipersetujui sebelum kerja bermula.</description>
+      <description>Lima perkara yang freelancer perlukan sebelum memberi sebut harga, templat brief boleh guna semula, dan ujian penerimaan dipersetujui sebelum kerja bermula.</description>
     </item>
     <item>
-      <title>Harness agent disusun: empat CLI yang dipasang pada satu mesin</title>
+      <title>Harness agent disusun: empat CLI pada satu mesin</title>
       <link>https://upahje.my/ms/articles/harness-agent-disusun</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/harness-agent-disusun</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>DeepSeek Harness, Claude Code, Codex CLI dan OpenCode dipasang pada satu mesin, dinilai 1-5 pada lima kriteria berwajaran menggunakan hanya apa yang dapat kami baca daripada setiap satu pada 19 November 2026.</description>
+      <description>DeepSeek Harness, Claude Code, Codex CLI dan OpenCode dinilai 1-5 pada lima kriteria, menggunakan hanya apa yang ditunjukkan setiap satu pada 19 November 2026.</description>
     </item>
     <item>
-      <title>Kos kerja automasi di Malaysia: harga yang diterbitkan, enam sumber</title>
+      <title>Kos kerja automasi di Malaysia: harga diterbitkan</title>
       <link>https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Empat studio Malaysia, satu pengamal bebas dan satu profil freelance: 30 harga diterbitkan untuk kerja automasi dan integrasi, disemak 19 November 2026 kecuali satu halaman dibaca pada 27 Oktober 2026. Beberapa halaman sumber tiada tarikh terbitan, jadi sesuatu harga mungkin lebih lama daripada artikel ini.</description>
+      <description>30 harga kerja automasi dari empat studio, satu pengamal bebas dan satu freelancer, disemak November 2026; beberapa halaman tiada tarikh.</description>
     </item>
     <item>
-      <title>Di mana kunci API anda diletakkan dalam harness, dan di mana ia tidak boleh ada</title>
+      <title>Di mana kunci API diletakkan, dan di mana tidak</title>
       <link>https://upahje.my/ms/articles/kunci-api-dalam-harness</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/kunci-api-dalam-harness</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Harness membaca kunci anda daripada pemboleh ubah persekitaran atau stor credentialsnya apabila memanggil pembekal. Apa yang disahkan kunci itu, empat tempat ia tidak boleh muncul, dan apa yang perlu dibuat apabila ia bocor.</description>
+      <description>Harness membaca kunci daripada pemboleh ubah persekitaran atau stor kelayakan. Apa yang kunci itu sahkan, empat tempat terlarang, dan langkah jika ia bocor.</description>
     </item>
     <item>
-      <title>Harness agent: siapa yang membuatnya, dan apa yang benar-benar sumber terbuka</title>
+      <title>Harness agent: siapa buat, mana satu sumber terbuka</title>
       <link>https://upahje.my/ms/articles/landskap-harness-agent-sumber-terbuka</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/landskap-harness-agent-sumber-terbuka</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Grok Bot dan Dots ialah produk tertutup yang dihoskan. OpenBot dan MausBot ialah projek sumber tersedia, dan hanya satu daripadanya sumber terbuka pada lesennya sendiri. Jadual dengan lesen dan tahap bukti pada setiap baris.</description>
+      <description>Grok Bot dan Dots produk tertutup dihoskan. OpenBot dan MausBot sumber tersedia, hanya satu sumber terbuka pada lesen sendiri; setiap baris ada lesen dan bukti.</description>
     </item>
     <item>
-      <title>Lima kemahiran pendapatan sampingan di Malaysia yang benar-benar membayar pada 2026</title>
+      <title>Lima kemahiran sampingan yang bayar pada 2026</title>
       <link>https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Lima kemahiran melepasi syarat dua senarai pada satu-satunya platform freelance Malaysia yang halaman awamnya boleh dibaca: suntingan video, reka bentuk grafik, kemasukan data, panggilan jualan dan ujian aplikasi. Kadar, kiraan dan tarikh daripada 11 senarai.</description>
+      <description>Lima kemahiran melepasi syarat dua senarai pada satu-satunya platform freelance Malaysia yang boleh dibaca, dengan kadar, kiraan dan tarikh daripada 11 senarai.</description>
     </item>
     <item>
-      <title>Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia</title>
+      <title>Model terbuka atau tertutup: apa PKS boleh jalankan</title>
       <link>https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Model terbuka boleh dimuat turun dan dijalankan pada perkakasan sendiri. Berapa kosnya sebulan, bila ia mula berbaloi berbanding bayaran ikut panggilan, dan kemahiran yang diperlukan.</description>
+      <description>Model terbuka boleh dimuat turun dan dijalankan pada perkakasan sendiri: kos sebulan, jumlah di mana ia kalahkan bayaran ikut panggilan, dan kemahiran.</description>
     </item>
     <item>
-      <title>Perlukan API, atau cukup spreadsheet?</title>
+      <title>API atau spreadsheet: pilih ikut jumlah</title>
       <link>https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet</link>
       <guid isPermaLink="true">https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet</guid>
       <pubDate>Wed, 18 Nov 2026 16:00:00 GMT</pubDate>
-      <description>Spreadsheet menang pada jumlah kecil dengan satu pemilik; API menang apabila dua sistem perlu selaras tanpa ada orang menyalin. Tiga keadaan spreadsheet betul, dan empat tanda ia sudah tidak memadai.</description>
+      <description>Spreadsheet menang pada jumlah kecil, satu pemilik; API menang apabila dua sistem harus selaras. Tiga keadaan spreadsheet betul, empat tanda ia tidak memadai.</description>
     </item>
   </channel>
 </rss>

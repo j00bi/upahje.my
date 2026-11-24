@@ -4,7 +4,7 @@
 
 # English
 
-## CommandCode, OpenCode, DeepSeek: three names, three different things
+## CommandCode, OpenCode, DeepSeek: three different things
 
 URL: https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers
 Checked: 2026-11-23
@@ -93,7 +93,7 @@ Whether files were written and tests passed, not whether the command exited 0. O
 - DeepSeek, API pricing — https://api-docs.deepseek.com/quick_start/pricing (checked 2026-11-23)
 - Hacker News, Show HN: Command Code GOAT (5 August 2026) — https://news.ycombinator.com/item?id=49188656 (checked 2026-11-23)
 
-## Google Business Profile: the fields that decide whether you show up
+## Google Business Profile: the fields that decide visibility
 
 URL: https://upahje.my/en/articles/google-business-profile-fields
 Checked: 2026-11-23
@@ -658,8 +658,11 @@ Track the failures only. One line whenever something goes wrong, with what happe
 ### What makes a good first automation?
 
 A process with a clear finish line, a cheap and visible mistake, and someone who owns it on the other side. Boring is the point: the first one is where you learn the buying and the maintenance, not where you make the annual saving.
+---
 
-## Agent harness, AI harness, agent framework: what the words mean
+This piece carries no sources because it is an argument, not a report: a position on which process to automate first, drawn from how these projects fail. No figure in it is a measurement and none is borrowed from another article.
+
+## Agent harness, AI harness, agent framework: what they mean
 
 URL: https://upahje.my/en/articles/agent-harness-vs-ai-harness
 Checked: 2026-11-19
@@ -838,7 +841,7 @@ Because a buyer still has to choose this week, and a stated method with a re-run
 - Codex CLI on this machine (version reported by the binary) — https://github.com/openai/codex (checked 2026-11-19)
 - OpenCode CLI on this machine (version reported by the binary) — https://opencode.ai/docs (checked 2026-11-19)
 
-## What automation work costs in Malaysia: published rates, six sources
+## Automation work in Malaysia: the published rates
 
 URL: https://upahje.my/en/articles/automation-rates-malaysia-published
 Checked: 2026-11-19
@@ -955,7 +958,7 @@ No, and this table cannot tell you that. It lists prices, publishers and dates. 
 - BlueAura Technology, AI automation cost for SMEs — https://www.blueaura.com.my/blog/2026-06-20-ai-automation-cost-smes-malaysia-asean/ (checked 2026-11-19)
 - freelancing.my, freelancer profile — https://freelancing.my/author/jackk/ (checked 2026-11-19)
 
-## Claude, ChatGPT, Gemini and Grok: what actually differs between the closed models
+## Claude, ChatGPT, Gemini, Grok: what differs
 
 URL: https://upahje.my/en/articles/closed-models-differences
 Checked: 2026-11-19
@@ -1076,7 +1079,7 @@ Only with a warning. Google sells it through a bundle that includes storage and 
 - OpenAI, file inputs — https://developers.openai.com/api/docs/guides/file-inputs (checked 2026-11-19)
 - xAI, function calling — https://docs.x.ai/developers/tools/function-calling (checked 2026-11-19)
 
-## Do you need an API, or just a spreadsheet?
+## API or spreadsheet: which fits your volume
 
 URL: https://upahje.my/en/articles/do-you-need-an-api-or-a-spreadsheet
 Checked: 2026-11-19
@@ -1136,8 +1139,11 @@ Not inherently. A spreadsheet that lives in a shared drive with access controls 
 ### What if my team already uses a tool that has an API?
 
 Then the decision narrows to whether anyone has time to connect it. An API that nobody wires up is worth nothing, and a tool with no API that people use daily is worth more than a better tool sitting unused.
+---
 
-## Where your API key goes in a harness, and where it must never go
+This piece carries no sources, because it is an argument from cases rather than a report: which of two setups fits your volume. No public benchmark exists for what Malaysian developers charge to wire an API, so no cost figure is printed here and none is borrowed.
+
+## Where an API key goes in a harness, and where never
 
 URL: https://upahje.my/en/articles/harness-api-keys
 Checked: 2026-11-19
@@ -1208,8 +1214,9 @@ That depends on the provider, so check yours rather than assuming. A key with no
 ### Sources
 
 - DeepSeek Harness package metadata (credential storage behaviour observed on this machine) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
+- OpenAI, best practices for API key safety — https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety (checked 2026-11-24)
 
-## Agent harnesses: who makes them, and what is actually open source
+## Agent harnesses: who makes them, what is open
 
 URL: https://upahje.my/en/articles/harness-landscape-open-closed
 Checked: 2026-11-19
@@ -1388,8 +1395,11 @@ Get one real example first. Export the report or the row you want reproduced, an
 ### Is a fixed price always better than hourly?
 
 Not always, but for this kind of work it usually is, because the scope can be written down. Hourly suits work where the scope genuinely cannot be known in advance, such as investigating why a third-party service fails. If the brief is clear and the quote is still hourly only, ask what part is unknown.
+---
 
-## Open-weight models: Qwen, DeepSeek, Mistral and Kimi, and what the licence lets you do
+This piece carries no sources, because it is our own procedure rather than a report: how we commission automation work, and the brief we hand out. No published standard or vendor document is being described, and no figure here is a measurement.
+
+## Qwen, DeepSeek, Mistral, Kimi: what the licence allows
 
 URL: https://upahje.my/en/articles/open-models-differences
 Checked: 2026-11-19
@@ -1475,7 +1485,7 @@ No, and for most businesses renting wins because the node is expensive and idle 
 - Moonshot AI, Kimi chat pricing — https://platform.moonshot.ai/docs/pricing/chat (checked 2026-11-19)
 - Mistral AI, inference pricing — https://docs.mistral.ai/inference/pricing.md (checked 2026-11-19)
 
-## Open or closed models: what a Malaysian SME can actually run in-house
+## Open or closed models: what an SME can run in-house
 
 URL: https://upahje.my/en/articles/open-vs-closed-models-malaysia
 Checked: 2026-11-19
@@ -1661,7 +1671,7 @@ Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 
 - Anthropic, Claude API pricing — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-19)
 - Bank Negara Malaysia, public exchange-rate API (USD/MYR middle rate 4.1145) — https://api.bnm.gov.my/public/exchange-rate (checked 2026-11-19)
 
-## Five side-income skills in Malaysia that actually pay in 2026
+## Five side-income skills in Malaysia that pay in 2026
 
 URL: https://upahje.my/en/articles/side-income-skills-malaysia-2026
 Checked: 2026-11-19
@@ -1843,8 +1853,9 @@ The harness records a `request/header` and a `request/context` per step, so each
 ### Sources
 
 - DeepSeek Harness package metadata (@deepseek-ai/dsh 0.2.2-rc.1, installed on this machine) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
+- DeepSeek API docs, your first API call — https://api-docs.deepseek.com/ (checked 2026-11-24)
 
-## What is an API, explained for a Malaysian small business owner
+## What is an API, for a Malaysian small business owner
 
 URL: https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme
 Checked: 2026-11-19
@@ -2012,7 +2023,7 @@ Bahawa lengan itu terus berjalan melalui 94 cubaan semula dan hampir tiga jam. I
 - nazzysar/commandcode-goat-ecosystem-sess, transkrip sesi — https://github.com/nazzysar/commandcode-goat-ecosystem-sess (checked 2026-11-23)
 - nazzysar/deepseek-benchmarks, repositori dan checksum — https://github.com/nazzysar/deepseek-benchmarks (checked 2026-11-23)
 
-## Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia
+## Apa yang AI agent boleh buat untuk PKS Malaysia
 
 URL: https://upahje.my/ms/articles/apa-yang-agent-boleh-buat
 Checked: 2026-11-23
@@ -2298,6 +2309,9 @@ Jejaki kegagalan sahaja. Satu baris setiap kali sesuatu silap, dengan apa yang b
 ### Apa yang menjadikan automasi pertama yang baik?
 
 Proses dengan garisan penamat jelas, kesilapan yang murah dan kelihatan, dan pemilik di sebelah sana. Membosankan itulah maksudnya: yang pertama ialah tempat anda belajar cara membeli dan cara menyelenggara, bukan tempat anda membuat penjimatan tahunan.
+---
+
+Artikel ini tiada sumber kerana ia hujah, bukan laporan: pendirian tentang proses mana yang patut diautomasikan dahulu, berdasarkan cara projek sebegini gagal. Tiada angka di sini yang merupakan ukuran dan tiada yang dipinjam daripada artikel lain.
 
 ## CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda
 
@@ -2497,7 +2511,7 @@ Boleh, dan ia projek pertama yang paling biasa. Ia juga mengekalkan percanggahan
 - LHDN, Garis Panduan e-Invois Versi 4.8 — https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf (checked 2026-11-23)
 - Friction, nota digitalisasi PKS Malaysia (artikel vendor, tiada nama penulis) — https://friction.com.my/insights/malaysia-sme-digitalisation-from-survival-to-scale-2026 (checked 2026-11-23)
 
-## Google Business Profile: medan yang menentukan sama ada anda muncul
+## Google Business Profile: medan penentu sama ada anda muncul
 
 URL: https://upahje.my/ms/articles/medan-google-business-profile
 Checked: 2026-11-23
@@ -2598,7 +2612,7 @@ Google tidak menerbitkan tempoh pada halaman yang dibaca untuk artikel ini. Yang
 - Google, rayuan kandungan dan sekatan profil perniagaan — https://support.google.com/business/answer/13597551 (checked 2026-11-23)
 - Google, rujukan API Business Profile (sumber locations) — https://developers.google.com/my-business/reference/rest/v4/accounts.locations (checked 2026-11-23)
 
-## Agent harness, AI harness, agent framework: apa maksud istilah ini
+## Agent harness, AI harness, agent framework: maksudnya
 
 URL: https://upahje.my/ms/articles/agent-harness-atau-ai-harness
 Checked: 2026-11-19
@@ -2669,7 +2683,7 @@ Tidak. Perkataan itu menerangkan fungsi, bukan lesen. Harness boleh jadi proprie
 - Repositori dan laman OpenBot — https://openbot.run/ (checked 2026-11-19)
 - Laman MausBot — https://mausbot.com/ (checked 2026-11-19)
 
-## Apa itu agent harness, dan apa yang dilakukannya dengan permintaan anda
+## Apa itu agent harness, dan apa yang ia buat
 
 URL: https://upahje.my/ms/articles/apa-itu-agent-harness
 Checked: 2026-11-19
@@ -2742,8 +2756,9 @@ Harness merekodkan `request/header` dan `request/context` bagi setiap step, jadi
 ### Sources
 
 - Metadata pakej DeepSeek Harness (@deepseek-ai/dsh 0.2.2-rc.1, dipasang pada mesin ini) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
+- DeepSeek API docs, panggilan API pertama — https://api-docs.deepseek.com/ (checked 2026-11-24)
 
-## Apa itu API, dijelaskan untuk pemilik perniagaan kecil Malaysia
+## Apa itu API, untuk pemilik perniagaan kecil Malaysia
 
 URL: https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia
 Checked: 2026-11-19
@@ -2942,7 +2957,7 @@ Kadar tahunan Claude ialah USD 17 sebulan berbanding USD 20 bulanan, iaitu RM69.
 - Anthropic, harga API Claude — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-19)
 - Bank Negara Malaysia, API kadar pertukaran awam (kadar tengah USD/MYR 4.1145) — https://api.bnm.gov.my/public/exchange-rate (checked 2026-11-19)
 
-## Model terbuka: Qwen, DeepSeek, Mistral dan Kimi, dan apa yang dibenarkan oleh lesennya
+## Qwen, DeepSeek, Mistral, Kimi: apa lesen benarkan
 
 URL: https://upahje.my/ms/articles/beza-model-terbuka
 Checked: 2026-11-19
@@ -3028,7 +3043,7 @@ Tidak, dan bagi kebanyakan perniagaan menyewa menang kerana nod itu mahal dan te
 - Moonshot AI, harga chat Kimi — https://platform.moonshot.ai/docs/pricing/chat (checked 2026-11-19)
 - Mistral AI, harga inferens — https://docs.mistral.ai/inference/pricing.md (checked 2026-11-19)
 
-## Claude, ChatGPT, Gemini dan Grok: apa sebenarnya beza antara model tertutup
+## Claude, ChatGPT, Gemini dan Grok: apa yang berbeza
 
 URL: https://upahje.my/ms/articles/beza-model-tertutup
 Checked: 2026-11-19
@@ -3149,7 +3164,7 @@ Hanya dengan amaran. Google menjualnya melalui bundel yang merangkumi storan dan
 - OpenAI, input fail — https://developers.openai.com/api/docs/guides/file-inputs (checked 2026-11-19)
 - xAI, function calling — https://docs.x.ai/developers/tools/function-calling (checked 2026-11-19)
 
-## Cara menulis brief kerja automasi supaya anda tidak bayar dua kali
+## Cara menulis brief kerja automasi
 
 URL: https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi
 Checked: 2026-11-19
@@ -3245,8 +3260,11 @@ Dapatkan satu contoh sebenar dahulu. Eksport laporan atau baris yang anda mahu d
 ### Adakah harga tetap sentiasa lebih baik daripada ikut jam?
 
 Tidak sentiasa, tetapi bagi kerja jenis ini biasanya ya, kerana skopnya boleh ditulis. Harga ikut jam sesuai apabila skop memang tidak dapat diketahui di awal, seperti menyiasat mengapa perkhidmatan pihak ketiga gagal. Jika brief itu jelas dan sebut harga masih ikut jam sahaja, tanya bahagian mana yang belum diketahui.
+---
 
-## Harness agent disusun: empat CLI yang dipasang pada satu mesin
+Artikel ini tiada sumber kerana ia prosedur kami sendiri, bukan laporan: cara kami menempah kerja automasi dan brief yang kami berikan. Tiada piawaian terbitan atau dokumen vendor yang digambarkan, dan tiada angka di sini yang merupakan ukuran.
+
+## Harness agent disusun: empat CLI pada satu mesin
 
 URL: https://upahje.my/ms/articles/harness-agent-disusun
 Checked: 2026-11-19
@@ -3354,7 +3372,7 @@ Kerana pembeli tetap perlu memilih minggu ini, dan kaedah yang dinyatakan berser
 - CLI Codex pada mesin ini (versi dilaporkan oleh binari) — https://github.com/openai/codex (checked 2026-11-19)
 - CLI OpenCode pada mesin ini (versi dilaporkan oleh binari) — https://opencode.ai/docs (checked 2026-11-19)
 
-## Kos kerja automasi di Malaysia: harga yang diterbitkan, enam sumber
+## Kos kerja automasi di Malaysia: harga diterbitkan
 
 URL: https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan
 Checked: 2026-11-19
@@ -3471,7 +3489,7 @@ Tidak, dan jadual ini tidak boleh memberitahu anda perkara itu. Ia menyenaraikan
 - BlueAura Technology, kos automasi AI untuk PKS — https://www.blueaura.com.my/blog/2026-06-20-ai-automation-cost-smes-malaysia-asean/ (checked 2026-11-19)
 - freelancing.my, profil freelancer — https://freelancing.my/author/jackk/ (checked 2026-11-19)
 
-## Di mana kunci API anda diletakkan dalam harness, dan di mana ia tidak boleh ada
+## Di mana kunci API diletakkan, dan di mana tidak
 
 URL: https://upahje.my/ms/articles/kunci-api-dalam-harness
 Checked: 2026-11-19
@@ -3542,8 +3560,9 @@ Itu bergantung pada pembekal, jadi semak pembekal anda daripada menganggap. Kunc
 ### Sources
 
 - Metadata pakej DeepSeek Harness (tingkah laku stor credentials yang diperhatikan pada mesin ini) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
+- OpenAI, amalan terbaik keselamatan kunci API — https://help.openai.com/en/articles/5112595-best-practices-for-api-key-safety (checked 2026-11-24)
 
-## Harness agent: siapa yang membuatnya, dan apa yang benar-benar sumber terbuka
+## Harness agent: siapa buat, mana satu sumber terbuka
 
 URL: https://upahje.my/ms/articles/landskap-harness-agent-sumber-terbuka
 Checked: 2026-11-19
@@ -3626,7 +3645,7 @@ Tidak. Harness dan model ialah dua perkara berasingan, dan perpecahannya berlaku
 - OpenAI, pengenalan Dots — https://openai.com/index/introducing-dots/ (checked 2026-11-19)
 - Metadata pakej DeepSeek Harness, dipasang pada mesin ini — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
 
-## Lima kemahiran pendapatan sampingan di Malaysia yang benar-benar membayar pada 2026
+## Lima kemahiran sampingan yang bayar pada 2026
 
 URL: https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026
 Checked: 2026-11-19
@@ -3735,7 +3754,7 @@ Boleh, dan senarai itu menunjukkan ia biasa: peranan video RM2,500 menggabungkan
 - freelancing.my, senarai ujian bahasa Melayu — https://freelancing.my/project/melayu-language-testing-for-ai-application/ (checked 2026-11-19)
 - freelancing.my, senarai penguji aplikasi tempatan — https://freelancing.my/project/local-app-testers-needed-malaysians-only/ (checked 2026-11-19)
 
-## Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia
+## Model terbuka atau tertutup: apa PKS boleh jalankan
 
 URL: https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia
 Checked: 2026-11-19
@@ -3820,7 +3839,7 @@ Hanya jika perkakasan itu berada di Malaysia. Menyewa GPU di wilayah lain memind
 - OpenAI, harga API (kadar setiap juta token) — https://developers.openai.com/api/docs/pricing (checked 2026-11-19)
 - DigitalOcean, harga GPU Droplets — https://www.digitalocean.com/pricing/gpu-droplets (checked 2026-11-19)
 
-## Perlukan API, atau cukup spreadsheet?
+## API atau spreadsheet: pilih ikut jumlah
 
 URL: https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet
 Checked: 2026-11-19
@@ -3880,3 +3899,6 @@ Tidak semestinya. Spreadsheet dalam pemacu kongsi dengan kawalan akses ialah too
 ### Bagaimana jika tool sedia ada pasukan saya sudah ada API?
 
 Maka keputusannya menyempit kepada sama ada ada orang yang ada masa untuk menyambungkannya. API yang tiada siapa sambungkan tidak bernilai apa-apa, dan tool tanpa API yang digunakan setiap hari lebih bernilai daripada tool yang lebih baik tetapi tidak digunakan.
+---
+
+Artikel ini tiada sumber kerana ia hujah daripada kes, bukan laporan: antara dua cara, mana lebih sesuai dengan jumlah anda. Tiada penanda aras awam bagi kos pemaju Malaysia menyambung API, jadi tiada angka kos dicetak di sini dan tiada yang dipinjam.

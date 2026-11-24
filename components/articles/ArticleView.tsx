@@ -159,6 +159,22 @@ export default function ArticleView({ article, draftBanner }: { article: any; dr
               </section>
             )}
 
+            {(article.changelog?.length ?? 0) > 0 && (
+              <section aria-labelledby="changelog" style={{ maxWidth: 'var(--measure)', marginTop: 'var(--space-sources)' }}>
+                <h2 id="changelog" className="type-small" style={{ color: 'var(--ui-ink)', fontWeight: 600 }}>
+                  {article.lang === 'ms' ? 'Log perubahan' : 'Changelog'}
+                </h2>
+                <ul className="mt-4 space-y-2 type-small" style={{ color: 'var(--ui-body)' }}>
+                  {article.changelog!.map((entry) => (
+                    <li key={`${entry.date}-${entry.note}`} className="flex gap-3">
+                      <time dateTime={entry.date} className="shrink-0 tabular-nums" style={{ color: 'var(--ui-muted)' }}>{entry.date}</time>
+                      <span className="min-w-0">{cleanText(entry.note)}</span>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
+
             {related.length > 0 && (
               <section aria-labelledby="related" style={{ maxWidth: 'var(--measure)', marginTop: 'var(--space-section)' }}>
                 <h2 id="related" className="type-h3" style={{ color: 'var(--ui-ink)' }}>{copy.related}</h2>
