@@ -20,8 +20,8 @@ sources:
   - title: "Anthropic, Claude API pricing (Claude Haiku 5.5)"
     url: "https://docs.claude.com/en/docs/about-claude/pricing"
     checked: 2026-11-23
-  - title: "Bank Negara Malaysia, public exchange-rate API (USD/MYR middle rate 4.1145, 19 November 2026)"
-    url: "https://api.bnm.gov.my/public/exchange-rate"
+  - title: "Bank Negara Malaysia, exchange rates (the USD middle rate quoted is the one published 19 November 2026; the page shows the latest rate)"
+    url: "https://www.bnm.gov.my/exchange-rates"
     checked: 2026-11-23
   - title: "Pang Jun Han, AI automation pricing (published project rates)"
     url: "https://pangjunhan.vercel.app/ai-automation"

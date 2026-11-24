@@ -1,6 +1,6 @@
 ---
 title: "Jangan tulis semula laman anda. Tulis semula 5% itu."
-description: "Dua repo MIT lima hari selang, 11,327 bintang, nasihat bertentangan untuk aplikasi lambat. Perselisihan itu menunjukkan pembetulan mana yang diperlukan."
+description: "Dua repo MIT lima hari selang, 11,986 bintang pada 24 November 2026, nasihat bertentangan untuk aplikasi lambat. Perselisihan itu menentukan pembetulan."
 slug: tulis-semula-lima-peratus
 translationKey: rewrite-the-five-percent
 format: teardown
@@ -26,13 +26,13 @@ sources:
 
 # Jangan tulis semula laman anda. Tulis semula 5% itu.
 
-Dua repositori diterbitkan lima hari selang membawa 11,327 bintang antara keduanya dan memberi nasihat bertentangan. Satu berkata pindahkan seluruh aplikasi ke Rust, sekeping demi sekeping. Satu lagi berkata pindahkan hanya 5% yang lambat. Kedua-duanya MIT. Kedua-duanya betul, dan yang menentukan pilihan anda bukanlah stack anda.
+Dua repositori diterbitkan lima hari selang membawa 11,986 bintang antara keduanya setakat 24 November 2026, dan memberi nasihat bertentangan. Satu berkata pindahkan seluruh aplikasi ke Rust, sekeping demi sekeping. Satu lagi berkata pindahkan hanya 5% yang lambat. Kedua-duanya MIT. Kedua-duanya betul, dan yang menentukan pilihan anda bukanlah stack anda.
 
 ## Dua repo MIT, lima hari selang, berhujah pembetulan bertentangan
 
-`rust-anything` dicipta pada 16 November 2026 dan mempunyai 8,516 bintang. Penerangannya janji tentang keseluruhan aplikasi: tulis semula dalam Rust sekeping demi sekeping, disemak terhadap tingkah laku asal. README-nya mendakwa satu pindahan: Prettier, "19x faster", dengan "15,861 of 17,224 recorded runs" dalam Rust dan setiap larian byte-identical.
+`rust-anything` dicipta pada 16 November 2026 dan mempunyai 8,782 bintang setakat 24 November 2026. Penerangannya janji tentang keseluruhan aplikasi: tulis semula dalam Rust sekeping demi sekeping, disemak terhadap tingkah laku asal. README-nya mendakwa satu pindahan: Prettier, "19x faster", dengan "15,861 of 17,224 recorded runs" dalam Rust dan setiap larian byte-identical.
 
-`fast-anything` dicipta pada 21 November 2026 dengan 2,811 bintang. Penerangannya menentang skop repo pertama: jangan tulis semula dalam Rust, tulis semula 5% yang lambat, pindahkan fungsi panas, buktikan tingkah laku sama.
+`fast-anything` dicipta pada 21 November 2026 dengan 3,204 bintang setakat 24 November 2026. Penerangannya menentang skop repo pertama: jangan tulis semula dalam Rust, tulis semula 5% yang lambat, pindahkan fungsi panas, buktikan tingkah laku sama.
 
 Kedua-duanya berselisih tentang skop, iaitu tempat wang pergi.
 

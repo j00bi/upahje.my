@@ -17,19 +17,19 @@ changelog:
 sources:
   - title: "Claude, pricing"
     url: "https://claude.com/pricing"
-    checked: 2026-11-19
+    checked: 2026-11-24
   - title: "ChatGPT, pricing"
     url: "https://chatgpt.com/pricing"
-    checked: 2026-11-19
+    checked: 2026-11-24
   - title: "GitHub Copilot, plans"
     url: "https://github.com/features/copilot/plans"
-    checked: 2026-11-19
+    checked: 2026-11-24
   - title: "Anthropic, Claude API pricing"
     url: "https://docs.claude.com/en/docs/about-claude/pricing"
-    checked: 2026-11-19
-  - title: "Bank Negara Malaysia, public exchange-rate API (USD/MYR middle rate 4.1145)"
-    url: "https://api.bnm.gov.my/public/exchange-rate"
-    checked: 2026-11-19
+    checked: 2026-11-24
+  - title: "Bank Negara Malaysia, exchange rates (the USD middle rate quoted is the one published 19 November 2026; the page shows the latest rate)"
+    url: "https://www.bnm.gov.my/exchange-rates"
+    checked: 2026-11-24
 ---
 
 # What RM100 a month buys you in AI, in Malaysia

@@ -20,8 +20,8 @@ sources:
   - title: "Anthropic, harga API Claude (Claude Haiku 5.5)"
     url: "https://docs.claude.com/en/docs/about-claude/pricing"
     checked: 2026-11-23
-  - title: "Bank Negara Malaysia, API kadar pertukaran awam (kadar tengah USD/MYR 4.1145, 19 November 2026)"
-    url: "https://api.bnm.gov.my/public/exchange-rate"
+  - title: "Bank Negara Malaysia, kadar pertukaran (kadar tengah USD yang dipetik ialah kadar yang diterbitkan 19 November 2026; halaman memaparkan kadar terkini)"
+    url: "https://www.bnm.gov.my/exchange-rates"
     checked: 2026-11-23
   - title: "Pang Jun Han, harga automasi AI (kadar projek yang diterbitkan)"
     url: "https://pangjunhan.vercel.app/ai-automation"
