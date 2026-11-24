@@ -14,9 +14,9 @@ cardFigure: "Three field experiments, no published effect size"
 canonical: https://upahje.my/en/articles/price-endings-nine
 draft: true
 review:
-  state: rejected
-  reason: "other"
-  at: 2026-11-24T04:27:56.918Z
+  state: needs-work
+  note: "the hook and the way its written, we need more punch"
+  at: 2026-11-24T04:59:28.799Z
 changelog:
   - date: 2026-11-24
     note: "First published."
