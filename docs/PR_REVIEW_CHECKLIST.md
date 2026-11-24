@@ -77,3 +77,6 @@
 ---
 
 *Use this checklist on every PR. Consistency > speed.*
+
+## Review token
+The review routes read `REVIEW_TOKEN` from the environment, so a change to that variable only takes effect on the next deployment. Rotate it by updating the Vercel env var, then shipping any commit.
