@@ -79,5 +79,14 @@
     "note": null,
     "decided_at": "2026-11-24T05:00:32.626Z",
     "commit": "e36c66c45259f0155e9fb07c48ddbd5dcb595304"
+  },
+  {
+    "slug": "hujung-harga-sembilan",
+    "lang": "ms",
+    "action": "reject",
+    "reason": "weak-hook",
+    "note": null,
+    "decided_at": "2026-11-24T05:00:51.058Z",
+    "commit": "7b82dcf3b8b43a8367b6ffc7caf17ad81e16bf14"
   }
 ]
