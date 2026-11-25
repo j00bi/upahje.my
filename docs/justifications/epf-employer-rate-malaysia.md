@@ -19,6 +19,8 @@
 | 13 | "A RM3,000 Part E wage is not printed on the page, so this article does not state its schedule amount." | - | our reading, this machine | 2026-11-24 | estimate: absence check of the KWSP page and its worked examples |
 | 14 | "the 12-versus-13 question is the easy half" | - | - | - | opinion: stated once in the reader's interest |
 
+| 15 | "One sen above it, at RM5,000.01, moves the employer to 12%" | https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution | KWSP | 2026-11-24 | source: the rate table prints the lower band as a wage below RM5,000.01 and the upper band as more than RM5,000.00, so the boundary is a sen rather than a ringgit |
+
 ## Sections
 
 | H2 | why this section exists |
