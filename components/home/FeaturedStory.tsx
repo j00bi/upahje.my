@@ -7,6 +7,7 @@ type Article = {
   title: string
   description: string
   date: string
+  author: string
   readingTime: number
   category: string
 }
@@ -34,7 +35,11 @@ export default function FeaturedStory({ article, copy }: { article: Article; cop
             <span aria-hidden>→</span>
           </Link>
         </div>
-        <dl className="grid grid-cols-2 gap-6 lg:grid-cols-1" style={{ borderTop: '1px solid var(--ui-rule)', paddingTop: 'var(--space-4)' }}>
+        <dl className="grid grid-cols-2 gap-6 lg:grid-cols-3" style={{ borderTop: '1px solid var(--ui-rule)', paddingTop: 'var(--space-4)' }}>
+          <div>
+            <dt className="type-label" style={{ color: 'var(--ui-muted)' }}>{article.lang === 'ms' ? 'Oleh' : 'By'}</dt>
+            <dd className="type-small mt-1" style={{ color: 'var(--ui-ink)' }}>{article.author}</dd>
+          </div>
           <div>
             <dt className="type-label" style={{ color: 'var(--ui-muted)' }}>{copy.published}</dt>
             <dd className="type-small mt-1" style={{ color: 'var(--ui-ink)' }}>
