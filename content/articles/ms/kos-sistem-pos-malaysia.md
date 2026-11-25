@@ -80,6 +80,6 @@ Pendapat saya, dinyatakan sekali: bayar untuk laluan e-invoice, bukan untuk mesi
 
 **Bacaan lanjut**
 
-[Pekerja pertama bergaji RM3,000 berharga RM3,448.50](https://upahje.my/en/articles/first-hire-cost-malaysia)
+[Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
 [Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)

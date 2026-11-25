@@ -52,13 +52,13 @@ The [VERIFY] cells are not laziness: the vendors' feature lists did not render f
 
 None of the three vendors prints a hardware price on the pricing page read, so a terminal, a drawer and a receipt printer are separate purchases or separate lines in a quote. The [VERIFY] cells in the table exist because that answer was not on the page, not because it is unimportant.
 
-A shop that budgets RM122 for software and RM0 for hardware has budgeted half a till.
+A shop that budgets RM122 for software and RM0 for hardware has budgeted half a till. Ask whether the quote is rent, purchase or lease, because the three end at different 24-month totals.
 
 ## Why the POS e-invoice question is the expensive one
 
 A till that is not wired to MyInvois leaves the filing to whoever does the books, and that is the manual retyping the whole exercise is meant to remove. A POS that is documented as compliant is worth a higher monthly fee than a cheaper till plus a worker typing invoices twice.
 
-The free plan that does document e-Invoice is Bukku's Launch, and it is an accounting product with 100 MB of storage and 100 emails a month. It files e-invoices; it does not take payment at a counter or print a receipt.
+The free plan that does document e-Invoice is Bukku's Launch, and it is an accounting product with 100 MB of storage and 100 emails a month. It files e-invoices; it does not take payment at a counter or print a receipt, and that difference decides whether it is a solution for your shop or only for your bookkeeping.
 
 ## Do the daily prices add up to the monthly ones
 
