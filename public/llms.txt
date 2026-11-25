@@ -20,6 +20,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 ## English articles
 
 - [EPF contribution: 12% or 13%, and RM5,000 is the line](https://upahje.my/en/articles/epf-employer-rate-malaysia): The employer rate is 13% at RM5,000 and below and 12% above it, but the contribution comes from the Third Schedule and rounds up, not from a calculator.
+- [The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/gpu-rental-cost-malaysia): Runpod lists an H100 SXM at USD 4.39 an hour and Vast.ai at USD 1.73 for the same silicon. The spread is billing model and idle capacity, not hardware.
 - [HRD Corp levy: 1%, 0.5%, or nothing at all](https://upahje.my/en/articles/hrd-corp-levy-malaysia): The levy starts at five Malaysian employees and is compulsory at ten, at 0.5% or 1% of monthly wages. A first hire carries none of it.
 - [POS: RM122 a month, and no free tier files e-invoice](https://upahje.my/en/articles/pos-system-cost-malaysia): StoreHub starts at RM122 and Qashier charges by the day. No free POS plan documents MyInvois compliance; the RM0 plan that does is accounting software.
 - [SOCSO stops at RM6,000, and nobody tells the new hire](https://upahje.my/en/articles/socso-employer-rate-malaysia): Employer SOCSO is 1.75% and employee 0.5% up to a RM6,000 ceiling, with EIS 0.2% each side. Above the cap a raise costs the employer nothing extra.
@@ -54,6 +55,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 - [EPF majikan: 12% atau 13%, dan RM5,000 garisnya](https://upahje.my/ms/articles/kadar-caruman-epf-majikan): Kadar majikan 13% pada RM5,000 ke bawah dan 12% ke atas, tetapi caruman datang daripada Jadual Ketiga dan dibundarkan ke atas, bukan daripada kalkulator.
 - [SOCSO berhenti pada RM6,000, dan tiada siapa beritahu](https://upahje.my/ms/articles/kadar-socso-majikan-malaysia): SOCSO majikan 1.75% dan pekerja 0.5% sehingga siling RM6,000, dengan EIS 0.2% setiap pihak. Melebihi siling, kenaikan gaji tidak menambah kos majikan.
+- [H100 yang sama disewa RM11.89 sejam, atau RM7.12](https://upahje.my/ms/articles/kos-sewa-gpu-malaysia): Runpod menyenaraikan H100 SXM pada USD 4.39 sejam dan Vast.ai pada USD 1.73 untuk cip yang sama. Jurang itu model bil dan kapasiti terbiar, bukan perkakasan.
 - [POS: RM122 sebulan, dan tiada tier percuma fail e-invoice](https://upahje.my/ms/articles/kos-sistem-pos-malaysia): StoreHub bermula RM122 dan Qashier mengenakan caj harian. Tiada pelan POS percuma mendokumen pematuhan MyInvois; pelan RM0 yang berbuat begitu ialah perakaunan.
 - [Levi HRD Corp: 1%, 0.5%, atau tiada sama sekali](https://upahje.my/ms/articles/levi-hrd-corp-malaysia): Levi bermula pada lima pekerja Malaysia dan wajib pada sepuluh, pada 0.5% atau 1% gaji bulanan. Pekerja pertama tidak menanggungnya.
 - [Klip percuma berharga satu malam, bukan RM61.78](https://upahje.my/ms/articles/klip-video-sendiri): OpusClip mengenakan USD 15, iaitu RM61.78 ditukar. Dua repo MIT memotong klip pada mesin sendiri tanpa bayaran, dan sari kata Melayu belum dibuktikan.

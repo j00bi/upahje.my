@@ -81,6 +81,80 @@ My opinion, stated once: the 12-versus-13 question is the easy half. The half th
 - KWSP, EPF Act 1991 Third Schedule (contribution rates effective October 2025) — https://www.kwsp.gov.my/documents/d/guest/third_schedule_from_-1-october-2025 (checked 2026-11-25)
 - KWSP, contribution for non-Malaysian citizen employees (2% employer, 2% employee, from the October 2025 salary) — https://www.kwsp.gov.my/en/employer/responsibilities/non-malaysian-citizen-employees (checked 2026-11-25)
 
+## The same H100 rents for RM11.89 an hour, or RM7.12
+
+URL: https://upahje.my/en/articles/gpu-rental-cost-malaysia
+Checked: 2026-11-25
+
+An Nvidia H100 SXM rents for USD 4.39 an hour on Runpod and from USD 1.73 on Vast.ai. At the reference rate of RM4.1155 to the dollar, that is RM18.07 against RM7.12 for the same model of card. Nothing about the hardware differs. The price differs because one marketplace sells a reservation and the other sells whatever a stranger's machine happens to be idle.
+
+## The published rates, converted
+
+Runpod publishes a fixed card per model. Vast publishes a floor and a median, because each listing is a different host with a different reliability record. Both are quoted below in dollars as printed, then in ringgit at the 24 November 2026 rate.
+
+| Card | Runpod, as printed | In ringgit | Vast from | In ringgit | Vast median |
+| --- | --- | --- | --- | --- | --- |
+| H100 SXM, 80 GB | USD 4.39/hr | RM18.07 | USD 1.73/hr | RM7.12 | USD 2.40/hr |
+| H100 PCIe, 80 GB | USD 2.89/hr | RM11.89 | USD 2.31/hr | RM9.51 | USD 2.53/hr |
+| H100 NVL, 94 GB | USD 3.19/hr | RM13.13 | USD 2.57/hr | RM10.58 | — |
+| B200, 180 GB | USD 7.99/hr | RM32.88 | — | — | — |
+| RTX A5000, 24 GB | USD 0.27/hr | RM1.11 | — | — | — |
+
+The H100 PCIe row is the interesting one: the gap narrows from 2.5 times to 1.25 times the moment you compare the same variant rather than the flagship. A firm that prices a project off the fastest card on one platform and the cheapest card on another is comparing two different products.
+
+## Per-second billing is where the money actually moves
+
+Runpod bills per second on its secure cloud, and Vast bills to the second with no minimum hours. That matters more than the headline rate for work that finishes early, because a training run that ends after 18 minutes should not cost an hour.
+
+An 18-minute run on an H100 PCIe at RM11.89 an hour comes to RM3.57. The same run bought in whole hours costs RM11.89, and the difference across twenty experiments is RM166 rather than RM714.
+
+## A month of continuous rent, in ringgit
+
+Nobody runs an H100 continuously to serve a small business, but the monthly figure is the one that ends the argument about buying a card. At 720 hours:
+
+| Configuration | Monthly, in ringgit |
+| --- | --- |
+| Vast H100 SXM at the floor | RM5,126 |
+| Vast H100 SXM at the median | RM7,114 |
+| Runpod H100 PCIe | RM8,561 |
+| Runpod H100 SXM | RM13,010 |
+| Runpod B200 | RM23,674 |
+
+A single H100 card bought outright costs more than a year of the cheapest monthly rent above, before power, cooling and the fact that it is obsolete the moment the next generation ships. That arithmetic is the whole case for renting, and it holds at every row in the table.
+
+## What the cheap listings cost you
+
+The floor price on a marketplace is a machine in someone's data centre, and the listing tells you which. Check three things before running anything with a deadline:
+
+1. **Interruptible or not.** The lowest rates are usually preemptible, which means the job stops when the host needs the card back.
+2. **Network speed.** A cheap card behind a slow link is the wrong tool for anything that moves a dataset.
+3. **Verification and reliability score.** A host with a short track record is cheaper for a reason, and an interrupted 6-hour run costs more than the difference in rate.
+
+Runpod's fixed price buys a known card and a known region. Vast's floor buys capacity somebody else did not want this hour. Both are legitimate purchases; they are not the same purchase.
+
+## What to do before you rent anything
+
+1. Price the same card variant on both platforms, not the flagship on one and the budget card on the other.
+2. Convert at a rate you can cite, and write the date next to it, because a ringgit figure without a date is a rumour.
+3. Estimate the run in minutes, not hours, and check whether billing is per second.
+4. For anything with a deadline, price the interruptible rate out of the comparison entirely.
+
+My opinion, stated once: the ringgit figure that matters for a Malaysian business is not the hourly rate, it is the cost of the experiment that fails. At RM7 an hour you can afford to be wrong four times on a Saturday, and that is worth more than a guarantee of the fastest card.
+
+---
+
+**Read next**
+
+[What an AI agent can do for a small business](https://upahje.my/en/articles/what-an-ai-agent-can-do)
+
+[More buying guides, with prices in ringgit](https://upahje.my/en/glossary)
+
+### Sources
+
+- Runpod, GPU cloud pricing (H100 PCIe USD 2.89/hr, H100 SXM USD 4.39/hr, H100 NVL USD 3.19/hr, B200 USD 7.99/hr, RTX A5000 USD 0.27/hr) — https://www.runpod.io/pricing (checked 2026-11-25)
+- Vast.ai, GPU pricing (H100 SXM from USD 1.73/hr, median USD 2.40/hr; H100 PCIe from USD 2.31/hr; billed to the second, no minimum hours) — https://vast.ai/pricing (checked 2026-11-25)
+- Frankfurter, USD to MYR reference rate 4.1155 for 24 November 2026 — https://api.frankfurter.dev/v1/latest?base=USD&symbols=MYR (checked 2026-11-25)
+
 ## HRD Corp levy: 1%, 0.5%, or nothing at all
 
 URL: https://upahje.my/en/articles/hrd-corp-levy-malaysia
@@ -2808,6 +2882,80 @@ Pendapat saya, dinyatakan sekali: siling itu satu-satunya bahagian yang mengubah
 
 - PERKESO, caruman (Kategori Pertama 1.75%/0.5%, Kategori Kedua 1.25%, EIS 0.4% dibahagi 0.2/0.2) — https://www.perkeso.gov.my/en/our-services/employer-employee/contributions.html (checked 2026-11-25)
 - PERKESO, kadar caruman (siling gaji RM6,000 berkuat kuasa 1 Oktober 2024) — https://www.perkeso.gov.my/en/our-services/employer-employee/kadar-caruman.html (checked 2026-11-25)
+
+## H100 yang sama disewa RM11.89 sejam, atau RM7.12
+
+URL: https://upahje.my/ms/articles/kos-sewa-gpu-malaysia
+Checked: 2026-11-25
+
+Nvidia H100 SXM disewa pada USD 4.39 sejam di Runpod dan dari USD 1.73 di Vast.ai. Pada kadar rujukan RM4.1155 sedolar, itu RM18.07 berbanding RM7.12 untuk model kad yang sama. Tiada apa pada perkakasan yang berbeza. Harga berbeza kerana satu pasaran menjual tempahan dan satu lagi menjual mesin orang lain yang kebetulan terbiar.
+
+## Kadar yang dicetak, ditukar
+
+Runpod menetapkan satu harga tetap bagi setiap model. Vast menyiarkan harga lantai dan median, kerana setiap senarai ialah hos berbeza dengan rekod kebolehpercayaan berbeza. Kedua-duanya dipetik dalam dolar seperti dicetak, kemudian dalam ringgit pada kadar 24 November 2026.
+
+| Kad | Runpod, seperti dicetak | Dalam ringgit | Vast dari | Dalam ringgit | Median Vast |
+| --- | --- | --- | --- | --- | --- |
+| H100 SXM, 80 GB | USD 4.39/jam | RM18.07 | USD 1.73/jam | RM7.12 | USD 2.40/jam |
+| H100 PCIe, 80 GB | USD 2.89/jam | RM11.89 | USD 2.31/jam | RM9.51 | USD 2.53/jam |
+| H100 NVL, 94 GB | USD 3.19/jam | RM13.13 | USD 2.57/jam | RM10.58 | — |
+| B200, 180 GB | USD 7.99/jam | RM32.88 | — | — | — |
+| RTX A5000, 24 GB | USD 0.27/jam | RM1.11 | — | — | — |
+
+Baris H100 PCIe yang paling menarik: jurang mengecil daripada 2.5 kali kepada 1.25 kali sebaik sahaja anda membandingkan varian yang sama dan bukan kad perdana. Firma yang meletakkan harga projek berdasarkan kad terpantas di satu platform dan kad termurah di platform lain sedang membandingkan dua produk berbeza.
+
+## Bil mengikut saat ialah tempat wang sebenarnya bergerak
+
+Runpod membil mengikut saat di awan selamatnya, dan Vast membil mengikut saat tanpa minimum jam. Itu lebih penting daripada kadar utama bagi kerja yang siap awal, kerana latihan yang berakhir selepas 18 minit tidak sepatutnya berharga satu jam.
+
+Larian 18 minit pada H100 PCIe dengan RM11.89 sejam berjumlah RM3.57. Larian yang sama dibeli dalam jam penuh berharga RM11.89, dan perbezaan itu merentasi dua puluh eksperimen ialah RM166 berbanding RM714.
+
+## Sewa sebulan berterusan, dalam ringgit
+
+Tiada sesiapa menjalankan H100 tanpa henti untuk melayani perniagaan kecil, tetapi angka bulanan itulah yang menamatkan perdebatan tentang membeli kad. Pada 720 jam:
+
+| Konfigurasi | Sebulan, dalam ringgit |
+| --- | --- |
+| Vast H100 SXM pada lantai | RM5,126 |
+| Vast H100 SXM pada median | RM7,114 |
+| Runpod H100 PCIe | RM8,561 |
+| Runpod H100 SXM | RM13,010 |
+| Runpod B200 | RM23,674 |
+
+Satu kad H100 yang dibeli terus berharga lebih daripada setahun sewa termurah di atas, sebelum bil elektrik, penyejukan, dan fakta bahawa ia ketinggalan zaman sebaik generasi seterusnya keluar. Aritmetik itu seluruh hujah untuk menyewa, dan ia kekal pada setiap baris dalam jadual.
+
+## Apa yang kos senarai murah
+
+Harga lantai di pasaran ialah mesin di pusat data seseorang, dan senarai itu memberitahu anda siapa. Semak tiga perkara sebelum menjalankan apa-apa yang ada tarikh akhir:
+
+1. **Boleh diganggu atau tidak.** Kadar terendah biasanya preemptible, bermakna kerja berhenti apabila hos memerlukan kad itu kembali.
+2. **Kelajuan rangkaian.** Kad murah di sebalik pautan perlahan ialah alat yang salah bagi apa-apa yang memindahkan set data.
+3. **Pengesahan dan skor kebolehpercayaan.** Hos dengan rekod pendek lebih murah atas sebab tertentu, dan larian 6 jam yang tergendala berharga lebih daripada perbezaan kadar itu.
+
+Harga tetap Runpod membeli kad yang diketahui dan wilayah yang diketahui. Harga lantai Vast membeli kapasiti yang orang lain tidak mahu pada jam itu. Kedua-duanya pembelian yang sah; ia bukan pembelian yang sama.
+
+## Apa yang perlu dibuat sebelum menyewa
+
+1. Letakkan harga varian kad yang sama di kedua-dua platform, bukan kad perdana di satu dan kad bajet di satu lagi.
+2. Tukar pada kadar yang boleh dipetik, dan tulis tarikh di sebelahnya, kerana angka ringgit tanpa tarikh ialah khabar angin.
+3. Anggarkan larian dalam minit, bukan jam, dan semak sama ada bil mengikut saat.
+4. Bagi apa-apa yang ada tarikh akhir, keluarkan kadar preemptible daripada perbandingan sepenuhnya.
+
+Pendapat saya, dinyatakan sekali: angka ringgit yang penting bagi perniagaan Malaysia bukan kadar sejam, tetapi kos eksperimen yang gagal. Pada RM7 sejam anda mampu tersilap empat kali pada hari Sabtu, dan itu lebih bernilai daripada jaminan mendapat kad terpantas.
+
+---
+
+**Read next**
+
+[Apa yang ejen AI boleh buat untuk perniagaan kecil](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat)
+
+[Lebih banyak panduan pembelian, dengan harga dalam ringgit](https://upahje.my/ms/glossary)
+
+### Sources
+
+- Runpod, harga awan GPU (H100 PCIe USD 2.89/jam, H100 SXM USD 4.39/jam, H100 NVL USD 3.19/jam, B200 USD 7.99/jam, RTX A5000 USD 0.27/jam) — https://www.runpod.io/pricing (checked 2026-11-25)
+- Vast.ai, harga GPU (H100 SXM dari USD 1.73/jam, median USD 2.40/jam; H100 PCIe dari USD 2.31/jam; dibil mengikut saat, tiada minimum jam) — https://vast.ai/pricing (checked 2026-11-25)
+- Frankfurter, kadar rujukan USD ke MYR 4.1155 bagi 24 November 2026 — https://api.frankfurter.dev/v1/latest?base=USD&symbols=MYR (checked 2026-11-25)
 
 ## POS: RM122 sebulan, dan tiada tier percuma fail e-invoice
 
