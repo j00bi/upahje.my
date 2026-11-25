@@ -40,7 +40,7 @@ Di bawah RM6,000 caruman ialah peratusan gaji, dan pada RM6,000 ia berhenti berg
 | RM6,000 | RM105.00 | RM30.00 | RM12.00 |
 | RM8,000 | RM105.00 | RM30.00 | RM12.00 |
 
-Dua baris terakhir itulah maksudnya. Kenaikan RM2,000 tidak menambah apa-apa pada SOCSO dan EIS majikan, sebab itulah siling lebih bermakna bagi pekerja kanan daripada pekerja junior.
+Dua baris terakhir itulah maksudnya. Kenaikan RM2,000 tidak menambah apa-apa pada SOCSO dan EIS majikan, sebab itulah siling lebih bermakna bagi pekerja kanan daripada pekerja junior, dan sebab itulah sebut harga yang mendarab peratusan pada gaji tinggi melebihkan kos.
 
 ## Dua kategori, dan satu hanya melindungi kemalangan
 
@@ -52,13 +52,13 @@ Meletakkan pekerja berusia 60 tahun dalam baris Kategori Pertama membayar lebih;
 
 ## EIS berasingan, dan lebih kecil
 
-EIS ialah 0.4% keseluruhan, dibahagi 0.2% majikan dan 0.2% pekerja, dan ia berkongsi siling RM6,000. Ia bukan SOCSO dan ia tidak muncul dalam jadual SOCSO, sebab itulah ringkasan gaji yang menunjukkan satu baris "SOCSO/EIS" menyembunyikan skim mana yang menerima ringgit itu. Apabila pekerja berpindah kerja, kedua-dua rekod ini yang disemak oleh majikan baharu, jadi elakkan menggabungkannya dalam laporan anda sendiri.
+EIS ialah 0.4% keseluruhan, dibahagi 0.2% majikan dan 0.2% pekerja, dan ia berkongsi siling RM6,000. Ia bukan SOCSO dan ia tidak muncul dalam jadual SOCSO, sebab itulah ringkasan gaji yang menunjukkan satu baris "SOCSO/EIS" menyembunyikan skim mana yang menerima ringgit itu.
 
 ## Apa nilai siling itu pada dua gaji
 
 Pada RM4,500 majikan membayar RM78.75 untuk SOCSO. Pada RM7,500 majikan membayar RM105.00, iaitu 1.4%, dan pekerja membayar RM30.00, iaitu 0.4% dan bukan 0.5% pada kad kadar.
 
-Peratusan pada kad kadar ialah kadar sehingga siling, bukan kadar pada setiap gaji. Sebut harga yang mendarab 1.75% dengan gaji RM9,000 melebihkan baris SOCSO sebanyak RM52.50 sebulan, dan kesilapan sama pada EIS melebihkannya sebanyak RM6.00.
+Peratusan pada kad kadar ialah kadar sehingga siling, bukan kadar pada setiap gaji, dan itu sebabnya kiraan pada gaji tinggi perlu berhenti pada RM6,000. Sebut harga yang mendarab 1.75% dengan gaji RM9,000 melebihkan baris SOCSO sebanyak RM52.50 sebulan, dan kesilapan sama pada EIS melebihkannya sebanyak RM6.00.
 
 ## Apa yang belum disahkan di sini
 
