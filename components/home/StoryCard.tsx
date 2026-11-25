@@ -19,6 +19,19 @@ export default function StoryCard({ article, lang, copy }: { article: any; lang:
           {article.title}
         </Link>
       </h3>
+      <p
+        className="type-small mt-2"
+        style={{
+          color: 'var(--ui-body)',
+          display: '-webkit-box',
+          WebkitLineClamp: 2,
+          WebkitBoxOrient: 'vertical',
+          lineClamp: 2,
+          overflow: 'hidden',
+        }}
+      >
+        {article.description}
+      </p>
       {article.cardFigure && (
         <p className="type-small mt-2" style={{ color: 'var(--ui-ink)', fontWeight: 600 }}>{article.cardFigure}</p>
       )}

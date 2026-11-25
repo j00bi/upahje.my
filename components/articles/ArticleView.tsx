@@ -150,7 +150,6 @@ export default function ArticleView({ article, draftBanner }: { article: any; dr
                         <a href={source.url} target="_blank" rel="noopener noreferrer" className="ui-link underline decoration-1 underline-offset-2" style={{ color: 'var(--ui-ink)', fontWeight: 500 }}>
                           {cleanText(source.title)}
                         </a>
-                        <span className="block break-all" style={{ color: 'var(--ui-muted)' }}>{source.url}</span>
                         {source.checked && <span className="mt-1 block tabular-nums" style={{ color: 'var(--ui-muted)' }}>checked {source.checked}</span>}
                       </span>
                     </li>
