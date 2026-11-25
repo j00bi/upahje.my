@@ -96,4 +96,4 @@ My opinion, stated once: the 12-versus-13 question is the easy half. The half th
 
 [What a first hire costs, line by line](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
-[More definitions, explained plainly](https://upahje.my/en/articles/category/definitions)
+[More definitions, explained plainly](https://upahje.my/en/glossary)

@@ -73,13 +73,80 @@ My opinion, stated once: the 12-versus-13 question is the easy half. The half th
 
 [What a first hire costs, line by line](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
-[More definitions, explained plainly](https://upahje.my/en/articles/category/definitions)
+[More definitions, explained plainly](https://upahje.my/en/glossary)
 
 ### Sources
 
 - KWSP, employer mandatory contribution (13% and 12% bands, employee 11%, Third Schedule, 15th-of-the-month payment, Part E) — https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution (checked 2026-11-24)
 - KWSP, EPF Act 1991 Third Schedule (contribution rates effective October 2025) — https://www.kwsp.gov.my/documents/d/guest/third_schedule_from_-1-october-2025 (checked 2026-11-25)
 - KWSP, contribution for non-Malaysian citizen employees (2% employer, 2% employee, from the October 2025 salary) — https://www.kwsp.gov.my/en/employer/responsibilities/non-malaysian-citizen-employees (checked 2026-11-25)
+
+## SOCSO stops at RM6,000, and nobody tells the new hire
+
+URL: https://upahje.my/en/articles/socso-employer-rate-malaysia
+Checked: 2026-11-25
+
+An employer pays 1.75% of monthly wages into SOCSO and deducts 0.5% from the employee, up to a wage ceiling of RM6,000 that took effect on 1 October 2024. EIS is 0.2% each side, on the same ceiling. Above RM6,000 every one of those lines is flat, so a raise costs the employer nothing extra in SOCSO or EIS.
+
+## The rate follows the wage until the ceiling
+
+Below RM6,000 the contribution is a percentage of the wage, and at RM6,000 it stops moving. The table applies the published rates to four wages; the schedule amounts differ by a few sen because SOCSO is table-based, not flat arithmetic.
+
+| Monthly wage | Employer SOCSO at 1.75% | Employee SOCSO at 0.5% | EIS each side at 0.2% |
+| --- | --- | --- | --- |
+| RM3,000 | RM52.50 | RM15.00 | RM6.00 |
+| RM5,999 | RM104.98 | RM30.00 | RM12.00 |
+| RM6,000 | RM105.00 | RM30.00 | RM12.00 |
+| RM8,000 | RM105.00 | RM30.00 | RM12.00 |
+
+The last two rows are the point. A RM2,000 raise costs the employer nothing in SOCSO and nothing in EIS, which is why the cap matters more to a senior hire than to a junior one.
+
+## Two categories, and the one that covers injury only
+
+First Category, for employees under 60, covers both the employment injury scheme and the invalidity scheme at 1.75% employer and 0.5% employee.
+
+Second Category, for employees aged 60 and over, is the injury scheme only: 1.25% payable by the employer, with no employee share.
+
+Putting a 60-year-old on the First Category row overpays; putting a 25-year-old on the Second Category row leaves them uncovered for invalidity. Both mistakes are silent on a payslip and only surface when a claim is made.
+
+## EIS is separate, and smaller
+
+EIS is 0.4% in total, split 0.2% employer and 0.2% employee, and it shares the RM6,000 ceiling. It is not SOCSO and it does not appear in a SOCSO table, which is why payroll summaries that show one line for "SOCSO/EIS" hide which scheme a ringgit went to.
+
+## What the cap is worth at two wages
+
+At RM4,500 the employer pays RM78.75 in SOCSO. At RM7,500 the employer pays RM105.00, which is 1.4%, and the employee pays RM30.00, which is 0.4% rather than the headline 0.5%.
+
+The percentage printed on a rate card is a rate up to the ceiling, not a rate on every salary, and that is why the calculation on a high salary has to stop at RM6,000. A quotation that multiplies 1.75% by a RM9,000 salary overstates the SOCSO line by RM52.50 a month, and the same mistake on EIS overstates it by RM6.00.
+
+## What is not confirmed here
+
+Registration timing is deliberately not printed here: PERKESO's employer-registration page was outside what we verified for this article, so no deadline appears. Employers still have to register, and that date should be confirmed with PERKESO before the first payroll month rather than after it.
+
+Schedule amounts are also not reproduced: the table applies the percentages, and PERKESO's schedule is authoritative for the ringgit figures. If the payslip differs from your arithmetic, the schedule is right and the calculator is wrong.
+
+## What to do before the first payslip
+
+1. Put each employee in the right category before anything else.
+2. Apply the percentage up to RM6,000 and stop there.
+3. Keep EIS on its own line, because it is a different scheme.
+4. Check the schedule for the exact amount, and expect a few sen difference.
+5. Confirm the registration deadline at PERKESO directly before the first payroll.
+
+My opinion, stated once: the ceiling is the only part of this that changes how you hire. Below RM6,000 the contribution tracks the salary, but above it the scheme is a fixed cost, so the marginal cost of a senior hire is lower than a payroll spreadsheet suggests, and the marginal cost of a junior one is higher.
+
+---
+
+**Read next**
+
+[EPF employer: 12% or 13%, and RM5,000 is the line](https://upahje.my/en/articles/epf-employer-rate-malaysia)
+
+[More definitions, explained plainly](https://upahje.my/en/glossary)
+
+### Sources
+
+- PERKESO, contributions (First Category 1.75%/0.5%, Second Category 1.25%, EIS 0.4% split 0.2/0.2) — https://www.perkeso.gov.my/en/our-services/employer-employee/contributions.html (checked 2026-11-25)
+- PERKESO, contribution rate (RM6,000 wage ceiling effective 1 October 2024) — https://www.perkeso.gov.my/en/our-services/employer-employee/kadar-caruman.html (checked 2026-11-25)
 
 ## Grab and foodpanda commission rates in Malaysia (2026)
 
@@ -2537,13 +2604,80 @@ Pendapat saya, dinyatakan sekali: soalan 12 lawan 13 ialah separuh yang mudah. S
 
 [Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
-[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/articles/category/definitions)
+[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
 
 ### Sources
 
 - KWSP, caruman wajib majikan (julat 13% dan 12%, pekerja 11%, Jadual Ketiga, bayaran 15 haribulan, Bahagian E) — https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution (checked 2026-11-24)
 - KWSP, Jadual Ketiga Akta Kumpulan Wang Simpanan Pekerja 1991 (kadar caruman berkuat kuasa Oktober 2025) — https://www.kwsp.gov.my/documents/d/guest/third_schedule_from_-1-october-2025 (checked 2026-11-25)
 - KWSP, caruman untuk pekerja bukan warganegara (2% majikan, 2% pekerja, mulai gaji Oktober 2025) — https://www.kwsp.gov.my/en/employer/responsibilities/non-malaysian-citizen-employees (checked 2026-11-25)
+
+## SOCSO berhenti pada RM6,000, dan tiada siapa beritahu
+
+URL: https://upahje.my/ms/articles/kadar-socso-majikan-malaysia
+Checked: 2026-11-25
+
+Majikan membayar 1.75% daripada gaji bulanan ke SOCSO dan memotong 0.5% daripada pekerja, sehingga siling gaji RM6,000 yang berkuat kuasa 1 Oktober 2024. EIS pula 0.2% setiap pihak pada siling yang sama. Melebihi RM6,000, setiap baris itu rata, jadi kenaikan gaji tidak menambah apa-apa pada SOCSO atau EIS majikan.
+
+## Kadar mengikut gaji sehingga siling
+
+Di bawah RM6,000 caruman ialah peratusan gaji, dan pada RM6,000 ia berhenti bergerak. Jadual di bawah menggunakan kadar yang diterbitkan pada empat gaji; jumlah jadual berbeza beberapa sen kerana SOCSO berasaskan jadual, bukan aritmetik rata.
+
+| Gaji bulanan | SOCSO majikan pada 1.75% | SOCSO pekerja pada 0.5% | EIS setiap pihak pada 0.2% |
+| --- | --- | --- | --- |
+| RM3,000 | RM52.50 | RM15.00 | RM6.00 |
+| RM5,999 | RM104.98 | RM30.00 | RM12.00 |
+| RM6,000 | RM105.00 | RM30.00 | RM12.00 |
+| RM8,000 | RM105.00 | RM30.00 | RM12.00 |
+
+Dua baris terakhir itulah maksudnya. Kenaikan RM2,000 tidak menambah apa-apa pada SOCSO dan EIS majikan, sebab itulah siling lebih bermakna bagi pekerja kanan daripada pekerja junior, dan sebab itulah sebut harga yang mendarab peratusan pada gaji tinggi melebihkan kos.
+
+## Dua kategori, dan satu hanya melindungi kemalangan
+
+Kategori Pertama, untuk pekerja bawah 60, meliputi skim kemalangan pekerjaan dan skim tidak upaya pada 1.75% majikan dan 0.5% pekerja.
+
+Kategori Kedua, untuk pekerja berumur 60 tahun ke atas, melindungi skim kemalangan sahaja: 1.25% dibayar majikan, tanpa bahagian pekerja.
+
+Meletakkan pekerja berusia 60 tahun dalam baris Kategori Pertama membayar lebih; meletakkan pekerja 25 tahun dalam Kategori Kedua meninggalkan mereka tanpa perlindungan tidak upaya. Kedua-dua kesilapan ini senyap pada slip gaji dan hanya muncul apabila ada tuntutan.
+
+## EIS berasingan, dan lebih kecil
+
+EIS ialah 0.4% keseluruhan, dibahagi 0.2% majikan dan 0.2% pekerja, dan ia berkongsi siling RM6,000. Ia bukan SOCSO dan ia tidak muncul dalam jadual SOCSO, sebab itulah ringkasan gaji yang menunjukkan satu baris "SOCSO/EIS" menyembunyikan skim mana yang menerima ringgit itu.
+
+## Apa nilai siling itu pada dua gaji
+
+Pada RM4,500 majikan membayar RM78.75 untuk SOCSO. Pada RM7,500 majikan membayar RM105.00, iaitu 1.4%, dan pekerja membayar RM30.00, iaitu 0.4% dan bukan 0.5% pada kad kadar.
+
+Peratusan pada kad kadar ialah kadar sehingga siling, bukan kadar pada setiap gaji, dan itu sebabnya kiraan pada gaji tinggi perlu berhenti pada RM6,000. Sebut harga yang mendarab 1.75% dengan gaji RM9,000 melebihkan baris SOCSO sebanyak RM52.50 sebulan, dan kesilapan sama pada EIS melebihkannya sebanyak RM6.00.
+
+## Apa yang belum disahkan di sini
+
+Tarikh pendaftaran sengaja tidak dicetak di sini: halaman pendaftaran majikan PERKESO di luar apa yang kami sahkan untuk artikel ini, jadi tiada tarikh akhir dipaparkan. Majikan tetap perlu mendaftar, dan tarikh itu patut disahkan dengan PERKESO sebelum bulan gaji pertama, bukan selepasnya.
+
+Jumlah jadual juga tidak disalin semula: jadual ini menggunakan peratusan, dan jadual PERKESO yang menjadi rujukan bagi angka ringgit. Jika jumlah pada slip gaji berbeza daripada kiraan anda, jadual itu yang betul, bukan kalkulator.
+
+## Apa yang perlu dibuat sebelum slip gaji pertama
+
+1. Letakkan setiap pekerja dalam kategori yang betul dahulu.
+2. Guna peratusan sehingga RM6,000 dan berhenti di situ.
+3. Kekalkan EIS pada baris sendiri, kerana ia skim berbeza.
+4. Semak jadual untuk jumlah tepat, dan jangkakan beza beberapa sen.
+5. Sahkan tarikh pendaftaran dengan PERKESO sendiri sebelum gaji pertama.
+
+Pendapat saya, dinyatakan sekali: siling itu satu-satunya bahagian yang mengubah cara anda mengupah. Di bawah RM6,000 caruman mengikut gaji, tetapi di atasnya skim itu kos tetap, jadi kos marginal pekerja kanan lebih rendah daripada yang ditunjukkan hamparan gaji, dan kos marginal pekerja junior lebih tinggi.
+
+---
+
+**Bacaan lanjut**
+
+[EPF majikan: 12% atau 13%, dan RM5,000 garisnya](https://upahje.my/ms/articles/kadar-caruman-epf-majikan)
+
+[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
+
+### Sources
+
+- PERKESO, caruman (Kategori Pertama 1.75%/0.5%, Kategori Kedua 1.25%, EIS 0.4% dibahagi 0.2/0.2) — https://www.perkeso.gov.my/en/our-services/employer-employee/contributions.html (checked 2026-11-25)
+- PERKESO, kadar caruman (siling gaji RM6,000 berkuat kuasa 1 Oktober 2024) — https://www.perkeso.gov.my/en/our-services/employer-employee/kadar-caruman.html (checked 2026-11-25)
 
 ## Klip percuma berharga satu malam, bukan RM61.78
 

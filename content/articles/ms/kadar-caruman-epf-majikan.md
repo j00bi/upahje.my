@@ -96,4 +96,4 @@ Pendapat saya, dinyatakan sekali: soalan 12 lawan 13 ialah separuh yang mudah. S
 
 [Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
-[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/articles/category/definitions)
+[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
