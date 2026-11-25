@@ -10,14 +10,14 @@ updated: 2026-11-25
 author: "UpahJe Desk"
 category: definitions
 tags: [definitions, epf, payroll, malaysia]
-cardFigure: "13% at RM5,000, 12% above it"
+cardFigure: "13% to RM5,000, 12% above, per schedule"
 canonical: https://upahje.my/en/articles/epf-employer-rate-malaysia
 draft: true
 changelog:
   - date: 2026-11-25
     note: "First published."
 sources:
-  - title: "KWSP, employer mandatory contribution (13% and 12% bands, employee 11%, Third Schedule, 15th-of-the-month payment, Part E)"
+  - title: "KWSP, employer mandatory contribution (13% and 12% bands, employee 11%, Third Schedule, 15th-of-the-month payment, Parts E and F; page marked effective for October 2025 wages)"
     url: "https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution"
     checked: 2026-11-24
 ---
@@ -46,7 +46,7 @@ Those amounts are arithmetic at the published rate, not the schedule. KWSP compu
 
 ## Two bands that change the answer
 
-Employees aged 60 and over sit in Part E: the employer pays 4% and the employee pays nothing. Non-Malaysians registered from 1 August 1998 are 2% employer and 2% employee.
+Employees aged 60 and over sit in Part E of the schedule: the employer pays 4% and the employee pays nothing. Non-Malaysians registered from 1 August 1998 sit in Part F, at 2% employer and 2% employee. Both are schedule amounts, not multiplications.
 
 Neither band appears in a payroll template built for a young all-Malaysian team, which is how a first payslip for a returning retiree goes wrong.
 
@@ -68,7 +68,7 @@ One more edge: above RM20,000 a month, KWSP stops using the schedule and the exa
 
 ## The 60-plus line, worked once
 
-For an employee aged 60 or over at RM3,000, Part E puts the employer at 4%, which is RM120, and the employee at 0%. The same wage under the 13/11 pair costs the employer RM390 and the employee RM330.
+Part E is where the schedule and the percentage visibly part company. KWSP's own example at a RM3,250 wage gives RM131.00 by the schedule against RM130.00 by multiplying 4%, and the correct figure is the schedule. The same difference applies to Part A: at RM3,250 the schedule gives RM424.00 employer and RM359.00 employee, where the percentages give RM423.00 and RM358.00. A RM3,000 Part E wage is not printed on the page, so this article does not state its schedule amount.
 
 The difference is not a rounding error; it is a band, and it is decided by the employee's age on the contribution month, not by the payroll template's default. A template built for a young team will miss this line until someone checks it by hand.
 

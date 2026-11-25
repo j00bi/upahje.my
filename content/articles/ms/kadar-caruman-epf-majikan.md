@@ -10,14 +10,14 @@ updated: 2026-11-25
 author: "UpahJe Desk"
 category: definitions
 tags: [definitions, epf, gaji, malaysia]
-cardFigure: "13% pada RM5,000, 12% ke atasnya"
+cardFigure: "13% hingga RM5,000, 12% ke atas, ikut jadual"
 canonical: https://upahje.my/ms/articles/kadar-caruman-epf-majikan
 draft: true
 changelog:
   - date: 2026-11-25
     note: "Mula diterbitkan."
 sources:
-  - title: "KWSP, caruman wajib majikan (julat 13% dan 12%, pekerja 11%, Jadual Ketiga, bayaran 15 haribulan, Bahagian E)"
+  - title: "KWSP, caruman wajib majikan (julat 13% dan 12%, pekerja 11%, Jadual Ketiga, bayaran 15 haribulan, Bahagian E dan F; halaman bertanda berkuat kuasa gaji Oktober 2025)"
     url: "https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution"
     checked: 2026-11-24
 ---
@@ -46,7 +46,7 @@ Jumlah itu aritmetik pada kadar yang diterbitkan, bukan jadual. KWSP mengira car
 
 ## Dua kumpulan yang mengubah jawapannya
 
-Pekerja berumur 60 tahun ke atas berada dalam Bahagian E: majikan membayar 4% dan pekerja tidak membayar apa-apa. Bukan warganegara yang didaftarkan mulai 1 Ogos 1998 pula 2% majikan dan 2% pekerja.
+Pekerja berumur 60 tahun ke atas berada dalam Bahagian E jadual: majikan membayar 4% dan pekerja tidak membayar apa-apa. Bukan warganegara yang didaftarkan mulai 1 Ogos 1998 berada dalam Bahagian F, pada 2% majikan dan 2% pekerja. Kedua-duanya jumlah jadual, bukan hasil darab.
 
 Kedua-dua kumpulan ini tidak muncul dalam templat gaji yang dibina untuk pasukan muda semuanya warganegara, dan itulah cara slip gaji pertama seorang pesara yang kembali bekerja menjadi salah.
 
@@ -68,7 +68,7 @@ Satu lagi sempadan: melebihi RM20,000 sebulan, KWSP berhenti menggunakan jadual 
 
 ## Baris 60 tahun ke atas, dikira sekali
 
-Bagi pekerja berumur 60 tahun ke atas pada RM3,000, Bahagian E meletakkan majikan pada 4%, iaitu RM120, dan pekerja pada 0%. Gaji yang sama di bawah pasangan 13/11 menelan RM390 daripada majikan dan RM330 daripada pekerja.
+Bahagian E ialah tempat jadual dan peratusan mula berbeza dengan jelas. Contoh KWSP sendiri pada gaji RM3,250 memberi RM131.00 melalui jadual berbanding RM130.00 melalui darab 4%, dan angka yang betul ialah jadual. Perbezaan sama berlaku pada Bahagian A: pada RM3,250 jadual memberi RM424.00 majikan dan RM359.00 pekerja, manakala peratusan memberi RM423.00 dan RM358.00. Gaji RM3,000 bagi Bahagian E tidak dicetak pada halaman itu, jadi artikel ini tidak menyatakan jumlah jadualnya.
 
 Bezanya bukan pembundaran; ia julat, dan ia ditentukan oleh umur pekerja pada bulan caruman, bukan oleh lalai templat gaji. Templat yang dibina untuk pasukan muda akan terlepas baris ini sehingga seseorang menyemaknya dengan tangan.
 
