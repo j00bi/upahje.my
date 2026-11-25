@@ -81,6 +81,136 @@ My opinion, stated once: the 12-versus-13 question is the easy half. The half th
 - KWSP, EPF Act 1991 Third Schedule (contribution rates effective October 2025) — https://www.kwsp.gov.my/documents/d/guest/third_schedule_from_-1-october-2025 (checked 2026-11-25)
 - KWSP, contribution for non-Malaysian citizen employees (2% employer, 2% employee, from the October 2025 salary) — https://www.kwsp.gov.my/en/employer/responsibilities/non-malaysian-citizen-employees (checked 2026-11-25)
 
+## HRD Corp levy: 1%, 0.5%, or nothing at all
+
+URL: https://upahje.my/en/articles/hrd-corp-levy-malaysia
+Checked: 2026-11-25
+
+A business with ten or more Malaysian employees pays 1% of monthly wages to HRD Corp. At five to nine employees the same levy is optional, at 0.5%. Below five there is no levy, a position the bands imply rather than print, and a first hire therefore carries nothing.
+
+## The levy starts at five, and becomes compulsory at ten
+
+The registered-employers page states that for employers with 10 or more Malaysian employees the levy is compulsory at 1% of monthly wages, and that employers with 5 to 9 are given the option to register at 0.5%.
+
+A business with four employees is not named in either band. It sits below both, which is why a first hire carries no levy at all and why the total cost of that hire is the statutory trio and not a quartet. If the headcount is approaching five, treat the levy as starting before you hire, not after.
+
+## What the levy is charged on
+
+The percentage applies to the monthly wages of employees, so the ringgit figure is a share of payroll rather than a flat fee per head. The table below uses an average monthly wage of RM3,000 as a stated assumption, so a reader can substitute their own payroll and read the rate column, which is the sourced part.
+
+| Malaysian employees | Rate | Monthly levy at RM3,000 average wage | Annual levy |
+| --- | --- | --- | --- |
+| 4 | none | RM0 | RM0 |
+| 5 | 0.5% | RM75 | RM900 |
+| 9 | 0.5% | RM135 | RM1,620 |
+| 10 | 1% | RM300 | RM3,600 |
+| 25 | 1% | RM750 | RM9,000 |
+
+The jump from nine to ten is the expensive one: the rate doubles and the headcount that crosses the line adds its own wage to the base in the same month.
+
+## What changes at the boundary
+
+A business at nine employees on a RM3,000 average wage pays RM135 a month. Hiring the tenth moves it to RM300, so the tenth salary costs the employer the wage, the statutory add-ons and an extra RM165 a month of levy.
+
+Annualised, the step from nine to ten is RM1,980 in levy alone at that average wage, before the new employee's own EPF, SOCSO, EIS and any LINDUNG 24 Jam deduction.
+
+## Registration runs on Form 1, and review is 30 days
+
+A company at ten Malaysian employees or more fills Form 1 — the page words the threshold as "more than 10" while the levy itself starts at ten — and the page states that the application is reviewed by officers within 30 days. That review window is the only timing the page prints, so treat 30 days as a review period rather than a deadline you can plan a payroll around.
+
+## No due date is printed
+
+The registered-employers page does not state when the levy must be paid. That is an absence, not a gap to fill with a guessed date, so no payment deadline appears in this article. A business that needs the date should ask HRD Corp or read the levy rules rather than trust a template.
+
+## What to do before the headcount moves
+
+1. Count Malaysian employees only, because the bands are written that way.
+2. Check whether you are at four, five or ten, since each is a different regime.
+3. Register on Form 1 before assuming the 30-day review protects you.
+4. Recalculate the month the tenth hire starts, not the month after.
+5. Ask HRD Corp for the payment date in writing, because the page does not print one.
+
+My opinion, stated once: the levy is small enough to ignore and large enough to notice at the ten-employee line, which is exactly the moment a business stops checking. Budgeting it at nine employees and discovering it at ten is a RM3,600-a-year surprise at a RM3,000 average wage, and that surprise lands in a month that is already busy with a new hire.
+
+---
+
+**Read next**
+
+[SOCSO stops at RM6,000, and nobody tells the new hire](https://upahje.my/en/articles/socso-employer-rate-malaysia)
+
+[More definitions, explained plainly](https://upahje.my/en/glossary)
+
+### Sources
+
+- PSMB Act 2001, section 15: levy on an employer who opts to be registered (the 0.5% option) — https://www.mylaw.my/akta/pembangunan-sumber-manusia-berhad-2001/section-15 (checked 2026-11-25)
+- HRD Corp, registered employers (1% compulsory at 10 or more Malaysian employees, 0.5% optional at 5 to 9, Form 1 reviewed within 30 days) — https://hrdcorp.gov.my/registered-employers (checked 2026-11-24)
+
+## POS: RM122 a month, and no free tier files e-invoice
+
+URL: https://upahje.my/en/articles/pos-system-cost-malaysia
+Checked: 2026-11-25
+
+A POS subscription in Malaysia starts at RM122 a month on StoreHub and runs to RM235 for the next tier, while Qashier charges RM8 a day for the platform plus RM1 to RM3 a day per terminal. None of the free POS tiers is documented as MyInvois-compliant; the RM0 plan that does document LHDN e-Invoice is Bukku, and it is accounting software, not a till.
+
+## The published prices, as printed
+
+StoreHub's Malaysian page prints Starter from RM122 a month and Advanced from RM235. Qashier prices by the day rather than the month, and offers a 24-month route at RM4,580 once.
+
+That difference matters when you compare a monthly card against a daily one, so the table normalises nothing and shows each vendor's own unit.
+
+| Vendor and plan | Price as printed | Terminal hardware | LHDN e-invoice on the pricing page |
+| --- | --- | --- | --- |
+| StoreHub Starter | From RM122/month | no hardware price printed | not stated |
+| StoreHub Advanced | From RM235/month | no hardware price printed | not stated |
+| Qashier, software only | RM8/day | your own phone, tablet or terminal | not stated |
+| Qashier with a terminal | RM8 + RM1 (XS) / RM2 (X2) / RM3 (XL SLIM) a day | included, nothing upfront | not stated |
+| Qashier, paid upfront | RM4,580 once for 24 months, save RM1,260 | platform only | not stated |
+| Bukku Launch, accounting not POS | RM0/month, free forever | not a till | yes, it supports LHDN e-Invoice |
+
+The last column is deliberately empty for two of the three vendors: neither StoreHub nor Qashier states e-invoice support on the pricing page read here, so nothing is claimed for them. Qashier's prices also exclude SST, which the page prints.
+
+## What the subscription does not include
+
+The two vendors handle hardware in opposite ways. StoreHub's pricing page carries no hardware figures at all, so a terminal, a drawer and a receipt printer arrive as separate lines in a quote. Qashier folds the terminal into the daily rate: RM1 a day for the compact XS, RM2 for the X2, RM3 for the XL SLIM, nothing upfront, with the hardware owned after two years.
+
+A shop that budgets RM122 for software and RM0 for hardware has budgeted half a till. Ask whether the quote is rent, purchase or lease, because the three end at different 24-month totals, and note that Qashier's daily figure carries on for as long as the shop keeps paying it.
+
+## Why the POS e-invoice question is the expensive one
+
+A till that is not wired to MyInvois leaves the filing to whoever does the books, and that is the manual retyping the whole exercise is meant to remove. A POS that is documented as compliant is worth a higher monthly fee than a cheaper till plus a worker typing invoices twice.
+
+The free plan that does document e-Invoice is Bukku's Launch, and it is an accounting product with 100 MB of storage and 100 emails a month. It files e-invoices; it does not take payment at a counter or print a receipt, and that difference decides whether it is a solution for your shop or only for your bookkeeping.
+
+## Do the daily prices add up to the monthly ones
+
+Qashier at RM8 a day is about RM243 over a 30-day month before terminals, so the daily card is not automatically cheaper than StoreHub's RM122. It becomes cheaper when the shop opens fewer days than it pays for, which is a calendar question rather than a software one.
+
+The RM4,580 for 24 months works out at about RM191 a month, which sits between the two StoreHub tiers and above Qashier's own daily rate at a full month.
+
+## What to ask before signing
+
+1. Is e-invoice compliance in the plan you quoted, in writing?
+2. Does the price include the terminal, or is hardware separate?
+3. What happens to the subscription if you close for a week?
+4. Does the plan file to MyInvois directly, or export a file someone uploads?
+5. What is the 24-month total, not the monthly headline?
+
+My opinion, stated once: pay for the e-invoice route, not the till. A POS that takes money but leaves the invoice to a person is a counter with a subscription, and the subscription is the smaller cost of the two.
+
+---
+
+**Read next**
+
+[What a first hire costs, line by line](https://upahje.my/en/articles/first-hire-cost-malaysia)
+
+[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+
+### Sources
+
+- StoreHub Malaysia, pricing (Starter from RM122/month, Advanced from RM235/month) — https://www.storehub.com/my/pricing (checked 2026-11-25)
+- Qashier Malaysia, pricing (RM8 a day platform, RM1 to RM3 a day per terminal, RM4,580 for 24 months) — https://qashier.com/my/pricing/ (checked 2026-11-25)
+- Bukku, pricing (Launch at RM0 a month, free forever, supports LHDN e-Invoice) — https://www.bukku.my/pricing (checked 2026-11-25)
+
 ## SOCSO stops at RM6,000, and nobody tells the new hire
 
 URL: https://upahje.my/en/articles/socso-employer-rate-malaysia
@@ -2678,6 +2808,136 @@ Pendapat saya, dinyatakan sekali: siling itu satu-satunya bahagian yang mengubah
 
 - PERKESO, caruman (Kategori Pertama 1.75%/0.5%, Kategori Kedua 1.25%, EIS 0.4% dibahagi 0.2/0.2) — https://www.perkeso.gov.my/en/our-services/employer-employee/contributions.html (checked 2026-11-25)
 - PERKESO, kadar caruman (siling gaji RM6,000 berkuat kuasa 1 Oktober 2024) — https://www.perkeso.gov.my/en/our-services/employer-employee/kadar-caruman.html (checked 2026-11-25)
+
+## POS: RM122 sebulan, dan tiada tier percuma fail e-invoice
+
+URL: https://upahje.my/ms/articles/kos-sistem-pos-malaysia
+Checked: 2026-11-25
+
+Langganan POS di Malaysia bermula RM122 sebulan pada StoreHub dan naik ke RM235 bagi tier berikutnya, manakala Qashier mengenakan RM8 sehari untuk platform serta RM1 hingga RM3 sehari setiap terminal. Tiada tier POS percuma yang didokumen sebagai patuh MyInvois; pelan RM0 yang mendokumen e-Invoice LHDN ialah Bukku, dan ia perisian perakaunan, bukan mesin tunai.
+
+## Harga yang diterbitkan, seperti dicetak
+
+Halaman StoreHub Malaysia mencetak Starter dari RM122 sebulan dan Advanced dari RM235. Qashier mengenakan harga mengikut hari dan bukan bulan, serta menawarkan laluan 24 bulan pada RM4,580 sekali.
+
+Perbezaan itu penting apabila kad bulanan dibandingkan dengan kad harian, jadi jadual di bawah tidak menormalkan apa-apa; ia menunjukkan unit setiap vendor.
+
+| Vendor dan pelan | Harga seperti dicetak | Perkakasan terminal | E-invoice LHDN pada halaman harga |
+| --- | --- | --- | --- |
+| StoreHub Starter | Dari RM122 sebulan | tiada harga perkakasan dicetak | tidak dinyatakan |
+| StoreHub Advanced | Dari RM235 sebulan | tiada harga perkakasan dicetak | tidak dinyatakan |
+| Qashier, perisian sahaja | RM8 sehari | telefon, tablet atau terminal sendiri | tidak dinyatakan |
+| Qashier dengan terminal | RM8 + RM1 (XS) / RM2 (X2) / RM3 (XL SLIM) sehari | termasuk, tiada bayaran pendahuluan | tidak dinyatakan |
+| Qashier, bayar pendahuluan | RM4,580 sekali untuk 24 bulan, jimat RM1,260 | platform sahaja | tidak dinyatakan |
+| Bukku Launch, perakaunan bukan POS | RM0 sebulan, percuma selamanya | bukan mesin tunai | ya, menyokong e-Invoice LHDN |
+
+Lajur terakhir sengaja kosong bagi dua daripada tiga vendor: StoreHub dan Qashier tidak menyatakan sokongan e-invoice pada halaman harga yang dibaca di sini, jadi tiada apa didakwa untuk mereka. Harga Qashier juga tidak termasuk SST, seperti yang dicetak pada halaman itu.
+
+## Apa yang tidak termasuk dalam langganan
+
+Kedua-dua vendor mengendalikan perkakasan secara bertentangan. Halaman harga StoreHub langsung tiada angka perkakasan, jadi terminal, laci wang dan pencetak resit datang sebagai baris berasingan dalam sebut harga. Qashier memasukkan terminal ke dalam kadar harian: RM1 sehari untuk XS yang padat, RM2 untuk X2, RM3 untuk XL SLIM, tiada bayaran pendahuluan, dan perkakasan itu menjadi milik selepas dua tahun.
+
+Kedai yang membajet RM122 untuk perisian dan RM0 untuk perkakasan telah membajet separuh mesin tunai. Tanya sama ada sebut harga itu sewa, beli atau pajakan, kerana tiga bentuk itu berakhir dengan kos 24 bulan yang berbeza, dan ambil perhatian bahawa angka harian Qashier berterusan selagi kedai terus membayar.
+
+## Mengapa soalan e-invoice POS itu yang mahal
+
+Mesin tunai yang tidak bersambung ke MyInvois menyerahkan pemfailan kepada sesiapa yang membuat akaun, dan itulah penyalinan tangan yang sepatutnya dihapuskan. POS yang didokumen sebagai patuh lebih bernilai daripada tunai murah campur pekerja menaip invois dua kali.
+
+Pelan percuma yang mendokumen e-Invoice ialah Bukku Launch, iaitu produk perakaunan dengan 100 MB storan dan 100 e-mel sebulan. Ia memfailkan e-invoice; ia tidak menerima bayaran di kaunter atau mencetak resit, dan itu perbezaan yang menentukan sama ada ia penyelesaian untuk kedai anda atau hanya untuk pembukuan.
+
+## Adakah harga harian itu berjumlah sama dengan bulanan
+
+Qashier pada RM8 sehari ialah kira-kira RM243 dalam bulan 30 hari sebelum terminal, jadi kad harian itu tidak automatik lebih murah daripada RM122 StoreHub. Ia menjadi lebih murah apabila kedai dibuka lebih sedikit hari daripada yang dibayar, dan itu soalan kalendar, bukan soalan perisian.
+
+RM4,580 untuk 24 bulan bersamaan kira-kira RM191 sebulan, iaitu antara dua tier StoreHub dan di atas kadar harian Qashier bagi bulan penuh.
+
+## Apa yang perlu ditanya sebelum menandatangani
+
+1. Adakah pematuhan e-invoice termasuk dalam pelan yang disebut, secara bertulis?
+2. Adakah harga itu termasuk terminal, atau perkakasan berasingan?
+3. Apa jadi pada langganan jika anda tutup seminggu?
+4. Adakah pelan itu memfailkan terus ke MyInvois, atau mengeksport fail untuk dimuat naik?
+5. Apakah jumlah 24 bulan, bukan angka bulanan pada iklan?
+
+Pendapat saya, dinyatakan sekali: bayar untuk laluan e-invoice, bukan untuk mesin tunai. POS yang menerima wang tetapi menyerahkan invois kepada manusia ialah kaunter dengan langganan, dan langganan itu kos yang lebih kecil antara kedua-duanya.
+
+---
+
+**Bacaan lanjut**
+
+[Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
+
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)
+
+### Sources
+
+- StoreHub Malaysia, harga (Starter dari RM122 sebulan, Advanced dari RM235 sebulan) — https://www.storehub.com/my/pricing (checked 2026-11-25)
+- Qashier Malaysia, harga (RM8 sehari platform, RM1 hingga RM3 sehari setiap terminal, RM4,580 untuk 24 bulan) — https://qashier.com/my/pricing/ (checked 2026-11-25)
+- Bukku, harga (Launch RM0 sebulan, percuma selamanya, menyokong e-Invoice LHDN) — https://www.bukku.my/pricing (checked 2026-11-25)
+
+## Levi HRD Corp: 1%, 0.5%, atau tiada sama sekali
+
+URL: https://upahje.my/ms/articles/levi-hrd-corp-malaysia
+Checked: 2026-11-25
+
+Perniagaan dengan sepuluh pekerja Malaysia atau lebih membayar 1% daripada gaji bulanan kepada HRD Corp. Pada lima hingga sembilan pekerja, levi yang sama adalah pilihan pada 0.5%. Di bawah lima tiada levi, iaitu kedudukan yang disirat oleh julat itu dan bukan dicetak, jadi pekerja pertama tidak menanggung apa-apa.
+
+## Levi bermula pada lima, dan menjadi wajib pada sepuluh
+
+Halaman majikan berdaftar menyatakan bahawa bagi majikan dengan 10 pekerja Malaysia atau lebih, levi adalah wajib pada 1% daripada gaji bulanan, dan majikan dengan 5 hingga 9 diberi pilihan untuk mendaftar pada 0.5%.
+
+Perniagaan dengan empat pekerja tidak dinamakan dalam mana-mana julat. Ia berada di bawah kedua-duanya, sebab itulah pekerja pertama tidak menanggung levi, dan sebab itulah jumlah kos pekerja itu ialah trio statutori dan bukan kuartet. Jika bilangan pekerja menghampiri lima, anggap levi itu masuk sebelum anda mengupah, bukan selepas.
+
+## Apa yang dikenakan levi
+
+Peratusan itu terpakai pada gaji bulanan pekerja, jadi angka ringgit ialah bahagian daripada senarai gaji, bukan fi tetap setiap kepala. Jadual di bawah menggunakan purata gaji bulanan RM3,000 sebagai andaian yang dinyatakan, supaya pembaca boleh menggantikan senarai gaji sendiri dan membaca lajur kadar, iaitu bahagian yang bersumber.
+
+| Pekerja Malaysia | Kadar | Levi bulanan pada purata gaji RM3,000 | Levi tahunan |
+| --- | --- | --- | --- |
+| 4 | tiada | RM0 | RM0 |
+| 5 | 0.5% | RM75 | RM900 |
+| 9 | 0.5% | RM135 | RM1,620 |
+| 10 | 1% | RM300 | RM3,600 |
+| 25 | 1% | RM750 | RM9,000 |
+
+Lompatan dari sembilan ke sepuluh itulah yang mahal: kadarnya berganda dan pekerja yang melepasi garisan itu menambah gajinya sendiri ke asas pada bulan yang sama.
+
+## Apa yang berubah pada sempadan
+
+Perniagaan dengan sembilan pekerja pada purata gaji RM3,000 membayar RM135 sebulan. Mengupah pekerja kesepuluh memindahkannya ke RM300, jadi gaji kesepuluh itu menelan gaji, tokokan statutori dan RM165 sebulan tambahan levi.
+
+Jika disetahunkan, langkah dari sembilan ke sepuluh ialah RM1,980 levi semata-mata pada purata gaji itu, sebelum EPF, SOCSO, EIS dan potongan LINDUNG 24 Jam pekerja baharu itu sendiri.
+
+## Pendaftaran melalui Borang 1, dan semakan 30 hari
+
+Syarikat dengan lebih 10 pekerja Malaysia mengisi Borang 1, dan halaman itu menyatakan permohonan disemak oleh pegawai dalam tempoh 30 hari. Tetingkap semakan itu satu-satunya tempoh yang dicetak halaman tersebut, jadi anggap 30 hari sebagai tempoh semakan dan bukan tarikh akhir yang boleh dijadikan asas jadual gaji.
+
+## Tiada tarikh bayaran dicetak
+
+Halaman majikan berdaftar tidak menyatakan bila levi perlu dibayar. Itu ketiadaan, bukan jurang untuk diisi dengan tarikh tekaan, jadi tiada tarikh akhir bayaran dalam artikel ini. Perniagaan yang memerlukan tarikh itu patut bertanya kepada HRD Corp atau membaca peraturan levi, bukan mempercayai templat.
+
+## Apa yang perlu dibuat sebelum bilangan pekerja berubah
+
+1. Kira pekerja Malaysia sahaja, kerana julatnya ditulis begitu.
+2. Semak sama ada anda pada empat, lima atau sepuluh, kerana setiap satu rejim berbeza.
+3. Daftar melalui Borang 1 sebelum menganggap semakan 30 hari melindungi anda.
+4. Kira semula pada bulan pekerja kesepuluh bermula, bukan bulan selepasnya.
+5. Minta tarikh bayaran daripada HRD Corp secara bertulis, kerana halaman itu tidak mencetaknya.
+
+Pendapat saya, dinyatakan sekali: levi ini cukup kecil untuk diabaikan dan cukup besar untuk terasa pada garisan sepuluh pekerja, iaitu tepat saat perniagaan berhenti menyemak. Membajetkannya pada sembilan pekerja dan menemuinya pada sepuluh ialah kejutan RM3,600 setahun pada purata gaji RM3,000, dan kejutan itu datang pada bulan yang sudah sibuk dengan pengambilan pekerja baharu.
+
+---
+
+**Bacaan lanjut**
+
+[SOCSO berhenti pada RM6,000](https://upahje.my/ms/articles/kadar-socso-majikan-malaysia)
+
+[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
+
+### Sources
+
+- HRD Corp, majikan berdaftar (1% wajib pada 10 pekerja Malaysia atau lebih, 0.5% pilihan pada 5 hingga 9, Borang 1 disemak dalam 30 hari) — https://hrdcorp.gov.my/registered-employers (checked 2026-11-24)
+- Akta PSMB 2001, seksyen 15: levi ke atas majikan yang memilih untuk didaftarkan (pilihan 0.5%) — https://www.mylaw.my/akta/pembangunan-sumber-manusia-berhad-2001/section-15 (checked 2026-11-25)
 
 ## Klip percuma berharga satu malam, bukan RM61.78
 
