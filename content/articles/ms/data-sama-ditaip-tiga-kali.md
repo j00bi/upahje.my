@@ -103,7 +103,7 @@ Lima tindakan, tiada satu pun memerlukan pembelian.
 
 Versi paling kecil yang boleh dijalankan ialah peta satu halaman, bukan sistem: spreadsheet dengan satu baris bagi setiap langkah dokumen, dan lajur untuk sistem, pemilik, dan tempat data ditaip semula.
 
-Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya tiada. Yang menggigit ialah peta itu akan menunjukkan langkah yang tiada siapa mengaku, termasuk mesej WhatsApp yang kini menjadi integrasi. Tulis juga; mesej itu proses sebenar, dan mengautomasikan di sekelilingnya tanpa mengetahuinya ialah cara projek gagal.
+Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya ialah peta itu akan menunjukkan langkah yang tiada siapa mengaku, termasuk mesej WhatsApp yang kini menjadi integrasi. Tulis juga; mesej itu proses sebenar, dan mengautomasikan di sekelilingnya tanpa mengetahuinya ialah cara projek gagal.
 
 **Baca seterusnya**
 

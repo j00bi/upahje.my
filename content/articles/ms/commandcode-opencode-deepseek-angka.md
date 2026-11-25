@@ -69,7 +69,7 @@ Tawaran CommandCode sendiri sudah bergerak sejak Ogos, dan kedua-dua versi masih
 
 Satu kiriman Hacker News pada **5 Ogos 2026** mengumumkan "Command Code GOAT, $10/month for $70 of credits across 30 models". Halaman harga hari ini menunjukkan tier GOAT $10/bulan yang sama dengan "up to $100 in credits", dan halaman model menyebut "All 107" model. Tier sama, harga sama, kredit lebih banyak dan model lebih banyak. Itu perubahan promosi biasa, dan ia penting kerana ulasan yang ditulis pada Ogos menerangkan tawaran yang tidak lagi wujud.
 
-Pengajarannya bukan bahawa satu angka itu salah. Ia bahawa angka bertarikh memerlukan tarikhnya, atau ia menjadi dakwaan tentang hari ini yang tiada siapa boleh semak.
+Pengajarannya ialah angka bertarikh memerlukan tarikhnya, atau ia menjadi dakwaan tentang hari ini yang tiada siapa boleh semak.
 
 ## Apa yang kami jalankan sendiri?
 

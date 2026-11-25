@@ -69,7 +69,7 @@ CommandCode's own offer has moved since August, and both versions are still quot
 
 A Hacker News post on **5 August 2026** announced "Command Code GOAT, $10/month for $70 of credits across 30 models". Today's pricing page shows the same $10/month GOAT tier with "up to $100 in credits", and the models page says "All 107" models. Same tier, same price, more credits and more models. That is a normal promotional drift, and it matters because a review written in August is describing an offer that no longer exists.
 
-The lesson is not that one number is wrong. It is that a dated figure needs its date, or it becomes a claim about today that nobody can check.
+The lesson is that a dated figure needs its date, or it becomes a claim about today that nobody can check.
 
 ## What did we run ourselves?
 
