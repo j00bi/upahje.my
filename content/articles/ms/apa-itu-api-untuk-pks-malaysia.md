@@ -98,21 +98,3 @@ Tetapkan tiga perkara secara bertulis sebelum bayaran.
 [Model terbuka atau tertutup, dan mana yang patut dimulakan](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)
 
 [Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
-## FAQ
-
-### Perlu saya ada server sendiri untuk menggunakan API?
-
-Tidak. API tertutup hanya memerlukan sambungan internet dan satu skrip atau aplikasi kecil. Anda memerlukan server hanya jika anda menjalankan model terbuka itu sendiri.
-
-### Adakah selamat memberikan kunci API saya kepada freelancer?
-
-Bukan kunci utama anda. Keluarkan kunci berasingan untuk integrasi itu dengan had perbelanjaan, jangan hantar melalui WhatsApp atau e-mel, dan batalkan pada hari terakhir kerja. Kunci yang dibatalkan tidak merugikan apa-apa. Kunci yang bocor boleh merugikan seluruh akaun anda.
-
-### Apa yang berlaku jika pembekal mengubah atau menutup API mereka?
-
-Integrasi berhenti berfungsi sehingga dikemas kini. Tempoh itu ditentukan pembekal: OpenAI menerbitkan garis masa penghentian yang dipautkan pada halaman harga mereka ([disemak 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Pastikan integrasi nipis supaya mudah ditukar kepada pembekal lain.
-
-### Berapa lama integrasi pertama mengambil masa?
-
-Satu endpoint yang membaca sahaja mengambil masa sekitar sehari untuk pembangun yang cekap. Sebarang kerja yang memindahkan wang atau menulis data mengambil masa seminggu, sebahagian besarnya untuk menguji apa yang berlaku apabila panggilan gagal. Tiada data awam tentang tempoh di Malaysia, jadi ini anggaran kerja.
-

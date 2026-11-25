@@ -117,8 +117,7 @@ Tiga penerbit, tiga bentuk. Ini harga bina-dan-langganan, bukan kadar mesej, dan
 
 AIRS juga menyatakan julat pasaran sebagai RM300 hingga RM3,000 lebih sebulan, dan AlwaysON menyatakan yuran platform "only 40-60% of the total cost", iaitu amaran berguna: langganan bukan keseluruhan bil.
 
-## Apa yang patut dibuat minggu ini?
-
+## Apa yang perlu dikira sebelum menandatangani
 Lima tindakan, tiada satu pun memerlukan pembelian.
 
 1. **Eksport mesej WhatsApp keluar bulan lepas** dan tandakan setiap satu sebagai pemasaran, utiliti, pengesahan atau servis.
@@ -126,8 +125,6 @@ Lima tindakan, tiada satu pun memerlukan pembelian.
 3. **Cari mesej yang anda hantar di luar tetingkap 24 jam.** Itulah templat pemasaran pada RM0.3467 setiap satu, dan ia mendominasi bil kecil.
 4. **Darab kiraan pemasaran dengan 0.3467** dan kiraan servis berbayar dengan 0.0564, dan bandingkan jumlah itu dengan RM200 hingga RM1,500 yuran vendor.
 5. **Tanya setiap vendor sama ada harga mereka termasuk caj mesej Meta**, dan dapatkan jawapannya secara bertulis, kerana dua bil itu datang daripada dua syarikat berbeza.
-
-## Cuba sendiri
 
 Versi paling kecil yang boleh dijalankan bukan bot langsung: ia skrip yang menilai bulan lepas anda daripada kad yang diterbitkan, supaya anda tahu jumlahnya sebelum bercakap dengan vendor.
 
@@ -141,28 +138,3 @@ Tiada laluan sandbox percuma yang didokumenkan dalam halaman yang dibaca untuk a
 
 Halaman pengesahan antarabangsa yang khusus tidak dibuka, jadi baris itu bergantung pada kad Malaysia sahaja. Tier volum utiliti dan pengesahan wujud, tetapi fail tier tidak dihuraikan, jadi apa-apa angka melebihi harga senarai tiada. Meta Business Agent dinilai setiap juta token tanpa angka setiap interaksi untuk Malaysia yang diterbitkan, jadi tiada kos setiap interaksi didakwa. Hanya satu daripada tiga vendor Malaysia menerbitkan harga dari-dengan-tiada-yuran-persediaan; dua lagi menyebut harga mengikut skop, jadi tiada yuran binaan pasaran boleh dinyatakan.
 
-## FAQ
-
-### Adakah satu mesej benar-benar RM0.3467?
-
-Hanya mesej pemasaran, dan hanya apabila ia sampai kepada penerima. Utiliti, pengesahan dan servis RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan percuma.
-
-### Adakah saya dicaj apabila pelanggan menghantar mesej?
-
-Tidak. Meta mengenakan caj untuk mesej perniagaan-ke-pengguna sahaja, jadi mesej pelanggan percuma diterima, dan balasan anda dicaj mengikut kategori yang dikenainya.
-
-### Apa itu tetingkap 24 jam dalam bahasa mudah?
-
-Ia jam yang bermula apabila pelanggan menghantar mesej kepada anda. Dalam tempoh itu anda boleh membalas dengan bebas sebagai mesej servis. Selepas jam itu tamat, apa-apa mesej baharu mesti templat berbayar.
-
-### Adakah harga vendor termasuk caj mesej Meta?
-
-Kebanyakannya tidak, dan yang dibaca di sini menyatakannya secara berasingan. Meta membil mesej kepada akaun anda sendiri, jadi bajetkan yuran vendor dan bil mesej sebagai dua baris.
-
----
-
-**Baca seterusnya**
-
-[Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi)
-
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)

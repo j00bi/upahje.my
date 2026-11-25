@@ -69,24 +69,3 @@ The GOAT arm's own session records are more informative than its demo. Three red
 
 That is a reliability profile, and it says nothing about output quality. There are no token counts and no cost fields in those records, and the site's data model has no cost field, so no cost comparison can be built from them.
 
-## FAQ
-
-### Can a Terminal-bench score be compared with a SWE-bench score?
-
-No. Different benchmark, different agent, different task set. The numbers do not share a scale.
-
-### Why is the 38.5% figure not a CommandCode or OpenCode result?
-
-Because the agent column says Claude Code. The model is DeepSeek's; the harness that drove it is not either CLI.
-
-### What does the GOAT session record prove?
-
-That the arm kept going through 94 retries and nearly three hours. It does not prove the output was good, and it contains no token or cost data.
-
----
-
-**Read next**
-
-[CommandCode, OpenCode, DeepSeek: three names, three different things](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers)
-
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)

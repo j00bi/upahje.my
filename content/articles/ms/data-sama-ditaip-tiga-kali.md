@@ -89,8 +89,7 @@ Dan dua angka "jam yang hilang" yang terkenal itu bukan Malaysia. Satu kajian ke
 
 Proses bertulis, pemilik yang dinamakan, sumber data yang bersih, laluan pengecualian. Rangka empat bahagian itu ialah artikel sebuah firma operasi Malaysia, diterbitkan di laman sendiri tanpa nama penulis, ditulis tentang kertas KRI/MDEC. Ia senarai semak vendor, bukan senarai rasmi, dan tiada badan kerajaan menerbitkan empat perkara itu sebagai piawaian. Berguna untuk berfikir; tidak boleh dipetik sebagai polisi.
 
-## Apa yang patut dibuat minggu ini?
-
+## Apa yang perlu dipetakan minggu ini
 Lima tindakan, tiada satu pun memerlukan pembelian.
 
 1. **Pilih satu dokumen** yang kerap anda keluarkan: sebut harga, invois, pesanan penghantaran.
@@ -98,8 +97,6 @@ Lima tindakan, tiada satu pun memerlukan pembelian.
 3. **Kira salinan** rekod itu, dan namakan siapa pemilik salinan mana.
 4. **Cari medan yang paling kerap dibaiki dengan tangan**, kerana di situlah puncanya salah.
 5. **Tulis laluan pengecualian** bagi kes yang berlaku setiap minggu: apa yang patut dikatakan sistem, dan siapa yang memutuskan.
-
-## Cuba sendiri
 
 Versi paling kecil yang boleh dijalankan ialah peta satu halaman, bukan sistem: spreadsheet dengan satu baris bagi setiap langkah dokumen, dan lajur untuk sistem, pemilik, dan tempat data ditaip semula.
 
@@ -111,20 +108,3 @@ Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya tiada.
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
 
-## FAQ
-
-### Ini masalah perisian atau masalah proses?
-
-Ia masalah fragmentasi, dan perkataan KRI yang tepat: digital di hadapan, manual di belakang. Membeli tool lain sebelum memetakan penyerahan biasanya menambah salinan kelima rekod itu.
-
-### Perlukah kami betulkan ini sebelum e-Invoice?
-
-Anda perlu memastikan data invois betul semasa dikeluarkan, iaitu keperluan yang lebih kecil daripada membetulkan semuanya. Mulakan dengan medan yang disemak LHDN, kemudian luaskan.
-
-### Berapa banyak sistem itu terlalu banyak?
-
-Tiada siapa menerbitkan angka, dan kiraannya soalan yang salah. Dua sistem yang bercanggah lebih buruk daripada lima yang berkongsi satu rekod.
-
-### Bolehkah kami hanya automasikan langkah salinan?
-
-Boleh, dan ia projek pertama yang paling biasa. Ia juga mengekalkan percanggahan antara sistem, dan sebab itulah [artikel tentang memilih automasi pertama](https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk) berhujah supaya memetakan dahulu.

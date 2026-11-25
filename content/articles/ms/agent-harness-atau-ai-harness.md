@@ -75,16 +75,3 @@ Framework ialah sesuatu yang diimport oleh pembangun; ia tidak memberikan persek
 
 [Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
 
-## FAQ
-
-### Adakah Claude Code harness atau aplikasi?
-
-Kedua-duanya. Anthropic menjual aplikasi, dan dokumentasi Agent SDK mereka menerangkan hosted agent harness di bawahnya yang menjalankan gelung. Perkataan itu menerangkan lapisan, bukan produk.
-
-### Adakah agent framework sama dengan harness?
-
-Tidak. Framework ialah perpustakaan yang anda bina dengannya; harness ialah benda yang menjalankan gelung, melaksanakan tool dan menyimpan transkrip. Anda boleh membina harness di atas framework, dan kebanyakan produk berbuat begitu.
-
-### Adakah perkataan "harness" memberitahu saya sama ada ia sumber terbuka?
-
-Tidak. Perkataan itu menerangkan fungsi, bukan lesen. Harness boleh jadi proprietari dan dihoskan di awan, atau sumber terbuka dan setempat, dan labelnya tetap sama.

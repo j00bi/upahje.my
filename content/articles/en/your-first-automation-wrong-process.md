@@ -71,19 +71,3 @@ And there is a real cost to waiting. Two weeks of tracking is two weeks of the p
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 
-## FAQ
-
-### So should I never automate a painful process?
-
-Automate it after you have written down its exceptions. The pain is evidence that the exceptions exist, so the process is a fine candidate, just not a fine first candidate.
-
-### What if we have no time to track anything for two weeks?
-
-Track the failures only. One line whenever something goes wrong, with what happened and who fixed it. That takes minutes and still shows you where the work really is.
-
-### What makes a good first automation?
-
-A process with a clear finish line, a cheap and visible mistake, and someone who owns it on the other side. Boring is the point: the first one is where you learn the buying and the maintenance, not where you make the annual saving.
----
-
-This piece carries no sources because it is an argument, not a report: a position on which process to automate first, drawn from how these projects fail. No figure in it is a measurement and none is borrowed from another article.

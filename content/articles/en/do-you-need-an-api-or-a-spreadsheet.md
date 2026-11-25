@@ -60,19 +60,3 @@ Exporting a CSV and importing it into the other tool is still a copy step, but a
 [What an API costs to wire up in Malaysia](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
 
 [More on APIs and models](https://upahje.my/en/articles/category/definitions)
-## FAQ
-
-### Can I start with a spreadsheet and add the API later?
-
-Yes, and that is usually the right order. The sheet tells you which fields matter, which ones people actually change, and where the errors happen. An integration built before that knowledge exists tends to sync the wrong things very precisely.
-
-### Is a spreadsheet insecure?
-
-Not inherently. A spreadsheet that lives in a shared drive with access controls is a normal business tool. The risk is the same as any shared document: the wrong person gets a link, or the only copy sits on one laptop. Back it up and restrict the link; then the question becomes volume and drift, not security.
-
-### What if my team already uses a tool that has an API?
-
-Then the decision narrows to whether anyone has time to connect it. An API that nobody wires up is worth nothing, and a tool with no API that people use daily is worth more than a better tool sitting unused.
----
-
-This piece carries no sources, because it is an argument from cases rather than a report: which of two setups fits your volume. No public benchmark exists for what Malaysian developers charge to wire an API, so no cost figure is printed here and none is borrowed.

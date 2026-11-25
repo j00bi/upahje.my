@@ -89,17 +89,3 @@ Cuba panggil model terbuka melalui API sebelum cuba menjalankannya. Mistral send
 [Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
 
 [Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
-## FAQ
-
-### Perlukah saya jalankan model sendiri untuk menggunakan model terbuka?
-
-Tidak. Banyak pembekal menyediakan model terbuka melalui API dengan harga setiap token. API Mistral sendiri meletakkan harga Mistral Small 4 pada USD 0.15 setiap juta token input dan USD 0.60 setiap juta token output ([disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)). Anda dapat terma lesen dan model itu tanpa memiliki perkakasan.
-
-### Bolehkah saya jalankan model ini pada PC pejabat?
-
-Tidak secara berguna. Model dalam artikel ini besar: Mistral Small 4 mempunyai 119 bilion parameter dengan 6.5 bilion aktif ([Mistral, disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)), dan itu memerlukan GPU pusat data, bukan stesen kerja. Model kecil yang dikuantisasi boleh berjalan pada komputer riba, tetapi itu tukar ganti yang berbeza dan kualitinya tidak diukur dalam artikel ini.
-
-### Adakah hosting sendiri menyimpan data saya di Malaysia?
-
-Hanya jika perkakasan itu berada di Malaysia. Menyewa GPU di wilayah lain memindahkan data ke sana, sama seperti memanggil API tertutup. Jika lokasi data ialah sebab anda mahu hosting sendiri, sahkan dahulu di mana mesin sewaan itu berada sebelum komited.
-

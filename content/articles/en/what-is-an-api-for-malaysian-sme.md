@@ -98,21 +98,3 @@ Settle three things in writing before you pay.
 [Open or closed models, and which to start with](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
 
 [More on APIs and models](https://upahje.my/en/articles/category/definitions)
-## FAQ
-
-### Do I need my own server to use an API?
-
-No. A closed API needs an internet connection and a small script or app. You need a server only if you host an open-weight model yourself.
-
-### Is it safe to give a freelancer my API keys?
-
-Not your main key. Issue a separate key for that integration with a spending limit, keep it out of WhatsApp and email, and revoke it on the last day of the job. A revoked key costs nothing. A leaked one can cost your whole account.
-
-### What happens if a provider changes or shuts down their API?
-
-The integration stops working until it is updated. The window belongs to the vendor: OpenAI publishes a deprecation timeline linked from its pricing page ([checked 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Keep the integration thin so it can be pointed at another provider.
-
-### How long does a first integration take?
-
-A single read-only endpoint takes a competent developer about a day. Anything that moves money or writes data takes a week, most of it spent on what happens when calls fail. No published dataset for Malaysian timelines exists, so these are working estimates.
-

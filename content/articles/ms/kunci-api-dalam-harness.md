@@ -73,17 +73,3 @@ Urutannya lebih penting daripada ketelitiannya. Pasukan yang memutar dahulu dan 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
-## FAQ
-
-### Patutkah saya guna pemboleh ubah persekitaran atau stor credentials harness?
-
-Guna stor credentials jika anda mahu satu tempat untuk memutar dan satu set kebenaran fail untuk dilindungi. Guna pemboleh ubah persekitaran jika kunci itu disuntik oleh sistem penggunaan yang anda sudah percaya. Kedua-duanya selamat; kunci yang ditulis terus ke dalam fail sumber bukan kedua-duanya.
-
-### Bolehkah pasukan saya berkongsi satu kunci?
-
-Boleh, dan anda kehilangan keupayaan untuk mengatakan siapa melakukan apa. Kunci berasingan mengikut orang atau integrasi menjadikan pembatalan tepat dan halaman penggunaan pembekal boleh dibaca. Berkongsi satu kunci bermakna sebarang kebocoran daripada mana-mana ahli pasukan memaksa semua orang memutar.
-
-### Adakah kunci tamat tempoh?
-
-Itu bergantung pada pembekal, jadi semak pembekal anda daripada menganggap. Kunci tanpa tamat tempoh ialah credentials yang anda mesti ingat untuk diputar, dan kebanyakan pasukan tidak melakukannya. Tetapkan peringatan kalendar jika pembekal tiada tamat tempoh paksa.
-

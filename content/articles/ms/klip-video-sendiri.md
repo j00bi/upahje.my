@@ -80,7 +80,7 @@ Dua belas klip ialah angka yang saya gunakan, dan itu pertimbangan, bukan penemu
 
 Pemasangan tetap satu malam. Itu kos sebenar di pihak percuma, dan ia dibayar sekali.
 
-## Apa yang perlu dibuat minggu ini
+## Apa yang perlu dikira sebelum membatalkan
 
 1. Kira klip yang anda terbitkan bulan lepas, bukan yang anda niatkan.
 2. Pasang satu repo pada mesin yang anda sudah miliki dan potong satu video panjang.

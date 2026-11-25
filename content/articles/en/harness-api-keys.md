@@ -73,17 +73,3 @@ The order matters more than the thoroughness. Teams that rotate first and revoke
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
 [More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
-## FAQ
-
-### Should I use an environment variable or the harness credential store?
-
-Use the credential store if you want one place to rotate and one set of file permissions to protect. Use an environment variable if the key is injected by a deployment system you already trust. Both are safe; a key written directly into a source file is neither.
-
-### Can my team share one key?
-
-You can, and you lose the ability to tell who did what. Separate keys per person or per integration make revocation surgical and make the provider's usage page readable. Sharing one key means any leak from any team member forces everyone to rotate.
-
-### Do keys expire?
-
-That depends on the provider, so check yours rather than assuming. A key with no expiry is a credential you must remember to rotate, and most teams do not. Set a calendar reminder if the provider offers no forced expiry.
-

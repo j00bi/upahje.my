@@ -75,17 +75,3 @@ Tiga arahan, dan anda tidak perlu mempercayai halaman ini untuk menjalankannya.
 [Di mana kunci API diletakkan dalam harness, dan di mana ia tidak boleh ada](https://upahje.my/ms/articles/kunci-api-dalam-harness)
 
 [Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
-## FAQ
-
-### Bolehkah transkrip itu dibaca oleh manusia?
-
-Boleh, selepas dinyahmampat. Ia JSON Lines: satu objek JSON setiap baris, setiap satu dengan `type`, `seq`, `time` dan muatan `data`. Arahan `zstd` di atas mengembalikannya kepada teks tanpa alat khas.
-
-### Adakah harness menyimpan perbualan saya selepas saya tutup?
-
-Direktori sesi kekal pada cakera bersama transkripnya, jadi fail itu masih ada selepas tetingkap ditutup. Sama ada pemasangan anda memadam sesi lama mengikut jadual ialah tetapan pada mesin anda, bukan sesuatu yang halaman ini boleh dakwa bagi pihak anda; semak folder sesi sebelum menganggap mana-mana arah.
-
-### Adakah setiap permintaan menghantar seluruh perbualan kepada model?
-
-Harness merekodkan `request/header` dan `request/context` bagi setiap step, jadi setiap step ialah permintaan berasingan, bukan satu pertukaran panjang. Apa sebenarnya yang diterima pembekal di dalam permintaan itu tidak diukur oleh halaman ini, dan kami tidak akan menekanya.
-

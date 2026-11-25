@@ -92,16 +92,3 @@ Pelancar `openmausbot` masih ada pada mesin ini, dan menjalankannya gagal dengan
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
 
-## FAQ
-
-### Adakah OpenBot sumber terbuka?
-
-Tidak, walaupun lamannya menulis kod sumbernya terbuka. Fail lesen repositori ialah PolyForm Noncommercial 1.0.0, dan medan lesen GitHub melaporkan NOASSERTION kerana ia tidak mengenali lesen piawai. Penggunaan komersial memerlukan lesen berbayar.
-
-### Adakah MausBot sumber terbuka?
-
-Repositori utama MausBot ialah Apache-2.0, iaitu sumber terbuka dan membenarkan penggunaan komersial. Repositori kedua yang menyebut dirinya repositori muat turun MIT pernah dipetik di sini sehingga 24 November 2026, apabila pautan itu memulangkan 404 dan organisasi GitHub di belakangnya tidak lagi wujud, jadi perpecahan itu tidak boleh disemak lagi dan repositori muat turun itu tidak dipetik.
-
-### Adakah harness sumber terbuka bermakna model sumber terbuka?
-
-Tidak. Harness dan model ialah dua perkara berasingan, dan perpecahannya berlaku dua arah: harness terbuka boleh memanggil model tertutup, dan harness tertutup boleh menjalankan model terbuka. Lesen yang anda baca terpakai pada kod harness, bukan pada model yang dipanggilnya.

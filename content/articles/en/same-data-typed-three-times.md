@@ -89,8 +89,7 @@ And the two famous "hours lost" numbers are not Malaysian. One is a vendor case 
 
 Written process, named owner, clean data source, exception path. That four-part framing is a Malaysian operations consultancy's article, published on its own site with no byline, written about the KRI/MDEC paper. It is a vendor's checklist, not an official one, and no government body publishes those four as a standard. Useful as a way to think; not citable as policy.
 
-## What to do this week?
-
+## What to map this week
 Five actions, none of which needs a purchase.
 
 1. **Pick one document** you issue often: a quotation, an invoice, a delivery order.
@@ -98,8 +97,6 @@ Five actions, none of which needs a purchase.
 3. **Count the copies** of that one record, and name who owns which copy.
 4. **Find the field that gets fixed by hand** most often, because that is where the source is wrong.
 5. **Write the exception path** for the one case that happens weekly: what should the system say, and who decides.
-
-## Try it yourself
 
 Start with a one-page map rather than a system: a spreadsheet with one row per step of the document, and columns for system, owner, and where the data is retyped.
 
@@ -111,20 +108,3 @@ You need the document, the person who handles it, and an hour. It costs nothing.
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 
-## FAQ
-
-### Is this a software problem or a process problem?
-
-It is a fragmentation problem, and KRI's wording is the accurate one: digitised in front, manual in back. Buying another tool before mapping the handoffs usually adds a fifth copy of the record.
-
-### Do we have to fix this before e-Invoice?
-
-You have to make the invoice data right at issuance, which is a smaller requirement than fixing everything. Start with the fields LHDN validates, then widen.
-
-### How many systems is too many?
-
-Nobody publishes a number, and the count is the wrong question. Two systems that disagree are worse than five that share one record.
-
-### Can we just automate the copy step?
-
-You can, and it is the most common first project. It also preserves the disagreement between systems, which is why the [piece on choosing a first automation](https://upahje.my/en/articles/your-first-automation-wrong-process) argues for mapping first.

@@ -69,24 +69,3 @@ Rekod sesi lengan GOAT lebih memberi maklumat daripada demonya. Tiga transkrip y
 
 Itu profil kebolehpercayaan, dan ia tidak mengatakan apa-apa tentang kualiti output. Tiada kiraan token dan tiada medan kos dalam rekod itu, dan model data laman itu juga tiada medan kos, jadi tiada perbandingan kos boleh dibina daripadanya.
 
-## FAQ
-
-### Bolehkah skor Terminal-bench dibandingkan dengan skor SWE-bench?
-
-Tidak. Penanda aras berbeza, agent berbeza, set tugasan berbeza. Angka itu tidak berkongsi skala.
-
-### Mengapa angka 38.5% bukan hasil CommandCode atau OpenCode?
-
-Kerana lajur agent menyatakan Claude Code. Modelnya milik DeepSeek; harness yang memandunya bukan mana-mana CLI itu.
-
-### Apa yang dibuktikan oleh rekod sesi GOAT?
-
-Bahawa lengan itu terus berjalan melalui 94 cubaan semula dan hampir tiga jam. Ia tidak membuktikan outputnya bagus, dan ia tiada data token atau kos.
-
----
-
-**Baca seterusnya**
-
-[CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda](https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka)
-
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)

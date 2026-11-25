@@ -111,18 +111,10 @@ Four commands and a filesystem check, and you can audit every number in the tabl
 3. Read the config paths in the table: `$DSH_HOME/profiles`, `~/.claude.json`, `~/.codex/config.toml`, `~/.config/opencode/opencode.jsonc`.
 4. Run `du -sh` on `~/.dsh`, `~/.claude`, `~/.codex` and `~/.config/opencode` for the footprints.
 
+Cost-heavy buyers can rerun the weighting. Raising provider and cost control to 40% and dropping footprint to 5% keeps DeepSeek Harness first and widens its lead, because the gap between the top two sits almost entirely in that criterion; on the same cells the new weighting gives DeepSeek Harness 4.65 and OpenCode 4.05.
+
 **Read next**
 
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
 [More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
-## FAQ
-
-### Does the ranking change if I care about cost more than 30%?
-
-Yes, and the table lets you recompute it. Raising provider and cost control to 40% and dropping footprint to 5% keeps DeepSeek Harness first and widens its lead over OpenCode, because the gap between them sits almost entirely in that criterion. Recomputed on the same cells, that weighting gives DeepSeek Harness 4.65 and OpenCode 4.05.
-
-### Why rank at all if the numbers are version-pinned?
-
-Because a buyer still has to choose this week, and a stated method with a re-run recipe is checkable. The alternative, an unranked list with no weights, hides the same judgement behind prose where nobody can audit it.
-

@@ -79,8 +79,7 @@ What happened in the other two arms matters more than the arm that worked. Both 
 
 We did not run the other two arms successfully, so this article makes no claim about their output quality.
 
-## What to do this week?
-
+## What to check before you pay
 Five actions, none of which needs a subscription.
 
 1. **Pick one real task from your own backlog**, small enough to finish in an hour, and run it in whichever harness you already have.
@@ -89,28 +88,9 @@ Five actions, none of which needs a subscription.
 4. **Run it twice** with the same prompt. A harness that succeeds once and fails once is a different purchase.
 5. **Before paying for a tier, ask what the processing fee is** in ringgit, and get it in writing.
 
-## Try it yourself
-
 There is no honest way to reproduce a leaderboard. What you can reproduce is your own row.
 
 Take one task, run it in one harness, and write down the same five fields the boards print: the model, the agent, the settings, the score (did the tests pass), and the cost in tokens or ringgit. That is your benchmark, it is comparable to itself next month, and it does not depend on anyone's marketing page.
 
 The one thing that will bite you is the exit code. A run that exits 0 without writing files looks like a pass in every log you have. Check the artefact, every time.
 
-## FAQ
-
-### Is CommandCode better than OpenCode?
-
-No published benchmark answers that, because neither product appears as an agent on either board. The boards score models inside fixed harnesses. Anything else is a vendor claim or one person's run.
-
-### Can I compare the 38.5% DeepSeek figure with a SWE-bench figure?
-
-No. Different benchmark, different agent, different task set. The two numbers do not share a scale, and pairing them is how a table becomes misleading.
-
-### Why does the article not cite Aider's leaderboard?
-
-Because its newest visible run is dated 23 August 2025. A stale board cannot say anything about a 2026 model, and citing it would be worse than leaving it out.
-
-### What is the one thing to check before trusting a coding-agent demo?
-
-Whether files were written and tests passed, not whether the command exited 0. Our own run showed two harnesses exiting cleanly without writing anything.

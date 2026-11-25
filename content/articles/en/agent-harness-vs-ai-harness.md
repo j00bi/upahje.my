@@ -75,16 +75,3 @@ A framework is something a developer imports; it does not give you a running env
 
 [More on agent harnesses](https://upahje.my/en/articles/category/definitions)
 
-## FAQ
-
-### Is Claude Code a harness or an app?
-
-Both. Anthropic sells an app, and its Agent SDK documentation describes the underlying hosted agent harness that runs the loop. The word describes the layer, not the product.
-
-### Is an agent framework the same as a harness?
-
-No. A framework is a library you build with; a harness is the thing that runs the loop, executes tools and keeps the transcript. You can build a harness on a framework, and most products do.
-
-### Does the word "harness" tell me whether it is open source?
-
-No. The word describes a function, not a licence. A harness can be proprietary and cloud-hosted, or open source and local, and the label reads the same either way.

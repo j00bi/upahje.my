@@ -96,19 +96,3 @@ Kemudian minta kedua-duanya menerangkan ujian penerimaan. Yang boleh menerangkan
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
-## FAQ
-
-### Patutkah saya tulis brief sendiri atau biarkan freelancer cadangkan?
-
-Tulis sendiri, walaupun kasar. Brief yang anda tulis ialah satu-satunya dokumen yang menyatakan apa yang anda benar-benar mahu, dan ia garis dasar bagi setiap sebut harga. Cadangan freelancer ialah harga dan satu tafsiran, dan anda mahu tafsiran itu datang kemudian.
-
-### Bagaimana jika saya tidak tahu format output?
-
-Dapatkan satu contoh sebenar dahulu. Eksport laporan atau baris yang anda mahu dihasilkan semula, dan lampirkannya. Kebanyakan kekaburan dalam brief hilang apabila ada fail yang menunjukkan sasarannya.
-
-### Adakah harga tetap sentiasa lebih baik daripada ikut jam?
-
-Tidak sentiasa, tetapi bagi kerja jenis ini biasanya ya, kerana skopnya boleh ditulis. Harga ikut jam sesuai apabila skop memang tidak dapat diketahui di awal, seperti menyiasat mengapa perkhidmatan pihak ketiga gagal. Jika brief itu jelas dan sebut harga masih ikut jam sahaja, tanya bahagian mana yang belum diketahui.
----
-
-Artikel ini tiada sumber kerana ia prosedur kami sendiri, bukan laporan: cara kami menempah kerja automasi dan brief yang kami berikan. Tiada piawaian terbitan atau dokumen vendor yang digambarkan, dan tiada angka di sini yang merupakan ukuran.

@@ -126,17 +126,3 @@ A RM400 session and a RM1,500 project both look small next to a RM6,000 build, a
 [How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/how-to-brief-an-automation-job)
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
-## FAQ
-
-### Is RM60 an hour typical for Malaysian automation freelancers?
-
-It is one published figure from one profile on freelancing.my, checked 19 November 2026, and it is the only hourly rate in this set of six publishers. One row is not a typical rate. Treat it as an anchor for what one practitioner asks, not as a market.
-
-### Why are there no Upwork or Fiverr figures?
-
-Because they could not be read from here, and the article says so in the method section rather than filling the gap with a number from memory.
-
-### Does a higher monthly retainer mean a better system?
-
-No, and this table cannot tell you that. It lists prices, publishers and dates. It says nothing about the quality of the work, delivery time, or whether the automation still runs a year later, and none of the six publishers publishes that information.
-

@@ -94,28 +94,3 @@ Sama ada perniagaan yang bermula di bawah garisan RM1 juta lama boleh berhenti t
 
 Dan tarikh kelonggaran setiap fasa berada dalam grafik dalam PDF garis panduan dan bukan dalam teksnya, jadi ia tidak disalin di sini.
 
-## FAQ
-
-### Adakah pengecualian terpakai kepada perniagaan dengan jualan RM2.9 juta?
-
-Ia terpakai kepada pendapatan atau jualan tahunan di bawah RM3 juta, jadi RM2.9 juta berada di bawah garisan dan e-Invoice tidak diwajibkan.
-
-### Bolehkah perniagaan di bawah ambang tetap mengeluarkan e-Invoice?
-
-Boleh. Penyertaan sukarela digalakkan, dan perniagaan boleh melaksanakannya tanpa kewajipan.
-
-### Apa berlaku selepas 72 jam jika invois salah?
-
-Pembatalan tidak lagi dibenarkan, dan pembetulannya ialah e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
-
-### Adakah jumlah penalti diterbitkan?
-
-Seksyen 120 Akta Cukai Pendapatan 1967 disebut. Tiada jumlah ringgit diterbitkan dalam kenyataan itu atau pada halaman yang disemak.
-
----
-
-**Baca seterusnya**
-
-[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali)
-
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)

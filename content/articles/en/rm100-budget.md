@@ -108,16 +108,3 @@ Two benchmark leaderboards were also not captured for this piece, and this artic
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 
-## FAQ
-
-### Can I use my ChatGPT subscription as an API key?
-
-No. ChatGPT Plus at RM99.90 includes no API credits, and nothing on the pricing page grants a third-party harness a key. A harness needs its own API key, or an OAuth flow the vendor explicitly supports. ChatGPT Pro bundles API credits, which are credit against the API, not the subscription login used as a key.
-
-### Why is Claude Pro cheaper in ringgit than ChatGPT Plus?
-
-Because they are converted differently, not priced differently. Claude publishes USD 20 and we converted at 4.1145 to RM82.29. OpenAI publishes MYR 99.90 directly for Malaysia. A stronger or weaker ringgit moves the Claude figure and leaves the ChatGPT figure alone.
-
-### Is a yearly plan worth it?
-
-Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 against RM82.29, and it costs USD 200 up front. Whether that is worth it depends on whether you will still be using it in twelve months; the arithmetic does not, and this article does not have your usage.

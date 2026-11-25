@@ -92,16 +92,3 @@ The `openmausbot` launcher is still on this machine, and running it fails with a
 
 [More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
 
-## FAQ
-
-### Is OpenBot open source?
-
-No, despite its site saying the source code is open. The repository's licence file is PolyForm Noncommercial 1.0.0, and GitHub's licence field reports NOASSERTION because it does not recognise a standard licence. Commercial use requires a paid licence.
-
-### Is MausBot open source?
-
-MausBot's main repository is Apache-2.0, which is open source and permits commercial use. A second repository described itself as an MIT download repo and was cited here until 24 November 2026, when that link returned 404 and the GitHub organisation behind it no longer resolves, so the split can no longer be checked and the download repo is not cited.
-
-### Does an open-source harness mean an open-source model?
-
-No. The harness and the model are separate, and the split runs both ways: an open harness can call a closed model, and a closed harness can run an open-weight model. The licence you read applies to the harness code, not to the model it calls.

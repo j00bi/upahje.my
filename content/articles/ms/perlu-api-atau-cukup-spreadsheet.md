@@ -60,19 +60,3 @@ Eksport CSV dan import ke tool lain masih satu langkah salin, tetapi lebih panta
 [Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
 
 [Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
-## FAQ
-
-### Bolehkah saya mula dengan spreadsheet dan tambah API kemudian?
-
-Boleh, dan itulah urutan yang biasanya betul. Spreadsheet memberitahu anda medan mana yang penting, medan mana yang orang benar-benar ubah, dan di mana kesilapan berlaku. Integrasi yang dibina sebelum pengetahuan itu ada cenderung menyelaraskan perkara yang salah dengan sangat tepat.
-
-### Adakah spreadsheet tidak selamat?
-
-Tidak semestinya. Spreadsheet dalam pemacu kongsi dengan kawalan akses ialah tool perniagaan biasa. Risikonya sama seperti mana-mana dokumen kongsi: orang yang salah mendapat pautan, atau satu-satunya salinan ada pada satu komputer riba. Buat sandaran dan hadkan pautan itu; selepas itu soalannya menjadi jumlah dan penyimpangan, bukan keselamatan.
-
-### Bagaimana jika tool sedia ada pasukan saya sudah ada API?
-
-Maka keputusannya menyempit kepada sama ada ada orang yang ada masa untuk menyambungkannya. API yang tiada siapa sambungkan tidak bernilai apa-apa, dan tool tanpa API yang digunakan setiap hari lebih bernilai daripada tool yang lebih baik tetapi tidak digunakan.
----
-
-Artikel ini tiada sumber kerana ia hujah daripada kes, bukan laporan: antara dua cara, mana lebih sesuai dengan jumlah anda. Tiada penanda aras awam bagi kos pemaju Malaysia menyambung API, jadi tiada angka kos dicetak di sini dan tiada yang dipinjam.

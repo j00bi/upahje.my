@@ -98,16 +98,3 @@ Tiada kad menyatakan konfigurasi perkakasan minimum, jadi tiada kos hosting send
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
 
-## FAQ
-
-### Adakah model terbuka bermakna percuma untuk kegunaan komersial?
-
-Tidak. Lesen yang menentukannya. MIT membenarkan penggunaan komersial; lesen tersuai boleh mengehadkannya, dan anda perlu membaca teks dalam fail LICENSE repositori daripada mempercayai perkataan "model terbuka".
-
-### Bolehkah saya menjalankan salah satu ini pada satu GPU?
-
-Tidak secara berguna bagi model dalam jadual ini. Ia berjalan dari 95B hingga 1T parameter aktif, dan contoh Mistral sendiri menamakan nod 8 GPU. Model satu GPU ialah model yang jauh lebih kecil, yang tidak diliputi jadual ini.
-
-### Adakah menyewa sentiasa lebih buruk daripada menjalankan sendiri?
-
-Tidak, dan bagi kebanyakan perniagaan menyewa menang kerana nod itu mahal dan terbiar sebahagian besar hari. Menjalankan sendiri menjadi soalan apabila penggunaan cukup tinggi untuk mengalahkan kos bulanan nod, atau apabila lokasi data memaksa anda. Artikel ini tidak boleh menilai nod itu, jadi ia tidak berpura-pura menarik garis tersebut.

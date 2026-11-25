@@ -75,17 +75,3 @@ Three commands, and you do not need to trust this page to run them.
 [Where an API key goes in a harness, and where it must never go](https://upahje.my/en/articles/harness-api-keys)
 
 [More on agent harnesses](https://upahje.my/en/articles/category/definitions)
-## FAQ
-
-### Is the transcript human-readable?
-
-Yes, once decompressed. It is JSON Lines: one JSON object per line, each with a `type`, a `seq`, a `time` and a `data` payload. The `zstd` command above turns it back into text without any special tool.
-
-### Does the harness keep my conversation after I close it?
-
-The session directory stays on disk with its transcript, so the file persists after the window closes. Whether your installation deletes old sessions on a schedule is a setting on your machine, not something this page can claim for yours; check the sessions folder before assuming either way.
-
-### Does every request send the whole conversation to the model?
-
-The harness records a `request/header` and a `request/context` per step, so each step is a separate request rather than one long exchange. What exactly the provider receives inside that request is not something this page measures, and we are not going to guess at it.
-

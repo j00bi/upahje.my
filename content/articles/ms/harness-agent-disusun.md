@@ -111,18 +111,10 @@ Empat arahan dan satu semakan fail, dan anda boleh mengaudit setiap nombor dalam
 3. Baca laluan konfigurasi dalam jadual: `$DSH_HOME/profiles`, `~/.claude.json`, `~/.codex/config.toml`, `~/.config/opencode/opencode.jsonc`.
 4. Jalankan `du -sh` pada `~/.dsh`, `~/.claude`, `~/.codex` dan `~/.config/opencode` untuk jejak cakera.
 
+Pembeli yang mementingkan kos boleh mengira semula pemberatnya. Menaikkan penyedia dan kawalan kos kepada 40% serta menurunkan jejak kepada 5% mengekalkan DeepSeek Harness di tempat pertama dan melebarkan jurangnya, kerana perbezaan antara dua teratas hampir seluruhnya pada kriteria itu; pada sel yang sama, pemberat baharu memberi DeepSeek Harness 4.65 dan OpenCode 4.05.
+
 **Baca seterusnya**
 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
-## FAQ
-
-### Adakah susunan ini berubah jika saya lebih mementingkan kos daripada 30%?
-
-Ya, dan jadual itu membolehkan anda mengiranya semula. Jika kawalan pembekal dan kos dinaikkan kepada 40% dan jejak operasi diturunkan kepada 5%, DeepSeek Harness kekal di tempat pertama dan jurangnya dengan OpenCode melebar, kerana jurang antara mereka hampir semuanya terletak pada kriteria itu. Dikira semula pada sel yang sama, wajaran itu memberi DeepSeek Harness 4.65 dan OpenCode 4.05.
-
-### Mengapa disusun jika nombornya terikat pada versi?
-
-Kerana pembeli tetap perlu memilih minggu ini, dan kaedah yang dinyatakan berserta resipi ulang semak boleh disemak. Alternatifnya, senarai tanpa susunan dan tanpa wajaran, menyembunyikan pertimbangan yang sama di sebalik prosa yang tiada siapa boleh audit.
-

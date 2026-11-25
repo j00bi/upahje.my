@@ -86,8 +86,7 @@ That sentence is the whole reason to keep verification current. An appeal filed 
 
 Google publishes nothing in these pages about how profiles are ranked in local search, so this article makes no claim about ranking factors beyond the documented fields. Several help-centre IDs returned "Sorry, this page can't be found" during the pass, so only the pages Google itself links, or that the scan surfaced, are cited. There is also no published figure for how long verification or an appeal takes.
 
-## What to do this week?
-
+## What to fix first
 Five actions, none of which needs an agency.
 
 1. **Read your own business name** against the real-world rule, and fix it in the profile rather than the listing on a directory.
@@ -95,8 +94,6 @@ Five actions, none of which needs an agency.
 3. **Decide storefront or service area**, and make the address and service areas match that decision.
 4. **Fill regular and special hours** for the next two months of public holidays.
 5. **Check your verification status** and keep the document that proves your business exists, because a suspension would ask for it.
-
-## Try it yourself
 
 The smallest version is an audit, not an integration: open your profile, and go field by field against Google's guidelines page, marking each one as documented-and-correct, documented-but-wrong, or empty.
 
@@ -108,20 +105,3 @@ You need the guidelines page, your own profile, and a spare hour. It costs nothi
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 
-## FAQ
-
-### Should I put my keywords in my business name?
-
-No. Google's rule is the name as used in the real world and known to customers, and stuffing keywords is the documented way to get a profile restricted.
-
-### Storefront or service area, if I do both?
-
-One profile, with the address if customers can walk in, and service areas for where you travel. Google's rule is that a business with a storefront does not use service-area-only settings to hide it.
-
-### Can I have two profiles for two outlets?
-
-Two real outlets at two addresses are two businesses as far as the profile is concerned. Two profiles for the same outlet is the documented problem.
-
-### How long does an appeal take?
-
-Google does not publish a timeframe on the pages read for this article. What it does publish is the order: resolve verification first, then appeal.

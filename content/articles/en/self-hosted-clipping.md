@@ -80,7 +80,7 @@ Twelve clips is the number I would use, and it is a judgement rather than a sour
 
 The instalment is one evening either way. That is the real cost on the free side, and it is paid once.
 
-## What to do this week
+## What to count before cancelling
 
 1. Count the clips you published last month, not the ones you meant to.
 2. Install one repo on the machine you already own and clip one long video.

@@ -125,24 +125,3 @@ Kami tidak menjalankan penanda aras sendiri. Kami membaca dua, dengan tetapannya
 
 Juga tiada dengan sengaja: halaman terma Anthropic, OpenAI, DeepSeek dan Google disenaraikan tetapi tidak dibuka, jadi tiada dakwaan dibuat tentang apa yang dibenarkannya; tetingkap konteks gpt-6-luna ialah "tidak dirakam"; dan input fail serta PDF belum disahkan bagi kebanyakan baris kerana pusingan ini tidak sampai ke halaman tersebut.
 
-## FAQ
-
-### Bolehkah saya membandingkan model ini ikut harga sahaja?
-
-Hanya jika anda tahu campuran token anda. Input dan output dinilai berasingan, konteks panjang menelan kos lebih pada OpenAI dan xAI, dan angka input Haiku 5.5 disyaratkan oleh panjang prompt. Model yang nampak termurah setiap token input boleh menelan kos lebih pada tugasan yang banyak menulis.
-
-### Mengapa sesetengah sel "tidak dirakam" dan bukan sifar atau tekaan?
-
-Kerana halaman itu tidak mencetak angkanya di tempat yang dapat dibaca. Sifar akan salah dan tekaan akan direka. "Tidak dirakam" ialah sel yang jujur, dan ia memberitahu anda apa yang perlu disemak semula pada halaman vendor.
-
-### Adakah Gemini wajar dimasukkan dalam perbandingan seperti ini?
-
-Hanya dengan amaran. Google menjualnya melalui bundel yang merangkumi storan dan perkhidmatan lain, jadi harga pelannya tidak setara baris demi baris dengan pelan sembang kosong. Harga API di atas setara; bundel pengguna tidak, dan artikel ini tidak menyusunnya.
-
----
-
-**Baca seterusnya**
-
-[Apa yang RM100 sebulan beli dalam AI](https://upahje.my/ms/articles/bajet-rm100-ai-malaysia)
-
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)

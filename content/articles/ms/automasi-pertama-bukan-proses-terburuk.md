@@ -71,19 +71,3 @@ Dan ada kos sebenar untuk menunggu. Dua minggu penjejakan bermakna dua minggu la
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
 
-## FAQ
-
-### Jadi saya tidak patut automasikan proses yang menyakitkan?
-
-Automasikan selepas anda menulis pengecualiannya. Sakit itu bukti bahawa pengecualian wujud, jadi proses itu calon yang baik, cuma bukan calon pertama yang baik.
-
-### Bagaimana jika kami tiada masa menjejak apa-apa selama dua minggu?
-
-Jejaki kegagalan sahaja. Satu baris setiap kali sesuatu silap, dengan apa yang berlaku dan siapa yang membetulkannya. Ia mengambil beberapa minit dan masih menunjukkan di mana kerja sebenar berada.
-
-### Apa yang menjadikan automasi pertama yang baik?
-
-Proses dengan garisan penamat jelas, kesilapan yang murah dan kelihatan, dan pemilik di sebelah sana. Membosankan itulah maksudnya: yang pertama ialah tempat anda belajar cara membeli dan cara menyelenggara, bukan tempat anda membuat penjimatan tahunan.
----
-
-Artikel ini tiada sumber kerana ia hujah, bukan laporan: pendirian tentang proses mana yang patut diautomasikan dahulu, berdasarkan cara projek sebegini gagal. Tiada angka di sini yang merupakan ukuran dan tiada yang dipinjam daripada artikel lain.

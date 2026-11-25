@@ -108,16 +108,3 @@ Dua papan pendahulu penanda aras juga tidak dirakam untuk artikel ini, dan artik
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
 
-## FAQ
-
-### Bolehkah saya guna langganan ChatGPT saya sebagai kunci API?
-
-Tidak. ChatGPT Plus pada RM99.90 tidak menyertakan kredit API, dan tiada apa pada halaman harga itu memberikan harness pihak ketiga satu kunci. Harness memerlukan kunci API sendiri, atau aliran OAuth yang disokong pembekal secara jelas. ChatGPT Pro membundel kredit API, iaitu kredit terhadap API, bukan log masuk langganan yang digunakan sebagai kunci.
-
-### Mengapa Claude Pro lebih murah dalam ringgit daripada ChatGPT Plus?
-
-Kerana kedua-duanya ditukar dengan cara berbeza, bukan dinilai berbeza. Claude menerbitkan USD 20 dan kami tukar pada 4.1145 kepada RM82.29. OpenAI menerbitkan MYR 99.90 terus untuk Malaysia. Ringgit yang lebih kuat mengubah angka Claude dan membiarkan angka ChatGPT.
-
-### Adakah pelan tahunan berbaloi?
-
-Kadar tahunan Claude ialah USD 17 sebulan berbanding USD 20 bulanan, iaitu RM69.95 berbanding RM82.29, dan ia menelan USD 200 di awal. Sama ada ia berbaloi bergantung pada sama ada anda masih menggunakannya dua belas bulan lagi; aritmetiknya tidak tahu, dan artikel ini tidak mempunyai data penggunaan anda.

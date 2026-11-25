@@ -98,16 +98,3 @@ No card states a minimum hardware configuration, so no self-hosting cost is clai
 
 [More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
 
-## FAQ
-
-### Does open weight mean free to use commercially?
-
-No. The licence decides that. MIT permits commercial use; a custom licence may restrict it, and you have to read the text in the repository's LICENSE file rather than trusting the words "open weight".
-
-### Can I run one of these on a single GPU?
-
-Not usefully for the models in this table. They run from 95B to 1T activated parameters, and Mistral's own example names a node of 8 GPUs. A single-GPU model would be a much smaller one, which this table does not cover.
-
-### Is renting always worse than running it yourself?
-
-No, and for most businesses renting wins because the node is expensive and idle most of the day. Running it yourself becomes a question when usage is high enough to beat the node's monthly cost, or when data location forces your hand. This article cannot price the node, so it does not pretend to draw that line.

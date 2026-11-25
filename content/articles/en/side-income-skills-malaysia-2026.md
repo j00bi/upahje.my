@@ -127,17 +127,3 @@ Two further limits. The two cold-calling rows are advertised budgets, which a cl
 **Read next**
 
 [More on side-income work](https://upahje.my/en/articles/category/side-income)
-## FAQ
-
-### Is one platform enough to judge the whole market?
-
-No, and this article does not claim it is. It is the layer that could be read on 19 November 2026. A reader who finds better-paying listings elsewhere has found exactly the gap this piece names, and the honest response is to check those listings yourself rather than trust a single table.
-
-### Why are some rates marked as advertised budgets?
-
-Because a listing's stated budget is what the client says they will pay, not what was agreed. Two cold-calling rows fall in that category, and they are labelled so a reader does not treat a wish as a rate.
-
-### Can I combine several of these skills?
-
-Yes, and the listings suggest it is common: the RM2,500 video role combines filming, editing and appearing on camera. A second skill raises the price faster than doing the first one for longer.
-

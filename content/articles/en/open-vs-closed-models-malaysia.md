@@ -89,17 +89,3 @@ Call an open-weight model before you try to run one. Mistral serves its own open
 [What an API costs to wire up in Malaysia](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
 
 [More on APIs and models](https://upahje.my/en/articles/category/definitions)
-## FAQ
-
-### Do I have to run a model myself to use open weights?
-
-No. Plenty of providers serve open-weight models through an API, priced per token. Mistral's own API prices Mistral Small 4 at USD 0.15 per million input tokens and USD 0.60 per million output tokens ([checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)). You get the licence terms and the model without owning hardware.
-
-### Can I run one of these on an office PC?
-
-Not usefully. The models in this article are large: Mistral Small 4 has 119 billion parameters with 6.5 billion active ([Mistral, checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)), and that needs a datacentre GPU, not a workstation. Small quantised models that do run on a laptop are a different trade, and this article does not measure their quality.
-
-### Does self-hosting keep my data in Malaysia?
-
-Only if the hardware is in Malaysia. Renting a GPU in another region moves the data there, same as calling a closed API. If data location is your reason to self-host, check where the rented machine actually sits before you commit.
-

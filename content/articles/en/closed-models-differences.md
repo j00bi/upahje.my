@@ -125,24 +125,3 @@ We did not run a benchmark ourselves. We read two, with their settings, and we a
 
 Also absent by design: the Anthropic, OpenAI, DeepSeek and Google terms pages were listed but not opened, so no claim is made about what they permit; gpt-6-luna's context window is "not captured"; grok-4.7's file input is not documented on the pages checked, deepseek-flash's file input is unverified, and Gemini's terms link was listed in the documentation nav but not opened.
 
-## FAQ
-
-### Can I compare these models by price alone?
-
-Only if you know your token mix. Input and output are priced separately, long context costs more on OpenAI and xAI, and Haiku 5.5's input figure is qualified by prompt length. A model that looks cheapest per input token can cost more on a task that writes a lot.
-
-### Why are some cells "not captured" instead of zero or a guess?
-
-Because the page did not print the figure where it could be read. A zero would be wrong and a guess would be invented. "Not captured" is the truthful cell, and it tells you what to re-check on the vendor's page.
-
-### Does Gemini belong in a comparison like this?
-
-Only with a warning. Google sells it through a bundle that includes storage and other services, so its plan price is not line-for-line comparable with a bare chat plan. The API price above is comparable; the consumer bundle is not, and this article does not rank it.
-
----
-
-**Read next**
-
-[What RM100 a month actually buys you in AI](https://upahje.my/en/articles/rm100-budget)
-
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)

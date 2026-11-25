@@ -94,28 +94,3 @@ Whether a business that started under the old RM1 million line may stop is not a
 
 And the per-phase relaxation dates sit in a graphic in the guideline PDF rather than in its text, so they are not reproduced here.
 
-## FAQ
-
-### Does the exemption apply to a business with RM2.9 million in sales?
-
-It applies to annual revenue or sales below RM3 million, so RM2.9 million is below the line and e-Invoice is not required.
-
-### Can a business below the threshold still issue e-Invoices?
-
-Yes. Voluntary participation is encouraged, and a business may adopt the system without an obligation.
-
-### What happens after 72 hours if an invoice is wrong?
-
-Cancellation is no longer allowed, and the correction is a new e-Invoice in the form of a credit, debit or refund note.
-
-### Is there a published penalty amount?
-
-Section 120 of the Income Tax Act 1967 is cited. No ringgit amount is published in the statement or on the pages checked.
-
----
-
-**Read next**
-
-[Where the same data gets typed three times](https://upahje.my/en/articles/same-data-typed-three-times)
-
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)

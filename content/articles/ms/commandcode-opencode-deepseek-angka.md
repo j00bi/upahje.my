@@ -79,8 +79,7 @@ Yang patut diingat ialah apa yang berlaku pada dua lengan lain. Kedua-duanya eng
 
 Kami tidak berjaya menjalankan dua lengan lain, jadi artikel ini tidak membuat sebarang dakwaan tentang kualiti outputnya.
 
-## Apa yang patut dibuat minggu ini?
-
+## Apa yang perlu disemak sebelum membayar
 Lima tindakan, tiada satu pun memerlukan langganan.
 
 1. **Pilih satu tugasan sebenar daripada backlog anda**, cukup kecil untuk siap dalam sejam, dan jalankannya dalam harness yang anda sudah ada.
@@ -89,28 +88,9 @@ Lima tindakan, tiada satu pun memerlukan langganan.
 4. **Jalankannya dua kali** dengan prompt yang sama. Harness yang berjaya sekali dan gagal sekali ialah pembelian yang berbeza.
 5. **Sebelum membayar sesuatu tier, tanya berapa yuran pemprosesannya** dalam ringgit, dan dapatkan secara bertulis.
 
-## Cuba sendiri
-
 Tiada cara jujur untuk menghasilkan semula papan pendahulu. Yang boleh anda hasilkan semula ialah baris anda sendiri.
 
 Ambil satu tugasan, jalankannya dalam satu harness, dan catat lima medan yang sama seperti papan cetak: model, agent, tetapan, skor (adakah ujian lulus), dan kos dalam token atau ringgit. Itu penanda aras anda, ia setara dengan dirinya bulan depan, dan ia tidak bergantung pada halaman pemasaran sesiapa.
 
 Satu perkara yang akan menggigit anda ialah kod keluar. Larian yang keluar dengan 0 tanpa menulis fail kelihatan lulus dalam setiap log anda. Periksa artifaknya, setiap kali.
 
-## FAQ
-
-### Adakah CommandCode lebih baik daripada OpenCode?
-
-Tiada penanda aras yang diterbitkan menjawab soalan itu, kerana tiada satu pun produk muncul sebagai agent pada mana-mana papan. Papan menilai model di dalam harness tetap. Selain itu, ia dakwaan vendor atau larian seorang individu.
-
-### Bolehkah saya bandingkan angka 38.5% DeepSeek dengan angka SWE-bench?
-
-Tidak. Penanda aras berbeza, agent berbeza, set tugasan berbeza. Dua angka itu tidak berkongsi skala, dan memasangkannya ialah cara jadual menjadi mengelirukan.
-
-### Mengapa artikel ini tidak memetik papan pendahulu Aider?
-
-Kerana larian terbaharu yang kelihatan bertarikh 23 Ogos 2025. Papan lapuk tidak boleh mengatakan apa-apa tentang model 2026, dan memetiknya lebih buruk daripada meninggalkannya.
-
-### Satu perkara apa yang perlu disemak sebelum mempercayai demo coding agent?
-
-Sama ada fail ditulis dan ujian lulus, bukan sama ada arahan keluar dengan 0. Larian kami sendiri menunjukkan dua harness keluar dengan bersih tanpa menulis apa-apa.

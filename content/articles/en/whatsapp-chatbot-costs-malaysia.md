@@ -117,8 +117,7 @@ Three publishers, three shapes. These are build-and-subscription prices, not mes
 
 AIRS also states the market band as RM300 to RM3,000-plus per month, and AlwaysON notes that platform fees are "only 40-60% of the total cost", which is a useful warning: the subscription is not the whole bill.
 
-## What to do this week?
-
+## What to count before you sign
 Five actions, none of which needs a purchase.
 
 1. **Export last month's outbound WhatsApp messages** and tag each one marketing, utility, authentication or service.
@@ -126,8 +125,6 @@ Five actions, none of which needs a purchase.
 3. **Find the messages you send outside the 24-hour window.** Those are the marketing templates at RM0.3467 each, and they dominate small bills.
 4. **Multiply the marketing count by 0.3467** and the paid service count by 0.0564, and compare that total with RM200 to RM1,500 of vendor fees.
 5. **Ask each vendor whether their price includes Meta's message charges**, and get the answer in writing, because the two bills come from different companies.
-
-## Try it yourself
 
 Before talking to a vendor, price your own last month from the published card with a script, so you know the volume before you talk to a vendor.
 
@@ -141,28 +138,3 @@ There is no honest free sandbox path documented in the pages read for this artic
 
 The dedicated international-authentication page was not opened, so that row rests on the Malaysia card alone. Utility and authentication volume tiers exist, but the tier files were not parsed, so any figure above list price is absent. Meta Business Agent is priced per million tokens with no Malaysia-specific per-message figure published, so no per-interaction cost is claimed. Only one of the three Malaysian vendors publishes a from-price with no setup fee; the other two quote on scope, so no market-wide build fee can be stated.
 
-## FAQ
-
-### Is one message really RM0.3467?
-
-Only a marketing message, and only when it is delivered. Utility, authentication and service are RM0.0564, and the first 1,000 service messages per number per month are free.
-
-### Do I pay when a customer messages me?
-
-No. Meta charges business-to-user messages only, so the customer's message is free to receive, and your reply is charged according to the category it falls into.
-
-### What is the 24-hour window in plain terms?
-
-It is a clock that starts when a customer messages you. Inside that day you can reply freely as a service message; after it closes, any new message must be a paid template.
-
-### Do vendor prices include Meta's message charges?
-
-Most do not, and the ones read here say so separately. Meta bills the messages to your own account, so budget the vendor fee and the message bill as two lines.
-
----
-
-**Read next**
-
-[What e-Invoice automation covers, and what stays with a person](https://upahje.my/en/articles/what-einvoice-automation-covers)
-
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)

@@ -126,17 +126,3 @@ Sesi RM400 dan projek RM1,500 kedua-duanya kelihatan kecil berbanding pembinaan 
 [Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
-## FAQ
-
-### Adakah RM60 sejam kadar biasa bagi freelancer automasi Malaysia?
-
-Ia satu angka yang diterbitkan daripada satu profil di freelancing.my, disemak 19 November 2026, dan ia satu-satunya kadar sejam dalam set enam penerbit ini. Satu baris bukan kadar biasa. Anggaplah ia sebagai penanda apa yang diminta seorang pengamal, bukan sebagai pasaran.
-
-### Mengapa tiada angka Upwork atau Fiverr?
-
-Kerana ia tidak dapat dibaca dari sini. Upwork memulangkan HTTP 403 dengan sekatan Cloudflare, Fiverr memulangkan cabaran bot, dan Jobstreet memulangkan halaman perantaraan Cloudflare. Menyatakan perkara itu lebih berguna daripada mengisi jurang dengan angka daripada ingatan.
-
-### Adakah retainer bulanan yang lebih tinggi bermakna sistem yang lebih baik?
-
-Tidak, dan jadual ini tidak boleh memberitahu anda perkara itu. Ia menyenaraikan harga, penerbit dan tarikh. Ia tidak menyatakan apa-apa tentang kualiti kerja, masa penghantaran, atau sama ada automasi itu masih berjalan setahun kemudian, dan tiada satu pun daripada enam penerbit itu menerbitkan maklumat tersebut.
-

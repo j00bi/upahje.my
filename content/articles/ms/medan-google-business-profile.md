@@ -86,8 +86,7 @@ Ayat itu sebabnya pengesahan mesti kekal semasa. Rayuan yang difailkan sebelum p
 
 Google tidak menerbitkan apa-apa pada halaman ini tentang cara profil disusun dalam carian setempat, jadi artikel ini tidak membuat dakwaan tentang faktor susunan selain medan yang didokumenkan. Beberapa ID pusat bantuan memulangkan "Sorry, this page can't be found" semasa pusingan ini, jadi hanya halaman yang Google sendiri pautkan atau yang ditemui imbasan dipetik. Tiada juga angka yang diterbitkan untuk tempoh pengesahan atau rayuan.
 
-## Apa yang patut dibuat minggu ini?
-
+## Apa yang perlu dibetulkan dahulu
 Lima tindakan, tiada satu pun memerlukan agensi.
 
 1. **Baca nama perniagaan anda sendiri** terhadap peraturan dunia sebenar, dan betulkannya dalam profil, bukan dalam direktori.
@@ -95,8 +94,6 @@ Lima tindakan, tiada satu pun memerlukan agensi.
 3. **Tentukan kedai atau kawasan perkhidmatan**, dan pastikan alamat serta kawasan perkhidmatan sepadan dengan keputusan itu.
 4. **Isi waktu biasa dan waktu khas** untuk dua bulan cuti umum akan datang.
 5. **Semak status pengesahan** dan simpan dokumen yang membuktikan perniagaan anda wujud, kerana penggantungan akan memintanya.
-
-## Cuba sendiri
 
 Versi paling kecil ialah audit, bukan integrasi: buka profil anda, dan pergi medan demi medan terhadap halaman garis panduan Google, tandakan setiap satu sebagai didokumenkan-dan-betul, didokumenkan-tetapi-salah, atau kosong.
 
@@ -108,20 +105,3 @@ Anda perlukan halaman garis panduan, profil anda sendiri, dan sejam lapang. Kosn
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
 
-## FAQ
-
-### Patutkah saya letak kata kunci dalam nama perniagaan?
-
-Tidak. Peraturan Google ialah nama seperti digunakan dalam dunia sebenar dan dikenali pelanggan, dan meletakkan kata kunci ialah cara yang didokumenkan untuk membawa profil kepada sekatan.
-
-### Kedai atau kawasan perkhidmatan, jika saya buat kedua-duanya?
-
-Satu profil, dengan alamat jika pelanggan boleh masuk, dan kawasan perkhidmatan untuk tempat anda bergerak. Peraturan Google ialah perniagaan yang ada kedai tidak menggunakan tetapan kawasan-perkhidmatan-sahaja untuk menyembunyikannya.
-
-### Bolehkah saya ada dua profil untuk dua cawangan?
-
-Dua cawangan sebenar di dua alamat ialah dua perniagaan pada pandangan profil. Dua profil untuk satu cawangan itulah masalah yang didokumenkan.
-
-### Berapa lama rayuan mengambil masa?
-
-Google tidak menerbitkan tempoh pada halaman yang dibaca untuk artikel ini. Yang diterbitkannya ialah urutan: selesaikan pengesahan dahulu, kemudian rayu.

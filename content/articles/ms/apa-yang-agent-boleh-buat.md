@@ -89,8 +89,7 @@ Dua bil. Yang lebih kecil itu yang dapat perhatian.
 
 Jadi pembinaan beratus hingga beribu ringgit dan kos menjalankannya beberapa ringgit. Jika pembekal menyebut bil token bulanan yang besar untuk aliran kerja kecil, minta dia tunjukkan aritmetiknya terhadap kadar yang diterbitkan; aritmetik kami hanya tiga baris. Apa yang tidak dinyatakan oleh kad kadar ialah yuran sokongan bulanan selepas pelancaran, jadi tanyakan sebelum membandingkan sebut harga.
 
-## Apa yang patut dibuat minggu ini?
-
+## Dari mana mula minggu ini
 Lima tindakan, tiada satu pun memerlukan pembelian atau pembangun.
 
 1. **Tulis tugasan pertama yang anda mahu automasikan**, dan apa maksud "selesai" baginya, dalam satu ayat.
@@ -98,8 +97,6 @@ Lima tindakan, tiada satu pun memerlukan pembelian atau pembangun.
 3. **Senaraikan sistem yang disentuhnya** dan sama ada agent hanya membaca atau juga menulis.
 4. **Cari kegagalan yang akan menyakitkan**, dan tentukan sama ada manusia patut meluluskan sebelum ia berlaku.
 5. **Tanya dua pembekal enam semakan di bawah**, dan bandingkan jawapannya, bukan harganya.
-
-## Cuba sendiri
 
 Versi paling kecil yang boleh dijalankan ialah skrip yang membaca CSV e-mel sokongan, memanggil satu model bagi setiap baris, dan menulis draf balasan ke CSV kedua. Ia belum agent. Itu disengajakan, kerana ia membuktikan gelung sebelum anda menambah tool.
 
@@ -124,20 +121,3 @@ Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari ya
 
 [Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
 
-## FAQ
-
-### Adakah AI agent sama dengan perisian automasi?
-
-Tidak. Automasi klasik mengikut peraturan yang anda tulis, tepat, mengikut urutan. Agent menentukan langkah seterusnya sendiri dalam lingkungan tool dan kebenaran yang ada, dan sebab itulah lajur kebenaran lebih penting daripada pilihan model.
-
-### Perlukah saya ada pembangun untuk menjalankannya?
-
-Untuk membina integrasi, biasanya ya: agent hanya berguna seluas sistem yang dapat dicapainya. Untuk mengendalikannya, tidak, jika kerja itu berasaskan kelulusan: seorang staf yang menyemak baris gilir ialah manusia dalam gelung itu.
-
-### Bolehkah agent memfailkan penyerahan e-Invoice saya?
-
-Ia boleh menyediakannya, dan ia tidak patut menyerahkannya tanpa semakan. Liabiliti bagi penyerahan yang salah terletak pada perniagaan, bukan pada tool itu, jadi orang yang bertanggungjawab menandatangani sehingga anda ada beberapa bulan larian bersih.
-
-### Apa perkara pertama yang wajar diautomasikan?
-
-Tugasan yang paling kerap dibuat pasukan anda, yang ada garisan penamat jelas dan kesilapan yang murah: kemasukan invois, penyalinan pesanan, atau menyusun peti masuk. Mulakan di tempat hasil yang salah kelihatan petang itu juga.

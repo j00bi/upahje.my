@@ -92,8 +92,7 @@ Two bills. The smaller one gets the attention.
 
 So the build is hundreds to thousands of ringgit and the running cost is a few ringgit. If a supplier quotes a large monthly token bill for a small workflow, ask them to show the arithmetic against the published rate; ours takes three lines. What the rate cards do not state is the monthly support fee after launch, so ask for it before you compare quotes.
 
-## What to do this week?
-
+## Where to start this week
 Five actions, none of which needs a purchase or a developer.
 
 1. **Write down the one task you would automate first**, and what "done" looks like for it, in one sentence.
@@ -101,8 +100,6 @@ Five actions, none of which needs a purchase or a developer.
 3. **List the systems it touches** and whether the agent would only read from them or also write.
 4. **Find the failure that would hurt**, and decide whether a person should approve before it happens.
 5. **Ask two suppliers the six checks below**, and compare the answers rather than the prices.
-
-## Try it yourself
 
 Begin with a script that reads a CSV of support emails, calls one model per row, and writes a draft reply into a second CSV. It is not an agent yet. That is deliberate, because it proves the loop before you add tools.
 
@@ -127,20 +124,3 @@ A demo works once, in front of you. Something that keeps running survives a bad 
 
 [More on APIs and models](https://upahje.my/en/articles/category/definitions)
 
-## FAQ
-
-### Is an AI agent the same as automation software?
-
-No. Classic automation follows rules you wrote, exactly, in order. An agent decides the next step itself within the tools and permissions it has, which is why the permissions column matters more than the model choice.
-
-### Do I need a developer to run one?
-
-To build the integrations, usually yes: an agent is only as useful as the systems it can reach. To operate one, no, if the work is approval-based: a staff member reviewing the queue is the human in the loop.
-
-### Can an agent file my e-Invoice submissions?
-
-It can prepare them, and it should not submit them unreviewed. The liability for a wrong submission is the business's, not the tool's, so the accountable person signs off until you have months of clean runs.
-
-### What is the first thing worth automating?
-
-The task your team does most often that has a clear finish line and a cheap mistake: invoice entry, order copying, or triaging an inbox. Start where a wrong result is visible the same afternoon.

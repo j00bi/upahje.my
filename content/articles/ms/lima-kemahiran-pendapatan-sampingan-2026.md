@@ -127,17 +127,3 @@ Dua lagi had. Dua baris panggilan jualan ialah bajet yang diiklankan, yang boleh
 **Baca seterusnya**
 
 [Lagi tentang pendapatan sampingan](https://upahje.my/ms/articles/category/side-income)
-## FAQ
-
-### Cukupkah satu platform untuk menilai keseluruhan pasaran?
-
-Tidak, dan artikel ini tidak mendakwa begitu. Ia lapisan yang dapat dibaca pada 19 November 2026. Pembaca yang menemui senarai bergaji lebih baik di tempat lain telah menemui jurang yang dinamakan artikel ini, dan jawapan jujurnya ialah semak senarai itu sendiri daripada mempercayai satu jadual.
-
-### Mengapa sesetengah kadar ditandakan sebagai bajet yang diiklankan?
-
-Kerana bajet yang dinyatakan dalam senarai ialah apa yang klien kata akan dibayar, bukan apa yang telah dipersetujui. Dua baris panggilan jualan termasuk dalam kategori itu, dan ia dilabel supaya pembaca tidak menganggap hasrat sebagai kadar.
-
-### Bolehkah saya gabungkan beberapa kemahiran ini?
-
-Boleh, dan senarai itu menunjukkan ia biasa: peranan video RM2,500 menggabungkan merakam, menyunting dan muncul di hadapan kamera. Kemahiran kedua menaikkan harga lebih cepat daripada melakukan yang pertama lebih lama.
-
