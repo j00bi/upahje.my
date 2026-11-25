@@ -46,7 +46,7 @@ Jumlah itu aritmetik pada kadar yang diterbitkan, bukan jadual. KWSP mengira car
 
 ## Dua kumpulan yang mengubah jawapannya
 
-Pekerja berumur 60 tahun ke atas berada dalam Bahagian E jadual: majikan membayar 4% dan pekerja tidak membayar apa-apa. Bukan warganegara yang didaftarkan mulai 1 Ogos 1998 berada dalam Bahagian F, pada 2% majikan dan 2% pekerja. Kedua-duanya jumlah jadual, bukan hasil darab.
+Pekerja berumur 60 tahun ke atas berada dalam Bahagian E jadual, di mana lajur Tahap 2 dalam jadual KWSP sendiri membaca 0% pekerja dan 4% majikan. Bukan warganegara yang didaftarkan mulai 1 Ogos 1998 berada dalam Bahagian F, pada 2% majikan dan 2% pekerja. Kedua-duanya jumlah jadual, bukan hasil darab.
 
 Kedua-dua kumpulan ini tidak muncul dalam templat gaji yang dibina untuk pasukan muda semuanya warganegara, dan itulah cara slip gaji pertama seorang pesara yang kembali bekerja menjadi salah.
 

@@ -46,7 +46,7 @@ Those amounts are arithmetic at the published rate, not the schedule. KWSP compu
 
 ## Two bands that change the answer
 
-Employees aged 60 and over sit in Part E of the schedule: the employer pays 4% and the employee pays nothing. Non-Malaysians registered from 1 August 1998 sit in Part F, at 2% employer and 2% employee. Both are schedule amounts, not multiplications.
+Employees aged 60 and over sit in Part E of the schedule, where the Stage 2 column of KWSP's own table reads 0% employee and 4% employer. Non-Malaysians registered from 1 August 1998 sit in Part F, at 2% employer and 2% employee. Both are schedule amounts, not multiplications.
 
 Neither band appears in a payroll template built for a young all-Malaysian team, which is how a first payslip for a returning retiree goes wrong.
 

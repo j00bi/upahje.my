@@ -19,6 +19,7 @@
 | 13 | "A RM3,000 Part E wage is not printed on the page, so this article does not state its schedule amount." | - | our reading, this machine | 2026-11-24 | estimate: absence check of the KWSP page and its worked examples |
 | 14 | "the 12-versus-13 question is the easy half" | - | - | - | opinion: stated once in the reader's interest |
 | 15 | "where the wage amount for the month is below RM5,000.01" | https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution | KWSP | 2026-11-25 | source: page example phrasing the 13% band; RM5,000.01 moves the employer to 12% |
+| 16 | "Stage 2 (Age 60 and above) … Employees share: 0% Employer's share: 4% ( Ref Third Schedule – Part E )" | https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution | KWSP | 2026-11-25 | source: Part E appears only as a table row, read from the Stage 2 column, not from a rate sentence |
 
 
 ## Sections
