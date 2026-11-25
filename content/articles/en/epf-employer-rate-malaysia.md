@@ -28,7 +28,7 @@ An employer pays 13% of monthly wages when the wage is RM5,000 or less, and 12% 
 
 ## The split happens at RM5,000 exactly
 
-RM5,000 is inside the 13% band, because the rule reads "RM5,000 and below". One ringgit above it moves the employer to 12%, which is why a small raise can cost the employer less than a small raise at the boundary suggests.
+RM5,000 is inside the 13% band, because the rule reads "RM5,000 and below"; KWSP phrases the lower band as a wage "below RM5,000.01". One sen above it, at RM5,000.01, moves the employer to 12%, which is why a raise at the boundary can cost the employer less than the raise itself.
 
 The table applies the published percentages to five wages so the break is visible. The last column matters more than the others: the schedule amount is what gets paid.
 

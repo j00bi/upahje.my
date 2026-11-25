@@ -28,7 +28,7 @@ Majikan membayar 13% daripada gaji bulanan apabila gaji RM5,000 atau kurang, dan
 
 ## Peralihan kadar berlaku tepat pada RM5,000
 
-RM5,000 berada dalam julat 13%, kerana peraturannya berbunyi "RM5,000 dan ke bawah". Satu ringgit di atasnya memindahkan majikan ke 12%, sebab itulah kenaikan gaji kecil di sempadan itu boleh mengurangkan kos majikan.
+RM5,000 berada dalam julat 13%, kerana peraturannya berbunyi "RM5,000 dan ke bawah"; KWSP menulis julat bawah itu sebagai gaji "bawah RM5,000.01". Satu sen di atasnya, pada RM5,000.01, memindahkan majikan ke 12%, sebab itulah kenaikan gaji di sempadan boleh mengurangkan kos majikan.
 
 Jadual di bawah menggunakan peratusan yang diterbitkan pada lima gaji supaya peralihannya kelihatan. Lajur terakhir lebih penting daripada yang lain: jumlah jadual itulah yang dibayar.
 
