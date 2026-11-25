@@ -97,7 +97,7 @@ Five actions, none of which needs an agency.
 
 The smallest version is an audit, not an integration: open your profile, and go field by field against Google's guidelines page, marking each one as documented-and-correct, documented-but-wrong, or empty.
 
-You need the guidelines page, your own profile, and a spare hour. It costs nothing. The bite is that some corrections trigger re-verification, so change the name and category last, once the rest is right, and do not change them again the same week.
+You need the guidelines page, your own profile, and a spare hour. The cost is that some corrections trigger re-verification, so change the name and category last, once the rest is right, and do not change them again the same week.
 
 **Read next**
 

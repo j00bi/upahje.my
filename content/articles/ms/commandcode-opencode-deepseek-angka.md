@@ -69,7 +69,7 @@ Tawaran CommandCode sendiri sudah bergerak sejak Ogos, dan kedua-dua versi masih
 
 Satu kiriman Hacker News pada **5 Ogos 2026** mengumumkan "Command Code GOAT, $10/month for $70 of credits across 30 models". Halaman harga hari ini menunjukkan tier GOAT $10/bulan yang sama dengan "up to $100 in credits", dan halaman model menyebut "All 107" model. Tier sama, harga sama, kredit lebih banyak dan model lebih banyak. Itu perubahan promosi biasa, dan ia penting kerana ulasan yang ditulis pada Ogos menerangkan tawaran yang tidak lagi wujud.
 
-Pengajarannya bukan bahawa satu angka itu salah. Ia bahawa angka bertarikh memerlukan tarikhnya, atau ia menjadi dakwaan tentang hari ini yang tiada siapa boleh semak.
+Pengajarannya ialah angka bertarikh memerlukan tarikhnya, atau ia menjadi dakwaan tentang hari ini yang tiada siapa boleh semak.
 
 Angka 38.5% yang tersebar bagi DeepSeek ialah Terminal-bench 4.1, iaitu DeepSeek V4.1 Flash 1017 di bawah Claude Code, jadi ia keputusan model di dalam harness orang lain dan bukan keputusan mana-mana CLI yang dinamakan di sini, dan ia tidak boleh dibandingkan dengan angka SWE-bench kerana penanda aras, agent dan set tugasnya berbeza.
 

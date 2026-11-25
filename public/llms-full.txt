@@ -819,7 +819,7 @@ CommandCode's own offer has moved since August, and both versions are still quot
 
 A Hacker News post on **5 August 2026** announced "Command Code GOAT, $10/month for $70 of credits across 30 models". Today's pricing page shows the same $10/month GOAT tier with "up to $100 in credits", and the models page says "All 107" models. Same tier, same price, more credits and more models. That is a normal promotional drift, and it matters because a review written in August is describing an offer that no longer exists.
 
-The lesson is not that one number is wrong. It is that a dated figure needs its date, or it becomes a claim about today that nobody can check.
+The lesson is that a dated figure needs its date, or it becomes a claim about today that nobody can check.
 
 ## What did we run ourselves?
 
@@ -942,7 +942,7 @@ Five actions, none of which needs an agency.
 
 The smallest version is an audit, not an integration: open your profile, and go field by field against Google's guidelines page, marking each one as documented-and-correct, documented-but-wrong, or empty.
 
-You need the guidelines page, your own profile, and a spare hour. It costs nothing. The bite is that some corrections trigger re-verification, so change the name and category last, once the rest is right, and do not change them again the same week.
+You need the guidelines page, your own profile, and a spare hour. The cost is that some corrections trigger re-verification, so change the name and category last, once the rest is right, and do not change them again the same week.
 
 **Read next**
 
@@ -1194,7 +1194,7 @@ Five actions, none of which needs a purchase.
 
 Start with a one-page map rather than a system: a spreadsheet with one row per step of the document, and columns for system, owner, and where the data is retyped.
 
-You need the document, the person who handles it, and an hour. It costs nothing. The bite is that the map will show steps nobody admitted to, including the WhatsApp message that is currently the integration. Write it down anyway; the message is the real process, and automating around it without knowing it is how a project fails.
+You need the document, the person who handles it, and an hour. The cost is that the map will show steps nobody admitted to, including the WhatsApp message that is currently the integration. Write it down anyway; the message is the real process, and automating around it without knowing it is how a project fails.
 
 **Read next**
 
@@ -4126,7 +4126,7 @@ Tawaran CommandCode sendiri sudah bergerak sejak Ogos, dan kedua-dua versi masih
 
 Satu kiriman Hacker News pada **5 Ogos 2026** mengumumkan "Command Code GOAT, $10/month for $70 of credits across 30 models". Halaman harga hari ini menunjukkan tier GOAT $10/bulan yang sama dengan "up to $100 in credits", dan halaman model menyebut "All 107" model. Tier sama, harga sama, kredit lebih banyak dan model lebih banyak. Itu perubahan promosi biasa, dan ia penting kerana ulasan yang ditulis pada Ogos menerangkan tawaran yang tidak lagi wujud.
 
-Pengajarannya bukan bahawa satu angka itu salah. Ia bahawa angka bertarikh memerlukan tarikhnya, atau ia menjadi dakwaan tentang hari ini yang tiada siapa boleh semak.
+Pengajarannya ialah angka bertarikh memerlukan tarikhnya, atau ia menjadi dakwaan tentang hari ini yang tiada siapa boleh semak.
 
 ## Apa yang kami jalankan sendiri?
 
@@ -4257,7 +4257,7 @@ Lima tindakan, tiada satu pun memerlukan pembelian.
 
 Versi paling kecil yang boleh dijalankan ialah peta satu halaman, bukan sistem: spreadsheet dengan satu baris bagi setiap langkah dokumen, dan lajur untuk sistem, pemilik, dan tempat data ditaip semula.
 
-Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya tiada. Yang menggigit ialah peta itu akan menunjukkan langkah yang tiada siapa mengaku, termasuk mesej WhatsApp yang kini menjadi integrasi. Tulis juga; mesej itu proses sebenar, dan mengautomasikan di sekelilingnya tanpa mengetahuinya ialah cara projek gagal.
+Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya ialah peta itu akan menunjukkan langkah yang tiada siapa mengaku, termasuk mesej WhatsApp yang kini menjadi integrasi. Tulis juga; mesej itu proses sebenar, dan mengautomasikan di sekelilingnya tanpa mengetahuinya ialah cara projek gagal.
 
 **Baca seterusnya**
 
@@ -4500,7 +4500,7 @@ Lima tindakan, tiada satu pun memerlukan agensi.
 
 Versi paling kecil ialah audit, bukan integrasi: buka profil anda, dan pergi medan demi medan terhadap halaman garis panduan Google, tandakan setiap satu sebagai didokumenkan-dan-betul, didokumenkan-tetapi-salah, atau kosong.
 
-Anda perlukan halaman garis panduan, profil anda sendiri, dan sejam lapang. Kosnya tiada. Yang menggigit ialah sesetengah pembetulan mencetuskan pengesahan semula, jadi tukar nama dan kategori paling akhir, selepas yang lain betul, dan jangan mengubahnya lagi pada minggu yang sama.
+Anda perlukan halaman garis panduan, profil anda sendiri, dan sejam lapang. Kosnya ialah sesetengah pembetulan mencetuskan pengesahan semula, jadi tukar nama dan kategori paling akhir, selepas yang lain betul, dan jangan mengubahnya lagi pada minggu yang sama.
 
 **Baca seterusnya**
 

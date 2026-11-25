@@ -97,7 +97,7 @@ Lima tindakan, tiada satu pun memerlukan agensi.
 
 Versi paling kecil ialah audit, bukan integrasi: buka profil anda, dan pergi medan demi medan terhadap halaman garis panduan Google, tandakan setiap satu sebagai didokumenkan-dan-betul, didokumenkan-tetapi-salah, atau kosong.
 
-Anda perlukan halaman garis panduan, profil anda sendiri, dan sejam lapang. Kosnya tiada. Yang menggigit ialah sesetengah pembetulan mencetuskan pengesahan semula, jadi tukar nama dan kategori paling akhir, selepas yang lain betul, dan jangan mengubahnya lagi pada minggu yang sama.
+Anda perlukan halaman garis panduan, profil anda sendiri, dan sejam lapang. Kosnya ialah sesetengah pembetulan mencetuskan pengesahan semula, jadi tukar nama dan kategori paling akhir, selepas yang lain betul, dan jangan mengubahnya lagi pada minggu yang sama.
 
 **Baca seterusnya**
 
