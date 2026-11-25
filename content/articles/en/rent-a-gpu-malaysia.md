@@ -50,7 +50,7 @@ The conversion is the table's caveat: it is fixed at one day's rate, and the rin
 
 Vast.ai is the other marketplace a Malaysian buyer will find, and it publishes no per-card rate: the page states "No minimum hours, no rounding up" and prices live per machine. That is a fair billing rule and not a number to budget from.
 
-Lambda was opened for this article and sells no RTX 4090 at all, pricing an H100 instead, so it is not a comparison here. The result is one readable 4090 rate and one marketplace whose rate appears after the HTML loads.
+That rule matters for the job sizes this article is about: a job measured in minutes is billed in minutes, and a marketplace that rounds up would quietly change the arithmetic for a 20-minute run. It also narrows the comparison, because only one of the two vendors prints a 4090 rate that can be read and priced.
 
 ## What we were actually billed
 

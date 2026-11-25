@@ -50,7 +50,7 @@ Penukaran itu kaveat jadual: ia ditetapkan pada kadar satu hari, dan angka ringg
 
 Vast.ai ialah pasaran lain yang akan ditemui pembeli Malaysia, dan ia tidak menerbitkan kadar setiap kad: halamannya menyatakan "No minimum hours, no rounding up" dan meletakkan harga secara langsung setiap mesin. Itu peraturan pengebilan yang adil, bukan angka untuk dijadikan bajet.
 
-Lambda dibuka untuk artikel ini dan tidak menjual RTX 4090 langsung, sebaliknya meletakkan harga H100, jadi ia bukan perbandingan di sini. Hasilnya satu kadar 4090 yang boleh dibaca dan satu pasaran yang kadarnya muncul selepas HTML dimuatkan.
+Peraturan itu penting bagi saiz kerja yang dibincangkan artikel ini: kerja yang diukur dalam minit dibilkan dalam minit, dan pasaran yang membundarkan ke atas akan mengubah aritmetik larian 20 minit secara senyap. Ia juga menyempitkan perbandingan, kerana hanya satu daripada dua vendor mencetak kadar 4090 yang boleh dibaca dan diharga.
 
 ## Apa yang sebenarnya dicaj kepada kami
 

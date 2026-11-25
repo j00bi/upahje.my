@@ -11,10 +11,9 @@
 | 5 | "The page's metadata line says" | https://www.runpod.io/pricing | Runpod | 2026-11-25 | source: metadata description line, RTX 4090 from 0.34 USD per hour, no configuration shown |
 | 6 | "with a per-hour and per-second toggle beside it" | https://www.runpod.io/pricing | Runpod | 2026-11-25 | source: the pricing table's toggle control |
 | 7 | "the page states" | https://vast.ai/pricing | Vast.ai | 2026-11-25 | source: Vast pricing page wording, no minimum hours and no rounding up |
-| 8 | "Lambda was opened for this article and sells no RTX 4090 at all, pricing an H100 instead" | - | our reading, this machine | 2026-11-25 | estimate: pricing page read, H100 80GB at 4.59 USD per GPU per hour, no 4090 listed |
-| 9 | "0.47 implied" | - | - | 2026-11-25 | estimate: 0.14 USD for 17.9 minutes, scaled to an hour |
-| 10 | "the ringgit figure moved within the day, from 4.1155 at midday to 4.1175 in the afternoon" | https://api.bnm.gov.my/public/exchange-rate | Bank Negara Malaysia | 2026-11-25 | source: two API reads that day, 12:08 and 17:08 |
-| 11 | "the hourly figure is the least useful number on the page" | - | - | - | opinion: stated once in the reader's interest |
+| 8 | "0.47 implied" | - | - | 2026-11-25 | estimate: 0.14 USD for 17.9 minutes, scaled to an hour |
+| 9 | "the ringgit figure moved within the day, from 4.1155 at midday to 4.1175 in the afternoon" | https://api.bnm.gov.my/public/exchange-rate | Bank Negara Malaysia | 2026-11-25 | source: two API reads that day, 12:08 and 17:08 |
+| 10 | "the hourly figure is the least useful number on the page" | - | - | - | opinion: stated once in the reader's interest |
 
 ## Sections
 
