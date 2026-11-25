@@ -74,6 +74,6 @@ My opinion, stated once: the levy is small enough to ignore and large enough to 
 
 **Read next**
 
-[SOCSO berhenti pada RM6,000, dan tiada siapa beritahu](https://upahje.my/en/articles/socso-employer-rate-malaysia)
+[SOCSO stops at RM6,000](https://upahje.my/en/articles/socso-employer-rate-malaysia)
 
 [More definitions, explained plainly](https://upahje.my/en/articles/category/definitions)

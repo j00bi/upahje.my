@@ -58,7 +58,7 @@ EIS is 0.4% in total, split 0.2% employer and 0.2% employee, and it shares the R
 
 At RM4,500 the employer pays RM78.75 in SOCSO. At RM7,500 the employer pays RM105.00, which is 1.4%, and the employee pays RM30.00, which is 0.4% rather than the headline 0.5%.
 
-The percentage printed on a rate card is a rate up to the ceiling, not a rate on every salary. A quotation that multiplies 1.75% by a RM9,000 salary overstates the SOCSO line by RM52.50 a month, and the same mistake on EIS overstates it by RM6.00.
+The percentage printed on a rate card is a rate up to the ceiling, not a rate on every salary, and that is why the calculation on a high salary has to stop at RM6,000. A quotation that multiplies 1.75% by a RM9,000 salary overstates the SOCSO line by RM52.50 a month, and the same mistake on EIS overstates it by RM6.00.
 
 ## What is not confirmed here
 
