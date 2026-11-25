@@ -1,5 +1,5 @@
 ---
-title: "What RM100 a month buys you in AI, in Malaysia"
+title: "What RM100 a month buys in AI"
 description: "RM100 buys a seat in a subscription app or a meter of API tokens. The Bank Negara rate of 19 November 2026, three usage levels, and where tokens win."
 cardFigure: "RM100 of tokens buys about 54,000 tasks a month"
 slug: rm100-budget
@@ -32,7 +32,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# What RM100 a month buys you in AI, in Malaysia
+# What RM100 a month buys in AI
 
 RM100 buys one of two things: a seat in someone's app, or a meter of tokens for software you run. Which model wins a leaderboard is a different question. At a stated 2,000-token task, RM100 of Claude Haiku 5.5 tokens is about 54,000 tasks a month, while ChatGPT Plus costs RM99.90 and includes no API key at all.
 

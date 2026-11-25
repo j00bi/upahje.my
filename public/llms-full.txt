@@ -566,7 +566,7 @@ The bot is the easy part to build and the easiest part to be wrong about. The wo
 - Binance, funding rate history endpoint used for the six-month window (schedule not read: the fee and funding pages returned an empty 202) — https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History (checked 2026-11-25)
 - Binance, KLINE candlestick endpoint used for the price series — https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints (checked 2026-11-25)
 
-## Grab and foodpanda commission rates in Malaysia (2026)
+## Grab and foodpanda commission rates (2026)
 
 URL: https://upahje.my/en/articles/delivery-commission-malaysia
 Checked: 2026-11-25
@@ -761,7 +761,7 @@ Twelve clips is the number I would use, and it is a judgement rather than a sour
 
 The instalment is one evening either way. That is the real cost on the free side, and it is paid once.
 
-## What to do this week
+## What to count before cancelling
 
 1. Count the clips you published last month, not the ones you meant to.
 2. Install one repo on the machine you already own and clip one long video.
@@ -821,6 +821,8 @@ A Hacker News post on **5 August 2026** announced "Command Code GOAT, $10/month 
 
 The lesson is that a dated figure needs its date, or it becomes a claim about today that nobody can check.
 
+The 38.5% figure that circulates for DeepSeek belongs to Terminal-bench 4.1, where it is DeepSeek V4.1 Flash 1017 run under Claude Code, so it is a result for the model inside someone else's harness and not a result for either CLI named here, and it cannot be compared with a SWE-bench figure because the benchmark, the agent and the task set are different.
+
 ## What did we run ourselves?
 
 One task, in one harness, printed as a sidebar and not as a head-to-head: `dsh` 0.2.2-rc.1 wrote a small feature in 95.4 seconds across 10 turns and 14 tool calls, produced two files, and the project's own tests passed 3 of 3.
@@ -829,8 +831,7 @@ What happened in the other two arms matters more than the arm that worked. Both 
 
 We did not run the other two arms successfully, so this article makes no claim about their output quality.
 
-## What to do this week?
-
+## What to check before you pay
 Five actions, none of which needs a subscription.
 
 1. **Pick one real task from your own backlog**, small enough to finish in an hour, and run it in whichever harness you already have.
@@ -839,31 +840,11 @@ Five actions, none of which needs a subscription.
 4. **Run it twice** with the same prompt. A harness that succeeds once and fails once is a different purchase.
 5. **Before paying for a tier, ask what the processing fee is** in ringgit, and get it in writing.
 
-## Try it yourself
-
 There is no honest way to reproduce a leaderboard. What you can reproduce is your own row.
 
 Take one task, run it in one harness, and write down the same five fields the boards print: the model, the agent, the settings, the score (did the tests pass), and the cost in tokens or ringgit. That is your benchmark, it is comparable to itself next month, and it does not depend on anyone's marketing page.
 
 The one thing that will bite you is the exit code. A run that exits 0 without writing files looks like a pass in every log you have. Check the artefact, every time.
-
-## FAQ
-
-### Is CommandCode better than OpenCode?
-
-No published benchmark answers that, because neither product appears as an agent on either board. The boards score models inside fixed harnesses. Anything else is a vendor claim or one person's run.
-
-### Can I compare the 38.5% DeepSeek figure with a SWE-bench figure?
-
-No. Different benchmark, different agent, different task set. The two numbers do not share a scale, and pairing them is how a table becomes misleading.
-
-### Why does the article not cite Aider's leaderboard?
-
-Because its newest visible run is dated 23 August 2025. A stale board cannot say anything about a 2026 model, and citing it would be worse than leaving it out.
-
-### What is the one thing to check before trusting a coding-agent demo?
-
-Whether files were written and tests passed, not whether the command exited 0. Our own run showed two harnesses exiting cleanly without writing anything.
 
 ### Sources
 
@@ -928,8 +909,7 @@ That sentence is the whole reason to keep verification current. An appeal filed 
 
 Google publishes nothing in these pages about how profiles are ranked in local search, so this article makes no claim about ranking factors beyond the documented fields. Several help-centre IDs returned "Sorry, this page can't be found" during the pass, so only the pages Google itself links, or that the scan surfaced, are cited. There is also no published figure for how long verification or an appeal takes.
 
-## What to do this week?
-
+## What to fix first
 Five actions, none of which needs an agency.
 
 1. **Read your own business name** against the real-world rule, and fix it in the profile rather than the listing on a directory.
@@ -937,8 +917,6 @@ Five actions, none of which needs an agency.
 3. **Decide storefront or service area**, and make the address and service areas match that decision.
 4. **Fill regular and special hours** for the next two months of public holidays.
 5. **Check your verification status** and keep the document that proves your business exists, because a suspension would ask for it.
-
-## Try it yourself
 
 The smallest version is an audit, not an integration: open your profile, and go field by field against Google's guidelines page, marking each one as documented-and-correct, documented-but-wrong, or empty.
 
@@ -949,24 +927,6 @@ You need the guidelines page, your own profile, and a spare hour. The cost is th
 [What an AI agent can and cannot do for a Malaysian SME](https://upahje.my/en/articles/what-an-ai-agent-can-do)
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
-
-## FAQ
-
-### Should I put my keywords in my business name?
-
-No. Google's rule is the name as used in the real world and known to customers, and stuffing keywords is the documented way to get a profile restricted.
-
-### Storefront or service area, if I do both?
-
-One profile, with the address if customers can walk in, and service areas for where you travel. Google's rule is that a business with a storefront does not use service-area-only settings to hide it.
-
-### Can I have two profiles for two outlets?
-
-Two real outlets at two addresses are two businesses as far as the profile is concerned. Two profiles for the same outlet is the documented problem.
-
-### How long does an appeal take?
-
-Google does not publish a timeframe on the pages read for this article. What it does publish is the order: resolve verification first, then appeal.
 
 ### Sources
 
@@ -1013,28 +973,6 @@ The archived page, snapshot 25 October 2026, lists three interactive demos for R
 The GOAT arm's own session records are more informative than its demo. Three redacted transcripts in `nazzysar/commandcode-goat-ecosystem-sess` carry 1,123, 582 and 1,091 records. The lead session retried 33 times: 23 SERVER, 10 TRANSPORT, 0 TIMEOUT; across the three, 94 retries split 57 / 37 / 0. Five turns lasted 7,565.5 s, 2,636.0 s, 150.5 s, 117.6 s and 3.9 s, totalling 10,473.5 s, about 2 h 55 m. The run made 161 tool calls, 140 steps, 138 assistant messages and 25 user messages, on `deepseek/deepseek-v4.1-flash` through provider `commandcode-goat`.
 
 That is a reliability profile, and it says nothing about output quality. There are no token counts and no cost fields in those records, and the site's data model has no cost field, so no cost comparison can be built from them.
-
-## FAQ
-
-### Can a Terminal-bench score be compared with a SWE-bench score?
-
-No. Different benchmark, different agent, different task set. The numbers do not share a scale.
-
-### Why is the 38.5% figure not a CommandCode or OpenCode result?
-
-Because the agent column says Claude Code. The model is DeepSeek's; the harness that drove it is not either CLI.
-
-### What does the GOAT session record prove?
-
-That the arm kept going through 94 retries and nearly three hours. It does not prove the output was good, and it contains no token or cost data.
-
----
-
-**Read next**
-
-[CommandCode, OpenCode, DeepSeek: three names, three different things](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers)
-
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
 
 ### Sources
 
@@ -1180,8 +1118,7 @@ And the two famous "hours lost" numbers are not Malaysian. One is a vendor case 
 
 Written process, named owner, clean data source, exception path. That four-part framing is a Malaysian operations consultancy's article, published on its own site with no byline, written about the KRI/MDEC paper. It is a vendor's checklist, not an official one, and no government body publishes those four as a standard. Useful as a way to think; not citable as policy.
 
-## What to do this week?
-
+## What to map this week
 Five actions, none of which needs a purchase.
 
 1. **Pick one document** you issue often: a quotation, an invoice, a delivery order.
@@ -1189,8 +1126,6 @@ Five actions, none of which needs a purchase.
 3. **Count the copies** of that one record, and name who owns which copy.
 4. **Find the field that gets fixed by hand** most often, because that is where the source is wrong.
 5. **Write the exception path** for the one case that happens weekly: what should the system say, and who decides.
-
-## Try it yourself
 
 Start with a one-page map rather than a system: a spreadsheet with one row per step of the document, and columns for system, owner, and where the data is retyped.
 
@@ -1202,24 +1137,6 @@ You need the document, the person who handles it, and an hour. The cost is that 
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 
-## FAQ
-
-### Is this a software problem or a process problem?
-
-It is a fragmentation problem, and KRI's wording is the accurate one: digitised in front, manual in back. Buying another tool before mapping the handoffs usually adds a fifth copy of the record.
-
-### Do we have to fix this before e-Invoice?
-
-You have to make the invoice data right at issuance, which is a smaller requirement than fixing everything. Start with the fields LHDN validates, then widen.
-
-### How many systems is too many?
-
-Nobody publishes a number, and the count is the wrong question. Two systems that disagree are worse than five that share one record.
-
-### Can we just automate the copy step?
-
-You can, and it is the most common first project. It also preserves the disagreement between systems, which is why the [piece on choosing a first automation](https://upahje.my/en/articles/your-first-automation-wrong-process) argues for mapping first.
-
 ### Sources
 
 - DOSM, usage of ICT and e-commerce by establishment, 2025 release (data year 2024) — https://www.dosm.gov.my/portal-main/release-content/usage-of-ict-and-e-commerce-by-establishment2025 (checked 2026-11-23)
@@ -1228,7 +1145,7 @@ You can, and it is the most common first project. It also preserves the disagree
 - LHDN, Garis Panduan e-Invois Versi 4.8 — https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf (checked 2026-11-23)
 - Friction, Malaysia SME digitalisation note (vendor article, no byline) — https://friction.com.my/insights/malaysia-sme-digitalisation-from-survival-to-scale-2026 (checked 2026-11-23)
 
-## What an AI agent can and cannot do for a Malaysian SME
+## What an AI agent can and cannot do for a small business
 
 URL: https://upahje.my/en/articles/what-an-ai-agent-can-do
 Checked: 2026-11-23
@@ -1289,8 +1206,7 @@ Two bills. The smaller one gets the attention.
 
 So the build is hundreds to thousands of ringgit and the running cost is a few ringgit. If a supplier quotes a large monthly token bill for a small workflow, ask them to show the arithmetic against the published rate; ours takes three lines. What the rate cards do not state is the monthly support fee after launch, so ask for it before you compare quotes.
 
-## What to do this week?
-
+## Where to start this week
 Five actions, none of which needs a purchase or a developer.
 
 1. **Write down the one task you would automate first**, and what "done" looks like for it, in one sentence.
@@ -1298,8 +1214,6 @@ Five actions, none of which needs a purchase or a developer.
 3. **List the systems it touches** and whether the agent would only read from them or also write.
 4. **Find the failure that would hurt**, and decide whether a person should approve before it happens.
 5. **Ask two suppliers the six checks below**, and compare the answers rather than the prices.
-
-## Try it yourself
 
 Begin with a script that reads a CSV of support emails, calls one model per row, and writes a draft reply into a second CSV. It is not an agent yet. That is deliberate, because it proves the loop before you add tools.
 
@@ -1323,24 +1237,6 @@ A demo works once, in front of you. Something that keeps running survives a bad 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
 [More on APIs and models](https://upahje.my/en/articles/category/definitions)
-
-## FAQ
-
-### Is an AI agent the same as automation software?
-
-No. Classic automation follows rules you wrote, exactly, in order. An agent decides the next step itself within the tools and permissions it has, which is why the permissions column matters more than the model choice.
-
-### Do I need a developer to run one?
-
-To build the integrations, usually yes: an agent is only as useful as the systems it can reach. To operate one, no, if the work is approval-based: a staff member reviewing the queue is the human in the loop.
-
-### Can an agent file my e-Invoice submissions?
-
-It can prepare them, and it should not submit them unreviewed. The liability for a wrong submission is the business's, not the tool's, so the accountable person signs off until you have months of clean runs.
-
-### What is the first thing worth automating?
-
-The task your team does most often that has a clear finish line and a cheap mistake: invoice entry, order copying, or triaging an inbox. Start where a wrong result is visible the same afternoon.
 
 ### Sources
 
@@ -1369,6 +1265,8 @@ Three things follow from that sentence, and only three.
 3. It says **not required**. It does not say prohibited, and the same statement encourages voluntary participation.
 
 The Prime Minister announced the change in the 2026 National Day address, and LHDN published the statement on 30 August 2026, one day before it took effect.
+
+A business with RM2.9 million in annual sales sits below the line, so e-Invoice is not required; the test is the annual figure, not a single good quarter.
 
 ## The programme numbers are already large
 
@@ -1412,32 +1310,6 @@ Whether a business that started under the old RM1 million line may stop is not a
 
 And the per-phase relaxation dates sit in a graphic in the guideline PDF rather than in its text, so they are not reproduced here.
 
-## FAQ
-
-### Does the exemption apply to a business with RM2.9 million in sales?
-
-It applies to annual revenue or sales below RM3 million, so RM2.9 million is below the line and e-Invoice is not required.
-
-### Can a business below the threshold still issue e-Invoices?
-
-Yes. Voluntary participation is encouraged, and a business may adopt the system without an obligation.
-
-### What happens after 72 hours if an invoice is wrong?
-
-Cancellation is no longer allowed, and the correction is a new e-Invoice in the form of a credit, debit or refund note.
-
-### Is there a published penalty amount?
-
-Section 120 of the Income Tax Act 1967 is cited. No ringgit amount is published in the statement or on the pages checked.
-
----
-
-**Read next**
-
-[Where the same data gets typed three times](https://upahje.my/en/articles/same-data-typed-three-times)
-
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
-
 ### Sources
 
 - LHDN media statement HASiL/2026/08/30-44, AMBANG PENGECUALIAN PELAKSANAAN E-INVOIS DINAIKKAN — https://www.hasil.gov.my/wp-content/uploads/20260830-Kenyataan-Media-HASiL_AMBANG-PENGECUALIAN-E_INVOIS-DINAIKKAN.pdf (checked 2026-11-23)
@@ -1445,7 +1317,7 @@ Section 120 of the Income Tax Act 1967 is cited. No ringgit amount is published 
 - MyInvois SDK, document validation rules — https://sdk.myinvois.hasil.gov.my/document-validation-rules/ (checked 2026-11-23)
 - LHDN, Garis Panduan e-Invois Versi 4.8 — https://www.hasil.gov.my/wp-content/uploads/Garis-Panduan-e-Invois-LHDNM.pdf (checked 2026-11-23)
 
-## WhatsApp chatbot costs in Malaysia, per message
+## What a WhatsApp chatbot costs, per message
 
 URL: https://upahje.my/en/articles/whatsapp-chatbot-costs-malaysia
 Checked: 2026-11-24
@@ -1470,6 +1342,8 @@ Three different bills arrive at a WhatsApp bot, and they come from two different
 | BSP markup, hosting and seats | The vendor's own fee | Your vendor |
 
 The allowance is per business phone number and resets each calendar month; unused messages do not carry over. Service messages past it have been charged since 1 October 2026.
+
+Utility, authentication and service are RM0.0564, and the first 1,000 service messages per number per month are free.
 
 ## How does Meta charge for WhatsApp messages?
 
@@ -1528,8 +1402,7 @@ Three publishers, three shapes. These are build-and-subscription prices, not mes
 
 AIRS also states the market band as RM300 to RM3,000-plus per month, and AlwaysON notes that platform fees are "only 40-60% of the total cost", which is a useful warning: the subscription is not the whole bill.
 
-## What to do this week?
-
+## What to count before you sign
 Five actions, none of which needs a purchase.
 
 1. **Export last month's outbound WhatsApp messages** and tag each one marketing, utility, authentication or service.
@@ -1537,8 +1410,6 @@ Five actions, none of which needs a purchase.
 3. **Find the messages you send outside the 24-hour window.** Those are the marketing templates at RM0.3467 each, and they dominate small bills.
 4. **Multiply the marketing count by 0.3467** and the paid service count by 0.0564, and compare that total with RM200 to RM1,500 of vendor fees.
 5. **Ask each vendor whether their price includes Meta's message charges**, and get the answer in writing, because the two bills come from different companies.
-
-## Try it yourself
 
 Before talking to a vendor, price your own last month from the published card with a script, so you know the volume before you talk to a vendor.
 
@@ -1551,32 +1422,6 @@ There is no honest free sandbox path documented in the pages read for this artic
 ## What could we not verify?
 
 The dedicated international-authentication page was not opened, so that row rests on the Malaysia card alone. Utility and authentication volume tiers exist, but the tier files were not parsed, so any figure above list price is absent. Meta Business Agent is priced per million tokens with no Malaysia-specific per-message figure published, so no per-interaction cost is claimed. Only one of the three Malaysian vendors publishes a from-price with no setup fee; the other two quote on scope, so no market-wide build fee can be stated.
-
-## FAQ
-
-### Is one message really RM0.3467?
-
-Only a marketing message, and only when it is delivered. Utility, authentication and service are RM0.0564, and the first 1,000 service messages per number per month are free.
-
-### Do I pay when a customer messages me?
-
-No. Meta charges business-to-user messages only, so the customer's message is free to receive, and your reply is charged according to the category it falls into.
-
-### What is the 24-hour window in plain terms?
-
-It is a clock that starts when a customer messages you. Inside that day you can reply freely as a service message; after it closes, any new message must be a paid template.
-
-### Do vendor prices include Meta's message charges?
-
-Most do not, and the ones read here say so separately. Meta bills the messages to your own account, so budget the vendor fee and the message bill as two lines.
-
----
-
-**Read next**
-
-[What e-Invoice automation covers, and what stays with a person](https://upahje.my/en/articles/what-einvoice-automation-covers)
-
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 
 ### Sources
 
@@ -1644,23 +1489,6 @@ And there is a real cost to waiting. Two weeks of tracking is two weeks of the p
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 
-## FAQ
-
-### So should I never automate a painful process?
-
-Automate it after you have written down its exceptions. The pain is evidence that the exceptions exist, so the process is a fine candidate, just not a fine first candidate.
-
-### What if we have no time to track anything for two weeks?
-
-Track the failures only. One line whenever something goes wrong, with what happened and who fixed it. That takes minutes and still shows you where the work really is.
-
-### What makes a good first automation?
-
-A process with a clear finish line, a cheap and visible mistake, and someone who owns it on the other side. Boring is the point: the first one is where you learn the buying and the maintenance, not where you make the annual saving.
----
-
-This piece carries no sources because it is an argument, not a report: a position on which process to automate first, drawn from how these projects fail. No figure in it is a measurement and none is borrowed from another article.
-
 ## Agent harness, AI harness, agent framework: what they mean
 
 URL: https://upahje.my/en/articles/agent-harness-vs-ai-harness
@@ -1710,20 +1538,6 @@ A framework is something a developer imports; it does not give you a running env
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
 [More on agent harnesses](https://upahje.my/en/articles/category/definitions)
-
-## FAQ
-
-### Is Claude Code a harness or an app?
-
-Both. Anthropic sells an app, and its Agent SDK documentation describes the underlying hosted agent harness that runs the loop. The word describes the layer, not the product.
-
-### Is an agent framework the same as a harness?
-
-No. A framework is a library you build with; a harness is the thing that runs the loop, executes tools and keeps the transcript. You can build a harness on a framework, and most products do.
-
-### Does the word "harness" tell me whether it is open source?
-
-No. The word describes a function, not a licence. A harness can be proprietary and cloud-hosted, or open source and local, and the label reads the same either way.
 
 ### Sources
 
@@ -1818,20 +1632,13 @@ Four commands and a filesystem check, and you can audit every number in the tabl
 3. Read the config paths in the table: `$DSH_HOME/profiles`, `~/.claude.json`, `~/.codex/config.toml`, `~/.config/opencode/opencode.jsonc`.
 4. Run `du -sh` on `~/.dsh`, `~/.claude`, `~/.codex` and `~/.config/opencode` for the footprints.
 
+Cost-heavy buyers can rerun the weighting. Raising provider and cost control to 40% and dropping footprint to 5% keeps DeepSeek Harness first and widens its lead, because the gap between the top two sits almost entirely in that criterion; on the same cells the new weighting gives DeepSeek Harness 4.65 and OpenCode 4.05.
+
 **Read next**
 
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
 [More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
-## FAQ
-
-### Does the ranking change if I care about cost more than 30%?
-
-Yes, and the table lets you recompute it. Raising provider and cost control to 40% and dropping footprint to 5% keeps DeepSeek Harness first and widens its lead over OpenCode, because the gap between them sits almost entirely in that criterion. Recomputed on the same cells, that weighting gives DeepSeek Harness 4.65 and OpenCode 4.05.
-
-### Why rank at all if the numbers are version-pinned?
-
-Because a buyer still has to choose this week, and a stated method with a re-run recipe is checkable. The alternative, an unranked list with no weights, hides the same judgement behind prose where nobody can audit it.
 
 ### Sources
 
@@ -1840,7 +1647,7 @@ Because a buyer still has to choose this week, and a stated method with a re-run
 - Codex CLI on this machine (version reported by the binary) — https://github.com/openai/codex (checked 2026-11-19)
 - OpenCode CLI on this machine (version reported by the binary) — https://opencode.ai/docs (checked 2026-11-19)
 
-## Automation work in Malaysia: the published rates
+## Automation work: 30 published prices
 
 URL: https://upahje.my/en/articles/automation-rates-malaysia-published
 Checked: 2026-11-19
@@ -1934,19 +1741,6 @@ A RM400 session and a RM1,500 project both look small next to a RM6,000 build, a
 [How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/how-to-brief-an-automation-job)
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
-## FAQ
-
-### Is RM60 an hour typical for Malaysian automation freelancers?
-
-It is one published figure from one profile on freelancing.my, checked 19 November 2026, and it is the only hourly rate in this set of six publishers. One row is not a typical rate. Treat it as an anchor for what one practitioner asks, not as a market.
-
-### Why are there no Upwork or Fiverr figures?
-
-Because they could not be read from here, and the article says so in the method section rather than filling the gap with a number from memory.
-
-### Does a higher monthly retainer mean a better system?
-
-No, and this table cannot tell you that. It lists prices, publishers and dates. It says nothing about the quality of the work, delivery time, or whether the automation still runs a year later, and none of the six publishers publishes that information.
 
 ### Sources
 
@@ -2039,33 +1833,15 @@ Aider polyglot's visible top row is gpt-5 (high) at 88.0% pass rate for a total 
 
 The names do not reconcile, and that is a finding rather than a formatting problem. The SWE-bench board prints "Claude 4.5 Opus", "Gemini 3 Flash" and "GPT 5.2", while the vendor table above lists Claude Opus 5.5, gemini-4-neon and gpt-6-luna. Different naming generations may not be the same models, so this article never claims that a vendor model in its table scores a leaderboard number.
 
+## What a price comparison leaves out
+
+A per-token price is not a per-task price. Input and output are priced separately, long context costs more on OpenAI and xAI, and Haiku 5.5's input figure is qualified by prompt length, so a model that looks cheapest per input token can cost more on a task that writes a lot. [What RM100 a month actually buys you in AI](https://upahje.my/en/articles/rm100-budget) works that arithmetic in ringgit.
+
 ## What did we not measure?
 
 We did not run a benchmark ourselves. We read two, with their settings, and we are not treating either as a quality verdict: there is no "smarter" and no "better at coding" here.
 
 Also absent by design: the Anthropic, OpenAI, DeepSeek and Google terms pages were listed but not opened, so no claim is made about what they permit; gpt-6-luna's context window is "not captured"; grok-4.7's file input is not documented on the pages checked, deepseek-flash's file input is unverified, and Gemini's terms link was listed in the documentation nav but not opened.
-
-## FAQ
-
-### Can I compare these models by price alone?
-
-Only if you know your token mix. Input and output are priced separately, long context costs more on OpenAI and xAI, and Haiku 5.5's input figure is qualified by prompt length. A model that looks cheapest per input token can cost more on a task that writes a lot.
-
-### Why are some cells "not captured" instead of zero or a guess?
-
-Because the page did not print the figure where it could be read. A zero would be wrong and a guess would be invented. "Not captured" is the truthful cell, and it tells you what to re-check on the vendor's page.
-
-### Does Gemini belong in a comparison like this?
-
-Only with a warning. Google sells it through a bundle that includes storage and other services, so its plan price is not line-for-line comparable with a bare chat plan. The API price above is comparable; the consumer bundle is not, and this article does not rank it.
-
----
-
-**Read next**
-
-[What RM100 a month actually buys you in AI](https://upahje.my/en/articles/rm100-budget)
-
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
 
 ### Sources
 
@@ -2125,22 +1901,6 @@ Exporting a CSV and importing it into the other tool is still a copy step, but a
 [What an API costs to wire up in Malaysia](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
 
 [More on APIs and models](https://upahje.my/en/articles/category/definitions)
-## FAQ
-
-### Can I start with a spreadsheet and add the API later?
-
-Yes, and that is usually the right order. The sheet tells you which fields matter, which ones people actually change, and where the errors happen. An integration built before that knowledge exists tends to sync the wrong things very precisely.
-
-### Is a spreadsheet insecure?
-
-Not inherently. A spreadsheet that lives in a shared drive with access controls is a normal business tool. The risk is the same as any shared document: the wrong person gets a link, or the only copy sits on one laptop. Back it up and restrict the link; then the question becomes volume and drift, not security.
-
-### What if my team already uses a tool that has an API?
-
-Then the decision narrows to whether anyone has time to connect it. An API that nobody wires up is worth nothing, and a tool with no API that people use daily is worth more than a better tool sitting unused.
----
-
-This piece carries no sources, because it is an argument from cases rather than a report: which of two setups fits your volume. No public benchmark exists for what Malaysian developers charge to wire an API, so no cost figure is printed here and none is borrowed.
 
 ## Where an API key goes in a harness, and where never
 
@@ -2196,19 +1956,6 @@ The order matters more than the thoroughness. Teams that rotate first and revoke
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
 [More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
-## FAQ
-
-### Should I use an environment variable or the harness credential store?
-
-Use the credential store if you want one place to rotate and one set of file permissions to protect. Use an environment variable if the key is injected by a deployment system you already trust. Both are safe; a key written directly into a source file is neither.
-
-### Can my team share one key?
-
-You can, and you lose the ability to tell who did what. Separate keys per person or per integration make revocation surgical and make the provider's usage page readable. Sharing one key means any leak from any team member forces everyone to rotate.
-
-### Do keys expire?
-
-That depends on the provider, so check yours rather than assuming. A key with no expiry is a credential you must remember to rotate, and most teams do not. Set a calendar reminder if the provider offers no forced expiry.
 
 ### Sources
 
@@ -2235,6 +1982,8 @@ One row per product, with the evidence level stated, because three of these were
 | DeepSeek Harness | Harness run by a profile, with MCP servers per profile | npm package, see package metadata | Ran here; no longer re-verifiable end to end | Installed 0.2.2-rc.1 on 2026-11-19 | [npmjs.com/package/@deepseek-ai/dsh](https://www.npmjs.com/package/@deepseek-ai/dsh) |
 | OpenMausBot launcher (this machine) | A launcher whose payload is missing | Not applicable | Ran here; cannot run now | Orphaned | local, 2026-11-19 |
 | Claude Code, Codex CLI, OpenCode | CLI harnesses measured on this machine | Proprietary licences | Ran here, 2026-11-19 | Active | see [agent harnesses ranked](https://upahje.my/en/articles/agent-harnesses-ranked) |
+
+A second MausBot repository described itself as an MIT download repo and was cited in this article until 24 November 2026, when the link returned 404 and the GitHub organisation behind it no longer resolved. The main repository above is the one that can still be checked.
 
 ## What do the licences actually let a business do?
 
@@ -2272,20 +2021,6 @@ The `openmausbot` launcher is still on this machine, and running it fails with a
 [Agent harness, AI harness, agent framework: what the words mean](https://upahje.my/en/articles/agent-harness-vs-ai-harness)
 
 [More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
-
-## FAQ
-
-### Is OpenBot open source?
-
-No, despite its site saying the source code is open. The repository's licence file is PolyForm Noncommercial 1.0.0, and GitHub's licence field reports NOASSERTION because it does not recognise a standard licence. Commercial use requires a paid licence.
-
-### Is MausBot open source?
-
-MausBot's main repository is Apache-2.0, which is open source and permits commercial use. A second repository described itself as an MIT download repo and was cited here until 24 November 2026, when that link returned 404 and the GitHub organisation behind it no longer resolves, so the split can no longer be checked and the download repo is not cited.
-
-### Does an open-source harness mean an open-source model?
-
-No. The harness and the model are separate, and the split runs both ways: an open harness can call a closed model, and a closed harness can run an open-weight model. The licence you read applies to the harness code, not to the model it calls.
 
 ### Sources
 
@@ -2380,22 +2115,6 @@ Then ask both to walk you through the acceptance test. The one who can describe 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
-## FAQ
-
-### Should I write the brief myself or let the freelancer propose one?
-
-Write it yourself, even badly. A brief you wrote is the only document that states what you actually want, and it is the baseline every quote can be measured against. A freelancer's proposal is a price and an interpretation, and you want the interpretation to come second.
-
-### What if I do not know the output format?
-
-Get one real example first. Export the report or the row you want reproduced, and attach it. Most of the ambiguity in a brief disappears once there is a file that shows the target.
-
-### Is a fixed price always better than hourly?
-
-Not always, but for this kind of work it usually is, because the scope can be written down. Hourly suits work where the scope genuinely cannot be known in advance, such as investigating why a third-party service fails. If the brief is clear and the quote is still hourly only, ask what part is unknown.
----
-
-This piece carries no sources, because it is our own procedure rather than a report: how we commission automation work, and the brief we hand out. No published standard or vendor document is being described, and no figure here is a measurement.
 
 ## Open weights, four licence types: what each model allows
 
@@ -2458,20 +2177,6 @@ No card states a minimum hardware configuration, so no self-hosting cost is clai
 
 [More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
 
-## FAQ
-
-### Does open weight mean free to use commercially?
-
-No. The licence decides that. MIT permits commercial use; a custom licence may restrict it, and you have to read the text in the repository's LICENSE file rather than trusting the words "open weight".
-
-### Can I run one of these on a single GPU?
-
-Not usefully for the models in this table. They run from 95B to 1T activated parameters, and Mistral's own example names a node of 8 GPUs. A single-GPU model would be a much smaller one, which this table does not cover.
-
-### Is renting always worse than running it yourself?
-
-No, and for most businesses renting wins because the node is expensive and idle most of the day. Running it yourself becomes a question when usage is high enough to beat the node's monthly cost, or when data location forces your hand. This article cannot price the node, so it does not pretend to draw that line.
-
 ### Sources
 
 - DeepSeek-V4.1-Flash-1017 model card and licence — https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017 (checked 2026-11-19)
@@ -2522,9 +2227,13 @@ The arithmetic, using a WhatsApp FAQ bot handling 3,000 messages a month at roug
 3. One GPU at USD 7.94 an hour for 730 hours a month costs USD 5,796.20.
 4. To spend USD 5,796 on GPT-6 Luna tokens you would need roughly 36 million messages a month, or 12,000 times the example workload.
 
-Two honest limits on that number. The GPU price is one supplier's list rate for a high-end card, not the cheapest GPU time available, so the crossover can move lower. And a 119B-parameter model like Mistral Small 4 does not fit on one GPU at full precision, so the rate above is a reference for GPU time, not a capacity plan.
+Two honest limits on that number. The GPU price is one supplier's list rate for a high-end card, not the cheapest GPU time available, so the crossover can move lower. And a 119B-parameter model like Mistral Small 4, with 6.5 billion parameters active per token, does not fit on one GPU at full precision, so the rate above is a reference for GPU time, not a capacity plan ([Mistral, checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
 The comparison is also arithmetic, not capability. A model you run yourself is not automatically as capable as the closed one you were paying for, and that gap is the real reason most SMEs stay on per-call pricing.
+
+Self-hosting keeps data in Malaysia only when the hardware is in Malaysia. Renting a GPU in another region moves the data there exactly as an API call does, so check where the rented machine actually sits before you make location the reason to own the stack.
+
+Mistral's own API prices Mistral Small 4 at USD 0.15 per million input tokens and USD 0.60 per million output tokens ([checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
 ## What does running one in-house actually require?
 
@@ -2547,19 +2256,6 @@ Call an open-weight model before you try to run one. Mistral serves its own open
 [What an API costs to wire up in Malaysia](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
 
 [More on APIs and models](https://upahje.my/en/articles/category/definitions)
-## FAQ
-
-### Do I have to run a model myself to use open weights?
-
-No. Plenty of providers serve open-weight models through an API, priced per token. Mistral's own API prices Mistral Small 4 at USD 0.15 per million input tokens and USD 0.60 per million output tokens ([checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)). You get the licence terms and the model without owning hardware.
-
-### Can I run one of these on an office PC?
-
-Not usefully. The models in this article are large: Mistral Small 4 has 119 billion parameters with 6.5 billion active ([Mistral, checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)), and that needs a datacentre GPU, not a workstation. Small quantised models that do run on a laptop are a different trade, and this article does not measure their quality.
-
-### Does self-hosting keep my data in Malaysia?
-
-Only if the hardware is in Malaysia. Renting a GPU in another region moves the data there, same as calling a closed API. If data location is your reason to self-host, check where the rented machine actually sits before you commit.
 
 ### Sources
 
@@ -2568,7 +2264,7 @@ Only if the hardware is in Malaysia. Renting a GPU in another region moves the d
 - OpenAI, API pricing (per-million-token rates) — https://developers.openai.com/api/docs/pricing (checked 2026-11-19)
 - DigitalOcean, GPU Droplets pricing — https://www.digitalocean.com/pricing/gpu-droplets (checked 2026-11-19)
 
-## What RM100 a month buys you in AI, in Malaysia
+## What RM100 a month buys in AI
 
 URL: https://upahje.my/en/articles/rm100-budget
 Checked: 2026-11-19
@@ -2594,6 +2290,10 @@ The vendor pages make the distinction plainly. Claude Pro and ChatGPT Plus list 
 | Copilot Pro | USD 10 per user per month | 41.15 | No, GitHub AI Credits only |
 
 Every ringgit figure is either published in MYR by the vendor, or converted at the Bank Negara Malaysia middle rate of 4.1145 on 19 November 2026. Tax is excluded.
+
+Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 against RM82.29, and it costs USD 200 up front.
+
+Claude publishes USD 20 and we converted at 4.1145 to RM82.29. OpenAI publishes MYR 99.90 directly for Malaysia.
 
 ## What do tokens cost instead?
 
@@ -2647,20 +2347,6 @@ Two benchmark leaderboards were also not captured for this piece, and this artic
 
 [More on buying automation](https://upahje.my/en/articles/category/buying-guides)
 
-## FAQ
-
-### Can I use my ChatGPT subscription as an API key?
-
-No. ChatGPT Plus at RM99.90 includes no API credits, and nothing on the pricing page grants a third-party harness a key. A harness needs its own API key, or an OAuth flow the vendor explicitly supports. ChatGPT Pro bundles API credits, which are credit against the API, not the subscription login used as a key.
-
-### Why is Claude Pro cheaper in ringgit than ChatGPT Plus?
-
-Because they are converted differently, not priced differently. Claude publishes USD 20 and we converted at 4.1145 to RM82.29. OpenAI publishes MYR 99.90 directly for Malaysia. A stronger or weaker ringgit moves the Claude figure and leaves the ChatGPT figure alone.
-
-### Is a yearly plan worth it?
-
-Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 against RM82.29, and it costs USD 200 up front. Whether that is worth it depends on whether you will still be using it in twelve months; the arithmetic does not, and this article does not have your usage.
-
 ### Sources
 
 - Claude, pricing — https://claude.com/pricing (checked 2026-11-24)
@@ -2669,7 +2355,7 @@ Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 
 - Anthropic, Claude API pricing — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-24)
 - Bank Negara Malaysia, exchange rates (the USD middle rate quoted is the one published 19 November 2026; the page shows the latest rate) — https://www.bnm.gov.my/exchange-rates (checked 2026-11-24)
 
-## What 11 Malaysian freelance listings offered for five skills
+## What 11 freelance listings offered for five skills
 
 URL: https://upahje.my/en/articles/side-income-skills-malaysia-2026
 Checked: 2026-11-19
@@ -2750,19 +2436,6 @@ Two further limits. The two cold-calling rows are advertised budgets, which a cl
 **Read next**
 
 [More on side-income work](https://upahje.my/en/articles/category/side-income)
-## FAQ
-
-### Is one platform enough to judge the whole market?
-
-No, and this article does not claim it is. It is the layer that could be read on 19 November 2026. A reader who finds better-paying listings elsewhere has found exactly the gap this piece names, and the honest response is to check those listings yourself rather than trust a single table.
-
-### Why are some rates marked as advertised budgets?
-
-Because a listing's stated budget is what the client says they will pay, not what was agreed. Two cold-calling rows fall in that category, and they are labelled so a reader does not treat a wish as a rate.
-
-### Can I combine several of these skills?
-
-Yes, and the listings suggest it is common: the RM2,500 video role combines filming, editing and appearing on camera. A second skill raises the price faster than doing the first one for longer.
 
 ### Sources
 
@@ -2834,26 +2507,13 @@ Three commands, and you do not need to trust this page to run them.
 [Where an API key goes in a harness, and where it must never go](https://upahje.my/en/articles/harness-api-keys)
 
 [More on agent harnesses](https://upahje.my/en/articles/category/definitions)
-## FAQ
-
-### Is the transcript human-readable?
-
-Yes, once decompressed. It is JSON Lines: one JSON object per line, each with a `type`, a `seq`, a `time` and a `data` payload. The `zstd` command above turns it back into text without any special tool.
-
-### Does the harness keep my conversation after I close it?
-
-The session directory stays on disk with its transcript, so the file persists after the window closes. Whether your installation deletes old sessions on a schedule is a setting on your machine, not something this page can claim for yours; check the sessions folder before assuming either way.
-
-### Does every request send the whole conversation to the model?
-
-The harness records a `request/header` and a `request/context` per step, so each step is a separate request rather than one long exchange. What exactly the provider receives inside that request is not something this page measures, and we are not going to guess at it.
 
 ### Sources
 
 - DeepSeek Harness package metadata (@deepseek-ai/dsh 0.2.2-rc.1, installed on this machine) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
 - DeepSeek API docs, your first API call — https://api-docs.deepseek.com/ (checked 2026-11-24)
 
-## What is an API, for a Malaysian small business owner
+## What is an API, for a small business owner
 
 URL: https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme
 Checked: 2026-11-19
@@ -2926,23 +2586,6 @@ Settle three things in writing before you pay.
 [Open or closed models, and which to start with](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
 
 [More on APIs and models](https://upahje.my/en/articles/category/definitions)
-## FAQ
-
-### Do I need my own server to use an API?
-
-No. A closed API needs an internet connection and a small script or app. You need a server only if you host an open-weight model yourself.
-
-### Is it safe to give a freelancer my API keys?
-
-Not your main key. Issue a separate key for that integration with a spending limit, keep it out of WhatsApp and email, and revoke it on the last day of the job. A revoked key costs nothing. A leaked one can cost your whole account.
-
-### What happens if a provider changes or shuts down their API?
-
-The integration stops working until it is updated. The window belongs to the vendor: OpenAI publishes a deprecation timeline linked from its pricing page ([checked 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Keep the integration thin so it can be pointed at another provider.
-
-### How long does a first integration take?
-
-A single read-only endpoint takes a competent developer about a day. Anything that moves money or writes data takes a week, most of it spent on what happens when calls fail. No published dataset for Malaysian timelines exists, so these are working estimates.
 
 ### Sources
 
@@ -3567,7 +3210,7 @@ Dua belas klip ialah angka yang saya gunakan, dan itu pertimbangan, bukan penemu
 
 Pemasangan tetap satu malam. Itu kos sebenar di pihak percuma, dan ia dibayar sekali.
 
-## Apa yang perlu dibuat minggu ini
+## Apa yang perlu dikira sebelum membatalkan
 
 1. Kira klip yang anda terbitkan bulan lepas, bukan yang anda niatkan.
 2. Pasang satu repo pada mesin yang anda sudah miliki dan potong satu video panjang.
@@ -3592,7 +3235,7 @@ Kesilapan paling murah di sini ialah membayar setahun klip yang tidak pernah dis
 - iamajmeena/neonclipping, repositori (MIT, dicipta 19 November 2026) — https://github.com/iamajmeena/neonclipping (checked 2026-11-24)
 - haziqahmedqasmi/PeakCut, repositori (MIT, dicipta 14 November 2026) — https://github.com/haziqahmedqasmi/PeakCut (checked 2026-11-24)
 
-## Komisen Grab dan foodpanda di Malaysia (2026)
+## Komisen Grab dan foodpanda (2026)
 
 URL: https://upahje.my/ms/articles/komisen-penghantaran-malaysia
 Checked: 2026-11-25
@@ -3773,28 +3416,6 @@ Rekod sesi lengan GOAT lebih memberi maklumat daripada demonya. Tiga transkrip y
 
 Itu profil kebolehpercayaan, dan ia tidak mengatakan apa-apa tentang kualiti output. Tiada kiraan token dan tiada medan kos dalam rekod itu, dan model data laman itu juga tiada medan kos, jadi tiada perbandingan kos boleh dibina daripadanya.
 
-## FAQ
-
-### Bolehkah skor Terminal-bench dibandingkan dengan skor SWE-bench?
-
-Tidak. Penanda aras berbeza, agent berbeza, set tugasan berbeza. Angka itu tidak berkongsi skala.
-
-### Mengapa angka 38.5% bukan hasil CommandCode atau OpenCode?
-
-Kerana lajur agent menyatakan Claude Code. Modelnya milik DeepSeek; harness yang memandunya bukan mana-mana CLI itu.
-
-### Apa yang dibuktikan oleh rekod sesi GOAT?
-
-Bahawa lengan itu terus berjalan melalui 94 cubaan semula dan hampir tiga jam. Ia tidak membuktikan outputnya bagus, dan ia tiada data token atau kos.
-
----
-
-**Baca seterusnya**
-
-[CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda](https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka)
-
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
-
 ### Sources
 
 - Papan pendahulu SWE-bench, tab Verified — https://www.swebench.com/ (checked 2026-11-23)
@@ -3803,7 +3424,7 @@ Bahawa lengan itu terus berjalan melalui 94 cubaan semula dan hampir tiga jam. I
 - nazzysar/commandcode-goat-ecosystem-sess, transkrip sesi — https://github.com/nazzysar/commandcode-goat-ecosystem-sess (checked 2026-11-23)
 - nazzysar/deepseek-benchmarks, repositori dan checksum — https://github.com/nazzysar/deepseek-benchmarks (checked 2026-11-23)
 
-## Apa yang AI agent boleh buat untuk PKS Malaysia
+## Apa yang AI agent boleh buat untuk PKS
 
 URL: https://upahje.my/ms/articles/apa-yang-agent-boleh-buat
 Checked: 2026-11-23
@@ -3864,8 +3485,7 @@ Dua bil. Yang lebih kecil itu yang dapat perhatian.
 
 Jadi pembinaan beratus hingga beribu ringgit dan kos menjalankannya beberapa ringgit. Jika pembekal menyebut bil token bulanan yang besar untuk aliran kerja kecil, minta dia tunjukkan aritmetiknya terhadap kadar yang diterbitkan; aritmetik kami hanya tiga baris. Apa yang tidak dinyatakan oleh kad kadar ialah yuran sokongan bulanan selepas pelancaran, jadi tanyakan sebelum membandingkan sebut harga.
 
-## Apa yang patut dibuat minggu ini?
-
+## Dari mana mula minggu ini
 Lima tindakan, tiada satu pun memerlukan pembelian atau pembangun.
 
 1. **Tulis tugasan pertama yang anda mahu automasikan**, dan apa maksud "selesai" baginya, dalam satu ayat.
@@ -3873,8 +3493,6 @@ Lima tindakan, tiada satu pun memerlukan pembelian atau pembangun.
 3. **Senaraikan sistem yang disentuhnya** dan sama ada agent hanya membaca atau juga menulis.
 4. **Cari kegagalan yang akan menyakitkan**, dan tentukan sama ada manusia patut meluluskan sebelum ia berlaku.
 5. **Tanya dua pembekal enam semakan di bawah**, dan bandingkan jawapannya, bukan harganya.
-
-## Cuba sendiri
 
 Versi paling kecil yang boleh dijalankan ialah skrip yang membaca CSV e-mel sokongan, memanggil satu model bagi setiap baris, dan menulis draf balasan ke CSV kedua. Ia belum agent. Itu disengajakan, kerana ia membuktikan gelung sebelum anda menambah tool.
 
@@ -3898,24 +3516,6 @@ Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari ya
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
 [Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
-
-## FAQ
-
-### Adakah AI agent sama dengan perisian automasi?
-
-Tidak. Automasi klasik mengikut peraturan yang anda tulis, tepat, mengikut urutan. Agent menentukan langkah seterusnya sendiri dalam lingkungan tool dan kebenaran yang ada, dan sebab itulah lajur kebenaran lebih penting daripada pilihan model.
-
-### Perlukah saya ada pembangun untuk menjalankannya?
-
-Untuk membina integrasi, biasanya ya: agent hanya berguna seluas sistem yang dapat dicapainya. Untuk mengendalikannya, tidak, jika kerja itu berasaskan kelulusan: seorang staf yang menyemak baris gilir ialah manusia dalam gelung itu.
-
-### Bolehkah agent memfailkan penyerahan e-Invoice saya?
-
-Ia boleh menyediakannya, dan ia tidak patut menyerahkannya tanpa semakan. Liabiliti bagi penyerahan yang salah terletak pada perniagaan, bukan pada tool itu, jadi orang yang bertanggungjawab menandatangani sehingga anda ada beberapa bulan larian bersih.
-
-### Apa perkara pertama yang wajar diautomasikan?
-
-Tugasan yang paling kerap dibuat pasukan anda, yang ada garisan penamat jelas dan kesilapan yang murah: kemasukan invois, penyalinan pesanan, atau menyusun peti masuk. Mulakan di tempat hasil yang salah kelihatan petang itu juga.
 
 ### Sources
 
@@ -3943,6 +3543,8 @@ Tiga perkara mengikut ayat itu, dan hanya tiga.
 3. Ia menyebut **tidak diwajibkan**. Ia tidak menyebut dilarang, dan kenyataan yang sama menggalakkan penyertaan sukarela.
 
 Perdana Menteri mengumumkan perubahan itu dalam ucapan Hari Kebangsaan 2026, dan LHDN menerbitkan kenyataan pada 30 Ogos 2026, sehari sebelum ia berkuat kuasa.
+
+Perniagaan dengan jualan tahunan RM2.9 juta berada di bawah garis itu, jadi e-Invoice tidak diwajibkan; ujiannya angka tahunan, bukan satu suku yang baik.
 
 ## Angka program sudah besar
 
@@ -3985,32 +3587,6 @@ Potongan RM50,000 setahun bagi penyertaan sukarela, yang disebut dalam ulasan ba
 Sama ada perniagaan yang bermula di bawah garisan RM1 juta lama boleh berhenti tidak dijawab dalam kenyataan itu. Panduan itu diam tentang kes sebaliknya.
 
 Dan tarikh kelonggaran setiap fasa berada dalam grafik dalam PDF garis panduan dan bukan dalam teksnya, jadi ia tidak disalin di sini.
-
-## FAQ
-
-### Adakah pengecualian terpakai kepada perniagaan dengan jualan RM2.9 juta?
-
-Ia terpakai kepada pendapatan atau jualan tahunan di bawah RM3 juta, jadi RM2.9 juta berada di bawah garisan dan e-Invoice tidak diwajibkan.
-
-### Bolehkah perniagaan di bawah ambang tetap mengeluarkan e-Invoice?
-
-Boleh. Penyertaan sukarela digalakkan, dan perniagaan boleh melaksanakannya tanpa kewajipan.
-
-### Apa berlaku selepas 72 jam jika invois salah?
-
-Pembatalan tidak lagi dibenarkan, dan pembetulannya ialah e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
-
-### Adakah jumlah penalti diterbitkan?
-
-Seksyen 120 Akta Cukai Pendapatan 1967 disebut. Tiada jumlah ringgit diterbitkan dalam kenyataan itu atau pada halaman yang disemak.
-
----
-
-**Baca seterusnya**
-
-[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali)
-
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
 
 ### Sources
 
@@ -4076,23 +3652,6 @@ Dan ada kos sebenar untuk menunggu. Dua minggu penjejakan bermakna dua minggu la
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
 
-## FAQ
-
-### Jadi saya tidak patut automasikan proses yang menyakitkan?
-
-Automasikan selepas anda menulis pengecualiannya. Sakit itu bukti bahawa pengecualian wujud, jadi proses itu calon yang baik, cuma bukan calon pertama yang baik.
-
-### Bagaimana jika kami tiada masa menjejak apa-apa selama dua minggu?
-
-Jejaki kegagalan sahaja. Satu baris setiap kali sesuatu silap, dengan apa yang berlaku dan siapa yang membetulkannya. Ia mengambil beberapa minit dan masih menunjukkan di mana kerja sebenar berada.
-
-### Apa yang menjadikan automasi pertama yang baik?
-
-Proses dengan garisan penamat jelas, kesilapan yang murah dan kelihatan, dan pemilik di sebelah sana. Membosankan itulah maksudnya: yang pertama ialah tempat anda belajar cara membeli dan cara menyelenggara, bukan tempat anda membuat penjimatan tahunan.
----
-
-Artikel ini tiada sumber kerana ia hujah, bukan laporan: pendirian tentang proses mana yang patut diautomasikan dahulu, berdasarkan cara projek sebegini gagal. Tiada angka di sini yang merupakan ukuran dan tiada yang dipinjam daripada artikel lain.
-
 ## CommandCode, OpenCode, DeepSeek: bukan jenis alat yang sama
 
 URL: https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka
@@ -4128,6 +3687,8 @@ Satu kiriman Hacker News pada **5 Ogos 2026** mengumumkan "Command Code GOAT, $1
 
 Pengajarannya ialah angka bertarikh memerlukan tarikhnya, atau ia menjadi dakwaan tentang hari ini yang tiada siapa boleh semak.
 
+Angka 38.5% yang tersebar bagi DeepSeek ialah Terminal-bench 4.1, iaitu DeepSeek V4.1 Flash 1017 di bawah Claude Code, jadi ia keputusan model di dalam harness orang lain dan bukan keputusan mana-mana CLI yang dinamakan di sini, dan ia tidak boleh dibandingkan dengan angka SWE-bench kerana penanda aras, agent dan set tugasnya berbeza.
+
 ## Apa yang kami jalankan sendiri?
 
 Satu tugasan, dalam satu harness, dicetak sebagai catatan sampingan dan bukan sebagai perbandingan: `dsh` 0.2.2-rc.1 menulis ciri kecil dalam 95.4 saat merentas 10 turn dan 14 tool call, menghasilkan dua fail, dan ujian projek lulus 3 daripada 3.
@@ -4136,8 +3697,7 @@ Yang patut diingat ialah apa yang berlaku pada dua lengan lain. Kedua-duanya eng
 
 Kami tidak berjaya menjalankan dua lengan lain, jadi artikel ini tidak membuat sebarang dakwaan tentang kualiti outputnya.
 
-## Apa yang patut dibuat minggu ini?
-
+## Apa yang perlu disemak sebelum membayar
 Lima tindakan, tiada satu pun memerlukan langganan.
 
 1. **Pilih satu tugasan sebenar daripada backlog anda**, cukup kecil untuk siap dalam sejam, dan jalankannya dalam harness yang anda sudah ada.
@@ -4146,31 +3706,11 @@ Lima tindakan, tiada satu pun memerlukan langganan.
 4. **Jalankannya dua kali** dengan prompt yang sama. Harness yang berjaya sekali dan gagal sekali ialah pembelian yang berbeza.
 5. **Sebelum membayar sesuatu tier, tanya berapa yuran pemprosesannya** dalam ringgit, dan dapatkan secara bertulis.
 
-## Cuba sendiri
-
 Tiada cara jujur untuk menghasilkan semula papan pendahulu. Yang boleh anda hasilkan semula ialah baris anda sendiri.
 
 Ambil satu tugasan, jalankannya dalam satu harness, dan catat lima medan yang sama seperti papan cetak: model, agent, tetapan, skor (adakah ujian lulus), dan kos dalam token atau ringgit. Itu penanda aras anda, ia setara dengan dirinya bulan depan, dan ia tidak bergantung pada halaman pemasaran sesiapa.
 
 Satu perkara yang akan menggigit anda ialah kod keluar. Larian yang keluar dengan 0 tanpa menulis fail kelihatan lulus dalam setiap log anda. Periksa artifaknya, setiap kali.
-
-## FAQ
-
-### Adakah CommandCode lebih baik daripada OpenCode?
-
-Tiada penanda aras yang diterbitkan menjawab soalan itu, kerana tiada satu pun produk muncul sebagai agent pada mana-mana papan. Papan menilai model di dalam harness tetap. Selain itu, ia dakwaan vendor atau larian seorang individu.
-
-### Bolehkah saya bandingkan angka 38.5% DeepSeek dengan angka SWE-bench?
-
-Tidak. Penanda aras berbeza, agent berbeza, set tugasan berbeza. Dua angka itu tidak berkongsi skala, dan memasangkannya ialah cara jadual menjadi mengelirukan.
-
-### Mengapa artikel ini tidak memetik papan pendahulu Aider?
-
-Kerana larian terbaharu yang kelihatan bertarikh 23 Ogos 2025. Papan lapuk tidak boleh mengatakan apa-apa tentang model 2026, dan memetiknya lebih buruk daripada meninggalkannya.
-
-### Satu perkara apa yang perlu disemak sebelum mempercayai demo coding agent?
-
-Sama ada fail ditulis dan ujian lulus, bukan sama ada arahan keluar dengan 0. Larian kami sendiri menunjukkan dua harness keluar dengan bersih tanpa menulis apa-apa.
 
 ### Sources
 
@@ -4243,8 +3783,7 @@ Dan dua angka "jam yang hilang" yang terkenal itu bukan Malaysia. Satu kajian ke
 
 Proses bertulis, pemilik yang dinamakan, sumber data yang bersih, laluan pengecualian. Rangka empat bahagian itu ialah artikel sebuah firma operasi Malaysia, diterbitkan di laman sendiri tanpa nama penulis, ditulis tentang kertas KRI/MDEC. Ia senarai semak vendor, bukan senarai rasmi, dan tiada badan kerajaan menerbitkan empat perkara itu sebagai piawaian. Berguna untuk berfikir; tidak boleh dipetik sebagai polisi.
 
-## Apa yang patut dibuat minggu ini?
-
+## Apa yang perlu dipetakan minggu ini
 Lima tindakan, tiada satu pun memerlukan pembelian.
 
 1. **Pilih satu dokumen** yang kerap anda keluarkan: sebut harga, invois, pesanan penghantaran.
@@ -4252,8 +3791,6 @@ Lima tindakan, tiada satu pun memerlukan pembelian.
 3. **Kira salinan** rekod itu, dan namakan siapa pemilik salinan mana.
 4. **Cari medan yang paling kerap dibaiki dengan tangan**, kerana di situlah puncanya salah.
 5. **Tulis laluan pengecualian** bagi kes yang berlaku setiap minggu: apa yang patut dikatakan sistem, dan siapa yang memutuskan.
-
-## Cuba sendiri
 
 Versi paling kecil yang boleh dijalankan ialah peta satu halaman, bukan sistem: spreadsheet dengan satu baris bagi setiap langkah dokumen, dan lajur untuk sistem, pemilik, dan tempat data ditaip semula.
 
@@ -4264,24 +3801,6 @@ Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya ialah 
 [Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
-
-## FAQ
-
-### Ini masalah perisian atau masalah proses?
-
-Ia masalah fragmentasi, dan perkataan KRI yang tepat: digital di hadapan, manual di belakang. Membeli tool lain sebelum memetakan penyerahan biasanya menambah salinan kelima rekod itu.
-
-### Perlukah kami betulkan ini sebelum e-Invoice?
-
-Anda perlu memastikan data invois betul semasa dikeluarkan, iaitu keperluan yang lebih kecil daripada membetulkan semuanya. Mulakan dengan medan yang disemak LHDN, kemudian luaskan.
-
-### Berapa banyak sistem itu terlalu banyak?
-
-Tiada siapa menerbitkan angka, dan kiraannya soalan yang salah. Dua sistem yang bercanggah lebih buruk daripada lima yang berkongsi satu rekod.
-
-### Bolehkah kami hanya automasikan langkah salinan?
-
-Boleh, dan ia projek pertama yang paling biasa. Ia juga mengekalkan percanggahan antara sistem, dan sebab itulah [artikel tentang memilih automasi pertama](https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk) berhujah supaya memetakan dahulu.
 
 ### Sources
 
@@ -4316,6 +3835,8 @@ Tiga bil berbeza sampai ke satu chatbot WhatsApp, dan ia datang daripada dua sya
 | Tokokan BSP, hosting dan lesen pengguna | Fi vendor itu sendiri | Vendor anda |
 
 Elaun itu dikira bagi setiap nombor perniagaan dan ditetapkan semula setiap bulan kalendar; mesej yang tidak digunakan tidak terbawa ke bulan berikutnya. Mesej servis melepasi elaun dicaj sejak 1 Oktober 2026.
+
+Utiliti, pengesahan dan servis ialah RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan adalah percuma.
 
 ## Bagaimana Meta mengenakan caj untuk mesej WhatsApp?
 
@@ -4374,8 +3895,7 @@ Tiga penerbit, tiga bentuk. Ini harga bina-dan-langganan, bukan kadar mesej, dan
 
 AIRS juga menyatakan julat pasaran sebagai RM300 hingga RM3,000 lebih sebulan, dan AlwaysON menyatakan yuran platform "only 40-60% of the total cost", iaitu amaran berguna: langganan bukan keseluruhan bil.
 
-## Apa yang patut dibuat minggu ini?
-
+## Apa yang perlu dikira sebelum menandatangani
 Lima tindakan, tiada satu pun memerlukan pembelian.
 
 1. **Eksport mesej WhatsApp keluar bulan lepas** dan tandakan setiap satu sebagai pemasaran, utiliti, pengesahan atau servis.
@@ -4383,8 +3903,6 @@ Lima tindakan, tiada satu pun memerlukan pembelian.
 3. **Cari mesej yang anda hantar di luar tetingkap 24 jam.** Itulah templat pemasaran pada RM0.3467 setiap satu, dan ia mendominasi bil kecil.
 4. **Darab kiraan pemasaran dengan 0.3467** dan kiraan servis berbayar dengan 0.0564, dan bandingkan jumlah itu dengan RM200 hingga RM1,500 yuran vendor.
 5. **Tanya setiap vendor sama ada harga mereka termasuk caj mesej Meta**, dan dapatkan jawapannya secara bertulis, kerana dua bil itu datang daripada dua syarikat berbeza.
-
-## Cuba sendiri
 
 Versi paling kecil yang boleh dijalankan bukan bot langsung: ia skrip yang menilai bulan lepas anda daripada kad yang diterbitkan, supaya anda tahu jumlahnya sebelum bercakap dengan vendor.
 
@@ -4397,32 +3915,6 @@ Tiada laluan sandbox percuma yang didokumenkan dalam halaman yang dibaca untuk a
 ## Apa yang tidak dapat kami sahkan?
 
 Halaman pengesahan antarabangsa yang khusus tidak dibuka, jadi baris itu bergantung pada kad Malaysia sahaja. Tier volum utiliti dan pengesahan wujud, tetapi fail tier tidak dihuraikan, jadi apa-apa angka melebihi harga senarai tiada. Meta Business Agent dinilai setiap juta token tanpa angka setiap interaksi untuk Malaysia yang diterbitkan, jadi tiada kos setiap interaksi didakwa. Hanya satu daripada tiga vendor Malaysia menerbitkan harga dari-dengan-tiada-yuran-persediaan; dua lagi menyebut harga mengikut skop, jadi tiada yuran binaan pasaran boleh dinyatakan.
-
-## FAQ
-
-### Adakah satu mesej benar-benar RM0.3467?
-
-Hanya mesej pemasaran, dan hanya apabila ia sampai kepada penerima. Utiliti, pengesahan dan servis RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan percuma.
-
-### Adakah saya dicaj apabila pelanggan menghantar mesej?
-
-Tidak. Meta mengenakan caj untuk mesej perniagaan-ke-pengguna sahaja, jadi mesej pelanggan percuma diterima, dan balasan anda dicaj mengikut kategori yang dikenainya.
-
-### Apa itu tetingkap 24 jam dalam bahasa mudah?
-
-Ia jam yang bermula apabila pelanggan menghantar mesej kepada anda. Dalam tempoh itu anda boleh membalas dengan bebas sebagai mesej servis. Selepas jam itu tamat, apa-apa mesej baharu mesti templat berbayar.
-
-### Adakah harga vendor termasuk caj mesej Meta?
-
-Kebanyakannya tidak, dan yang dibaca di sini menyatakannya secara berasingan. Meta membil mesej kepada akaun anda sendiri, jadi bajetkan yuran vendor dan bil mesej sebagai dua baris.
-
----
-
-**Baca seterusnya**
-
-[Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi)
-
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
 
 ### Sources
 
@@ -4486,8 +3978,7 @@ Ayat itu sebabnya pengesahan mesti kekal semasa. Rayuan yang difailkan sebelum p
 
 Google tidak menerbitkan apa-apa pada halaman ini tentang cara profil disusun dalam carian setempat, jadi artikel ini tidak membuat dakwaan tentang faktor susunan selain medan yang didokumenkan. Beberapa ID pusat bantuan memulangkan "Sorry, this page can't be found" semasa pusingan ini, jadi hanya halaman yang Google sendiri pautkan atau yang ditemui imbasan dipetik. Tiada juga angka yang diterbitkan untuk tempoh pengesahan atau rayuan.
 
-## Apa yang patut dibuat minggu ini?
-
+## Apa yang perlu dibetulkan dahulu
 Lima tindakan, tiada satu pun memerlukan agensi.
 
 1. **Baca nama perniagaan anda sendiri** terhadap peraturan dunia sebenar, dan betulkannya dalam profil, bukan dalam direktori.
@@ -4495,8 +3986,6 @@ Lima tindakan, tiada satu pun memerlukan agensi.
 3. **Tentukan kedai atau kawasan perkhidmatan**, dan pastikan alamat serta kawasan perkhidmatan sepadan dengan keputusan itu.
 4. **Isi waktu biasa dan waktu khas** untuk dua bulan cuti umum akan datang.
 5. **Semak status pengesahan** dan simpan dokumen yang membuktikan perniagaan anda wujud, kerana penggantungan akan memintanya.
-
-## Cuba sendiri
 
 Versi paling kecil ialah audit, bukan integrasi: buka profil anda, dan pergi medan demi medan terhadap halaman garis panduan Google, tandakan setiap satu sebagai didokumenkan-dan-betul, didokumenkan-tetapi-salah, atau kosong.
 
@@ -4507,24 +3996,6 @@ Anda perlukan halaman garis panduan, profil anda sendiri, dan sejam lapang. Kosn
 [Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
-
-## FAQ
-
-### Patutkah saya letak kata kunci dalam nama perniagaan?
-
-Tidak. Peraturan Google ialah nama seperti digunakan dalam dunia sebenar dan dikenali pelanggan, dan meletakkan kata kunci ialah cara yang didokumenkan untuk membawa profil kepada sekatan.
-
-### Kedai atau kawasan perkhidmatan, jika saya buat kedua-duanya?
-
-Satu profil, dengan alamat jika pelanggan boleh masuk, dan kawasan perkhidmatan untuk tempat anda bergerak. Peraturan Google ialah perniagaan yang ada kedai tidak menggunakan tetapan kawasan-perkhidmatan-sahaja untuk menyembunyikannya.
-
-### Bolehkah saya ada dua profil untuk dua cawangan?
-
-Dua cawangan sebenar di dua alamat ialah dua perniagaan pada pandangan profil. Dua profil untuk satu cawangan itulah masalah yang didokumenkan.
-
-### Berapa lama rayuan mengambil masa?
-
-Google tidak menerbitkan tempoh pada halaman yang dibaca untuk artikel ini. Yang diterbitkannya ialah urutan: selesaikan pengesahan dahulu, kemudian rayu.
 
 ### Sources
 
@@ -4659,20 +4130,6 @@ Framework ialah sesuatu yang diimport oleh pembangun; ia tidak memberikan persek
 
 [Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
 
-## FAQ
-
-### Adakah Claude Code harness atau aplikasi?
-
-Kedua-duanya. Anthropic menjual aplikasi, dan dokumentasi Agent SDK mereka menerangkan hosted agent harness di bawahnya yang menjalankan gelung. Perkataan itu menerangkan lapisan, bukan produk.
-
-### Adakah agent framework sama dengan harness?
-
-Tidak. Framework ialah perpustakaan yang anda bina dengannya; harness ialah benda yang menjalankan gelung, melaksanakan tool dan menyimpan transkrip. Anda boleh membina harness di atas framework, dan kebanyakan produk berbuat begitu.
-
-### Adakah perkataan "harness" memberitahu saya sama ada ia sumber terbuka?
-
-Tidak. Perkataan itu menerangkan fungsi, bukan lesen. Harness boleh jadi proprietari dan dihoskan di awan, atau sumber terbuka dan setempat, dan labelnya tetap sama.
-
 ### Sources
 
 - Dokumentasi Claude Code, gambaran Agent SDK (hosted agent harness) — https://code.claude.com/docs/en/agent-sdk/overview (checked 2026-11-19)
@@ -4736,26 +4193,13 @@ Tiga arahan, dan anda tidak perlu mempercayai halaman ini untuk menjalankannya.
 [Di mana kunci API diletakkan dalam harness, dan di mana ia tidak boleh ada](https://upahje.my/ms/articles/kunci-api-dalam-harness)
 
 [Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
-## FAQ
-
-### Bolehkah transkrip itu dibaca oleh manusia?
-
-Boleh, selepas dinyahmampat. Ia JSON Lines: satu objek JSON setiap baris, setiap satu dengan `type`, `seq`, `time` dan muatan `data`. Arahan `zstd` di atas mengembalikannya kepada teks tanpa alat khas.
-
-### Adakah harness menyimpan perbualan saya selepas saya tutup?
-
-Direktori sesi kekal pada cakera bersama transkripnya, jadi fail itu masih ada selepas tetingkap ditutup. Sama ada pemasangan anda memadam sesi lama mengikut jadual ialah tetapan pada mesin anda, bukan sesuatu yang halaman ini boleh dakwa bagi pihak anda; semak folder sesi sebelum menganggap mana-mana arah.
-
-### Adakah setiap permintaan menghantar seluruh perbualan kepada model?
-
-Harness merekodkan `request/header` dan `request/context` bagi setiap step, jadi setiap step ialah permintaan berasingan, bukan satu pertukaran panjang. Apa sebenarnya yang diterima pembekal di dalam permintaan itu tidak diukur oleh halaman ini, dan kami tidak akan menekanya.
 
 ### Sources
 
 - Metadata pakej DeepSeek Harness (@deepseek-ai/dsh 0.2.2-rc.1, dipasang pada mesin ini) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
 - DeepSeek API docs, panggilan API pertama — https://api-docs.deepseek.com/ (checked 2026-11-24)
 
-## Apa itu API, untuk pemilik perniagaan kecil Malaysia
+## Apa itu API, untuk pemilik perniagaan kecil
 
 URL: https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia
 Checked: 2026-11-19
@@ -4828,23 +4272,6 @@ Tetapkan tiga perkara secara bertulis sebelum bayaran.
 [Model terbuka atau tertutup, dan mana yang patut dimulakan](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)
 
 [Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
-## FAQ
-
-### Perlu saya ada server sendiri untuk menggunakan API?
-
-Tidak. API tertutup hanya memerlukan sambungan internet dan satu skrip atau aplikasi kecil. Anda memerlukan server hanya jika anda menjalankan model terbuka itu sendiri.
-
-### Adakah selamat memberikan kunci API saya kepada freelancer?
-
-Bukan kunci utama anda. Keluarkan kunci berasingan untuk integrasi itu dengan had perbelanjaan, jangan hantar melalui WhatsApp atau e-mel, dan batalkan pada hari terakhir kerja. Kunci yang dibatalkan tidak merugikan apa-apa. Kunci yang bocor boleh merugikan seluruh akaun anda.
-
-### Apa yang berlaku jika pembekal mengubah atau menutup API mereka?
-
-Integrasi berhenti berfungsi sehingga dikemas kini. Tempoh itu ditentukan pembekal: OpenAI menerbitkan garis masa penghentian yang dipautkan pada halaman harga mereka ([disemak 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Pastikan integrasi nipis supaya mudah ditukar kepada pembekal lain.
-
-### Berapa lama integrasi pertama mengambil masa?
-
-Satu endpoint yang membaca sahaja mengambil masa sekitar sehari untuk pembangun yang cekap. Sebarang kerja yang memindahkan wang atau menulis data mengambil masa seminggu, sebahagian besarnya untuk menguji apa yang berlaku apabila panggilan gagal. Tiada data awam tentang tempoh di Malaysia, jadi ini anggaran kerja.
 
 ### Sources
 
@@ -4853,7 +4280,7 @@ Satu endpoint yang membaca sahaja mengambil masa sekitar sehari untuk pembangun 
 - OpenAI, harga API (kadar setiap juta token) — https://developers.openai.com/api/docs/pricing (checked 2026-11-19)
 - OpenAI, katalog model API — https://developers.openai.com/api/docs/models (checked 2026-11-19)
 
-## Apa yang RM100 sebulan beli dalam AI, di Malaysia
+## Apa yang RM100 sebulan beli dalam AI
 
 URL: https://upahje.my/ms/articles/bajet-rm100-ai-malaysia
 Checked: 2026-11-19
@@ -4879,6 +4306,10 @@ Halaman pembekal menyatakan perbezaan itu dengan jelas. Claude Pro dan ChatGPT P
 | Copilot Pro | USD 10 setiap pengguna sebulan | 41.15 | Tidak, GitHub AI Credits sahaja |
 
 Setiap angka ringgit sama ada diterbitkan dalam MYR oleh pembekal, atau ditukar pada kadar tengah Bank Negara Malaysia 4.1145 pada 19 November 2026. Cukai tidak termasuk.
+
+Kadar tahunan Claude ialah USD 17 sebulan berbanding USD 20 bulanan, iaitu RM69.95 berbanding RM82.29, dan ia menelan USD 200 di awal.
+
+Claude menerbitkan USD 20 dan kami tukar pada 4.1145 kepada RM82.29. OpenAI menerbitkan MYR 99.90 terus untuk Malaysia.
 
 ## Berapa kos token sebagai ganti?
 
@@ -4931,20 +4362,6 @@ Dua papan pendahulu penanda aras juga tidak dirakam untuk artikel ini, dan artik
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
-
-## FAQ
-
-### Bolehkah saya guna langganan ChatGPT saya sebagai kunci API?
-
-Tidak. ChatGPT Plus pada RM99.90 tidak menyertakan kredit API, dan tiada apa pada halaman harga itu memberikan harness pihak ketiga satu kunci. Harness memerlukan kunci API sendiri, atau aliran OAuth yang disokong pembekal secara jelas. ChatGPT Pro membundel kredit API, iaitu kredit terhadap API, bukan log masuk langganan yang digunakan sebagai kunci.
-
-### Mengapa Claude Pro lebih murah dalam ringgit daripada ChatGPT Plus?
-
-Kerana kedua-duanya ditukar dengan cara berbeza, bukan dinilai berbeza. Claude menerbitkan USD 20 dan kami tukar pada 4.1145 kepada RM82.29. OpenAI menerbitkan MYR 99.90 terus untuk Malaysia. Ringgit yang lebih kuat mengubah angka Claude dan membiarkan angka ChatGPT.
-
-### Adakah pelan tahunan berbaloi?
-
-Kadar tahunan Claude ialah USD 17 sebulan berbanding USD 20 bulanan, iaitu RM69.95 berbanding RM82.29, dan ia menelan USD 200 di awal. Sama ada ia berbaloi bergantung pada sama ada anda masih menggunakannya dua belas bulan lagi; aritmetiknya tidak tahu, dan artikel ini tidak mempunyai data penggunaan anda.
 
 ### Sources
 
@@ -5014,20 +4431,6 @@ Tiada kad menyatakan konfigurasi perkakasan minimum, jadi tiada kos hosting send
 [Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
-
-## FAQ
-
-### Adakah model terbuka bermakna percuma untuk kegunaan komersial?
-
-Tidak. Lesen yang menentukannya. MIT membenarkan penggunaan komersial; lesen tersuai boleh mengehadkannya, dan anda perlu membaca teks dalam fail LICENSE repositori daripada mempercayai perkataan "model terbuka".
-
-### Bolehkah saya menjalankan salah satu ini pada satu GPU?
-
-Tidak secara berguna bagi model dalam jadual ini. Ia berjalan dari 95B hingga 1T parameter aktif, dan contoh Mistral sendiri menamakan nod 8 GPU. Model satu GPU ialah model yang jauh lebih kecil, yang tidak diliputi jadual ini.
-
-### Adakah menyewa sentiasa lebih buruk daripada menjalankan sendiri?
-
-Tidak, dan bagi kebanyakan perniagaan menyewa menang kerana nod itu mahal dan terbiar sebahagian besar hari. Menjalankan sendiri menjadi soalan apabila penggunaan cukup tinggi untuk mengalahkan kos bulanan nod, atau apabila lokasi data memaksa anda. Artikel ini tidak boleh menilai nod itu, jadi ia tidak berpura-pura menarik garis tersebut.
 
 ### Sources
 
@@ -5122,33 +4525,15 @@ Baris teratas yang kelihatan pada Aider polyglot ialah gpt-5 (high) pada 88.0% k
 
 Nama tidak selaras, dan itu penemuan dan bukan masalah format. Papan SWE-bench mencetak "Claude 4.5 Opus", "Gemini 3 Flash" dan "GPT 5.2", manakala jadual vendor di atas menyenaraikan Claude Opus 5.5, gemini-4-neon dan gpt-6-luna. Generasi penamaan yang berbeza mungkin bukan model yang sama, jadi artikel ini tidak pernah mendakwa model vendor dalam jadualnya mendapat angka papan pendahulu.
 
+## Apa yang tertinggal dalam perbandingan harga
+
+Harga setiap token bukan harga setiap tugasan. Input dan output dikenakan caj berasingan, konteks panjang lebih mahal pada OpenAI dan xAI, dan angka input Haiku 5.5 terikat pada panjang prompt, jadi model yang kelihatan termurah bagi setiap token input boleh menelan lebih pada tugasan yang banyak menulis. [Apa yang RM100 sebulan beli dalam AI](https://upahje.my/ms/articles/bajet-rm100-ai-malaysia) mengira aritmetik itu dalam ringgit.
+
 ## Apa yang tidak kami ukur?
 
 Kami tidak menjalankan penanda aras sendiri. Kami membaca dua, dengan tetapannya, dan kami tidak menganggap mana-mana satu sebagai keputusan kualiti: tiada "lebih bijak" dan tiada "lebih baik untuk pengekodan" di sini.
 
 Juga tiada dengan sengaja: halaman terma Anthropic, OpenAI, DeepSeek dan Google disenaraikan tetapi tidak dibuka, jadi tiada dakwaan dibuat tentang apa yang dibenarkannya; tetingkap konteks gpt-6-luna ialah "tidak dirakam"; dan input fail serta PDF belum disahkan bagi kebanyakan baris kerana pusingan ini tidak sampai ke halaman tersebut.
-
-## FAQ
-
-### Bolehkah saya membandingkan model ini ikut harga sahaja?
-
-Hanya jika anda tahu campuran token anda. Input dan output dinilai berasingan, konteks panjang menelan kos lebih pada OpenAI dan xAI, dan angka input Haiku 5.5 disyaratkan oleh panjang prompt. Model yang nampak termurah setiap token input boleh menelan kos lebih pada tugasan yang banyak menulis.
-
-### Mengapa sesetengah sel "tidak dirakam" dan bukan sifar atau tekaan?
-
-Kerana halaman itu tidak mencetak angkanya di tempat yang dapat dibaca. Sifar akan salah dan tekaan akan direka. "Tidak dirakam" ialah sel yang jujur, dan ia memberitahu anda apa yang perlu disemak semula pada halaman vendor.
-
-### Adakah Gemini wajar dimasukkan dalam perbandingan seperti ini?
-
-Hanya dengan amaran. Google menjualnya melalui bundel yang merangkumi storan dan perkhidmatan lain, jadi harga pelannya tidak setara baris demi baris dengan pelan sembang kosong. Harga API di atas setara; bundel pengguna tidak, dan artikel ini tidak menyusunnya.
-
----
-
-**Baca seterusnya**
-
-[Apa yang RM100 sebulan beli dalam AI](https://upahje.my/ms/articles/bajet-rm100-ai-malaysia)
-
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
 
 ### Sources
 
@@ -5244,22 +4629,6 @@ Kemudian minta kedua-duanya menerangkan ujian penerimaan. Yang boleh menerangkan
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
-## FAQ
-
-### Patutkah saya tulis brief sendiri atau biarkan freelancer cadangkan?
-
-Tulis sendiri, walaupun kasar. Brief yang anda tulis ialah satu-satunya dokumen yang menyatakan apa yang anda benar-benar mahu, dan ia garis dasar bagi setiap sebut harga. Cadangan freelancer ialah harga dan satu tafsiran, dan anda mahu tafsiran itu datang kemudian.
-
-### Bagaimana jika saya tidak tahu format output?
-
-Dapatkan satu contoh sebenar dahulu. Eksport laporan atau baris yang anda mahu dihasilkan semula, dan lampirkannya. Kebanyakan kekaburan dalam brief hilang apabila ada fail yang menunjukkan sasarannya.
-
-### Adakah harga tetap sentiasa lebih baik daripada ikut jam?
-
-Tidak sentiasa, tetapi bagi kerja jenis ini biasanya ya, kerana skopnya boleh ditulis. Harga ikut jam sesuai apabila skop memang tidak dapat diketahui di awal, seperti menyiasat mengapa perkhidmatan pihak ketiga gagal. Jika brief itu jelas dan sebut harga masih ikut jam sahaja, tanya bahagian mana yang belum diketahui.
----
-
-Artikel ini tiada sumber kerana ia prosedur kami sendiri, bukan laporan: cara kami menempah kerja automasi dan brief yang kami berikan. Tiada piawaian terbitan atau dokumen vendor yang digambarkan, dan tiada angka di sini yang merupakan ukuran.
 
 ## Empat CLI agent pada satu mesin: apa yang kami uji
 
@@ -5347,20 +4716,13 @@ Empat arahan dan satu semakan fail, dan anda boleh mengaudit setiap nombor dalam
 3. Baca laluan konfigurasi dalam jadual: `$DSH_HOME/profiles`, `~/.claude.json`, `~/.codex/config.toml`, `~/.config/opencode/opencode.jsonc`.
 4. Jalankan `du -sh` pada `~/.dsh`, `~/.claude`, `~/.codex` dan `~/.config/opencode` untuk jejak cakera.
 
+Pembeli yang mementingkan kos boleh mengira semula pemberatnya. Menaikkan penyedia dan kawalan kos kepada 40% serta menurunkan jejak kepada 5% mengekalkan DeepSeek Harness di tempat pertama dan melebarkan jurangnya, kerana perbezaan antara dua teratas hampir seluruhnya pada kriteria itu; pada sel yang sama, pemberat baharu memberi DeepSeek Harness 4.65 dan OpenCode 4.05.
+
 **Baca seterusnya**
 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
-## FAQ
-
-### Adakah susunan ini berubah jika saya lebih mementingkan kos daripada 30%?
-
-Ya, dan jadual itu membolehkan anda mengiranya semula. Jika kawalan pembekal dan kos dinaikkan kepada 40% dan jejak operasi diturunkan kepada 5%, DeepSeek Harness kekal di tempat pertama dan jurangnya dengan OpenCode melebar, kerana jurang antara mereka hampir semuanya terletak pada kriteria itu. Dikira semula pada sel yang sama, wajaran itu memberi DeepSeek Harness 4.65 dan OpenCode 4.05.
-
-### Mengapa disusun jika nombornya terikat pada versi?
-
-Kerana pembeli tetap perlu memilih minggu ini, dan kaedah yang dinyatakan berserta resipi ulang semak boleh disemak. Alternatifnya, senarai tanpa susunan dan tanpa wajaran, menyembunyikan pertimbangan yang sama di sebalik prosa yang tiada siapa boleh audit.
 
 ### Sources
 
@@ -5369,7 +4731,7 @@ Kerana pembeli tetap perlu memilih minggu ini, dan kaedah yang dinyatakan berser
 - CLI Codex pada mesin ini (versi dilaporkan oleh binari) — https://github.com/openai/codex (checked 2026-11-19)
 - CLI OpenCode pada mesin ini (versi dilaporkan oleh binari) — https://opencode.ai/docs (checked 2026-11-19)
 
-## Kos kerja automasi di Malaysia: harga diterbitkan
+## Kos kerja automasi: 30 harga diterbitkan
 
 URL: https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan
 Checked: 2026-11-19
@@ -5463,19 +4825,6 @@ Sesi RM400 dan projek RM1,500 kedua-duanya kelihatan kecil berbanding pembinaan 
 [Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
-## FAQ
-
-### Adakah RM60 sejam kadar biasa bagi freelancer automasi Malaysia?
-
-Ia satu angka yang diterbitkan daripada satu profil di freelancing.my, disemak 19 November 2026, dan ia satu-satunya kadar sejam dalam set enam penerbit ini. Satu baris bukan kadar biasa. Anggaplah ia sebagai penanda apa yang diminta seorang pengamal, bukan sebagai pasaran.
-
-### Mengapa tiada angka Upwork atau Fiverr?
-
-Kerana ia tidak dapat dibaca dari sini. Upwork memulangkan HTTP 403 dengan sekatan Cloudflare, Fiverr memulangkan cabaran bot, dan Jobstreet memulangkan halaman perantaraan Cloudflare. Menyatakan perkara itu lebih berguna daripada mengisi jurang dengan angka daripada ingatan.
-
-### Adakah retainer bulanan yang lebih tinggi bermakna sistem yang lebih baik?
-
-Tidak, dan jadual ini tidak boleh memberitahu anda perkara itu. Ia menyenaraikan harga, penerbit dan tarikh. Ia tidak menyatakan apa-apa tentang kualiti kerja, masa penghantaran, atau sama ada automasi itu masih berjalan setahun kemudian, dan tiada satu pun daripada enam penerbit itu menerbitkan maklumat tersebut.
 
 ### Sources
 
@@ -5540,19 +4889,6 @@ Urutannya lebih penting daripada ketelitiannya. Pasukan yang memutar dahulu dan 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
-## FAQ
-
-### Patutkah saya guna pemboleh ubah persekitaran atau stor credentials harness?
-
-Guna stor credentials jika anda mahu satu tempat untuk memutar dan satu set kebenaran fail untuk dilindungi. Guna pemboleh ubah persekitaran jika kunci itu disuntik oleh sistem penggunaan yang anda sudah percaya. Kedua-duanya selamat; kunci yang ditulis terus ke dalam fail sumber bukan kedua-duanya.
-
-### Bolehkah pasukan saya berkongsi satu kunci?
-
-Boleh, dan anda kehilangan keupayaan untuk mengatakan siapa melakukan apa. Kunci berasingan mengikut orang atau integrasi menjadikan pembatalan tepat dan halaman penggunaan pembekal boleh dibaca. Berkongsi satu kunci bermakna sebarang kebocoran daripada mana-mana ahli pasukan memaksa semua orang memutar.
-
-### Adakah kunci tamat tempoh?
-
-Itu bergantung pada pembekal, jadi semak pembekal anda daripada menganggap. Kunci tanpa tamat tempoh ialah credentials yang anda mesti ingat untuk diputar, dan kebanyakan pasukan tidak melakukannya. Tetapkan peringatan kalendar jika pembekal tiada tamat tempoh paksa.
 
 ### Sources
 
@@ -5579,6 +4915,8 @@ Satu baris bagi setiap produk, dengan tahap bukti dinyatakan, kerana tiga daripa
 | DeepSeek Harness | Harness yang dijalankan oleh profil, dengan server MCP mengikut profil | Pakej npm, lihat metadata pakej | Dijalankan di sini; tidak boleh disahkan semula sepenuhnya | Dipasang 0.2.2-rc.1 pada 2026-11-19 | [npmjs.com/package/@deepseek-ai/dsh](https://www.npmjs.com/package/@deepseek-ai/dsh) |
 | Pelancar OpenMausBot (mesin ini) | Pelancar yang muatannya hilang | Tidak berkenaan | Dijalankan di sini; tidak boleh dijalankan kini | Yatim | setempat, 2026-11-19 |
 | Claude Code, Codex CLI, OpenCode | Harness CLI yang diukur pada mesin ini | Lesen proprietari | Dijalankan di sini, 2026-11-19 | Aktif | lihat [harness agent disusun](https://upahje.my/ms/articles/harness-agent-disusun) |
+
+Satu lagi repositori MausBot menyebut dirinya repositori muat turun MIT dan pernah dipetik dalam artikel ini sehingga 24 November 2026, apabila pautan itu memulangkan 404 dan organisasi GitHub di belakangnya tidak lagi wujud. Repositori utama di atas yang masih boleh disemak.
 
 ## Apa yang sebenarnya dibenarkan oleh lesen itu kepada perniagaan?
 
@@ -5617,20 +4955,6 @@ Pelancar `openmausbot` masih ada pada mesin ini, dan menjalankannya gagal dengan
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
 
-## FAQ
-
-### Adakah OpenBot sumber terbuka?
-
-Tidak, walaupun lamannya menulis kod sumbernya terbuka. Fail lesen repositori ialah PolyForm Noncommercial 1.0.0, dan medan lesen GitHub melaporkan NOASSERTION kerana ia tidak mengenali lesen piawai. Penggunaan komersial memerlukan lesen berbayar.
-
-### Adakah MausBot sumber terbuka?
-
-Repositori utama MausBot ialah Apache-2.0, iaitu sumber terbuka dan membenarkan penggunaan komersial. Repositori kedua yang menyebut dirinya repositori muat turun MIT pernah dipetik di sini sehingga 24 November 2026, apabila pautan itu memulangkan 404 dan organisasi GitHub di belakangnya tidak lagi wujud, jadi perpecahan itu tidak boleh disemak lagi dan repositori muat turun itu tidak dipetik.
-
-### Adakah harness sumber terbuka bermakna model sumber terbuka?
-
-Tidak. Harness dan model ialah dua perkara berasingan, dan perpecahannya berlaku dua arah: harness terbuka boleh memanggil model tertutup, dan harness tertutup boleh menjalankan model terbuka. Lesen yang anda baca terpakai pada kod harness, bukan pada model yang dipanggilnya.
-
 ### Sources
 
 - nightly-labs/openbot, metadata repositori dan fail lesen (PolyForm Noncommercial 1.0.0) — https://github.com/nightly-labs/openbot (checked 2026-11-19)
@@ -5641,7 +4965,7 @@ Tidak. Harness dan model ialah dua perkara berasingan, dan perpecahannya berlaku
 - OpenAI, pengenalan Dots — https://openai.com/index/introducing-dots/ (checked 2026-11-19)
 - Metadata pakej DeepSeek Harness, dipasang pada mesin ini — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
 
-## Apa 11 senarai freelance Malaysia tawar untuk lima kemahiran
+## Apa 11 senarai freelance tawar untuk lima kemahiran
 
 URL: https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026
 Checked: 2026-11-19
@@ -5722,19 +5046,6 @@ Dua lagi had. Dua baris panggilan jualan ialah bajet yang diiklankan, yang boleh
 **Baca seterusnya**
 
 [Lagi tentang pendapatan sampingan](https://upahje.my/ms/articles/category/side-income)
-## FAQ
-
-### Cukupkah satu platform untuk menilai keseluruhan pasaran?
-
-Tidak, dan artikel ini tidak mendakwa begitu. Ia lapisan yang dapat dibaca pada 19 November 2026. Pembaca yang menemui senarai bergaji lebih baik di tempat lain telah menemui jurang yang dinamakan artikel ini, dan jawapan jujurnya ialah semak senarai itu sendiri daripada mempercayai satu jadual.
-
-### Mengapa sesetengah kadar ditandakan sebagai bajet yang diiklankan?
-
-Kerana bajet yang dinyatakan dalam senarai ialah apa yang klien kata akan dibayar, bukan apa yang telah dipersetujui. Dua baris panggilan jualan termasuk dalam kategori itu, dan ia dilabel supaya pembaca tidak menganggap hasrat sebagai kadar.
-
-### Bolehkah saya gabungkan beberapa kemahiran ini?
-
-Boleh, dan senarai itu menunjukkan ia biasa: peranan video RM2,500 menggabungkan merakam, menyunting dan muncul di hadapan kamera. Kemahiran kedua menaikkan harga lebih cepat daripada melakukan yang pertama lebih lama.
 
 ### Sources
 
@@ -5763,6 +5074,10 @@ Model terbuka bermakna fail model diterbitkan, jadi anda boleh meletakkannya pad
 
 Dua perkara yang tidak diberikannya: penggunaan percuma, dan kebenaran untuk mengabaikan lesen. Apache 2.0 ialah lesen yang longgar, tetapi termanya ada pada halaman model dan itulah yang mengawal penggunaan anda ([halaman Mistral Small 4, disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
+Menjalankan sendiri menyimpan data di Malaysia hanya apabila perkakasan itu berada di Malaysia. Menyewa GPU di wilayah lain memindahkan data ke sana sama seperti panggilan API, jadi semak di mana mesin sewaan itu sebenarnya berada sebelum lokasi dijadikan alasan untuk memiliki tindanan sendiri.
+
+API Mistral sendiri meletakkan harga Mistral Small 4 pada USD 0.15 setiap juta token input dan USD 0.60 setiap juta token output ([disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
+
 ## Berapa kos setiap pilihan sebulan?
 
 Bahagian bayaran ikut panggilan boleh dikira tepat kerana pembekal menerbitkan kadarnya. Bahagian hosting sendiri bergantung pada sewa GPU, dan kami hanya dapat sahkan kadar seorang pembekal.
@@ -5789,7 +5104,7 @@ Kiraannya, menggunakan bot FAQ WhatsApp yang mengendalikan 3,000 mesej sebulan p
 3. Satu GPU pada USD 7.94 sejam selama 730 jam sebulan berjumlah USD 5,796.20.
 4. Untuk membelanjakan USD 5,796 pada token GPT-6 Luna, anda memerlukan kira-kira 36 juta mesej sebulan, iaitu 12,000 kali ganda beban contoh itu.
 
-Ada dua had yang perlu disebut jujur. Harga GPU itu ialah kadar senarai seorang pembekal bagi kad kelas atas, bukan masa GPU termurah yang ada, jadi titik persilangan boleh turun lebih rendah. Model 119 bilion parameter seperti Mistral Small 4 juga tidak muat pada satu GPU dengan ketepatan penuh, jadi kadar di atas ialah rujukan harga masa GPU, bukan pelan kapasiti.
+Ada dua had yang perlu disebut jujur. Harga GPU itu ialah kadar senarai seorang pembekal bagi kad kelas atas, bukan masa GPU termurah yang ada, jadi titik persilangan boleh turun lebih rendah. Model 119 bilion parameter seperti Mistral Small 4, dengan 6.5 bilion parameter aktif bagi setiap token, juga tidak muat pada satu GPU dengan ketepatan penuh, jadi kadar di atas ialah rujukan harga masa GPU, bukan pelan kapasiti ([Mistral, disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
 Perbandingan ini juga aritmetik, bukan keupayaan. Model yang anda jalankan sendiri tidak semestinya sekuat model tertutup yang anda bayar sebelum ini, dan jurang itulah sebab sebenar kebanyakan PKS kekal dengan bayaran ikut panggilan.
 
@@ -5814,19 +5129,6 @@ Cuba panggil model terbuka melalui API sebelum cuba menjalankannya. Mistral send
 [Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
 
 [Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
-## FAQ
-
-### Perlukah saya jalankan model sendiri untuk menggunakan model terbuka?
-
-Tidak. Banyak pembekal menyediakan model terbuka melalui API dengan harga setiap token. API Mistral sendiri meletakkan harga Mistral Small 4 pada USD 0.15 setiap juta token input dan USD 0.60 setiap juta token output ([disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)). Anda dapat terma lesen dan model itu tanpa memiliki perkakasan.
-
-### Bolehkah saya jalankan model ini pada PC pejabat?
-
-Tidak secara berguna. Model dalam artikel ini besar: Mistral Small 4 mempunyai 119 bilion parameter dengan 6.5 bilion aktif ([Mistral, disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)), dan itu memerlukan GPU pusat data, bukan stesen kerja. Model kecil yang dikuantisasi boleh berjalan pada komputer riba, tetapi itu tukar ganti yang berbeza dan kualitinya tidak diukur dalam artikel ini.
-
-### Adakah hosting sendiri menyimpan data saya di Malaysia?
-
-Hanya jika perkakasan itu berada di Malaysia. Menyewa GPU di wilayah lain memindahkan data ke sana, sama seperti memanggil API tertutup. Jika lokasi data ialah sebab anda mahu hosting sendiri, sahkan dahulu di mana mesin sewaan itu berada sebelum komited.
 
 ### Sources
 
@@ -5882,19 +5184,3 @@ Eksport CSV dan import ke tool lain masih satu langkah salin, tetapi lebih panta
 [Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
 
 [Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
-## FAQ
-
-### Bolehkah saya mula dengan spreadsheet dan tambah API kemudian?
-
-Boleh, dan itulah urutan yang biasanya betul. Spreadsheet memberitahu anda medan mana yang penting, medan mana yang orang benar-benar ubah, dan di mana kesilapan berlaku. Integrasi yang dibina sebelum pengetahuan itu ada cenderung menyelaraskan perkara yang salah dengan sangat tepat.
-
-### Adakah spreadsheet tidak selamat?
-
-Tidak semestinya. Spreadsheet dalam pemacu kongsi dengan kawalan akses ialah tool perniagaan biasa. Risikonya sama seperti mana-mana dokumen kongsi: orang yang salah mendapat pautan, atau satu-satunya salinan ada pada satu komputer riba. Buat sandaran dan hadkan pautan itu; selepas itu soalannya menjadi jumlah dan penyimpangan, bukan keselamatan.
-
-### Bagaimana jika tool sedia ada pasukan saya sudah ada API?
-
-Maka keputusannya menyempit kepada sama ada ada orang yang ada masa untuk menyambungkannya. API yang tiada siapa sambungkan tidak bernilai apa-apa, dan tool tanpa API yang digunakan setiap hari lebih bernilai daripada tool yang lebih baik tetapi tidak digunakan.
----
-
-Artikel ini tiada sumber kerana ia hujah daripada kes, bukan laporan: antara dua cara, mana lebih sesuai dengan jumlah anda. Tiada penanda aras awam bagi kos pemaju Malaysia menyambung API, jadi tiada angka kos dicetak di sini dan tiada yang dipinjam.

@@ -1,5 +1,5 @@
 ---
-title: "Komisen Grab dan foodpanda di Malaysia (2026)"
+title: "Komisen Grab dan foodpanda (2026)"
 description: "Apa yang Grab dan foodpanda sebenarnya caj peniaga di Malaysia: julat MyCC, apa yang tidak termasuk, dan kenapa pada 25% pesanan RM25 tinggal RM8.50."
 slug: komisen-penghantaran-malaysia
 translationKey: delivery-commission-malaysia

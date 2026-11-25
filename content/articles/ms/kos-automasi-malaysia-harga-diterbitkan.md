@@ -1,5 +1,5 @@
 ---
-title: "Kos kerja automasi di Malaysia: harga diterbitkan"
+title: "Kos kerja automasi: 30 harga diterbitkan"
 description: "30 harga kerja automasi dari empat studio, satu pengamal bebas dan satu freelancer, disemak November 2026; beberapa halaman tiada tarikh."
 cardFigure: "Kerja automasi bermula RM400 hingga RM6,000 lebih"
 slug: kos-automasi-malaysia-harga-diterbitkan
@@ -35,7 +35,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Kos kerja automasi di Malaysia: harga yang diterbitkan, enam sumber
+# Kos kerja automasi: 30 harga diterbitkan
 
 Harga yang diterbitkan bagi kerja automasi di Malaysia bermula dari RM400 untuk pembinaan proses mudah hingga RM6,000 lebih untuk pelaksanaan tugasan autonomi. Angka itu dan 28 lagi di bawah datang daripada enam penerbit Malaysia, dengan penerbit, unit dan tarikh pada setiap baris. Empat daripadanya studio, satu pengamal bebas, dan satu profil freelance; satu-satunya kadar sejam datang daripada profil itu. Freelancer solo biasanya memberi sebut harga ikut kerja dan tidak menerbitkan kadar, jadi jadual ini ialah penawaran yang diterbitkan, bukan keseluruhan pasaran.
 

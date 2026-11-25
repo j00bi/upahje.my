@@ -53,6 +53,7 @@ Vary paragraph length on purpose: short for a claim, long for reasoning. Not eve
 ## Headlines and descriptions
 
 - Promise a specific finding or answer.
+- **Leave "Malaysia" and "Malaysian" out of titles.** This is a Malaysian publication for Malaysian readers; the geography is the default, not the finding, and adding it makes every headline longer and softer. Slugs may keep it — URLs target the query and must never change — but the title should read as the claim: *What a WhatsApp chatbot costs, per message*, not *WhatsApp chatbot costs in Malaysia, per message*. Keep it only when the country is genuinely the variable being compared, and even then the regulator's name usually does the work better (EPF, SOCSO, LHDN, MyCC).
 - Numbers only when they carry the argument.
 - No formula tics: "and not much else", "or nothing at all", "and nobody tells" are used sparingly enough to stay noticeable.
 - The description must survive the headline test: if it needs a caveat the headline cannot carry, the headline is wrong.

@@ -1,5 +1,5 @@
 ---
-title: "Apa yang RM100 sebulan beli dalam AI, di Malaysia"
+title: "Apa yang RM100 sebulan beli dalam AI"
 description: "RM100 beli tempat duduk dalam aplikasi langganan, atau meter token API. Penukaran pada kadar Bank Negara 19 November 2026, tiga tahap guna, bila token menang."
 cardFigure: "RM100 token Haiku 5.5 beli kira-kira 54,000 tugasan sebulan"
 slug: bajet-rm100-ai-malaysia
@@ -32,7 +32,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# Apa yang RM100 sebulan beli dalam AI, di Malaysia
+# Apa yang RM100 sebulan beli dalam AI
 
 RM100 membeli salah satu daripada dua perkara berbeza, dan pilihannya bukan tentang model mana yang lebih bijak. Ia membeli tempat duduk dalam aplikasi orang lain, atau meter token untuk perisian yang anda jalankan sendiri. Pada tugasan 2,000 token, RM100 token Claude Haiku 5.5 ialah kira-kira 54,000 tugasan sebulan, manakala ChatGPT Plus berharga RM99.90 dan tidak menyertakan kunci API langsung.
 

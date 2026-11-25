@@ -1,5 +1,5 @@
 ---
-title: "Automation work in Malaysia: the published rates"
+title: "Automation work: 30 published prices"
 description: "Thirty published prices for automation work from four Malaysian studios, one independent and one freelancer, checked November 2026. Some pages undated."
 cardFigure: "Automation work runs from RM400 to RM6,000-plus"
 slug: automation-rates-malaysia-published
@@ -35,7 +35,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# What automation work costs in Malaysia: published rates, six sources
+# Automation work: 30 published prices
 
 Published prices for automation work in Malaysia run from RM400 for a simple process build to RM6,000-plus for autonomous task execution. Those figures and 28 more below come from six Malaysian publishers, with the publisher, unit and date on every row. Four are studios, one is an independent practitioner, and one is a freelance profile; the only per-hour figure comes from that profile. Solo freelancers usually quote per job rather than publish, so this table is published supply, not the whole market.
 

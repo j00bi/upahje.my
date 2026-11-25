@@ -1,5 +1,5 @@
 ---
-title: "What 11 Malaysian freelance listings offered for five skills"
+title: "What 11 freelance listings offered for five skills"
 description: "Video editing, design, data entry, cold calling and app testing appeared in 11 public listings on one platform. What clients advertised, and what it proves."
 slug: side-income-skills-malaysia-2026
 translationKey: side-income-skills-malaysia-2026
@@ -49,7 +49,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# What 11 Malaysian freelance listings offered for five skills
+# What 11 freelance listings offered for five skills
 
 Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing. Every band below is a count, not an average. The evidence is 11 listings on freelancing.my, posted between September and November 2026, each with its own budget in ringgit, plus one hourly-rate listing that is excluded and named below.
 

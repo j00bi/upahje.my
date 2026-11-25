@@ -1,5 +1,5 @@
 ---
-title: "WhatsApp chatbot costs in Malaysia, per message"
+title: "What a WhatsApp chatbot costs, per message"
 description: "Free to 1,000 service messages a month and free for anything a customer sends. Marketing costs RM0.3467, and a Malaysian vendor adds RM200 to RM1,500."
 cardFigure: "Free to 1,000 service messages; RM0.3467 marketing"
 slug: whatsapp-chatbot-costs-malaysia
@@ -37,7 +37,7 @@ sources:
     checked: 2026-11-23
 ---
 
-# What a WhatsApp chatbot costs in Malaysia, per message and per month
+# What a WhatsApp chatbot costs, per message
 
 A WhatsApp bot in Malaysia costs nothing up to 1,000 service messages a month per business phone number, and nothing at all for messages a customer sends you. Past that allowance, a marketing template is RM0.3467, utility, authentication and service are RM0.0564 each, and a Malaysian vendor adds RM200 to RM1,500 a month to run the bot.
 

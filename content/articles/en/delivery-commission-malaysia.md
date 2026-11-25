@@ -1,5 +1,5 @@
 ---
-title: "Grab and foodpanda commission rates in Malaysia (2026)"
+title: "Grab and foodpanda commission rates (2026)"
 description: "What Grab and foodpanda actually charge merchants in Malaysia: the MyCC bands, what they exclude, and why at 25% a RM25 order leaves RM8.50 before labour."
 slug: delivery-commission-malaysia
 translationKey: delivery-commission-malaysia

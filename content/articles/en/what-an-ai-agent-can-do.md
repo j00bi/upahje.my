@@ -1,5 +1,5 @@
 ---
-title: "What an AI agent can and cannot do for a Malaysian SME"
+title: "What an AI agent can and cannot do for a small business"
 description: "An AI agent runs a loop on its own: reads a task, calls tools, checks, repeats. What that covers unattended, what needs a human, and what none should touch."
 slug: what-an-ai-agent-can-do
 translationKey: what-an-ai-agent-can-do
@@ -34,7 +34,7 @@ sources:
     checked: 2026-11-23
 ---
 
-# What an AI agent can and cannot do for a Malaysian SME
+# What an AI agent can and cannot do for a small business
 
 An AI agent runs a loop by itself: it reads a task, calls tools, looks at the result and decides the next step until the job is done. That covers repetitive work with a clear finish line. It does not cover judgement, money it is not authorised to move, or anything a customer would need explained to them by a person.
 

@@ -1,5 +1,5 @@
 ---
-title: "Apa yang AI agent boleh buat untuk PKS Malaysia"
+title: "Apa yang AI agent boleh buat untuk PKS"
 description: "AI agent menjalankan gelung sendiri: baca tugasan, panggil tool, ulang. Apa yang dibuat tanpa penyeliaan, apa yang perlukan manusia, apa yang jangan disentuh."
 slug: apa-yang-agent-boleh-buat
 translationKey: what-an-ai-agent-can-do
@@ -31,7 +31,7 @@ sources:
     checked: 2026-11-23
 ---
 
-# Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia
+# Apa yang AI agent boleh buat untuk PKS
 
 AI agent menjalankan gelung sendiri: ia membaca tugasan, memanggil tool, melihat hasilnya dan menentukan langkah seterusnya sehingga kerja itu selesai. Itu meliputi kerja berulang yang ada garisan penamat yang jelas. Ia tidak meliputi pertimbangan, wang yang ia tidak dibenarkan pindahkan, atau apa-apa yang pelanggan perlu dijelaskan oleh manusia.
 

@@ -1,5 +1,5 @@
 ---
-title: "Apa 11 senarai freelance Malaysia tawar untuk lima kemahiran"
+title: "Apa 11 senarai freelance tawar untuk lima kemahiran"
 description: "Suntingan video, reka bentuk, kemasukan data, panggilan sejuk dan ujian aplikasi muncul dalam 11 senarai awam. Apa yang ditawarkan, dan apa yang ia buktikan."
 slug: lima-kemahiran-pendapatan-sampingan-2026
 translationKey: side-income-skills-malaysia-2026
@@ -49,7 +49,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Apa 11 senarai freelance Malaysia tawar untuk lima kemahiran
+# Apa 11 senarai freelance tawar untuk lima kemahiran
 
 Lima kemahiran melepasi syarat dua senarai pada satu-satunya platform freelance Malaysia yang halaman awamnya boleh dibaca: suntingan video, reka bentuk grafik, kemasukan data, panggilan jualan dan ujian aplikasi. Setiap julat di bawah ialah kiraan, bukan purata. Buktinya 11 senarai di freelancing.my, disiarkan antara September dan November 2026, setiap satu dengan bajet sendiri dalam ringgit, serta satu senarai berkadar sejam yang dikecualikan dan dinamakan di bawah.
 
