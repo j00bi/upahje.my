@@ -52,6 +52,8 @@ Three things follow from that sentence, and only three.
 
 The Prime Minister announced the change in the 2026 National Day address, and LHDN published the statement on 30 August 2026, one day before it took effect.
 
+A business with RM2.9 million in annual sales sits below the line, so e-Invoice is not required; the test is the annual figure, not a single good quarter.
+
 ## The programme numbers are already large
 
 These are LHDN's own totals, not a projection.

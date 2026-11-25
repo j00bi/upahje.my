@@ -38,6 +38,8 @@ Model terbuka bermakna fail model diterbitkan, jadi anda boleh meletakkannya pad
 
 Dua perkara yang tidak diberikannya: penggunaan percuma, dan kebenaran untuk mengabaikan lesen. Apache 2.0 ialah lesen yang longgar, tetapi termanya ada pada halaman model dan itulah yang mengawal penggunaan anda ([halaman Mistral Small 4, disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
+Menjalankan sendiri menyimpan data di Malaysia hanya apabila perkakasan itu berada di Malaysia. Menyewa GPU di wilayah lain memindahkan data ke sana sama seperti panggilan API, jadi semak di mana mesin sewaan itu sebenarnya berada sebelum lokasi dijadikan alasan untuk memiliki tindanan sendiri.
+
 ## Berapa kos setiap pilihan sebulan?
 
 Bahagian bayaran ikut panggilan boleh dikira tepat kerana pembekal menerbitkan kadarnya. Bahagian hosting sendiri bergantung pada sewa GPU, dan kami hanya dapat sahkan kadar seorang pembekal.
@@ -64,7 +66,7 @@ Kiraannya, menggunakan bot FAQ WhatsApp yang mengendalikan 3,000 mesej sebulan p
 3. Satu GPU pada USD 7.94 sejam selama 730 jam sebulan berjumlah USD 5,796.20.
 4. Untuk membelanjakan USD 5,796 pada token GPT-6 Luna, anda memerlukan kira-kira 36 juta mesej sebulan, iaitu 12,000 kali ganda beban contoh itu.
 
-Ada dua had yang perlu disebut jujur. Harga GPU itu ialah kadar senarai seorang pembekal bagi kad kelas atas, bukan masa GPU termurah yang ada, jadi titik persilangan boleh turun lebih rendah. Model 119 bilion parameter seperti Mistral Small 4 juga tidak muat pada satu GPU dengan ketepatan penuh, jadi kadar di atas ialah rujukan harga masa GPU, bukan pelan kapasiti.
+Ada dua had yang perlu disebut jujur. Harga GPU itu ialah kadar senarai seorang pembekal bagi kad kelas atas, bukan masa GPU termurah yang ada, jadi titik persilangan boleh turun lebih rendah. Model 119 bilion parameter seperti Mistral Small 4, dengan 6.5 bilion parameter aktif bagi setiap token, juga tidak muat pada satu GPU dengan ketepatan penuh, jadi kadar di atas ialah rujukan harga masa GPU, bukan pelan kapasiti ([Mistral, disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
 Perbandingan ini juga aritmetik, bukan keupayaan. Model yang anda jalankan sendiri tidak semestinya sekuat model tertutup yang anda bayar sebelum ini, dan jurang itulah sebab sebenar kebanyakan PKS kekal dengan bayaran ikut panggilan.
 

@@ -119,6 +119,10 @@ Baris teratas yang kelihatan pada Aider polyglot ialah gpt-5 (high) pada 88.0% k
 
 Nama tidak selaras, dan itu penemuan dan bukan masalah format. Papan SWE-bench mencetak "Claude 4.5 Opus", "Gemini 3 Flash" dan "GPT 5.2", manakala jadual vendor di atas menyenaraikan Claude Opus 5.5, gemini-4-neon dan gpt-6-luna. Generasi penamaan yang berbeza mungkin bukan model yang sama, jadi artikel ini tidak pernah mendakwa model vendor dalam jadualnya mendapat angka papan pendahulu.
 
+## Apa yang tertinggal dalam perbandingan harga
+
+Harga setiap token bukan harga setiap tugasan. Input dan output dikenakan caj berasingan, konteks panjang lebih mahal pada OpenAI dan xAI, dan angka input Haiku 5.5 terikat pada panjang prompt, jadi model yang kelihatan termurah bagi setiap token input boleh menelan lebih pada tugasan yang banyak menulis. [Apa yang RM100 sebulan beli dalam AI](https://upahje.my/ms/articles/bajet-rm100-ai-malaysia) mengira aritmetik itu dalam ringgit.
+
 ## Apa yang tidak kami ukur?
 
 Kami tidak menjalankan penanda aras sendiri. Kami membaca dua, dengan tetapannya, dan kami tidak menganggap mana-mana satu sebagai keputusan kualiti: tiada "lebih bijak" dan tiada "lebih baik untuk pengekodan" di sini.

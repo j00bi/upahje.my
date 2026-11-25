@@ -52,6 +52,8 @@ Tiga perkara mengikut ayat itu, dan hanya tiga.
 
 Perdana Menteri mengumumkan perubahan itu dalam ucapan Hari Kebangsaan 2026, dan LHDN menerbitkan kenyataan pada 30 Ogos 2026, sehari sebelum ia berkuat kuasa.
 
+Perniagaan dengan jualan tahunan RM2.9 juta berada di bawah garis itu, jadi e-Invoice tidak diwajibkan; ujiannya angka tahunan, bukan satu suku yang baik.
+
 ## Angka program sudah besar
 
 Ini jumlah LHDN sendiri, bukan unjuran.

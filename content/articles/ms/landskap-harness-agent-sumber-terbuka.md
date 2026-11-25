@@ -55,6 +55,8 @@ Satu baris bagi setiap produk, dengan tahap bukti dinyatakan, kerana tiga daripa
 | Pelancar OpenMausBot (mesin ini) | Pelancar yang muatannya hilang | Tidak berkenaan | Dijalankan di sini; tidak boleh dijalankan kini | Yatim | setempat, 2026-11-19 |
 | Claude Code, Codex CLI, OpenCode | Harness CLI yang diukur pada mesin ini | Lesen proprietari | Dijalankan di sini, 2026-11-19 | Aktif | lihat [harness agent disusun](https://upahje.my/ms/articles/harness-agent-disusun) |
 
+Satu lagi repositori MausBot menyebut dirinya repositori muat turun MIT dan pernah dipetik dalam artikel ini sehingga 24 November 2026, apabila pautan itu memulangkan 404 dan organisasi GitHub di belakangnya tidak lagi wujud. Repositori utama di atas yang masih boleh disemak.
+
 ## Apa yang sebenarnya dibenarkan oleh lesen itu kepada perniagaan?
 
 Ini bahagian yang wajar dibaca dua kali, kerana "sumber terbuka" dan "sumber tersedia" bukan kebenaran yang sama.

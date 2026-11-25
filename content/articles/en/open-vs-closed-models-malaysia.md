@@ -64,9 +64,11 @@ The arithmetic, using a WhatsApp FAQ bot handling 3,000 messages a month at roug
 3. One GPU at USD 7.94 an hour for 730 hours a month costs USD 5,796.20.
 4. To spend USD 5,796 on GPT-6 Luna tokens you would need roughly 36 million messages a month, or 12,000 times the example workload.
 
-Two honest limits on that number. The GPU price is one supplier's list rate for a high-end card, not the cheapest GPU time available, so the crossover can move lower. And a 119B-parameter model like Mistral Small 4 does not fit on one GPU at full precision, so the rate above is a reference for GPU time, not a capacity plan.
+Two honest limits on that number. The GPU price is one supplier's list rate for a high-end card, not the cheapest GPU time available, so the crossover can move lower. And a 119B-parameter model like Mistral Small 4, with 6.5 billion parameters active per token, does not fit on one GPU at full precision, so the rate above is a reference for GPU time, not a capacity plan ([Mistral, checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
 The comparison is also arithmetic, not capability. A model you run yourself is not automatically as capable as the closed one you were paying for, and that gap is the real reason most SMEs stay on per-call pricing.
+
+Self-hosting keeps data in Malaysia only when the hardware is in Malaysia. Renting a GPU in another region moves the data there exactly as an API call does, so check where the rented machine actually sits before you make location the reason to own the stack.
 
 ## What does running one in-house actually require?
 

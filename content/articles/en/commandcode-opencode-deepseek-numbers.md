@@ -71,6 +71,8 @@ A Hacker News post on **5 August 2026** announced "Command Code GOAT, $10/month 
 
 The lesson is not that one number is wrong. It is that a dated figure needs its date, or it becomes a claim about today that nobody can check.
 
+The 38.5% figure that circulates for DeepSeek belongs to Terminal-bench 4.1, where it is DeepSeek V4.1 Flash 1017 run under Claude Code, so it is a result for the model inside someone else's harness and not a result for either CLI named here.
+
 ## What did we run ourselves?
 
 One task, in one harness, printed as a sidebar and not as a head-to-head: `dsh` 0.2.2-rc.1 wrote a small feature in 95.4 seconds across 10 turns and 14 tool calls, produced two files, and the project's own tests passed 3 of 3.

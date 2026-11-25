@@ -119,6 +119,10 @@ Aider polyglot's visible top row is gpt-5 (high) at 88.0% pass rate for a total 
 
 The names do not reconcile, and that is a finding rather than a formatting problem. The SWE-bench board prints "Claude 4.5 Opus", "Gemini 3 Flash" and "GPT 5.2", while the vendor table above lists Claude Opus 5.5, gemini-4-neon and gpt-6-luna. Different naming generations may not be the same models, so this article never claims that a vendor model in its table scores a leaderboard number.
 
+## What a price comparison leaves out
+
+A per-token price is not a per-task price. Input and output are priced separately, long context costs more on OpenAI and xAI, and Haiku 5.5's input figure is qualified by prompt length, so a model that looks cheapest per input token can cost more on a task that writes a lot. [What RM100 a month actually buys you in AI](https://upahje.my/en/articles/rm100-budget) works that arithmetic in ringgit.
+
 ## What did we not measure?
 
 We did not run a benchmark ourselves. We read two, with their settings, and we are not treating either as a quality verdict: there is no "smarter" and no "better at coding" here.

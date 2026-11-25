@@ -55,6 +55,8 @@ One row per product, with the evidence level stated, because three of these were
 | OpenMausBot launcher (this machine) | A launcher whose payload is missing | Not applicable | Ran here; cannot run now | Orphaned | local, 2026-11-19 |
 | Claude Code, Codex CLI, OpenCode | CLI harnesses measured on this machine | Proprietary licences | Ran here, 2026-11-19 | Active | see [agent harnesses ranked](https://upahje.my/en/articles/agent-harnesses-ranked) |
 
+A second MausBot repository described itself as an MIT download repo and was cited in this article until 24 November 2026, when the link returned 404 and the GitHub organisation behind it no longer resolved. The main repository above is the one that can still be checked.
+
 ## What do the licences actually let a business do?
 
 This is the part worth reading twice, because "open source" and "source available" are not the same permission.
