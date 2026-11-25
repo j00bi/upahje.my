@@ -71,7 +71,7 @@ Satu kiriman Hacker News pada **5 Ogos 2026** mengumumkan "Command Code GOAT, $1
 
 Pengajarannya bukan bahawa satu angka itu salah. Ia bahawa angka bertarikh memerlukan tarikhnya, atau ia menjadi dakwaan tentang hari ini yang tiada siapa boleh semak.
 
-Angka 38.5% yang tersebar bagi DeepSeek ialah Terminal-bench 4.1, iaitu DeepSeek V4.1 Flash 1017 di bawah Claude Code, jadi ia keputusan model di dalam harness orang lain dan bukan keputusan mana-mana CLI yang dinamakan di sini.
+Angka 38.5% yang tersebar bagi DeepSeek ialah Terminal-bench 4.1, iaitu DeepSeek V4.1 Flash 1017 di bawah Claude Code, jadi ia keputusan model di dalam harness orang lain dan bukan keputusan mana-mana CLI yang dinamakan di sini, dan ia tidak boleh dibandingkan dengan angka SWE-bench kerana penanda aras, agent dan set tugasnya berbeza.
 
 ## Apa yang kami jalankan sendiri?
 

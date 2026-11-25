@@ -40,6 +40,8 @@ Dua perkara yang tidak diberikannya: penggunaan percuma, dan kebenaran untuk men
 
 Menjalankan sendiri menyimpan data di Malaysia hanya apabila perkakasan itu berada di Malaysia. Menyewa GPU di wilayah lain memindahkan data ke sana sama seperti panggilan API, jadi semak di mana mesin sewaan itu sebenarnya berada sebelum lokasi dijadikan alasan untuk memiliki tindanan sendiri.
 
+API Mistral sendiri meletakkan harga Mistral Small 4 pada USD 0.15 setiap juta token input dan USD 0.60 setiap juta token output ([disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
+
 ## Berapa kos setiap pilihan sebulan?
 
 Bahagian bayaran ikut panggilan boleh dikira tepat kerana pembekal menerbitkan kadarnya. Bahagian hosting sendiri bergantung pada sewa GPU, dan kami hanya dapat sahkan kadar seorang pembekal.

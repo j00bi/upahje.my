@@ -60,6 +60,8 @@ Three different bills arrive at a WhatsApp bot, and they come from two different
 
 The allowance is per business phone number and resets each calendar month; unused messages do not carry over. Service messages past it have been charged since 1 October 2026.
 
+Utility, authentication and service are RM0.0564, and the first 1,000 service messages per number per month are free.
+
 ## How does Meta charge for WhatsApp messages?
 
 Per message, per category, and only when the message is delivered. The unit is not a conversation and not a session.

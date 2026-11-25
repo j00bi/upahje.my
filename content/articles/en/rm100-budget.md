@@ -56,6 +56,10 @@ The vendor pages make the distinction plainly. Claude Pro and ChatGPT Plus list 
 
 Every ringgit figure is either published in MYR by the vendor, or converted at the Bank Negara Malaysia middle rate of 4.1145 on 19 November 2026. Tax is excluded.
 
+Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 against RM82.29, and it costs USD 200 up front.
+
+Claude publishes USD 20 and we converted at 4.1145 to RM82.29. OpenAI publishes MYR 99.90 directly for Malaysia.
+
 ## What do tokens cost instead?
 
 Anthropic publishes Claude Haiku 5.5 at USD 0.10 per million input tokens and USD 0.50 per million output tokens, with the input figure qualified on the page as applying to prompts up to 100,000 tokens.

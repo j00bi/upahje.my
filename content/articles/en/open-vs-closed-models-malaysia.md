@@ -70,6 +70,8 @@ The comparison is also arithmetic, not capability. A model you run yourself is n
 
 Self-hosting keeps data in Malaysia only when the hardware is in Malaysia. Renting a GPU in another region moves the data there exactly as an API call does, so check where the rented machine actually sits before you make location the reason to own the stack.
 
+Mistral's own API prices Mistral Small 4 at USD 0.15 per million input tokens and USD 0.60 per million output tokens ([checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
+
 ## What does running one in-house actually require?
 
 Five jobs, and none of them is a one-off setup.

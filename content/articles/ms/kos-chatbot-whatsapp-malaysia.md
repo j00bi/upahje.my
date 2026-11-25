@@ -60,6 +60,8 @@ Tiga bil berbeza sampai ke satu chatbot WhatsApp, dan ia datang daripada dua sya
 
 Elaun itu dikira bagi setiap nombor perniagaan dan ditetapkan semula setiap bulan kalendar; mesej yang tidak digunakan tidak terbawa ke bulan berikutnya. Mesej servis melepasi elaun dicaj sejak 1 Oktober 2026.
 
+Utiliti, pengesahan dan servis ialah RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan adalah percuma.
+
 ## Bagaimana Meta mengenakan caj untuk mesej WhatsApp?
 
 Setiap mesej, mengikut kategori, dan hanya apabila mesej itu sampai kepada penerima. Unitnya bukan perbualan dan bukan sesi.

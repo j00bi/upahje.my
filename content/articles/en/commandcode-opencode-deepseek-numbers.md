@@ -71,7 +71,7 @@ A Hacker News post on **5 August 2026** announced "Command Code GOAT, $10/month 
 
 The lesson is not that one number is wrong. It is that a dated figure needs its date, or it becomes a claim about today that nobody can check.
 
-The 38.5% figure that circulates for DeepSeek belongs to Terminal-bench 4.1, where it is DeepSeek V4.1 Flash 1017 run under Claude Code, so it is a result for the model inside someone else's harness and not a result for either CLI named here.
+The 38.5% figure that circulates for DeepSeek belongs to Terminal-bench 4.1, where it is DeepSeek V4.1 Flash 1017 run under Claude Code, so it is a result for the model inside someone else's harness and not a result for either CLI named here, and it cannot be compared with a SWE-bench figure because the benchmark, the agent and the task set are different.
 
 ## What did we run ourselves?
 

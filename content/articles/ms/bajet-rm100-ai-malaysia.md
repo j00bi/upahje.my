@@ -56,6 +56,10 @@ Halaman pembekal menyatakan perbezaan itu dengan jelas. Claude Pro dan ChatGPT P
 
 Setiap angka ringgit sama ada diterbitkan dalam MYR oleh pembekal, atau ditukar pada kadar tengah Bank Negara Malaysia 4.1145 pada 19 November 2026. Cukai tidak termasuk.
 
+Kadar tahunan Claude ialah USD 17 sebulan berbanding USD 20 bulanan, iaitu RM69.95 berbanding RM82.29, dan ia menelan USD 200 di awal.
+
+Claude menerbitkan USD 20 dan kami tukar pada 4.1145 kepada RM82.29. OpenAI menerbitkan MYR 99.90 terus untuk Malaysia.
+
 ## Berapa kos token sebagai ganti?
 
 Anthropic menerbitkan Claude Haiku 5.5 pada USD 0.10 setiap juta token input dan USD 0.50 setiap juta token output, dengan angka input pada halaman itu disyaratkan untuk prompt hingga 100,000 token.
