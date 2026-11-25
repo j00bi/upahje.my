@@ -20,7 +20,6 @@
 | 14 | "the 12-versus-13 question is the easy half" | - | - | - | opinion: stated once in the reader's interest |
 | 15 | "where the wage amount for the month is below RM5,000.01" | https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution | KWSP | 2026-11-25 | source: page example phrasing the 13% band; RM5,000.01 moves the employer to 12% |
 
-| 15 | "One sen above it, at RM5,000.01, moves the employer to 12%" | https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution | KWSP | 2026-11-24 | source: the rate table prints the lower band as a wage below RM5,000.01 and the upper band as more than RM5,000.00, so the boundary is a sen rather than a ringgit |
 
 ## Sections
 
