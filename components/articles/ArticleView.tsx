@@ -9,7 +9,7 @@ import { Markdown } from '@/lib/markdown'
 import { copyFor } from '@/lib/copy'
 import { extractFaq } from '@/lib/faq'
 import { cleanText } from '@/lib/text'
-import { articleJsonLd, breadcrumbJsonLd, definedTermJsonLd, faqJsonLd } from '@/lib/jsonld'
+import { articleJsonLd, definedTermJsonLd, faqJsonLd } from '@/lib/jsonld'
 import { extractHeadings, splitFaq, splitShortAnswer } from '@/lib/article-view'
 import { articleLanguages, absolute, SITE_NAME, OG_IMAGE } from '@/lib/seo'
 import { REPOS_BY_KEY } from '@/lib/article-repos'
@@ -159,20 +159,11 @@ export default function ArticleView({ article, draftBanner }: { article: any; dr
               </section>
             )}
 
-            {(article.changelog?.length ?? 0) > 0 && (
-              <section aria-labelledby="changelog" style={{ maxWidth: 'var(--measure)', marginTop: 'var(--space-sources)' }}>
-                <h2 id="changelog" className="type-small" style={{ color: 'var(--ui-ink)', fontWeight: 600 }}>
-                  {article.lang === 'ms' ? 'Log perubahan' : 'Changelog'}
-                </h2>
-                <ul className="mt-4 space-y-2 type-small" style={{ color: 'var(--ui-body)' }}>
-                  {article.changelog!.map((entry) => (
-                    <li key={`${entry.date}-${entry.note}`} className="flex gap-3">
-                      <time dateTime={entry.date} className="shrink-0 tabular-nums" style={{ color: 'var(--ui-muted)' }}>{entry.date}</time>
-                      <span className="min-w-0">{cleanText(entry.note)}</span>
-                    </li>
-                  ))}
-                </ul>
-              </section>
+            {article.updated && article.updated !== article.date && (
+              <p className="type-small" style={{ maxWidth: 'var(--measure)', marginTop: 'var(--space-sources)', color: 'var(--ui-muted)' }}>
+                {article.lang === 'ms' ? 'Dikemas kini ' : 'Updated '}
+                <time dateTime={article.updated}>{article.updated}</time>
+              </p>
             )}
 
             {related.length > 0 && (
@@ -202,7 +193,6 @@ export default function ArticleView({ article, draftBanner }: { article: any; dr
       </main>
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd(article, url)) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd(article, { label: topicLabel, href: topicHref })) }} />
       {faq.length > 0 && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faq)) }} />}
       {article.category === 'definitions' && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermJsonLd(article, url)) }} />}
     </div>
