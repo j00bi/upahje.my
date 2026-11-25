@@ -58,7 +58,7 @@ EIS ialah 0.4% keseluruhan, dibahagi 0.2% majikan dan 0.2% pekerja, dan ia berko
 
 Pada RM4,500 majikan membayar RM78.75 untuk SOCSO. Pada RM7,500 majikan membayar RM105.00, iaitu 1.4%, dan pekerja membayar RM30.00, iaitu 0.4% dan bukan 0.5% pada kad kadar.
 
-Peratusan pada kad kadar ialah kadar sehingga siling, bukan kadar pada setiap gaji. Sebut harga yang mendarab 1.75% dengan gaji RM9,000 melebihkan baris SOCSO sebanyak RM37.50 sebulan, dan kesilapan sama pada EIS melebihkannya sebanyak RM6.00.
+Peratusan pada kad kadar ialah kadar sehingga siling, bukan kadar pada setiap gaji. Sebut harga yang mendarab 1.75% dengan gaji RM9,000 melebihkan baris SOCSO sebanyak RM52.50 sebulan, dan kesilapan sama pada EIS melebihkannya sebanyak RM6.00.
 
 ## Apa yang belum disahkan di sini
 
