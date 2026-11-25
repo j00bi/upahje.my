@@ -28,7 +28,7 @@ Majikan membayar 13% daripada gaji bulanan apabila gaji RM5,000 atau kurang, dan
 
 ## Peralihan kadar berlaku tepat pada RM5,000
 
-RM5,000 berada dalam julat 13%, kerana peraturannya berbunyi "RM5,000 dan ke bawah". Satu ringgit di atasnya memindahkan majikan ke 12%, sebab itulah kenaikan gaji kecil di sempadan itu tidak menaikkan kos seperti yang disangka.
+RM5,000 berada dalam julat 13%, kerana peraturannya berbunyi "RM5,000 dan ke bawah". Satu ringgit di atasnya memindahkan majikan ke 12%, sebab itulah kenaikan gaji kecil di sempadan itu boleh mengurangkan kos majikan.
 
 Jadual di bawah menggunakan peratusan yang diterbitkan pada lima gaji supaya peralihannya kelihatan. Lajur terakhir lebih penting daripada yang lain: jumlah jadual itulah yang dibayar.
 
@@ -80,6 +80,6 @@ Pendapat saya, dinyatakan sekali: soalan 12 lawan 13 ialah separuh yang mudah. S
 
 **Bacaan lanjut**
 
-[Pekerja pertama bergaji RM3,000 berharga RM3,448.50](https://upahje.my/en/articles/first-hire-cost-malaysia)
+[Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
 [Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/articles/category/definitions)
