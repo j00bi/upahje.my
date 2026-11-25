@@ -54,7 +54,7 @@ Jika disetahunkan, langkah dari sembilan ke sepuluh ialah RM1,980 levi semata-ma
 
 ## Pendaftaran melalui Borang 1, dan semakan 30 hari
 
-Syarikat dengan lebih 10 pekerja Malaysia mengisi Borang 1, dan halaman itu menyatakan permohonan disemak oleh pegawai dalam tempoh 30 hari. Tetingkap semakan itu satu-satunya tempoh yang dicetak halaman tersebut. Tiada tarikh pembayaran, tiada kekerapan dan tiada penalti lewat dicetak di situ.
+Syarikat dengan lebih 10 pekerja Malaysia mengisi Borang 1, dan halaman itu menyatakan permohonan disemak oleh pegawai dalam tempoh 30 hari. Tetingkap semakan itu satu-satunya tempoh yang dicetak halaman tersebut, jadi anggap 30 hari sebagai tempoh semakan dan bukan tarikh akhir yang boleh dijadikan asas jadual gaji.
 
 ## Tiada tarikh bayaran dicetak
 
@@ -74,6 +74,6 @@ Pendapat saya, dinyatakan sekali: levi ini cukup kecil untuk diabaikan dan cukup
 
 **Bacaan lanjut**
 
-[SOCSO berhenti pada RM6,000, dan tiada siapa beritahu](https://upahje.my/ms/articles/kadar-socso-majikan-malaysia)
+[SOCSO berhenti pada RM6,000](https://upahje.my/ms/articles/kadar-socso-majikan-malaysia)
 
 [Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/articles/category/definitions)
