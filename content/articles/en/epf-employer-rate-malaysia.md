@@ -52,7 +52,7 @@ Neither band appears in a payroll template built for a young all-Malaysian team,
 
 Contributions are due on or before the 15th of the following month. KWSP's own example is January wages, February contribution month, paid by 15 February.
 
-Late payment is a different charge from the contribution itself, and this article does not estimate it.
+Late payment is a different charge from the contribution itself, and this article does not estimate it. Keep proof of payment every month, because disputes usually arrive months later.
 
 ## What the boundary costs in a month
 
@@ -64,7 +64,7 @@ That is a RM49.88 drop for a RM1 raise, and it is the one place where paying som
 
 For an employee aged 60 or over at RM3,000, Part E puts the employer at 4%, which is RM120, and the employee at 0%. The same wage under the 13/11 pair costs the employer RM390 and the employee RM330.
 
-The difference is not a rounding error; it is a band, and it is decided by the employee's age on the contribution month, not by the payroll template's default.
+The difference is not a rounding error; it is a band, and it is decided by the employee's age on the contribution month, not by the payroll template's default. A template built for a young team will miss this line until someone checks it by hand.
 
 ## What to do before the first payslip
 
