@@ -4,6 +4,151 @@
 
 # English
 
+## EPF contribution: 12% or 13%, and RM5,000 is the line
+
+URL: https://upahje.my/en/articles/epf-employer-rate-malaysia
+Checked: 2026-11-25
+
+An employer pays 13% of monthly wages when the wage is RM5,000 or less, and 12% when it is more. The employee pays 11% at both levels. The ringgit amount on the payslip is not that multiplication, though: it comes from the Third Schedule and is rounded up to the next ringgit.
+
+## The split happens at RM5,000 exactly
+
+RM5,000 is inside the 13% band, because the rule reads "RM5,000 and below". One ringgit above it moves the employer to 12%, which is why a small raise can cost the employer less than a small raise at the boundary suggests.
+
+The table applies the published percentages to five wages so the break is visible. The last column matters more than the others: the schedule amount is what gets paid.
+
+| Monthly wage | Employer rate | Employer amount at the rate | Employee amount at 11% |
+| --- | --- | --- | --- |
+| RM2,000 | 13% | RM260.00 | RM220.00 |
+| RM4,999 | 13% | RM649.87 | RM549.89 |
+| RM5,000 | 13% | RM650.00 | RM550.00 |
+| RM5,001 | 12% | RM600.12 | RM550.11 |
+| RM6,000 | 12% | RM720.00 | RM660.00 |
+
+The employee's 11% does not move at RM5,000; only the employer's rate does, so a wage just above the line does not reduce take-home pay.
+
+Those amounts are arithmetic at the published rate, not the schedule. KWSP computes contributions from the Third Schedule for wages up to RM20,000, and the schedule total is rounded up to the next ringgit, so expect the payslip to differ by a few sen.
+
+## Two bands that change the answer
+
+Employees aged 60 and over sit in Part E of the schedule: the employer pays 4% and the employee pays nothing. Non-Malaysian employees have been inside the mandatory scheme since October 2025, in Part F, at 2% employer and 2% employee. Both are schedule amounts, not multiplications. The schedule itself was revised with effect from October 2025, so a table printed before that date is not the one to use.
+
+Neither band appears in a payroll template built for a young all-Malaysian team, which is how a first payslip for a returning retiree goes wrong.
+
+## The deadline is the 15th
+
+Contributions are due on or before the 15th of the following month. KWSP's own example is January wages, February contribution month, paid by 15 February.
+
+Late payment is a different charge from the contribution itself, and this article does not estimate it. Keep proof of payment every month, because disputes usually arrive months later.
+
+## What the boundary costs in a month
+
+At RM5,000 the employer pays RM650.00 at the rate. At RM5,001 the employer pays RM600.12, because the whole wage moves to the 12% band rather than the excess above RM5,000.
+
+That is a RM49.88 drop for a RM1 raise, and it is the one place where paying someone more can cost the business less in EPF. The schedule smooths some of the gap, but the band change is real.
+
+Over a year at a constant wage the gap is RM598.56, and that figure is arithmetic on the published percentages rather than a schedule amount. The Third Schedule is what actually gets paid, and it rounds up to the next ringgit, so the payslip lands within a few sen of these numbers instead of exactly on them.
+
+One more edge: above RM20,000 a month, KWSP stops using the schedule and the exact percentage applies, which is the only band where the multiplication on the page is the amount paid. A payroll template that only knows the schedule will need a second rule for the highest salaries.
+
+## The 60-plus line, worked once
+
+For an employee aged 60 or over at RM3,000, Part E puts the employer rate at 4%; the schedule entry for that wage is RM120, and the employee contributes nothing. The same wage under the 13/11 pair costs the employer RM390 and the employee RM330.
+
+The difference is not a rounding error; it is a band, and it is decided by the employee's age on the contribution month, not by the payroll template's default. A template built for a young team will miss this line until someone checks it by hand.
+
+## What to do before the first payslip
+
+1. Find the wage in the Third Schedule, not on a calculator.
+2. Round up to the next ringgit as the schedule does.
+3. Pay by the 15th of the following month.
+4. Check whether anyone on the payroll is 60 or over, or a non-Malaysian, before using the 13/11 pair.
+5. Keep the schedule version you used, because a rate change does not rewrite history.
+
+My opinion, stated once: the 12-versus-13 question is the easy half. The half that costs money is the schedule and the two exceptions, because those are the lines a template gets wrong quietly, and a payroll error is discovered by an employee, not by an auditor.
+
+---
+
+**Read next**
+
+[What a first hire costs, line by line](https://upahje.my/en/articles/first-hire-cost-malaysia)
+
+[More definitions, explained plainly](https://upahje.my/en/articles/category/definitions)
+
+### Sources
+
+- KWSP, employer mandatory contribution (13% and 12% bands, employee 11%, Third Schedule, 15th-of-the-month payment, Part E) — https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution (checked 2026-11-24)
+- KWSP, EPF Act 1991 Third Schedule (contribution rates effective October 2025) — https://www.kwsp.gov.my/documents/d/guest/third_schedule_from_-1-october-2025 (checked 2026-11-25)
+- KWSP, contribution for non-Malaysian citizen employees (2% employer, 2% employee, from the October 2025 salary) — https://www.kwsp.gov.my/en/employer/responsibilities/non-malaysian-citizen-employees (checked 2026-11-25)
+
+## Grab and foodpanda commission rates in Malaysia (2026)
+
+URL: https://upahje.my/en/articles/delivery-commission-malaysia
+Checked: 2026-11-25
+
+Neither Grab nor foodpanda prints a merchant commission on any page a business can read. The only citable commission figures in Malaysia come from the competition regulator's own foodpanda decision, in bands from 1% to 25%, and at the top of that band a RM25 order leaves RM8.50 before labour, rent or electricity.
+
+## The platforms publish nothing
+
+Grab's Malaysian merchant page sells the programme and prints no rate: the word commission does not appear in the served text, and there is no rate card on the page. foodpanda's merchant page returned HTTP 403 to this client, so its rate is not readable at all.
+
+That matters because the common sentence in Malaysian guides, that GrabFood takes a certain percentage, is not a published rate. It is a merchant's contract, a vendor's estimate, or folklore, and none of those can be checked by a reader deciding whether to sign.
+
+## The regulator's numbers are bands, and the names are redacted
+
+The MyCC decision on foodpanda records five anonymised franchised merchants with commission bands: 1% to 5%, 10% to 25%, 15% to 20%, and twice 15% to 25%. The merchant names are redacted, which tells you the actual rates are contractual and confidential.
+
+The decision also records the finding that foodpanda "imposes higher commission rates on independent restaurants than on franchised restaurants due to a disparity in bargaining power". The Commission found no infringement, so this is a description of the market, not a penalty.
+
+The decision itself is dated 11 September 2023; the case list carries 13 September 2023, which is the date the press reported it.
+
+## What the top of the band costs on a real basket
+
+The arithmetic below applies the 25% upper edge and a 20% midpoint, with packaging at RM1.50 per order and food cost at 35% of menu price. Packaging and food cost are assumptions, not published figures; commission is the regulator's band.
+
+| Basket | Commission at 25% | Commission at 20% | Packaging | Net after commission and packaging, at 25% / 20% | Food cost at 35% | Left before labour and rent, at 25% / 20% |
+| --- | --- | --- | --- | --- | --- | --- |
+| RM15 | RM3.75 | RM3.00 | RM1.50 | RM9.75 / RM10.50 | RM5.25 | RM4.50 / RM5.25 |
+| RM25 | RM6.25 | RM5.00 | RM1.50 | RM17.25 / RM18.50 | RM8.75 | RM8.50 / RM9.75 |
+| RM45 | RM11.25 | RM9.00 | RM1.50 | RM32.25 / RM34.50 | RM15.75 | RM16.50 / RM18.75 |
+
+Each row subtracts commission, then packaging, then food cost, in that order, so a reader can redo any cell with a calculator. Read the last column as what is left to pay for the cook, the rent and the gas. On a RM15 order at the top of the band it is RM4.50, which is not a margin; it is a warning that small baskets carry fixed costs badly.
+
+The 35% food cost is the weakest number here, and it is ours. A business with a different food cost should redo the row with its own figure, which is why it is in a column of its own rather than folded into a total.
+
+## What is not published
+
+Promo co-funding: neither platform states whether the merchant funds part of a platform promotion, or at what share, and the MyCC decision references a promotional-expense spreadsheet whose values are redacted. No percentage is printed here.
+
+Delivery fee: neither platform page states who sets it or who keeps it, so no claim is made about it.
+
+GrabFood's rate: no MyCC decision and no platform page, so there is nothing citable at all.
+
+## What to ask before signing
+
+1. The commission rate in writing, per category, not a range.
+2. Whether the rate changes with exclusivity, and what the non-exclusive rate is.
+3. Who pays for promotions, and at what share.
+4. Who sets the delivery fee and who keeps it.
+5. The rate for a small basket, in ringgit, at your menu prices.
+
+My opinion, stated once: a platform that will not put the rate beside a worked basket is telling you something. The honest answer to "what will I keep on a RM25 order" is a number, and a sales page that will not produce it is asking you to sign a contract you cannot price.
+
+---
+
+**Read next**
+
+[What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
+
+[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+
+### Sources
+
+- MyCC, final decision on foodpanda (Delivery Hero Malaysia), public non-confidential version, dated 11 September 2023 — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-24)
+- MyCC, case list entry for the Delivery Hero decision (13 September 2023) — https://www.mycc.gov.my/case (checked 2026-11-24)
+- Grab Malaysia, merchant page (no commission rate printed) — https://www.grab.com/my/merchant/ (checked 2026-11-24)
+- foodpanda Malaysia, merchant page (HTTP 403 to a normal client) — https://www.foodpanda.my/vendor/ (checked 2026-11-24)
+
 ## A first hire at RM3,000 costs RM3,448.50 a month
 
 URL: https://upahje.my/en/articles/first-hire-cost-malaysia
@@ -2323,6 +2468,83 @@ A single read-only endpoint takes a competent developer about a day. Anything th
 
 # Bahasa Melayu
 
+## EPF majikan: 12% atau 13%, dan RM5,000 garisnya
+
+URL: https://upahje.my/ms/articles/kadar-caruman-epf-majikan
+Checked: 2026-11-25
+
+Majikan membayar 13% daripada gaji bulanan apabila gaji RM5,000 atau kurang, dan 12% apabila lebih. Pekerja membayar 11% pada kedua-dua peringkat. Jumlah ringgit pada slip gaji bukan hasil darab itu: ia datang daripada Jadual Ketiga dan dibundarkan ke ringgit berikutnya.
+
+## Peralihan kadar berlaku tepat pada RM5,000
+
+RM5,000 berada dalam julat 13%, kerana peraturannya berbunyi "RM5,000 dan ke bawah". Satu ringgit di atasnya memindahkan majikan ke 12%, sebab itulah kenaikan gaji kecil di sempadan itu boleh mengurangkan kos majikan.
+
+Jadual di bawah menggunakan peratusan yang diterbitkan pada lima gaji supaya peralihannya kelihatan. Lajur terakhir lebih penting daripada yang lain: jumlah jadual itulah yang dibayar.
+
+| Gaji bulanan | Kadar majikan | Jumlah majikan pada kadar itu | Jumlah pekerja pada 11% |
+| --- | --- | --- | --- |
+| RM2,000 | 13% | RM260.00 | RM220.00 |
+| RM4,999 | 13% | RM649.87 | RM549.89 |
+| RM5,000 | 13% | RM650.00 | RM550.00 |
+| RM5,001 | 12% | RM600.12 | RM550.11 |
+| RM6,000 | 12% | RM720.00 | RM660.00 |
+
+Caruman pekerja 11% tidak berubah pada RM5,000; hanya kadar majikan yang bergerak, jadi gaji yang sedikit melebihi garis itu tidak mengurangkan bawa pulang.
+
+Jumlah itu aritmetik pada kadar yang diterbitkan, bukan jadual. KWSP mengira caruman daripada Jadual Ketiga bagi gaji sehingga RM20,000, dan jumlah jadual dibundarkan ke ringgit berikutnya, jadi jangkakan slip gaji berbeza beberapa sen.
+
+## Dua kumpulan yang mengubah jawapannya
+
+Pekerja berumur 60 tahun ke atas berada dalam Bahagian E jadual: majikan membayar 4% dan pekerja tidak membayar apa-apa. Pekerja bukan warganegara berada dalam skim wajib sejak Oktober 2025, dalam Bahagian F, pada 2% majikan dan 2% pekerja. Kedua-duanya jumlah jadual, bukan hasil darab. Jadual itu sendiri disemak berkuat kuasa Oktober 2025, jadi jadual yang dicetak sebelum tarikh itu bukan yang patut digunakan.
+
+Kedua-dua kumpulan ini tidak muncul dalam templat gaji yang dibina untuk pasukan muda semuanya warganegara, dan itulah cara slip gaji pertama seorang pesara yang kembali bekerja menjadi salah.
+
+## Tarikh akhir ialah 15 haribulan
+
+Caruman perlu dibayar pada atau sebelum 15 haribulan berikutnya. Contoh pada halaman KWSP sendiri ialah gaji Januari, bulan caruman Februari, dibayar menjelang 15 Februari.
+
+Bayaran lewat dikenakan caj berasingan daripada caruman itu sendiri, dan artikel ini tidak menganggarkannya. Simpan bukti bayaran setiap bulan, kerana pertikaian biasanya berlaku berbulan-bulan kemudian.
+
+## Apa kos sempadan itu dalam sebulan
+
+Pada RM5,000 majikan membayar RM650.00 pada kadar itu. Pada RM5,001 majikan membayar RM600.12, kerana seluruh gaji berpindah ke julat 12% dan bukan hanya lebihan di atas RM5,000.
+
+Itu penurunan RM49.88 bagi kenaikan RM1, dan ia satu-satunya tempat di mana membayar seseorang lebih tinggi boleh mengurangkan kos EPF perniagaan. Jadual melicinkan sebahagian jurang itu, tetapi peralihan julat itu nyata.
+
+Sepanjang setahun pada gaji tetap, jurang itu RM598.56, dan angka itu aritmetik pada peratusan yang diterbitkan dan bukan jumlah jadual. Jadual Ketiga yang sebenarnya dibayar, dan ia membundarkan ke ringgit berikutnya, jadi slip gaji berada dalam beberapa sen daripada angka ini dan bukan tepat padanya.
+
+Satu lagi sempadan: melebihi RM20,000 sebulan, KWSP berhenti menggunakan jadual dan peratusan tepat terpakai, iaitu satu-satunya julat di mana pendaraban pada halaman itu ialah jumlah yang dibayar. Templat gaji yang hanya mengenal jadual perlu peraturan kedua untuk gaji tertinggi.
+
+## Baris 60 tahun ke atas, dikira sekali
+
+Bagi pekerja berumur 60 tahun ke atas pada RM3,000, Bahagian E meletakkan kadar majikan pada 4%; jumlah jadual bagi gaji itu ialah RM120, dan pekerja tidak menyumbang. Gaji yang sama di bawah pasangan 13/11 menelan RM390 daripada majikan dan RM330 daripada pekerja.
+
+Bezanya bukan pembundaran; ia julat, dan ia ditentukan oleh umur pekerja pada bulan caruman, bukan oleh lalai templat gaji. Templat yang dibina untuk pasukan muda akan terlepas baris ini sehingga seseorang menyemaknya dengan tangan.
+
+## Apa yang perlu dibuat sebelum slip gaji pertama
+
+1. Cari gaji dalam Jadual Ketiga, bukan pada kalkulator.
+2. Bundarkan ke ringgit berikutnya seperti jadual itu.
+3. Bayar menjelang 15 haribulan berikutnya.
+4. Semak sama ada ada pekerja berumur 60 tahun ke atas, atau bukan warganegara, sebelum menggunakan pasangan 13/11.
+5. Simpan versi jadual yang digunakan, kerana perubahan kadar tidak menulis semula sejarah.
+
+Pendapat saya, dinyatakan sekali: soalan 12 lawan 13 ialah separuh yang mudah. Separuh yang menelan wang ialah jadual dan dua pengecualian itu, kerana itulah baris yang templat silap secara senyap, dan kesilapan gaji ditemui oleh pekerja, bukan oleh juruaudit.
+
+---
+
+**Bacaan lanjut**
+
+[Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
+
+[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/articles/category/definitions)
+
+### Sources
+
+- KWSP, caruman wajib majikan (julat 13% dan 12%, pekerja 11%, Jadual Ketiga, bayaran 15 haribulan, Bahagian E) — https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution (checked 2026-11-24)
+- KWSP, Jadual Ketiga Akta Kumpulan Wang Simpanan Pekerja 1991 (kadar caruman berkuat kuasa Oktober 2025) — https://www.kwsp.gov.my/documents/d/guest/third_schedule_from_-1-october-2025 (checked 2026-11-25)
+- KWSP, caruman untuk pekerja bukan warganegara (2% majikan, 2% pekerja, mulai gaji Oktober 2025) — https://www.kwsp.gov.my/en/employer/responsibilities/non-malaysian-citizen-employees (checked 2026-11-25)
+
 ## Klip percuma berharga satu malam, bukan RM61.78
 
 URL: https://upahje.my/ms/articles/klip-video-sendiri
@@ -2399,6 +2621,74 @@ Kesilapan paling murah di sini ialah membayar setahun klip yang tidak pernah dis
 - Bank Negara Malaysia, API kadar pertukaran (kadar tengah USD 4.1185) — https://api.bnm.gov.my/public/exchange-rate (checked 2026-11-24)
 - iamajmeena/neonclipping, repositori (MIT, dicipta 19 November 2026) — https://github.com/iamajmeena/neonclipping (checked 2026-11-24)
 - haziqahmedqasmi/PeakCut, repositori (MIT, dicipta 14 November 2026) — https://github.com/haziqahmedqasmi/PeakCut (checked 2026-11-24)
+
+## Komisen Grab dan foodpanda di Malaysia (2026)
+
+URL: https://upahje.my/ms/articles/komisen-penghantaran-malaysia
+Checked: 2026-11-25
+
+Grab dan foodpanda tidak mencetak komisen peniaga pada mana-mana halaman yang boleh dibaca perniagaan. Satu-satunya angka komisen yang boleh dipetik di Malaysia datang daripada keputusan foodpanda oleh pengawal selia persaingan, dalam julat 1% hingga 25%, dan pada hujung julat itu pesanan RM25 tinggal RM8.50 sebelum upah, sewa atau elektrik.
+
+## Platform tidak menerbitkan apa-apa
+
+Halaman peniaga Grab Malaysia menjual programnya tanpa kadar: perkataan komisen tidak muncul dalam teks yang dipaparkan, dan tiada kad kadar pada halaman itu. Halaman peniaga foodpanda memulangkan HTTP 403 kepada klien ini, jadi kadarnya tidak boleh dibaca langsung.
+
+Itu penting kerana ayat biasa dalam panduan Malaysia, bahawa GrabFood mengambil peratusan tertentu, bukan kadar yang diterbitkan. Ia kontrak peniaga, anggaran vendor, atau cerita orang, dan tiada satu pun boleh disemak oleh pembaca yang sedang memutuskan sama ada mahu menandatangani.
+
+## Angka pengawal selia ialah julat, dan namanya disunting
+
+Keputusan MyCC terhadap foodpanda merekodkan lima peniaga francais tanpa nama dengan julat komisen: 1% hingga 5%, 10% hingga 25%, 15% hingga 20%, dan dua kali 15% hingga 25%. Nama peniaga disunting, yang memberitahu anda kadar sebenar itu bersifat kontrak dan sulit.
+
+Keputusan itu juga merekodkan penemuan bahawa foodpanda "imposes higher commission rates on independent restaurants than on franchised restaurants due to a disparity in bargaining power". Suruhanjaya mendapati tiada pelanggaran, jadi ini gambaran pasaran, bukan penalti.
+
+Keputusan itu sendiri bertarikh 11 September 2023; senarai kes membawa 13 September 2023, iaitu tarikh akhbar melaporkannya.
+
+## Apa kos hujung julat pada bakul sebenar
+
+Aritmetik di bawah menggunakan hujung atas 25% dan titik tengah 20%, dengan pembungkusan RM1.50 setiap pesanan dan kos makanan 35% daripada harga menu. Pembungkusan dan kos makanan ialah andaian, bukan angka yang diterbitkan; komisen ialah julat pengawal selia.
+
+| Bakul | Komisen pada 25% | Komisen pada 20% | Pembungkusan | Baki selepas komisen dan pembungkusan, pada 25% / 20% | Kos makanan pada 35% | Baki sebelum upah dan sewa, pada 25% / 20% |
+| --- | --- | --- | --- | --- | --- | --- |
+| RM15 | RM3.75 | RM3.00 | RM1.50 | RM9.75 / RM10.50 | RM5.25 | RM4.50 / RM5.25 |
+| RM25 | RM6.25 | RM5.00 | RM1.50 | RM17.25 / RM18.50 | RM8.75 | RM8.50 / RM9.75 |
+| RM45 | RM11.25 | RM9.00 | RM1.50 | RM32.25 / RM34.50 | RM15.75 | RM16.50 / RM18.75 |
+
+Baca lajur terakhir sebagai apa yang tinggal untuk membayar tukang masak, sewa, gas dan stok pembungkusan. Pada pesanan RM15 di hujung julat, ia RM4.50, yang bukan margin; ia amaran bahawa bakul kecil menanggung kos tetap dengan teruk.
+
+Kos makanan 35% ialah angka paling lemah di sini, dan ia angka kami. Perniagaan dengan kos makanan berbeza patut mengira semula baris itu dengan angkanya sendiri, sebab itulah ia dalam lajur berasingan dan bukan dilebur ke dalam jumlah.
+
+## Apa yang tidak diterbitkan
+
+Pembiayaan promosi: tiada platform menyatakan sama ada peniaga membiayai sebahagian promosi platform, atau pada bahagian berapa, dan keputusan MyCC merujuk hamparan perbelanjaan promosi yang nilainya disunting. Tiada peratusan dicetak di sini.
+
+Fi penghantaran: tiada halaman platform menyatakan siapa menetapkannya atau siapa menyimpannya, jadi tiada dakwaan dibuat tentangnya.
+
+Kadar GrabFood: tiada keputusan MyCC dan tiada halaman platform, jadi tiada apa yang boleh dipetik langsung.
+
+## Apa yang perlu ditanya sebelum menandatangani
+
+1. Kadar komisen secara bertulis, ikut kategori, bukan julat.
+2. Sama ada kadar berubah dengan eksklusiviti, dan berapa kadar bukan eksklusif.
+3. Siapa membayar promosi, dan pada bahagian berapa.
+4. Siapa menetapkan fi penghantaran dan siapa menyimpannya.
+5. Kadar bagi bakul kecil, dalam ringgit, pada harga menu anda.
+
+Pendapat saya, dinyatakan sekali: platform yang enggan meletakkan kadarnya di sebelah bakul yang sudah dikira memberitahu sesuatu. Jawapan jujur kepada "apa yang saya tinggal pada pesanan RM25" ialah satu angka, dan halaman jualan yang enggan mengeluarkannya meminta anda menandatangani kontrak yang tidak boleh anda harga.
+
+---
+
+**Bacaan lanjut**
+
+[Kos kerja automasi di Malaysia: harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
+
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)
+
+### Sources
+
+- MyCC, keputusan muktamad foodpanda (Delivery Hero Malaysia), versi awam bukan sulit, bertarikh 11 September 2023 — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-24)
+- MyCC, senarai kes bagi keputusan Delivery Hero (13 September 2023) — https://www.mycc.gov.my/case (checked 2026-11-24)
+- Grab Malaysia, halaman peniaga (tiada kadar komisen dicetak) — https://www.grab.com/my/merchant/ (checked 2026-11-24)
+- foodpanda Malaysia, halaman peniaga (HTTP 403 kepada klien biasa) — https://www.foodpanda.my/vendor/ (checked 2026-11-24)
 
 ## Pekerja pertama bergaji RM3,000 berharga RM3,448.50
 

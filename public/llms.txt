@@ -12,13 +12,15 @@ This site publishes short, citable articles. Every claim links to a source; ever
 - [Pembelian](https://upahje.my/ms/topics/buying): Kos kerja, cara menulis brief, dan cara membandingkan sebut harga. (11 articles)
 - [AI and automation](https://upahje.my/en/topics/ai-automation): Agents, models and the loop that runs your request. (8 articles)
 - [AI dan automasi](https://upahje.my/ms/topics/ai-automation): Agent, model dan gelung yang menjalankan permintaan anda. (8 articles)
-- [Operations and growth](https://upahje.my/en/topics/operations-growth): How the business runs week to week, and where the duplication hides. (3 articles)
-- [Operasi dan pertumbuhan](https://upahje.my/ms/topics/operations-growth): Cara perniagaan berjalan setiap minggu, dan di mana pertindihan bersembunyi. (3 articles)
+- [Operations and growth](https://upahje.my/en/topics/operations-growth): How the business runs week to week, and where the duplication hides. (4 articles)
+- [Operasi dan pertumbuhan](https://upahje.my/ms/topics/operations-growth): Cara perniagaan berjalan setiap minggu, dan di mana pertindihan bersembunyi. (4 articles)
 - [Freelance](https://upahje.my/en/topics/freelance): Selling a skill per project, with the listings counted. (1 article)
 - [Bebas](https://upahje.my/ms/topics/freelance): Menjual kemahiran setiap projek, dengan kiraan senarai. (1 article)
 
 ## English articles
 
+- [EPF contribution: 12% or 13%, and RM5,000 is the line](https://upahje.my/en/articles/epf-employer-rate-malaysia): The employer rate is 13% at RM5,000 and below and 12% above it, but the contribution comes from the Third Schedule and rounds up, not from a calculator.
+- [Grab and foodpanda commission rates in Malaysia (2026)](https://upahje.my/en/articles/delivery-commission-malaysia): What Grab and foodpanda actually charge merchants in Malaysia: the MyCC bands, what they exclude, and why at 25% a RM25 order leaves RM8.50 before labour.
 - [A first hire at RM3,000 costs RM3,448.50 a month](https://upahje.my/en/articles/first-hire-cost-malaysia): EPF, SOCSO, EIS and the LINDUNG 24 Jam deduction, line by line on a RM3,000 salary, with what is capped, what rounds up and what the payslip misses.
 - [A free clipper costs an evening, not RM61.78 a month](https://upahje.my/en/articles/self-hosted-clipping): OpusClip charges USD 15, which is RM61.78 converted. Two MIT repos clip locally for nothing, and Malay captions are unproven on both, so the trade is your time.
 - [CommandCode, OpenCode, DeepSeek: three different things](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers): One is a paid CLI, one is a free CLI, one is an API. Their published prices, their drift, and one run that shows an exit code of zero is not success.
@@ -47,7 +49,9 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Bahasa Melayu articles
 
+- [EPF majikan: 12% atau 13%, dan RM5,000 garisnya](https://upahje.my/ms/articles/kadar-caruman-epf-majikan): Kadar majikan 13% pada RM5,000 ke bawah dan 12% ke atas, tetapi caruman datang daripada Jadual Ketiga dan dibundarkan ke atas, bukan daripada kalkulator.
 - [Klip percuma berharga satu malam, bukan RM61.78](https://upahje.my/ms/articles/klip-video-sendiri): OpusClip mengenakan USD 15, iaitu RM61.78 ditukar. Dua repo MIT memotong klip pada mesin sendiri tanpa bayaran, dan sari kata Melayu belum dibuktikan.
+- [Komisen Grab dan foodpanda di Malaysia (2026)](https://upahje.my/ms/articles/komisen-penghantaran-malaysia): Apa yang Grab dan foodpanda sebenarnya caj peniaga di Malaysia: julat MyCC, apa yang tidak termasuk, dan kenapa pada 25% pesanan RM25 tinggal RM8.50.
 - [Pekerja pertama bergaji RM3,000 berharga RM3,448.50](https://upahje.my/ms/articles/kos-pekerja-pertama-malaysia): EPF, SOCSO, EIS dan potongan LINDUNG 24 Jam, baris demi baris pada gaji RM3,000, dengan apa yang dihadkan, apa yang dibundarkan dan apa yang slip gaji terlepas.
 - [Apa yang sebenarnya diukur oleh satu baris papan pendahulu](https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu): SWE-bench dan Terminal-bench menilai model di dalam harness orang lain. Baris DeepSeek contohnya, dan larian di belakangnya ada profil kebolehpercayaan.
 - [Apa yang AI agent boleh buat untuk PKS Malaysia](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat): AI agent menjalankan gelung sendiri: baca tugasan, panggil tool, ulang. Apa yang dibuat tanpa penyeliaan, apa yang perlukan manusia, apa yang jangan disentuh.
