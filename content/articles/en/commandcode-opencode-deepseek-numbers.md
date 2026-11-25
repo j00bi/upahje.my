@@ -39,7 +39,7 @@ sources:
     checked: 2026-11-23
 ---
 
-# CommandCode, OpenCode and DeepSeek are not the same kind of tool
+# CommandCode, OpenCode, DeepSeek: not the same kind of tool
 
 These are three different kinds of thing, and the words matter before the prices do. `dsh` is DeepSeek Harness, the command-line harness we run here. An "arm" is one of the products tried on the same task, and this run had three: CommandCode, OpenCode and DeepSeek through `dsh`. CommandCode is a paid coding CLI. OpenCode is a free, MIT-licensed coding CLI with an optional subscription. DeepSeek is a model vendor with an API. What follows is what each publishes as a price, where those numbers have moved, and what one run showed. The benchmark half, and the reason a "CommandCode vs OpenCode" score does not exist, is a separate developer note.
 

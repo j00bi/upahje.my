@@ -16,7 +16,7 @@ changelog:
     note: "Mula diterbitkan."
 ---
 
-# Perlukan API, atau cukup spreadsheet?
+# API atau spreadsheet: pilih ikut jumlah
 
 Spreadsheet menang apabila jumlah data kecil dan seorang sahaja yang mengendalikannya. API menang apabila dua sistem perlu kekal selaras tanpa ada orang menyalin antara keduanya. Soalan penentunya bukan saiz perniagaan anda. Ia sama ada langkah menyalin itu masih wujud, dan berapa kosnya apabila langkah itu tersilap.
 

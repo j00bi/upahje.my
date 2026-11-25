@@ -37,7 +37,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Harness agent: siapa yang membuatnya, dan apa yang benar-benar sumber terbuka
+# Harness agent: siapa buat, mana satu sumber terbuka
 
 Empat produk yang mungkin disebut pembaca ialah dua jenis benda berbeza. Grok Bot daripada xAI dan Dots daripada OpenAI ialah produk tertutup yang dihoskan, digunakan melalui perkhidmatan orang lain. OpenBot dan MausBot ialah projek sumber tersedia yang boleh anda jalankan sendiri, dan hanya repositori utama MausBot yang sumber terbuka pada lesennya sendiri. OpenBot bukan.
 

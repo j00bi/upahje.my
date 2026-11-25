@@ -22,7 +22,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# Di mana kunci API anda diletakkan dalam harness, dan di mana ia tidak boleh ada
+# Di mana kunci API diletakkan, dan di mana tidak
 
 Harness menyimpan kunci anda di luar perbualan. Ia membaca kunci itu daripada pemboleh ubah persekitaran atau daripada stor credentialsnya sendiri pada saat ia memanggil pembekal. Kunci itu mengenal pasti akaun anda, bukan setiap permintaan, dan sebab itulah ia tidak boleh muncul dalam mesej sembang, fail yang di-commit, tangkapan skrin, atau kod yang berjalan dalam pelayar.
 

@@ -16,7 +16,7 @@ changelog:
     note: "Mula diterbitkan."
 ---
 
-# Cara menulis brief kerja automasi supaya anda tidak bayar dua kali
+# Cara menulis brief kerja automasi
 
 Brief yang menghalang anda daripada bayar dua kali menyatakan lima perkara sebelum sesiapa memberi sebut harga: input, output, tingkah laku apabila gagal, ujian penerimaan, dan siapa yang memiliki credentials. Freelancer yang memberi sebut harga tanpa lima perkara itu sedang meneka. Anda kemudian membayar untuk tekaan itu dua kali, sekali untuk membina yang salah dan sekali untuk membaikinya.
 

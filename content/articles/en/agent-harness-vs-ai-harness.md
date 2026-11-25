@@ -28,7 +28,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Agent harness, AI harness, agent framework: what the words mean
+# Agent harness, AI harness, agent framework: what they mean
 
 An agent harness is the runtime that runs a model's agent loop: it holds the system prompt, executes tool calls, manages context, applies permissions and supplies a working environment. Vendors use "agent harness" or just "harness". "AI harness" is not a phrase the official sources I opened use, and "agent framework" is a different thing again.
 

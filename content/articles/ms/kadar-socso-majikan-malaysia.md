@@ -25,7 +25,7 @@ sources:
     checked: 2026-11-25
 ---
 
-# SOCSO berhenti pada RM6,000, dan tiada siapa beritahu pekerja
+# SOCSO berhenti pada RM6,000, dan tiada siapa beritahu
 
 Majikan membayar 1.75% daripada gaji bulanan ke SOCSO dan memotong 0.5% daripada pekerja, sehingga siling gaji RM6,000 yang berkuat kuasa 1 Oktober 2024. EIS pula 0.2% setiap pihak pada siling yang sama. Melebihi RM6,000, setiap baris itu rata, jadi kenaikan gaji tidak menambah apa-apa pada SOCSO atau EIS majikan.
 

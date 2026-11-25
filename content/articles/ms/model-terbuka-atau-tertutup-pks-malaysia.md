@@ -28,7 +28,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia
+# Model terbuka atau tertutup: apa PKS boleh jalankan
 
 Model terbuka ialah model yang failnya boleh dimuat turun dan dijalankan pada perkakasan yang anda kawal. Model tertutup hanya boleh dipanggil. Bagi kebanyakan PKS Malaysia, jawapannya masih tertutup, kerana menjalankan model sendiri memerlukan GPU sewaan, orang yang tahu mengendalikannya, dan jumlah penggunaan yang benar-benar tinggi.
 

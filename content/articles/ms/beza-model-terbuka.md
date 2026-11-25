@@ -40,7 +40,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Pemberat terbuka bukan satu lesen: lima model, empat jenis lesen
+# Pemberat terbuka, empat lesen: apa setiap model benarkan
 
 Lesen ialah perbezaan yang menentukan sama ada anda boleh menggunakan sesuatu model dalam perniagaan. Antara lima model terbuka yang dibaca untuk artikel ini, dua berlesen MIT, satu membawa lesen Qwen tersuai, satu membawa lesen terbuka Mistral sendiri, dan satu membawa lesen Kimi. "Model terbuka" memberitahu anda failnya boleh dimuat turun; ia tidak memberitahu apa yang boleh anda lakukan dengannya.
 

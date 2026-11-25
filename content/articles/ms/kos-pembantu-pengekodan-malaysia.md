@@ -17,7 +17,7 @@ changelog:
     note: "Kerangka draf; fakta belum masuk."
 ---
 
-# Kos pembantu pengekodan untuk perniagaan kecil, dalam ringgit
+# Kos pembantu pengekodan untuk PKS, dalam ringgit
 
 Kerangka draf. Setiap angka, sumber dan contoh di bawah menunggu pek penyelidikan; tiada apa dalam fail ini boleh diterbitkan sehingga semuanya masuk.
 

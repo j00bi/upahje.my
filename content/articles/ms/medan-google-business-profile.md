@@ -36,7 +36,7 @@ sources:
     primary: true
 ---
 
-# Google Business Profile: medan yang menentukan sama ada anda muncul
+# Google Business Profile: medan penentu sama ada anda muncul
 
 Peraturan Google sendiri yang menentukan, dan ia khusus. Nama anda mesti nama yang pelanggan guna dalam dunia sebenar, anda dapat satu profil bagi setiap perniagaan, dan kategori mesti menerangkan perniagaan dan bukan kata kuncinya. Salah pada tiga perkara itu, profil boleh dihadkan. Betulkannya, dan selebihnya ialah mengisi medan yang didokumenkan.
 

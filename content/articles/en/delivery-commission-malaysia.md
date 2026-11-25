@@ -33,7 +33,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# No delivery platform publishes its commission
+# Grab and foodpanda commission rates (2026)
 
 Neither Grab nor foodpanda prints a merchant commission on any page a business can read. The only citable commission figures in Malaysia come from the competition regulator's own foodpanda decision, in bands from 1% to 25%, and at the top of that band a RM25 order leaves RM8.50 before labour, rent or electricity.
 

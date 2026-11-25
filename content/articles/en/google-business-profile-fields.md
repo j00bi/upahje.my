@@ -36,7 +36,7 @@ sources:
     primary: true
 ---
 
-# Google Business Profile: the fields that decide whether you show up
+# Google Business Profile: the fields that decide visibility
 
 Google's own rules decide this, and they are specific. Your name must be the name customers use in the real world, you get one profile per business, and categories must describe the business rather than its keywords. Get those wrong and the profile can be restricted; get them right and the rest is filling documented fields.
 

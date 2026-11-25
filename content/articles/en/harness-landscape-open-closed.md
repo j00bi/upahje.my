@@ -37,7 +37,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Agent harnesses: who makes them, and what is actually open source
+# Agent harnesses: who makes them, what is open
 
 The four products a reader is likely to name are two different kinds of thing. Grok Bot from xAI and Dots from OpenAI are closed, hosted products you use through someone else's service. OpenBot and MausBot are source-available projects you can run yourself, and only MausBot's main repository is open source on its own licence. OpenBot is not.
 

@@ -22,7 +22,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# Where your API key goes in a harness, and where it must never go
+# Where an API key goes in a harness, and where never
 
 A harness keeps your key outside the conversation. It reads the key from an environment variable or from its own credential store at the moment it calls the provider. The key identifies your account, not each request, which is why it must never appear in a chat message, a committed file, a screenshot, or code that runs in a browser.
 

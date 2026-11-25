@@ -28,7 +28,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Open or closed models: what a Malaysian SME can actually run in-house
+# Open or closed models: what an SME can run in-house
 
 An open-weight model is one you can download and run on hardware you control. A closed model is one you can only call. For most Malaysian SMEs the practical answer is still closed, because running a model in-house needs a rented GPU, someone who can operate it, and a volume high enough to matter.
 

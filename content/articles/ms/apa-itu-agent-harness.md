@@ -22,7 +22,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# Apa itu agent harness, dan apa yang dilakukannya dengan permintaan anda
+# Apa itu agent harness, dan apa yang ia buat
 
 Agent harness ialah program yang berada antara anda dengan model. Ia menyimpan perbualan, menjalankan tools, menghantar setiap permintaan kepada model dan menstrim jawapan kembali kepada anda. Dalam DeepSeek Harness 0.2.2-rc.1 pada mesin ini, satu mesej yang anda taip menjadi satu turn, turn terbahagi kepada step, dan setiap step ditulis ke fail pada cakera.
 

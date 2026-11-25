@@ -31,7 +31,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# Can two free tools replace OpusClip? The catch is Malay captions
+# Two free tools against OpusClip: the Malay caption gap
 
 OpusClip's Starter plan is USD 15 a month, which is RM61.78 at Bank Negara's middle rate of 4.1185 on 24 November 2026, and no Malaysian publisher prints a ringgit price for a clipping subscription at all. Two MIT-licensed repos that appeared in the same week clip on your own machine for nothing, and neither has demonstrated a Malay caption.
 

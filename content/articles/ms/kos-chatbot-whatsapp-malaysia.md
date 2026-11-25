@@ -37,7 +37,7 @@ sources:
     checked: 2026-11-23
 ---
 
-# Kos chatbot WhatsApp di Malaysia, setiap mesej dan setiap bulan
+# Kos chatbot WhatsApp: setiap mesej, setiap bulan
 
 Chatbot WhatsApp di Malaysia tidak menelan apa-apa sehingga 1,000 mesej servis sebulan bagi setiap nombor perniagaan, dan tidak menelan apa-apa untuk mesej yang pelanggan hantar kepada anda. Melepasi elaun itu, templat pemasaran RM0.3467, utiliti, pengesahan dan servis RM0.0564 setiap satu, dan vendor Malaysia menambah RM200 hingga RM1,500 sebulan untuk menjalankan bot.
 

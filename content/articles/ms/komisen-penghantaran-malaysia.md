@@ -31,7 +31,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# Tiada platform penghantaran menerbitkan komisennya
+# Komisen Grab dan foodpanda (2026)
 
 Grab dan foodpanda tidak mencetak komisen peniaga pada mana-mana halaman yang boleh dibaca perniagaan. Satu-satunya angka komisen yang boleh dipetik di Malaysia datang daripada keputusan foodpanda oleh pengawal selia persaingan, dalam julat 1% hingga 25%, dan pada hujung julat itu pesanan RM25 tinggal RM8.50 sebelum upah, sewa atau elektrik.
 

@@ -28,7 +28,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Agent harness, AI harness, agent framework: apa maksud istilah ini
+# Agent harness, AI harness, agent framework: maksudnya
 
 Agent harness ialah runtime yang menjalankan gelung agent bagi sesuatu model: ia memegang system prompt, melaksanakan tool call, mengurus konteks, menguatkuasakan kebenaran dan menyediakan persekitaran kerja. Vendor menulis "agent harness" atau ringkasnya "harness". "AI harness" bukan frasa yang digunakan oleh sumber rasmi yang saya buka, dan "agent framework" ialah benda lain.
 

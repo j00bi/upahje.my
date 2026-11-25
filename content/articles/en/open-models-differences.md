@@ -40,7 +40,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Open weights do not mean one licence: five models, four licence types
+# Open weights, four licence types: what each model allows
 
 The licence is the difference that decides whether you can use a model in a business at all. Of the five open-weight models read for this article, two are MIT, one carries a custom Qwen licence, one carries Mistral's own open-weight licence, and one carries a Kimi licence. "Open weight" tells you the files are downloadable; it does not tell you what you may do with them.
 

@@ -40,7 +40,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Claude, ChatGPT, Gemini and Grok: what actually differs between the closed models
+# Claude, ChatGPT, Gemini, Grok: what differs
 
 What differs is not which model scores highest. Two leaderboards were reachable and are printed below with their settings, but neither is treated here as a quality ranking. What a buyer is stuck with is four documented things: the context window, the price per million tokens, whether tool calling and structured output are documented, and whether file and image input are supported.
 
