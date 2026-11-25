@@ -6,10 +6,10 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Concept index
 
-- [Compliance](https://upahje.my/en/topics/compliance): What the rules require, what they do not, and what is unpublished. (1 article)
-- [Pematuhan](https://upahje.my/ms/topics/compliance): Apa yang dikehendaki peraturan, apa yang tidak, dan apa yang tidak diterbitkan. (1 article)
-- [Buying](https://upahje.my/en/topics/buying): What work costs, how to brief it, and how to compare quotes. (10 articles)
-- [Pembelian](https://upahje.my/ms/topics/buying): Kos kerja, cara menulis brief, dan cara membandingkan sebut harga. (10 articles)
+- [Compliance](https://upahje.my/en/topics/compliance): What the rules require, what they do not, and what is unpublished. (2 articles)
+- [Pematuhan](https://upahje.my/ms/topics/compliance): Apa yang dikehendaki peraturan, apa yang tidak, dan apa yang tidak diterbitkan. (2 articles)
+- [Buying](https://upahje.my/en/topics/buying): What work costs, how to brief it, and how to compare quotes. (11 articles)
+- [Pembelian](https://upahje.my/ms/topics/buying): Kos kerja, cara menulis brief, dan cara membandingkan sebut harga. (11 articles)
 - [AI and automation](https://upahje.my/en/topics/ai-automation): Agents, models and the loop that runs your request. (8 articles)
 - [AI dan automasi](https://upahje.my/ms/topics/ai-automation): Agent, model dan gelung yang menjalankan permintaan anda. (8 articles)
 - [Operations and growth](https://upahje.my/en/topics/operations-growth): How the business runs week to week, and where the duplication hides. (3 articles)
@@ -19,10 +19,12 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## English articles
 
+- [A first hire at RM3,000 costs RM3,448.50 a month](https://upahje.my/en/articles/first-hire-cost-malaysia): EPF, SOCSO, EIS and the LINDUNG 24 Jam deduction, line by line on a RM3,000 salary, with what is capped, what rounds up and what the payslip misses.
+- [A free clipper costs an evening, not RM61.78 a month](https://upahje.my/en/articles/self-hosted-clipping): OpusClip charges USD 15, which is RM61.78 converted. Two MIT repos clip locally for nothing, and Malay captions are unproven on both, so the trade is your time.
 - [CommandCode, OpenCode, DeepSeek: three different things](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers): One is a paid CLI, one is a free CLI, one is an API. Their published prices, their drift, and one run that shows an exit code of zero is not success.
 - [Google Business Profile: the fields that decide visibility](https://upahje.my/en/articles/google-business-profile-fields): Google documents name rules, category rules, hours and what triggers suspension: what an SME should fix first, and the four fields that get restricted.
 - [What a leaderboard row actually measures](https://upahje.my/en/articles/leaderboard-row-anatomy): SWE-bench and Terminal-bench score a model inside someone else's harness. The DeepSeek row is the example, and the run behind it has a reliability profile.
-- [Don't rewrite your site. Rewrite the 5%.](https://upahje.my/en/articles/rewrite-the-five-percent): Two MIT repos five days apart, 11,327 stars between them, prescribe opposite fixes for a slow app. The disagreement tells you which fix your problem needs.
+- [Don't rewrite your site. Rewrite the 5%.](https://upahje.my/en/articles/rewrite-the-five-percent): Two MIT repos five days apart, 11,986 stars between them on 24 November 2026, prescribe opposite fixes for a slow app. The disagreement says which you need.
 - [Where the same data gets typed three times](https://upahje.my/en/articles/same-data-typed-three-times): 97.2% of establishments use computers. The duplication sits between a digitised front office and a manual back office, and e-Invoice forces one record right.
 - [What an AI agent can and cannot do for a Malaysian SME](https://upahje.my/en/articles/what-an-ai-agent-can-do): An AI agent runs a loop on its own: reads a task, calls tools, checks, repeats. What that covers unattended, what needs a human, and what none should touch.
 - [The e-Invoice threshold is now RM3 million](https://upahje.my/en/articles/what-einvoice-automation-covers): LHDN raised the e-Invoice exemption to RM3 million on 1 September 2026, freeing 1.1 million traders. What is required, what is not, and what is unpublished.
@@ -45,6 +47,8 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Bahasa Melayu articles
 
+- [Klip percuma berharga satu malam, bukan RM61.78](https://upahje.my/ms/articles/klip-video-sendiri): OpusClip mengenakan USD 15, iaitu RM61.78 ditukar. Dua repo MIT memotong klip pada mesin sendiri tanpa bayaran, dan sari kata Melayu belum dibuktikan.
+- [Pekerja pertama bergaji RM3,000 berharga RM3,448.50](https://upahje.my/ms/articles/kos-pekerja-pertama-malaysia): EPF, SOCSO, EIS dan potongan LINDUNG 24 Jam, baris demi baris pada gaji RM3,000, dengan apa yang dihadkan, apa yang dibundarkan dan apa yang slip gaji terlepas.
 - [Apa yang sebenarnya diukur oleh satu baris papan pendahulu](https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu): SWE-bench dan Terminal-bench menilai model di dalam harness orang lain. Baris DeepSeek contohnya, dan larian di belakangnya ada profil kebolehpercayaan.
 - [Apa yang AI agent boleh buat untuk PKS Malaysia](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat): AI agent menjalankan gelung sendiri: baca tugasan, panggil tool, ulang. Apa yang dibuat tanpa penyeliaan, apa yang perlukan manusia, apa yang jangan disentuh.
 - [Ambang e-Invoice kini RM3 juta](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi): LHDN menaikkan pengecualian e-Invoice kepada RM3 juta pada 1 September 2026, melepaskan 1.1 juta peniaga. Apa yang diwajibkan, apa yang tidak.
@@ -53,7 +57,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 - [Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali): 97.2% pertubuhan guna komputer, jadi penggunaan bukan masalah. Penduaan antara pejabat hadapan digital dan belakang manual, dan e-Invoice memaksa rekod betul.
 - [Kos chatbot WhatsApp: setiap mesej, setiap bulan](https://upahje.my/ms/articles/kos-chatbot-whatsapp-malaysia): Percuma hingga 1,000 mesej servis sebulan dan percuma untuk mesej pelanggan. Pemasaran RM0.3467; vendor Malaysia menambah RM200 hingga RM1,500.
 - [Google Business Profile: medan penentu sama ada anda muncul](https://upahje.my/ms/articles/medan-google-business-profile): Google mendokumenkan peraturan nama, kategori, waktu dan pencetus penggantungan; apa patut PKS betulkan dahulu, dan empat medan yang menghadkan profil.
-- [Jangan tulis semula laman anda. Tulis semula 5% itu.](https://upahje.my/ms/articles/tulis-semula-lima-peratus): Dua repo MIT lima hari selang, 11,327 bintang, nasihat bertentangan untuk aplikasi lambat. Perselisihan itu menunjukkan pembetulan mana yang diperlukan.
+- [Jangan tulis semula laman anda. Tulis semula 5% itu.](https://upahje.my/ms/articles/tulis-semula-lima-peratus): Dua repo MIT lima hari selang, 11,986 bintang pada 24 November 2026, nasihat bertentangan untuk aplikasi lambat. Perselisihan itu menentukan pembetulan.
 - [Agent harness, AI harness, agent framework: maksudnya](https://upahje.my/ms/articles/agent-harness-atau-ai-harness): Agent harness menjalankan gelung agent: melaksanakan tool call, menyimpan transkrip, menguatkuasakan kebenaran. Vendor guna agent harness, bukan AI harness.
 - [Apa itu agent harness, dan apa yang ia buat](https://upahje.my/ms/articles/apa-itu-agent-harness): Harness berada antara anda dan model: ia menyimpan perbualan, menjalankan tools, menghantar permintaan dan menstrim jawapan. Rupa satu mesej di dalamnya.
 - [Apa itu API, untuk pemilik perniagaan kecil Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia): API ialah kontrak antara dua sistem untuk bertukar data tanpa orang menyalinnya. Maksudnya bagi PKS, beza model terbuka dengan tertutup, dan kos menyambungnya.

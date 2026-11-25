@@ -4,6 +4,158 @@
 
 # English
 
+## A first hire at RM3,000 costs RM3,448.50 a month
+
+URL: https://upahje.my/en/articles/first-hire-cost-malaysia
+Checked: 2026-11-24
+
+A RM3,000 salary costs the business RM3,448.50 a month before any allowance, and the person receives RM2,626.50. The gap is four statutory lines, and one of them is a deduction most payroll templates do not carry: LINDUNG 24 Jam, a cover paid entirely by the employee.
+
+## The employer pays 14.95% above the salary
+
+The employer's share is EPF at 13%, SOCSO at 1.75% and EIS at 0.2% of the wage, because a RM3,000 monthly wage sits below the RM5,000 line where EPF drops to 12%. Those three lines add RM448.50 to the RM3,000.
+
+The employee's side is larger than it looks. EPF takes 11%, SOCSO 0.5%, EIS 0.2%, and LINDUNG 24 Jam another 0.75% in its first phase. That is RM373.50, so the take-home is RM2,626.50.
+
+## Two of the four lines are capped
+
+SOCSO and EIS are capped at an assumed monthly wage of RM6,000, a ceiling that took effect on 1 October 2024. Above that wage the contributions stay flat in ringgit, which makes them proportionally cheaper for a senior hire and proportionally painful for a first hire near the floor.
+
+SOCSO also has a second category: an employer contribution of 1.25% that covers the injury scheme only, for employees aged 60 and over.
+
+## The payslip line most templates miss
+
+LINDUNG 24 Jam covers accidents outside work and not related to the job, around the clock, for eligible employees. The employee pays the whole contribution, which is why it never appears in an employer-cost calculator.
+
+It is phased: 0.75% for the first two years, 1.0% for the next three, and 1.25% from the sixth year. Employees already on the payroll stayed in the scheme unless they opted out during the window that ran from 13 July to 31 August 2026.
+
+A first hire joining today does not get that window. PERKESO's own page states that local employees employed for the first time after 31 August 2026 are required to contribute under SKBBK, so the 0.75% belongs on the payslip from the first month.
+
+## What the RM3,000 hire looks like
+
+| Line | Employer pays | Employee pays |
+| --- | --- | --- |
+| Gross salary | RM3,000.00 | — |
+| EPF 13% / 11% | RM390.00 | RM330.00 |
+| SOCSO 1.75% / 0.5% | RM52.50 | RM15.00 |
+| EIS 0.2% / 0.2% | RM6.00 | RM6.00 |
+| LINDUNG 24 Jam 0.75% | — | RM22.50 |
+| Total | RM3,448.50 | RM373.50 |
+
+The percentages are as published, but the ringgit amounts on a real payslip come from the contribution schedule, which is table-based and rounds up to the next ringgit. Expect the schedule to differ from flat arithmetic by a few sen, not by ringgit.
+
+At RM2,000 the same arithmetic gives an employer cost of RM2,299.00 and an employee deduction of RM249.00. The employer share stays at 14.95%, because every line below the ceiling is a flat percentage of the wage.
+
+## Two lines with no number here
+
+The HRD Corp levy starts at five Malaysian employees: optional at five to nine at 0.5%, compulsory at ten at 1%, with Form 1 reviewed within 30 days. A first hire sits below both bands, which is why no levy appears in the totals above.
+
+PCB, the monthly tax deduction, is computed from LHDN's MTD schedule. The page read documents the mechanism, the free submission channels and the payment routes, and it gives no remittance due date; anyone quoting a date for it is citing the MTD rules, not that page. The take-home figures above are before tax, and this article does not estimate a tax number.
+
+## What to do before the first payslip
+
+1. Register the employer with EPF and PERKESO before the first salary month, not after it.
+2. Pay the contribution on or before the 15th of the following month; the KWSP page's own example is January salary, February contribution, paid by 15 February.
+3. Add LINDUNG 24 Jam to the payslip template at 0.75%, and put the phase change in a calendar note for two years out.
+4. Use the schedule amount for SOCSO and EIS, not a flat percentage, and round up as the schedule does.
+5. Budget the employer cost, not the salary, when you decide what you can afford to hire.
+
+My opinion, stated once: the salary is the smaller number in this decision. A business that budgets RM3,000 and discovers RM3,448.50 after the offer has already spent the difference on something else, and the first place it cuts is the training the new hire needed.
+
+---
+
+**Read next**
+
+[Where the same data gets typed three times](https://upahje.my/en/articles/same-data-typed-three-times)
+
+[More definitions, explained plainly](https://upahje.my/en/articles/category/definitions)
+
+### Sources
+
+- KWSP, employer mandatory contribution (rates, Third Schedule rounding, 15th-of-the-month payment) — https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution (checked 2026-11-24)
+- PERKESO, contributions (EPF-adjacent scope, EIS, registration) — https://www.perkeso.gov.my/en/our-services/employer-employee/contributions.html (checked 2026-11-24)
+- PERKESO, contribution rate (SOCSO 1.75%/0.5%, RM6,000 ceiling, second category) — https://www.perkeso.gov.my/en/our-services/employer-employee/kadar-caruman.html (checked 2026-11-24)
+- PERKESO, LINDUNG 24 Jam (employee-borne, phased rates, SKBBK for new hires after 31 August 2026) — https://www.perkeso.gov.my/en/our-services/protection/lindung-24-jam.html (checked 2026-11-24)
+- HRD Corp, registered employers (levy thresholds, 0.5% and 1%, Form 1 review) — https://hrdcorp.gov.my/registered-employers (checked 2026-11-24)
+- LHDN, monthly tax deduction page (mechanism and channels, no remittance date) — https://www.hasil.gov.my/en/majikan/pembayaran-pcb/ (checked 2026-11-24)
+
+## A free clipper costs an evening, not RM61.78 a month
+
+URL: https://upahje.my/en/articles/self-hosted-clipping
+Checked: 2026-11-24
+
+OpusClip's Starter plan is USD 15 a month, which is RM61.78 at Bank Negara's middle rate of 4.1185 on 24 November 2026, and no Malaysian publisher prints a ringgit price for a clipping subscription at all. Two MIT-licensed repos that appeared in the same week clip on your own machine for nothing, and neither has demonstrated a Malay caption.
+
+## The subscription is priced in dollars
+
+OpusClip prints "USD 15/mo" for Starter and sells it monthly only. That is the only unambiguous price on the page read; the Pro tier sits behind a yearly/monthly toggle and a pack selector, and its figure was not captured as a static number.
+
+The ringgit figure above is a conversion, not a Malaysian price. No publisher selling clipping subscriptions to Malaysians printed one on any page read, and presenting a converted dollar as a local price is how a RM45 subscription turns into RM62 in a budget.
+
+## Two repos arrived in the same week
+
+`neonclipping` was created on 19 November 2026 and has 2,313 stars as of 24 November 2026: MIT, Python, "paste a link, get captioned 9:16 clips in about two minutes". `PeakCut` was created on 14 November 2026 and has 1,848 stars as of 24 November 2026: MIT, Python, self-hosted, bring your own AI key.
+
+Both are young, both are moving, and both are already past the star counts that circulated when they launched, which is a reminder that a star count is true for the minute it is read: `neonclipping` moved by one between the packet and this check.
+
+## What the free path costs instead
+
+A machine with a GPU, the electricity, and an evening to install and tune it. neonclipping's own measured table reports 97 seconds to clip an 85-minute stream in Fast mode, on one machine with an RTX 2060 and 16 threads.
+
+That figure is the author's machine, not yours and not a Malaysian laptop's. A slower card means a longer wait, and no test of either repo on Malaysian hardware exists.
+
+## The numbers, side by side
+
+| Item | OpusClip Starter | neonclipping | PeakCut |
+| --- | --- | --- | --- |
+| Price as printed | USD 15/month | 0 | 0 |
+| Ringgit per month, converted at 4.1185 | 61.78 | 0 | 0 |
+| Licence fee | n/a | 0, MIT | 0, MIT |
+| Time per clip, as published | not printed | 97 s for an 85-minute stream | not printed |
+| GitHub stars, as of 24 November 2026 | n/a | 2,313 | 1,848 |
+| Malay captions demonstrated | n/a | unproven | English only |
+
+The two zeroes are licence costs, not total costs. Your time and the machine are real, and the table cannot price them for you.
+
+## Where the free path breaks
+
+**Malay captions.** neonclipping claims 52 caption languages through Whisper and does not name Malay among them, and publishes no Malay sample or accuracy figure. PeakCut "hears English by default" and states that "captions on the clips are in English", with Arabic as the only documented non-English path. If your audience reads captions in Malay, neither repo has shown you it works.
+
+**What the model can see.** neonclipping's own limits section says the local LLM "sees text only; it cannot see the screen", and its optional visual review is off by default and can add CPU time. PeakCut clips by loudness when no key is supplied.
+
+## The volume where cancelling pays
+
+The arithmetic: RM61.78 buys four clips a month at RM15.45 each, eight at RM7.72, and twelve at RM5.15. The free path's marginal cost is 97 seconds of GPU per 85-minute source, so twelve clips cost about nineteen minutes of machine time for the month.
+
+Twelve clips is the number I would use, and it is a judgement rather than a sourced finding. Below it, you are paying RM5 to RM15 a clip for convenience; above it, the free path's cost is fixed and the subscription buys nothing you cannot do on the machine you already own.
+
+The instalment is one evening either way. That is the real cost on the free side, and it is paid once.
+
+## What to do this week
+
+1. Count the clips you published last month, not the ones you meant to.
+2. Install one repo on the machine you already own and clip one long video.
+3. Watch the output for Malay words if your captions are in Malay; no repo will tell you how good they are.
+4. Time the run, and compare that time against RM61.78 of subscription.
+5. Decide on the count, not on the demo.
+
+The cheapest mistake here is paying for a year of clips you never post.
+
+---
+
+**Read next**
+
+[What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
+
+[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+
+### Sources
+
+- OpusClip, pricing (Starter at USD 15 per month, USD only) — https://www.opus.pro/pricing (checked 2026-11-24)
+- Bank Negara Malaysia, exchange-rate API (USD middle rate 4.1185) — https://api.bnm.gov.my/public/exchange-rate (checked 2026-11-24)
+- iamajmeena/neonclipping, repository (MIT, created 19 November 2026) — https://github.com/iamajmeena/neonclipping (checked 2026-11-24)
+- haziqahmedqasmi/PeakCut, repository (MIT, created 14 November 2026) — https://github.com/haziqahmedqasmi/PeakCut (checked 2026-11-24)
+
 ## CommandCode, OpenCode, DeepSeek: three different things
 
 URL: https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers
@@ -267,13 +419,13 @@ That the arm kept going through 94 retries and nearly three hours. It does not p
 URL: https://upahje.my/en/articles/rewrite-the-five-percent
 Checked: 2026-11-23
 
-Two repositories published five days apart carry 11,327 stars and give opposite advice. One says port the whole app to Rust, piece by piece. The other says port only the 5% that is slow. Both are MIT, and both are right. What decides which one you need is not your stack.
+Two repositories published five days apart carry 11,986 stars between them as of 24 November 2026, and give opposite advice. One says port the whole app to Rust, piece by piece. The other says port only the 5% that is slow. Both are MIT, and both are right. What decides which one you need is not your stack.
 
 ## Two MIT repos, five days apart, argue opposite fixes
 
-`rust-anything`, created 16 November 2026, has 8,516 stars. Its description promises the whole application: rewrite it in Rust one piece at a time, checked against the original's recorded behaviour at every step. Its README claims one port: Prettier, "19x faster", with "15,861 of 17,224 recorded runs" in Rust and every run byte-identical.
+`rust-anything`, created 16 November 2026, has 8,782 stars as of 24 November 2026. Its description promises the whole application: rewrite it in Rust one piece at a time, checked against the original's recorded behaviour at every step. Its README claims one port: Prettier, "19x faster", with "15,861 of 17,224 recorded runs" in Rust and every run byte-identical.
 
-`fast-anything`, created 21 November 2026, has 2,811 stars. Its description argues against that scope: don't rewrite it in Rust, rewrite the 5% that's slow, port the hot functions, prove they behave the same.
+`fast-anything`, created 21 November 2026, has 3,204 stars as of 24 November 2026. Its description argues against that scope: don't rewrite it in Rust, rewrite the 5% that's slow, port the hot functions, prove they behave the same.
 
 They disagree about scope, and money follows scope.
 
@@ -564,7 +716,7 @@ The task your team does most often that has a clear finish line and a cheap mist
 
 - Anthropic, Agent SDK overview (agent harness definition) — https://code.claude.com/docs/en/agent-sdk/overview (checked 2026-11-23)
 - Anthropic, Claude API pricing (Claude Haiku 5.5) — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-23)
-- Bank Negara Malaysia, public exchange-rate API (USD/MYR middle rate 4.1145, 19 November 2026) — https://api.bnm.gov.my/public/exchange-rate (checked 2026-11-23)
+- Bank Negara Malaysia, exchange rates (the USD middle rate quoted is the one published 19 November 2026; the page shows the latest rate) — https://www.bnm.gov.my/exchange-rates (checked 2026-11-23)
 - Pang Jun Han, AI automation pricing (published project rates) — https://pangjunhan.vercel.app/ai-automation (checked 2026-11-23)
 - Autoflow Solutions, services (autonomous task execution pricing) — https://www.autoflow-solutions.com/my/services (checked 2026-11-23)
 - KodeSME, automation pricing — https://kodesme.klyihao.com/ (checked 2026-11-23)
@@ -1447,7 +1599,7 @@ One row per product, with the evidence level stated, because three of these were
 | Product | What it is | Licence or terms | Evidence level | Status | Source |
 | --- | --- | --- | --- | --- | --- |
 | OpenBot (nightly-labs) | Local-first desktop workspace for persistent AI teammates, with a plugin marketplace | PolyForm Noncommercial 1.0.0; repo licence field reads NOASSERTION | Official source, read 2026-11-19 | Active, pushed 2026-11-19, 9,037 stars | [github.com/nightly-labs/openbot](https://github.com/nightly-labs/openbot) |
-| MausBot (OpenMausBot) | Open-source Grok Bot alternative with a virtual machine bots can use | Apache-2.0 on the main repo; a separate download repo carries MIT | Official source, read 2026-11-19 | Active, pushed 2026-11-18, 25,485 stars | [github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) |
+| MausBot (OpenMausBot) | Open-source Grok Bot alternative with a virtual machine bots can use | Apache-2.0 on the main repo; the MIT download repo previously cited here no longer resolves | Official source, read 2026-11-19 | Active, pushed 2026-11-18, 25,485 stars | [github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) |
 | Grok Bot (xAI) | Always-on agents with their own computer, working inside apps | Closed; signed macOS app, no public repo | Official source, announcement dated 2026-08-11 | Beta | [x.ai/news/introducing-grok-bot](https://x.ai/news/introducing-grok-bot) |
 | Dots (OpenAI) | Always-on agents inside ChatGPT, with their own cloud computer | Closed; no public repo | Official source, announcement dated 2026-09-29 | Live, rolling out to Enterprise from 2026-11-18 | [openai.com/index/introducing-dots](https://openai.com/index/introducing-dots/) |
 | DeepSeek Harness | Harness run by a profile, with MCP servers per profile | npm package, see package metadata | Ran here; no longer re-verifiable end to end | Installed 0.2.2-rc.1 on 2026-11-19 | [npmjs.com/package/@deepseek-ai/dsh](https://www.npmjs.com/package/@deepseek-ai/dsh) |
@@ -1499,7 +1651,7 @@ No, despite its site saying the source code is open. The repository's licence fi
 
 ### Is MausBot open source?
 
-MausBot's main repository is Apache-2.0, which is open source and permits commercial use. Note the split: a second repository, `OpenMausBot/OpenMausBot`, carries MIT and describes itself as a download repo, so read which repository you are actually cloning.
+MausBot's main repository is Apache-2.0, which is open source and permits commercial use. A second repository described itself as an MIT download repo and was cited here until 24 November 2026, when that link returned 404 and the GitHub organisation behind it no longer resolves, so the split can no longer be checked and the download repo is not cited.
 
 ### Does an open-source harness mean an open-source model?
 
@@ -1511,7 +1663,6 @@ No. The harness and the model are separate, and the split runs both ways: an ope
 - OpenBot site (the claim that the source is open) — https://openbot.run/ (checked 2026-11-19)
 - MausBot site — https://mausbot.com/ (checked 2026-11-19)
 - milind-soni/OpenMausBot, repository metadata (Apache-2.0) — https://github.com/milind-soni/OpenMausBot (checked 2026-11-19)
-- OpenMausBot/OpenMausBot, download repository (MIT) — https://github.com/OpenMausBot/OpenMausBot (checked 2026-11-19)
 - xAI, introducing Grok Bot — https://x.ai/news/introducing-grok-bot (checked 2026-11-19)
 - OpenAI, introducing Dots — https://openai.com/index/introducing-dots/ (checked 2026-11-19)
 - DeepSeek Harness package metadata, installed on this machine — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
@@ -1882,11 +2033,11 @@ Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 
 
 ### Sources
 
-- Claude, pricing — https://claude.com/pricing (checked 2026-11-19)
-- ChatGPT, pricing — https://chatgpt.com/pricing (checked 2026-11-19)
-- GitHub Copilot, plans — https://github.com/features/copilot/plans (checked 2026-11-19)
-- Anthropic, Claude API pricing — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-19)
-- Bank Negara Malaysia, public exchange-rate API (USD/MYR middle rate 4.1145) — https://api.bnm.gov.my/public/exchange-rate (checked 2026-11-19)
+- Claude, pricing — https://claude.com/pricing (checked 2026-11-24)
+- ChatGPT, pricing — https://chatgpt.com/pricing (checked 2026-11-24)
+- GitHub Copilot, plans — https://github.com/features/copilot/plans (checked 2026-11-24)
+- Anthropic, Claude API pricing — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-24)
+- Bank Negara Malaysia, exchange rates (the USD middle rate quoted is the one published 19 November 2026; the page shows the latest rate) — https://www.bnm.gov.my/exchange-rates (checked 2026-11-24)
 
 ## Five side-income skills in Malaysia that pay in 2026
 
@@ -2172,6 +2323,158 @@ A single read-only endpoint takes a competent developer about a day. Anything th
 
 # Bahasa Melayu
 
+## Klip percuma berharga satu malam, bukan RM61.78
+
+URL: https://upahje.my/ms/articles/klip-video-sendiri
+Checked: 2026-11-24
+
+Pelan Starter OpusClip ialah USD 15 sebulan, iaitu RM61.78 pada kadar tengah Bank Negara 4.1185 pada 24 November 2026, dan tiada penerbit Malaysia mencetak harga ringgit untuk langganan klip langsung. Dua repo berlesen MIT yang muncul pada minggu yang sama memotong klip pada mesin sendiri tanpa bayaran, dan kedua-duanya belum menunjukkan sari kata Melayu.
+
+## Langganan itu berharga dalam dolar
+
+OpusClip mencetak "USD 15/mo" untuk Starter dan menjualnya bulanan sahaja. Itu satu-satunya harga yang jelas pada halaman yang dibaca; tier Pro berada di sebalik togol tahunan/bulanan dan pemilih pek, dan angkanya tidak ditangkap sebagai nombor statik.
+
+Angka ringgit di atas ialah penukaran, bukan harga Malaysia. Tiada penerbit yang menjual langganan klip kepada orang Malaysia mencetak harganya pada mana-mana halaman yang dibaca, dan menampilkan dolar yang ditukar sebagai harga tempatan ialah cara langganan RM45 menjadi RM62 dalam bajet.
+
+## Dua repo tiba pada minggu yang sama
+
+`neonclipping` dicipta pada 19 November 2026 dan mempunyai 2,313 bintang setakat 24 November 2026: MIT, Python, "paste a link, get captioned 9:16 clips in about two minutes". `PeakCut` dicipta pada 14 November 2026 dan mempunyai 1,848 bintang setakat 24 November 2026: MIT, Python, kendiri, bawa kunci AI sendiri.
+
+Kedua-duanya muda, kedua-duanya masih bergerak, dan kedua-duanya sudah melepasi angka bintang yang tersebar ketika pelancaran, yang mengingatkan bahawa kiraan bintang hanya benar pada minit ia dibaca: `neonclipping` bergerak satu antara pek dan semakan ini.
+
+## Apa kos laluan percuma sebaliknya
+
+Mesin dengan GPU, elektrik, dan satu malam untuk memasang dan menala. Jadual ukuran neonclipping sendiri melaporkan 97 saat untuk memotong strim 85 minit dalam mod Fast, pada satu mesin dengan RTX 2060 dan 16 thread.
+
+Angka itu mesin penulis, bukan mesin anda dan bukan laptop Malaysia. Kad yang lebih perlahan bermakna tunggu lebih lama, dan tiada ujian mana-mana repo pada perkakasan Malaysia.
+
+## Angkanya, sebelah menyebelah
+
+| Perkara | OpusClip Starter | neonclipping | PeakCut |
+| --- | --- | --- | --- |
+| Harga seperti dicetak | USD 15 sebulan | 0 | 0 |
+| Ringgit sebulan, ditukar pada 4.1185 | 61.78 | 0 | 0 |
+| Fi lesen | tiada | 0, MIT | 0, MIT |
+| Masa setiap klip, seperti diterbitkan | tidak dicetak | 97 s untuk strim 85 minit | tidak dicetak |
+| Bintang GitHub, setakat 24 November 2026 | tiada | 2,313 | 1,848 |
+| Sari kata Melayu dibuktikan | tiada | belum dibuktikan | Inggeris sahaja |
+
+Dua sifar itu kos lesen, bukan kos keseluruhan. Masa anda dan mesin itu nyata, dan jadual ini tidak boleh menilai keduanya untuk anda.
+
+## Di mana laluan percuma patah
+
+**Sari kata Melayu.** neonclipping mendakwa 52 bahasa sari kata melalui Whisper dan tidak menamakan Melayu antaranya, serta tidak menerbitkan sampel atau angka ketepatan Melayu. PeakCut "hears English by default" dan menyatakan "captions on the clips are in English", dengan Arab sebagai satu-satunya laluan bukan Inggeris yang didokumenkan. Jika penonton anda membaca sari kata Melayu, tiada repo menunjukkan ia berfungsi.
+
+**Apa yang model boleh lihat.** Bahagian had neonclipping sendiri menyatakan LLM tempatan "sees text only; it cannot see the screen", dan semakan visual pilihannya mati secara lalai serta boleh menambah masa CPU. PeakCut memotong mengikut kekuatan bunyi apabila tiada kunci diberi.
+
+## Jumlah di mana membatalkan berbaloi
+
+Kiraannya: RM61.78 membeli empat klip sebulan pada RM15.45 setiap satu, lapan pada RM7.72, dan dua belas pada RM5.15. Kos marginal laluan percuma ialah 97 saat GPU bagi sumber 85 minit, jadi dua belas klip menelan kira-kira sembilan belas minit masa mesin sebulan.
+
+Dua belas klip ialah angka yang saya gunakan, dan itu pertimbangan, bukan penemuan bersumber. Di bawahnya, anda membayar RM5 hingga RM15 sekeping untuk kemudahan; di atasnya, kos laluan percuma tetap dan langganan tidak membeli apa-apa yang mesin anda sendiri tidak boleh buat.
+
+Pemasangan tetap satu malam. Itu kos sebenar di pihak percuma, dan ia dibayar sekali.
+
+## Apa yang perlu dibuat minggu ini
+
+1. Kira klip yang anda terbitkan bulan lepas, bukan yang anda niatkan.
+2. Pasang satu repo pada mesin yang anda sudah miliki dan potong satu video panjang.
+3. Perhatikan output untuk perkataan Melayu jika sari kata anda dalam Melayu; tiada repo akan memberitahu sejauh mana kualitinya.
+4. Masa larian itu, dan bandingkan dengan RM61.78 langganan.
+5. Putuskan berdasarkan kiraan, bukan demo.
+
+Kesilapan paling murah di sini ialah membayar setahun klip yang tidak pernah disiarkan.
+
+---
+
+**Bacaan lanjut**
+
+[Kos kerja automasi di Malaysia: harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
+
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)
+
+### Sources
+
+- OpusClip, harga (Starter USD 15 sebulan, USD sahaja) — https://www.opus.pro/pricing (checked 2026-11-24)
+- Bank Negara Malaysia, API kadar pertukaran (kadar tengah USD 4.1185) — https://api.bnm.gov.my/public/exchange-rate (checked 2026-11-24)
+- iamajmeena/neonclipping, repositori (MIT, dicipta 19 November 2026) — https://github.com/iamajmeena/neonclipping (checked 2026-11-24)
+- haziqahmedqasmi/PeakCut, repositori (MIT, dicipta 14 November 2026) — https://github.com/haziqahmedqasmi/PeakCut (checked 2026-11-24)
+
+## Pekerja pertama bergaji RM3,000 berharga RM3,448.50
+
+URL: https://upahje.my/ms/articles/kos-pekerja-pertama-malaysia
+Checked: 2026-11-24
+
+Gaji RM3,000 menelan RM3,448.50 sebulan daripada poket perniagaan sebelum sebarang elaun, dan orang itu membawa pulang RM2,626.50. Jurangnya empat baris statutori, dan satu daripadanya potongan yang jarang ada dalam templat gaji: LINDUNG 24 Jam, perlindungan yang ditanggung sepenuhnya oleh pekerja.
+
+## Majikan membayar 14.95% atas gaji
+
+Bahagian majikan ialah EPF 13%, SOCSO 1.75% dan EIS 0.2% daripada gaji, kerana gaji RM3,000 sebulan berada di bawah garis RM5,000 tempat EPF turun ke 12%. Tiga baris itu menambah RM448.50 kepada RM3,000.
+
+Bahagian pekerja lebih besar daripada yang kelihatan. EPF mengambil 11%, SOCSO 0.5%, EIS 0.2%, dan LINDUNG 24 Jam 0.75% lagi pada fasa pertamanya. Itu RM373.50, jadi bawa pulang ialah RM2,626.50.
+
+## Dua daripada empat baris dihadkan
+
+SOCSO dan EIS dihadkan pada andaian gaji bulanan RM6,000, siling yang berkuat kuasa 1 Oktober 2024. Melebihi gaji itu, caruman kekal rata dalam ringgit, jadi ia lebih murah dari segi nisbah bagi pekerja kanan dan lebih terasa bagi pekerja pertama yang berhampiran lantai.
+
+SOCSO juga ada kategori kedua: caruman majikan 1.25% yang melindungi skim kemalangan sahaja, bagi pekerja berumur 60 tahun ke atas.
+
+## Baris slip gaji yang paling banyak terlepas
+
+LINDUNG 24 Jam melindungi kemalangan di luar kerja dan tidak berkaitan pekerjaan, sepanjang masa, untuk pekerja yang layak. Pekerja membayar seluruh caruman, sebab itulah ia tidak pernah muncul dalam kalkulator kos majikan.
+
+Ia berperingkat: 0.75% untuk dua tahun pertama, 1.0% untuk tiga tahun berikutnya, dan 1.25% dari tahun keenam. Pekerja yang sudah dalam senarai gaji kekal dalam skim itu melainkan mereka menarik diri dalam tetingkap 13 Julai hingga 31 Ogos 2026.
+
+Pekerja pertama yang menyertai hari ini tidak mendapat tetingkap itu. Halaman PERKESO sendiri menyatakan pekerja tempatan yang diambil bekerja pertama kali selepas 31 Ogos 2026 dikehendaki menyumbang di bawah SKBBK, jadi 0.75% itu berada pada slip gaji dari bulan pertama.
+
+## Rupa pekerja RM3,000 itu
+
+| Baris | Majikan bayar | Pekerja bayar |
+| --- | --- | --- |
+| Gaji kasar | RM3,000.00 | — |
+| EPF 13% / 11% | RM390.00 | RM330.00 |
+| SOCSO 1.75% / 0.5% | RM52.50 | RM15.00 |
+| EIS 0.2% / 0.2% | RM6.00 | RM6.00 |
+| LINDUNG 24 Jam 0.75% | — | RM22.50 |
+| Jumlah | RM3,448.50 | RM373.50 |
+
+Peratusannya seperti yang diterbitkan, tetapi jumlah ringgit pada slip gaji sebenar datang daripada jadual caruman, yang berasaskan jadual dan dibundarkan ke ringgit berikutnya. Jadual itu boleh berbeza daripada aritmetik rata beberapa sen, bukan beberapa ringgit.
+
+Pada RM2,000, aritmetik yang sama memberi kos majikan RM2,299.00 dan potongan pekerja RM249.00. Bahagian majikan kekal 14.95%, kerana setiap baris di bawah siling ialah peratusan rata daripada gaji.
+
+## Dua baris tanpa angka di sini
+
+Levi HRD Corp bermula pada lima pekerja Malaysia: pilihan pada lima hingga sembilan pada 0.5%, wajib pada sepuluh pada 1%, dengan Borang 1 disemak dalam tempoh 30 hari. Pekerja pertama berada di bawah kedua-dua jalur, sebab itulah tiada levi dalam jumlah di atas.
+
+PCB, potongan cukai bulanan, dikira daripada jadual MTD LHDN. Halaman yang dibaca menerangkan mekanisme, saluran penyerahan percuma dan laluan bayaran, dan ia tidak memberikan tarikh akhir remitan; sesiapa yang memetik tarikh untuknya sedang merujuk peraturan MTD, bukan halaman itu. Angka bawa pulang di atas adalah sebelum cukai, dan artikel ini tidak menganggar angka cukai.
+
+## Apa yang perlu dibuat sebelum slip gaji pertama
+
+1. Daftarkan majikan dengan EPF dan PERKESO sebelum bulan gaji pertama, bukan selepasnya.
+2. Bayar caruman pada atau sebelum 15 haribulan berikutnya; contoh pada halaman KWSP sendiri ialah gaji Januari, caruman Februari, dibayar menjelang 15 Februari.
+3. Masukkan LINDUNG 24 Jam dalam templat slip gaji pada 0.75%, dan catat perubahan fasa dalam kalendar dua tahun dari sekarang.
+4. Guna jumlah jadual bagi SOCSO dan EIS, bukan peratusan rata, dan bundarkan seperti jadual itu.
+5. Bajetkan kos majikan, bukan gaji, ketika memutuskan siapa yang mampu diupah.
+
+Pendapat saya, dinyatakan sekali: gaji ialah angka yang lebih kecil dalam keputusan ini. Perniagaan yang membajet RM3,000 dan menemui RM3,448.50 selepas tawaran diterima sudah membelanjakan beza itu pada perkara lain, dan tempat pertama ia memotong ialah latihan yang pekerja baharu perlukan.
+
+---
+
+**Bacaan lanjut**
+
+[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali)
+
+[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/articles/category/definitions)
+
+### Sources
+
+- KWSP, caruman wajib majikan (kadar, pembundaran Jadual Ketiga, bayaran 15 haribulan) — https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution (checked 2026-11-24)
+- PERKESO, caruman (skop, EIS, pendaftaran) — https://www.perkeso.gov.my/en/our-services/employer-employee/contributions.html (checked 2026-11-24)
+- PERKESO, kadar caruman (SOCSO 1.75%/0.5%, siling RM6,000, kategori kedua) — https://www.perkeso.gov.my/en/our-services/employer-employee/kadar-caruman.html (checked 2026-11-24)
+- PERKESO, LINDUNG 24 Jam (ditanggung pekerja, kadar berperingkat, SKBBK untuk pekerja baharu selepas 31 Ogos 2026) — https://www.perkeso.gov.my/en/our-services/protection/lindung-24-jam.html (checked 2026-11-24)
+- HRD Corp, majikan berdaftar (ambang levi, 0.5% dan 1%, semakan Borang 1) — https://hrdcorp.gov.my/registered-employers (checked 2026-11-24)
+- LHDN, halaman potongan cukai bulanan (mekanisme dan saluran, tiada tarikh remitan) — https://www.hasil.gov.my/en/majikan/pembayaran-pcb/ (checked 2026-11-24)
+
 ## Apa yang sebenarnya diukur oleh satu baris papan pendahulu
 
 URL: https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu
@@ -2358,7 +2661,7 @@ Tugasan yang paling kerap dibuat pasukan anda, yang ada garisan penamat jelas da
 
 - Anthropic, gambaran Agent SDK (takrif agent harness) — https://code.claude.com/docs/en/agent-sdk/overview (checked 2026-11-23)
 - Anthropic, harga API Claude (Claude Haiku 5.5) — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-23)
-- Bank Negara Malaysia, API kadar pertukaran awam (kadar tengah USD/MYR 4.1145, 19 November 2026) — https://api.bnm.gov.my/public/exchange-rate (checked 2026-11-23)
+- Bank Negara Malaysia, kadar pertukaran (kadar tengah USD yang dipetik ialah kadar yang diterbitkan 19 November 2026; halaman memaparkan kadar terkini) — https://www.bnm.gov.my/exchange-rates (checked 2026-11-23)
 - Pang Jun Han, harga automasi AI (kadar projek yang diterbitkan) — https://pangjunhan.vercel.app/ai-automation (checked 2026-11-23)
 - KodeSME, harga automasi — https://kodesme.klyihao.com/ (checked 2026-11-23)
 
@@ -2750,13 +3053,13 @@ Tiga bil berbeza sampai ke satu chatbot WhatsApp, dan ia datang daripada dua sya
 | Templat utiliti di luar tetingkap | RM0.0564 setiap satu | Meta |
 | Mesej servis melepasi elaun 1,000 | RM0.0564 setiap satu | Meta |
 | Mesej Meta Business Agent | Dicaj setiap juta token | Meta |
-| Tokokan BSP, hosting dan tempat duduk | Fi vendor itu sendiri | Vendor anda |
+| Tokokan BSP, hosting dan lesen pengguna | Fi vendor itu sendiri | Vendor anda |
 
 Elaun itu dikira bagi setiap nombor perniagaan dan ditetapkan semula setiap bulan kalendar; mesej yang tidak digunakan tidak terbawa ke bulan berikutnya. Mesej servis melepasi elaun dicaj sejak 1 Oktober 2026.
 
 ## Bagaimana Meta mengenakan caj untuk mesej WhatsApp?
 
-Setiap mesej, mengikut kategori, dan hanya apabila mesej itu dihantar kepada penerima. Unitnya bukan perbualan dan bukan sesi.
+Setiap mesej, mengikut kategori, dan hanya apabila mesej itu sampai kepada penerima. Unitnya bukan perbualan dan bukan sesi.
 
 Tiga peraturan daripada halaman harga Meta menetapkan bil, semuanya berkuat kuasa dari 1 Oktober 2026 bagi kad kadar yang digunakan di sini:
 
@@ -2839,7 +3142,7 @@ Halaman pengesahan antarabangsa yang khusus tidak dibuka, jadi baris itu bergant
 
 ### Adakah satu mesej benar-benar RM0.3467?
 
-Hanya mesej pemasaran, dan hanya apabila ia dihantar kepada penerima. Utiliti, pengesahan dan servis RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan percuma.
+Hanya mesej pemasaran, dan hanya apabila ia sampai kepada penerima. Utiliti, pengesahan dan servis RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan percuma.
 
 ### Adakah saya dicaj apabila pelanggan menghantar mesej?
 
@@ -2976,13 +3279,13 @@ Google tidak menerbitkan tempoh pada halaman yang dibaca untuk artikel ini. Yang
 URL: https://upahje.my/ms/articles/tulis-semula-lima-peratus
 Checked: 2026-11-23
 
-Dua repositori diterbitkan lima hari selang membawa 11,327 bintang antara keduanya dan memberi nasihat bertentangan. Satu berkata pindahkan seluruh aplikasi ke Rust, sekeping demi sekeping. Satu lagi berkata pindahkan hanya 5% yang lambat. Kedua-duanya MIT. Kedua-duanya betul, dan yang menentukan pilihan anda bukanlah stack anda.
+Dua repositori diterbitkan lima hari selang membawa 11,986 bintang antara keduanya setakat 24 November 2026, dan memberi nasihat bertentangan. Satu berkata pindahkan seluruh aplikasi ke Rust, sekeping demi sekeping. Satu lagi berkata pindahkan hanya 5% yang lambat. Kedua-duanya MIT. Kedua-duanya betul, dan yang menentukan pilihan anda bukanlah stack anda.
 
 ## Dua repo MIT, lima hari selang, berhujah pembetulan bertentangan
 
-`rust-anything` dicipta pada 16 November 2026 dan mempunyai 8,516 bintang. Penerangannya janji tentang keseluruhan aplikasi: tulis semula dalam Rust sekeping demi sekeping, disemak terhadap tingkah laku asal. README-nya menuntut satu pindahan: Prettier, "19x faster", dengan "15,861 of 17,224 recorded runs" dalam Rust dan setiap larian byte-identical.
+`rust-anything` dicipta pada 16 November 2026 dan mempunyai 8,782 bintang setakat 24 November 2026. Penerangannya janji tentang keseluruhan aplikasi: tulis semula dalam Rust sekeping demi sekeping, disemak terhadap tingkah laku asal. README-nya mendakwa satu pindahan: Prettier, "19x faster", dengan "15,861 of 17,224 recorded runs" dalam Rust dan setiap larian byte-identical.
 
-`fast-anything` dicipta pada 21 November 2026 dengan 2,811 bintang. Penerangannya menentang skop repo pertama: jangan tulis semula dalam Rust, tulis semula 5% yang lambat, pindahkan fungsi panas, buktikan tingkah laku sama.
+`fast-anything` dicipta pada 21 November 2026 dengan 3,204 bintang setakat 24 November 2026. Penerangannya menentang skop repo pertama: jangan tulis semula dalam Rust, tulis semula 5% yang lambat, pindahkan fungsi panas, buktikan tingkah laku sama.
 
 Kedua-duanya berselisih tentang skop, iaitu tempat wang pergi.
 
@@ -2990,7 +3293,7 @@ Kedua-duanya berselisih tentang skop, iaitu tempat wang pergi.
 
 `rust-anything` merekod apa yang aplikasi anda lakukan, kemudian agent pengekodan anda menulis pengganti Rust sekeping demi sekeping, dan setiap keping disemak terhadap rekod itu sebelum keping seterusnya bermula.
 
-`fast-anything` memprofil aplikasi yang sedang berjalan, menyusun fungsi mengikut masa dan kemudahan dipindahkan, merekod sehingga 500 panggilan sebenar bagi satu fungsi yang dipilih, menerbitkan kes tepi daripada panggilan itu, dan memainkannya semula. Tiada apa diaktifkan sehingga setiap kes sepadan, float dalam 1e-9, ralat di tempat asal meralat. Perekod dalam sumbernya dihadkan pada 500 panggilan; demo README-nya menunjukkan pindahan salah ditangkap oleh "148 of 500" panggilan yang direkod.
+`fast-anything` memprofil aplikasi yang sedang berjalan, menyusun fungsi mengikut masa dan kemudahan dipindahkan, merekod sehingga 500 panggilan sebenar bagi satu fungsi yang dipilih, menerbitkan kes tepi daripada panggilan itu, dan memainkannya semula. Tiada apa diaktifkan sehingga setiap kes sepadan, float dalam 1e-9, dan ralat di tempat asal kekal ralat. Perekod dalam sumbernya dihadkan pada 500 panggilan; demo README-nya menunjukkan pindahan salah ditangkap oleh "148 of 500" panggilan yang direkod.
 
 Tiada satu pun repo dijalankan untuk artikel ini. Angkanya milik mereka; mekanismenya kelihatan dalam sumber dan README.
 
@@ -3013,9 +3316,9 @@ Baris terakhir itulah yang pembeli selalu tersalah. Halaman 4 saat boleh jadi sa
 
 ## Bagi laman PKS, jawapannya 5% itu
 
-Pendapat saya, dinyatakan sekali: bagi laman perniagaan kecil Malaysia, perkara yang lambat hampir selalu satu imej, satu query, atau satu skrip yang menyekat, dan tindak balas yang betul ialah betulkan itu dan berhenti. Pindahan penuh ke Rust ialah keputusan untuk pasukan yang ada bajet profiling dan proses pelepasan. Bagi kedai dengan laman lima halaman dan senarai produk, kerangka sebelas ribu bintang bukanlah kekangannya.
+Pendapat saya, dinyatakan sekali: bagi laman perniagaan kecil Malaysia, perkara yang lambat hampir selalu satu imej, satu query, atau satu skrip yang menyekat, dan tindak balas yang betul ialah betulkan itu dan berhenti. Pindahan penuh ke Rust ialah keputusan untuk pasukan yang ada bajet profiling dan proses pelepasan. Bagi kedai dengan laman lima halaman dan senarai produk, framework sebelas ribu bintang bukanlah kekangannya.
 
-Kesorotan itu lebih penting daripada pendapatnya. Sebelum anda menerima sebut harga untuk membina semula, tanya fungsi atau query mana yang lambat, dan angka apa yang dihasilkannya. Pembangun yang tidak dapat menamakannya sedang memberi sebut harga untuk tulis semula, dan tulis semula tiada tarikh tamat.
+Sebelum anda menerima sebut harga untuk membina semula, tanya fungsi atau query mana yang lambat, dan angka apa yang dihasilkannya. Pembangun yang tidak dapat menamakannya sedang memberi sebut harga untuk tulis semula, dan tulis semula tiada tarikh tamat.
 
 ## Ukur tiga perkara sebelum percaya mana-mana kem
 
@@ -3029,7 +3332,7 @@ Tiga angka itu kosnya tiada dan mengambil masa satu petang. Ia juga memberi anda
 
 ## Tulis semula tiada tarikh tamat; pindahan lima peratus ada
 
-Asimetri itulah keseluruhan keputusan. Pindahan seluruh aplikasi tamat apabila modul terakhir disemak, iaitu tarikh yang tiada siapa boleh janjikan pada permulaan. Pindahan satu fungsi tamat apabila panggilan yang direkod sepadan, iaitu syarat, bukan jadual.
+Pindahan seluruh aplikasi tamat apabila modul terakhir disemak, iaitu tarikh yang tiada siapa boleh janjikan pada permulaan. Pindahan satu fungsi tamat apabila panggilan yang direkod sepadan, iaitu syarat, bukan jadual.
 
 Jika kelambatan anda satu fungsi, ambil pindahan kecil. Jika ia di merata tempat, nilaikan tulis semula dengan jujur, termasuk bulan-bulan ia berjalan. Kesilapan mahal ialah membeli pembetulan besar untuk masalah kecil.
 
@@ -3385,11 +3688,11 @@ Kadar tahunan Claude ialah USD 17 sebulan berbanding USD 20 bulanan, iaitu RM69.
 
 ### Sources
 
-- Claude, harga — https://claude.com/pricing (checked 2026-11-19)
-- ChatGPT, harga — https://chatgpt.com/pricing (checked 2026-11-19)
-- GitHub Copilot, pelan — https://github.com/features/copilot/plans (checked 2026-11-19)
-- Anthropic, harga API Claude — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-19)
-- Bank Negara Malaysia, API kadar pertukaran awam (kadar tengah USD/MYR 4.1145) — https://api.bnm.gov.my/public/exchange-rate (checked 2026-11-19)
+- Claude, harga — https://claude.com/pricing (checked 2026-11-24)
+- ChatGPT, harga — https://chatgpt.com/pricing (checked 2026-11-24)
+- GitHub Copilot, pelan — https://github.com/features/copilot/plans (checked 2026-11-24)
+- Anthropic, harga API Claude — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-24)
+- Bank Negara Malaysia, kadar pertukaran (kadar tengah USD yang dipetik ialah kadar yang diterbitkan 19 November 2026; halaman memaparkan kadar terkini) — https://www.bnm.gov.my/exchange-rates (checked 2026-11-24)
 
 ## Qwen, DeepSeek, Mistral, Kimi: apa lesen benarkan
 
@@ -4010,7 +4313,7 @@ Satu baris bagi setiap produk, dengan tahap bukti dinyatakan, kerana tiga daripa
 | Produk | Apa ia | Lesen atau terma | Tahap bukti | Status | Sumber |
 | --- | --- | --- | --- | --- | --- |
 | OpenBot (nightly-labs) | Ruang kerja desktop setempat untuk rakan AI berterusan, dengan marketplace plugin | PolyForm Noncommercial 1.0.0; medan lesen repositori menunjukkan NOASSERTION | Sumber rasmi, dibaca 2026-11-19 | Aktif, push 2026-11-19, 9,037 bintang | [github.com/nightly-labs/openbot](https://github.com/nightly-labs/openbot) |
-| MausBot (OpenMausBot) | Alternatif Grok Bot sumber terbuka dengan mesin maya untuk bot | Apache-2.0 pada repositori utama; repositori muat turun berasingan membawa MIT | Sumber rasmi, dibaca 2026-11-19 | Aktif, push 2026-11-18, 25,485 bintang | [github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) |
+| MausBot (OpenMausBot) | Alternatif Grok Bot sumber terbuka dengan mesin maya untuk bot | Apache-2.0 pada repositori utama; repositori muat turun MIT yang pernah dipetik di sini tidak lagi wujud | Sumber rasmi, dibaca 2026-11-19 | Aktif, push 2026-11-18, 25,485 bintang | [github.com/milind-soni/OpenMausBot](https://github.com/milind-soni/OpenMausBot) |
 | Grok Bot (xAI) | Agent sentiasa hidup dengan komputer sendiri, bekerja dalam aplikasi | Tertutup; aplikasi macOS bertandatangan, tiada repositori awam | Sumber rasmi, pengumuman bertarikh 2026-08-11 | Beta | [x.ai/news/introducing-grok-bot](https://x.ai/news/introducing-grok-bot) |
 | Dots (OpenAI) | Agent sentiasa hidup dalam ChatGPT, dengan komputer awan sendiri | Tertutup; tiada repositori awam | Sumber rasmi, pengumuman bertarikh 2026-09-29 | Hidup, dilancarkan kepada Enterprise dari 2026-11-18 | [openai.com/index/introducing-dots](https://openai.com/index/introducing-dots/) |
 | DeepSeek Harness | Harness yang dijalankan oleh profil, dengan server MCP mengikut profil | Pakej npm, lihat metadata pakej | Dijalankan di sini; tidak boleh disahkan semula sepenuhnya | Dipasang 0.2.2-rc.1 pada 2026-11-19 | [npmjs.com/package/@deepseek-ai/dsh](https://www.npmjs.com/package/@deepseek-ai/dsh) |
@@ -4062,7 +4365,7 @@ Tidak, walaupun lamannya menulis kod sumbernya terbuka. Fail lesen repositori ia
 
 ### Adakah MausBot sumber terbuka?
 
-Repositori utama MausBot ialah Apache-2.0, iaitu sumber terbuka dan membenarkan penggunaan komersial. Perhatikan perpecahannya: repositori kedua, `OpenMausBot/OpenMausBot`, membawa MIT dan menyebut dirinya repositori muat turun, jadi baca repositori mana yang anda sebenarnya klon.
+Repositori utama MausBot ialah Apache-2.0, iaitu sumber terbuka dan membenarkan penggunaan komersial. Repositori kedua yang menyebut dirinya repositori muat turun MIT pernah dipetik di sini sehingga 24 November 2026, apabila pautan itu memulangkan 404 dan organisasi GitHub di belakangnya tidak lagi wujud, jadi perpecahan itu tidak boleh disemak lagi dan repositori muat turun itu tidak dipetik.
 
 ### Adakah harness sumber terbuka bermakna model sumber terbuka?
 
@@ -4074,7 +4377,6 @@ Tidak. Harness dan model ialah dua perkara berasingan, dan perpecahannya berlaku
 - Laman OpenBot (dakwaan bahawa sumbernya terbuka) — https://openbot.run/ (checked 2026-11-19)
 - Laman MausBot — https://mausbot.com/ (checked 2026-11-19)
 - milind-soni/OpenMausBot, metadata repositori (Apache-2.0) — https://github.com/milind-soni/OpenMausBot (checked 2026-11-19)
-- OpenMausBot/OpenMausBot, repositori muat turun (MIT) — https://github.com/OpenMausBot/OpenMausBot (checked 2026-11-19)
 - xAI, pengenalan Grok Bot — https://x.ai/news/introducing-grok-bot (checked 2026-11-19)
 - OpenAI, pengenalan Dots — https://openai.com/index/introducing-dots/ (checked 2026-11-19)
 - Metadata pakej DeepSeek Harness, dipasang pada mesin ini — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
