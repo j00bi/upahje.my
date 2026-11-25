@@ -83,7 +83,7 @@ Harga tetap Runpod membeli kad yang diketahui dan wilayah yang diketahui. Harga 
 3. Anggarkan larian dalam minit, bukan jam, dan semak sama ada bil mengikut saat.
 4. Bagi apa-apa yang ada tarikh akhir, keluarkan kadar preemptible daripada perbandingan sepenuhnya.
 
-Pendapat saya, dinyatakan sekali: angka ringgit yang penting bagi perniagaan Malaysia bukan kadar sejam, tetapi kos eksperimen yang gagal. Pada RM7 sejam anda mampu tersilap empat kali pada hari Sabtu, dan itu lebih bernilai daripada jaminan mendapat kad terpantas.
+Angka ringgit yang penting bagi perniagaan Malaysia bukan kadar sejam, tetapi kos eksperimen yang gagal. Pada RM7 sejam anda mampu tersilap empat kali pada hari Sabtu, dan itu lebih bernilai daripada jaminan mendapat kad terpantas.
 
 ---
 

@@ -4,6 +4,73 @@
 
 # English
 
+## Colab will train your model. It will not host it
+
+URL: https://upahje.my/en/articles/colab-hosting-ai-malaysia
+Checked: 2026-11-25
+
+The question usually arrives as "how do I host my AI on Colab", and the honest answer is that hosting is the one thing Colab's terms single out. Google's FAQ lists file hosting, media serving and "other web service offerings not related to interactive compute" among the activities disallowed on managed runtimes. A free runtime also blocks remote control: SSH shells and remote desktops, and bypassing the notebook interface to work mainly through a web UI.
+
+That is not a loophole to be worked around with a tunnel. It is the shape of the product.
+
+## What the free tier actually gives you
+
+Colab is a hosted Jupyter notebook with free access to GPUs and TPUs. Notebooks run for at most 12 hours, availability and usage permitting, and the virtual machine is deleted after a period of idleness, with a maximum lifetime the service enforces. Nothing about that is guaranteed: the FAQ says resources are not guaranteed and not unlimited, and that limits fluctuate.
+
+So the free tier is a generous batch machine that resets. It is not a server, and treating it as one produces the three failures below.
+
+## The three failures everyone hits
+
+1. **The tunnel that dies.** Point ngrok or cloudflared at a port inside the notebook and you get a public URL. It lives exactly as long as the VM, which is 12 hours at best and often less. Every restart means a new URL, and nobody who needs your model is going to chase a new link each morning.
+2. **The keep-alive script.** A cell that clicks the UI or pings the runtime to defeat the idle timer is the behaviour the FAQ describes as bypassing anti-abuse policy. It also only postpones the 12-hour ceiling.
+3. **The secret in the notebook.** Anyone with the link can read every cell, including the API key you pasted to reach a model. This one is not a rule being broken, it is a credential being published.
+
+## What Colab is genuinely good at
+
+It is excellent at the work it was built for, and that work is worth naming precisely:
+
+- **Batch experiments.** Train, evaluate, throw the VM away. A model that takes 40 minutes to fine-tune fits comfortably inside one session.
+- **Evaluation harnesses.** Run a fixed case set through a model and score it, with the notebook as the record of what was run.
+- **Sharing a method.** A notebook someone can open and execute is a better handover document than a folder of scripts.
+
+The pattern that stays inside the rules: train and tune on Colab, write checkpoints to Drive or object storage, and serve from somewhere designed for serving.
+
+## Where hosting actually lives, with prices
+
+| Option | What it is | Price as printed |
+| --- | --- | --- |
+| Hugging Face Spaces, CPU Basic | 2 vCPU, 16 GB, a Gradio or Docker app with a permanent URL | free |
+| Hugging Face PRO | 8x ZeroGPU quota, higher queue priority, Docker and Gradio Spaces | USD 9/month, about RM37.04 |
+| Runpod, per hour | A GPU you start and stop; billed per second | USD 0.27/hr for an RTX A5000, about RM1.11 |
+| A local machine | Your own hardware behind a tunnel | hardware plus electricity |
+
+The free Spaces tier is the part most people miss: a small model with a modest request rate does not need a GPU at all, and a permanent URL costs nothing while it does. The RM37.04 for PRO is roughly three hours of an H100 PCIe on a rented platform, which puts the trade in plain terms: a month of hosting against an afternoon of training.
+
+## A workflow that stays inside the rules
+
+1. Do the training and evaluation on Colab, and check the run fits in a session with room to spare.
+2. Save the weights to Drive or a model hub the moment a run improves, because the VM will not warn you.
+3. Serve from Spaces, a rented GPU, or your own machine, whichever matches the request rate.
+4. Keep tokens in notebook secrets or environment variables that are never printed in a cell.
+5. Re-read the provider's restricted-activities list before you build a product on top of a free tier, because the list is the contract.
+
+The confusion is not technical, it is about what a notebook is for. Colab sells spare interactive compute to people who are experimenting, and a served product is the opposite of an experiment, so the free tier spends its generosity on training and has none left for hosting.
+
+---
+
+**Read next**
+
+[The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/gpu-rental-cost-malaysia)
+
+[More definitions, explained plainly](https://upahje.my/en/glossary)
+
+### Sources
+
+- Google Colaboratory FAQ (free access to GPUs and TPUs, notebooks run at most 12 hours, restricted activities including file hosting, media serving, SSH shells and remote desktops on free runtimes) — https://research.google.com/colaboratory/faq.html (checked 2026-11-25)
+- Hugging Face pricing (Spaces CPU Basic free at 2 vCPU and 16 GB, PRO USD 9/month with 8x ZeroGPU quota) — https://huggingface.co/pricing (checked 2026-11-25)
+- Runpod pricing (RTX A5000 USD 0.27/hr, H100 PCIe USD 2.89/hr) for rented serving capacity — https://www.runpod.io/pricing (checked 2026-11-25)
+- Frankfurter, USD to MYR reference rate 4.1155 for 24 November 2026 — https://api.frankfurter.dev/v1/latest?base=USD&symbols=MYR (checked 2026-11-25)
+
 ## EPF contribution: 12% or 13%, and RM5,000 is the line
 
 URL: https://upahje.my/en/articles/epf-employer-rate-malaysia
@@ -65,7 +132,7 @@ The difference is not a rounding error; it is a band, and it is decided by the e
 4. Check whether anyone on the payroll is 60 or over, or a non-Malaysian, before using the 13/11 pair.
 5. Keep the schedule version you used, because a rate change does not rewrite history.
 
-My opinion, stated once: the 12-versus-13 question is the easy half. The half that costs money is the schedule and the two exceptions, because those are the lines a template gets wrong quietly, and a payroll error is discovered by an employee, not by an auditor.
+The 12-versus-13 question is the easy half. The half that costs money is the schedule and the two exceptions, because those are the lines a template gets wrong quietly, and a payroll error is discovered by an employee, not by an auditor.
 
 ---
 
@@ -139,7 +206,7 @@ Runpod's fixed price buys a known card and a known region. Vast's floor buys cap
 3. Estimate the run in minutes, not hours, and check whether billing is per second.
 4. For anything with a deadline, price the interruptible rate out of the comparison entirely.
 
-My opinion, stated once: the ringgit figure that matters for a Malaysian business is not the hourly rate, it is the cost of the experiment that fails. At RM7 an hour you can afford to be wrong four times on a Saturday, and that is worth more than a guarantee of the fastest card.
+The ringgit figure that matters for a Malaysian business is not the hourly rate, it is the cost of the experiment that fails. At RM7 an hour you can afford to be wrong four times on a Saturday, and that is worth more than a guarantee of the fastest card.
 
 ---
 
@@ -204,7 +271,7 @@ The registered-employers page does not state when the levy must be paid. That is
 4. Recalculate the month the tenth hire starts, not the month after.
 5. Ask HRD Corp for the payment date in writing, because the page does not print one.
 
-My opinion, stated once: the levy is small enough to ignore and large enough to notice at the ten-employee line, which is exactly the moment a business stops checking. Budgeting it at nine employees and discovering it at ten is a RM3,600-a-year surprise at a RM3,000 average wage, and that surprise lands in a month that is already busy with a new hire.
+The levy is small enough to ignore and large enough to notice at the ten-employee line, which is exactly the moment a business stops checking. Budgeting it at nine employees and discovering it at ten is a RM3,600-a-year surprise at a RM3,000 average wage, and that surprise lands in a month that is already busy with a new hire.
 
 ---
 
@@ -269,7 +336,7 @@ The RM4,580 for 24 months works out at about RM191 a month, which sits between t
 4. Does the plan file to MyInvois directly, or export a file someone uploads?
 5. What is the 24-month total, not the monthly headline?
 
-My opinion, stated once: pay for the e-invoice route, not the till. A POS that takes money but leaves the invoice to a person is a counter with a subscription, and the subscription is the smaller cost of the two.
+Pay for the e-invoice route, not the till. A POS that takes money but leaves the invoice to a person is a counter with a subscription, and the subscription is the smaller cost of the two.
 
 ---
 
@@ -337,7 +404,7 @@ Schedule amounts are also not reproduced: the table applies the percentages, and
 4. Check the schedule for the exact amount, and expect a few sen difference.
 5. Confirm the registration deadline at PERKESO directly before the first payroll.
 
-My opinion, stated once: the ceiling is the only part of this that changes how you hire. Below RM6,000 the contribution tracks the salary, but above it the scheme is a fixed cost, so the marginal cost of a senior hire is lower than a payroll spreadsheet suggests, and the marginal cost of a junior one is higher.
+The ceiling is the only part of this that changes how you hire. Below RM6,000 the contribution tracks the salary, but above it the scheme is a fixed cost, so the marginal cost of a senior hire is lower than a payroll spreadsheet suggests, and the marginal cost of a junior one is higher.
 
 ---
 
@@ -351,6 +418,88 @@ My opinion, stated once: the ceiling is the only part of this that changes how y
 
 - PERKESO, contributions (First Category 1.75%/0.5%, Second Category 1.25%, EIS 0.4% split 0.2/0.2) — https://www.perkeso.gov.my/en/our-services/employer-employee/contributions.html (checked 2026-11-25)
 - PERKESO, contribution rate (RM6,000 wage ceiling effective 1 October 2024) — https://www.perkeso.gov.my/en/our-services/employer-employee/kadar-caruman.html (checked 2026-11-25)
+
+## A spare laptop is a server only after you measure it
+
+URL: https://upahje.my/en/articles/spare-laptop-home-server-malaysia
+Checked: 2026-11-25
+
+A laptop that is already in a drawer costs nothing to acquire, which is why the idea appeals: one service, no monthly fee, no cloud account. The catch is that "free hardware" is a statement about purchase price, and running a machine for a year is a statement about electricity, uptime and your own evenings.
+
+None of that is a reason to avoid it. It is a reason to do four measurements before you commit an evening to it.
+
+## What it actually draws
+
+Modern laptops idle low. A machine with the lid shut, no display output and one service listening will sit somewhere between a nightlight and a light bulb, and the only number that counts is the one your meter shows.
+
+The label on the power brick does not tell you. It states the maximum the adapter can deliver, not what the machine consumes at rest, and the two differ by a factor of five or more.
+
+A plug-in power meter costs about RM30 at any hardware shop, and it converts the whole decision from an argument into a reading. Run the laptop at idle for an hour with the service up, write the watt figure down, and use that.
+
+## The arithmetic, with assumptions stated
+
+Take 20 watts at idle — a plausible figure for a laptop serving one lightweight service — and a domestic rate of 45 sen per kWh. Both are assumptions, and you should replace both with your own.
+
+- 20 W for 24 hours is 480 Wh, or 0.48 kWh a day.
+- At 45 sen, that is about 21.6 sen a day.
+- Over a year, 175 kWh, or about RM79.
+
+Change the wattage and the answer scales with it: 40 W doubles it to about RM158 a year, 10 W halves it to about RM40. The tariff you should use is printed in your own bill, and TNB publishes the domestic schedule if the bill is not clear enough.
+
+Compare that with the cheapest monthly rent that does the same job. A small cloud instance is often around RM20 to RM40 a month, which is RM240 to RM480 a year. The laptop wins on money at any of the wattages above, and it stops winning the moment your time is priced at more than a few hours a year.
+
+## The battery is not a UPS
+
+A laptop has a built-in battery, and it is tempting to treat that as free protection against a power cut. It is not, for two reasons.
+
+First, a battery that spends its life at 100 per cent and warm degrades quickly, and a swollen battery in a machine running unattended is a fire risk rather than an inconvenience. Most laptops let you cap charging at 60 to 80 per cent in firmware, and a self-hosted machine should.
+
+Second, a graceful shutdown is worth more than five minutes of runtime. Set the machine to shut down when the battery hits a threshold, and assume the power will go out while you are away.
+
+## What to install, and what to skip
+
+1. **A server distribution, not a desktop.** Ubuntu Server or Debian, no graphical session. A desktop environment on a headless machine is memory you are paying for and an attack surface you are not using.
+2. **The lid behaviour, set explicitly.** Most laptops suspend when the lid closes, which is the opposite of what a server should do.
+3. **`systemd` units with restart policies**, so a service that dies comes back without you.
+4. **One way in, not three.** Tailscale or a Cloudflare tunnel gives you remote access without opening a port on the router, and neither needs a static IP.
+5. **A backup that leaves the machine.** A server with one copy of its data on one disk is a scheduled loss, whatever the uptime.
+
+Skip the RAID conversation. Two disks in a laptop is rare, and a backup elsewhere solves the problem RAID does not.
+
+## Where this stops working
+
+A spare laptop is the right answer for a personal service, a small internal tool, or a place to run scheduled jobs. It is the wrong answer for anything a customer depends on, for three reasons that no amount of configuration fixes:
+
+- **Residential power and internet.** Both fail, and neither comes with an SLA.
+- **A dynamic address.** Tunnels solve reachability, not reliability.
+- **One machine, no redundancy.** When it dies, it is down until you are home.
+
+If the service matters to someone else, the RM240 a year for a small instance is the cheapest part of the decision.
+
+## The order to do it in
+
+1. Measure idle watts with a meter, with the service running.
+2. Read your own tariff, then calculate the year.
+3. Compare it against a small cloud instance at the same workload.
+4. Cap the battery charge and set a shutdown threshold.
+5. Install a server distribution, set lid behaviour, and add one tunnel.
+6. Point a backup at storage outside the machine before you trust it with anything.
+
+That sequence takes an evening and produces a number rather than an opinion, which is the difference between a hobby and a decision.
+
+---
+
+**Read next**
+
+[Colab will train your model. It will not host it](https://upahje.my/en/articles/colab-hosting-ai-malaysia)
+
+[More definitions, explained plainly](https://upahje.my/en/glossary)
+
+### Sources
+
+- Tenaga Nasional Berhad, residential pricing and tariffs (the domestic tariff schedule a household reads to find its own per-kWh rate) — https://www.tnb.com.my/residential/pricing-tariffs (checked 2026-11-25)
+- Ubuntu Server, system requirements and installation guide for a spare machine — https://ubuntu.com/server/docs/installation (checked 2026-11-25)
+- Tailscale, pricing (personal plans, device-based access without opening an inbound port) — https://tailscale.com/pricing (checked 2026-11-25)
 
 ## A trading bot is a data problem wearing a model's clothes
 
@@ -402,7 +551,7 @@ Most projects skip that and buy the model instead. That is why they end with a c
 4. Write the four gates down before you see the numbers, so you cannot move them afterwards.
 5. Paper trade for a month, and record fills rather than prices.
 
-My opinion, stated once: the bot is the easy part to build and the easiest part to be wrong about. The work that decides whether it makes money happens before a single order is sent, in a spreadsheet most people skip because it is not as interesting as the training loop.
+The bot is the easy part to build and the easiest part to be wrong about. The work that decides whether it makes money happens before a single order is sent, in a spreadsheet most people skip because it is not as interesting as the training loop.
 
 ---
 
@@ -468,7 +617,7 @@ GrabFood's rate: no MyCC decision and no platform page, so there is nothing cita
 4. Who sets the delivery fee and who keeps it.
 5. The rate for a small basket, in ringgit, at your menu prices.
 
-My opinion, stated once: a platform that will not put the rate beside a worked basket is telling you something. The honest answer to "what will I keep on a RM25 order" is a number, and a sales page that will not produce it is asking you to sign a contract you cannot price.
+A platform that will not put the rate beside a worked basket is telling you something. The honest answer to "what will I keep on a RM25 order" is a number, and a sales page that will not produce it is asking you to sign a contract you cannot price.
 
 ---
 
@@ -541,7 +690,7 @@ PCB, the monthly tax deduction, is computed from LHDN's MTD schedule. The page r
 4. Use the schedule amount for SOCSO and EIS, not a flat percentage, and round up as the schedule does.
 5. Budget the employer cost, not the salary, when you decide what you can afford to hire.
 
-My opinion, stated once: the salary is the smaller number in this decision. A business that budgets RM3,000 and discovers RM3,448.50 after the offer has already spent the difference on something else, and the first place it cuts is the training the new hire needed.
+The salary is the smaller number in this decision. A business that budgets RM3,000 and discovers RM3,448.50 after the offer has already spent the difference on something else, and the first place it cuts is the training the new hire needed.
 
 ---
 
@@ -937,7 +1086,7 @@ The last row is the common mistake: a 4-second page can be one uncompressed hero
 
 ## For an SME site, the answer is the 5%
 
-My opinion, stated once: for a Malaysian small-business site, the slow thing is almost always one image, one query, or one blocking script, and the correct response is to fix that and stop. A full port is a decision for a team with a profiling budget and a release process. For a shop with five pages and a product list, an eleven-thousand-star framework is not the constraint.
+For a Malaysian small-business site, the slow thing is almost always one image, one query, or one blocking script, and the correct response is to fix that and stop. A full port is a decision for a team with a profiling budget and a release process. For a shop with five pages and a product list, an eleven-thousand-star framework is not the constraint.
 
 Before you accept a quote to rebuild, ask which function or query is slow and what number it produces. A developer who cannot name it is quoting a rewrite, and a rewrite has no end date.
 
@@ -1247,7 +1396,7 @@ LHDN cites Section 120 of the Income Tax Act 1967. No ringgit figure appears in 
 
 ## If you are under RM3 million, wait for a customer to ask
 
-My opinion, stated once: a business below the threshold should not adopt e-Invoice for its own sake. The requirement is lifted, voluntary participation is encouraged but not rewarded, and the operational cost is real. Adopt it when a large customer or a government buyer requires it, and then handle that customer's transactions rather than converting every invoice you issue.
+A business below the threshold should not adopt e-Invoice for its own sake. The requirement is lifted, voluntary participation is encouraged but not rewarded, and the operational cost is real. Adopt it when a large customer or a government buyer requires it, and then handle that customer's transactions rather than converting every invoice you issue.
 
 The exception is a business planning to cross RM3 million. If revenue is close to the line, running one quarter of e-Invoice in parallel is cheaper than discovering the obligation in the quarter it applies.
 
@@ -2804,6 +2953,73 @@ A single read-only endpoint takes a competent developer about a day. Anything th
 
 # Bahasa Melayu
 
+## Colab akan latih model anda. Ia tidak akan hoskan
+
+URL: https://upahje.my/ms/articles/colab-hosting-ai-malaysia
+Checked: 2026-11-25
+
+Soalan itu biasanya datang sebagai "macam mana nak hos AI saya di Colab", dan jawapan jujurnya ialah hosting ialah perkara yang syarat Colab nyatakan secara khusus. FAQ Google menyenaraikan hosting fail, penyajian media dan "tawaran perkhidmatan web lain yang tidak berkaitan pengkomputeran interaktif" dalam aktiviti yang tidak dibenarkan pada runtime terurus. Runtime percuma juga menyekat kawalan jauh: shell SSH dan desktop jauh, serta memintas antara muka notebook untuk bekerja terutamanya melalui UI web.
+
+Itu bukan celah untuk diakali dengan terowong. Ia bentuk produknya.
+
+## Apa yang sebenarnya diberi oleh tier percuma
+
+Colab ialah notebook Jupyter dihoskan dengan akses percuma kepada GPU dan TPU. Notebook berjalan paling lama 12 jam, bergantung pada ketersediaan dan corak penggunaan, dan mesin maya dipadam selepas tempoh melahu, dengan hayat maksimum yang dikuatkuasakan perkhidmatan itu. Tiada satu pun daripada itu dijamin: FAQ mengatakan sumber tidak dijamin dan tidak tanpa had, dan hadnya berubah-ubah.
+
+Jadi tier percuma ialah mesin kelompok yang murah hati dan bermula semula. Ia bukan pelayan, dan menganggapnya sebagai pelayan menghasilkan tiga kegagalan di bawah.
+
+## Tiga kegagalan yang semua orang tempuh
+
+1. **Terowong yang mati.** Halakan ngrok atau cloudflared ke port dalam notebook dan anda dapat URL awam. Ia hidup selama mesin maya itu hidup, iaitu paling lama 12 jam dan selalunya kurang. Setiap mula semula bermakna URL baharu, dan tiada siapa yang memerlukan model anda akan mengejar pautan baharu setiap pagi.
+2. **Skrip kekal hidup.** Sel yang mengklik UI atau mengepam runtime untuk mengalahkan pemasa melahu ialah tingkah laku yang FAQ gambarkan sebagai memintas dasar anti-penyalahgunaan. Ia juga hanya menangguhkan siling 12 jam.
+3. **Rahsia dalam notebook.** Sesiapa yang ada pautan boleh membaca setiap sel, termasuk kunci API yang anda tampal untuk mencapai model. Yang ini bukan peraturan yang dilanggar, ia kelayakan yang diterbitkan.
+
+## Apa yang Colab benar-benar baik
+
+Ia cemerlang pada kerja yang ia dibina untuk, dan kerja itu wajar dinamakan dengan tepat:
+
+- **Eksperimen kelompok.** Latih, nilai, buang mesin maya. Model yang mengambil masa 40 minit untuk ditala halus masuk dengan selesa dalam satu sesi.
+- **Rangka penilaian.** Jalankan set kes tetap melalui model dan skorkan, dengan notebook sebagai rekod apa yang dijalankan.
+- **Berkongsi kaedah.** Notebook yang boleh dibuka dan dijalankan oleh orang lain ialah dokumen serahan yang lebih baik daripada folder skrip.
+
+Corak yang kekal dalam peraturan: latih dan tala di Colab, tulis checkpoint ke Drive atau storan objek, dan sajikan dari tempat yang direka untuk menyajikan.
+
+## Di mana hosting sebenarnya tinggal, dengan harga
+
+| Pilihan | Apa ia | Harga seperti dicetak |
+| --- | --- | --- |
+| Hugging Face Spaces, CPU Basic | 2 vCPU, 16 GB, aplikasi Gradio atau Docker dengan URL kekal | percuma |
+| Hugging Face PRO | kuota ZeroGPU 8x, keutamaan baris gilir lebih tinggi, Spaces Docker dan Gradio | USD 9 sebulan, kira-kira RM37.04 |
+| Runpod, setiap jam | GPU yang anda mula dan hentikan; dibil mengikut saat | USD 0.27/jam untuk RTX A5000, kira-kira RM1.11 |
+| Mesin sendiri | Perkakasan anda di sebalik terowong | perkakasan campur elektrik |
+
+Tier Spaces percuma ialah bahagian yang paling ramai terlepas: model kecil dengan kadar permintaan sederhana langsung tidak perlukan GPU, dan URL kekal berharga kosong selagi itu keadaannya. RM37.04 untuk PRO ialah kira-kira tiga jam H100 PCIe di platform sewaan, yang meletakkan pertukaran itu dalam istilah biasa: sebulan hosting berbanding satu petang latihan.
+
+## Aliran kerja yang kekal dalam peraturan
+
+1. Buat latihan dan penilaian di Colab, dan pastikan larian itu masuk dalam satu sesi dengan ruang lebih.
+2. Simpan pemberat ke Drive atau hab model sebaik larian bertambah baik, kerana mesin maya tidak akan memberi amaran.
+3. Sajikan dari Spaces, GPU sewaan, atau mesin sendiri, mengikut kadar permintaan.
+4. Simpan token dalam rahsia notebook atau pemboleh ubah persekitaran yang tidak pernah dicetak dalam sel.
+5. Baca semula senarai aktiviti terhad penyedia sebelum membina produk di atas tier percuma, kerana senarai itu ialah kontraknya.
+
+Kekeliruan ini bukan teknikal, ia tentang untuk apa sebuah notebook. Colab menjual lebihan kapasiti interaktif kepada orang yang sedang bereksperimen, dan produk yang disajikan ialah lawan kepada eksperimen, jadi tier percuma membelanjakan kemurahannya pada latihan dan tidak tinggal apa-apa untuk hosting.
+
+---
+
+**Read next**
+
+[H100 yang sama disewa RM11.89 sejam, atau RM7.12](https://upahje.my/ms/articles/kos-sewa-gpu-malaysia)
+
+[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
+
+### Sources
+
+- Google Colaboratory FAQ (akses percuma GPU dan TPU, notebook berjalan paling lama 12 jam, aktiviti terhad termasuk hosting fail, penyajian media, SSH dan desktop jauh pada runtime percuma) — https://research.google.com/colaboratory/faq.html (checked 2026-11-25)
+- Hugging Face pricing (Spaces CPU Basic percuma pada 2 vCPU dan 16 GB, PRO USD 9 sebulan dengan kuota ZeroGPU 8x) — https://huggingface.co/pricing (checked 2026-11-25)
+- Runpod pricing (RTX A5000 USD 0.27/jam, H100 PCIe USD 2.89/jam) untuk kapasiti penyajian sewaan — https://www.runpod.io/pricing (checked 2026-11-25)
+- Frankfurter, kadar rujukan USD ke MYR 4.1155 bagi 24 November 2026 — https://api.frankfurter.dev/v1/latest?base=USD&symbols=MYR (checked 2026-11-25)
+
 ## EPF majikan: 12% atau 13%, dan RM5,000 garisnya
 
 URL: https://upahje.my/ms/articles/kadar-caruman-epf-majikan
@@ -2865,7 +3081,7 @@ Bezanya bukan pembundaran; ia julat, dan ia ditentukan oleh umur pekerja pada bu
 4. Semak sama ada ada pekerja berumur 60 tahun ke atas, atau bukan warganegara, sebelum menggunakan pasangan 13/11.
 5. Simpan versi jadual yang digunakan, kerana perubahan kadar tidak menulis semula sejarah.
 
-Pendapat saya, dinyatakan sekali: soalan 12 lawan 13 ialah separuh yang mudah. Separuh yang menelan wang ialah jadual dan dua pengecualian itu, kerana itulah baris yang templat silap secara senyap, dan kesilapan gaji ditemui oleh pekerja, bukan oleh juruaudit.
+Soalan 12 lawan 13 ialah separuh yang mudah. Separuh yang menelan wang ialah jadual dan dua pengecualian itu, kerana itulah baris yang templat silap secara senyap, dan kesilapan gaji ditemui oleh pekerja, bukan oleh juruaudit.
 
 ---
 
@@ -2933,7 +3149,7 @@ Jumlah jadual juga tidak disalin semula: jadual ini menggunakan peratusan, dan j
 4. Semak jadual untuk jumlah tepat, dan jangkakan beza beberapa sen.
 5. Sahkan tarikh pendaftaran dengan PERKESO sendiri sebelum gaji pertama.
 
-Pendapat saya, dinyatakan sekali: siling itu satu-satunya bahagian yang mengubah cara anda mengupah. Di bawah RM6,000 caruman mengikut gaji, tetapi di atasnya skim itu kos tetap, jadi kos marginal pekerja kanan lebih rendah daripada yang ditunjukkan hamparan gaji, dan kos marginal pekerja junior lebih tinggi.
+Siling itu satu-satunya bahagian yang mengubah cara anda mengupah. Di bawah RM6,000 caruman mengikut gaji, tetapi di atasnya skim itu kos tetap, jadi kos marginal pekerja kanan lebih rendah daripada yang ditunjukkan hamparan gaji, dan kos marginal pekerja junior lebih tinggi.
 
 ---
 
@@ -3006,7 +3222,7 @@ Harga tetap Runpod membeli kad yang diketahui dan wilayah yang diketahui. Harga 
 3. Anggarkan larian dalam minit, bukan jam, dan semak sama ada bil mengikut saat.
 4. Bagi apa-apa yang ada tarikh akhir, keluarkan kadar preemptible daripada perbandingan sepenuhnya.
 
-Pendapat saya, dinyatakan sekali: angka ringgit yang penting bagi perniagaan Malaysia bukan kadar sejam, tetapi kos eksperimen yang gagal. Pada RM7 sejam anda mampu tersilap empat kali pada hari Sabtu, dan itu lebih bernilai daripada jaminan mendapat kad terpantas.
+Angka ringgit yang penting bagi perniagaan Malaysia bukan kadar sejam, tetapi kos eksperimen yang gagal. Pada RM7 sejam anda mampu tersilap empat kali pada hari Sabtu, dan itu lebih bernilai daripada jaminan mendapat kad terpantas.
 
 ---
 
@@ -3072,7 +3288,7 @@ RM4,580 untuk 24 bulan bersamaan kira-kira RM191 sebulan, iaitu antara dua tier 
 4. Adakah pelan itu memfailkan terus ke MyInvois, atau mengeksport fail untuk dimuat naik?
 5. Apakah jumlah 24 bulan, bukan angka bulanan pada iklan?
 
-Pendapat saya, dinyatakan sekali: bayar untuk laluan e-invoice, bukan untuk mesin tunai. POS yang menerima wang tetapi menyerahkan invois kepada manusia ialah kaunter dengan langganan, dan langganan itu kos yang lebih kecil antara kedua-duanya.
+Bayar untuk laluan e-invoice, bukan untuk mesin tunai. POS yang menerima wang tetapi menyerahkan invois kepada manusia ialah kaunter dengan langganan, dan langganan itu kos yang lebih kecil antara kedua-duanya.
 
 ---
 
@@ -3087,6 +3303,88 @@ Pendapat saya, dinyatakan sekali: bayar untuk laluan e-invoice, bukan untuk mesi
 - StoreHub Malaysia, harga (Starter dari RM122 sebulan, Advanced dari RM235 sebulan) — https://www.storehub.com/my/pricing (checked 2026-11-25)
 - Qashier Malaysia, harga (RM8 sehari platform, RM1 hingga RM3 sehari setiap terminal, RM4,580 untuk 24 bulan) — https://qashier.com/my/pricing/ (checked 2026-11-25)
 - Bukku, harga (Launch RM0 sebulan, percuma selamanya, menyokong e-Invoice LHDN) — https://www.bukku.my/pricing (checked 2026-11-25)
+
+## Laptop lama jadi pelayan hanya selepas anda ukurnya
+
+URL: https://upahje.my/ms/articles/laptop-lama-jadi-pelayan-malaysia
+Checked: 2026-11-25
+
+Laptop yang sudah ada dalam laci tidak berharga apa-apa untuk diperoleh, dan itulah sebabnya idea ini menarik: satu perkhidmatan, tiada bayaran bulanan, tiada akaun awan. Perangkapnya ialah "perkakasan percuma" ialah kenyataan tentang harga belian, manakala menjalankan mesin selama setahun ialah kenyataan tentang elektrik, masa hidup dan malam anda sendiri.
+
+Tiada satu pun daripada itu alasan untuk mengelakkannya. Ia alasan untuk membuat empat ukuran sebelum anda menghabiskan satu malam untuknya.
+
+## Apa yang sebenarnya ia tarik
+
+Laptop moden menarik kuasa rendah semasa melahu. Mesin dengan penutup tertutup, tiada output paparan dan satu perkhidmatan mendengar akan berada antara lampu malam dan mentol lampu, dan hanya angka yang meter anda tunjukkan yang dikira.
+
+Label pada blok kuasa tidak memberitahu anda. Ia menyatakan maksimum yang penyesuai boleh beri, bukan apa yang mesin gunakan semasa rehat, dan kedua-duanya berbeza lebih daripada lima kali.
+
+Meter kuasa plug-in berharga kira-kira RM30 di mana-mana kedai perkakasan, dan ia menukar seluruh keputusan daripada perdebatan kepada bacaan. Jalankan laptop pada melahu selama satu jam dengan perkhidmatan hidup, catat angka watt, dan gunakan itu.
+
+## Aritmetik, dengan andaian dinyatakan
+
+Ambil 20 watt semasa melahu — angka munasabah bagi laptop yang menyajikan satu perkhidmatan ringan — dan kadar domestik 45 sen setiap kWh. Kedua-duanya andaian, dan anda patut menggantikan keduanya dengan angka sendiri.
+
+- 20 W selama 24 jam ialah 480 Wh, atau 0.48 kWh sehari.
+- Pada 45 sen, itu kira-kira 21.6 sen sehari.
+- Sepanjang setahun, 175 kWh, atau kira-kira RM79.
+
+Tukar wattnya dan jawapannya berskala: 40 W menggandakannya kepada kira-kira RM158 setahun, 10 W memotongnya kepada kira-kira RM40. Tarif yang patut anda gunakan tercetak dalam bil anda sendiri, dan TNB menerbitkan jadual domestik jika bil itu tidak cukup jelas.
+
+Bandingkan dengan sewa bulanan termurah yang melakukan kerja yang sama. Instans awan kecil selalunya sekitar RM20 hingga RM40 sebulan, iaitu RM240 hingga RM480 setahun. Laptop menang dari segi wang pada mana-mana watt di atas, dan ia berhenti menang sebaik masa anda dinilai lebih daripada beberapa jam setahun.
+
+## Bateri bukan UPS
+
+Laptop ada bateri terbina dalam, dan mudah untuk menganggapnya perlindungan percuma daripada gangguan bekalan. Ia bukan begitu, atas dua sebab.
+
+Pertama, bateri yang menghabiskan hayatnya pada 100 peratus dan suhu hang merosot cepat, dan bateri kembung dalam mesin yang berjalan tanpa pengawasan ialah risiko kebakaran, bukan gangguan kecil. Kebanyakan laptop membenarkan anda hadkan pengecasan pada 60 hingga 80 peratus dalam firmware, dan mesin hos sendiri patut berbuat begitu.
+
+Kedua, penutupan yang teratur lebih bernilai daripada lima minit masa hidup. Tetapkan mesin untuk menutup apabila bateri sampai ambang, dan anggap bekalan akan terputus semasa anda tiada.
+
+## Apa yang perlu dipasang, dan apa yang perlu dilangkau
+
+1. **Distribusi pelayan, bukan desktop.** Ubuntu Server atau Debian, tanpa sesi grafik. Persekitaran desktop pada mesin tanpa kepala ialah memori yang anda bayar dan permukaan serangan yang tidak anda guna.
+2. **Tingkah laku penutup, ditetapkan secara jelas.** Kebanyakan laptop tidur apabila penutup ditutup, iaitu lawan kepada apa yang pelayan patut buat.
+3. **Unit `systemd` dengan polisi mula semula**, supaya perkhidmatan yang mati kembali tanpa anda.
+4. **Satu jalan masuk, bukan tiga.** Tailscale atau terowong Cloudflare memberi akses jauh tanpa membuka port pada router, dan kedua-duanya tidak perlukan IP statik.
+5. **Sandaran yang keluar dari mesin.** Pelayan dengan satu salinan datanya pada satu cakera ialah kerugian yang sudah dijadualkan, walau apa pun masa hidupnya.
+
+Langkau perbualan RAID. Dua cakera dalam laptop jarang, dan sandaran di tempat lain menyelesaikan masalah yang RAID tidak selesaikan.
+
+## Di mana ini berhenti berkesan
+
+Laptop lama ialah jawapan yang betul untuk perkhidmatan peribadi, alat dalaman kecil, atau tempat menjalankan kerja berjadual. Ia jawapan yang salah untuk apa-apa yang pelanggan bergantung padanya, atas tiga sebab yang tidak dapat diperbaiki dengan konfigurasi:
+
+- **Bekalan elektrik dan internet kediaman.** Kedua-duanya gagal, dan tiada satu pun datang dengan SLA.
+- **Alamat dinamik.** Terowong menyelesaikan ketercapaian, bukan kebolehpercayaan.
+- **Satu mesin, tiada lebihan.** Apabila ia mati, ia mati sehingga anda balik ke rumah.
+
+Jika perkhidmatan itu penting kepada orang lain, RM240 setahun untuk instans kecil ialah bahagian termurah dalam keputusan itu.
+
+## Urutan untuk melakukannya
+
+1. Ukur watt melahu dengan meter, dengan perkhidmatan berjalan.
+2. Baca tarif anda sendiri, kemudian kira setahun.
+3. Bandingkan dengan instans awan kecil pada beban kerja yang sama.
+4. Hadkan pengecasan bateri dan tetapkan ambang penutupan.
+5. Pasang distribusi pelayan, tetapkan tingkah laku penutup, dan tambah satu terowong.
+6. Halakan sandaran ke storan di luar mesin sebelum anda mempercayainya dengan apa-apa.
+
+Urutan itu mengambil satu malam dan menghasilkan angka, bukan pendapat, dan itulah perbezaan antara hobi dan keputusan.
+
+---
+
+**Read next**
+
+[Colab akan latih model anda. Ia tidak akan hoskan](https://upahje.my/ms/articles/colab-hosting-ai-malaysia)
+
+[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
+
+### Sources
+
+- Tenaga Nasional Berhad, harga dan tarif kediaman (jadual tarif domestik yang dibaca isi rumah untuk kadar setiap kWh sendiri) — https://www.tnb.com.my/residential/pricing-tariffs (checked 2026-11-25)
+- Ubuntu Server, keperluan sistem dan panduan pemasangan untuk mesin simpanan — https://ubuntu.com/server/docs/installation (checked 2026-11-25)
+- Tailscale, harga (pelan peribadi, akses berasaskan peranti tanpa membuka port masuk) — https://tailscale.com/pricing (checked 2026-11-25)
 
 ## Levi HRD Corp: 1%, 0.5%, atau tiada sama sekali
 
@@ -3137,7 +3435,7 @@ Halaman majikan berdaftar tidak menyatakan bila levi perlu dibayar. Itu ketiadaa
 4. Kira semula pada bulan pekerja kesepuluh bermula, bukan bulan selepasnya.
 5. Minta tarikh bayaran daripada HRD Corp secara bertulis, kerana halaman itu tidak mencetaknya.
 
-Pendapat saya, dinyatakan sekali: levi ini cukup kecil untuk diabaikan dan cukup besar untuk terasa pada garisan sepuluh pekerja, iaitu tepat saat perniagaan berhenti menyemak. Membajetkannya pada sembilan pekerja dan menemuinya pada sepuluh ialah kejutan RM3,600 setahun pada purata gaji RM3,000, dan kejutan itu datang pada bulan yang sudah sibuk dengan pengambilan pekerja baharu.
+Levi ini cukup kecil untuk diabaikan dan cukup besar untuk terasa pada garisan sepuluh pekerja, iaitu tepat saat perniagaan berhenti menyemak. Membajetkannya pada sembilan pekerja dan menemuinya pada sepuluh ialah kejutan RM3,600 setahun pada purata gaji RM3,000, dan kejutan itu datang pada bulan yang sudah sibuk dengan pengambilan pekerja baharu.
 
 ---
 
@@ -3202,7 +3500,7 @@ Kebanyakan projek melangkau itu dan membeli model sebagai gantinya. Itulah sebab
 4. Tulis keempat-empat pintu sebelum anda melihat angka, supaya anda tidak boleh mengalihkannya kemudian.
 5. Dagang kertas selama sebulan, dan rekod pengisian dan bukan harga.
 
-Pendapat saya, dinyatakan sekali: bot itu bahagian mudah untuk dibina dan paling mudah untuk disalah anggap. Kerja yang menentukan sama ada ia menjana wang berlaku sebelum satu pesanan pun dihantar, dalam hamparan yang kebanyakan orang langkau kerana ia tidak seseronok gelung latihan.
+Bot itu bahagian mudah untuk dibina dan paling mudah untuk disalah anggap. Kerja yang menentukan sama ada ia menjana wang berlaku sebelum satu pesanan pun dihantar, dalam hamparan yang kebanyakan orang langkau kerana ia tidak seseronok gelung latihan.
 
 ---
 
@@ -3345,7 +3643,7 @@ Kadar GrabFood: tiada keputusan MyCC dan tiada halaman platform, jadi tiada apa 
 4. Siapa menetapkan fi penghantaran dan siapa menyimpannya.
 5. Kadar bagi bakul kecil, dalam ringgit, pada harga menu anda.
 
-Pendapat saya, dinyatakan sekali: platform yang enggan meletakkan kadarnya di sebelah bakul yang sudah dikira memberitahu sesuatu. Jawapan jujur kepada "apa yang saya tinggal pada pesanan RM25" ialah satu angka, dan halaman jualan yang enggan mengeluarkannya meminta anda menandatangani kontrak yang tidak boleh anda harga.
+Platform yang enggan meletakkan kadarnya di sebelah bakul yang sudah dikira memberitahu sesuatu. Jawapan jujur kepada "apa yang saya tinggal pada pesanan RM25" ialah satu angka, dan halaman jualan yang enggan mengeluarkannya meminta anda menandatangani kontrak yang tidak boleh anda harga.
 
 ---
 
@@ -3418,7 +3716,7 @@ PCB, potongan cukai bulanan, dikira daripada jadual MTD LHDN. Halaman yang dibac
 4. Guna jumlah jadual bagi SOCSO dan EIS, bukan peratusan rata, dan bundarkan seperti jadual itu.
 5. Bajetkan kos majikan, bukan gaji, ketika memutuskan siapa yang mampu diupah.
 
-Pendapat saya, dinyatakan sekali: gaji ialah angka yang lebih kecil dalam keputusan ini. Perniagaan yang membajet RM3,000 dan menemui RM3,448.50 selepas tawaran diterima sudah membelanjakan beza itu pada perkara lain, dan tempat pertama ia memotong ialah latihan yang pekerja baharu perlukan.
+Gaji ialah angka yang lebih kecil dalam keputusan ini. Perniagaan yang membajet RM3,000 dan menemui RM3,448.50 selepas tawaran diterima sudah membelanjakan beza itu pada perkara lain, dan tempat pertama ia memotong ialah latihan yang pekerja baharu perlukan.
 
 ---
 
@@ -3672,7 +3970,7 @@ LHDN menyebut Seksyen 120 Akta Cukai Pendapatan 1967. Tiada angka ringgit dalam 
 
 ## Jika anda di bawah RM3 juta, tunggu pelanggan meminta
 
-Pendapat saya, dinyatakan sekali: perniagaan di bawah ambang tidak patut melaksanakan e-Invoice untuk kepentingannya sendiri. Kewajipan itu sudah ditarik balik, penyertaan sukarela digalakkan tetapi tidak diberi ganjaran, dan kos operasinya nyata. Laksanakannya apabila pelanggan besar atau pembeli kerajaan memintanya, dan kemudian uruskan transaksi pelanggan itu sahaja daripada menukar setiap invois yang anda keluarkan.
+Perniagaan di bawah ambang tidak patut melaksanakan e-Invoice untuk kepentingannya sendiri. Kewajipan itu sudah ditarik balik, penyertaan sukarela digalakkan tetapi tidak diberi ganjaran, dan kos operasinya nyata. Laksanakannya apabila pelanggan besar atau pembeli kerajaan memintanya, dan kemudian uruskan transaksi pelanggan itu sahaja daripada menukar setiap invois yang anda keluarkan.
 
 Pengecualiannya ialah perniagaan yang merancang melepasi RM3 juta. Jika hasil hampir dengan garisan itu, menjalankan satu suku e-Invoice secara selari lebih murah daripada menemui kewajipan pada suku ia terpakai.
 
@@ -4278,7 +4576,7 @@ Baris terakhir itulah yang pembeli selalu tersalah. Halaman 4 saat boleh jadi sa
 
 ## Bagi laman PKS, jawapannya 5% itu
 
-Pendapat saya, dinyatakan sekali: bagi laman perniagaan kecil Malaysia, perkara yang lambat hampir selalu satu imej, satu query, atau satu skrip yang menyekat, dan tindak balas yang betul ialah betulkan itu dan berhenti. Pindahan penuh ke Rust ialah keputusan untuk pasukan yang ada bajet profiling dan proses pelepasan. Bagi kedai dengan laman lima halaman dan senarai produk, framework sebelas ribu bintang bukanlah kekangannya.
+Bagi laman perniagaan kecil Malaysia, perkara yang lambat hampir selalu satu imej, satu query, atau satu skrip yang menyekat, dan tindak balas yang betul ialah betulkan itu dan berhenti. Pindahan penuh ke Rust ialah keputusan untuk pasukan yang ada bajet profiling dan proses pelepasan. Bagi kedai dengan laman lima halaman dan senarai produk, framework sebelas ribu bintang bukanlah kekangannya.
 
 Sebelum anda menerima sebut harga untuk membina semula, tanya fungsi atau query mana yang lambat, dan angka apa yang dihasilkannya. Pembangun yang tidak dapat menamakannya sedang memberi sebut harga untuk tulis semula, dan tulis semula tiada tarikh tamat.
 

@@ -78,7 +78,7 @@ LHDN menyebut Seksyen 120 Akta Cukai Pendapatan 1967. Tiada angka ringgit dalam 
 
 ## Jika anda di bawah RM3 juta, tunggu pelanggan meminta
 
-Pendapat saya, dinyatakan sekali: perniagaan di bawah ambang tidak patut melaksanakan e-Invoice untuk kepentingannya sendiri. Kewajipan itu sudah ditarik balik, penyertaan sukarela digalakkan tetapi tidak diberi ganjaran, dan kos operasinya nyata. Laksanakannya apabila pelanggan besar atau pembeli kerajaan memintanya, dan kemudian uruskan transaksi pelanggan itu sahaja daripada menukar setiap invois yang anda keluarkan.
+Perniagaan di bawah ambang tidak patut melaksanakan e-Invoice untuk kepentingannya sendiri. Kewajipan itu sudah ditarik balik, penyertaan sukarela digalakkan tetapi tidak diberi ganjaran, dan kos operasinya nyata. Laksanakannya apabila pelanggan besar atau pembeli kerajaan memintanya, dan kemudian uruskan transaksi pelanggan itu sahaja daripada menukar setiap invois yang anda keluarkan.
 
 Pengecualiannya ialah perniagaan yang merancang melepasi RM3 juta. Jika hasil hampir dengan garisan itu, menjalankan satu suku e-Invoice secara selari lebih murah daripada menemui kewajipan pada suku ia terpakai.
 

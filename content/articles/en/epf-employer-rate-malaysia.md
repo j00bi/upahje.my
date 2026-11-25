@@ -88,7 +88,7 @@ The difference is not a rounding error; it is a band, and it is decided by the e
 4. Check whether anyone on the payroll is 60 or over, or a non-Malaysian, before using the 13/11 pair.
 5. Keep the schedule version you used, because a rate change does not rewrite history.
 
-My opinion, stated once: the 12-versus-13 question is the easy half. The half that costs money is the schedule and the two exceptions, because those are the lines a template gets wrong quietly, and a payroll error is discovered by an employee, not by an auditor.
+The 12-versus-13 question is the easy half. The half that costs money is the schedule and the two exceptions, because those are the lines a template gets wrong quietly, and a payroll error is discovered by an employee, not by an auditor.
 
 ---
 

@@ -31,12 +31,6 @@
   --color-warning: #ffd11a;
   --color-negative: #d03238;
 
-  /* Primary — derived from teal brand */
-  --color-primary: var(--color-teal-mid);
-  --color-primary-hover: var(--color-teal-deep);
-  --color-primary-pale: var(--color-teal-pale);
-  --color-primary-neutral: var(--color-teal-soft);
-
   /* Tertiary */
   --color-accent-orange: #ffc091;
   --color-accent-cyan: #38c8ff;

@@ -63,7 +63,7 @@ The last row is the common mistake: a 4-second page can be one uncompressed hero
 
 ## For an SME site, the answer is the 5%
 
-My opinion, stated once: for a Malaysian small-business site, the slow thing is almost always one image, one query, or one blocking script, and the correct response is to fix that and stop. A full port is a decision for a team with a profiling budget and a release process. For a shop with five pages and a product list, an eleven-thousand-star framework is not the constraint.
+For a Malaysian small-business site, the slow thing is almost always one image, one query, or one blocking script, and the correct response is to fix that and stop. A full port is a decision for a team with a profiling budget and a release process. For a shop with five pages and a product list, an eleven-thousand-star framework is not the constraint.
 
 Before you accept a quote to rebuild, ask which function or query is slow and what number it produces. A developer who cannot name it is quoting a rewrite, and a rewrite has no end date.
 

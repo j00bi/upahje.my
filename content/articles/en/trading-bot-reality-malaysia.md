@@ -73,7 +73,7 @@ Most projects skip that and buy the model instead. That is why they end with a c
 4. Write the four gates down before you see the numbers, so you cannot move them afterwards.
 5. Paper trade for a month, and record fills rather than prices.
 
-My opinion, stated once: the bot is the easy part to build and the easiest part to be wrong about. The work that decides whether it makes money happens before a single order is sent, in a spreadsheet most people skip because it is not as interesting as the training loop.
+The bot is the easy part to build and the easiest part to be wrong about. The work that decides whether it makes money happens before a single order is sent, in a spreadsheet most people skip because it is not as interesting as the training loop.
 
 ---
 

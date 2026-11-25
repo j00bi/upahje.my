@@ -75,7 +75,7 @@ RM4,580 untuk 24 bulan bersamaan kira-kira RM191 sebulan, iaitu antara dua tier 
 4. Adakah pelan itu memfailkan terus ke MyInvois, atau mengeksport fail untuk dimuat naik?
 5. Apakah jumlah 24 bulan, bukan angka bulanan pada iklan?
 
-Pendapat saya, dinyatakan sekali: bayar untuk laluan e-invoice, bukan untuk mesin tunai. POS yang menerima wang tetapi menyerahkan invois kepada manusia ialah kaunter dengan langganan, dan langganan itu kos yang lebih kecil antara kedua-duanya.
+Bayar untuk laluan e-invoice, bukan untuk mesin tunai. POS yang menerima wang tetapi menyerahkan invois kepada manusia ialah kaunter dengan langganan, dan langganan itu kos yang lebih kecil antara kedua-duanya.
 
 ---
 

@@ -81,7 +81,7 @@ GrabFood's rate: no MyCC decision and no platform page, so there is nothing cita
 4. Who sets the delivery fee and who keeps it.
 5. The rate for a small basket, in ringgit, at your menu prices.
 
-My opinion, stated once: a platform that will not put the rate beside a worked basket is telling you something. The honest answer to "what will I keep on a RM25 order" is a number, and a sales page that will not produce it is asking you to sign a contract you cannot price.
+A platform that will not put the rate beside a worked basket is telling you something. The honest answer to "what will I keep on a RM25 order" is a number, and a sales page that will not produce it is asking you to sign a contract you cannot price.
 
 ---
 

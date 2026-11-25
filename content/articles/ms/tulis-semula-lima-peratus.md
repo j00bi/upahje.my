@@ -63,7 +63,7 @@ Baris terakhir itulah yang pembeli selalu tersalah. Halaman 4 saat boleh jadi sa
 
 ## Bagi laman PKS, jawapannya 5% itu
 
-Pendapat saya, dinyatakan sekali: bagi laman perniagaan kecil Malaysia, perkara yang lambat hampir selalu satu imej, satu query, atau satu skrip yang menyekat, dan tindak balas yang betul ialah betulkan itu dan berhenti. Pindahan penuh ke Rust ialah keputusan untuk pasukan yang ada bajet profiling dan proses pelepasan. Bagi kedai dengan laman lima halaman dan senarai produk, framework sebelas ribu bintang bukanlah kekangannya.
+Bagi laman perniagaan kecil Malaysia, perkara yang lambat hampir selalu satu imej, satu query, atau satu skrip yang menyekat, dan tindak balas yang betul ialah betulkan itu dan berhenti. Pindahan penuh ke Rust ialah keputusan untuk pasukan yang ada bajet profiling dan proses pelepasan. Bagi kedai dengan laman lima halaman dan senarai produk, framework sebelas ribu bintang bukanlah kekangannya.
 
 Sebelum anda menerima sebut harga untuk membina semula, tanya fungsi atau query mana yang lambat, dan angka apa yang dihasilkannya. Pembangun yang tidak dapat menamakannya sedang memberi sebut harga untuk tulis semula, dan tulis semula tiada tarikh tamat.
 

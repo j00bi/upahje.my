@@ -74,7 +74,7 @@ Jumlah jadual juga tidak disalin semula: jadual ini menggunakan peratusan, dan j
 4. Semak jadual untuk jumlah tepat, dan jangkakan beza beberapa sen.
 5. Sahkan tarikh pendaftaran dengan PERKESO sendiri sebelum gaji pertama.
 
-Pendapat saya, dinyatakan sekali: siling itu satu-satunya bahagian yang mengubah cara anda mengupah. Di bawah RM6,000 caruman mengikut gaji, tetapi di atasnya skim itu kos tetap, jadi kos marginal pekerja kanan lebih rendah daripada yang ditunjukkan hamparan gaji, dan kos marginal pekerja junior lebih tinggi.
+Siling itu satu-satunya bahagian yang mengubah cara anda mengupah. Di bawah RM6,000 caruman mengikut gaji, tetapi di atasnya skim itu kos tetap, jadi kos marginal pekerja kanan lebih rendah daripada yang ditunjukkan hamparan gaji, dan kos marginal pekerja junior lebih tinggi.
 
 ---
 

@@ -83,7 +83,7 @@ Runpod's fixed price buys a known card and a known region. Vast's floor buys cap
 3. Estimate the run in minutes, not hours, and check whether billing is per second.
 4. For anything with a deadline, price the interruptible rate out of the comparison entirely.
 
-My opinion, stated once: the ringgit figure that matters for a Malaysian business is not the hourly rate, it is the cost of the experiment that fails. At RM7 an hour you can afford to be wrong four times on a Saturday, and that is worth more than a guarantee of the fastest card.
+The ringgit figure that matters for a Malaysian business is not the hourly rate, it is the cost of the experiment that fails. At RM7 an hour you can afford to be wrong four times on a Saturday, and that is worth more than a guarantee of the fastest card.
 
 ---
 

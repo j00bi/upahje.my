@@ -74,7 +74,7 @@ The zero in that table is the row a Malaysian owner should read twice. It is an 
 4. Keep the old price visible in the same test, because a price change and a price-ending change are two different experiments.
 5. Do not treat a 9 as a substitute for a price the customer can justify.
 
-My opinion, stated once: for a small Malaysian shop, the 9 is a test, not a policy. The evidence says it can move demand on something new; it does not say by how much, and it does not say anything about your customers. Spend a fortnight finding out rather than a year assuming.
+For a small Malaysian shop, the 9 is a test, not a policy. The evidence says it can move demand on something new; it does not say by how much, and it does not say anything about your customers. Spend a fortnight finding out rather than a year assuming.
 
 ---
 

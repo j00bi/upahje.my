@@ -71,7 +71,7 @@ The registered-employers page does not state when the levy must be paid. That is
 4. Recalculate the month the tenth hire starts, not the month after.
 5. Ask HRD Corp for the payment date in writing, because the page does not print one.
 
-My opinion, stated once: the levy is small enough to ignore and large enough to notice at the ten-employee line, which is exactly the moment a business stops checking. Budgeting it at nine employees and discovering it at ten is a RM3,600-a-year surprise at a RM3,000 average wage, and that surprise lands in a month that is already busy with a new hire.
+The levy is small enough to ignore and large enough to notice at the ten-employee line, which is exactly the moment a business stops checking. Budgeting it at nine employees and discovering it at ten is a RM3,600-a-year surprise at a RM3,000 average wage, and that surprise lands in a month that is already busy with a new hire.
 
 ---
 

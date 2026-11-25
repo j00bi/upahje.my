@@ -12,6 +12,15 @@ const serifFont = Newsreader({ subsets: ['latin'], variable: '--font-serif', dis
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://upahje.my'),
+  // app/icon.svg and app/apple-icon.png are picked up by convention, but the
+  // explicit entry pins the sizes so a crawler does not have to guess.
+  icons: {
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '16x16 32x32 48x48' },
+    ],
+    apple: [{ url: '/apple-icon.png', sizes: '180x180' }],
+  },
   title: {
     // The template adds the brand exactly once. Page-level titles must not
     // include it, or every title reads "… - UpahJe.my - UpahJe.my".

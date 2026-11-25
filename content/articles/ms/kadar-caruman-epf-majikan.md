@@ -88,7 +88,7 @@ Bezanya bukan pembundaran; ia julat, dan ia ditentukan oleh umur pekerja pada bu
 4. Semak sama ada ada pekerja berumur 60 tahun ke atas, atau bukan warganegara, sebelum menggunakan pasangan 13/11.
 5. Simpan versi jadual yang digunakan, kerana perubahan kadar tidak menulis semula sejarah.
 
-Pendapat saya, dinyatakan sekali: soalan 12 lawan 13 ialah separuh yang mudah. Separuh yang menelan wang ialah jadual dan dua pengecualian itu, kerana itulah baris yang templat silap secara senyap, dan kesilapan gaji ditemui oleh pekerja, bukan oleh juruaudit.
+Soalan 12 lawan 13 ialah separuh yang mudah. Separuh yang menelan wang ialah jadual dan dua pengecualian itu, kerana itulah baris yang templat silap secara senyap, dan kesilapan gaji ditemui oleh pekerja, bukan oleh juruaudit.
 
 ---
 

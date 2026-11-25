@@ -73,7 +73,7 @@ Kebanyakan projek melangkau itu dan membeli model sebagai gantinya. Itulah sebab
 4. Tulis keempat-empat pintu sebelum anda melihat angka, supaya anda tidak boleh mengalihkannya kemudian.
 5. Dagang kertas selama sebulan, dan rekod pengisian dan bukan harga.
 
-Pendapat saya, dinyatakan sekali: bot itu bahagian mudah untuk dibina dan paling mudah untuk disalah anggap. Kerja yang menentukan sama ada ia menjana wang berlaku sebelum satu pesanan pun dihantar, dalam hamparan yang kebanyakan orang langkau kerana ia tidak seseronok gelung latihan.
+Bot itu bahagian mudah untuk dibina dan paling mudah untuk disalah anggap. Kerja yang menentukan sama ada ia menjana wang berlaku sebelum satu pesanan pun dihantar, dalam hamparan yang kebanyakan orang langkau kerana ia tidak seseronok gelung latihan.
 
 ---
 

@@ -90,7 +90,7 @@ PCB, the monthly tax deduction, is computed from LHDN's MTD schedule. The page r
 4. Use the schedule amount for SOCSO and EIS, not a flat percentage, and round up as the schedule does.
 5. Budget the employer cost, not the salary, when you decide what you can afford to hire.
 
-My opinion, stated once: the salary is the smaller number in this decision. A business that budgets RM3,000 and discovers RM3,448.50 after the offer has already spent the difference on something else, and the first place it cuts is the training the new hire needed.
+The salary is the smaller number in this decision. A business that budgets RM3,000 and discovers RM3,448.50 after the offer has already spent the difference on something else, and the first place it cuts is the training the new hire needed.
 
 ---
 

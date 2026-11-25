@@ -71,7 +71,7 @@ Halaman majikan berdaftar tidak menyatakan bila levi perlu dibayar. Itu ketiadaa
 4. Kira semula pada bulan pekerja kesepuluh bermula, bukan bulan selepasnya.
 5. Minta tarikh bayaran daripada HRD Corp secara bertulis, kerana halaman itu tidak mencetaknya.
 
-Pendapat saya, dinyatakan sekali: levi ini cukup kecil untuk diabaikan dan cukup besar untuk terasa pada garisan sepuluh pekerja, iaitu tepat saat perniagaan berhenti menyemak. Membajetkannya pada sembilan pekerja dan menemuinya pada sepuluh ialah kejutan RM3,600 setahun pada purata gaji RM3,000, dan kejutan itu datang pada bulan yang sudah sibuk dengan pengambilan pekerja baharu.
+Levi ini cukup kecil untuk diabaikan dan cukup besar untuk terasa pada garisan sepuluh pekerja, iaitu tepat saat perniagaan berhenti menyemak. Membajetkannya pada sembilan pekerja dan menemuinya pada sepuluh ialah kejutan RM3,600 setahun pada purata gaji RM3,000, dan kejutan itu datang pada bulan yang sudah sibuk dengan pengambilan pekerja baharu.
 
 ---
 

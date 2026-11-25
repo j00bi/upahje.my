@@ -78,7 +78,7 @@ LHDN cites Section 120 of the Income Tax Act 1967. No ringgit figure appears in 
 
 ## If you are under RM3 million, wait for a customer to ask
 
-My opinion, stated once: a business below the threshold should not adopt e-Invoice for its own sake. The requirement is lifted, voluntary participation is encouraged but not rewarded, and the operational cost is real. Adopt it when a large customer or a government buyer requires it, and then handle that customer's transactions rather than converting every invoice you issue.
+A business below the threshold should not adopt e-Invoice for its own sake. The requirement is lifted, voluntary participation is encouraged but not rewarded, and the operational cost is real. Adopt it when a large customer or a government buyer requires it, and then handle that customer's transactions rather than converting every invoice you issue.
 
 The exception is a business planning to cross RM3 million. If revenue is close to the line, running one quarter of e-Invoice in parallel is cheaper than discovering the obligation in the quarter it applies.
 

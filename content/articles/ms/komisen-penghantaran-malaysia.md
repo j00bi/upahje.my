@@ -79,7 +79,7 @@ Kadar GrabFood: tiada keputusan MyCC dan tiada halaman platform, jadi tiada apa 
 4. Siapa menetapkan fi penghantaran dan siapa menyimpannya.
 5. Kadar bagi bakul kecil, dalam ringgit, pada harga menu anda.
 
-Pendapat saya, dinyatakan sekali: platform yang enggan meletakkan kadarnya di sebelah bakul yang sudah dikira memberitahu sesuatu. Jawapan jujur kepada "apa yang saya tinggal pada pesanan RM25" ialah satu angka, dan halaman jualan yang enggan mengeluarkannya meminta anda menandatangani kontrak yang tidak boleh anda harga.
+Platform yang enggan meletakkan kadarnya di sebelah bakul yang sudah dikira memberitahu sesuatu. Jawapan jujur kepada "apa yang saya tinggal pada pesanan RM25" ialah satu angka, dan halaman jualan yang enggan mengeluarkannya meminta anda menandatangani kontrak yang tidak boleh anda harga.
 
 ---
 

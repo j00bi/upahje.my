@@ -74,7 +74,7 @@ Sifar dalam jadual itu ialah baris yang patut dibaca dua kali oleh pemilik Malay
 4. Kekalkan harga lama kelihatan dalam ujian yang sama, kerana perubahan harga dan perubahan hujung harga ialah dua eksperimen berbeza.
 5. Jangan jadikan angka 9 pengganti harga yang pelanggan boleh pertahankan.
 
-Pendapat saya, dinyatakan sekali: bagi kedai kecil Malaysia, angka 9 ialah ujian, bukan dasar. Bukti berkata ia boleh menggerakkan permintaan pada sesuatu yang baharu; ia tidak berkata berapa banyak, dan ia tidak berkata apa-apa tentang pelanggan anda. Luangkan dua minggu untuk mengetahuinya daripada setahun menganggap.
+Bagi kedai kecil Malaysia, angka 9 ialah ujian, bukan dasar. Bukti berkata ia boleh menggerakkan permintaan pada sesuatu yang baharu; ia tidak berkata berapa banyak, dan ia tidak berkata apa-apa tentang pelanggan anda. Luangkan dua minggu untuk mengetahuinya daripada setahun menganggap.
 
 ---
 

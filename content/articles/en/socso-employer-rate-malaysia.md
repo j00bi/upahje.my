@@ -74,7 +74,7 @@ Schedule amounts are also not reproduced: the table applies the percentages, and
 4. Check the schedule for the exact amount, and expect a few sen difference.
 5. Confirm the registration deadline at PERKESO directly before the first payroll.
 
-My opinion, stated once: the ceiling is the only part of this that changes how you hire. Below RM6,000 the contribution tracks the salary, but above it the scheme is a fixed cost, so the marginal cost of a senior hire is lower than a payroll spreadsheet suggests, and the marginal cost of a junior one is higher.
+The ceiling is the only part of this that changes how you hire. Below RM6,000 the contribution tracks the salary, but above it the scheme is a fixed cost, so the marginal cost of a senior hire is lower than a payroll spreadsheet suggests, and the marginal cost of a junior one is higher.
 
 ---
 

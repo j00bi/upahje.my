@@ -75,7 +75,7 @@ The RM4,580 for 24 months works out at about RM191 a month, which sits between t
 4. Does the plan file to MyInvois directly, or export a file someone uploads?
 5. What is the 24-month total, not the monthly headline?
 
-My opinion, stated once: pay for the e-invoice route, not the till. A POS that takes money but leaves the invoice to a person is a counter with a subscription, and the subscription is the smaller cost of the two.
+Pay for the e-invoice route, not the till. A POS that takes money but leaves the invoice to a person is a counter with a subscription, and the subscription is the smaller cost of the two.
 
 ---
 

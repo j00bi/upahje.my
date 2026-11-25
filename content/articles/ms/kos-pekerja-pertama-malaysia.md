@@ -90,7 +90,7 @@ PCB, potongan cukai bulanan, dikira daripada jadual MTD LHDN. Halaman yang dibac
 4. Guna jumlah jadual bagi SOCSO dan EIS, bukan peratusan rata, dan bundarkan seperti jadual itu.
 5. Bajetkan kos majikan, bukan gaji, ketika memutuskan siapa yang mampu diupah.
 
-Pendapat saya, dinyatakan sekali: gaji ialah angka yang lebih kecil dalam keputusan ini. Perniagaan yang membajet RM3,000 dan menemui RM3,448.50 selepas tawaran diterima sudah membelanjakan beza itu pada perkara lain, dan tempat pertama ia memotong ialah latihan yang pekerja baharu perlukan.
+Gaji ialah angka yang lebih kecil dalam keputusan ini. Perniagaan yang membajet RM3,000 dan menemui RM3,448.50 selepas tawaran diterima sudah membelanjakan beza itu pada perkara lain, dan tempat pertama ia memotong ialah latihan yang pekerja baharu perlukan.
 
 ---
 
