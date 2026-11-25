@@ -62,7 +62,7 @@ The free plan that does document e-Invoice is Bukku's Launch, and it is an accou
 
 ## Do the daily prices add up to the monthly ones
 
-Qashier at RM8 a day is about RM243 over a 30-day month before terminals, so the daily card is not automatically cheaper than StoreHub's RM122. It becomes cheaper when the shop opens fewer days than it pays for, which is a calendar question rather than a software one.
+Qashier at RM8 a day is about RM240 over a 30-day month before terminals, so the daily card is not automatically cheaper than StoreHub's RM122. It becomes cheaper when the shop opens fewer days than it pays for, which is a calendar question rather than a software one.
 
 The RM4,580 for 24 months is a prepayment, not a lower rate: at RM8 a day for a 30-day month the same 24 months would cost RM5,760, so paying up front saves RM1,180. Read as a monthly figure it is about RM191, which sits between the two StoreHub tiers and above Qashier's own daily rate.
 

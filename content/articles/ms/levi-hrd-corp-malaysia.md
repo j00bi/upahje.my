@@ -54,7 +54,7 @@ Jika disetahunkan, langkah dari sembilan ke sepuluh ialah RM1,980 levi semata-ma
 
 ## Pendaftaran melalui Borang 1, dan semakan 30 hari
 
-Syarikat dengan lebih 10 pekerja Malaysia mengisi Borang 1, dan halaman itu menyatakan permohonan disemak oleh pegawai dalam tempoh 30 hari. Tetingkap semakan itu satu-satunya tempoh yang dicetak halaman tersebut. Tiada tarikh pembayaran, tiada kekerapan dan tiada penalti lewat dicetak di situ.
+Syarikat dengan 10 atau lebih pekerja Malaysia mengisi Borang 1, dan halaman itu menyatakan permohonan disemak oleh pegawai dalam tempoh 30 hari. Tetingkap semakan itu satu-satunya tempoh yang dicetak halaman tersebut. Tiada tarikh pembayaran, tiada kekerapan dan tiada penalti lewat dicetak di situ.
 
 ## Tiada tarikh bayaran dicetak
 

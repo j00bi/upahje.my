@@ -62,7 +62,7 @@ Pelan percuma yang mendokumen e-Invoice ialah Bukku Launch, iaitu produk perakau
 
 ## Adakah harga harian itu berjumlah sama dengan bulanan
 
-Qashier pada RM8 sehari ialah kira-kira RM243 dalam bulan 30 hari sebelum terminal, jadi kad harian itu tidak automatik lebih murah daripada RM122 StoreHub. Ia menjadi lebih murah apabila kedai dibuka lebih sedikit hari daripada yang dibayar, dan itu soalan kalendar, bukan soalan perisian.
+Qashier pada RM8 sehari ialah kira-kira RM240 dalam bulan 30 hari sebelum terminal, jadi kad harian itu tidak automatik lebih murah daripada RM122 StoreHub. Ia menjadi lebih murah apabila kedai dibuka lebih sedikit hari daripada yang dibayar, dan itu soalan kalendar, bukan soalan perisian.
 
 RM4,580 untuk 24 bulan ialah prabayar, bukan kadar lebih murah: pada RM8 sehari bagi bulan 30 hari, 24 bulan yang sama berharga RM5,760, jadi membayar di hadapan menjimatkan RM1,180. Jika dibaca sebagai angka bulanan, ia kira-kira RM191 sebulan, iaitu antara dua tier StoreHub dan di atas kadar harian Qashier bagi bulan penuh.
 
