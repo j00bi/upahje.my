@@ -1,5 +1,5 @@
 ---
-title: "Qwen, DeepSeek, Mistral, Kimi: what the licence allows"
+title: "Open weights, four licence types: what each model allows"
 description: "Four open-weight families, five model cards, four licence shapes: MIT on DeepSeek, a custom Qwen licence, Mistral's own. What each permits and its rental cost."
 slug: open-models-differences
 translationKey: open-models-differences
@@ -40,7 +40,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Open-weight models: Qwen, DeepSeek, Mistral and Kimi, and what the licence lets you do
+# Open weights do not mean one licence: five models, four licence types
 
 The licence is the difference that decides whether you can use a model in a business at all. Of the five open-weight models read for this article, two are MIT, one carries a custom Qwen licence, one carries Mistral's own open-weight licence, and one carries a Kimi licence. "Open weight" tells you the files are downloadable; it does not tell you what you may do with them.
 
@@ -56,7 +56,7 @@ The licence name and the restriction, quoted from the model card or its licence 
 | Mistral-Large-4-1T-A52B | Mistral Ecosystem Open-Weight License | Licence text in the repo's LICENSE file | 1 trillion |
 | Kimi-K3.1-Pro | Kimi K3.1 Pro License | Licence text in the repo's LICENSE file | 2.8T total, 104B activated |
 
-MIT is the permissive one: commercial use, modification and redistribution, with the notice kept. The other three are custom licences whose terms live in the repository's LICENSE file. Those files were not opened, so this article names the licences without summarising their terms. That is the honest limit: a custom licence is a document you read, not a label you assume.
+MIT is the permissive one: commercial use, modification and redistribution, with the notice kept. The other three are custom licences whose terms live in the repository's LICENSE file. Those files were not opened, so this article names the licences without summarising their terms. Either way, a custom licence is a document you read, not a label you assume.
 
 ## What does it take to run one?
 

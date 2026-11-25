@@ -1,6 +1,6 @@
 ---
-title: "Harness agent disusun: empat CLI pada satu mesin"
-description: "DeepSeek Harness, Claude Code, Codex CLI dan OpenCode dinilai 1-5 pada lima kriteria, menggunakan hanya apa yang ditunjukkan setiap satu pada 19 November 2026."
+title: "Empat CLI agent pada satu mesin: apa yang kami uji"
+description: "Hanya satu daripada empat menyelesaikan tugasan hujung ke hujung. Tiga lagi dinilai daripada versi dan konfigurasi, bukan penanda aras."
 slug: harness-agent-disusun
 translationKey: agent-harnesses-ranked
 date: 2026-11-19
@@ -28,7 +28,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Harness agent disusun: empat CLI yang kami jalankan pada satu mesin
+# Empat CLI agent pada satu mesin: apa yang kami uji
 
 DeepSeek Harness mendapat skor tertinggi 4.35 daripada 5, OpenCode kedua dengan 4.15, Claude Code ketiga dengan 3.70 dan Codex CLI keempat dengan 3.45. Skor itu datang daripada lima kriteria berwajaran, dan setiap satu dinilai hanya berdasarkan pemerhatian pada mesin ini pada 19 November 2026. Tiada satu pun di bawah ini ialah pengetahuan umum tentang tools tersebut.
 

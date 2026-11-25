@@ -1,5 +1,5 @@
 ---
-title: "CommandCode, OpenCode, DeepSeek: three different things"
+title: "CommandCode, OpenCode, DeepSeek: not the same kind of tool"
 description: "One is a paid CLI, one is a free CLI, one is an API. Their published prices, their drift, and one run that shows an exit code of zero is not success."
 slug: commandcode-opencode-deepseek-numbers
 translationKey: commandcode-opencode-deepseek-numbers
@@ -39,7 +39,7 @@ sources:
     checked: 2026-11-23
 ---
 
-# CommandCode, OpenCode, DeepSeek: three names, three different things
+# CommandCode, OpenCode and DeepSeek are not the same kind of tool
 
 These are three different kinds of thing, and the words matter before the prices do. `dsh` is DeepSeek Harness, the command-line harness we run here. An "arm" is one of the products tried on the same task, and this run had three: CommandCode, OpenCode and DeepSeek through `dsh`. CommandCode is a paid coding CLI. OpenCode is a free, MIT-licensed coding CLI with an optional subscription. DeepSeek is a model vendor with an API. What follows is what each publishes as a price, where those numbers have moved, and what one run showed. The benchmark half, and the reason a "CommandCode vs OpenCode" score does not exist, is a separate developer note.
 
@@ -75,7 +75,7 @@ The lesson is not that one number is wrong. It is that a dated figure needs its 
 
 One task, in one harness, printed as a sidebar and not as a head-to-head: `dsh` 0.2.2-rc.1 wrote a small feature in 95.4 seconds across 10 turns and 14 tool calls, produced two files, and the project's own tests passed 3 of 3.
 
-The part worth remembering is what happened in the other two arms. Both refused to write anything in their non-interactive defaults, and both still exited 0. An exit code of zero means the process finished. It does not mean the work happened. Any CI job or nightly script that trusts the exit code alone is measuring the wrong thing, and this is the failure mode to test for on the first day.
+What happened in the other two arms matters more than the arm that worked. Both refused to write anything in their non-interactive defaults, and both still exited 0. An exit code of zero means the process finished. It does not mean the work happened. Any CI job or nightly script that trusts the exit code alone is measuring the wrong thing, and this is the failure mode to test for on the first day.
 
 We did not run the other two arms successfully, so this article makes no claim about their output quality.
 

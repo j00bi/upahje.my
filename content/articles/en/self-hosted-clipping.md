@@ -1,6 +1,6 @@
 ---
-title: "A free clipper costs an evening, not RM61.78 a month"
-description: "OpusClip charges USD 15, which is RM61.78 converted. Two MIT repos clip locally for nothing, and Malay captions are unproven on both, so the trade is your time."
+title: "Two free tools against OpusClip: the Malay caption gap"
+description: "OpusClip charges USD 15 a month, or RM61.78 converted. Two open-source projects clip locally for no licence fee, and neither has shown reliable Malay captions."
 slug: self-hosted-clipping
 translationKey: self-hosted-clipping
 format: teardown
@@ -31,7 +31,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# A free clipper costs an evening, not RM61.78 a month
+# Can two free tools replace OpusClip? The catch is Malay captions
 
 OpusClip's Starter plan is USD 15 a month, which is RM61.78 at Bank Negara's middle rate of 4.1185 on 24 November 2026, and no Malaysian publisher prints a ringgit price for a clipping subscription at all. Two MIT-licensed repos that appeared in the same week clip on your own machine for nothing, and neither has demonstrated a Malay caption.
 

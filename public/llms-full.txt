@@ -709,7 +709,7 @@ The salary is the smaller number in this decision. A business that budgets RM3,0
 - HRD Corp, registered employers (levy thresholds, 0.5% and 1%, Form 1 review) — https://hrdcorp.gov.my/registered-employers (checked 2026-11-24)
 - LHDN, monthly tax deduction page (mechanism and channels, no remittance date) — https://www.hasil.gov.my/en/majikan/pembayaran-pcb/ (checked 2026-11-24)
 
-## A free clipper costs an evening, not RM61.78 a month
+## Two free tools against OpusClip: the Malay caption gap
 
 URL: https://upahje.my/en/articles/self-hosted-clipping
 Checked: 2026-11-24
@@ -786,7 +786,7 @@ The cheapest mistake here is paying for a year of clips you never post.
 - iamajmeena/neonclipping, repository (MIT, created 19 November 2026) — https://github.com/iamajmeena/neonclipping (checked 2026-11-24)
 - haziqahmedqasmi/PeakCut, repository (MIT, created 14 November 2026) — https://github.com/haziqahmedqasmi/PeakCut (checked 2026-11-24)
 
-## CommandCode, OpenCode, DeepSeek: three different things
+## CommandCode, OpenCode, DeepSeek: not the same kind of tool
 
 URL: https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers
 Checked: 2026-11-23
@@ -825,7 +825,7 @@ The lesson is not that one number is wrong. It is that a dated figure needs its 
 
 One task, in one harness, printed as a sidebar and not as a head-to-head: `dsh` 0.2.2-rc.1 wrote a small feature in 95.4 seconds across 10 turns and 14 tool calls, produced two files, and the project's own tests passed 3 of 3.
 
-The part worth remembering is what happened in the other two arms. Both refused to write anything in their non-interactive defaults, and both still exited 0. An exit code of zero means the process finished. It does not mean the work happened. Any CI job or nightly script that trusts the exit code alone is measuring the wrong thing, and this is the failure mode to test for on the first day.
+What happened in the other two arms matters more than the arm that worked. Both refused to write anything in their non-interactive defaults, and both still exited 0. An exit code of zero means the process finished. It does not mean the work happened. Any CI job or nightly script that trusts the exit code alone is measuring the wrong thing, and this is the failure mode to test for on the first day.
 
 We did not run the other two arms successfully, so this article makes no claim about their output quality.
 
@@ -1192,7 +1192,7 @@ Five actions, none of which needs a purchase.
 
 ## Try it yourself
 
-The smallest runnable version is a one-page map, not a system: a spreadsheet with one row per step of the document, and columns for system, owner, and where the data is retyped.
+Start with a one-page map rather than a system: a spreadsheet with one row per step of the document, and columns for system, owner, and where the data is retyped.
 
 You need the document, the person who handles it, and an hour. It costs nothing. The bite is that the map will show steps nobody admitted to, including the WhatsApp message that is currently the integration. Write it down anyway; the message is the real process, and automating around it without knowing it is how a project fails.
 
@@ -1301,7 +1301,7 @@ Five actions, none of which needs a purchase or a developer.
 
 ## Try it yourself
 
-The smallest runnable version is a script that reads a CSV of support emails, calls one model per row, and writes a draft reply into a second CSV. It is not an agent yet. That is deliberate, because it proves the loop before you add tools.
+Begin with a script that reads a CSV of support emails, calls one model per row, and writes a draft reply into a second CSV. It is not an agent yet. That is deliberate, because it proves the loop before you add tools.
 
 - **What it needs:** a file of sample rows, an API key (a string that identifies your account to the model provider), and about 20 lines of Python. No server.
 - **What it costs:** at 2,000 input and 500 output tokens per row, about **RM0.00185 a row**, so a hundred rows is under 20 sen.
@@ -1540,7 +1540,7 @@ Five actions, none of which needs a purchase.
 
 ## Try it yourself
 
-The smallest runnable version is not a bot at all: it is a script that prices your own last month from the published card, so you know the volume before you talk to a vendor.
+Before talking to a vendor, price your own last month from the published card with a script, so you know the volume before you talk to a vendor.
 
 - **What it needs:** a CSV of your outbound messages with a category column, and a spreadsheet or 15 lines of Python that multiplies counts by 0.3467 and 0.0564. No Meta account.
 - **What it costs:** nothing, and it answers the only question that matters, which is whether your volume is a rounding error or a real monthly cost.
@@ -1636,7 +1636,7 @@ If you want the sharper version: instrument, don't automate, until the exception
 
 If the process is high volume, low variation and genuinely a copy-paste job, automating it first is fine, and waiting for two weeks of data is a waste of time. The argument here is about the process that generates complaints, not the one that generates rows.
 
-And there is a real cost to waiting. Two weeks of tracking is two weeks of the pain continuing, and for some businesses that is not affordable. The honest version is that this is a trade between knowing more and suffering longer, and only the owner can price it.
+And there is a real cost to waiting. Two weeks of tracking is two weeks of the pain continuing, and for some businesses that is not affordable. That trade is between knowing more and suffering longer, and only the owner can price it.
 
 **Read next**
 
@@ -1732,7 +1732,7 @@ No. The word describes a function, not a licence. A harness can be proprietary a
 - OpenBot repository and site — https://openbot.run/ (checked 2026-11-19)
 - MausBot site — https://mausbot.com/ (checked 2026-11-19)
 
-## Agent harnesses ranked: four CLIs installed on one machine
+## Four coding-agent CLIs on one machine: what we tested
 
 URL: https://upahje.my/en/articles/agent-harnesses-ranked
 Checked: 2026-11-19
@@ -2397,7 +2397,7 @@ Not always, but for this kind of work it usually is, because the scope can be wr
 
 This piece carries no sources, because it is our own procedure rather than a report: how we commission automation work, and the brief we hand out. No published standard or vendor document is being described, and no figure here is a measurement.
 
-## Qwen, DeepSeek, Mistral, Kimi: what the licence allows
+## Open weights, four licence types: what each model allows
 
 URL: https://upahje.my/en/articles/open-models-differences
 Checked: 2026-11-19
@@ -2416,7 +2416,7 @@ The licence name and the restriction, quoted from the model card or its licence 
 | Mistral-Large-4-1T-A52B | Mistral Ecosystem Open-Weight License | Licence text in the repo's LICENSE file | 1 trillion |
 | Kimi-K3.1-Pro | Kimi K3.1 Pro License | Licence text in the repo's LICENSE file | 2.8T total, 104B activated |
 
-MIT is the permissive one: commercial use, modification and redistribution, with the notice kept. The other three are custom licences whose terms live in the repository's LICENSE file. Those files were not opened, so this article names the licences without summarising their terms. That is the honest limit: a custom licence is a document you read, not a label you assume.
+MIT is the permissive one: commercial use, modification and redistribution, with the notice kept. The other three are custom licences whose terms live in the repository's LICENSE file. Those files were not opened, so this article names the licences without summarising their terms. Either way, a custom licence is a document you read, not a label you assume.
 
 ## What does it take to run one?
 
@@ -2669,7 +2669,7 @@ Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 
 - Anthropic, Claude API pricing — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-24)
 - Bank Negara Malaysia, exchange rates (the USD middle rate quoted is the one published 19 November 2026; the page shows the latest rate) — https://www.bnm.gov.my/exchange-rates (checked 2026-11-24)
 
-## Five side-income skills in Malaysia that pay in 2026
+## What 11 Malaysian freelance listings offered for five skills
 
 URL: https://upahje.my/en/articles/side-income-skills-malaysia-2026
 Checked: 2026-11-19
@@ -3515,7 +3515,7 @@ Bot itu bahagian mudah untuk dibina dan paling mudah untuk disalah anggap. Kerja
 - Binance, titik akhir sejarah kadar pendanaan yang digunakan untuk tetingkap enam bulan (jadual tidak dibaca: halaman fi dan pendanaan memulangkan 202 kosong) — https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History (checked 2026-11-25)
 - Binance, titik akhir lilin KLINE yang digunakan untuk siri harga — https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints (checked 2026-11-25)
 
-## Klip percuma berharga satu malam, bukan RM61.78
+## Dua alat percuma lawan OpusClip: jurang sari kata Melayu
 
 URL: https://upahje.my/ms/articles/klip-video-sendiri
 Checked: 2026-11-24
@@ -4093,7 +4093,7 @@ Proses dengan garisan penamat jelas, kesilapan yang murah dan kelihatan, dan pem
 
 Artikel ini tiada sumber kerana ia hujah, bukan laporan: pendirian tentang proses mana yang patut diautomasikan dahulu, berdasarkan cara projek sebegini gagal. Tiada angka di sini yang merupakan ukuran dan tiada yang dipinjam daripada artikel lain.
 
-## CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda
+## CommandCode, OpenCode, DeepSeek: bukan jenis alat yang sama
 
 URL: https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka
 Checked: 2026-11-23
@@ -4954,7 +4954,7 @@ Kadar tahunan Claude ialah USD 17 sebulan berbanding USD 20 bulanan, iaitu RM69.
 - Anthropic, harga API Claude — https://docs.claude.com/en/docs/about-claude/pricing (checked 2026-11-24)
 - Bank Negara Malaysia, kadar pertukaran (kadar tengah USD yang dipetik ialah kadar yang diterbitkan 19 November 2026; halaman memaparkan kadar terkini) — https://www.bnm.gov.my/exchange-rates (checked 2026-11-24)
 
-## Qwen, DeepSeek, Mistral, Kimi: apa lesen benarkan
+## Pemberat terbuka, empat lesen: apa setiap model benarkan
 
 URL: https://upahje.my/ms/articles/beza-model-terbuka
 Checked: 2026-11-19
@@ -5261,7 +5261,7 @@ Tidak sentiasa, tetapi bagi kerja jenis ini biasanya ya, kerana skopnya boleh di
 
 Artikel ini tiada sumber kerana ia prosedur kami sendiri, bukan laporan: cara kami menempah kerja automasi dan brief yang kami berikan. Tiada piawaian terbitan atau dokumen vendor yang digambarkan, dan tiada angka di sini yang merupakan ukuran.
 
-## Harness agent disusun: empat CLI pada satu mesin
+## Empat CLI agent pada satu mesin: apa yang kami uji
 
 URL: https://upahje.my/ms/articles/harness-agent-disusun
 Checked: 2026-11-19
@@ -5641,7 +5641,7 @@ Tidak. Harness dan model ialah dua perkara berasingan, dan perpecahannya berlaku
 - OpenAI, pengenalan Dots — https://openai.com/index/introducing-dots/ (checked 2026-11-19)
 - Metadata pakej DeepSeek Harness, dipasang pada mesin ini — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
 
-## Lima kemahiran sampingan yang bayar pada 2026
+## Apa 11 senarai freelance Malaysia tawar untuk lima kemahiran
 
 URL: https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026
 Checked: 2026-11-19

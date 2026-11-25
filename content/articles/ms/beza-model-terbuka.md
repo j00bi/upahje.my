@@ -1,5 +1,5 @@
 ---
-title: "Qwen, DeepSeek, Mistral, Kimi: apa lesen benarkan"
+title: "Pemberat terbuka, empat lesen: apa setiap model benarkan"
 description: "Empat keluarga, lima kad model, empat bentuk lesen: MIT pada DeepSeek, lesen Qwen tersuai, lesen terbuka Mistral sendiri. Apa yang dibenarkan dan kos sewa."
 slug: beza-model-terbuka
 translationKey: open-models-differences
@@ -40,7 +40,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Model terbuka: Qwen, DeepSeek, Mistral dan Kimi, dan apa yang dibenarkan oleh lesennya
+# Pemberat terbuka bukan satu lesen: lima model, empat jenis lesen
 
 Lesen ialah perbezaan yang menentukan sama ada anda boleh menggunakan sesuatu model dalam perniagaan. Antara lima model terbuka yang dibaca untuk artikel ini, dua berlesen MIT, satu membawa lesen Qwen tersuai, satu membawa lesen terbuka Mistral sendiri, dan satu membawa lesen Kimi. "Model terbuka" memberitahu anda failnya boleh dimuat turun; ia tidak memberitahu apa yang boleh anda lakukan dengannya.
 

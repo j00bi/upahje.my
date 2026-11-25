@@ -1,6 +1,6 @@
 ---
-title: "Klip percuma berharga satu malam, bukan RM61.78"
-description: "OpusClip mengenakan USD 15, iaitu RM61.78 ditukar. Dua repo MIT memotong klip pada mesin sendiri tanpa bayaran, dan sari kata Melayu belum dibuktikan."
+title: "Dua alat percuma lawan OpusClip: jurang sari kata Melayu"
+description: "OpusClip mengenakan USD 15 sebulan, atau RM61.78 ditukar. Dua projek sumber terbuka memotong klip sendiri tanpa fi, dan sari kata Melayu belum terbukti."
 slug: klip-video-sendiri
 translationKey: self-hosted-clipping
 format: teardown
@@ -31,7 +31,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# Klip percuma berharga satu malam, bukan RM61.78
+# Dua alat percuma lawan OpusClip: jurang sari kata Melayu
 
 Pelan Starter OpusClip ialah USD 15 sebulan, iaitu RM61.78 pada kadar tengah Bank Negara 4.1185 pada 24 November 2026, dan tiada penerbit Malaysia mencetak harga ringgit untuk langganan klip langsung. Dua repo berlesen MIT yang muncul pada minggu yang sama memotong klip pada mesin sendiri tanpa bayaran, dan kedua-duanya belum menunjukkan sari kata Melayu.
 

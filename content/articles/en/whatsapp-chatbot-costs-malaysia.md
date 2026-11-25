@@ -129,7 +129,7 @@ Five actions, none of which needs a purchase.
 
 ## Try it yourself
 
-The smallest runnable version is not a bot at all: it is a script that prices your own last month from the published card, so you know the volume before you talk to a vendor.
+Before talking to a vendor, price your own last month from the published card with a script, so you know the volume before you talk to a vendor.
 
 - **What it needs:** a CSV of your outbound messages with a category column, and a spreadsheet or 15 lines of Python that multiplies counts by 0.3467 and 0.0564. No Meta account.
 - **What it costs:** nothing, and it answers the only question that matters, which is whether your volume is a rounding error or a real monthly cost.

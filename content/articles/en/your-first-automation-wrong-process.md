@@ -63,7 +63,7 @@ If you want the sharper version: instrument, don't automate, until the exception
 
 If the process is high volume, low variation and genuinely a copy-paste job, automating it first is fine, and waiting for two weeks of data is a waste of time. The argument here is about the process that generates complaints, not the one that generates rows.
 
-And there is a real cost to waiting. Two weeks of tracking is two weeks of the pain continuing, and for some businesses that is not affordable. The honest version is that this is a trade between knowing more and suffering longer, and only the owner can price it.
+And there is a real cost to waiting. Two weeks of tracking is two weeks of the pain continuing, and for some businesses that is not affordable. That trade is between knowing more and suffering longer, and only the owner can price it.
 
 **Read next**
 

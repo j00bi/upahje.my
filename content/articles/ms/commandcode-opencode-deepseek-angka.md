@@ -1,5 +1,5 @@
 ---
-title: "CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda"
+title: "CommandCode, OpenCode, DeepSeek: bukan jenis alat yang sama"
 description: "Satu CLI berbayar, satu CLI percuma, satu API. Harga yang diterbitkan, perubahannya, dan satu larian yang menunjukkan kod keluar sifar bukan kejayaan."
 slug: commandcode-opencode-deepseek-angka
 translationKey: commandcode-opencode-deepseek-numbers
@@ -39,7 +39,7 @@ sources:
     checked: 2026-11-23
 ---
 
-# CommandCode, OpenCode, DeepSeek: tiga nama, tiga jenis benda
+# CommandCode, OpenCode dan DeepSeek bukan jenis alat yang sama
 
 Ini tiga jenis benda berbeza, dan perkataannya penting sebelum harganya. `dsh` ialah DeepSeek Harness, harness baris arahan yang kami jalankan di sini. "Lengan" pula ialah salah satu produk yang dicuba pada tugasan yang sama, dan larian ini ada tiga: CommandCode, OpenCode dan DeepSeek melalui `dsh`. CommandCode ialah CLI pengekodan berbayar. OpenCode ialah CLI pengekodan percuma berlesen MIT dengan langganan pilihan. DeepSeek ialah vendor model dengan API. Apa yang menyusul ialah harga yang diterbitkan setiap satu, di mana angkanya sudah bergerak, dan apa yang ditunjukkan satu larian. Bahagian penanda aras, dan sebab perbandingan skor "CommandCode lawan OpenCode" tidak wujud, ialah nota pembangun yang berasingan.
 

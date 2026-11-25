@@ -101,7 +101,7 @@ Five actions, none of which needs a purchase.
 
 ## Try it yourself
 
-The smallest runnable version is a one-page map, not a system: a spreadsheet with one row per step of the document, and columns for system, owner, and where the data is retyped.
+Start with a one-page map rather than a system: a spreadsheet with one row per step of the document, and columns for system, owner, and where the data is retyped.
 
 You need the document, the person who handles it, and an hour. It costs nothing. The bite is that the map will show steps nobody admitted to, including the WhatsApp message that is currently the integration. Write it down anyway; the message is the real process, and automating around it without knowing it is how a project fails.
 

@@ -1,6 +1,6 @@
 ---
-title: "Agent harnesses ranked: four CLIs installed on one machine"
-description: "DeepSeek Harness, Claude Code, Codex CLI and OpenCode scored 1-5 on five weighted criteria, using only what each showed us on 19 November 2026."
+title: "Four coding-agent CLIs on one machine: what we tested"
+description: "Only one of the four completed the end-to-end task. The other three were assessed from their versions, configuration and documented interfaces, not a benchmark."
 slug: agent-harnesses-ranked
 translationKey: agent-harnesses-ranked
 date: 2026-11-19
@@ -28,7 +28,7 @@ sources:
     checked: 2026-11-19
 ---
 
-# Agent harnesses ranked: four CLIs installed on one machine
+# Four coding-agent CLIs on one machine: what we tested
 
 DeepSeek Harness scores highest at 4.35 out of 5, OpenCode second at 4.15, Claude Code third at 3.70 and Codex CLI fourth at 3.45. The scores come from five weighted criteria, each scored only from observations made on this machine on 19 November 2026. Nothing below is general knowledge about these tools.
 
