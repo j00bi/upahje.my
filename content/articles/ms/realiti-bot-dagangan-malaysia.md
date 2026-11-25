@@ -32,7 +32,7 @@ Ejen pembelajaran pengukuhan yang dilatih pada sembilan simbol FX dan mata wang 
 
 ## Bahagian murah ialah latihan
 
-Sembilan simbol, 17.9 minit, USD 0.14. Pada kadar Secure Cloud Runpod, USD 4.39 sejam untuk H100 SXM — dan kadar Community Cloud-nya USD 2.69 untuk kad yang sama — larian sepanjang itu berharga kurang daripada secawan kopi. Pengkomputeran bukan kekangan dan tidak lagi sejak bertahun-tahun. Sesiapa yang berkata botnya perlukan GPU lebih besar sedang menerangkan masalah data yang belum didiagnosisnya.
+Sembilan simbol, 17.9 minit, USD 0.14. Pada kadar H100 SXM tersenarai Runpod, USD 4.39 sejam, larian sepanjang itu berharga kurang daripada secawan kopi, dan senarai lebih murah bagi kad yang sama ada di tempat lain. Pengkomputeran bukan kekangan dan tidak lagi sejak bertahun-tahun. Sesiapa yang berkata botnya perlukan GPU lebih besar sedang menerangkan masalah data yang belum didiagnosisnya.
 
 Kekangan sebenarnya ialah model tidak boleh mempelajari kelebihan yang tiada dalam data yang diberi. Beri ia enam bulan lilin minit dan ia akan mempelajari bentuk enam bulan lilin minit itu, termasuk setiap kemalangan yang kebetulan berlaku dalam bulan-bulan tersebut.
 

@@ -32,7 +32,7 @@ A reinforcement-learning agent trained on nine FX and cryptocurrency symbols fin
 
 ## The cheap part was the training
 
-Nine symbols, 17.9 minutes, USD 0.14. At Runpod's Secure Cloud rate of USD 4.39 an hour for an H100 SXM — and its Community Cloud rate is USD 2.69 for the same card — a run of that length costs less than a cup of coffee. Compute is not the constraint and has not been for years. Anyone who tells you their bot needs a bigger GPU is describing a data problem they have not diagnosed.
+Nine symbols, 17.9 minutes, USD 0.14. At Runpod's listed H100 SXM rate of USD 4.39 an hour, a run of that length costs less than a cup of coffee, and cheaper listings of the same card exist elsewhere. Compute is not the constraint and has not been for years. Anyone who tells you their bot needs a bigger GPU is describing a data problem they have not diagnosed.
 
 The constraint is that a model cannot learn an edge that is not in the data it was given. Feed it six months of minute candles and it will learn the shape of six months of minute candles, including every accident that happened to be in those months.
 
