@@ -17,7 +17,7 @@ changelog:
   - date: 2026-11-25
     note: "First published."
 sources:
-  - title: "KWSP, employer mandatory contribution (13% and 12% bands, employee 11%, Third Schedule, 15th-of-the-month payment, Parts E and F; page marked effective for October 2025 wages)"
+  - title: "KWSP, employer mandatory contribution (13% and 12% bands split at RM5,000, employee 11%, Third Schedule and the 15th-of-the-month deadline, Part E at 4% and Part F at 2% + 2%, exact percentage above RM20,000; page marked effective for October 2025 wages)"
     url: "https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution"
     checked: 2026-11-24
 ---

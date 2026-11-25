@@ -17,7 +17,7 @@ changelog:
   - date: 2026-11-25
     note: "Mula diterbitkan."
 sources:
-  - title: "KWSP, caruman wajib majikan (julat 13% dan 12%, pekerja 11%, Jadual Ketiga, bayaran 15 haribulan, Bahagian E dan F; halaman bertanda berkuat kuasa gaji Oktober 2025)"
+  - title: "KWSP, caruman wajib majikan (julat 13% dan 12% berpecah pada RM5,000, pekerja 11%, Jadual Ketiga dan tarikh 15 haribulan, Bahagian E pada 4% dan Bahagian F pada 2% + 2%, peratusan tepat melebihi RM20,000; halaman bertanda berkuat kuasa gaji Oktober 2025)"
     url: "https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution"
     checked: 2026-11-24
 ---
