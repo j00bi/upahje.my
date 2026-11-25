@@ -18,7 +18,7 @@ changelog:
   - date: 2026-11-25
     note: "Mula diterbitkan."
 sources:
-  - title: "Binance, titik akhir sejarah kadar pendanaan yang digunakan untuk tetingkap enam bulan (kadar pendanaan, selang lapan jam)"
+  - title: "Binance, titik akhir sejarah kadar pendanaan yang digunakan untuk tetingkap enam bulan (jadual tidak dibaca: halaman fi dan pendanaan memulangkan 202 kosong)"
     url: "https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History"
     checked: 2026-11-25
   - title: "Binance, titik akhir lilin KLINE yang digunakan untuk siri harga"
@@ -32,7 +32,7 @@ Ejen pembelajaran pengukuhan yang dilatih pada sembilan simbol FX dan mata wang 
 
 ## Bahagian murah ialah latihan
 
-Sembilan simbol, 17.9 minit, USD 0.14. Walaupun pada kadar termahal di pasaran — USD 4.39 sejam untuk H100 — larian sepanjang itu berharga kurang daripada secawan kopi. Pengkomputeran bukan kekangan dan tidak lagi sejak bertahun-tahun. Sesiapa yang berkata botnya perlukan GPU lebih besar sedang menerangkan masalah data yang belum didiagnosisnya.
+Sembilan simbol, 17.9 minit, USD 0.14. Pada kadar Secure Cloud Runpod, USD 4.39 sejam untuk H100 SXM — dan kadar Community Cloud-nya USD 2.69 untuk kad yang sama — larian sepanjang itu berharga kurang daripada secawan kopi. Pengkomputeran bukan kekangan dan tidak lagi sejak bertahun-tahun. Sesiapa yang berkata botnya perlukan GPU lebih besar sedang menerangkan masalah data yang belum didiagnosisnya.
 
 Kekangan sebenarnya ialah model tidak boleh mempelajari kelebihan yang tiada dalam data yang diberi. Beri ia enam bulan lilin minit dan ia akan mempelajari bentuk enam bulan lilin minit itu, termasuk setiap kemalangan yang kebetulan berlaku dalam bulan-bulan tersebut.
 

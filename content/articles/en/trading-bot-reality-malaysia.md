@@ -18,7 +18,7 @@ changelog:
   - date: 2026-11-25
     note: "First published."
 sources:
-  - title: "Binance, funding rate history endpoint used for the six-month window (funding rate, eight-hour interval)"
+  - title: "Binance, funding rate history endpoint used for the six-month window (schedule not read: the fee and funding pages returned an empty 202)"
     url: "https://developers.binance.com/docs/derivatives/usds-margined-futures/market-data/rest-api/Get-Funding-Rate-History"
     checked: 2026-11-25
   - title: "Binance, KLINE candlestick endpoint used for the price series"
@@ -32,7 +32,7 @@ A reinforcement-learning agent trained on nine FX and cryptocurrency symbols fin
 
 ## The cheap part was the training
 
-Nine symbols, 17.9 minutes, USD 0.14. Even at the most expensive rate on the market — USD 4.39 an hour for an H100 — a run of that length costs less than a cup of coffee. Compute is not the constraint and has not been for years. Anyone who tells you their bot needs a bigger GPU is describing a data problem they have not diagnosed.
+Nine symbols, 17.9 minutes, USD 0.14. At Runpod's Secure Cloud rate of USD 4.39 an hour for an H100 SXM — and its Community Cloud rate is USD 2.69 for the same card — a run of that length costs less than a cup of coffee. Compute is not the constraint and has not been for years. Anyone who tells you their bot needs a bigger GPU is describing a data problem they have not diagnosed.
 
 The constraint is that a model cannot learn an edge that is not in the data it was given. Feed it six months of minute candles and it will learn the shape of six months of minute candles, including every accident that happened to be in those months.
 
