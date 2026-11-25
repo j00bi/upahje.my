@@ -80,4 +80,4 @@ Pendapat saya, dinyatakan sekali: angka sejam ialah nombor paling tidak berguna 
 
 [Hujung 9 menggerakkan barang baharu, bukan selebihnya](https://upahje.my/ms/articles/hujung-harga-sembilan)
 
-[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/topics/buying)

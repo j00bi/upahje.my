@@ -80,4 +80,4 @@ My opinion, stated once: the hourly figure is the least useful number on the pag
 
 [Why RM9.90 sells more than RM10, and stops working at RM99](https://upahje.my/en/articles/price-endings-nine)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
