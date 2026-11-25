@@ -48,7 +48,7 @@ First Category, for employees under 60, covers both the employment injury scheme
 
 Second Category, for employees aged 60 and over, is the injury scheme only: 1.25% payable by the employer, with no employee share.
 
-Putting a 60-year-old on the First Category row overpays; putting a 25-year-old on the Second Category row leaves them uncovered for invalidity.
+Putting a 60-year-old on the First Category row overpays; putting a 25-year-old on the Second Category row leaves them uncovered for invalidity. Both mistakes are silent on a payslip and only surface when a claim is made.
 
 ## EIS is separate, and smaller
 
@@ -64,7 +64,7 @@ The percentage printed on a rate card is a rate up to the ceiling, not a rate on
 
 Registration timing is marked [VERIFY]: PERKESO's employer-registration page was not read for this article, so no deadline is printed. Employers still have to register, and the deadline should be checked before the first payroll month rather than after it.
 
-Schedule amounts are also not reproduced: the table applies the percentages, and PERKESO's schedule is authoritative for the ringgit figures.
+Schedule amounts are also not reproduced: the table applies the percentages, and PERKESO's schedule is authoritative for the ringgit figures. If the payslip differs from your arithmetic, the schedule is right and the calculator is wrong.
 
 ## What to do before the first payslip
 
