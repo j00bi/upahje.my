@@ -22,7 +22,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# EPF employer: 12% or 13%, and RM5,000 is the line
+# EPF contribution: 12% or 13%, and RM5,000 is the line
 
 An employer pays 13% of monthly wages when the wage is RM5,000 or less, and 12% when it is more. The employee pays 11% at both levels. The ringgit amount on the payslip is not that multiplication, though: it comes from the Third Schedule and is rounded up to the next ringgit.
 
