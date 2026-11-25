@@ -18,6 +18,7 @@
 | 12 | "at RM3,250 the schedule gives RM424.00 employer and RM359.00 employee, where the percentages give RM423.00 and RM358.00" | https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution | KWSP | 2026-11-24 | source: worked example 1.1, wage below RM5,000.01, schedule against the percentages |
 | 13 | "A RM3,000 Part E wage is not printed on the page, so this article does not state its schedule amount." | - | our reading, this machine | 2026-11-24 | estimate: absence check of the KWSP page and its worked examples |
 | 14 | "the 12-versus-13 question is the easy half" | - | - | - | opinion: stated once in the reader's interest |
+| 15 | "where the wage amount for the month is below RM5,000.01" | https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution | KWSP | 2026-11-25 | source: page example phrasing the 13% band; RM5,000.01 moves the employer to 12% |
 
 | 15 | "One sen above it, at RM5,000.01, moves the employer to 12%" | https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution | KWSP | 2026-11-24 | source: the rate table prints the lower band as a wage below RM5,000.01 and the upper band as more than RM5,000.00, so the boundary is a sen rather than a ringgit |
 
