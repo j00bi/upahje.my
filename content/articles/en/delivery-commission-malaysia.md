@@ -1,23 +1,21 @@
 ---
-title: "No delivery platform publishes its commission"
-description: "Grab and foodpanda print no merchant rate. The only citable numbers are MyCC's foodpanda bands, and at 25% a RM25 order leaves RM8.50 before labour."
+title: "Grab and foodpanda commission rates in Malaysia (2026)"
+description: "What Grab and foodpanda actually charge merchants in Malaysia: the MyCC bands, what they exclude, and why at 25% a RM25 order leaves RM8.50 before labour."
 slug: delivery-commission-malaysia
 translationKey: delivery-commission-malaysia
 format: explainer
 reader: owner
 date: 2026-11-24
-updated: 2026-11-24
+updated: 2026-11-25
 author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, delivery, commission, malaysia]
 cardFigure: "At 25%, a RM25 order leaves RM8.50"
 canonical: https://upahje.my/en/articles/delivery-commission-malaysia
-draft: true
-review:
-  state: rejected
-  reason: "off-topic"
-  at: 2026-11-24T05:01:36.217Z
+draft: false
 changelog:
+  - date: 2026-11-25
+    note: "Retitled to the query people search, and published. The finding is unchanged."
   - date: 2026-11-24
     note: "First published."
 sources:

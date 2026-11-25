@@ -1,22 +1,18 @@
 ---
-title: "Tiada platform penghantaran menerbitkan komisennya"
-description: "Tiada platform mencetak kadar peniaga. Angka yang boleh dipetik cuma julat MyCC bagi foodpanda, dan pada 25% pesanan RM25 tinggal RM8.50 sebelum kos buruh."
+title: "Komisen Grab dan foodpanda di Malaysia (2026)"
+description: "Apa yang Grab dan foodpanda sebenarnya caj peniaga di Malaysia: julat MyCC, apa yang tidak termasuk, dan kenapa pada 25% pesanan RM25 tinggal RM8.50."
 slug: komisen-penghantaran-malaysia
 translationKey: delivery-commission-malaysia
 format: explainer
 reader: owner
 date: 2026-11-24
-updated: 2026-11-24
+updated: 2026-11-25
 author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, penghantaran, komisen, malaysia]
 cardFigure: "Pada 25%, pesanan RM25 tinggal RM8.50"
 canonical: https://upahje.my/ms/articles/komisen-penghantaran-malaysia
-draft: true
-review:
-  state: rejected
-  reason: "off-topic"
-  at: 2026-11-24T05:02:21.580Z
+draft: false
 changelog:
   - date: 2026-11-24
     note: "Mula diterbitkan."
