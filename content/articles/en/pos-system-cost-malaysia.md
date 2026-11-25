@@ -1,5 +1,5 @@
 ---
-title: "POS: RM122 a month, and no free tier files e-invoice"
+title: "POS: RM122 a month, and no free POS tier files e-invoice"
 description: "StoreHub starts at RM122 and Qashier charges by the day. No free POS plan documents MyInvois compliance; the RM0 plan that does is accounting software."
 slug: pos-system-cost-malaysia
 translationKey: pos-system-cost-malaysia
@@ -64,7 +64,7 @@ The free plan that does document e-Invoice is Bukku's Launch, and it is an accou
 
 Qashier at RM8 a day is about RM243 over a 30-day month before terminals, so the daily card is not automatically cheaper than StoreHub's RM122. It becomes cheaper when the shop opens fewer days than it pays for, which is a calendar question rather than a software one.
 
-The RM4,580 for 24 months works out at about RM191 a month, which sits between the two StoreHub tiers and above Qashier's own daily rate at a full month.
+The RM4,580 for 24 months is a prepayment, not a lower rate: at RM8 a day for a 30-day month the same 24 months would cost RM5,760, so paying up front saves RM1,180. Read as a monthly figure it is about RM191, which sits between the two StoreHub tiers and above Qashier's own daily rate.
 
 ## What to ask before signing
 
