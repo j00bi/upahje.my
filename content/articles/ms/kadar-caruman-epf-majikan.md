@@ -40,6 +40,8 @@ Jadual di bawah menggunakan peratusan yang diterbitkan pada lima gaji supaya per
 | RM5,001 | 12% | RM600.12 | RM550.11 |
 | RM6,000 | 12% | RM720.00 | RM660.00 |
 
+Caruman pekerja 11% tidak berubah pada RM5,000; hanya kadar majikan yang bergerak, jadi gaji yang sedikit melebihi garis itu tidak mengurangkan bawa pulang.
+
 Jumlah itu aritmetik pada kadar yang diterbitkan, bukan jadual. KWSP mengira caruman daripada Jadual Ketiga bagi gaji sehingga RM20,000, dan jumlah jadual dibundarkan ke ringgit berikutnya, jadi jangkakan slip gaji berbeza beberapa sen.
 
 ## Dua kumpulan yang mengubah jawapannya
@@ -59,6 +61,10 @@ Bayaran lewat dikenakan caj berasingan daripada caruman itu sendiri, dan artikel
 Pada RM5,000 majikan membayar RM650.00 pada kadar itu. Pada RM5,001 majikan membayar RM600.12, kerana seluruh gaji berpindah ke julat 12% dan bukan hanya lebihan di atas RM5,000.
 
 Itu penurunan RM49.88 bagi kenaikan RM1, dan ia satu-satunya tempat di mana membayar seseorang lebih tinggi boleh mengurangkan kos EPF perniagaan. Jadual melicinkan sebahagian jurang itu, tetapi peralihan julat itu nyata.
+
+Sepanjang setahun pada gaji tetap, jurang itu RM598.56, dan angka itu aritmetik pada peratusan yang diterbitkan dan bukan jumlah jadual. Jadual Ketiga yang sebenarnya dibayar, dan ia membundarkan ke ringgit berikutnya, jadi slip gaji berada dalam beberapa sen daripada angka ini dan bukan tepat padanya.
+
+Satu lagi sempadan: melebihi RM20,000 sebulan, KWSP berhenti menggunakan jadual dan peratusan tepat terpakai, iaitu satu-satunya julat di mana pendaraban pada halaman itu ialah jumlah yang dibayar. Templat gaji yang hanya mengenal jadual perlu peraturan kedua untuk gaji tertinggi.
 
 ## Baris 60 tahun ke atas, dikira sekali
 

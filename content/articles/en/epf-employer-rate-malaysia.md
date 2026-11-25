@@ -1,5 +1,5 @@
 ---
-title: "EPF employer: 12% or 13%, and RM5,000 is the line"
+title: "EPF contribution: 12% or 13%, and RM5,000 is the line"
 description: "The employer rate is 13% at RM5,000 and below and 12% above it, but the contribution comes from the Third Schedule and rounds up, not from a calculator."
 slug: epf-employer-rate-malaysia
 translationKey: epf-employer-rate-malaysia
@@ -40,6 +40,8 @@ The table applies the published percentages to five wages so the break is visibl
 | RM5,001 | 12% | RM600.12 | RM550.11 |
 | RM6,000 | 12% | RM720.00 | RM660.00 |
 
+The employee's 11% does not move at RM5,000; only the employer's rate does, so a wage just above the line does not reduce take-home pay.
+
 Those amounts are arithmetic at the published rate, not the schedule. KWSP computes contributions from the Third Schedule for wages up to RM20,000, and the schedule total is rounded up to the next ringgit, so expect the payslip to differ by a few sen.
 
 ## Two bands that change the answer
@@ -59,6 +61,10 @@ Late payment is a different charge from the contribution itself, and this articl
 At RM5,000 the employer pays RM650.00 at the rate. At RM5,001 the employer pays RM600.12, because the whole wage moves to the 12% band rather than the excess above RM5,000.
 
 That is a RM49.88 drop for a RM1 raise, and it is the one place where paying someone more can cost the business less in EPF. The schedule smooths some of the gap, but the band change is real.
+
+Over a year at a constant wage the gap is RM598.56, and that figure is arithmetic on the published percentages rather than a schedule amount. The Third Schedule is what actually gets paid, and it rounds up to the next ringgit, so the payslip lands within a few sen of these numbers instead of exactly on them.
+
+One more edge: above RM20,000 a month, KWSP stops using the schedule and the exact percentage applies, which is the only band where the multiplication on the page is the amount paid. A payroll template that only knows the schedule will need a second rule for the highest salaries.
 
 ## The 60-plus line, worked once
 
