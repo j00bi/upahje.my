@@ -10,7 +10,7 @@ updated: 2026-11-25
 author: "UpahJe Desk"
 category: definitions
 tags: [definitions, epf, payroll, malaysia]
-cardFigure: "13% at RM5,000, 12% above it"
+cardFigure: "13% to RM5,000, 12% above, per schedule"
 canonical: https://upahje.my/en/articles/epf-employer-rate-malaysia
 draft: true
 changelog:
@@ -46,7 +46,7 @@ Those amounts are arithmetic at the published rate, not the schedule. KWSP compu
 
 ## Two bands that change the answer
 
-Employees aged 60 and over sit in Part E: the employer pays 4% and the employee pays nothing. Non-Malaysians registered from 1 August 1998 are 2% employer and 2% employee.
+Employees aged 60 and over sit in Part E of the schedule: the employer pays 4% and the employee pays nothing. Non-Malaysians registered from 1 August 1998 sit in Part F, at 2% employer and 2% employee. Both are schedule amounts, not multiplications.
 
 Neither band appears in a payroll template built for a young all-Malaysian team, which is how a first payslip for a returning retiree goes wrong.
 
@@ -68,7 +68,7 @@ One more edge: above RM20,000 a month, KWSP stops using the schedule and the exa
 
 ## The 60-plus line, worked once
 
-For an employee aged 60 or over at RM3,000, Part E puts the employer at 4%, which is RM120, and the employee at 0%. The same wage under the 13/11 pair costs the employer RM390 and the employee RM330.
+For an employee aged 60 or over at RM3,000, Part E puts the employer rate at 4%; the schedule entry for that wage is RM120, and the employee contributes nothing. The same wage under the 13/11 pair costs the employer RM390 and the employee RM330.
 
 The difference is not a rounding error; it is a band, and it is decided by the employee's age on the contribution month, not by the payroll template's default. A template built for a young team will miss this line until someone checks it by hand.
 

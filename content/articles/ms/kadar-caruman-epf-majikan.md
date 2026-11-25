@@ -10,7 +10,7 @@ updated: 2026-11-25
 author: "UpahJe Desk"
 category: definitions
 tags: [definitions, epf, gaji, malaysia]
-cardFigure: "13% pada RM5,000, 12% ke atasnya"
+cardFigure: "13% hingga RM5,000, 12% ke atas, ikut jadual"
 canonical: https://upahje.my/ms/articles/kadar-caruman-epf-majikan
 draft: true
 changelog:
@@ -46,7 +46,7 @@ Jumlah itu aritmetik pada kadar yang diterbitkan, bukan jadual. KWSP mengira car
 
 ## Dua kumpulan yang mengubah jawapannya
 
-Pekerja berumur 60 tahun ke atas berada dalam Bahagian E: majikan membayar 4% dan pekerja tidak membayar apa-apa. Bukan warganegara yang didaftarkan mulai 1 Ogos 1998 pula 2% majikan dan 2% pekerja.
+Pekerja berumur 60 tahun ke atas berada dalam Bahagian E jadual: majikan membayar 4% dan pekerja tidak membayar apa-apa. Bukan warganegara yang didaftarkan mulai 1 Ogos 1998 berada dalam Bahagian F, pada 2% majikan dan 2% pekerja. Kedua-duanya jumlah jadual, bukan hasil darab.
 
 Kedua-dua kumpulan ini tidak muncul dalam templat gaji yang dibina untuk pasukan muda semuanya warganegara, dan itulah cara slip gaji pertama seorang pesara yang kembali bekerja menjadi salah.
 
@@ -68,7 +68,7 @@ Satu lagi sempadan: melebihi RM20,000 sebulan, KWSP berhenti menggunakan jadual 
 
 ## Baris 60 tahun ke atas, dikira sekali
 
-Bagi pekerja berumur 60 tahun ke atas pada RM3,000, Bahagian E meletakkan majikan pada 4%, iaitu RM120, dan pekerja pada 0%. Gaji yang sama di bawah pasangan 13/11 menelan RM390 daripada majikan dan RM330 daripada pekerja.
+Bagi pekerja berumur 60 tahun ke atas pada RM3,000, Bahagian E meletakkan kadar majikan pada 4%; jumlah jadual bagi gaji itu ialah RM120, dan pekerja tidak menyumbang. Gaji yang sama di bawah pasangan 13/11 menelan RM390 daripada majikan dan RM330 daripada pekerja.
 
 Bezanya bukan pembundaran; ia julat, dan ia ditentukan oleh umur pekerja pada bulan caruman, bukan oleh lalai templat gaji. Templat yang dibina untuk pasukan muda akan terlepas baris ini sehingga seseorang menyemaknya dengan tangan.
 
