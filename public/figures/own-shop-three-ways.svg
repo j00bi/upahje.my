@@ -1,0 +1,58 @@
+<svg width="100%" viewBox="0 0 760 700" xmlns="http://www.w3.org/2000/svg" role="graphics-document document" aria-roledescription="comparison" style="max-width:760px;background:transparent">
+  <style>
+    .bg{fill:#FAF9F5}
+    .ink{fill:#14160F}
+    .muted{fill:#63665E}
+    .rule{stroke:#E4E2DA;stroke-width:1}
+    .t{font-family:"Recursive Variable",ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+    .label{font-size:11px;letter-spacing:.14em;text-transform:uppercase}
+    .h{font-size:17px;font-weight:600}
+    .row{font-size:13px}
+    .val{font-size:13px;font-weight:500}
+    .panel-theirs{fill:#F4F2EE;stroke:#BDBCCC;stroke-width:1}
+    .panel-own{fill:#EAF7EC;stroke:#1A6B2E;stroke-width:1.5}
+    .tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+  </style>
+
+  <rect class="bg" x="0" y="0" width="760" height="700" rx="10"/>
+
+  <text class="t ink h" x="28" y="40">Three ways to sell, and who holds what</text>
+  <text class="t muted row" x="28" y="62">Same dish, same price, different owner of the customer.</text>
+
+  <!-- Panel 1: marketplace listing -->
+  <g>
+    <rect class="panel-theirs" x="28" y="86" width="704" height="164" rx="8"/>
+    <text class="t muted tag" x="48" y="112">1 · A LISTING ON SOMEONE ELSE'S SITE</text>
+    <text class="t ink h" x="48" y="138">A page, not a shop</text>
+    <text class="t ink row" x="48" y="164">Customer belongs to the platform</text>
+    <text class="t ink row" x="48" y="188">You pay listing or commission</text>
+    <text class="t ink row" x="48" y="212">Delisted, you disappear</text>
+    <text class="t muted row" x="48" y="236">Discovery: theirs</text>
+  </g>
+
+  <!-- Panel 2: aggregator delivery -->
+  <g>
+    <rect class="panel-theirs" x="28" y="266" width="704" height="164" rx="8"/>
+    <text class="t muted tag" x="48" y="292">2 · AN AGGREGATOR WITH RIDERS</text>
+    <text class="t ink h" x="48" y="318">Reach rented by the order</text>
+    <text class="t ink row" x="48" y="344">Customer belongs to the platform</text>
+    <text class="t ink row" x="48" y="368">Commission on the whole bill</text>
+    <text class="t ink row" x="48" y="392">Delisted, you disappear</text>
+    <text class="t muted row" x="48" y="416">Discovery: theirs, and it costs</text>
+  </g>
+
+  <!-- Panel 3: own storefront -->
+  <g>
+    <rect class="panel-own" x="28" y="446" width="704" height="196" rx="8"/>
+    <text class="t tag" x="48" y="472" fill="#1A6B2E">3 · YOUR OWN STOREFRONT</text>
+    <text class="t ink h" x="48" y="498">A shop, with a checkout</text>
+    <text class="t ink row" x="48" y="524">Customer belongs to you</text>
+    <text class="t ink row" x="48" y="548">You pay the payment fee, not commission</text>
+    <text class="t ink row" x="48" y="572">Nothing to be delisted from</text>
+    <text class="t row" x="48" y="596" fill="#A97B16">Discovery: yours — this is the catch</text>
+    <text class="t muted row" x="48" y="622">The website was never the expensive part.</text>
+  </g>
+
+  <line class="rule" x1="28" y1="668" x2="732" y2="668"/>
+  <text class="t muted row" x="28" y="688">Only the third has a customer list that outlives the platform.</text>
+</svg>
