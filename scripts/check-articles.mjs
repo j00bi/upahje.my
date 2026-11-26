@@ -137,7 +137,12 @@ for (const language of LANGUAGES) {
       console.error(`[fail] ${language.code}/${article.slug}: missing required frontmatter`)
       failed++
     }
-    if (article.date > new Date().toISOString().slice(0, 10)) {
+    // A publication in UTC+8 publishes on its own calendar day, which is still
+    // "tomorrow" in UTC for the first eight hours. Comparing against the UTC date
+    // blocked every early-morning publish with "date is in the future" — the gate
+    // was wrong, not the date. One day of tolerance, no more.
+    const utcTomorrow = new Date(Date.now() + 86_400_000).toISOString().slice(0, 10)
+    if (article.date > utcTomorrow) {
       console.error(`[fail] ${language.code}/${article.slug}: date is in the future`)
       failed++
     }
