@@ -38,6 +38,12 @@ sources:
   - title: "SSM, jadual fi Pendaftaran Perniagaan (nama dagang RM60 setahun, nama sendiri RM30, RM5 setiap cawangan)"
     url: "https://www.ssm.com.my/Pages/Services/Registration-of-Business-(ROB)/table-of-fees/Table-of-Fees.aspx"
     checked: 2026-11-26
+  - title: "mejamakan, laman sendiri (menu mingguan, pesanan pada domain sendiri, penghantaran hari bekerja; harga menu seperti dipaparkan pada 26 November 2026)"
+    url: "https://mejamakan.my/"
+    checked: 2026-11-26
+  - title: "mejamakan di Instagram (16K pengikut seperti dipaparkan pada 26 November 2026)"
+    url: "https://www.instagram.com/mejamakan.my/"
+    checked: 2026-11-26
 ---
 
 # Memiliki kedai bermakna mewarisi masalah penemuan
@@ -46,11 +52,11 @@ Platform menjual dua perkara dalam satu invois, dan hanya satu daripadanya peris
 
 Itulah dagangan siri ini, dan ia bukan slogan pada mana-mana arah. Memiliki kedai menggantikan peratusan dengan bil tetap, yang baik, dan menggantikan khalayak orang lain dengan kerja anda sendiri, yang mahal. Aritmetik di bawah menyatakan di mana kelebihan pertama cukup besar untuk membayar yang kedua.
 
-## Apa yang platform sebenarnya jual
+## Platform menjual checkout dan khalayak
 
 Dua perkhidmatan berada dalam satu komisen. Yang pertama mesin tunai: borang pesanan, bayaran, resit. Yang kedua penemuan: senarai tempat orang yang lapar dan tidak pernah mendengar nama anda boleh menemuinya, membandingkannya dan memesan.
 
-Hanya yang pertama boleh dibeli pada harga yang diterbitkan hari ini. Bayaran FPX berharga RM1.00 di CHIP atau RM0.75 hingga RM1.25 di Billplz bergantung pada pelan, dan ia masuk pada hari perniagaan berikutnya. Bayaran kad berharga peratusan — 2.0% di CHIP, 3% campur RM1.00 di Stripe — dan masuk dalam dua hari perniagaan, dengan CHIP mencatat fi transaksinya tertakluk SST 8%.
+Hanya yang pertama boleh dibeli pada harga yang diterbitkan hari ini. Bayaran FPX berharga RM1.00 di CHIP atau RM0.75 hingga RM1.25 di Billplz bergantung pada pelan, dan ia masuk pada hari perniagaan berikutnya. Bayaran kad berharga peratusan — 2.0% di CHIP, 3% campur RM1.00 di Stripe — dan masuk dalam dua hari perniagaan di CHIP dan Billplz, tetapi Stripe membayar keluar mengikut tetapan bergulir, mingguan atau bulanan, dengan CHIP mencatat fi transaksinya tertakluk SST 8%.
 
 Penemuan tiada harga yang diterbitkan di mana-mana halaman yang dibaca untuk siri ini. Tiada platform, gerbang atau majlis mencetak kos mendapatkan seorang pelanggan makanan, dan artikel ini tidak akan menciptanya.
 
@@ -71,7 +77,7 @@ Pada bakul RM30, fi FPX CHIP ialah RM1.00 dan fi kadnya RM0.60 sebelum SST, kira
 
 Penyelesaian ialah sifat kaedah, bukan gerbang. Penyedia yang sama mencetak hari berikutnya untuk FPX dan dua hari perniagaan untuk kad, dan jadual pembayaran Stripe ialah tetapan — bergulung, mingguan atau bulanan — bukan terma. Kedai yang merancang aliran tunai daripada angka "X hari" sedang merancang daripada baris yang salah.
 
-## Apa yang komisen itu sebenarnya kos
+## Komisen satu-satunya angka yang tiada siapa terbitkan
 
 Tiada platform penghantaran menerbitkan komisen peniaga. Satu-satunya angka yang direkodkan pengawal selia ialah julat dalam keputusan Suruhanjaya Persaingan Malaysia berhubung foodpanda bertarikh 11 September 2023: 1% hingga 5%, 10% hingga 25%, 15% hingga 20%, dan dua kali 15% hingga 25%. Itu **lima kontrak peniaga francais tanpa nama (n=5)**, bukan kad kadar semasa platform, dan mana-mana ayat yang menampilkannya sebagai harga hari ini adalah salah.
 
@@ -79,13 +85,13 @@ Ia masih satu-satunya angka tempat pembaca boleh bermula sebelum kontrak tiba, j
 
 ## Apa yang diselesaikan kedai hujung minggu, dan apa yang tidak
 
-Kedai bukan binaan yang sukar. Dalam satu hujung minggu kedai boleh ada domain, menu dengan harga, checkout yang menerima FPX, pemberitahuan pesanan dan resit, dan tiada satu pun memerlukan pembangun atau langganan platform. Itulah "separuh yang mudah" yang siri ini sentiasa namakan, dan ia memang mudah.
+Kedai bukan binaan yang sukar. Dalam satu hujung minggu kedai boleh ada domain, menu dengan harga, cara mengambil wang yang tidak memerlukan gerbang bayaran, pemberitahuan pesanan dan resit, dan tiada satu pun memerlukan pembangun atau langganan platform. Itulah "separuh yang mudah" yang siri ini sentiasa namakan, dan ia memang mudah.
 
 Apa yang hujung minggu itu tidak hasilkan ialah orang yang tidak pernah mendengar nama kedai menaip domain itu. Binaan berakhir dengan checkout yang berfungsi dan sifar pelawat, dan syarat kedua itulah yang menentukan sama ada kedai itu berpendapatan.
 
 Dinyatakan terus, keupayaannya satu senarai dan ketidakupayaannya satu ayat:
 
-- **Anda boleh ada** domain, satu halaman bagi setiap hidangan, butang bayaran, pengesahan dan rekod pesanan.
+- **Anda boleh ada** domain, satu halaman bagi setiap hidangan, kaedah bayaran, pengesahan dan rekod pesanan.
 - **Anda tidak boleh dapatkan** orang asing, hasil carian, syor atau pelanggan berulang tiba, kerana semuanya diperoleh melalui pemasaran, kebiasaan dan masa.
 - **Anda boleh miliki** senarai pelanggan sebaik sahaja seseorang memesan.
 - **Anda tidak boleh pinjam** penemuan platform sebaik sahaja anda keluar daripadanya.
@@ -105,8 +111,6 @@ Jadual menyelesaikan bahagian fi sahaja, dengan kos bulanan RM150 dan bakul pura
 | 5% | 200 | 600 | 157 |
 | 15% | 40 | 47 | 38 |
 | 25% | 23 | 24 | 22 |
-
-Identiti itu diterbitkan sepenuhnya dalam [RM1.25 atau 15%: kos checkout anda sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen); hub ini membawa hasilnya.
 
 Pada hujung atas jalur terluas pengawal selia, memiliki mengalahkan komisen selepas kira-kira **23 pesanan sebulan**. Pada hujung bawah jalur tersempit ia mengambil **200** pada pelan FPX termurah dan **600** pada pelan percuma. Jurang itu seluruh hujahnya: kadar komisen menentukan sama ada memiliki kedai ialah baki kecil atau perniagaan yang berbeza.
 
@@ -153,7 +157,7 @@ Kedua, kekal di platform yang komisennya lebih rendah daripada fi bayaran. Baris
 
 Kedua-dua kesilapan datang daripada tabiat yang sama: membandingkan peratusan dengan peratusan sedangkan satu pihak tetap, atau membandingkan kos binaan dengan komisen tanpa mengira penemuan yang komisen itu sertakan.
 
-## Apa yang tidak diterbitkan, dan apa maksudnya
+## Empat angka yang tiada siapa terbitkan
 
 Tiada platform menerbitkan komisen peniaga. Tiada halaman Malaysia mencetak kos mendapatkan pelanggan makanan. Tiada kurier menerbitkan tarif per-km. Tiga daripada enam gerbang yang dibaca untuk siri ini enggan memberi kadar tanpa perbualan: senangPay mencetak fi platform RM199 setahun dan tiada MDR, halaman harga iPay88 404, dan toyyibPay menghidangkan cangkerang JavaScript.
 

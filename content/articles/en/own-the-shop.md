@@ -38,6 +38,12 @@ sources:
   - title: "SSM, Registration of Business table of fees (trade name RM60 a year, personal name RM30, RM5 per branch)"
     url: "https://www.ssm.com.my/Pages/Services/Registration-of-Business-(ROB)/table-of-fees/Table-of-Fees.aspx"
     checked: 2026-11-26
+  - title: "mejamakan, own site (weekly menu, ordering on its own domain, delivery weekdays; menu prices as displayed on 26 November 2026)"
+    url: "https://mejamakan.my/"
+    checked: 2026-11-26
+  - title: "mejamakan on Instagram (16K followers as displayed on 26 November 2026)"
+    url: "https://www.instagram.com/mejamakan.my/"
+    checked: 2026-11-26
 ---
 
 # Owning the shop means inheriting the discovery problem
@@ -46,11 +52,11 @@ A marketplace sells two things in one invoice, and only one of them is software.
 
 That is the trade this series weighs, and it is not a slogan in either direction. Owning the shop replaces a percentage with a fixed bill, which is good, and replaces someone else's audience with your own job, which is expensive. The arithmetic below says where the first advantage is large enough to pay for the second.
 
-## What the marketplace actually sold you
+## The marketplace sold a checkout and an audience
 
 Two services sit inside one commission. The first is a checkout: an order form, a payment, a receipt. The second is discovery: a listing where a hungry person who has never heard of you can find you, compare you and order.
 
-Only the first can be bought at a published price today. An FPX payment costs RM1.00 at CHIP or RM0.75 to RM1.25 at Billplz depending on the plan, and it settles next business day. A card payment costs a percentage — 2.0% at CHIP, 3% plus RM1.00 at Stripe — and settles in two business days, with CHIP noting that its transaction fees carry 8% SST.
+Only the first can be bought at a published price today. An FPX payment costs RM1.00 at CHIP or RM0.75 to RM1.25 at Billplz depending on the plan, and it settles next business day. A card payment costs a percentage — 2.0% at CHIP, 3% plus RM1.00 at Stripe — and settles in two business days at CHIP and Billplz, though Stripe pays out on a rolling, weekly or monthly setting, with CHIP noting that its transaction fees carry 8% SST.
 
 Discovery has no published price anywhere in the pages read for this series. No platform, gateway or council prints what it costs to acquire a food customer, and this article will not invent one.
 
@@ -71,7 +77,7 @@ On a RM30 basket, CHIP's FPX fee is RM1.00 and its card fee is RM0.60 before SST
 
 Settlement is a property of the method, not the gateway. The same provider prints next-day for FPX and two business days for cards, and Stripe's payout is a setting — rolling, weekly or monthly — rather than a term. A shop that plans cash flow from a headline "X days" figure is planning from the wrong line.
 
-## What the commission is actually costing
+## The commission is the only number nobody prints
 
 Neither delivery platform publishes a merchant commission. The only regulator-recorded figures are the bands in the Malaysia Competition Commission's foodpanda decision of 11 September 2023: 1% to 5%, 10% to 25%, 15% to 20%, and twice 15% to 25%. Those are **five anonymised franchised merchant contracts (n=5)**, not a platform's current rate card, and any sentence that presents them as today's price is wrong.
 
@@ -79,13 +85,13 @@ They are still the only numbers a reader can start from before a contract lands,
 
 ## What a weekend storefront solves, and what it does not
 
-A storefront is not a hard build. In a weekend a shop can have a domain, a menu with prices, a checkout that takes FPX, an order notification and a receipt, and none of that requires a developer or a subscription to a platform. That is the "easy half" this series keeps naming, and it is genuinely easy.
+A storefront is not a hard build. In a weekend a shop can have a domain, a menu with prices, a way to take money that does not require a gateway, an order notification and a receipt, and none of that requires a developer or a subscription to a platform. That is the "easy half" this series keeps naming, and it is genuinely easy.
 
 What the weekend does not produce is a person who has never heard of the shop typing the domain. The build ends with a working checkout and zero visitors, and the second condition is the one that decides whether the shop earns anything.
 
 Put plainly, the capability is a list and the non-capability is one sentence:
 
-- **You can have** a domain, a page per dish, a payment button, a confirmation, and a record of the order.
+- **You can have** a domain, a page per dish, a payment method, a confirmation, and a record of the order.
 - **You cannot get** the stranger, the search result, the recommendation or the repeat customer to arrive, because those are earned by marketing, by habit and by time.
 - **You can own** the customer list once someone orders.
 - **You cannot borrow** the platform's discovery once you leave it.
@@ -151,7 +157,7 @@ The second is staying on a platform whose commission sits below the payment fee.
 
 Both mistakes come from the same habit: comparing a percentage with a percentage when one side is flat, or comparing a build cost with a commission without counting the discovery the commission included.
 
-## What is not published, and what that means
+## Four numbers nobody publishes
 
 No platform publishes a merchant commission. No Malaysian page prints a cost of acquiring a food customer. No courier publishes a per-km tariff. Three of the six gateways read for this series will not quote a rate without a conversation: senangPay prints a RM199-a-year platform fee and no MDR, iPay88's pricing page is 404, and toyyibPay serves JavaScript shells.
 
