@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Inter, Archivo, Newsreader } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
+import Script from 'next/script'
 import './globals.css'
 
 /* Three families, loaded by next/font so they are self-hosted: no runtime
@@ -71,7 +71,13 @@ export default function RootLayout({
           }}
         />
         <main>{children}</main>
-        <Analytics />
+        {/* Web Analytics by hand. The @vercel/analytics component is installed and
+            renders, but it never injected its script, so no pageview was recorded:
+            window.va existed as an empty stub with no queue and no script tag.
+            Loading the file Vercel serves is the documented install that does not
+            depend on the component, and it is verifiable from the HTML. */}
+        <Script src="/_vercel/insights/script.js" strategy="afterInteractive" />
+        <Script src="/_vercel/speed-insights/script.js" strategy="lazyOnload" />
       </body>
     </html>
   )
