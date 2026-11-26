@@ -31,9 +31,10 @@ A new `category` or topic needs three things before it ships: a route, a count i
 
 `category` is required frontmatter and validated in `lib/articles.mjs`: a missing or unknown value throws at build, which is why every one of the 46 units carries one. `topic` is a mapping in `data/topics.json` and can legitimately be absent — an unmapped article still publishes, it just does not appear on a topic page.
 
-Counted on 26 November 2026, on `main`: **46 translation units, 92 article files** — `buying-guides` 62, `definitions` 26, `side-income` 4. Recount with
-`grep -h "^category:" content/articles/*/*.md | sort | uniq -c` rather than trusting this paragraph; it was 32/12/2 a day earlier, which is exactly how a taxonomy document goes stale.
+Counted on 26 November 2026, on `main` at `d60f28d`: **46 translation units, 92 article files**. Of those 92 files — so every figure below is double its unit count — `buying-guides` 62, `definitions` 26, `side-income` 4. Two of the 46 units are `draft: true` and not published. `topic` maps 30 of the 46; the other 16 publish without a topic page, which is the optionality above working as intended.
+
+Recount with `grep -h "^category:" content/articles/*/*.md | sort | uniq -c` rather than trusting this paragraph; it was 32/12/2 a day earlier, which is exactly how a taxonomy document goes stale.
 
 ## The trap that was here
 
-Until 26 November, `components/articles/CategoryNav.tsx` and `categoryPath()` still built `/{lang}/articles/category/{slug}` links for a route that no longer existed in `app/`; `next.config.*` 301s those URLs to `/topics/*`, and nothing imported the component. The dead code was deleted in `chore/dead-category-nav` and is recorded here because it is the shape of the mistake: a retired taxonomy that still compiles looks alive to anyone who greps `category`.
+Until 26 November, `components/articles/CategoryNav.tsx` and `categoryPath()` still built `/{lang}/articles/category/{slug}` links for a route that no longer existed in `app/`; `next.config.*` 301s those URLs to `/topics/*`, and nothing imported the component. The dead code was deleted — authored on `chore/dead-category-nav`, and gone from `main`, where `grep -rn "CategoryNav\|categoryPath\|categoryLanguages" app components lib` now returns nothing. It is recorded here because it is the shape of the mistake: a retired taxonomy that still compiles looks alive to anyone who greps `category`.
