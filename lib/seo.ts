@@ -1,4 +1,4 @@
-import { LANGUAGES, categoryPath } from './articles.mjs'
+import { LANGUAGES } from './articles.mjs'
 import type { Article } from './types'
 
 export const SITE = 'https://upahje.my'
@@ -28,11 +28,6 @@ export function articleLanguages(article: Article, pair?: Article) {
   }
 }
 
-export const categoryLanguages = (category: string) => ({
-  'en-MY': absolute(categoryPath('en', category)),
-  'ms-MY': absolute(categoryPath('ms', category)),
-  'x-default': absolute(categoryPath('en', category)),
-})
 
 export const htmlLang = (lang: string) => LANGUAGES.find((l) => l.code === lang)?.htmlLang || 'en-MY'
 
