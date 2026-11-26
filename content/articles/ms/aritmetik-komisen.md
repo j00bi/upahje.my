@@ -32,7 +32,7 @@ Angka yang paling anda perlukan ialah yang tiada siapa cetak. Tiada platform pen
 
 Bahagian pembayaran diterbitkan. Billplz mencetak kedua-dua angka FPX dalam jadual pelannya: RM1.25 setiap transaksi pada pelan Basic percuma dan RM0.75 pada pelan Standard RM999 setahun, manakala tajuk halamannya mengiklankan FPX "from as low as MYR 0.75". Kad MYR ialah 1.8% pada Basic atau 1.5% pada Standard, dengan penyelesaian pada hari perniagaan berikutnya untuk FPX dan T+2 untuk kad.
 
-Bahagian komisen tidak diterbitkan. Satu-satunya angka yang direkodkan pengawal selia ialah julat dalam keputusan foodpanda oleh suruhanjaya persaingan bertarikh 11 September 2023, Jadual 3: 1% hingga 5%, 10% hingga 25%, 15% hingga 20%, dan dua kali 15% hingga 25%, dengan nama peniaga disunting. Itu julat daripada satu keputusan, bukan kad kadar semasa platform, dan ia digunakan di sini sebagai tiga titik yang dilalui aritmetik ini.
+Bahagian komisen tidak diterbitkan. Satu-satunya angka yang direkodkan pengawal selia ialah julat dalam keputusan foodpanda oleh suruhanjaya persaingan bertarikh 11 September 2023, Jadual 3: 1% hingga 5%, 10% hingga 25%, 15% hingga 20%, dan dua kali 15% hingga 25%, dengan nama peniaga disunting. Julat itu datang daripada keputusan 11 September 2023, ia lima kontrak peniaga francais tanpa nama (n=5), dan ia bukan kad kadar semasa platform; ia digunakan di sini sebagai tiga titik yang dilalui aritmetik ini.
 
 ## Identiti, dengan bentuk fi yang sebenarnya terpakai
 

@@ -32,7 +32,7 @@ The number you need most is the one nobody prints. Neither delivery platform pub
 
 The payment side is published. Billplz prints both FPX figures in its plan table: RM1.25 per transaction on the free Basic plan and RM0.75 on the RM999-a-year Standard plan, while its headline advertises FPX "from as low as MYR 0.75". A MYR card is 1.8% on Basic or 1.5% on Standard, with settlement next business day for FPX and T+2 for cards.
 
-The commission side is not published. The only regulator-recorded figures are the bands in the competition regulator's foodpanda decision of 11 September 2023, Table 3: 1% to 5%, 10% to 25%, 15% to 20%, and twice 15% to 25%, with merchant names redacted. Those are bands from a decision, not a platform's current rate card, and they are used here as the three points the arithmetic moves through.
+The commission side is not published. The only regulator-recorded figures are the bands in the competition regulator's foodpanda decision of 11 September 2023, Table 3: 1% to 5%, 10% to 25%, 15% to 20%, and twice 15% to 25%, with merchant names redacted. Those bands come from the 11 September 2023 decision, they are five anonymised franchised merchant contracts (n=5), and they are not a platform's current rate card; they are used here as the three points the arithmetic moves through.
 
 ## The identity, with the fee shape that actually applies
 
