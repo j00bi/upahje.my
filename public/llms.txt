@@ -20,6 +20,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 ## English articles
 
 - [A 9-ending works on new items. Nobody has proved the rest.](https://upahje.my/en/articles/price-endings-nine): Three American field experiments: a $9 ending raised demand in all three, strongest on new items. No effect size published, no Malaysian data, no percentage.
+- [USD 0.04 of GPU time, and the dataset was the work](https://upahje.my/en/articles/rented-gpu-what-it-finishes): A rented RTX 5060 Ti trained a trade filter in five seconds for four cents. The dataset took longer to build, and that is the lesson nobody sells.
 - [Colab will train your model. It will not host it](https://upahje.my/en/articles/colab-hosting-ai-malaysia): Google's own FAQ bans file hosting, media serving and web services on Colab, and blocks SSH on the free tier. What it does allow, and what hosting costs.
 - [EPF contribution: 12% or 13%, and RM5,000 is the line](https://upahje.my/en/articles/epf-employer-rate-malaysia): The employer rate is 13% at RM5,000 and below and 12% above it, but the contribution comes from the Third Schedule and rounds up, not from a calculator.
 - [The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/gpu-rental-cost-malaysia): Runpod lists an H100 SXM at USD 4.39 an hour and Vast.ai at USD 1.73 for the same silicon. The spread is billing model and idle capacity, not hardware.
@@ -57,6 +58,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Bahasa Melayu articles
 
+- [USD 0.04 untuk masa GPU, dan set data itulah kerja sebenar](https://upahje.my/ms/articles/gpu-sewaan-set-data-kerja-sebenar): RTX 5060 Ti sewaan melatih penapis dagangan dalam lima saat dengan kos empat sen. Set data ambil masa lebih lama, dan itulah pelajarannya.
 - [Hujung 9 berkesan pada barang baharu](https://upahje.my/ms/articles/hujung-harga-sembilan): Tiga eksperimen lapangan Amerika: hujung $9 menaikkan permintaan dalam ketiga-tiganya, paling kuat pada barang baharu. Tiada saiz kesan, tiada data Malaysia.
 - [Colab akan latih model anda. Ia tidak akan hoskan](https://upahje.my/ms/articles/colab-hosting-ai-malaysia): FAQ Google melarang hosting fail, penyajian media dan perkhidmatan web di Colab, serta menyekat SSH pada tier percuma. Apa yang dibenarkan, dan kos hos.
 - [EPF majikan: 12% atau 13%, dan RM5,000 garisnya](https://upahje.my/ms/articles/kadar-caruman-epf-majikan): Kadar majikan 13% pada RM5,000 ke bawah dan 12% ke atas, tetapi caruman datang daripada Jadual Ketiga dan dibundarkan ke atas, bukan daripada kalkulator.
