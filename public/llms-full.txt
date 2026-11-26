@@ -303,6 +303,109 @@ Four cents is about sixteen sen at the rate we publish at, 4.1155 ringgit to the
 - QLoRA: Efficient Finetuning of Quantized LLMs, Dettmers et al., arXiv 2305.14314 — https://arxiv.org/abs/2305.14314 (checked 2026-11-26)
 - GeForce RTX 5060 Ti 16 GB specifications, TechPowerUp GPU database — https://www.techpowerup.com/gpu-specs/geforce-rtx-5060-ti-16-gb.c4292 (checked 2026-11-26)
 
+## Your simulated customer says yes. Real ones leave.
+
+URL: https://upahje.my/en/articles/simulated-customer-says-yes
+Checked: 2026-11-26
+
+Two studies published this year tested whether a language model can stand in for a customer. Both used real data. They reached opposite conclusions, and the difference between them is the whole article: the simulation is accurate about the average basket and dishonest about the person who walks out.
+
+If you are being sold "AI market research" — or thinking of using it to test a price, a shelf, a brand deal or a sales script — the split matters more than any single accuracy figure.
+
+## One: the simulation that matched the household's own history
+
+The first study built shoppers out of household purchase records, gave them a store directory and photographs of shelves, and asked them to plan a trip and pick products. Then it compared their baskets against six public datasets from three countries.
+
+The headline result is not "the model is good at shopping". It is that **the synthetic baskets predicted held-out purchases as well as the households' own past trips did**. A model that only reads text has no access to the store, the shelf or the label; add vision and it gets close to the best available predictor of what a household buys next, which is that household's own history.
+
+Three more findings from that paper:
+
+- **Group differences** produced by synthetic shoppers correlated with real ones **twice as strongly** as a trained regression did.
+- Without fitting anything, the simulators reproduced **alcohol purchases by gender and age in Russia**, and **trip size by store distance in Taiwan**.
+- At the level of a **single shelf choice**, the model confounded the product with **its position on the shelf and its letter label** — which is why the authors built a dataset of shelf renderings that vary product, position, label, viewpoint and price independently.
+
+That last point is the useful warning for anyone designing packaging or shelf layout: the model's answer about your product may be an answer about where you put it.
+
+## Two: the simulation that cannot walk away
+
+The second study is harder to sell and more useful. It ignored surveys and used **2,790 real sales conversations**, **793 of them with verified payment outcomes** — actual money, actual yes and no.
+
+They measured whether a simulator, playing the customer, reproduces the *decision dynamics* of the real person. It does, for buyers. For non-buyers it does not:
+
+| Measure | Real non-buyers | Simulated non-buyers |
+| --- | --- | --- |
+| Pull toward the purchase frame | reference | **+0.40** (d = 0.38, p < 0.001) |
+| Expressing resistance | 25.1% | **13.5%** |
+| Continuing to deliberate instead | 21.9% | **40.1%** |
+
+Buyers were reproduced almost exactly (bias +0.09). Non-buyers were pulled toward buying, their stated resistance roughly halved, and their hesitation converted into more questions about price rather than an exit. No simulated customer fabricated a purchase — the failure is subtler than lying. It is that they **do not leave**.
+
+The authors name it the **disengagement deficit**, and then do the thing that makes the paper credible: they try to fix it. Telling the simulator explicitly that it may disengage cuts the marginal bias fivefold, but barely moves the outcome-conditioned contrast (d = 0.34, p = 0.008). The bias is not in the instructions you give the simulator; it is in the situation you put it in. It also replicates across model families (DeepSeek: d = 0.41, p = 0.002).
+
+Their closing sentence is the one to remember: **real non-buyers say "not now" and stop; simulated non-buyers ask about price.**
+
+## How accurate is accurate
+
+The number usually quoted comes from a third project, Twin-2K-500: digital twins built for **2,058 US participants**, answering the same survey questions their real counterparts answered. Across **17 tasks the twins' predictions were 71.72% accurate**, and the paper is careful to compare that against how much a person's own answers change when asked twice.
+
+That comparison is the honest frame for all of this. An accuracy figure means nothing until you know the **test-retest ceiling** — how much the real human varies against themselves. A simulator that matches a person 72% of the time sounds impressive; if that person only matches themselves 75% of the time, the simulator is nearly at the ceiling. If the ceiling is 95%, there is a large gap.
+
+Earlier work in this line — conditioning a model on a real person's survey backstory to reproduce their answers — found the same shape: **aggregate distributions reproduce well, individuals less so**. Two years of results now point the same way.
+
+## Where you can actually apply it
+
+The split above gives a clean rule. **Use simulation where the question is about a population and the answer is a distribution. Distrust it where the question is about a decision and the answer is a rate.**
+
+| Use | What you simulate | Evidence strength |
+| --- | --- | --- |
+| **Shelf and pack tests** | Your product against competitors on a rendered shelf, at different facings, positions and prices | Strong — this is exactly what the first study validated, with the position/label confound noted |
+| **Price perception** | Whether a price reads as cheap or premium next to named alternatives | Moderate — display and price responses were within measured ranges, not exact |
+| **Brand image** | Descriptions of how a brand is perceived, before and after a change of logo, colour or copy | Moderate — aggregate survey fidelity is the best-supported claim in this line of work |
+| **Brand deals** | How a partnership or sponsorship announcement reads to a segment; which objections surface first | Weak but useful — generates the objection list, does not measure approval |
+| **Sales scripts** | Which objection a script invites, and which phrasing reduces friction | Weak on rates, useful on variety — the simulator will overstate progress |
+| **Conversion estimates** | "How many of 100 would buy" | **Don't.** This is precisely the quantity the disengagement deficit corrupts |
+
+### Running a brand-deal simulation honestly
+
+1. Write the deal down the way a customer would encounter it — a post, a shelf talker, a press line — not the way a deck describes it.
+2. Give each simulated respondent a **backstory from your own customers**, not a demographic stereotype. The strongest results in this literature come from conditioning on real records.
+3. Ask open questions and count the **objections**, not the approvals.
+4. Run the same prompt against **two model families**. If the objection list does not survive that, it was a prompt artefact.
+5. Take the top three objections to **ten real customers** before you decide anything.
+
+Step five is the whole method. The simulation is a hypothesis generator with a good hit rate on distributions; the ten conversations are the measurement.
+
+### For brand image specifically
+
+Simulation is at its best when you have **a corpus of real things people said** and you want to know how a change lands. Feed the model your reviews, your DMs, your complaint emails — then ask what the same population would say about the new logo, the new price, the new packaging. What you get is a plausible distribution of reactions, not a measurement of them.
+
+What it cannot tell you is whether the brand will be *talked about*, because that depends on reach, novelty and timing, none of which live in the model.
+
+## The Malaysian caveat
+
+None of these studies used Malaysian shoppers, and none used Bahasa Melayu. The mechanisms are general; the numbers are not. Treat every figure in this article as evidence about the method, not as a parameter for your shop.
+
+Two specific risks here: shelf conventions differ (a top-shelf position is not universal), and a model's Malay is drawn from a different mix of text than your customers' Malay. A simulation in Malay should be treated as a rougher instrument than the same simulation in English, and the papers give no figure for how much rougher.
+
+## The rule, in one line
+
+Simulate the **population**, measure the **decision**. A synthetic customer is a good way to find out what people might say and a bad way to find out how many will pay — and the papers above are the receipt for both halves of that sentence.
+
+---
+
+**Read next**
+
+[Twelve jobs a rented GPU finishes, and three it cannot](https://upahje.my/en/articles/rented-gpu-jobs-malaysia)
+
+[What an AI agent can and cannot do for a small business](https://upahje.my/en/articles/what-an-ai-agent-can-do)
+
+### Sources
+
+- Seeing Like a Shopper: Validating Vision-Language Models as Synthetic Consumers, arXiv 2611.09977 — https://arxiv.org/abs/2611.09977 (checked 2026-11-26)
+- Simulated Customers Never Walk Away: Decision Fidelity of LLM User Simulators Measured Against Real Purchase Outcomes, arXiv 2606.20708 — https://arxiv.org/abs/2606.20708 (checked 2026-11-26)
+- Twin-2K-500: A dataset for building digital twins of over 2,000 people, arXiv 2505.17479 — https://arxiv.org/abs/2505.17479 (checked 2026-11-26)
+- Out of One, Many: Using Language Models to Simulate Human Samples, Argyle et al., Political Analysis — https://arxiv.org/abs/2209.06899 (checked 2026-11-26)
+
 ## Colab will train your model. It will not host it
 
 URL: https://upahje.my/en/articles/colab-hosting-ai-malaysia
@@ -3193,6 +3296,109 @@ Urutan kurang penting daripada langkah pertama: sewa kad untuk kerja yang ada pe
 - Harga GPU langsung Vast.ai, dibaca dari halaman harga — https://vast.ai/pricing (checked 2026-11-26)
 - QLoRA: Efficient Finetuning of Quantized LLMs, Dettmers et al., arXiv 2305.14314 — https://arxiv.org/abs/2305.14314 (checked 2026-11-26)
 - Robust Speech Recognition via Large-Scale Weak Supervision (Whisper), arXiv 2212.04356 — https://arxiv.org/abs/2212.04356 (checked 2026-11-26)
+
+## Pelanggan simulasi anda kata ya. Yang sebenar pergi.
+
+URL: https://upahje.my/ms/articles/pelanggan-simulasi-kata-ya
+Checked: 2026-11-26
+
+Dua kajian yang diterbitkan tahun ini menguji sama ada model bahasa boleh menggantikan pelanggan. Kedua-duanya menggunakan data sebenar. Kedua-duanya sampai pada kesimpulan bertentangan, dan perbezaan antara keduanya ialah inti artikel ini: simulasi itu tepat tentang purata bakul dan tidak jujur tentang orang yang berjalan keluar.
+
+Jika anda sedang dijual "penyelidikan pasaran AI" — atau sedang memikirkan untuk mengujinya pada satu harga, satu susunan rak, satu tawaran jenama atau satu skrip jualan — perpecahan itu lebih penting daripada mana-mana satu angka ketepatan.
+
+## Satu: simulasi yang menyamai sejarah isi rumah sendiri
+
+Kajian pertama membina pembeli daripada rekod pembelian isi rumah, memberi mereka direktori kedai dan gambar rak, kemudian meminta mereka merancang lawatan dan memilih produk. Selepas itu bakul mereka dibandingkan dengan enam set data awam dari tiga negara.
+
+Hasil utamanya bukan "model ini pandai membeli-belah". Ia ialah **bakul sintetik meramal pembelian yang tidak dilihat sama baiknya dengan lawatan lampau isi rumah itu sendiri**. Model yang hanya membaca teks tidak mempunyai akses kepada kedai, rak atau label; tambah penglihatan, dan ia menghampiri peramal terbaik yang ada bagi apa yang isi rumah akan beli seterusnya, iaitu sejarah isi rumah itu.
+
+Tiga penemuan lain daripada kertas itu:
+
+- **Perbezaan antara kumpulan** yang dihasilkan pembeli sintetik berkorelasi dengan yang sebenar **dua kali lebih kuat** daripada regresi terlatih.
+- Tanpa penyesuaian apa pun, simulator menghasilkan semula **pembelian arak mengikut jantina dan umur di Rusia**, dan **saiz lawatan mengikut jarak kedai di Taiwan**.
+- Pada peringkat **pilihan satu rak**, model mengelirukan produk dengan **kedudukannya di rak dan label hurufnya** — sebab itu penulis membina set data rak yang mengubah produk, kedudukan, label, sudut pandangan dan harga secara berasingan.
+
+Perkara terakhir itu amaran berguna bagi sesiapa yang mereka pembungkusan atau susunan rak: jawapan model tentang produk anda mungkin sebenarnya jawapan tentang tempat anda meletakkannya.
+
+## Dua: simulasi yang tidak boleh berjalan keluar
+
+Kajian kedua lebih sukar dijual dan lebih berguna. Ia mengabaikan tinjauan dan menggunakan **2,790 perbualan jualan sebenar**, **793 daripadanya dengan hasil bayaran yang disahkan** — wang sebenar, ya dan tidak sebenar.
+
+Mereka mengukur sama ada simulator, yang memainkan watak pelanggan, menghasilkan semula *dinamik keputusan* orang sebenar. Bagi pembeli, ya. Bagi yang tidak membeli, tidak:
+
+| Ukuran | Bukan pembeli sebenar | Bukan pembeli simulasi |
+| --- | --- | --- |
+| Tarikan ke arah rangka pembelian | rujukan | **+0.40** (d = 0.38, p < 0.001) |
+| Menyatakan rintangan | 25.1% | **13.5%** |
+| Terus berbincang sebagai ganti | 21.9% | **40.1%** |
+
+Pembeli dihasilkan hampir tepat (bias +0.09). Bukan pembeli ditarik ke arah membeli, rintangan yang dinyatakan lebih kurang separuh, dan keraguan mereka bertukar menjadi lebih banyak soalan tentang harga dan bukan jalan keluar. Tiada pelanggan simulasi yang mengarang pembelian — kegagalannya lebih halus daripada berdusta. Mereka **tidak beredar**.
+
+Penulis menamakannya **defisit pelepasan**, kemudian melakukan perkara yang menjadikan kertas itu boleh dipercayai: mereka cuba membaikinya. Memberitahu simulator secara jelas bahawa ia boleh berundur memotong bias marginal lima kali ganda, tetapi hampir tidak menggerakkan kontras bersyarat hasil (d = 0.34, p = 0.008). Bias itu bukan pada arahan yang anda beri; ia pada situasi yang anda bina. Ia juga berulang merentas keluarga model (DeepSeek: d = 0.41, p = 0.002).
+
+Ayat penutup mereka yang patut diingat: **bukan pembeli sebenar berkata "bukan sekarang" lalu berhenti; bukan pembeli simulasi bertanya tentang harga.**
+
+## Sejauh mana tepatnya tepat
+
+Angka yang selalu dipetik datang daripada projek ketiga, Twin-2K-500: kembar digital untuk **2,058 peserta Amerika**, menjawab soalan tinjauan yang sama seperti rakan sebenar mereka. Merentas **17 tugasan, ramalan kembar itu 71.72% tepat**, dan kertas itu berhati-hati membandingkannya dengan berapa banyak jawapan seseorang berubah apabila ditanya dua kali.
+
+Perbandingan itulah rangka jujur bagi semua ini. Angka ketepatan tidak bermakna sehingga anda tahu **siling ujian-ulang** — berapa banyak manusia sebenar berbeza dengan dirinya sendiri. Simulator yang menyamai seseorang 72% kali kedengaran mengagumkan; jika orang itu hanya menyamai dirinya 75% kali, simulator hampir di siling. Jika silingnya 95%, jurangnya besar.
+
+Kerja awal dalam barisan ini — mengondisikan model pada latar belakang tinjauan seseorang sebenar untuk menghasilkan semula jawapannya — menemui bentuk yang sama: **taburan agregat dihasilkan baik, individu kurang**. Dua tahun hasil kini menunjuk arah yang sama.
+
+## Di mana ia benar-benar boleh digunakan
+
+Perpecahan di atas memberi satu peraturan bersih. **Gunakan simulasi apabila soalannya tentang populasi dan jawapannya satu taburan. Jangan percaya ia apabila soalannya tentang keputusan dan jawapannya satu kadar.**
+
+| Guna | Apa yang disimulasikan | Kekuatan bukti |
+| --- | --- | --- |
+| **Ujian rak dan pembungkusan** | Produk anda berbanding pesaing pada rak yang dirender, dengan hadapan, kedudukan dan harga berbeza | Kuat — inilah yang kajian pertama sahkan, dengan amaran kekeliruan kedudukan/label |
+| **Persepsi harga** | Sama ada harga dibaca murah atau premium di sebelah alternatif bernama | Sederhana — tindak balas paparan dan harga berada dalam julat yang diukur, bukan tepat |
+| **Imej jenama** | Penerangan tentang bagaimana jenama dilihat, sebelum dan selepas perubahan logo, warna atau teks | Sederhana — kesetiaan tinjauan agregat ialah dakwaan paling kukuh dalam barisan kerja ini |
+| **Tawaran jenama** | Bagaimana pengumuman kerjasama atau penajaan dibaca oleh satu segmen; bantahan mana muncul dahulu | Lemah tetapi berguna — menghasilkan senarai bantahan, tidak mengukur penerimaan |
+| **Skrip jualan** | Bantahan mana yang dicetuskan skrip, dan frasa mana mengurangkan geseran | Lemah pada kadar, berguna pada kepelbagaian — simulator akan melebihkan kemajuan |
+| **Anggaran penukaran** | "Berapa daripada 100 akan beli" | **Jangan.** Inilah kuantiti yang tepat yang dirusakkan oleh defisit pelepasan |
+
+### Menjalankan simulasi tawaran jenama dengan jujur
+
+1. Tulis tawaran itu seperti pelanggan akan menemuinya — satu pos, satu shelf talker, satu baris akhbar — bukan seperti dek menerangkannya.
+2. Beri setiap responden simulasi **latar belakang daripada pelanggan anda sendiri**, bukan stereotaip demografi. Hasil paling kukuh dalam literatur ini datang daripada pengondisian pada rekod sebenar.
+3. Tanya soalan terbuka dan kira **bantahan**, bukan persetujuan.
+4. Jalankan prompt yang sama pada **dua keluarga model**. Jika senarai bantahan tidak bertahan, ia artifak prompt.
+5. Bawa tiga bantahan teratas kepada **sepuluh pelanggan sebenar** sebelum memutuskan apa-apa.
+
+Langkah lima itulah keseluruhan kaedahnya. Simulasi ialah penjana hipotesis dengan kadar tepat yang baik pada taburan; sepuluh perbualan itu ukurannya.
+
+### Khusus untuk imej jenama
+
+Simulasi paling baik apabila anda mempunyai **korpus perkara sebenar yang orang katakan** dan anda mahu tahu bagaimana satu perubahan akan mendarat. Suap ulasan anda, DM anda, e-mel aduan anda — kemudian tanya apa yang populasi sama akan katakan tentang logo baharu, harga baharu, pembungkusan baharu. Apa yang anda dapat ialah taburan tindak balas yang munasabah, bukan ukuran tindak balas itu.
+
+Apa yang ia tidak boleh beritahu ialah sama ada jenama akan *diperkatakan*, kerana itu bergantung pada jangkauan, kebaharuan dan masa, yang tiada satu pun hidup dalam model.
+
+## Amaran Malaysia
+
+Tiada satu pun kajian ini menggunakan pembeli Malaysia, dan tiada satu pun menggunakan Bahasa Melayu. Mekanismenya umum; angkanya tidak. Anggap setiap angka dalam artikel ini sebagai bukti tentang kaedah, bukan parameter untuk kedai anda.
+
+Dua risiko khusus di sini: konvensyen rak berbeza (kedudukan atas rak bukan universal), dan Bahasa Melayu model datang daripada campuran teks yang berbeza daripada Bahasa Melayu pelanggan anda. Simulasi dalam Bahasa Melayu patut dianggap alat yang lebih kasar daripada simulasi yang sama dalam bahasa Inggeris, dan kertas-kertas itu tidak memberi angka berapa kasar.
+
+## Peraturannya, dalam satu baris
+
+Simulasikan **populasi**, ukur **keputusan**. Pelanggan sintetik cara yang baik untuk mengetahui apa yang orang mungkin katakan dan cara yang buruk untuk mengetahui berapa ramai yang akan membayar — dan kertas di atas ialah resit bagi kedua-dua separuh ayat itu.
+
+---
+
+**Bacaan lanjut**
+
+[Dua belas kerja GPU sewaan siap, tiga ia tidak mampu](https://upahje.my/ms/articles/kerja-gpu-sewaan-malaysia)
+
+[Apa yang ejen AI boleh dan tidak boleh buat untuk perniagaan kecil](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat)
+
+### Sources
+
+- Seeing Like a Shopper: Validating Vision-Language Models as Synthetic Consumers, arXiv 2611.09977 — https://arxiv.org/abs/2611.09977 (checked 2026-11-26)
+- Simulated Customers Never Walk Away: Decision Fidelity of LLM User Simulators Measured Against Real Purchase Outcomes, arXiv 2606.20708 — https://arxiv.org/abs/2606.20708 (checked 2026-11-26)
+- Twin-2K-500: A dataset for building digital twins of over 2,000 people, arXiv 2505.17479 — https://arxiv.org/abs/2505.17479 (checked 2026-11-26)
+- Out of One, Many: Using Language Models to Simulate Human Samples, Argyle et al., Political Analysis — https://arxiv.org/abs/2209.06899 (checked 2026-11-26)
 
 ## Colab akan latih model anda. Ia tidak akan hoskan
 
