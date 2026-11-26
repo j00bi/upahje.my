@@ -38,3 +38,4 @@
 | What to do, in the order a reader meets it | Six steps in reading order |
 | The two mistakes this arithmetic prevents | The payoff: no-audience checkout, and a commission below the fee |
 | What is not published, and what that means | The absence list and why the series is method-first |
+| The rest of the series | The hub block: six published pieces linked, two unpublished named as such |

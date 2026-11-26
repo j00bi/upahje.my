@@ -106,6 +106,8 @@ The table solves the fee side only, with a RM150 monthly cost and a RM30 average
 | 15% | 40 | 47 | 38 |
 | 25% | 23 | 24 | 22 |
 
+The identity is derived in full in [RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission); this hub carries the result.
+
 At the top of the regulator's widest band, owning beats the commission after about **23 orders a month**. At the bottom of the narrowest band it takes **200** on the cheapest FPX plan and **600** on the free one. That spread is the whole argument: the commission rate decides whether owning the shop is a rounding error or a different business.
 
 Two refinements matter. The RM999 Billplz plan pays for itself at about **2,000 FPX orders a year**, where the RM0.50 saved per transaction covers the annual fee. And when the commission on a basket is smaller than the flat FPX fee, no order count breaks even — a result worth having before building a checkout.
@@ -159,8 +161,15 @@ Owning the shop is worth doing when the commission is high, the basket is large,
 
 ---
 
-**Read next**
+## The rest of the series
 
-[RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
+Six pieces are published and one is this hub:
 
-[The storefront is a checkout, not an audience](https://upahje.my/en/articles/discovery-is-the-job)
+- [RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission) derives the identity behind the table above.
+- [Commission arithmetic](https://upahje.my/en/articles/commission-arithmetic) is the same arithmetic, worked at the low, middle and high edge of the band.
+- [The storefront is a checkout, not an audience](https://upahje.my/en/articles/discovery-is-the-job) is the discovery argument.
+- [Taking money: FPX costs a ringgit, cards cost 2%](https://upahje.my/en/articles/taking-money-malaysia) sets out the fee shapes and settlement.
+- [The delivery commission question, answered from the regulator](https://upahje.my/en/articles/delivery-commission-malaysia) is the absence finding.
+- [One person, one kitchen](https://upahje.my/en/articles/we-built-our-own-storefront) is the working storefront this series is written against.
+
+Two more are written and unpublished: the licence stack, and the courier radius. They will appear here when the editor clears them.

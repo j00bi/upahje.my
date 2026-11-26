@@ -106,6 +106,8 @@ Jadual menyelesaikan bahagian fi sahaja, dengan kos bulanan RM150 dan bakul pura
 | 15% | 40 | 47 | 38 |
 | 25% | 23 | 24 | 22 |
 
+Identiti itu diterbitkan sepenuhnya dalam [RM1.25 atau 15%: kos checkout anda sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen); hub ini membawa hasilnya.
+
 Pada hujung atas jalur terluas pengawal selia, memiliki mengalahkan komisen selepas kira-kira **23 pesanan sebulan**. Pada hujung bawah jalur tersempit ia mengambil **200** pada pelan FPX termurah dan **600** pada pelan percuma. Jurang itu seluruh hujahnya: kadar komisen menentukan sama ada memiliki kedai ialah baki kecil atau perniagaan yang berbeza.
 
 Dua penambahbaikan penting. Pelan Billplz RM999 membayar dirinya pada kira-kira **2,000 pesanan FPX setahun**, tempat RM0.50 yang dijimatkan setiap transaksi menampung fi tahunan. Dan apabila komisen pada bakul lebih kecil daripada fi FPX tetap, tiada bilangan pesanan pulang modal — keputusan yang berbaloi diketahui sebelum membina checkout.
@@ -159,8 +161,15 @@ Memiliki kedai berbaloi apabila komisen tinggi, bakul besar, jejari penghantaran
 
 ---
 
-**Bacaan lanjut**
+## Sisa siri ini
 
-[RM1.25 atau 15%: kos checkout anda sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
+Enam artikel sudah diterbitkan dan satu ialah hub ini:
 
-[Kedai itu mesin tunai, bukan khalayak](https://upahje.my/ms/articles/penemuan-ialah-kerjanya)
+- [RM1.25 atau 15%: kos checkout anda sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen) menerbitkan identiti di sebalik jadual di atas.
+- [Aritmetik komisen](https://upahje.my/ms/articles/aritmetik-komisen) ialah aritmetik yang sama, dikira pada hujung rendah, tengah dan tinggi julat.
+- [Kedai itu mesin tunai, bukan khalayak](https://upahje.my/ms/articles/penemuan-ialah-kerjanya) ialah hujah penemuan.
+- [Mengambil bayaran: FPX satu ringgit, kad dua peratus](https://upahje.my/ms/articles/mengambil-bayaran-malaysia) menyatakan bentuk fi dan penyelesaian.
+- [Soalan komisen penghantaran, dijawab daripada pengawal selia](https://upahje.my/ms/articles/komisen-penghantaran-malaysia) ialah penemuan ketiadaan.
+- [Seorang, satu dapur](https://upahje.my/ms/articles/kami-bina-kedai-sendiri) ialah kedai berfungsi yang siri ini tulis terhadapnya.
+
+Dua lagi sudah ditulis dan belum diterbitkan: timbunan lesen, dan jejari kurier. Kedua-duanya akan muncul di sini apabila editor meluluskannya.
