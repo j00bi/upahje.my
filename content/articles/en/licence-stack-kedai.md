@@ -3,16 +3,16 @@ title: "The licence stack a kedai pays, and two councils' fee lists"
 description: "Opening costs sit in the licence stack and the fit-out, not the website. Two councils print itemised fees; the rest is a method until the counter answers."
 slug: licence-stack-kedai
 translationKey: licence-stack-kedai
-format: guide
+format: research
 reader: owner
 date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+audience: publication
 tags: [buying-guides, kedai, licensing, malaysia]
 cardFigure: "RM50 processing and RM7 for the plate"
 canonical: https://upahje.my/en/articles/licence-stack-kedai
-draft: true
 changelog:
   - date: 2026-11-26
     note: "First published."

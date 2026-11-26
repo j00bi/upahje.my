@@ -3,16 +3,16 @@ title: "Timbunan lesen kedai, dan dua majlis dengan fi tercatat"
 description: "Kos membuka kedai terletak pada timbunan lesen dan fit-out, bukan laman web. Dua majlis mencetak fi terperinci; selebihnya kaedah sehingga kaunter menjawab."
 slug: timbunan-lesen-kedai
 translationKey: licence-stack-kedai
-format: guide
+format: research
 reader: owner
 date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+audience: publication
 tags: [buying-guides, kedai, pelesenan, malaysia]
 cardFigure: "RM50 pemprosesan dan RM7 untuk plet"
 canonical: https://upahje.my/ms/articles/timbunan-lesen-kedai
-draft: true
 changelog:
   - date: 2026-11-26
     note: "Mula diterbitkan."
