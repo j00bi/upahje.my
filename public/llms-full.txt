@@ -195,7 +195,7 @@ Payment gateways publish their prices. We read Billplz's pricing page on 26 Nove
 | Card, non-MYR | 3.8% | 3.5% | T+2 business days |
 | Auto-deduct, MYR | 2.3% + RM1.25 | 2.0% + RM0.75 | T+2 business days |
 
-Delivery platforms do not publish merchant commission. Grab and foodpanda have no public rate card for merchants, which is why the numbers in this article come from a regulator rather than a vendor: the Malaysia Competition Commission's decision on foodpanda, dated 11 September 2023, records commission bands in its Table 3 of **1–5%, 10–25%, 15–20% and 15–25%** depending on the service.
+Delivery platforms do not publish merchant commission. Grab and foodpanda have no public rate card for merchants, which is why the numbers in this article come from a regulator rather than a vendor: the Malaysia Competition Commission's decision on foodpanda, dated 11 September 2023, records commission bands in its Table 3 of **1–5%, 10–25%, 15–20% and 15–25%** depending on the service. Those are five anonymised franchised merchant contracts (n=5), not a platform's current rate card.
 
 Those are recorded ranges from three years ago, not today's quoted rate. Any specific figure for your shop has to come from the contract someone puts in front of you — and that, on its own, tells you something about the two markets.
 
@@ -258,6 +258,16 @@ Break-even orders a month, ignoring delivery:
 > commission rate × average bill × orders = RM1.25 × orders + the cost of getting those customers yourself
 
 The left side is what the platform takes. The right side is what your own checkout costs **plus the marketing you now have to do**. That marketing term is the one everybody leaves out, and it is the reason a shop with no audience should stay on the platform until it has one.
+
+Put numbers to the four and the break-even count falls out. The table below uses a RM150 monthly cost and a RM30 average basket as stated assumptions; substitute your own and read down the columns, because a flat FPX fee and a percentage card rate diverge as the basket moves.
+
+| Commission band | FPX at RM0.75, orders a month | FPX at RM1.25, orders a month | Card at 1.8%, orders a month |
+| --- | --- | --- | --- |
+| 5% | 200 | 600 | 157 |
+| 15% | 40 | 47 | 38 |
+| 25% | 23 | 24 | 22 |
+
+Two things follow from the columns. First, the commission rate decides whether owning the shop is a rounding error or a different business: at the top of the regulator's widest band it takes about 23 orders a month, and at the bottom of the narrowest band it takes 200 on the cheapest FPX plan. Second, the RM999 Standard plan pays for itself at about 2,000 FPX orders a year, where the RM0.50 saved per transaction covers the annual fee at 1,998.
 
 ## What we would tell a shop with three dishes
 
@@ -1551,7 +1561,7 @@ Checked: 2026-11-23
 
 These are three different kinds of thing, and the words matter before the prices do. `dsh` is DeepSeek Harness, the command-line harness we run here. An "arm" is one of the products tried on the same task, and this run had three: CommandCode, OpenCode and DeepSeek through `dsh`. CommandCode is a paid coding CLI. OpenCode is a free, MIT-licensed coding CLI with an optional subscription. DeepSeek is a model vendor with an API. What follows is what each publishes as a price, where those numbers have moved, and what one run showed. The benchmark half, and the reason a "CommandCode vs OpenCode" score does not exist, is a separate developer note.
 
-## What do the prices look like as published?
+## The prices as published, with one fee missing
 
 CommandCode sells monthly tiers, and every paid tier carries a processing fee with no figure attached.
 
@@ -1571,7 +1581,7 @@ CommandCode sells monthly tiers, and every paid tier carries a processing fee wi
 
 The processing fee is the line to ask about, because "plus processing fee" is printed on five of the tiers and the fee appears nowhere on the page in a figure or a link.
 
-## Where did the numbers drift?
+## The numbers drifted since August
 
 CommandCode's own offer has moved since August, and both versions are still quotable.
 
@@ -1581,7 +1591,7 @@ The lesson is that a dated figure needs its date, or it becomes a claim about to
 
 The 38.5% figure that circulates for DeepSeek belongs to Terminal-bench 4.1, where it is DeepSeek V4.1 Flash 1017 run under Claude Code, so it is a result for the model inside someone else's harness and not a result for either CLI named here, and it cannot be compared with a SWE-bench figure because the benchmark, the agent and the task set are different.
 
-## What did we run ourselves?
+## One task in one harness, not a head-to-head
 
 One task, in one harness, printed as a sidebar and not as a head-to-head: `dsh` 0.2.2-rc.1 wrote a small feature in 95.4 seconds across 10 turns and 14 tool calls, produced two files, and the project's own tests passed 3 of 3.
 
@@ -1621,7 +1631,7 @@ Checked: 2026-11-23
 
 Google's own rules decide this, and they are specific. Your name must be the name customers use in the real world, you get one profile per business, and categories must describe the business rather than its keywords. Get those wrong and the profile can be restricted; get them right and the rest is filling documented fields.
 
-## What does Google check first?
+## Google checks four wording rules first
 
 Four things, and they are all wording rules rather than technical settings.
 
@@ -1634,13 +1644,13 @@ Four things, and they are all wording rules rather than technical settings.
 
 All four are quoted from Google's guidelines page, read 23 November 2026.
 
-## What about the address, or no address at all?
+## The address decides shopfront or service area
 
 A service-area business and a shopfront are different configurations, and Google documents both.
 
 The location resource carries `address` and `serviceArea`, and a service-area business manages areas instead of a storefront. Google's own example is delivery-only brands working from shared kitchens, which "must hide their address and add service areas to that specific brand". If you deliver and do not have a walk-in counter, running a storefront profile is the mismatch to fix first.
 
-## Which fields are worth filling this month?
+## Hours and sub-resources change what a customer sees
 
 Hours and the sub-resources Google documents, in the order they change a customer's decision.
 
@@ -1655,7 +1665,7 @@ Hours and the sub-resources Google documents, in the order they change a custome
 
 All of those are documented in Google's Business Profile API reference, read 23 November 2026. The API names matter even if you never write code: they are the fields the form on the website is editing.
 
-## What gets a profile suspended, and what do you do?
+## Suspension and appeal are both documented
 
 Google documents both the suspension process and the appeal, and the appeal page contains the sentence to read before anything else.
 
@@ -1663,7 +1673,7 @@ A suspended profile is handled through "Fix suspended or disabled profiles", whi
 
 That sentence is the whole reason to keep verification current. An appeal filed before verification is resolved is an appeal that stalls.
 
-## What could we not verify?
+## Google publishes nothing on local ranking
 
 Google publishes nothing in these pages about how profiles are ranked in local search, so this article makes no claim about ranking factors beyond the documented fields. Several help-centre IDs returned "Sorry, this page can't be found" during the pass, so only the pages Google itself links, or that the scan surfaced, are cited. There is also no published figure for how long verification or an appeal takes.
 
@@ -1701,7 +1711,7 @@ Checked: 2026-11-23
 
 Five things, and the score is only one of them: the model, the agent that drove it, the settings, the score, and the cost. Read the first two before the number. The Terminal-bench row for DeepSeek reads 38.5% ± 3.8% under Claude Code, with 8.2 billion tokens, which makes it a DeepSeek model's result inside someone else's harness.
 
-## What is in a leaderboard row?
+## A leaderboard row holds five fields
 
 ![A landscape diagram with columns for model, agent, settings, score and cost. The example row is DeepSeek V4.1 Flash 1017 at max, run under Claude Code on Terminal-bench 4.1, scoring 38.5 percent plus or minus 3.8 with 8.2 billion tokens. A footer states that neither CommandCode nor OpenCode appears in the agent column](/figures/leaderboard-row-anatomy.svg)
 *Read the agent column first: it decides whose number the score is.*
@@ -1780,7 +1790,7 @@ If every part is uniformly mediocre, there is no single hot function; there are 
 
 The last row is the common mistake: a 4-second page can be one uncompressed hero image, and no amount of Rust will touch it.
 
-## For an SME site, the answer is the 5%
+## For an SME site, the slow thing is one image, one query or one script
 
 For a Malaysian small-business site, the slow thing is almost always one image, one query, or one blocking script, and the correct response is to fix that and stop. A full port is a decision for a team with a profiling budget and a release process. For a shop with five pages and a product list, an eleven-thousand-star framework is not the constraint.
 
@@ -1822,7 +1832,7 @@ Checked: 2026-11-23
 
 Adoption is not the problem. In 2024, 97.2% of Malaysian establishments reported using computers, 95.3% had internet access, and 74.4% had a web presence. The duplication happens one layer back: a customer-facing system that was digitised, and a back office that was not. The same order then exists in two places, and a person reconciles it.
 
-## What do the official numbers say?
+## DOSM puts adoption near universal
 
 Three figures from DOSM's ICT and e-commerce release for establishments, data year 2024, published 2025. They measure adoption, and they measure it well.
 
@@ -1834,7 +1844,7 @@ Three figures from DOSM's ICT and e-commerce release for establishments, data ye
 
 Read them together and the picture is a business that already has a computer, a connection and often a website. What the release does not measure is how many separate systems those establishments run, or how much time goes into moving data between them. That absence matters, and it is the reason this article avoids a number for "hours lost".
 
-## What does the research say about how it is used?
+## The research finding is isolation, not absence
 
 Khazanah Research Institute, with MDEC, published a finding in May 2026 that describes the pattern without counting it, so it is worth quoting rather than paraphrasing: digital tools "are often implemented in isolation and used reactively, driven by immediate operational needs rather than longer-term strategic planning".
 
@@ -1842,7 +1852,7 @@ The same paper describes "fragmented systems where customer-facing functions are
 
 This is a think-tank finding, dated 25 May 2026, not a statistic. It says the shape of the problem, and it is careful not to put a number on it.
 
-## Where does a single order get typed three times?
+## Follow one order through three systems
 
 Follow one order. It arrives as a message, gets written into a quotation, becomes an invoice, and then a delivery order or a job sheet. Each of those documents exists in a system, and in most small businesses the systems do not talk.
 
@@ -1850,7 +1860,7 @@ The quotation lives in a template. The invoice is issued through accounting soft
 
 That is not a technology failure at the level DOSM measures. Every one of those tools is software. It is a fragmentation failure, exactly the pattern KRI describes, and it costs a business in rework rather than in licences.
 
-## Why does e-Invoice force the point?
+## e-Invoice checks the document at issuance
 
 Because LHDN now checks the document, not the intent, and the check happens at issuance.
 
@@ -1862,7 +1872,7 @@ Three rules make that concrete, all from LHDN's own validation documentation and
 
 So the invoice data has to be right once, at the source, before an automated system touches it. An automation that copies a wrong supplier code into a submitted invoice does not create a small error; it creates a correction document with its own tax treatment. We covered the filing timeline in [what e-Invoice automation covers](https://upahje.my/en/articles/what-einvoice-automation-covers); this article is about why the data behind it has to be single.
 
-## What does nobody publish?
+## Three gaps nobody publishes
 
 Three gaps, and they are worth naming because they are the numbers every vendor deck uses.
 
@@ -1910,13 +1920,13 @@ Checked: 2026-11-23
 
 An AI agent runs a loop by itself: it reads a task, calls tools, looks at the result and decides the next step until the job is done. That covers repetitive work with a clear finish line. It does not cover judgement, money it is not authorised to move, or anything a customer would need explained to them by a person.
 
-## What is an agent, as opposed to a chatbot?
+## An agent acts; a chatbot answers
 
 A chatbot answers. An agent answers, then does something about it, which is why it needs tools it can call (a tool is one thing it is allowed to do, such as look up an order or send an email), a loop that continues after a tool returns, and a transcript, meaning a written record of what it did.
 
 Anthropic's own wording for the layer that runs this is an agent harness, which is the program that holds the conversation and runs the tools, defined as "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([Claude Code docs, read 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Two consequences follow for a small business: the agent can touch real systems, and the harness, not the model, decides what it is allowed to touch.
 
-## What can it do unattended?
+## Unattended work is a narrow list
 
 ![Three panels: work that runs unattended such as sorting an inbox; work the agent prepares for a human to approve such as refunds and customer messages; work that is not for an agent such as judgement calls and physical tasks](/figures/what-an-ai-agent-can-do.svg)
 *Sort the work before you choose a tool: unattended, prepared, and not agent work.*
@@ -1931,7 +1941,7 @@ Unattended work is work where a wrong answer is cheap to spot and cheap to undo.
 | Draft replies, reports or summaries for someone to send | A person still presses send |
 | Watch a queue and alert a human when a threshold trips | The agent escalates rather than acts |
 
-## What needs a human before it happens?
+## Approval work needs a human first
 
 Approval work is work where the cost of a wrong action is not recoverable by re-running it.
 
@@ -1945,7 +1955,7 @@ Approval work is work where the cost of a wrong action is not recoverable by re-
 
 So let the agent prepare and let a person approve. An agent that drafts a refund and waits for a click saves the typing and takes none of the risk. I would not run one any other way, and the vendor demos that skip the approval step are the ones to be suspicious of.
 
-## What can it not do at all?
+## Four categories stay out of reach
 
 Four categories, and no amount of prompting changes them.
 
@@ -1954,7 +1964,7 @@ Four categories, and no amount of prompting changes them.
 3. **Knowledge it does not have.** An agent answers from what it can reach. If your stock is in someone's head, the agent will be confidently wrong.
 4. **Guaranteed accuracy.** Every agent produces a plausible wrong answer sometimes. That is why the approval column exists.
 
-## What does it cost in ringgit?
+## Two bills, in ringgit
 
 Two bills. The smaller one gets the attention.
 
@@ -1979,7 +1989,7 @@ Begin with a script that reads a CSV of support emails, calls one model per row,
 - **What it costs:** at 2,000 input and 500 output tokens per row, about **RM0.00185 a row**, so a hundred rows is under 20 sen.
 - **Where it breaks first:** a model reading a CSV column will happily mis-parse an empty cell and invent a customer name. Log every input row beside its output, or you will debug the wrong half.
 
-## How do I tell a demo from something that keeps running?
+## A demo works once, in front of you
 
 A demo works once, in front of you. Something that keeps running survives a bad day. Six checks. Each answer should be a thing someone can show you.
 
@@ -2199,7 +2209,7 @@ Checked: 2026-11-23
 
 Most Malaysian SMEs automate the wrong process first. Not because they pick badly on price, but because they pick the process that annoys the owner most, and that process is usually the one nobody has ever written down. Automating it buries the mess under a tool instead of fixing it.
 
-## Why is the worst process the wrong starting point?
+## The worst process is the wrong first build
 
 Because the thing that makes a process painful is almost never the typing. It is the exceptions.
 
@@ -2225,7 +2235,7 @@ Pain is a signal that the process has accumulated exceptions, and exceptions usu
 
 Automating a compensating process locks the compensation in. Now you have a tool-shaped reason not to fix the thing that caused it. The argument is sometimes made in reverse, as "automate first, fix later", and it only works if the thing you automate is the source rather than the symptom.
 
-## What should you do instead?
+## Three steps, none needing a purchase
 
 Three steps, and none of them needs a purchase.
 
@@ -2254,13 +2264,13 @@ Checked: 2026-11-19
 
 An agent harness is the runtime that runs a model's agent loop: it holds the system prompt, executes tool calls, manages context, applies permissions and supplies a working environment. Vendors use "agent harness" or just "harness". "AI harness" is not a phrase the official sources I opened use, and "agent framework" is a different thing again.
 
-## Who actually says "harness"?
+## Vendors say harness, and the package name follows
 
 Anthropic says "hosted agent harness", and the DeepSeek Harness package uses the bare word as its product noun.
 
 Anthropic's own definition is the clearest: a hosted agent harness "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([Claude Code docs, read 19 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). The installed DeepSeek Harness package uses the word the same way, as in "Harness home" for its config directory ([package README, read 19 Nov 2026](https://www.npmjs.com/package/@deepseek-ai/dsh)). Neither treats it as a metaphor.
 
-## What does the term imply, in practice?
+## The term implies four things, each a line
 
 Four things, and each one is a line rather than a walkthrough.
 
@@ -2271,7 +2281,7 @@ Four things, and each one is a line rather than a walkthrough.
 
 How it walks through one message, step by step, is covered in [what an agent harness does with your request](https://upahje.my/en/articles/using-the-harness). This article is about the vocabulary, not the loop.
 
-## Where does "AI harness" come from?
+## AI harness does not come from the vendors
 
 Not from the vendors I could read. Across the four official sources opened for this article, the phrase "AI harness" does not appear.
 
@@ -2285,7 +2295,7 @@ The method has a limit and I will state it: a search-engine query for the exact 
 | Agent framework | Library authors | A code library for building agents, not a runtime that runs one |
 | Agent workspace | OpenBot, MausBot | The product's own word for a harness plus a desktop or a machine per bot |
 
-## Why does the distinction matter when buying?
+## The distinction decides what you ask a vendor
 
 Because the words describe what the product does to your machine and your data, and a framework is not that.
 
@@ -2311,7 +2321,7 @@ Checked: 2026-11-19
 
 DeepSeek Harness scores highest at 4.35 out of 5, OpenCode second at 4.15, Claude Code third at 3.70 and Codex CLI fourth at 3.45. The scores come from five weighted criteria, each scored only from observations made on this machine on 19 November 2026. Nothing below is general knowledge about these tools.
 
-## How were the scores built?
+## Five weighted criteria, built from what each tool showed
 
 Each tool was scored 1 to 5 on five criteria, and the criteria were weighted for a Malaysian SME that wants automation and cost control.
 
@@ -2325,7 +2335,7 @@ Each tool was scored 1 to 5 on five criteria, and the criteria were weighted for
 
 A cell scores 5 only when the observation is explicit and complete. A criterion with nothing in our notes scores "not verified" and contributes nothing, rather than averaging to a polite middle. Provider and cost control, MCP and extensibility are editorial scores anchored to the line each tool has in the table, not measured quantities: the table says a tool supports a route, not how well it does it.
 
-## What did we measure?
+## One machine, one day, four harnesses
 
 Four harnesses, one machine, one day. Version, install route, config, automation surface, MCP, provider choice, extensibility and disk footprint.
 
@@ -2342,7 +2352,7 @@ What that does and does not cover: all four were installed and configured on thi
 | Extensibility | plugin bundles, profile composition, skills, agent teams | `~/.claude/skills`, `--agents` JSON, subagents | `config.toml`, MCP, experimental `exec-server` | `opencode agent`, MCP, ACP server |
 | Local footprint | 3.2 GB | 116 KB | 246 MB | 62 MB |
 
-## What are the scores?
+## The ranking is arithmetic you can reproduce
 
 The ranking comes out of the arithmetic below, and the arithmetic is reproducible from the table above.
 
@@ -2357,7 +2367,7 @@ The ranking comes out of the arithmetic below, and the arithmetic is reproducibl
 
 Footprint was scored on a stated scale: 5 for under 100 MB, 4 for under 500 MB, 2 for under 5 GB. Non-interactive automation scores 4 rather than 5 for all four because each has one documented route and we did not test a scheduled run for any of them.
 
-## What does each tool win on?
+## Each tool wins on a different criterion
 
 DeepSeek Harness wins on provider choice, MCP and extensibility, and loses on disk.
 
@@ -2375,13 +2385,13 @@ Codex CLI wins on MCP, because it is the only one of the four documented here as
 
 Its automation route (`codex exec`) is solid and its footprint is mid-pack. The provider line is OpenAI-only through `login`, and `exec-server` is marked experimental, which is what puts it fourth.
 
-## What did we not verify?
+## OpenMausBot is out, and not because it lost
 
 OpenMausBot is out, and not because it lost. The binary is present but errors on launch, its global install and data directory are gone, and its systemd unit is inactive. We tested it and it could not run, so it is not scored and it is not ranked last.
 
 Not verified for any of the four: response quality, latency, token cost, reliability over a week, or behaviour under load. We measured what is in the table and nothing else. A version bump can change any cell here, which is the risk in publishing version-pinned numbers: 0.146.0 and 1.18.11 are today's values, not permanent properties.
 
-## How can I re-run this check?
+## Four commands re-run the check
 
 Four commands and a filesystem check, and you can audit every number in the tables.
 
@@ -2412,7 +2422,7 @@ Checked: 2026-11-19
 
 Published prices for automation work in Malaysia run from RM400 for a simple process build to RM6,000-plus for autonomous task execution. Those figures and 28 more below come from six Malaysian publishers, with the publisher, unit and date on every row. Four are studios, one is an independent practitioner, and one is a freelance profile; the only per-hour figure comes from that profile. Solo freelancers usually quote per job rather than publish, so this table is published supply, not the whole market.
 
-## Who publishes these numbers, and who does not?
+## Six publishers print a rate, and the rest print nothing
 
 The figures below come from pricing pages of Malaysian automation providers and from one Malaysian freelance profile. Every row carries the date it was read: 19 November 2026 for the studio and platform pages, and 27 October 2026 for the independent practitioner's page.
 
@@ -2420,7 +2430,7 @@ The global marketplaces are unmeasured here. Upwork returns HTTP 403 with a Clou
 
 Two further exclusions. Every "quote on request" tier is excluded, because a quote is not a rate. Freelancer.com profiles that price in USD are excluded, even where the person is Malaysian, because the number is not a Malaysian price.
 
-## What does a published automation build cost?
+## A published build runs from RM400 to RM6,000-plus
 
 Per project, published prices run from RM400 for a simple process build at Pang Jun Han to RM6,000-plus for autonomous task execution at Autoflow Solutions. All rows carry the publisher's own unit.
 
@@ -2451,7 +2461,7 @@ Per project, published prices run from RM400 for a simple process build at Pang 
 ![Four publishers' published project price ranges, from RM400 at Pang Jun Han to RM6,000-plus at Autoflow Solutions](/figures/rates-project-prices.svg)
 *Published project prices by publisher: RM400 at the floor, RM6,000-plus at the ceiling.*
 
-## What does an integration cost?
+## No publisher states a per-integration price
 
 No Malaysian publisher in this set states a per-integration price, so no per-integration market rate is claimed here. What is published is subscription tiers that include connectors and API integration.
 
@@ -2469,7 +2479,7 @@ No Malaysian publisher in this set prices one integration. The one build price t
 | Scale tier set-up, includes booking-system integration | RM6,000 | per project | Nixlab Studio | 2026-11-19, page undated |
 | Large build linked to existing accounting or project system | RM1,600 to RM4,000 | per project | Pang Jun Han | 2026-10-27 |
 
-## Why do the same tasks carry different units?
+## The units differ because the publishers sell different things
 
 Because the publishers are selling different things: a session of someone's time, a project with a defined end, or an ongoing subscription.
 
@@ -2477,7 +2487,7 @@ RM400 per 4-hour session and RM1,500 per project are not competing prices. The f
 
 The dates matter for the same reason. Several pages carry no publication date, so the row date is the day the price was read, not the day it was published. A price read on 19 November 2026 may have been written in 2025 and not updated.
 
-## What changes the price of a quote?
+## Six things move a quote
 
 Six things, and each one appears in the table above as a different tier rather than a discount.
 
@@ -2488,7 +2498,7 @@ Six things, and each one appears in the table above as a different tier rather t
 5. Whether the build touches existing accounting or project software. That is the top of Pang Jun Han's range, RM1,600 to RM4,000.
 6. Whether you buy a session or a scope. The only per-hour figure in the set belongs to a freelance profile, not to any of the studios.
 
-## How do I compare two quotes when the units differ?
+## Compare quotes in three numbers, not in units
 
 Convert both to the same three numbers before you compare: total cost to a working system, monthly cost after launch, and what each one excludes.
 
@@ -2516,7 +2526,7 @@ Checked: 2026-11-19
 
 What differs is not which model scores highest. Two leaderboards were reachable and are printed below with their settings, but neither is treated here as a quality ranking. What a buyer is stuck with is four documented things: the context window, the price per million tokens, whether tool calling and structured output are documented, and whether file and image input are supported.
 
-## What does each vendor document?
+## Each vendor documents only what its pages state
 
 Only what the vendor's own pages state. Where a page did not print a figure, the cell says "not captured" rather than a number.
 
@@ -2539,13 +2549,13 @@ The figures come from Anthropic's models overview, OpenAI's API pricing page, De
 
 Two cells need a note rather than a number. Haiku 5.5's input price is qualified on the page as applying to prompts up to 100,000 tokens. And GPT-6.2 Astra and Sol price short and long context separately, so both are printed. The capability cells are backed by the vendor documentation listed in Sources: PDF support for the Claude rows, file inputs for the GPT rows, and function calling for grok-4.7.
 
-## What does a benchmark score not tell you?
+## A benchmark score leaves the table out
 
 Almost everything in the table above. The two leaderboards further down are printed with their settings, and neither is treated as a quality verdict.
 
 SWE-bench serves its leaderboards through script rather than static text, and no dated snapshot was captured. The Aider polyglot page's visible top row carries a run directory dated 23 August 2025, which is not a snapshot of November 2026. Rather than cite either as current, this piece compares what you get and pay. A benchmark number also would not tell you the context window, the price, whether structured output is documented, or what the terms allow.
 
-## What does one task cost at these rates?
+## One worked task shows the rates
 
 Because input and output are priced separately, one worked example makes the table usable. The assumption is 100,000 input and 20,000 output tokens per task, and the rate is the printed price above.
 
@@ -2558,7 +2568,7 @@ That is an 80 times spread between the cheapest and most expensive row on the sa
 ![Three bars to scale: Claude Haiku 5.5 at USD 0.02, Gemini 4 Carbon at USD 0.40, Claude Fable 5.2 at USD 1.60 per task](/figures/closed-task-cost.svg)
 *The same 100,000-in, 20,000-out task costs USD 0.02 on Haiku 5.5 and USD 1.60 on Fable 5.2.*
 
-## Where is the lock-in?
+## Lock-in sits in three contract clauses
 
 Three places, and each shows up in the contract rather than the benchmark.
 
@@ -2568,13 +2578,13 @@ Three places, and each shows up in the contract rather than the benchmark.
 
 **Export.** There is no weights file to take with you. Moving vendors means rebuilding prompts, tools and evaluation, which is a cost no table captures.
 
-## Which vendor names drift?
+## Vendor names drift between pages
 
 The pages disagree with each other, and the table keeps the printed names rather than tidying them.
 
 OpenAI's platform documentation sells GPT-6.2 Astra and GPT-6.2 Sol, and prints the cheap model as gpt-6-luna, while its consumer page calls the family GPT-6. Gemini's marketing names differ from the API ids shown underneath them, which is why the table uses the API ids. If you are briefing a supplier, quote the API id, because that is what the documentation and billing use.
 
-## What do the benchmarks actually say?
+## Two leaderboards, readable only with their settings
 
 Two leaderboards, each readable only with its settings printed beside the number, and neither reconciling with the vendor names above.
 
@@ -2595,7 +2605,7 @@ The names do not reconcile, and that is a finding rather than a formatting probl
 
 A per-token price is not a per-task price. Input and output are priced separately, long context costs more on OpenAI and xAI, and Haiku 5.5's input figure is qualified by prompt length, so a model that looks cheapest per input token can cost more on a task that writes a lot. [What RM100 a month actually buys you in AI](https://upahje.my/en/articles/rm100-budget) works that arithmetic in ringgit.
 
-## What did we not measure?
+## We ran no benchmark ourselves
 
 We did not run a benchmark ourselves. We read two, with their settings, and we are not treating either as a quality verdict: there is no "smarter" and no "better at coding" here.
 
@@ -2619,13 +2629,13 @@ Checked: 2026-11-19
 
 A spreadsheet wins when the volume is small and one person owns the data. An API wins when two systems must stay in sync without a human copying between them. The deciding question is not the size of your business. It is whether a copy step still exists, and what it costs when that step goes wrong.
 
-## What is the decision test?
+## One sentence decides it, and it is what happens in the window
 
 There is one test, and it is a sentence you can say out loud: what happens in the hour after a change, and who has to move it.
 
 Write down the last three changes to that data and how each one travelled. If every one needed a person to open two windows and retype, you have a manual sync. A spreadsheet is a perfectly good manual sync. An API is what you buy when the same retyping happens often enough to be a cost, or once too often to be tolerable.
 
-## When does a spreadsheet win?
+## A spreadsheet wins in three situations
 
 A spreadsheet is the correct tool in three situations, and buying an API in any of them is money thrown at a problem you do not have.
 
@@ -2633,7 +2643,7 @@ A spreadsheet is the correct tool in three situations, and buying an API in any 
 2. **One person owns the data.** Shared ownership is where spreadsheets fail, not low technology. A single careful owner with a sheet beats a half-built integration that nobody understands.
 3. **The input needs judgement.** If a person has to look at a message and decide what it means, no API will do that part. Automating the transport while leaving the decision manual gains you nothing.
 
-## When does it stop scaling?
+## Four signals say the sheet has stopped scaling
 
 Four signals, and any one of them is enough to start looking at an API.
 
@@ -2642,13 +2652,13 @@ Four signals, and any one of them is enough to start looking at an API.
 3. **A failure costs more than the fix.** A missed order, a double booking, an invoice sent twice. Once that happens monthly, the repair cost is real money.
 4. **The data must move at night or at once.** A person cannot reconcile at 2am, and a batch of a hundred rows retyped by hand will contain errors you will not find.
 
-## What does each one actually cost?
+## The two costs are shaped differently
 
 Not a like-for-like number, because no public benchmark exists for what Malaysian developers charge for this work, and we will not invent one.
 
 What can be said honestly is the shape of the bill. A spreadsheet costs time, every week, forever, and it costs the cleanup after each mistake. An API costs a build once, a monthly fee for whatever it calls, and a maintenance event whenever a provider changes something. The build is the visible cost. The time you already spend, and the mistake that already happened, are the ones nobody puts in the sum until the sheet stops being enough.
 
-## What is the middle option?
+## A middle option sits between sheet and API
 
 Plenty of Malaysian SMEs sit between the two, and it is worth naming the middle rather than pretending the choice is binary.
 
@@ -2670,7 +2680,7 @@ A harness keeps your key outside the conversation. It reads the key from an envi
 ![A flow diagram: your app calls the harness, the harness reads the key from an environment variable or a secret store, sends it in an HTTPS request header, and the provider checks it against your account before the model answers. A second panel lists four places the key must never appear: a chat message, a committed file, a screenshot or log, and client-side code](/figures/harness-api-keys.svg)
 *The key travels with the request but belongs to the account, and four places are permanently out of bounds.*
 
-## Where does the key actually live?
+## The key lives in two places only
 
 In two places only: an environment variable that the process can read, or the harness's own credential store, which is a file on your machine.
 
@@ -2678,7 +2688,7 @@ Environment variables are the simplest form. In this harness a saved secret reac
 
 Either way, the key is a file or an environment, never a line in the conversation. That distinction is the whole article: the model never needs to see the key, and a harness that did put it in the prompt would be leaking it on every request.
 
-## What does the key authenticate?
+## The key authenticates the account, not the request
 
 The account, not the request. The provider looks up the key, finds the account it belongs to, and applies that account's permissions and billing to whatever the request asks for.
 
@@ -2688,7 +2698,7 @@ Three consequences follow, and each one changes how you handle keys.
 2. **Spend limits belong to the account.** A leaked key spends your money at the provider's rate until you notice, not until the next request ends.
 3. **The key does not say which tool asked.** The provider knows the account, not the script. So the audit trail starts with your own logs, not the provider's dashboard.
 
-## Where must the key never go?
+## Four places the key must never appear
 
 Four places, and they cover almost every real leak: a chat message, a committed file, a screenshot or log, and client-side code.
 
@@ -2697,7 +2707,7 @@ Four places, and they cover almost every real leak: a chat message, a committed 
 3. **A screenshot or a log.** Debug output that prints a whole request header, or a screenshot of a settings screen, carries the key without anyone intending it. Log redaction is a setting worth checking before you share output with a contractor.
 4. **Client-side code.** Anything that reaches a browser is public. A key in front-end JavaScript, a mobile app, or a static page is available to anyone who opens developer tools, regardless of how it is obfuscated.
 
-## What do I do when a key leaks?
+## Revoke first, rotate second, investigate third
 
 Revoke first, then rotate, then investigate, in that order. Revoking is the only step that stops the spend.
 
@@ -2727,7 +2737,7 @@ Checked: 2026-11-19
 
 The four products a reader is likely to name are two different kinds of thing. Grok Bot from xAI and Dots from OpenAI are closed, hosted products you use through someone else's service. OpenBot and MausBot are source-available projects you can run yourself, and only MausBot's main repository is open source on its own licence. OpenBot is not.
 
-## What is on the market?
+## One row per product, with the evidence level stated
 
 One row per product, with the evidence level stated, because three of these were read from official sources and one was installed here and is now gone.
 
@@ -2743,7 +2753,7 @@ One row per product, with the evidence level stated, because three of these were
 
 A second MausBot repository described itself as an MIT download repo and was cited in this article until 24 November 2026, when the link returned 404 and the GitHub organisation behind it no longer resolved. The main repository above is the one that can still be checked.
 
-## What do the licences actually let a business do?
+## The licences decide what a business may do
 
 This is the part worth reading twice, because "open source" and "source available" are not the same permission.
 
@@ -2756,7 +2766,7 @@ Closed hosted products, Grok Bot and Dots, grant neither. You get access under t
 ![Three zones: closed and hosted for Dots and Grok Bot, source available for OpenBot under PolyForm Noncommercial, open source for MausBot under Apache-2.0](/figures/harness-licence-line.svg)
 *Source available is not open source: OpenBot's licence is noncommercial, MausBot's main repo is Apache-2.0.*
 
-## Why does one name map to several projects?
+## One name maps to four unrelated projects
 
 Because "OpenBot" is at least four unrelated projects, and the one installed on this machine cannot now be identified.
 
@@ -2764,13 +2774,13 @@ That is not a rhetorical caveat. `nightly-labs/openbot` is the desktop agent wor
 
 "GrokBot" has a milder version of the same problem: the GitHub repositories under that name are mostly community guides and clones about xAI's product, not independent harnesses. "Dots" also collides with an unrelated agent repository.
 
-## What did we lose, and how do we know?
+## One harness is now an orphan, and the failure names it
 
 One harness that used to be installed here is now an orphan, and the failure message is the evidence.
 
 The `openmausbot` launcher is still on this machine, and running it fails with a Node `Cannot find module` error naming a payload path that no longer exists. The payload is gone, there is no systemd unit under that name, and no data directory remains. So MausBot appears in the table from its repository, not from our use of it: we ran it earlier in this project and cannot now re-verify that experience.
 
-## Which word should I use?
+## Use the vendor word when you quote the vendor
 
 "Agent harness" if you want the vendor's own term, "harness" if you are talking to someone who already knows. "AI harness" is a modifier the vendors we read do not use. The vocabulary is covered in [agent harness, AI harness, agent framework](https://upahje.my/en/articles/agent-harness-vs-ai-harness).
 
@@ -2797,7 +2807,7 @@ Checked: 2026-11-19
 
 A brief that keeps you from paying twice names five things before anyone quotes: inputs, outputs, failure behaviour, the acceptance test, and who owns the credentials. A freelancer who quotes without those five is guessing. You then pay for the guess twice, once to build the wrong thing and once to repair it.
 
-## What five things does a freelancer need before quoting?
+## Five facts change the quote
 
 Every one of these changes the price, which is why a quote that arrives without them is not a quote.
 
@@ -2807,7 +2817,7 @@ Every one of these changes the price, which is why a quote that arrives without 
 4. **The acceptance test.** The exact check that decides the job is done, agreed before work starts.
 5. **Credentials and ownership.** Whose accounts the keys belong to, where they are stored, and what happens to them at the end.
 
-## What does a brief look like?
+## The brief is one document sent to every freelancer
 
 Copy this, fill it in, and send the same document to every freelancer you ask. The point of sending one document is that you can compare quotes afterwards.
 
@@ -2844,7 +2854,7 @@ BUDGET
 - Excluded: [anything you do not want included]
 ```
 
-## What acceptance test should I agree up front?
+## Agree one acceptance test on real data
 
 One test, on real data, that either passes or fails without an argument.
 
@@ -2852,7 +2862,7 @@ The strongest version compares a known-correct result against the automated one.
 
 Agree the test before the work starts, in writing, and agree what happens if it fails. A brief with no test hands the definition of "finished" to whoever is being paid to finish it.
 
-## What goes wrong when the brief is thin?
+## Three failures repeat on thin briefs
 
 The same three things, in the same order, on almost every job.
 
@@ -2860,7 +2870,7 @@ The freelancer builds what is easiest to build rather than what you needed, beca
 
 None of that requires a dishonest freelancer. It requires a brief that could be read two ways, and two people reading it differently.
 
-## How do I compare two quotes on the same brief?
+## Compare line by line against the brief
 
 Compare line by line against the brief, and treat an unanswered line as a gap rather than a bonus.
 
@@ -2881,7 +2891,7 @@ Checked: 2026-11-19
 
 The licence is the difference that decides whether you can use a model in a business at all. Of the five open-weight models read for this article, two are MIT, one carries a custom Qwen licence, one carries Mistral's own open-weight licence, and one carries a Kimi licence. "Open weight" tells you the files are downloadable; it does not tell you what you may do with them.
 
-## What does each licence actually say?
+## Each licence name carries one restriction
 
 The licence name and the restriction, quoted from the model card or its licence file, not from a summary.
 
@@ -2895,7 +2905,7 @@ The licence name and the restriction, quoted from the model card or its licence 
 
 MIT is the permissive one: commercial use, modification and redistribution, with the notice kept. The other three are custom licences whose terms live in the repository's LICENSE file. Those files were not opened, so this article names the licences without summarising their terms. Either way, a custom licence is a document you read, not a label you assume.
 
-## What does it take to run one?
+## Size is the first wall
 
 Size is the first wall, and the hardware guidance on the cards does not give a minimum anyone can price against.
 
@@ -2903,7 +2913,7 @@ The cards state parameter counts of 95B activated within 2.4T for Qwen, 1T for M
 
 So this article cannot tell you what self-hosting costs. A node of GPUs is a real bill, and no card here states the minimum configuration, so any figure would be invented. What it can tell you is what renting the same model costs.
 
-## What does renting cost instead?
+## Renting is priced per token
 
 Every one of these models is also sold per token by its publisher, and the prices differ enough to matter.
 
@@ -2919,13 +2929,13 @@ A second host also sells DeepSeek V4.1 Flash: Mistral's API lists it at 0.30 in 
 
 The arithmetic a buyer can do from here, at 1,000 input and 500 output tokens per task: deepseek-flash off-peak costs USD 0.00015 + USD 0.0003 = USD 0.00045 a task; kimi-k3.1-pro costs USD 0.002 + USD 0.005 = USD 0.007 a task. That is about 15 times the per-task cost, and both numbers are checkable against the table above.
 
-## Which model should a Malaysian SME start with?
+## Start with the cheapest per token that permits business use
 
 The cheapest per token that the licence plainly permits business use. On the rows read here, that is DeepSeek-V4.1-Flash-1017 at MIT, rented at 0.15 in / 0.60 out off-peak, before anyone buys a GPU.
 
 That is a conditional recommendation, not a verdict: it assumes your task tolerates a Chinese vendor's API and that you do not need a custom licence review. If either condition fails, the next step is the Mistral or Qwen rows, both of which cost more per token and carry licences you must read.
 
-## What could we not verify?
+## No card states a minimum hardware configuration
 
 No card states a minimum hardware configuration, so no self-hosting cost is claimed. Kimi's hardware figures were not captured, and DeepSeek's peak input price is not published on the page read.
 
@@ -2953,13 +2963,13 @@ Checked: 2026-11-19
 
 An open-weight model is one you can download and run on hardware you control. A closed model is one you can only call. For most Malaysian SMEs the practical answer is still closed, because running a model in-house needs a rented GPU, someone who can operate it, and a volume high enough to matter.
 
-## What does "open-weight" actually let me do?
+## Open-weight means the files are published
 
 It means the model files are published, so you can put them on your own machine instead of calling the vendor's servers. As of 19 November 2026, Mistral's catalogue lists open-weight models under three licence shapes: Apache 2.0 for Mistral Small 4 and the Ministral 3 models, MIT for Z.ai GLM 5.3 and DeepSeek V4.1 Flash, and a vendor-specific licence for Mistral Large 4 ([Mistral docs, checked 19 Nov 2026](https://docs.mistral.ai/models)).
 
 Two things that fact does not give you: free inference, and permission to ignore the licence. Apache 2.0 is a permissive licence, but the terms are on the model page and they are what governs your use ([Mistral Small 4 page, checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
-## What does each option cost per month?
+## Per-call cost can be computed exactly
 
 The per-call side can be computed exactly, because vendors publish rates. The self-hosted side depends on GPU rental, which we could verify for one supplier only.
 
@@ -2974,7 +2984,7 @@ The per-call side can be computed exactly, because vendors publish rates. The se
 
 The token rates are from OpenAI's pricing page and from Mistral's own model page, both checked on 19 November 2026 ([OpenAI pricing](https://developers.openai.com/api/docs/pricing), [Mistral Small 4](https://docs.mistral.ai/models/mistral-small-4-0-26-03)). The GPU rate is DigitalOcean's list price for an HGX B300, checked the same day ([DigitalOcean GPU pricing](https://www.digitalocean.com/pricing/gpu-droplets)).
 
-## At what volume does self-hosting pay?
+## Self-hosting pays at about 36 million messages a month
 
 At a volume that no small business reaches: about 36 million messages a month, at the rates above.
 
@@ -2993,7 +3003,7 @@ Self-hosting keeps data in Malaysia only when the hardware is in Malaysia. Renti
 
 Mistral's own API prices Mistral Small 4 at USD 0.15 per million input tokens and USD 0.60 per million output tokens ([checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
-## What does running one in-house actually require?
+## Running one in-house takes five continuing jobs
 
 Five jobs, and none of them is a one-off setup.
 
@@ -3005,7 +3015,7 @@ Five jobs, and none of them is a one-off setup.
 
 This list is our description of the work, not a salary survey or a job specification.
 
-## What should a Malaysian SME do this quarter?
+## Call an open-weight model before running one
 
 Call an open-weight model before you try to run one. Mistral serves its own open-weight models through an API at USD 0.15 and USD 0.60 per million tokens, which gets you the licence and the model behaviour without buying a GPU or hiring anyone. Self-hosting becomes a question worth asking when your monthly token spend approaches a GPU's monthly cost, or when a data location requirement forces your hand.
 
@@ -3029,7 +3039,7 @@ Checked: 2026-11-19
 
 RM100 buys one of two things: a seat in someone's app, or a meter of tokens for software you run. Which model wins a leaderboard is a different question. At a stated 2,000-token task, RM100 of Claude Haiku 5.5 tokens is about 54,000 tasks a month, while ChatGPT Plus costs RM99.90 and includes no API key at all.
 
-## What does a subscription include?
+## A subscription sells a seat, not a meter
 
 A consumer plan sells you a seat: a login, a usage allowance and the vendor's interface. It does not hand you an API key.
 
@@ -3053,7 +3063,7 @@ Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 
 
 Claude publishes USD 20 and we converted at 4.1145 to RM82.29. OpenAI publishes MYR 99.90 directly for Malaysia.
 
-## What do tokens cost instead?
+## Haiku 5.5 costs USD 0.10 in and USD 0.50 out per million
 
 Anthropic publishes Claude Haiku 5.5 at USD 0.10 per million input tokens and USD 0.50 per million output tokens, with the input figure qualified on the page as applying to prompts up to 100,000 tokens.
 
@@ -3064,7 +3074,7 @@ That is the meter. To compare it with a subscription, the article has to fix a t
 3. One task: USD 0.00045, which is RM0.00185 at 4.1145.
 4. RM100 ÷ RM0.00185 = about 54,000 tasks.
 
-## What does that mean at three usage levels?
+## Three usage levels keep the meter small
 
 The same meter cost is tiny at light use, trivial at daily use, and still small at heavy use, because text tokens are cheap and seats are priced for people rather than volume.
 
@@ -3079,13 +3089,13 @@ Each row is tasks × RM0.00185. A 30-day month is assumed. At heavy use you are 
 ![Six horizontal markers on a log scale from RM0.10 to RM100: token bills of RM0.28, RM1.67 and RM11.11 against seats at RM24, RM82.29 and RM99.90](/figures/rm100-month-cost.svg)
 *A month of tokens costs under RM12 at every usage level, against the cheapest paid seat at RM24.*
 
-## What if I want both a seat and a meter?
+## A seat plus a meter is two purchases
 
 Then you are buying two things, and the cheapest version is a smaller seat plus tokens rather than the largest seat.
 
 ChatGPT Go at RM24 leaves RM76 for tokens, about 41,000 tasks at the assumed size. Claude Pro at RM82.29 leaves RM17.71, about 9,500 tasks. The high tiers bundle API credits, which is useful if you want one bill, and expensive if you do not use the credits: Claude Max costs RM411.45 for USD 100 of API credits bundled inside it, which at the same rate is RM411.45 of tokens.
 
-## Where is the line?
+## The line sits near 900 tasks a month
 
 Below roughly 900 tasks a month, a seat is the better buy if a human is doing the asking, because RM24 to RM99.90 buys an interface, memory, file uploads and a vendor's support, and RM1.67 of tokens buys none of that.
 
@@ -3093,7 +3103,7 @@ Above roughly 6,000 tasks a month, or any time software rather than a person is 
 
 Both lines assume the 2,000-token task. They mark where the arithmetic changes sign, and nothing else.
 
-## What could we not verify?
+## Gemini publishes no plan price we could read
 
 Gemini's plan pricing: the page returned an empty body to our fetcher. Cursor and Windsurf plans: not reached. DeepSeek consumer pricing: only its API page was read, and its output-token prices were below the page truncation, so its rows are absent rather than estimated. Copilot Business and Enterprise: not priced on the plans page read, which now sells Free, Pro, Pro+ and Max.
 
@@ -3120,7 +3130,7 @@ Checked: 2026-11-19
 
 Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing. Every band below is a count, not an average. The evidence is 11 listings on freelancing.my, posted between September and November 2026, each with its own budget in ringgit, plus one hourly-rate listing that is excluded and named below.
 
-## Who these numbers come from?
+## One platform’s public pages set the bar
 
 One platform, freelancing.my, and every figure is a budget printed on a public project listing rather than a survey answer.
 
@@ -3128,7 +3138,7 @@ That is a narrower base than it sounds, and the gap matters. The global marketpl
 
 Three exclusions, all deliberate. Listings advertising RM0.00 or RM1.00 are placeholders and were dropped. Listings located outside Malaysia were dropped. Commission-only posts with no stated base rate were dropped, because "salary plus commission" is not a number a reader can plan around.
 
-## Which five skills clear the bar?
+## Five skills clear the two-listing bar
 
 A skill qualified only if at least two listings with a real ringgit budget were posted for it. Five did.
 
@@ -3145,7 +3155,7 @@ Social media content did not qualify. It had one dated listing plus one hourly r
 ![Five skills' published per-project rates: video editing RM150 to RM2,500, graphic design RM300 to RM1,100, data entry RM50 to RM70, cold calling RM700 to RM1,000, app testing RM330 to RM600](/figures/side-income-rates.svg)
 *Published rates per project: data entry tops out at RM70 while video editing reaches RM2,500.*
 
-## What does video editing pay?
+## Video editing pays RM150 to RM2,500 a project
 
 Three listings, RM150 to RM2,500 per project, and the spread is scope rather than skill: a short-form trial batch, a full short film, and a shoot-and-edit role.
 
@@ -3153,7 +3163,7 @@ The lowest is RM150 for a short-form TikTok or Reels trial batch, which is a pai
 
 Getting employable: our estimate is two to four months of deliberate practice on one editing tool, longer if you have never cut to a brief. The listings ask for samples, not certificates, so a portfolio of three finished pieces matters more than a course.
 
-## What does graphic design pay?
+## Graphic design pays RM300 to RM1,100
 
 Two listings, RM300 and RM1,100 per project, and the difference is volume: a set of retail point-of-sale items against a monthly content batch.
 
@@ -3161,7 +3171,7 @@ RM300 covers a booth, tent cards, banners and an illustration for a retail promo
 
 Getting employable: our estimate is one to three months if you already draw or use design software, and the barrier is canva-level output versus print-ready files. Retail work asks for the second.
 
-## What does data entry pay?
+## Data entry pays RM50 to RM70 a task
 
 Two listings, RM50 and RM70 per project, and both are small one-off tasks rather than an income you can build on.
 
@@ -3169,7 +3179,7 @@ RM50 is a simple verification task. RM70 is for local coordinators on a purchase
 
 Getting employable: today. The barrier is not skill, it is that the work is intermittent, low-paid and competes with anyone with a browser. Treat it as a first step to a better-paying listing, not as a side income in itself.
 
-## What does cold calling pay?
+## Cold calling pays RM700 to RM1,000
 
 Two listings, RM700 and RM1,000 per project, both advertised budgets rather than agreed fees, and both likely to be part-time hours.
 
@@ -3177,7 +3187,7 @@ RM700 is a part-time remote sales development role advertised as no experience n
 
 Getting employable: today, with a script and a clear voice. The risk is that commission structures replace the budget after the first month, which is why the two rows are marked as advertised rather than agreed.
 
-## What does app testing pay?
+## App testing pays RM330 to RM600
 
 Two listings, RM330 and RM600 per project, and both are Malaysian-specific work: language and locale testing that a global tester cannot do.
 
@@ -3185,7 +3195,7 @@ RM330 is UX research on trading platforms for Malaysian testers only. RM600 is M
 
 Getting employable: days to weeks. What the listings ask for is device access and language, not a testing qualification.
 
-## What does none of this tell you?
+## One platform, one quarter, advertised budgets
 
 It tells you what clients publicly budget on one platform in one quarter, and nothing about what they pay the person they actually hire, how many hours the work takes, or how often a listing turns into ongoing work.
 
@@ -3218,7 +3228,7 @@ An agent harness is the program between you and the model. It holds the conversa
 
 Everything below comes from reading the harness installed on this machine on 19 November 2026: its package metadata, and the session transcripts it writes. The installed version is 0.2.2-rc.1, which is what the package file inside the install reports. Where this page describes a flow, the record names are the ones the transcript actually contains.
 
-## What happens to one message, from typing to answer?
+## One message becomes a turn, then steps
 
 The harness records the message as a turn, then works through steps; each step can produce a tool call, and the turn ends when the model stops asking for tools.
 
@@ -3238,7 +3248,7 @@ The transcript for this machine contains these record types, in the order a sing
 
 The important detail for a business owner is number 7. A task that needs four tools is not one exchange with the model, it is several, because the model cannot see a tool's result until the harness has run it and sent the result back.
 
-## Where is the conversation stored?
+## Sessions live in directories under .dsh/sessions
 
 Every session is a directory under `.dsh/sessions`, named after the folder you were working in, and it holds one compressed transcript file plus a lock file.
 
@@ -3246,13 +3256,13 @@ The path has three parts: `~/.dsh/sessions/<workspace>/<session>/session.v4.json
 
 That is worth knowing before you paste a client's contract into a chat window. The conversation is a file on your own disk, in a folder named after your project, and it is readable with one command.
 
-## What does a tool call look like in that flow?
+## A tool call record carries turn, step and call id
 
 A tool call record carries the turn number, the step number, a call identifier, the tool name, and the arguments, and the harness, not the model, is what executes it.
 
 The `tool/call` record in the transcript has exactly these data fields: `turn`, `step`, `callId`, `name`, `arguments`. The matching `tool/result` arrives after the harness has actually done the work. So when you read that an agent "ran a command", the sequence is: the model chose the tool and the arguments, the harness executed them, and the result went back to the model in the next step.
 
-## What can I check myself?
+## Three commands check the pages claims
 
 Three commands, and you do not need to trust this page to run them.
 
@@ -3278,7 +3288,7 @@ Checked: 2026-11-19
 
 An API is an agreed way for two pieces of software to exchange data on request, without a person copying it across by hand. For a Malaysian small business, it is the difference between a staff member retyping marketplace orders into a spreadsheet and your store passing each order straight to the courier's system.
 
-## What does an API actually do for my business?
+## An API carries one defined piece of data on request
 
 An API carries one defined piece of data between two systems, on request, in a format both sides agreed on. MDN describes it as a contract between the application offering it and whatever calls it ([MDN, checked 19 Nov 2026](https://developer.mozilla.org/en-US/docs/Glossary/API)).
 
@@ -3290,7 +3300,7 @@ An API carries one defined piece of data between two systems, on request, in a f
 ![Your store sends an order to the API, the API passes it to the courier, and the delivery status comes back the same way](/figures/what-is-an-api.svg)
 *One order, out through the API and back as a status.*
 
-## What is the difference between an open and a closed model API?
+## A closed model API can be called but not hosted
 
 A closed model API is one you can call but never host yourself. An open-weight model API is one whose model files you can download and run on hardware you control.
 
@@ -3305,15 +3315,15 @@ A closed model API is one you can call but never host yourself. An open-weight m
 
 As of 19 November 2026, Mistral's own catalogue lists all three licence shapes side by side: Mistral Small 4 and the Ministral 3 models under Apache 2.0, Z.ai GLM 5.3 and DeepSeek V4.1 Flash under MIT, and Mistral Large 4 under a vendor-specific "Mistral Ecosystem Open Weight License" ([Mistral docs, checked 19 Nov 2026](https://docs.mistral.ai/models)). Closed vendors publish a model catalogue and rates instead of weights ([OpenAI model catalogue, checked 19 Nov 2026](https://developers.openai.com/api/docs/models)).
 
-## Which one should a small business start with?
+## Start with pay-per-call
 
 Pay per call costs nothing when the volume is zero. A server costs every month whether anyone uses it. That arithmetic is why a closed API is the cheaper start for most small businesses. An open-weight model wins only once your monthly usage is high enough to beat the cost of the machine, and someone on your side can run it. For most Malaysian SMEs the second condition decides it.
 
-## What does it cost to have someone wire an API up in Malaysia?
+## No public benchmark prices integration work here
 
 No public benchmark exists for what Malaysian developers charge for API integration work as of November 2026. Quotes vary with how many endpoints you need, whether the integration writes data or only reads it, how authentication works, what should happen when a call fails, and how messy your existing data is. A price given before those five questions are answered is an estimate.
 
-## How do I price the job myself?
+## Five facts price the job before the quote
 
 Pricing starts before you ask for a quote, with five facts that decide the number.
 
@@ -3323,15 +3333,15 @@ Pricing starts before you ask for a quote, with five facts that decide the numbe
 4. Ask for a fixed price per integration, not an hourly estimate.
 5. Ask what happens to the code and credentials when the engagement ends.
 
-## What does the bill look like each month?
+## The monthly bill is published rates plus hosting
 
 Vendors publish their rates, so the monthly bill can be calculated rather than guessed. OpenAI's standard rate for a small current model, GPT-6 Luna, is USD 0.10 per million input tokens and USD 0.50 per million output tokens ([OpenAI pricing, checked 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). A WhatsApp FAQ bot handling 3,000 messages a month, at roughly 600 tokens in and 200 out per message, costs about USD 0.48 a month in tokens. Add hosting if the integration runs on your own server, and add the exchange rate your card charges, which is not in these figures. Maintenance belongs in this bill too, because a retired model version stops the integration until someone repairs it.
 
-## How do I know if I need an API, or just a person doing it manually?
+## A few tasks a day and cheap mistakes mean do it manually
 
 If the task happens a few times a day and a mistake is cheap to fix, do it manually. An API starts to pay when volume or the cost of an error crosses that line. No published benchmark fixes that line, so this is our judgement: it sits around the point where someone spends more than an hour a day copying, or where one missed order costs more than a month of the vendor's fee. Below that, a careful part-time staff member is cheaper and more reliable.
 
-## How do I protect myself when I pay someone to build this?
+## Settle three things in writing before paying
 
 Settle three things in writing before you pay.
 
@@ -3439,7 +3449,7 @@ Gerbang pembayaran menerbitkan harga mereka. Kami membaca halaman harga Billplz 
 | Kad, bukan MYR | 3.8% | 3.5% | T+2 hari bekerja |
 | Auto-deduct, MYR | 2.3% + RM1.25 | 2.0% + RM0.75 | T+2 hari bekerja |
 
-Platform penghantaran tidak menerbitkan komisen pedagang. Grab dan foodpanda tiada kad kadar awam untuk pedagang, sebab itu angka dalam artikel ini datang daripada pengawal selia dan bukan vendor: keputusan Suruhanjaya Persaingan Malaysia berhubung foodpanda, bertarikh 11 September 2023, merekodkan jalur komisen dalam Jadual 3 sebanyak **1–5%, 10–25%, 15–20% dan 15–25%** bergantung pada perkhidmatan.
+Platform penghantaran tidak menerbitkan komisen pedagang. Grab dan foodpanda tiada kad kadar awam untuk pedagang, sebab itu angka dalam artikel ini datang daripada pengawal selia dan bukan vendor: keputusan Suruhanjaya Persaingan Malaysia berhubung foodpanda, bertarikh 11 September 2023, merekodkan jalur komisen dalam Jadual 3 sebanyak **1–5%, 10–25%, 15–20% dan 15–25%** bergantung pada perkhidmatan. Itu lima kontrak peniaga francais tanpa nama (n=5), bukan kad kadar semasa platform.
 
 Itu julat yang direkodkan tiga tahun lalu, bukan kadar yang disebut hari ini. Sebarang angka khusus untuk kedai anda mesti datang daripada kontrak yang diletakkan di depan anda — dan itu sendiri memberitahu sesuatu tentang dua pasaran ini.
 
@@ -3502,6 +3512,16 @@ Pesanan pulang modal sebulan, tanpa penghantaran:
 > kadar komisen × bil purata × pesanan = RM1.25 × pesanan + kos mendapatkan pelanggan itu sendiri
 
 Sebelah kiri ialah apa yang platform ambil. Sebelah kanan ialah kos checkout anda **ditambah pemasaran yang kini anda mesti lakukan**. Istilah pemasaran itulah yang selalu ditinggalkan, dan sebabnya kedai tanpa khalayak patut kekal di platform sehingga ia ada khalayak.
+
+Masukkan angka pada empat perkara itu dan bilangan pulang modal muncul. Jadual di bawah menggunakan kos bulanan RM150 dan bakul purata RM30 sebagai andaian yang dinyatakan; gantikan dengan angka anda sendiri dan baca menurun pada lajur, kerana fi FPX tetap dan kadar kad berperatusan menyimpang apabila bakul berubah.
+
+| Jalur komisen | FPX pada RM0.75, pesanan sebulan | FPX pada RM1.25, pesanan sebulan | Kad pada 1.8%, pesanan sebulan |
+| --- | --- | --- | --- |
+| 5% | 200 | 600 | 157 |
+| 15% | 40 | 47 | 38 |
+| 25% | 23 | 24 | 22 |
+
+Dua perkara menyusul daripada lajur itu. Pertama, kadar komisen menentukan sama ada memiliki kedai ialah baki kecil atau perniagaan yang berbeza: pada hujung atas jalur terluas pengawal selia ia mengambil kira-kira 23 pesanan sebulan, dan pada hujung bawah jalur tersempit ia mengambil 200 pada pelan FPX termurah. Kedua, pelan Standard RM999 membayar dirinya pada kira-kira 2,000 pesanan FPX setahun, tempat RM0.50 yang dijimatkan setiap transaksi menampung fi tahunan pada 1,998.
 
 ## Apa yang kami akan beritahu kedai dengan tiga hidangan
 
@@ -5561,7 +5581,7 @@ Jika setiap bahagian aplikasi sama-sama sederhana, fungsi panas tidak bersembuny
 
 Baris terakhir itulah yang pembeli selalu tersalah. Halaman 4 saat boleh jadi satu imej hero yang tidak dimampatkan, dan tiada jumlah Rust akan menyentuhnya.
 
-## Bagi laman PKS, jawapannya 5% itu
+## Bagi laman PKS, yang lambat ialah satu imej, satu query atau satu skrip
 
 Bagi laman perniagaan kecil Malaysia, perkara yang lambat hampir selalu satu imej, satu query, atau satu skrip yang menyekat, dan tindak balas yang betul ialah betulkan itu dan berhenti. Pindahan penuh ke Rust ialah keputusan untuk pasukan yang ada bajet profiling dan proses pelepasan. Bagi kedai dengan laman lima halaman dan senarai produk, framework sebelas ribu bintang bukanlah kekangannya.
 
