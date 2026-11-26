@@ -1,6 +1,6 @@
 ---
-title: "Mengambil bayaran: FPX satu ringgit, kad dua peratus"
-description: "FPX ialah fi tetap yang masuk hari berikutnya; kad ialah peratusan yang masuk dalam dua hari. Jurang dua hari itulah yang menentukan aliran tunai kedai kecil."
+title: "FPX satu ringgit; kad dua hingga tiga peratus"
+description: "FPX fi tetap yang masuk hari berikutnya; kad peratusan yang masuk dua hari di CHIP dan Billplz, lebih lama di Stripe. Jurang itu menentukan aliran tunai."
 slug: mengambil-bayaran-malaysia
 translationKey: taking-money-malaysia
 format: comparison
@@ -10,7 +10,7 @@ updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, bayaran, fpx, malaysia]
-cardFigure: "RM1.00 pada FPX berbanding 2% pada kad"
+cardFigure: "RM1.00 pada FPX berbanding 2% hingga 3% pada kad"
 canonical: https://upahje.my/ms/articles/mengambil-bayaran-malaysia
 draft: true
 changelog:
@@ -31,9 +31,9 @@ sources:
     checked: 2026-11-26
 ---
 
-# Mengambil bayaran: FPX satu ringgit, kad dua peratus
+# FPX satu ringgit; kad dua hingga tiga peratus
 
-Dua kaedah bayaran, dua bentuk kos. Bayaran FPX ialah **RM1.00** tetap di CHIP atau **RM0.75** hingga **RM1.25** di Billplz bergantung pada pelan, dan ia masuk ke akaun anda pada hari perniagaan berikutnya. Bayaran kad ialah peratusan — **2.0%** di CHIP, **3% campur RM1.00** di Stripe — dan ia masuk dalam **dua hari perniagaan**. Fi itu perbezaan yang kelihatan. Jurang dua hari itulah yang menyakitkan kedai dengan tunai nipis.
+Dua kaedah bayaran, dua bentuk kos. Bayaran FPX ialah **RM1.00** tetap di CHIP atau **RM0.75** hingga **RM1.25** di Billplz bergantung pada pelan, dan ia masuk ke akaun anda pada hari perniagaan berikutnya. Bayaran kad ialah peratusan — **2.0%** untuk kad kredit di CHIP, **3% campur RM1.00** di Stripe — dan ia masuk dalam **dua hari perniagaan**. Fi itu perbezaan yang kelihatan. Jurang dua hari itulah yang menyakitkan kedai dengan tunai nipis.
 
 ## Bentuk fi menentukan saiz bakul yang sesuai
 
@@ -70,7 +70,7 @@ Ketiga-tiganya berasaskan sebut harga. Kedai yang membandingkan enam gerbang pad
 
 Kedai yang menerima RM1,000 sehari melalui kad mempunyai RM2,000 dalam perjalanan pada mana-mana hari, dan wang itu belum ada dalam akaun apabila invois pembekal tiba pada hari kedua. Pada FPX kedai yang sama mempunyai satu hari dalam perjalanan.
 
-Itulah gigitan aliran tunai: bukan fi 2% yang dibayar pelanggan dalam bakul, tetapi dua hari wang terapung yang dipegang rangkaian kad.
+Itulah gigitan aliran tunai: bukan fi 2% yang dibayar pelanggan dalam bakul, tetapi tempoh pembayaran keluar gerbang bayaran untuk kad — dua hari perniagaan di CHIP dan Billplz, jadual mingguan atau bulanan bergolek di Stripe.
 
 ## Apa yang perlu dibuat sebelum memilih
 

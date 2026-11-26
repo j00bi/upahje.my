@@ -1,6 +1,6 @@
 ---
-title: "Taking money: FPX costs a ringgit, cards cost 2%"
-description: "FPX is a flat fee that settles next day; a card is a percentage that settles in two. The gap between those two facts decides a small shop's cash flow."
+title: "FPX costs a ringgit; cards cost 2% to 3%"
+description: "FPX is a flat fee that settles next day; a card is a percentage that settles in two at CHIP and Billplz, later at Stripe. That gap decides cash flow."
 slug: taking-money-malaysia
 translationKey: taking-money-malaysia
 format: comparison
@@ -10,7 +10,7 @@ updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, payments, fpx, malaysia]
-cardFigure: "RM1.00 on FPX against 2% on a card"
+cardFigure: "RM1.00 on FPX against 2% to 3% on a card"
 canonical: https://upahje.my/en/articles/taking-money-malaysia
 draft: true
 changelog:
@@ -31,9 +31,9 @@ sources:
     checked: 2026-11-26
 ---
 
-# Taking money: FPX costs a ringgit, cards cost 2%
+# FPX costs a ringgit; cards cost 2% to 3%
 
-Two payment methods, two shapes of cost. An FPX payment is a flat **RM1.00** at CHIP or **RM0.75** to **RM1.25** at Billplz depending on the plan, and it lands in your account the next business day. A card payment is a percentage — **2.0%** at CHIP, **3% plus RM1.00** at Stripe — and it settles in **two business days**. The fee is the visible difference. The two-day gap is the one that hurts a shop with thin cash.
+Two payment methods, two shapes of cost. An FPX payment is a flat **RM1.00** at CHIP or **RM0.75** to **RM1.25** at Billplz depending on the plan, and it lands in your account the next business day. A card payment is a percentage — **2.0%** on credit at CHIP, **3% plus RM1.00** at Stripe — and it settles in **two business days**. The fee is the visible difference. The two-day gap is the one that hurts a shop with thin cash.
 
 ## The fee shape decides the basket size it suits
 
@@ -70,7 +70,7 @@ Those three are quote-based. A shop comparing six gateways on price is comparing
 
 A shop taking RM1,000 a day on cards has RM2,000 in transit on any given day, and that money is not in the account when the supplier invoice arrives on the second day. On FPX the same shop has one day of transit instead.
 
-That is the cash-flow bite: not the 2% fee, which the customer effectively pays in the basket, but the two days of float the card network keeps.
+That is the cash-flow bite: not the 2% fee, which the customer effectively pays in the basket, but the gateway's payout term on cards — two business days at CHIP and Billplz, a rolling weekly or monthly schedule at Stripe.
 
 ## What to do before you pick one
 
