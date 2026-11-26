@@ -8,8 +8,8 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 - [Compliance](https://upahje.my/en/topics/compliance): What the rules require, what they do not, and what is unpublished. (3 articles)
 - [Pematuhan](https://upahje.my/ms/topics/compliance): Apa yang dikehendaki peraturan, apa yang tidak, dan apa yang tidak diterbitkan. (3 articles)
-- [Buying](https://upahje.my/en/topics/buying): What work costs, how to brief it, and how to compare quotes. (17 articles)
-- [Pembelian](https://upahje.my/ms/topics/buying): Kos kerja, cara menulis brief, dan cara membandingkan sebut harga. (17 articles)
+- [Buying](https://upahje.my/en/topics/buying): What work costs, how to brief it, and how to compare quotes. (18 articles)
+- [Pembelian](https://upahje.my/ms/topics/buying): Kos kerja, cara menulis brief, dan cara membandingkan sebut harga. (18 articles)
 - [AI and automation](https://upahje.my/en/topics/ai-automation): Agents, models and the loop that runs your request. (8 articles)
 - [AI dan automasi](https://upahje.my/ms/topics/ai-automation): Agent, model dan gelung yang menjalankan permintaan anda. (8 articles)
 - [Operations and growth](https://upahje.my/en/topics/operations-growth): How the business runs week to week, and where the duplication hides. (6 articles)
@@ -26,6 +26,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 - [RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission): An FPX payment costs RM1.25. A delivery platform takes 15 to 25% of the bill. The arithmetic that decides whether owning the shop is worth the discovery.
 - [Owning the shop means inheriting the discovery problem](https://upahje.my/en/articles/own-the-shop): A marketplace sold two things: a checkout and customers. The checkout now costs a ringgit; customers were never software, and that is the trade here.
 - [A 9-ending works on new items. Nobody has proved the rest.](https://upahje.my/en/articles/price-endings-nine): Three American field experiments: a $9 ending raised demand in all three, strongest on new items. No effect size published, no Malaysian data, no percentage.
+- [Pricing the same dish twice](https://upahje.my/en/articles/pricing-the-same-dish-twice): Recovering a 20% commission needs a 25% higher menu price, because the platform takes its cut of your rise too. Two prices, one kitchen, and the trap.
 - [Twelve jobs a rented GPU finishes, and three it cannot](https://upahje.my/en/articles/rented-gpu-jobs-malaysia): Fine-tuning, transcription, invoice extraction, product photos, embeddings, evals: what each needs in VRAM, how long it takes, what it costs.
 - [USD 0.04 of GPU time, and the dataset was the work](https://upahje.my/en/articles/rented-gpu-what-it-finishes): A rented RTX 5060 Ti trained a trade filter in five seconds for four cents. The dataset took longer to build, and that is the lesson nobody sells.
 - [Your simulated customer says yes. Real ones leave.](https://upahje.my/en/articles/simulated-customer-says-yes): Two 2026 studies on synthetic shoppers: baskets as accurate as a household's own history, and a simulator that halves resistance because it never walks away.
@@ -73,6 +74,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 - [Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen): Titik pulang modal ialah bilangan pesanan sebulan. Dengan fi FPX yang diterbitkan dan julat komisen pengawal selia, ini tempat memiliki mengalahkan menyertai.
 - [RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen): Bayaran FPX RM1.25. Platform penghantaran ambil 15 hingga 25% daripada bil. Aritmetik yang menentukan sama ada memiliki kedai sendiri berbaloi.
 - [USD 0.04 untuk masa GPU, dan set data itulah kerja sebenar](https://upahje.my/ms/articles/gpu-sewaan-set-data-kerja-sebenar): RTX 5060 Ti sewaan melatih penapis dagangan dalam lima saat dengan kos empat sen. Set data ambil masa lebih lama, dan itulah pelajarannya.
+- [Harga satu hidangan, dua menu](https://upahje.my/ms/articles/harga-satu-hidangan-dua-menu): Untuk mengekalkan 20% komisen, menu perlu naik 25%, kerana platform mengambil bahagian daripada kenaikan anda juga. Dua harga, satu dapur, dan perangkapnya.
 - [Hujung 9 berkesan pada barang baharu](https://upahje.my/ms/articles/hujung-harga-sembilan): Tiga eksperimen lapangan Amerika: hujung $9 menaikkan permintaan dalam ketiga-tiganya, paling kuat pada barang baharu. Tiada saiz kesan, tiada data Malaysia.
 - [Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri): Kami berhenti berhujah dan membina kedai sendiri. husnieats terima pesanan, keluarkan tiket dan rekonsiliasi DuitNow dari infrastruktur kami.
 - [Dua belas kerja GPU sewaan siap, tiga ia tidak mampu](https://upahje.my/ms/articles/kerja-gpu-sewaan-malaysia): Fine-tune, transkripsi, pengekstrakan invois, foto produk, embedding, eval. Berapa VRAM setiap satu, berapa lama, dan berapa kosnya pada kadar hari ini.
