@@ -1,4 +1,16 @@
 import Link from 'next/link'
+
+// A card figure that restates the headline ("A RM3,000 hire costs RM3,448.50 a
+// month" under the same sentence) is noise. Keep it only when it adds a number
+// the headline does not already carry.
+const words = (value: string) => value.toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim().split(' ').filter(Boolean)
+function repeatsTitle(title: string, figure: string) {
+  const titleWords = new Set(words(title))
+  const figureWords = words(figure)
+  if (!figureWords.length) return false
+  const overlap = figureWords.filter((word) => titleWords.has(word)).length / figureWords.length
+  return overlap >= 0.7
+}
 import { formatDate, isoDate, verifiedOn } from '@/lib/articles.mjs'
 import { TOPIC_MAPPING, topicLabel } from '@/lib/topics.mjs'
 
@@ -32,7 +44,7 @@ export default function StoryCard({ article, lang, copy }: { article: any; lang:
       >
         {article.description}
       </p>
-      {article.cardFigure && (
+      {article.cardFigure && !repeatsTitle(article.title, article.cardFigure) && (
         <p className="type-small mt-2" style={{ color: 'var(--ui-ink)', fontWeight: 600 }}>{article.cardFigure}</p>
       )}
       <p className="type-small mt-2" style={{ color: 'var(--ui-muted)' }}>
@@ -40,7 +52,8 @@ export default function StoryCard({ article, lang, copy }: { article: any; lang:
         {' · '}
         {article.readingTime} {copy.read}
       </p>
-      {verified && (
+      {/* A re-check only means something when it happened after publication. */}
+      {verified && verified > article.date && (
         <p className="type-small mt-1" style={{ color: 'var(--ui-muted)' }}>
           {copy.verifiedOn} <time dateTime={verified}>{formatDate(verified, lang)}</time>
         </p>

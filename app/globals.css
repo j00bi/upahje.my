@@ -886,95 +886,33 @@ summary,
 .article-body pre { overflow-x: auto; }
 .article-body table { min-width: 0; }
 
-/* Hero: kicker, tightened measure, a real primary action and a proof strip.
-   The old hero was a headline with two text links; the CTA label ran to 46
-   characters and read as a banner rather than a button. */
-.hero {
-  padding-top: clamp(2rem, 5vw, 3.25rem);
-  padding-bottom: clamp(1.75rem, 4vw, 2.75rem);
+/* Front page: a strapline, then the stories. The front is editorial, so there
+   is no CTA block — the lead headline is the action. */
+.front-matter {
+  padding-top: clamp(1.5rem, 3.5vw, 2.25rem);
+  padding-bottom: clamp(1rem, 2vw, 1.5rem);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  border-bottom: 1px solid var(--ui-rule);
 }
-.hero-kicker {
+.front-strap {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--ui-ink);
+  max-width: 46ch;
+}
+.front-kicker {
+  margin: 0;
   font-size: 0.6875rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--ui-muted);
-  margin: 0 0 1rem;
 }
-.hero-h1 {
-  color: var(--ui-ink);
-  max-width: 22ch;
-  line-height: 1.04;
-  letter-spacing: -0.02em;
-  text-wrap: balance;
-}
-.hero-sub {
-  margin-top: 1.15rem;
-  max-width: 54ch;
-  font-size: 1.0625rem;
-  line-height: 1.6;
-  color: var(--ui-body);
-}
-.hero-cta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.75rem;
-  margin-top: 1.75rem;
-}
-.hero-proof {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.4rem 1.4rem;
-  margin: 1.5rem 0 0;
-  padding: 0;
-  list-style: none;
-  font-size: 0.8125rem;
-  color: var(--ui-muted);
-}
-.hero-proof li {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-.hero-proof li::before {
-  content: "";
-  width: 4px;
-  height: 4px;
-  border-radius: 50%;
-  background: var(--ui-accent);
-}
-.cta {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  min-height: 46px;
-  padding: 0 1.15rem;
-  border-radius: 10px;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 140ms ease, border-color 140ms ease, color 140ms ease;
-}
-.cta-primary {
-  background: var(--ui-forest);
-  color: var(--ui-paper);
-}
-.cta-primary:hover {
-  background: var(--ui-ink);
-}
-.cta-ghost {
-  background: transparent;
-  border: 1px solid var(--ui-rule);
-  color: var(--ui-ink);
-}
-.cta-ghost:hover {
-  border-color: var(--ui-ink);
-}
-.cta:focus-visible {
-  outline: 2px solid var(--ui-ink);
-  outline-offset: 2px;
-}
-@media (max-width: 480px) {
-  .cta { width: 100%; }
+@media (max-width: 640px) {
+  .front-matter { flex-direction: column; align-items: flex-start; }
 }

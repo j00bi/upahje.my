@@ -16,7 +16,7 @@ type Article = {
  * One front page story. The headline is the only serif display on the site so
  * far, which is what separates a front page from a list of cards.
  */
-export default function FeaturedStory({ article, copy }: { article: Article; copy: any }) {
+export default function FeaturedStory({ article, copy, label }: { article: Article; copy: any; label?: string }) {
   const href = `/${article.lang}/articles/${article.slug}`
   return (
     <section aria-labelledby="featured-story" style={{ borderTop: '1px solid var(--ui-rule)', paddingTop: 'var(--space-6)' }}>
@@ -24,7 +24,7 @@ export default function FeaturedStory({ article, copy }: { article: Article; cop
       <div className="mt-4 grid gap-8 lg:grid-cols-[minmax(0,1.7fr)_minmax(0,1fr)] lg:items-end">
         <div>
           <p className="type-small" style={{ color: 'var(--ui-accent)', fontWeight: 600 }}>
-            {categoryLabel(article.category, article.lang)}
+            {label || categoryLabel(article.category, article.lang)}
           </p>
           <h2 id="featured-story" className="type-serif mt-3" style={{ fontSize: 'var(--text-display)', lineHeight: 'var(--leading-display)', color: 'var(--ui-ink)' }}>
             <Link href={href} className="ui-link" style={{ color: 'var(--ui-ink)' }}>{article.title}</Link>
