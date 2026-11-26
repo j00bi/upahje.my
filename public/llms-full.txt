@@ -222,7 +222,7 @@ The ringgit figure that matters for a Malaysian business is not the hourly rate,
 - Vast.ai, GPU pricing (H100 SXM from USD 1.73/hr, median USD 2.40/hr; H100 PCIe from USD 2.31/hr; billed to the second, no minimum hours) — https://vast.ai/pricing (checked 2026-11-25)
 - Frankfurter, USD to MYR reference rate 4.1155 for 24 November 2026 — https://api.frankfurter.dev/v1/latest?base=USD&symbols=MYR (checked 2026-11-25)
 
-## HRD Corp levy: 1%, 0.5%, or nothing at all
+## HRD Corp levy: 1%, 0.5%, or none
 
 URL: https://upahje.my/en/articles/hrd-corp-levy-malaysia
 Checked: 2026-11-25
@@ -352,7 +352,7 @@ Pay for the e-invoice route, not the till. A POS that takes money but leaves the
 - Qashier Malaysia, pricing (RM8 a day platform, RM1 to RM3 a day per terminal, RM4,580 for 24 months) — https://qashier.com/my/pricing/ (checked 2026-11-25)
 - Bukku, pricing (Launch at RM0 a month, free forever, supports LHDN e-Invoice) — https://www.bukku.my/pricing (checked 2026-11-25)
 
-## SOCSO stops at RM6,000, and nobody tells the new hire
+## SOCSO stops at RM6,000
 
 URL: https://upahje.my/en/articles/socso-employer-rate-malaysia
 Checked: 2026-11-25
@@ -1345,7 +1345,7 @@ The allowance is per business phone number and resets each calendar month; unuse
 
 Utility, authentication and service are RM0.0564, and the first 1,000 service messages per number per month are free.
 
-## How does Meta charge for WhatsApp messages?
+## Meta bills per delivered message, by category
 
 Per message, per category, and only when the message is delivered. The unit is not a conversation and not a session.
 
@@ -1357,7 +1357,7 @@ Three rules from Meta's pricing page set the bill, all effective from 1 October 
 
 The five categories are marketing, utility, authentication, service, and Meta Business Agent, which Meta introduced on 1 July 2026 and prices in tokens rather than per message.
 
-## What does one message cost in Malaysia?
+## A marketing template costs RM0.3467
 
 These are the published MYR prices, not conversions. Meta publishes a separate card for each currency, and the Malaysian buyer should quote the MYR one.
 
@@ -1371,7 +1371,7 @@ These are the published MYR prices, not conversions. Meta publishes a separate c
 
 The MYR and USD cards move together at about 4.03, but the MYR figure is the one Meta publishes for Malaysia, so no exchange rate is applied in this article. Both cards carry the same effective date: 1 October 2026.
 
-## Why does the 24-hour window change the bill?
+## The 24-hour window decides which rate applies
 
 ![A left-to-right diagram: a customer message opens a 24-hour window; a reply inside it is a service message at RM0.0564 with the first 1,000 per number per month free; a message after the window closes must be a template, at RM0.3467 for marketing or RM0.0564 for utility and authentication](/figures/whatsapp-chatbot-costs-malaysia.svg)
 *The clock, not the message text, decides which rate applies.*
@@ -1390,7 +1390,7 @@ There is no contradiction once the allowance and the clock are applied. A reply 
 
 One genuine difference remains. Meta's documentation says a free entry point window "may remain open for up to 7 days", while the marketing site says "for the following 3 days (72 hours), all of your messages are not charged". Plan on 3 days, because that is the shorter promise and the only one a business can rely on without overestimating free volume.
 
-## What does a Malaysian vendor charge?
+## A local vendor bills a platform fee on top of Meta
 
 Three publishers, three shapes. These are build-and-subscription prices, not message rates, and Meta bills its messages separately.
 
@@ -1419,7 +1419,7 @@ Before talking to a vendor, price your own last month from the published card wi
 
 There is no honest free sandbox path documented in the pages read for this article, so this block stops at pricing your own data rather than inventing a test setup.
 
-## What could we not verify?
+## What we could not verify
 
 The dedicated international-authentication page was not opened, so that row rests on the Malaysia card alone. Utility and authentication volume tiers exist, but the tier files were not parsed, so any figure above list price is absent. Meta Business Agent is priced per million tokens with no Malaysia-specific per-message figure published, so no per-interaction cost is claimed. Only one of the three Malaysian vendors publishes a from-price with no setup fee; the other two quote on scope, so no market-wide build fee can be stated.
 
@@ -2740,7 +2740,7 @@ Soalan 12 lawan 13 ialah separuh yang mudah. Separuh yang menelan wang ialah jad
 - KWSP, Jadual Ketiga Akta Kumpulan Wang Simpanan Pekerja 1991 (kadar caruman berkuat kuasa Oktober 2025) — https://www.kwsp.gov.my/documents/d/guest/third_schedule_from_-1-october-2025 (checked 2026-11-25)
 - KWSP, caruman untuk pekerja bukan warganegara (2% majikan, 2% pekerja, mulai gaji Oktober 2025) — https://www.kwsp.gov.my/en/employer/responsibilities/non-malaysian-citizen-employees (checked 2026-11-25)
 
-## SOCSO berhenti pada RM6,000, dan tiada siapa beritahu
+## SOCSO berhenti pada RM6,000
 
 URL: https://upahje.my/ms/articles/kadar-socso-majikan-malaysia
 Checked: 2026-11-25
@@ -3029,7 +3029,7 @@ Urutan itu mengambil satu malam dan menghasilkan angka, bukan pendapat, dan itul
 - Ubuntu Server, keperluan sistem dan panduan pemasangan untuk mesin simpanan — https://ubuntu.com/server/docs/installation (checked 2026-11-25)
 - Tailscale, harga (pelan peribadi, akses berasaskan peranti tanpa membuka port masuk) — https://tailscale.com/pricing (checked 2026-11-25)
 
-## Levi HRD Corp: 1%, 0.5%, atau tiada sama sekali
+## Levi HRD Corp: 1%, 0.5%, atau tiada
 
 URL: https://upahje.my/ms/articles/levi-hrd-corp-malaysia
 Checked: 2026-11-25
@@ -3838,7 +3838,7 @@ Elaun itu dikira bagi setiap nombor perniagaan dan ditetapkan semula setiap bula
 
 Utiliti, pengesahan dan servis ialah RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan adalah percuma.
 
-## Bagaimana Meta mengenakan caj untuk mesej WhatsApp?
+## Meta membil setiap mesej yang dihantar, mengikut kategori
 
 Setiap mesej, mengikut kategori, dan hanya apabila mesej itu sampai kepada penerima. Unitnya bukan perbualan dan bukan sesi.
 
@@ -3850,7 +3850,7 @@ Tiga peraturan daripada halaman harga Meta menetapkan bil, semuanya berkuat kuas
 
 Lima kategori itu ialah pemasaran, utiliti, pengesahan, servis dan Meta Business Agent, yang diperkenalkan Meta pada 1 Julai 2026 dan dinilai dalam token dan bukan setiap mesej.
 
-## Berapa kos satu mesej di Malaysia?
+## Templat pemasaran berharga RM0.3467
 
 Ini harga MYR yang diterbitkan, bukan penukaran. Meta menerbitkan kad berasingan bagi setiap mata wang, dan pembeli Malaysia patut memetik kad MYR.
 
@@ -3864,7 +3864,7 @@ Ini harga MYR yang diterbitkan, bukan penukaran. Meta menerbitkan kad berasingan
 
 Kad MYR dan USD bergerak bersama pada kira-kira 4.03, tetapi angka MYR ialah yang diterbitkan Meta untuk Malaysia, jadi tiada kadar tukaran dikenakan dalam artikel ini. Kedua-dua kad membawa tarikh kuat kuasa yang sama: 1 Oktober 2026.
 
-## Mengapa tetingkap 24 jam mengubah bil?
+## Tetingkap 24 jam menentukan kadar mana terpakai
 
 Kerana balasan bebas hanya dibenarkan di dalamnya, dan di luarnya anda mesti menggunakan templat berbayar.
 
@@ -3883,7 +3883,7 @@ Tiada percanggahan apabila elaun dan jam dikenakan. Balasan kepada pelanggan ber
 
 Satu perbezaan sebenar masih ada. Dokumentasi Meta menyatakan tetingkap titik masuk percuma "may remain open for up to 7 days", manakala laman pemasaran menyatakan "for the following 3 days (72 hours), all of your messages are not charged". Rancang untuk 3 hari, kerana itulah janji yang lebih pendek dan satu-satunya yang boleh dipegang tanpa melebihkan jumlah percuma.
 
-## Berapa yang dikenakan vendor Malaysia?
+## Vendor tempatan mengenakan fi platform di atas caj Meta
 
 Tiga penerbit, tiga bentuk. Ini harga bina-dan-langganan, bukan kadar mesej, dan Meta membil mesejnya secara berasingan.
 
@@ -3912,7 +3912,7 @@ Versi paling kecil yang boleh dijalankan bukan bot langsung: ia skrip yang menil
 
 Tiada laluan sandbox percuma yang didokumenkan dalam halaman yang dibaca untuk artikel ini, jadi blok ini berhenti pada menilai data anda sendiri daripada mencipta persediaan ujian.
 
-## Apa yang tidak dapat kami sahkan?
+## Apa yang tidak dapat kami sahkan
 
 Halaman pengesahan antarabangsa yang khusus tidak dibuka, jadi baris itu bergantung pada kad Malaysia sahaja. Tier volum utiliti dan pengesahan wujud, tetapi fail tier tidak dihuraikan, jadi apa-apa angka melebihi harga senarai tiada. Meta Business Agent dinilai setiap juta token tanpa angka setiap interaksi untuk Malaysia yang diterbitkan, jadi tiada kos setiap interaksi didakwa. Hanya satu daripada tiga vendor Malaysia menerbitkan harga dari-dengan-tiada-yuran-persediaan; dua lagi menyebut harga mengikut skop, jadi tiada yuran binaan pasaran boleh dinyatakan.
 

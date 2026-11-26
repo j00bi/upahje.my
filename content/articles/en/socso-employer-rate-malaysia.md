@@ -1,5 +1,5 @@
 ---
-title: "SOCSO stops at RM6,000, and nobody tells the new hire"
+title: "SOCSO stops at RM6,000"
 description: "Employer SOCSO is 1.75% and employee 0.5% up to a RM6,000 ceiling, with EIS 0.2% each side. Above the cap a raise costs the employer nothing extra."
 slug: socso-employer-rate-malaysia
 translationKey: socso-employer-rate-malaysia
@@ -25,7 +25,7 @@ sources:
     checked: 2026-11-25
 ---
 
-# SOCSO stops at RM6,000, and nobody tells the new hire
+# SOCSO stops at RM6,000
 
 An employer pays 1.75% of monthly wages into SOCSO and deducts 0.5% from the employee, up to a wage ceiling of RM6,000 that took effect on 1 October 2024. EIS is 0.2% each side, on the same ceiling. Above RM6,000 every one of those lines is flat, so a raise costs the employer nothing extra in SOCSO or EIS.
 

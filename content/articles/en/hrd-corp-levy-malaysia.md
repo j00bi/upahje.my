@@ -1,5 +1,5 @@
 ---
-title: "HRD Corp levy: 1%, 0.5%, or nothing at all"
+title: "HRD Corp levy: 1%, 0.5%, or none"
 description: "The levy starts at five Malaysian employees and is compulsory at ten, at 0.5% or 1% of monthly wages. A first hire carries none of it."
 slug: hrd-corp-levy-malaysia
 translationKey: hrd-corp-levy-malaysia
@@ -25,7 +25,7 @@ sources:
     checked: 2026-11-24
 ---
 
-# HRD Corp levy: 1%, 0.5%, or nothing at all
+# HRD Corp levy: 1%, 0.5%, or none
 
 A business with ten or more Malaysian employees pays 1% of monthly wages to HRD Corp. At five to nine employees the same levy is optional, at 0.5%. Below five there is no levy, a position the bands imply rather than print, and a first hire therefore carries nothing.
 

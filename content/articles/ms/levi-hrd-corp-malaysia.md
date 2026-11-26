@@ -1,5 +1,5 @@
 ---
-title: "Levi HRD Corp: 1%, 0.5%, atau tiada sama sekali"
+title: "Levi HRD Corp: 1%, 0.5%, atau tiada"
 description: "Levi bermula pada lima pekerja Malaysia dan wajib pada sepuluh, pada 0.5% atau 1% gaji bulanan. Pekerja pertama tidak menanggungnya."
 slug: levi-hrd-corp-malaysia
 translationKey: hrd-corp-levy-malaysia
@@ -25,7 +25,7 @@ sources:
     checked: 2026-11-25
 ---
 
-# Levi HRD Corp: 1%, 0.5%, atau tiada sama sekali
+# Levi HRD Corp: 1%, 0.5%, atau tiada
 
 Perniagaan dengan sepuluh pekerja Malaysia atau lebih membayar 1% daripada gaji bulanan kepada HRD Corp. Pada lima hingga sembilan pekerja, levi yang sama adalah pilihan pada 0.5%. Di bawah lima tiada levi, iaitu kedudukan yang disirat oleh julat itu dan bukan dicetak, jadi pekerja pertama tidak menanggung apa-apa.
 

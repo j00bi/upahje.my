@@ -54,7 +54,7 @@ function walk(dir) {
 }
 
 const files = walk(ROOT)
-const hits = { p0: [], p1: [], p2: [], openings: new Map(), closings: new Map() }
+const hits = { p0: [], p1: [], p2: [], questionRuns: [], openings: new Map(), closings: new Map() }
 
 for (const file of files) {
   const raw = readFileSync(file, 'utf8')
@@ -80,6 +80,22 @@ for (const file of files) {
     hits.openings.set(key, (hits.openings.get(key) || 0) + 1)
   }
 
+  // Runs of question headings: two in a row is an FAQ that survived the rename.
+  const headings = (body.match(/^## .+$/gm) || []).map((h) => h.slice(3).trim())
+  let run = 0
+  for (const h of headings) {
+    if (h.endsWith('?')) {
+      run += 1
+      if (run === 2) hits.questionRuns.push({ file: `${lang}/${slug}`, count: 0, first: h })
+      else if (run > 2 && hits.questionRuns.length) {
+        const last = hits.questionRuns[hits.questionRuns.length - 1]
+        if (last.file === `${lang}/${slug}`) last.count = run
+      }
+    } else {
+      run = 0
+    }
+  }
+
   // Headings used as section openers, per language.
   for (const h of body.match(/^## .+$/gm) || []) {
     const key = `${lang}: ${h.slice(3).trim()}`
@@ -95,6 +111,10 @@ for (const [level, label] of [['p0', 'P0 apparatus in prose'], ['p1', 'P1 templa
   console.log(`${label}: ${list.length}`)
   for (const h of list) console.log(`  ${h.file}  "${h.phrase}"`)
 }
+
+const qruns = hits.questionRuns.sort((a, b) => b.count - a.count)
+console.log(`\nconsecutive question headings (an FAQ by another name): ${qruns.length} files`)
+for (const r of qruns.slice(0, 10)) console.log(`  ${String(r.count).padStart(2)}x  ${r.file}  "${r.first}"`)
 
 const dupHeadings = repeat(hits.closings, 4)
 console.log(`\nsection headings used 4+ times: ${dupHeadings.length}`)

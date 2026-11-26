@@ -62,7 +62,7 @@ Elaun itu dikira bagi setiap nombor perniagaan dan ditetapkan semula setiap bula
 
 Utiliti, pengesahan dan servis ialah RM0.0564, dan 1,000 mesej servis pertama bagi setiap nombor sebulan adalah percuma.
 
-## Bagaimana Meta mengenakan caj untuk mesej WhatsApp?
+## Meta membil setiap mesej yang dihantar, mengikut kategori
 
 Setiap mesej, mengikut kategori, dan hanya apabila mesej itu sampai kepada penerima. Unitnya bukan perbualan dan bukan sesi.
 
@@ -74,7 +74,7 @@ Tiga peraturan daripada halaman harga Meta menetapkan bil, semuanya berkuat kuas
 
 Lima kategori itu ialah pemasaran, utiliti, pengesahan, servis dan Meta Business Agent, yang diperkenalkan Meta pada 1 Julai 2026 dan dinilai dalam token dan bukan setiap mesej.
 
-## Berapa kos satu mesej di Malaysia?
+## Templat pemasaran berharga RM0.3467
 
 Ini harga MYR yang diterbitkan, bukan penukaran. Meta menerbitkan kad berasingan bagi setiap mata wang, dan pembeli Malaysia patut memetik kad MYR.
 
@@ -88,7 +88,7 @@ Ini harga MYR yang diterbitkan, bukan penukaran. Meta menerbitkan kad berasingan
 
 Kad MYR dan USD bergerak bersama pada kira-kira 4.03, tetapi angka MYR ialah yang diterbitkan Meta untuk Malaysia, jadi tiada kadar tukaran dikenakan dalam artikel ini. Kedua-dua kad membawa tarikh kuat kuasa yang sama: 1 Oktober 2026.
 
-## Mengapa tetingkap 24 jam mengubah bil?
+## Tetingkap 24 jam menentukan kadar mana terpakai
 
 Kerana balasan bebas hanya dibenarkan di dalamnya, dan di luarnya anda mesti menggunakan templat berbayar.
 
@@ -107,7 +107,7 @@ Tiada percanggahan apabila elaun dan jam dikenakan. Balasan kepada pelanggan ber
 
 Satu perbezaan sebenar masih ada. Dokumentasi Meta menyatakan tetingkap titik masuk percuma "may remain open for up to 7 days", manakala laman pemasaran menyatakan "for the following 3 days (72 hours), all of your messages are not charged". Rancang untuk 3 hari, kerana itulah janji yang lebih pendek dan satu-satunya yang boleh dipegang tanpa melebihkan jumlah percuma.
 
-## Berapa yang dikenakan vendor Malaysia?
+## Vendor tempatan mengenakan fi platform di atas caj Meta
 
 Tiga penerbit, tiga bentuk. Ini harga bina-dan-langganan, bukan kadar mesej, dan Meta membil mesejnya secara berasingan.
 
@@ -136,7 +136,7 @@ Versi paling kecil yang boleh dijalankan bukan bot langsung: ia skrip yang menil
 
 Tiada laluan sandbox percuma yang didokumenkan dalam halaman yang dibaca untuk artikel ini, jadi blok ini berhenti pada menilai data anda sendiri daripada mencipta persediaan ujian.
 
-## Apa yang tidak dapat kami sahkan?
+## Apa yang tidak dapat kami sahkan
 
 Halaman pengesahan antarabangsa yang khusus tidak dibuka, jadi baris itu bergantung pada kad Malaysia sahaja. Tier volum utiliti dan pengesahan wujud, tetapi fail tier tidak dihuraikan, jadi apa-apa angka melebihi harga senarai tiada. Meta Business Agent dinilai setiap juta token tanpa angka setiap interaksi untuk Malaysia yang diterbitkan, jadi tiada kos setiap interaksi didakwa. Hanya satu daripada tiga vendor Malaysia menerbitkan harga dari-dengan-tiada-yuran-persediaan; dua lagi menyebut harga mengikut skop, jadi tiada yuran binaan pasaran boleh dinyatakan.
 

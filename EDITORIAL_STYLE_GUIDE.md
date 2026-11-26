@@ -25,6 +25,8 @@ Banned outright, in both languages:
 
 ## Structure follows the subject
 
+**Headings state the claim, not the question.** A reader skimming the H2s should be able to read the article's argument. `What does one message cost in Malaysia?` becomes `A marketing template costs RM0.3467`. A single question heading is allowed when it is genuinely the reader's own words and one section answers it; **two question headings in a row means an FAQ survived a rename**, and that is the shape the second audit caught. `node scripts/editorial-check.mjs` reports runs of consecutive question headings per file, and that count is the structural target.
+
 Do not run every article through problem → why it matters → considerations → five actions → try it → FAQ. Pick a shape and let it breathe:
 
 | Format | Shape |

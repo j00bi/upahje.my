@@ -62,7 +62,7 @@ The allowance is per business phone number and resets each calendar month; unuse
 
 Utility, authentication and service are RM0.0564, and the first 1,000 service messages per number per month are free.
 
-## How does Meta charge for WhatsApp messages?
+## Meta bills per delivered message, by category
 
 Per message, per category, and only when the message is delivered. The unit is not a conversation and not a session.
 
@@ -74,7 +74,7 @@ Three rules from Meta's pricing page set the bill, all effective from 1 October 
 
 The five categories are marketing, utility, authentication, service, and Meta Business Agent, which Meta introduced on 1 July 2026 and prices in tokens rather than per message.
 
-## What does one message cost in Malaysia?
+## A marketing template costs RM0.3467
 
 These are the published MYR prices, not conversions. Meta publishes a separate card for each currency, and the Malaysian buyer should quote the MYR one.
 
@@ -88,7 +88,7 @@ These are the published MYR prices, not conversions. Meta publishes a separate c
 
 The MYR and USD cards move together at about 4.03, but the MYR figure is the one Meta publishes for Malaysia, so no exchange rate is applied in this article. Both cards carry the same effective date: 1 October 2026.
 
-## Why does the 24-hour window change the bill?
+## The 24-hour window decides which rate applies
 
 ![A left-to-right diagram: a customer message opens a 24-hour window; a reply inside it is a service message at RM0.0564 with the first 1,000 per number per month free; a message after the window closes must be a template, at RM0.3467 for marketing or RM0.0564 for utility and authentication](/figures/whatsapp-chatbot-costs-malaysia.svg)
 *The clock, not the message text, decides which rate applies.*
@@ -107,7 +107,7 @@ There is no contradiction once the allowance and the clock are applied. A reply 
 
 One genuine difference remains. Meta's documentation says a free entry point window "may remain open for up to 7 days", while the marketing site says "for the following 3 days (72 hours), all of your messages are not charged". Plan on 3 days, because that is the shorter promise and the only one a business can rely on without overestimating free volume.
 
-## What does a Malaysian vendor charge?
+## A local vendor bills a platform fee on top of Meta
 
 Three publishers, three shapes. These are build-and-subscription prices, not message rates, and Meta bills its messages separately.
 
@@ -136,7 +136,7 @@ Before talking to a vendor, price your own last month from the published card wi
 
 There is no honest free sandbox path documented in the pages read for this article, so this block stops at pricing your own data rather than inventing a test setup.
 
-## What could we not verify?
+## What we could not verify
 
 The dedicated international-authentication page was not opened, so that row rests on the Malaysia card alone. Utility and authentication volume tiers exist, but the tier files were not parsed, so any figure above list price is absent. Meta Business Agent is priced per million tokens with no Malaysia-specific per-message figure published, so no per-interaction cost is claimed. Only one of the three Malaysian vendors publishes a from-price with no setup fee; the other two quote on scope, so no market-wide build fee can be stated.
 
