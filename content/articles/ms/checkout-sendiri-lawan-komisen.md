@@ -43,7 +43,7 @@ Gerbang pembayaran menerbitkan harga mereka. Kami membaca halaman harga Billplz 
 | Kad, bukan MYR | 3.8% | 3.5% | T+2 hari bekerja |
 | Auto-deduct, MYR | 2.3% + RM1.25 | 2.0% + RM0.75 | T+2 hari bekerja |
 
-Platform penghantaran tidak menerbitkan komisen pedagang. Grab dan foodpanda tiada kad kadar awam untuk pedagang, sebab itu angka dalam artikel ini datang daripada pengawal selia dan bukan vendor: keputusan Suruhanjaya Persaingan Malaysia berhubung foodpanda, bertarikh 11 September 2023, merekodkan jalur komisen dalam Jadual 3 sebanyak **1–5%, 10–25%, 15–20% dan 15–25%** bergantung pada perkhidmatan.
+Platform penghantaran tidak menerbitkan komisen pedagang. Grab dan foodpanda tiada kad kadar awam untuk pedagang, sebab itu angka dalam artikel ini datang daripada pengawal selia dan bukan vendor: keputusan Suruhanjaya Persaingan Malaysia berhubung foodpanda, bertarikh 11 September 2023, merekodkan jalur komisen dalam Jadual 3 sebanyak **1–5%, 10–25%, 15–20% dan 15–25%** bergantung pada perkhidmatan. Itu lima kontrak peniaga francais tanpa nama (n=5), bukan kad kadar semasa platform.
 
 Itu julat yang direkodkan tiga tahun lalu, bukan kadar yang disebut hari ini. Sebarang angka khusus untuk kedai anda mesti datang daripada kontrak yang diletakkan di depan anda — dan itu sendiri memberitahu sesuatu tentang dua pasaran ini.
 
@@ -104,6 +104,16 @@ Pesanan pulang modal sebulan, tanpa penghantaran:
 > kadar komisen × bil purata × pesanan = RM1.25 × pesanan + kos mendapatkan pelanggan itu sendiri
 
 Sebelah kiri ialah apa yang platform ambil. Sebelah kanan ialah kos checkout anda **ditambah pemasaran yang kini anda mesti lakukan**. Istilah pemasaran itulah yang selalu ditinggalkan, dan sebabnya kedai tanpa khalayak patut kekal di platform sehingga ia ada khalayak.
+
+Masukkan angka pada empat perkara itu dan bilangan pulang modal muncul. Jadual di bawah menggunakan kos bulanan RM150 dan bakul purata RM30 sebagai andaian yang dinyatakan; gantikan dengan angka anda sendiri dan baca menurun pada lajur, kerana fi FPX tetap dan kadar kad berperatusan menyimpang apabila bakul berubah.
+
+| Jalur komisen | FPX pada RM0.75, pesanan sebulan | FPX pada RM1.25, pesanan sebulan | Kad pada 1.8%, pesanan sebulan |
+| --- | --- | --- | --- |
+| 5% | 200 | 600 | 157 |
+| 15% | 40 | 47 | 38 |
+| 25% | 23 | 24 | 22 |
+
+Dua perkara menyusul daripada lajur itu. Pertama, kadar komisen menentukan sama ada memiliki kedai ialah baki kecil atau perniagaan yang berbeza: pada hujung atas jalur terluas pengawal selia ia mengambil kira-kira 23 pesanan sebulan, dan pada hujung bawah jalur tersempit ia mengambil 200 pada pelan FPX termurah. Kedua, pelan Standard RM999 membayar dirinya pada kira-kira 2,000 pesanan FPX setahun, tempat RM0.50 yang dijimatkan setiap transaksi menampung fi tahunan pada 1,998.
 
 ## Apa yang kami akan beritahu kedai dengan tiga hidangan
 
