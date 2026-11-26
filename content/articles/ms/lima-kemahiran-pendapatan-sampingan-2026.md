@@ -61,7 +61,7 @@ Asas itu lebih sempit daripada bunyinya, dan jurangnya penting. Pasaran global t
 
 Tiga pengecualian, semuanya sengaja. Senarai yang mengiklankan RM0.00 atau RM1.00 ialah placeholder dan digugurkan. Senarai yang berlokasi di luar Malaysia digugurkan. Jawatan komisen sahaja tanpa kadar asas yang dinyatakan digugurkan, kerana "gaji campur komisen" bukan angka yang boleh dirancang oleh pembaca.
 
-## Lima kemahiran apa yang melepasi syarat itu?
+## Lima kemahiran melepasi syarat dua senarai
 
 Sesuatu kemahiran layak hanya jika sekurang-kurangnya dua senarai dengan bajet ringgit sebenar disiarkan untuknya. Lima layak.
 
@@ -78,7 +78,7 @@ Kandungan media sosial tidak layak. Ia hanya ada satu senarai bertarikh serta sa
 ![Kadar yang diterbitkan setiap projek bagi lima kemahiran: suntingan video RM150 hingga RM2,500, reka bentuk grafik RM300 hingga RM1,100, kemasukan data RM50 hingga RM70, panggilan jualan RM700 hingga RM1,000, ujian aplikasi RM330 hingga RM600](/figures/side-income-rates-ms.svg)
 *Kadar yang diterbitkan setiap projek: kemasukan data sehingga RM70, suntingan video hingga RM2,500.*
 
-## Berapa bayaran suntingan video?
+## Suntingan video: RM150 hingga RM2,500 setiap projek
 
 Tiga senarai, RM150 hingga RM2,500 setiap projek, dan julatnya tentang skop bukan kemahiran: satu kelompok percubaan bentuk pendek, satu filem pendek penuh, dan satu peranan merakam serta menyunting.
 
@@ -86,7 +86,7 @@ Yang paling rendah RM150 bagi kelompok percubaan TikTok atau Reels bentuk pendek
 
 Masa untuk layak: anggaran kami dua hingga empat bulan latihan yang terancang pada satu tool suntingan, lebih lama jika anda tidak pernah menyunting mengikut brief. Senarai itu meminta sampel, bukan sijil, jadi portfolio tiga karya siap lebih penting daripada kursus.
 
-## Berapa bayaran reka bentuk grafik?
+## Reka bentuk grafik: RM300 dan RM1,100 setiap projek
 
 Dua senarai, RM300 dan RM1,100 setiap projek, dan bezanya jumlah kerja: satu set bahan jualan runcit berbanding satu kelompok kandungan bulanan.
 
@@ -94,7 +94,7 @@ RM300 meliputi booth, kad meja, sepanduk dan ilustrasi untuk promosi runcit. RM1
 
 Masa untuk layak: anggaran kami satu hingga tiga bulan jika anda sudah melukis atau menggunakan perisian reka bentuk, dan halangannya ialah hasil tahap Canva berbanding fail sedia cetak. Kerja runcit meminta yang kedua.
 
-## Berapa bayaran kemasukan data?
+## Kemasukan data: RM50 dan RM70 setiap projek
 
 Dua senarai, RM50 dan RM70 setiap projek, dan kedua-duanya tugasan kecil sekali sahaja, bukan pendapatan yang boleh dibina.
 
@@ -102,7 +102,7 @@ RM50 ialah tugasan pengesahan mudah. RM70 ialah penyelaras tempatan bagi projek 
 
 Masa untuk layak: hari ini. Halangannya bukan kemahiran, tetapi kerja itu terputus-putus, bergaji rendah dan bersaing dengan sesiapa yang ada pelayar. Anggaplah ia langkah pertama ke senarai yang lebih baik, bukan pendapatan sampingan dengan sendirinya.
 
-## Berapa bayaran panggilan jualan?
+## Panggilan jualan: RM700 dan RM1,000, bajet diiklankan
 
 Dua senarai, RM700 dan RM1,000 setiap projek, kedua-duanya bajet yang diiklankan dan bukan yuran yang dipersetujui, dan kedua-duanya mungkin kerja sambilan.
 
@@ -110,7 +110,7 @@ RM700 ialah peranan pembangunan jualan jauh sambilan yang diiklankan tanpa penga
 
 Masa untuk layak: hari ini, dengan skrip dan suara yang jelas. Risikonya ialah struktur komisen menggantikan bajet selepas bulan pertama, dan sebab itulah dua baris itu ditandakan sebagai diiklankan dan bukan dipersetujui.
 
-## Berapa bayaran ujian aplikasi?
+## Ujian aplikasi: RM330 dan RM600, khusus Malaysia
 
 Dua senarai, RM330 dan RM600 setiap projek, dan kedua-duanya kerja khusus Malaysia: ujian bahasa dan lokasi yang tidak boleh dibuat oleh penguji global.
 
@@ -118,7 +118,7 @@ RM330 ialah kajian UX pada platform dagangan untuk penguji Malaysia sahaja. RM60
 
 Masa untuk layak: beberapa hari hingga beberapa minggu. Yang diminta oleh senarai itu ialah akses peranti dan bahasa, bukan kelayakan pengujian.
 
-## Apa yang tidak diberitahu oleh semua ini?
+## Angka ini bajet awam, bukan bayaran sebenar
 
 Ia memberitahu apa yang klien bajetkan secara awam di satu platform dalam satu suku, dan tiada apa tentang apa yang mereka bayar kepada orang yang benar-benar diupah, berapa jam kerja itu, atau berapa kerap sesuatu senarai menjadi kerja berterusan.
 

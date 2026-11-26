@@ -37,7 +37,7 @@ Pemboleh ubah persekitaran ialah bentuk paling mudah. Dalam harness ini, rahsia 
 
 Sama ada cara, kunci itu ialah fail atau persekitaran, bukan satu baris dalam perbualan. Perbezaan itulah keseluruhan artikel ini: model tidak perlu melihat kunci itu, dan harness yang meletakkannya dalam prompt akan membocorkannya pada setiap permintaan.
 
-## Apa yang disahkan oleh kunci itu?
+## Kunci mengesahkan akaun, bukan permintaan
 
 Akaun, bukan permintaan. Pembekal mencari kunci itu, menemui akaun pemiliknya, dan menggunakan kebenaran serta bil akaun itu untuk apa sahaja yang diminta oleh permintaan tersebut.
 
@@ -47,7 +47,7 @@ Tiga akibat mengikutinya, dan setiap satu mengubah cara anda mengendalikan kunci
 2. **Had perbelanjaan milik akaun.** Kunci yang bocor membelanjakan wang anda pada kadar pembekal sehingga anda perasan, bukan sehingga permintaan seterusnya tamat.
 3. **Kunci itu tidak menyatakan tool mana yang bertanya.** Pembekal mengenal akaun, bukan skrip. Jadi jejak audit bermula pada log anda sendiri, bukan papan pemuka pembekal.
 
-## Di mana kunci itu tidak boleh ada?
+## Empat tempat kunci tidak boleh muncul
 
 Empat tempat, dan ia meliputi hampir setiap kebocoran sebenar: mesej sembang, fail yang di-commit, tangkapan skrin atau log, dan kod di sebelah klien.
 
@@ -56,7 +56,7 @@ Empat tempat, dan ia meliputi hampir setiap kebocoran sebenar: mesej sembang, fa
 3. **Tangkapan skrin atau log.** Output nyahpepijat yang mencetak keseluruhan pengepala permintaan, atau tangkapan skrin skrin tetapan, membawa kunci itu tanpa sesiapa berniat. Penapisan log ialah tetapan yang wajar disemak sebelum anda berkongsi output dengan kontraktor.
 4. **Kod di sebelah klien.** Apa sahaja yang sampai ke pelayar bersifat awam. Kunci dalam JavaScript bahagian hadapan, aplikasi mudah alih, atau halaman statik boleh didapati oleh sesiapa yang membuka alat pembangun, tidak kira bagaimana ia disamarkan.
 
-## Apa yang perlu saya buat apabila kunci bocor?
+## Batalkan dahulu, kemudian putar, kemudian siasat
 
 Batalkan dahulu, kemudian putar, kemudian siasat, mengikut urutan itu. Membatalkan ialah satu-satunya langkah yang menghentikan perbelanjaan.
 

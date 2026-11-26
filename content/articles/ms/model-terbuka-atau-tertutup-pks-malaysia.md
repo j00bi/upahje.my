@@ -42,7 +42,7 @@ Menjalankan sendiri menyimpan data di Malaysia hanya apabila perkakasan itu bera
 
 API Mistral sendiri meletakkan harga Mistral Small 4 pada USD 0.15 setiap juta token input dan USD 0.60 setiap juta token output ([disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
-## Berapa kos setiap pilihan sebulan?
+## Bayar ikut panggilan boleh dikira; hosting bergantung sewa GPU
 
 Bahagian bayaran ikut panggilan boleh dikira tepat kerana pembekal menerbitkan kadarnya. Bahagian hosting sendiri bergantung pada sewa GPU, dan kami hanya dapat sahkan kadar seorang pembekal.
 
@@ -57,7 +57,7 @@ Bahagian bayaran ikut panggilan boleh dikira tepat kerana pembekal menerbitkan k
 
 Kadar token diambil daripada halaman harga OpenAI dan halaman model Mistral, kedua-duanya disemak pada 19 November 2026 ([harga OpenAI](https://developers.openai.com/api/docs/pricing), [Mistral Small 4](https://docs.mistral.ai/models/mistral-small-4-0-26-03)). Kadar GPU pula ialah harga senarai DigitalOcean bagi HGX B300, disemak pada hari yang sama ([harga GPU DigitalOcean](https://www.digitalocean.com/pricing/gpu-droplets)).
 
-## Pada jumlah penggunaan berapa hosting sendiri mula berbaloi?
+## Hosting sendiri berbaloi pada kira-kira 36 juta mesej sebulan
 
 Pada jumlah yang tiada perniagaan kecil capai: kira-kira 36 juta mesej sebulan, dengan kadar di atas.
 
@@ -72,7 +72,7 @@ Ada dua had yang perlu disebut jujur. Harga GPU itu ialah kadar senarai seorang 
 
 Perbandingan ini juga aritmetik, bukan keupayaan. Model yang anda jalankan sendiri tidak semestinya sekuat model tertutup yang anda bayar sebelum ini, dan jurang itulah sebab sebenar kebanyakan PKS kekal dengan bayaran ikut panggilan.
 
-## Apa yang diperlukan untuk menjalankannya sendiri?
+## Lima kerja berterusan untuk menjalankannya sendiri
 
 Lima kerja, dan tiada satu pun bersifat sekali siap.
 
@@ -84,7 +84,7 @@ Lima kerja, dan tiada satu pun bersifat sekali siap.
 
 Senarai ini huraian kami tentang kerja itu, bukan tinjauan gaji atau spesifikasi jawatan.
 
-## Apa yang patut PKS Malaysia buat suku ini?
+## Panggil model terbuka melalui API sebelum menjalankannya
 
 Cuba panggil model terbuka melalui API sebelum cuba menjalankannya. Mistral sendiri menyediakan model terbuka mereka melalui API pada USD 0.15 dan USD 0.60 setiap juta token, jadi anda dapat terma lesen dan tingkah laku model itu tanpa membeli GPU atau mengupah sesiapa. Soalan tentang hosting sendiri patut ditimbulkan apabila perbelanjaan token bulanan anda hampir menyamai kos bulanan GPU, atau apabila syarat lokasi data memaksa anda.
 

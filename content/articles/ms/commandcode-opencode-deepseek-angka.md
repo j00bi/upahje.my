@@ -43,7 +43,7 @@ sources:
 
 Ini tiga jenis benda berbeza, dan perkataannya penting sebelum harganya. `dsh` ialah DeepSeek Harness, harness baris arahan yang kami jalankan di sini. "Lengan" pula ialah salah satu produk yang dicuba pada tugasan yang sama, dan larian ini ada tiga: CommandCode, OpenCode dan DeepSeek melalui `dsh`. CommandCode ialah CLI pengekodan berbayar. OpenCode ialah CLI pengekodan percuma berlesen MIT dengan langganan pilihan. DeepSeek ialah vendor model dengan API. Apa yang menyusul ialah harga yang diterbitkan setiap satu, di mana angkanya sudah bergerak, dan apa yang ditunjukkan satu larian. Bahagian penanda aras, dan sebab perbandingan skor "CommandCode lawan OpenCode" tidak wujud, ialah nota pembangun yang berasingan.
 
-## Bagaimana rupa harganya seperti diterbitkan?
+## Harga tier bulanan, dengan yuran pemprosesan tanpa angka
 
 CommandCode menjual tier bulanan, dan setiap tier berbayar membawa yuran pemprosesan tanpa angka.
 
@@ -63,7 +63,7 @@ CommandCode menjual tier bulanan, dan setiap tier berbayar membawa yuran pempros
 
 Yuran pemprosesan ialah baris yang perlu ditanya, kerana "plus processing fee" dicetak pada lima tier dan yurannya tidak muncul di mana-mana pada halaman itu, sama ada sebagai angka atau pautan.
 
-## Di mana angkanya berubah?
+## Tawaran CommandCode sudah bergerak sejak Ogos
 
 Tawaran CommandCode sendiri sudah bergerak sejak Ogos, dan kedua-dua versi masih boleh dipetik.
 

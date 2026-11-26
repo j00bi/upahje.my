@@ -58,7 +58,7 @@ Nama lesen dan sekatan, dipetik daripada kad model atau fail lesennya, bukan dar
 
 MIT ialah yang longgar: penggunaan komersial, pengubahsuaian dan pengedaran, dengan notis dikekalkan. Tiga lagi ialah lesen tersuai yang termanya berada dalam fail LICENSE repositori. Fail itu tidak dibuka, jadi artikel ini menamakan lesen tersebut tanpa meringkaskan termanya. Itu had yang jujur: lesen tersuai ialah dokumen yang anda baca, bukan label yang anda anggap.
 
-## Apa yang diperlukan untuk menjalankannya?
+## Saiz ialah tembok pertama, dan kad tiada minimum yang boleh dinilai
 
 Saiz ialah tembok pertama, dan panduan perkakasan pada kad tidak memberikan minimum yang boleh dinilai.
 
@@ -66,7 +66,7 @@ Kad menyatakan kiraan parameter 95B aktif dalam 2.4T bagi Qwen, 1T bagi Mistral 
 
 Jadi artikel ini tidak boleh memberitahu berapa kos hosting sendiri. Nod GPU ialah bil sebenar, dan tiada kad di sini menyatakan konfigurasi minimum, jadi mana-mana angka akan direka. Yang boleh diberitahu ialah kos menyewa model yang sama.
 
-## Berapa kos menyewa sebagai ganti?
+## Setiap model dijual setiap token, dan harganya berbeza
 
 Setiap model ini juga dijual setiap token oleh penerbitnya, dan harganya cukup berbeza untuk diambil kira.
 
@@ -82,13 +82,13 @@ Hos kedua juga menjual DeepSeek V4.1 Flash: API Mistral menyenaraikannya pada 0.
 
 Aritmetik yang boleh dibuat pembaca dari sini, pada 1,000 token input dan 500 output setiap tugasan: deepseek-flash luar puncak berharga USD 0.00015 + USD 0.0003 = USD 0.00045 setiap tugasan; kimi-k3.1-pro berharga USD 0.002 + USD 0.005 = USD 0.007 setiap tugasan. Itu kira-kira 15 kali kos setiap tugasan, dan kedua-dua angka boleh disemak terhadap jadual di atas.
 
-## Model mana yang patut dimulakan oleh PKS Malaysia?
+## DeepSeek-V4.1-Flash-1017 yang termurah setiap token di bawah MIT
 
 Yang termurah setiap token dan lesennya jelas membenarkan penggunaan perniagaan. Pada baris yang dibaca di sini, itu DeepSeek-V4.1-Flash-1017 di bawah MIT, disewa pada 0.15 masuk / 0.60 keluar luar puncak, sebelum sesiapa membeli GPU.
 
 Itu cadangan bersyarat, bukan keputusan: ia menganggap tugasan anda boleh menerima API vendor China dan anda tidak memerlukan semakan lesen tersuai. Jika mana-mana syarat gagal, langkah seterusnya ialah baris Mistral atau Qwen, kedua-duanya lebih mahal setiap token dan membawa lesen yang perlu anda baca.
 
-## Apa yang tidak dapat kami sahkan?
+## Tiada kad menyatakan konfigurasi perkakasan minimum
 
 Tiada kad menyatakan konfigurasi perkakasan minimum, jadi tiada kos hosting sendiri didakwa. Angka perkakasan Kimi tidak dirakam, dan harga input puncak DeepSeek tidak diterbitkan pada halaman yang dibaca.
 

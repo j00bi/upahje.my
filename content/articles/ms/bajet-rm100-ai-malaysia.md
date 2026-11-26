@@ -60,7 +60,7 @@ Kadar tahunan Claude ialah USD 17 sebulan berbanding USD 20 bulanan, iaitu RM69.
 
 Claude menerbitkan USD 20 dan kami tukar pada 4.1145 kepada RM82.29. OpenAI menerbitkan MYR 99.90 terus untuk Malaysia.
 
-## Berapa kos token sebagai ganti?
+## Token dijual setiap juta, dengan angka input disyaratkan
 
 Anthropic menerbitkan Claude Haiku 5.5 pada USD 0.10 setiap juta token input dan USD 0.50 setiap juta token output, dengan angka input pada halaman itu disyaratkan untuk prompt hingga 100,000 token.
 
@@ -71,7 +71,7 @@ Jadi itulah meternya. Untuk membandingkannya dengan langganan, saya perlu meneta
 3. Satu tugasan: USD 0.00045, iaitu RM0.00185 pada 4.1145.
 4. RM100 ÷ RM0.00185 = kira-kira 54,000 tugasan.
 
-## Apa maksudnya pada tiga tahap penggunaan?
+## Kos meter kecil pada ketiga-tiga tahap penggunaan
 
 Kos meter yang sama kecil pada penggunaan ringan, tidak bermakna pada penggunaan harian, dan masih kecil pada penggunaan berat, kerana token teks murah dan tempat duduk dinilai untuk manusia dan bukan untuk jumlah.
 
@@ -86,13 +86,13 @@ Setiap baris ialah tugasan × RM0.00185. Bulan 30 hari diandaikan. Pada pengguna
 ![Enam penanda mendatar pada skala log dari RM0.10 hingga RM100: bil token RM0.28, RM1.67 dan RM11.11 berbanding langganan RM24, RM82.29 dan RM99.90](/figures/rm100-month-cost-ms.svg)
 *Sebulan token berharga bawah RM12 pada setiap tahap penggunaan, berbanding langganan berbayar termurah RM24.*
 
-## Bagaimana jika saya mahu kedua-duanya?
+## Paling murah: tempat duduk lebih kecil campur token
 
 Maka anda membeli dua perkara, dan versi paling murah ialah tempat duduk lebih kecil campur token, bukan tempat duduk terbesar.
 
 ChatGPT Go pada RM24 meninggalkan RM76 untuk token, kira-kira 41,000 tugasan pada saiz yang diandaikan. Claude Pro pada RM82.29 meninggalkan RM17.71, kira-kira 9,500 tugasan. Tier tinggi membundel kredit API, yang berguna jika anda mahu satu bil, dan mahal jika anda tidak menggunakan kredit itu: Claude Max berharga RM411.45 untuk kredit API bernilai USD 100 yang dibundel di dalamnya, iaitu RM411.45 juga pada kadar yang sama.
 
-## Di mana garisnya?
+## Garisnya terletak pada kira-kira 900 tugasan sebulan
 
 Di bawah kira-kira 900 tugasan sebulan, tempat duduk lebih berbaloi jika manusia yang bertanya, kerana RM24 hingga RM99.90 membeli antara muka, memori, muat naik fail dan sokongan pembekal, dan RM1.67 token tidak membeli satu pun daripada itu.
 
@@ -100,7 +100,7 @@ Di atas kira-kira 6,000 tugasan sebulan, atau bila-bila masa perisian dan bukan 
 
 Kedua-dua garis itu menganggap tugasan 2,000 token. Ia menandakan titik di mana aritmetik bertukar arah, dan tidak lebih daripada itu.
 
-## Apa yang tidak dapat kami sahkan?
+## Harga Gemini, Cursor, Windsurf dan DeepSeek tidak disahkan
 
 Harga pelan Gemini: halaman itu memulangkan badan kosong kepada pengambil kami. Pelan Cursor dan Windsurf: tidak dicapai. Harga pengguna DeepSeek: hanya halaman API-nya dibaca, dan harga token outputnya berada di bawah titik pemotongan halaman, jadi barisnya tiada dan bukan dianggarkan. Copilot Business dan Enterprise: tidak berharga pada halaman pelan yang dibaca, yang kini menjual Free, Pro, Pro+ dan Max.
 
