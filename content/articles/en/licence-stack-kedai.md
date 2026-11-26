@@ -20,6 +20,12 @@ sources:
   - title: "MBSA, composite licence page (application processing fee RM50 business and RM100 industrial, licence plate RM7, licence sticker RM5)"
     url: "https://www.mbsa.gov.my/ms-my/mbsa/perkhidmatan/pelesenan/Halaman/lesen_komposit.aspx"
     checked: 2026-11-26
+  - title: "SSM, Registration of Business table of fees (trade name RM60 a year, renewal RM60, personal name RM30, RM5 per branch)"
+    url: "https://www.ssm.com.my/Pages/Services/Registration-of-Business-(ROB)/table-of-fees/Table-of-Fees.aspx"
+    checked: 2026-11-26
+  - title: "SSM guideline for incorporation of a local company (incorporation fee RM1,000; undated on its face, read 26 November 2026)"
+    url: "https://www.ssm.com.my/Pages/Legal_Framework/GUIDELINES/4.-Guidelines-For-Incorporation-Of-A-Local-Company.pdf"
+    checked: 2026-11-26
   - title: "MBPJ, composite premises and advertising licence guide (signboard fees RM100 and RM150 a year, RM10 and RM15 for each extra square metre, RM200 logo-type, RM25 administration)"
     url: "https://www.mbpj.gov.my/sites/default/files/panduan_permohonan_lesen_komposit_premis_dan_iklan_okt2024.pdf"
     checked: 2026-11-26
@@ -46,21 +52,26 @@ MBPJ prints advertising fees. A non-illuminated signboard up to 8 m² is RM100.0
 | MBPJ | Signboard, illuminated, up to 8 m² | RM150.00 a year | not the premises licence |
 | MBPJ | Each extra m², illuminated | RM15.00 a year | applies above 8 m² |
 | MBPJ | Logo-type advertisement | RM200.00 | annual, per the same table |
+| MBPJ | Each additional logo-type unit | RM20.00 | per the same table |
+| SSM | Trade name registration and renewal | RM60.00 a year | not a premises licence |
+| SSM | Personal name renewal | RM30.00 a year | cheaper than a trade name |
+| SSM | Each branch | RM5.00 a year | per branch |
+| SSM | Sdn Bhd incorporation | RM1,000.00 | paid-up capital fees not read |
 | MBPJ | Administration charge | RM25.00 | mentioned in the guide |
 
 Calling either of these the licence fee is the mistake this table exists to prevent. A reader who budgets RM50 for a Shah Alam licence has budgeted the processing fee.
 
-## The stack has five parts, and four are still unpriced
+## Two parts carry a published fee, and three do not
 
-A food premises licence stack in Malaysia is not one document. It is at least five:
+A food premises licence stack in Malaysia is not one document. It is at least five, and the business registration is the one part you can price from a published fee before you talk to anyone:
 
-1. **Business registration** with SSM, which depends on whether you are a sole proprietor or a company.
+1. **Business registration** with SSM: RM60 a year for a trade name, RM30 for a personal name, RM5 per branch, or RM1,000 to incorporate a Sdn Bhd.
 2. **Premises licence** from the council, which depends on the premises type, the floor area and the kitchen.
 3. **Signboard or advertising licence**, which depends on lit or unlit, size, and whether the sign is a logo type.
 4. **Food handler certification** for anyone touching food, which depends on the course provider.
 5. **Halal certification**, only if you claim it, which is a separate application and a separate stack.
 
-For four of those five, no fee could be read for this piece. DBKL's schedule sits behind its e-lesen portal, MBSJ's licensing page renders without a fee, and the food-handler course price was never read. Those cells stay empty here rather than being filled from memory.
+Two of the five can be priced from published pages: business registration from SSM, and the signboard from MBPJ. For the rest, no fee could be read: the annual premises licence sits behind DBKL's e-lesen portal and MBSJ renders no fee, the food-handler course price was never read, halal was not attempted, and the annual return fee was not read. Those cells stay empty here rather than being filled from memory.
 
 ## What to ask at the counter
 

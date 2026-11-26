@@ -20,6 +20,12 @@ sources:
   - title: "MBSA, halaman lesen komposit (fi pemprosesan permohonan RM50 perniagaan dan RM100 perindustrian, plet lesen RM7, stiker lesen RM5)"
     url: "https://www.mbsa.gov.my/ms-my/mbsa/perkhidmatan/pelesenan/Halaman/lesen_komposit.aspx"
     checked: 2026-11-26
+  - title: "SSM, jadual fi Pendaftaran Perniagaan (nama dagang RM60 setahun, pembaharuan RM60, nama sendiri RM30, RM5 setiap cawangan)"
+    url: "https://www.ssm.com.my/Pages/Services/Registration-of-Business-(ROB)/table-of-fees/Table-of-Fees.aspx"
+    checked: 2026-11-26
+  - title: "Garis panduan SSM untuk pemerbadanan syarikat tempatan (fi pemerbadanan RM1,000; tiada tarikh pada muka dokumen, dibaca 26 November 2026)"
+    url: "https://www.ssm.com.my/Pages/Legal_Framework/GUIDELINES/4.-Guidelines-For-Incorporation-Of-A-Local-Company.pdf"
+    checked: 2026-11-26
   - title: "MBPJ, panduan lesen komposit premis dan iklan (fi papan tanda RM100 dan RM150 setahun, RM10 dan RM15 bagi setiap meter persegi tambahan, RM200 jenis logo, RM25 pentadbiran)"
     url: "https://www.mbpj.gov.my/sites/default/files/panduan_permohonan_lesen_komposit_premis_dan_iklan_okt2024.pdf"
     checked: 2026-11-26
@@ -46,21 +52,26 @@ MBPJ mencetak fi pengiklanan. Papan tanda tidak berlampu sehingga 8 m² ialah RM
 | MBPJ | Papan tanda berlampu, sehingga 8 m² | RM150.00 setahun | bukan lesen premis |
 | MBPJ | Setiap m² tambahan, berlampu | RM15.00 setahun | terpakai melebihi 8 m² |
 | MBPJ | Iklan jenis logo | RM200.00 | tahunan, menurut jadual sama |
+| MBPJ | Setiap unit logo tambahan | RM20.00 | menurut jadual sama |
+| SSM | Pendaftaran dan pembaharuan nama dagang | RM60.00 setahun | bukan lesen premis |
+| SSM | Pembaharuan nama sendiri | RM30.00 setahun | lebih murah daripada nama dagang |
+| SSM | Setiap cawangan | RM5.00 setahun | setiap cawangan |
+| SSM | Pemerbadanan Sdn Bhd | RM1,000.00 | fi modal berbayar tidak dibaca |
 | MBPJ | Caj pentadbiran | RM25.00 | disebut dalam panduan |
 
 Memanggil mana-mana daripada ini "fi lesen" ialah kesilapan yang jadual ini wujud untuk menghalangnya. Pembaca yang membajet RM50 untuk lesen Shah Alam telah membajet fi pemprosesan.
 
-## Timbunan itu ada lima bahagian, dan empat belum berharga
+## Dua bahagian ada fi yang diterbitkan, tiga tidak
 
-Timbunan lesen premis makanan di Malaysia bukan satu dokumen. Ia sekurang-kurangnya lima:
+Timbunan lesen premis makanan di Malaysia bukan satu dokumen. Ia sekurang-kurangnya lima, dan pendaftaran perniagaan ialah bahagian yang boleh dihargakan daripada fi yang diterbitkan sebelum anda bercakap dengan sesiapa:
 
-1. **Pendaftaran perniagaan** dengan SSM, bergantung sama ada milikan tunggal atau syarikat.
+1. **Pendaftaran perniagaan** dengan SSM: RM60 setahun bagi nama dagang, RM30 bagi nama sendiri, RM5 setiap cawangan, atau RM1,000 untuk memperbadankan Sdn Bhd.
 2. **Lesen premis** daripada majlis, bergantung pada jenis premis, luas lantai dan dapur.
 3. **Lesen papan tanda atau pengiklanan**, bergantung pada berlampu atau tidak, saiz, dan sama ada tanda itu jenis logo.
 4. **Pensijilan pengendali makanan** bagi sesiapa yang menyentuh makanan, bergantung pada penyedia kursus.
 5. **Pensijilan halal**, hanya jika anda mendakwanya, iaitu permohonan dan timbunan berasingan.
 
-Bagi empat daripada lima itu, tiada fi dapat dibaca untuk artikel ini. Jadual DBKL berada di sebalik portal e-lesen, halaman pelesenan MBSJ terpapar tanpa fi, dan harga kursus pengendali makanan tidak pernah dibaca. Sel itu kekal kosong di sini dan bukan diisi daripada ingatan.
+Dua daripada lima boleh dihargakan daripada halaman yang diterbitkan: pendaftaran perniagaan daripada SSM, dan papan tanda daripada MBPJ. Bagi selebihnya, tiada fi dapat dibaca: lesen premis tahunan berada di sebalik portal e-lesen DBKL dan MBSJ tidak memaparkan fi, harga kursus pengendali makanan tidak pernah dibaca, halal tidak dicuba, dan fi penyata tahunan tidak dibaca. Sel itu kekal kosong di sini dan bukan diisi daripada ingatan.
 
 ## Apa yang perlu ditanya di kaunter
 
