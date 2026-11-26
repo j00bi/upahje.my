@@ -5,13 +5,13 @@
     .muted{fill:#63665E}
     .rule{stroke:#E4E2DA;stroke-width:1}
     .t{font-family:"Recursive Variable",ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
-    .label{font-size:11px;letter-spacing:.14em;text-transform:uppercase}
-    .h{font-size:17px;font-weight:600}
-    .row{font-size:13px}
+    .label{font-size:11.5px;letter-spacing:.12em;text-transform:uppercase}
+    .h{font-size:18.5px;font-weight:600}
+    .row{font-size:14.5px}
     .val{font-size:13px;font-weight:500}
     .panel-theirs{fill:#F4F2EE;stroke:#BDBCCC;stroke-width:1}
     .panel-own{fill:#EAF7EC;stroke:#1A6B2E;stroke-width:1.5}
-    .tag{font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+    .tag{font-size:11px;letter-spacing:.1em;text-transform:uppercase}
   </style>
 
   <rect class="bg" x="0" y="0" width="760" height="700" rx="10"/>
