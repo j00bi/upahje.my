@@ -4,8 +4,8 @@
 
 | # | claim | source URL | publisher | checked | basis |
 |---|-------|------------|-----------|---------|-------|
-| 1 | "Billplz charges RM1.25 per FPX transaction on its free Basic plan and RM0.75 on the RM999-a-year Standard plan" | https://www.billplz.com/pricing | Billplz | 2026-11-26 | source: pricing page, online banking B2C row, Basic and Standard columns, annual plan line |
-| 2 | "1.8% or 1.5% for a MYR card" | https://www.billplz.com/pricing | Billplz | 2026-11-26 | source: pricing page, card MYR row |
+| 1 | "Billplz prints both FPX figures in its plan table: RM1.25 per transaction on the free Basic plan and RM0.75 on the RM999-a-year Standard plan" | https://www.billplz.com/pricing | Billplz | 2026-11-26 | source: pricing page, online banking B2C row, Basic and Standard columns, annual plan line |
+| 2 | "A MYR card is 1.8% on Basic or 1.5% on Standard" | https://www.billplz.com/pricing | Billplz | 2026-11-26 | source: pricing page, card MYR row |
 | 3 | "settlement next business day for FPX and T+2 for cards" | https://www.billplz.com/pricing | Billplz | 2026-11-26 | source: pricing page, payout column |
 | 4 | "bands in the competition regulator's foodpanda decision of 11 September 2023, Table 3: 1% to 5%, 10% to 25%, 15% to 20%, and twice 15% to 25%" | https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf | MyCC | 2026-11-26 | source: decision PDF, Table 3 rows, merchant names redacted |
 | 5 | "Neither delivery platform publishes a merchant commission" | https://www.grab.com/my/merchant/ | Grab Malaysia | 2026-11-26 | estimate: absence check, carried from the delivery-commission research of 24 November 2026 |
