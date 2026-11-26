@@ -77,6 +77,6 @@ The levy is small enough to ignore and large enough to notice at the ten-employe
 
 **Read next**
 
-[SOCSO stops at RM6,000, and nobody tells the new hire](https://upahje.my/en/articles/socso-employer-rate-malaysia)
+[SOCSO stops at RM6,000](https://upahje.my/en/articles/socso-employer-rate-malaysia)
 
 [More definitions, explained plainly](https://upahje.my/en/glossary)

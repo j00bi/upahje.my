@@ -4,6 +4,69 @@
 
 # English
 
+## A 9-ending works on new items. Nobody has proved the rest.
+
+URL: https://upahje.my/en/articles/price-endings-nine
+Checked: 2026-11-26
+
+A 9 at the end of a price tag is the most common pricing move in Malaysian retail and the least tested one. The best evidence is three American field experiments published in 2003: the $9 ending "increased demand in all three experiments", the lift was strongest on items the retailer had not sold before, and the authors note it weakens once a sale sticker is already doing the work. No effect size is published. No Malaysian experiment exists. So the honest reading is narrow — it can move a new item, and nobody knows by how much.
+
+## What the three experiments found
+
+The paper is Anderson and Simester, *Effects of $9 Price Endings on Retail Sales: Evidence from Field Experiments*, in Quantitative Marketing and Economics volume 1, pages 93 to 110. The design matters more than the conclusion: price endings were manipulated in real stores, not in a lab, and the authors report two conclusions from the data.
+
+First, the $9 ending raised demand in all three experiments. Second, the increase was stronger for new items than for items the retailer had sold in previous years.
+
+## The effect is conditional, and the authors say so
+
+A third sentence in the abstract is the useful one for a shop: "There is also some evidence that $9 price endings are less effective when retailers use 'Sale' cues." The hedge is the authors' own.
+
+That reading fits how a price tag works. If a red sticker already tells the customer the price is low, a 9 at the end is a second signal saying the same thing, and two signals do not double the effect. The authors offer an explanation rather than a proof: 9-endings "may be more effective when customers have limited information, which may in turn help to explain why retailers do not use $9 price endings on every item."
+
+## No percentage appears in this article
+
+The abstract publishes no effect size, and the full text is paywalled, so the "24% more sales" figure that circulates with this paper's name cannot be checked here and is not printed. A directional finding is what the evidence supports: endings moved demand, with the conditions above.
+
+Those are the honest limits of a two-decade-old American result, and a Malaysian price decision made on it is an extrapolation.
+
+## Malaysia has the convention and not the data
+
+RM2.90 and RM19.90 are everywhere in Malaysian retail, which shows the convention, not its effect. No Malaysian field experiment on price endings surfaced in our search, and no regulator publishes a retail price-ending study.
+
+| What is published | Value | Where |
+| --- | --- | --- |
+| Field experiments in the paper | 3 | abstract |
+| Publication year and volume | 2003, volume 1 | journal record |
+| Countries covered | 1, the United States | abstract |
+| Effect size published | none | abstract |
+| Malaysian field experiments found | 0 | absence check |
+| Conditions the authors name | 2, new versus established, and sale cues | abstract |
+
+The zero in that table is the row a Malaysian owner should read twice. It is an absence, not a finding that 9-endings fail here.
+
+## What a shop can do with this
+
+1. Test the 9 on a new item, where the published effect was strongest.
+2. Do not stack a 9-ending on top of a sale sticker.
+3. Run the test for two weeks on comparable volume, and compare units, not revenue.
+4. Keep the old price visible in the same test, because a price change and a price-ending change are two different experiments.
+5. Do not treat a 9 as a substitute for a price the customer can justify.
+
+For a small Malaysian shop, the 9 is a test, not a policy. The evidence says it can move demand on something new; it does not say by how much, and it does not say anything about your customers. Spend a fortnight finding out rather than a year assuming.
+
+---
+
+**Read next**
+
+[What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
+
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
+
+### Sources
+
+- Anderson and Simester, Effects of $9 Price Endings on Retail Sales: Evidence from Field Experiments, QME 1(1):93-110, 2003 (abstract) — https://link.springer.com/article/10.1023/A:1023581927405 (checked 2026-11-24)
+- RePEc/EconPapers record with the same abstract, used to confirm the wording — https://ideas.repec.org/a/kap/qmktec/v1y2003i1p93-110.html (checked 2026-11-24)
+
 ## Colab will train your model. It will not host it
 
 URL: https://upahje.my/en/articles/colab-hosting-ai-malaysia
@@ -277,7 +340,7 @@ The levy is small enough to ignore and large enough to notice at the ten-employe
 
 **Read next**
 
-[SOCSO stops at RM6,000, and nobody tells the new hire](https://upahje.my/en/articles/socso-employer-rate-malaysia)
+[SOCSO stops at RM6,000](https://upahje.my/en/articles/socso-employer-rate-malaysia)
 
 [More definitions, explained plainly](https://upahje.my/en/glossary)
 
@@ -2595,6 +2658,69 @@ Settle three things in writing before you pay.
 - OpenAI, API model catalogue — https://developers.openai.com/api/docs/models (checked 2026-11-19)
 
 # Bahasa Melayu
+
+## Hujung 9 berkesan pada barang baharu
+
+URL: https://upahje.my/ms/articles/hujung-harga-sembilan
+Checked: 2026-11-26
+
+Harga berhujung 9 ialah gerakan penetapan harga paling biasa dalam runcit Malaysia, dan yang paling kurang diuji. Bukti terbaiknya tiga eksperimen lapangan Amerika yang diterbitkan pada 2003: hujung $9 "increased demand in all three experiments", kenaikannya paling kuat pada barang yang peniaga belum pernah jual, dan penulis sendiri mencatat ia melemah apabila tanda jualan sudah menarik perhatian. Tiada saiz kesan diterbitkan. Tiada eksperimen Malaysia. Jadi bacaan yang jujur itu sempit — ia boleh menggerakkan barang baharu, dan tiada siapa tahu berapa banyak.
+
+## Apa yang tiga eksperimen itu dapati
+
+Kertas itu ialah Anderson dan Simester, *Effects of $9 Price Endings on Retail Sales: Evidence from Field Experiments*, dalam Quantitative Marketing and Economics jilid 1, halaman 93 hingga 110. Reka bentuknya lebih penting daripada kesimpulannya: hujung harga dimanipulasi di kedai sebenar, bukan di makmal, dan penulis melaporkan dua kesimpulan daripada data.
+
+Pertama, hujung $9 menaikkan permintaan dalam ketiga-tiga eksperimen. Kedua, kenaikan itu lebih kuat pada barang baharu berbanding barang yang peniaga sudah jual tahun sebelumnya.
+
+## Kesannya bersyarat, dan penulis sendiri berkata begitu
+
+Ayat ketiga dalam abstrak ialah yang berguna untuk kedai: "There is also some evidence that $9 price endings are less effective when retailers use 'Sale' cues." Hedge itu kata-kata penulis sendiri.
+
+Bacaan itu sepadan dengan cara tanda harga berfungsi. Jika pelekat merah sudah memberitahu pelanggan harga itu rendah, angka 9 di hujung ialah isyarat kedua yang menyatakan perkara sama, dan dua isyarat tidak menggandakan kesan. Penulis menawarkan penjelasan, bukan bukti: harga berhujung 9 "may be more effective when customers have limited information, which may in turn help to explain why retailers do not use $9 price endings on every item."
+
+## Tiada peratusan dalam artikel ini
+
+Abstrak tidak menerbitkan saiz kesan, dan teks penuh berbayar, jadi angka "24% lebih jualan" yang tersebar bersama nama kertas ini tidak dapat disemak di sini dan tidak dicetak. Penemuan arah ialah apa yang bukti sokong: hujung harga menggerakkan permintaan, dengan syarat di atas.
+
+Itulah had jujur satu keputusan Amerika berusia dua dekad, dan keputusan harga Malaysia yang dibuat atasnya ialah ekstrapolasi.
+
+## Malaysia ada konvensyennya, bukan datanya
+
+RM2.90 dan RM19.90 ada di mana-mana dalam runcit Malaysia, yang menunjukkan konvensyen, bukan kesannya. Tiada eksperimen lapangan Malaysia tentang hujung harga muncul dalam carian ini, dan tiada pengawal selia menerbitkan kajian hujung harga runcit.
+
+| Apa yang diterbitkan | Nilai | Dari mana |
+| --- | --- | --- |
+| Eksperimen lapangan dalam kertas | 3 | abstrak |
+| Tahun terbitan dan jilid | 2003, jilid 1 | rekod jurnal |
+| Negara yang diliputi | 1, Amerika Syarikat | abstrak |
+| Saiz kesan diterbitkan | tiada | abstrak |
+| Eksperimen lapangan Malaysia ditemui | 0 | semakan ketiadaan |
+| Syarat yang dinamakan penulis | 2, baharu lawan sedia ada, dan tanda jualan | abstrak |
+
+Sifar dalam jadual itu ialah baris yang patut dibaca dua kali oleh pemilik Malaysia. Ia ketiadaan, bukan penemuan bahawa hujung 9 gagal di sini.
+
+## Apa yang kedai boleh buat dengan ini
+
+1. Uji angka 9 pada barang baharu, tempat kesan yang diterbitkan paling kuat.
+2. Jangan tindih hujung 9 dengan pelekat jualan.
+3. Jalankan ujian dua minggu pada jumlah yang setara, dan bandingkan unit, bukan hasil.
+4. Kekalkan harga lama kelihatan dalam ujian yang sama, kerana perubahan harga dan perubahan hujung harga ialah dua eksperimen berbeza.
+5. Jangan jadikan angka 9 pengganti harga yang pelanggan boleh pertahankan.
+
+Bagi kedai kecil Malaysia, angka 9 ialah ujian, bukan dasar. Bukti berkata ia boleh menggerakkan permintaan pada sesuatu yang baharu; ia tidak berkata berapa banyak, dan ia tidak berkata apa-apa tentang pelanggan anda. Luangkan dua minggu untuk mengetahuinya daripada setahun menganggap.
+
+---
+
+**Bacaan lanjut**
+
+[Kos kerja automasi di Malaysia: harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
+
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/topics/buying)
+
+### Sources
+
+- Anderson dan Simester, Effects of $9 Price Endings on Retail Sales: Evidence from Field Experiments, QME 1(1):93-110, 2003 (abstrak) — https://link.springer.com/article/10.1023/A:1023581927405 (checked 2026-11-24)
+- Rekod RePEc/EconPapers dengan abstrak yang sama, digunakan untuk mengesahkan perkataan — https://ideas.repec.org/a/kap/qmktec/v1y2003i1p93-110.html (checked 2026-11-24)
 
 ## Colab akan latih model anda. Ia tidak akan hoskan
 

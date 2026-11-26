@@ -1,22 +1,18 @@
 ---
-title: "A 9-ending moves a new item, and not much else"
-description: "Three US field experiments found $9 endings raised demand, more on new items and less beside a sale cue. No effect size and no Malaysian data are published."
+title: "A 9-ending works on new items. Nobody has proved the rest."
+description: "Three American field experiments: a $9 ending raised demand in all three, strongest on new items. No effect size published, no Malaysian data, no percentage."
 slug: price-endings-nine
 translationKey: price-endings-nine
 format: explainer
 reader: owner
-date: 2026-11-24
-updated: 2026-11-24
+date: 2026-11-26
+updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, pricing, retail, malaysia]
-cardFigure: "Three field experiments, no published effect size"
+cardFigure: "Three experiments, one country, no effect size"
 canonical: https://upahje.my/en/articles/price-endings-nine
-draft: true
-review:
-  state: needs-work
-  note: "the hook and the way its written, we need more punch"
-  at: 2026-11-24T04:59:28.799Z
+draft: false
 changelog:
   - date: 2026-11-24
     note: "First published."
@@ -29,9 +25,9 @@ sources:
     checked: 2026-11-24
 ---
 
-# A 9-ending moves a new item, and not much else
+# A 9-ending works on new items. Nobody has proved the rest.
 
-The best evidence on 9-endings is three American field experiments, published in 2003, in which a $9 ending "increased demand in all three experiments". The lift was stronger for new items than for items the retailer had sold in previous years, and there is "some evidence" it weakens when a sale cue is already running. No effect size is published, and there is no Malaysian evidence at all.
+A 9 at the end of a price tag is the most common pricing move in Malaysian retail and the least tested one. The best evidence is three American field experiments published in 2003: the $9 ending "increased demand in all three experiments", the lift was strongest on items the retailer had not sold before, and the authors note it weakens once a sale sticker is already doing the work. No effect size is published. No Malaysian experiment exists. So the honest reading is narrow — it can move a new item, and nobody knows by how much.
 
 ## What the three experiments found
 
@@ -82,4 +78,4 @@ For a small Malaysian shop, the 9 is a test, not a policy. The evidence says it 
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)

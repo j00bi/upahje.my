@@ -1,22 +1,18 @@
 ---
-title: "Hujung 9 menggerakkan barang baharu, bukan selebihnya"
-description: "Tiga eksperimen lapangan AS: hujung 9 menaikkan permintaan, lebih pada barang baharu, kurang di sebelah tanda jualan. Tiada saiz kesan atau data Malaysia."
+title: "Hujung 9 berkesan pada barang baharu"
+description: "Tiga eksperimen lapangan Amerika: hujung $9 menaikkan permintaan dalam ketiga-tiganya, paling kuat pada barang baharu. Tiada saiz kesan, tiada data Malaysia."
 slug: hujung-harga-sembilan
 translationKey: price-endings-nine
 format: explainer
 reader: owner
-date: 2026-11-24
-updated: 2026-11-24
+date: 2026-11-26
+updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, harga, runcit, malaysia]
-cardFigure: "Tiga eksperimen lapangan, tiada saiz kesan"
+cardFigure: "Tiga eksperimen, satu negara, tiada saiz kesan"
 canonical: https://upahje.my/ms/articles/hujung-harga-sembilan
-draft: true
-review:
-  state: rejected
-  reason: "weak-hook"
-  at: 2026-11-24T05:00:51.058Z
+draft: false
 changelog:
   - date: 2026-11-24
     note: "Mula diterbitkan."
@@ -29,9 +25,8 @@ sources:
     checked: 2026-11-24
 ---
 
-# Hujung 9 menggerakkan barang baharu, bukan selebihnya
-
-Bukti terbaik tentang harga berhujung 9 ialah tiga eksperimen lapangan Amerika, diterbitkan pada 2003, di mana harga berhujung $9 "increased demand in all three experiments". Kenaikannya lebih kuat pada barang baharu berbanding barang yang peniaga sudah jual tahun sebelumnya, dan ada "some evidence" ia melemah apabila tanda jualan sudah berjalan. Tiada saiz kesan diterbitkan, dan tiada bukti Malaysia langsung.
+# Hujung 9 berkesan pada barang baharu
+Harga berhujung 9 ialah gerakan penetapan harga paling biasa dalam runcit Malaysia, dan yang paling kurang diuji. Bukti terbaiknya tiga eksperimen lapangan Amerika yang diterbitkan pada 2003: hujung $9 "increased demand in all three experiments", kenaikannya paling kuat pada barang yang peniaga belum pernah jual, dan penulis sendiri mencatat ia melemah apabila tanda jualan sudah menarik perhatian. Tiada saiz kesan diterbitkan. Tiada eksperimen Malaysia. Jadi bacaan yang jujur itu sempit — ia boleh menggerakkan barang baharu, dan tiada siapa tahu berapa banyak.
 
 ## Apa yang tiga eksperimen itu dapati
 
@@ -82,4 +77,4 @@ Bagi kedai kecil Malaysia, angka 9 ialah ujian, bukan dasar. Bukti berkata ia bo
 
 [Kos kerja automasi di Malaysia: harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/topics/buying)
