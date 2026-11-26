@@ -154,6 +154,10 @@
     "licence-stack-kedai": {
       "topic": "compliance",
       "secondary": "buying"
+    },
+    "when-the-platform-is-cheaper": {
+      "topic": "buying",
+      "secondary": "operations-growth"
     }
   },
   "glossary": [

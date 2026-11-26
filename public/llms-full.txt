@@ -1140,6 +1140,171 @@ The demonstration is different. It says the capability is no longer the barrier.
 - Billplz pricing: FPX, card and auto-deduct rates, plus settlement terms — https://www.billplz.com/pricing (checked 2026-11-26)
 - MyCC decision on foodpanda, 11 September 2023, commission bands in Table 3 — https://www.mycc.gov.my/ (checked 2026-11-26)
 
+## When the platform is still the cheaper shop
+
+URL: https://upahje.my/en/articles/when-the-platform-is-cheaper
+Checked: 2026-11-26
+
+A checkout screen photographed at 17:05 on 26 November 2026, ordering from an Ayam Gepuk branch on Grab, showed three lines. Subtotal, including tax: **RM20.90**. Delivery fee: **RM4.70**. Total: **RM25.60**. No service fee appeared on the screen, and it carried a note that the fee had been calculated at 17:02:16.
+
+That single screen undercuts the strongest version of the argument this series has been making. The commission on that order is invisible to the customer, the delivery fee is not, and both are paid by somebody who never agreed to a rate card. This piece is the counter-argument, and it uses the same numbers as the six pieces before it.
+
+## The commission buys five things, and this series only priced two
+
+The earlier pieces costed the checkout and the audience. They left three items unexamined, and each one is a line the platform is charging for:
+
+**The rider.** A delivery fee pays a person with a vehicle to move food across a city at dinner time, in rain, with traffic. A merchant doing that alone is hiring, insuring and dispatching.
+
+**Disputes and refunds.** A customer claiming the order never arrived is a payment reversal, a conversation and a reputation decision. The platform absorbs it as a process.
+
+**Demand smoothing.** The rider and the discovery are shared across thousands of merchants, so the platform can afford capacity at 19:00 on a Friday that no single shop could justify.
+
+Two of the five have published prices, and the third has a visible one on the customer's screen. The remaining two are unpriced, and this article will not pretend otherwise.
+
+## A shop at 40 orders a week, costed both ways
+
+The abstraction is easier to argue with than a shop. Take one: 40 orders a week, 173 a month, every one of them delivered, a RM30 basket, and a courier who charges RM8 because the flats are far from the kitchen.
+
+| Over a month | On the platform at 20% | Own checkout, own courier |
+| --- | --- | --- |
+| Revenue the customer pays | RM5,190 | RM5,190 |
+| Commission | RM1,038 | — |
+| Payment fee (FPX RM1.25 × 173) | — | RM216 |
+| Couriers (RM8 × 173) | inside the delivery fee | RM1,384 |
+| **Merchant keeps** | **RM4,152** | **RM3,590** |
+
+Leaving costs that shop **RM562 a month**, and it has taken on the dispatch, the refunds and the phone that rings when an order is late. At the RM5 courier a city centre kitchen can find, the same shop is **RM13 a month better off** — which is to say, level, and carrying more work for the privilege.
+
+That is the range the whole decision lives in: a few hundred ringgit either way, decided by one number the owner already knows, which is what their courier charges.
+
+## The delivery fee is charged to the customer, and that changes who pays
+
+Read the screen again. The RM4.70 is added to the bill, not deducted from the merchant's side. On that order the customer paid **22.5%** on top of the food, and the merchant paid commission separately — between RM3.13 and RM5.22 on that basket, depending on which band a contract falls into.
+
+So the platform's revenue on a delivery order comes from two pockets, not one. That is why the comparison in the earlier pieces flatters an owned storefront: it compares the merchant's commission against the merchant's own delivery cost, and quietly leaves the customer's delivery fee out of the account.
+
+Put it back. On a RM30 basket:
+
+| | Own checkout, own courier | Platform at 20% |
+| --- | --- | --- |
+| Customer pays | RM30.00 + courier RM5–8 | RM30.00 + delivery fee (RM4.70 on the observed order) |
+| Payment or commission | RM1.25 (FPX) | RM6.00 |
+| Courier or rider | RM5–8, arranged by you | inside the delivery fee |
+| Merchant keeps | RM20.75–23.75 | RM24.00 |
+
+At the middle of the courier range the platform is **a ringgit ahead per order** and the customer is behind by more. On a RM20.90 basket it is further ahead, because a flat RM1.25 stops being small when the basket is.
+
+## The delivery fee moves, and your own price cannot
+
+One more detail on that screen, and it is the kind that ruins a tidy comparison: **"Delivery fee calculated at 17:02:16."** The fee is computed per order, from distance, demand and rider supply, and it changes as the evening does. The same basket at 13:00 and at 19:30 can carry different fees, and the RM3.00 the app offers off delivery is a subscription subsidy, so the customer next to you paid something else for the same food.
+
+An owned shop should not imitate that. A flat delivery charge you publish — say RM5 within 5 km — is worse at surge and better in the quiet hour, and it is quotable, which the dynamic fee is not. The consequence for this comparison is that the platform's delivery number should be read as a median over a week, not as what one customer saw once. Ours came from a single screen at 17:05, and it is labelled that way everywhere in this piece.
+
+## Run the counter with marketing as a variable, not a guess
+
+The break-even identity from the arithmetic piece has one term nobody in Malaysia publishes: what it costs to acquire an order. Advertising rates exist, conversion rates exist, cost per acquired customer does not — not from a platform, not from a gateway, not from a council.
+
+So print it as a variable. Solving for orders per month, with the RM999 annual gateway plan at RM83.25 a month, a flat FPX fee of RM1.25 and a 20% commission:
+
+> orders = 83.25 ÷ (0.20 × basket − 1.25 − marketing)
+
+| Marketing per order | RM20.90 basket | RM30 basket | RM50 basket | RM80 basket |
+| --- | --- | --- | --- | --- |
+| RM0 | 29 orders | 18 orders | 10 orders | 6 orders |
+| RM5 | never | never | 23 orders | 9 orders |
+| RM15 | never | never | never | never |
+
+Read the "never" cells as the finding. **At a RM5 acquisition cost per order, a 20% commission on a RM20.90 or RM30 basket takes less than the payment fee plus the marketing would**, so there is no order count at which owning the checkout wins. At RM15 per order, almost nothing wins.
+
+This is the sentence the other six pieces avoided: on small baskets with paid acquisition, **the platform is not overcharging you — it is subsidising you.**
+
+## The 8% SST nobody adds
+
+CHIP prints one line under its rate table that most comparisons drop: **"Transaction fees are subject to 8% SST."** An FPX payment at RM1.00 is RM1.08 charged. Billplz's page shows no such line, so whether RM1.25 includes tax is unresolved — and on a small basket the difference is not decorative.
+
+Put the 8% on the RM1.25 this table uses and the fee becomes RM1.35. At a 20% commission the RM20.90 basket moves from 29 orders to 30, and the RM30 basket stays at 18. The SST does not change the argument; it does change the answer enough that a shop sitting on 29 orders should count again.
+
+## Four shops that should stay where they are
+
+1. **Under about 25 orders a week.** Fixed costs do not care about your volume. At 100 orders a month the gateway plan alone is 83 sen an order before a single fee is paid.
+2. **A single-product shop.** If the business is one dish done properly, there is no menu breadth to make discovery cheaper, and discovery is what you are buying.
+3. **No audience at all.** Zero followers, no group chat, no regulars who message directly. The owned share is 0%, and the discovery term has no counterweight.
+4. **A shop whose whole point is delivery radius.** If the food only works warm within 6 km, the rider is the product.
+
+None of these are failures. They are the ordinary state of a shop in its first year.
+
+## Four shops that should leave
+
+1. **Repeat customers above half of orders.** Their discovery is already done, and you are paying commission on customers who would have found you anyway.
+2. **Pickup-heavy.** No rider to buy, no delivery fee to argue about, a flat RM1.00–1.25 fee against a commission that scales with the bill.
+3. **Baskets above RM80.** Commission is a percentage and the fee is flat, so the crossover moves fast: 6 orders a month breaks even at RM0 marketing, 9 at RM5.
+4. **An existing following.** mejamakan's 16,000 Instagram followers are not orders, but they are the channel that makes the discovery term small enough to solve.
+
+## The third answer is the real one: run both
+
+Almost no shop should do all of one or all of the other, and the arithmetic says so once the marketing line is in it. The shape that survives:
+
+- **The platform keeps delivery and new customers**, because those are the two things it is genuinely cheaper at.
+- **Your own checkout takes the regulars and the pickup**, where the commission is pure loss.
+- **One kitchen, two order queues.** That is the real cost, and it is a person's attention rather than a fee.
+
+The number that tells you whether it is working is the share of orders arriving through a channel you own. Below half, the platform is still doing the work and its commission is the cheaper way to buy it. Above half, it is a delivery contractor with a fee you can negotiate.
+
+## How to count your owned share in two weeks
+
+The half rule is only useful if the number is measured rather than guessed. Two weeks is enough:
+
+1. **Tag every order by how it arrived.** Platform, own site, direct message, repeat customer, walk-in. Five categories, one tally sheet, no software.
+2. **Write down what you spent on the owned channels**, including your own hours at a rate you would pay someone else. A free channel that eats six evenings a week is not free.
+3. **Divide** the owned orders by the total, and the spend by the owned orders. You now have the two numbers this entire series circles: your owned share, and your acquisition cost per owned order.
+
+If the acquisition cost lands above RM5 and the share is under half, the platform is cheaper and the arithmetic above says so. If the share is over half and the cost is under RM5, the commission is a fee for customers who already know you.
+
+## Where this series was right, and where it was optimistic
+
+Six pieces argued one direction. Read against the table above, here is what survives and what does not.
+
+- **"An FPX payment costs RM1.25 and a commission costs 15–25%."** Survives. Both are published or recorded, and neither has moved.
+- **"At delivery the platform is competitive."** Survives, and it was the finding that made this piece necessary.
+- **"The storefront is solved; the audience is the work."** Survives, with a correction: the audience is not just work, it is **a cost that lands on the same line as the fee**, and once it exceeds about RM5 an order the storefront stops being cheaper.
+- **"One person can build and run this."** Survives technically — husnieats did — but a prototype with three dishes is not a shop at 173 orders a month. The build is cheap; the operating is not.
+- **"Half your orders from a channel you own is the number to watch."** Survives, and it gains a partner: the acquisition cost per owned order. One without the other is half a measurement.
+
+That is the whole correction, stated in one paragraph so nobody has to hunt for it: we were not wrong that owning the shop got cheap, we were quiet about the marketing line, and the marketing line is where small shops lose.
+
+## What would change our mind
+
+Three artefacts, each checkable:
+
+1. **A platform publishing a merchant rate card.** Every commission figure in this series comes from a regulator's decision about five anonymised contracts, because no platform prints one.
+2. **A Malaysian number for acquisition cost per order**, by category, with a date. The table above has an empty column until somebody measures it.
+3. **A gateway bundling discovery with payments.** If a payment provider starts delivering customers, the commission's second service gets a competitor and the whole comparison reopens.
+
+## The wager
+
+Here is what we will say plainly, having spent a series arguing the other way: **for a shop under about 100 orders a month, on baskets under RM40, the platform is the cheaper shop, and leaving it to save the commission is a way to lose money slowly.**
+
+That is a wager, not a prophecy. The day a merchant shows us a rate card that says otherwise — or a Malaysian source gives that acquisition number and it comes in under RM3 — we will publish the correction and link it here.
+
+What we will not do is print a cost per customer we have not seen, or tell anyone to leave a channel that is still filling their tables.
+
+---
+
+**Read next**
+
+[Owning the shop means inheriting the discovery problem](https://upahje.my/en/articles/own-the-shop)
+
+[The commission arithmetic behind owning your shop](https://upahje.my/en/articles/commission-arithmetic)
+
+[One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront)
+
+### Sources
+
+- Billplz, pricing (FPX B2C RM1.25 Basic and RM0.75 Standard per transaction, next business day; card 1.8% and 1.5%, T+2; RM999 annual plan) — https://www.billplz.com/pricing (checked 2026-11-26)
+- CHIP, pricing (FPX B2C RM1.00 next day, B2B RM2.00; credit card 2.0%, debit 1.0%, two business days; DuitNow QR online 1.0%; fees subject to 8% SST) — https://chip-in.asia/pricing/ (checked 2026-11-26)
+- Stripe Malaysia, pricing (3% + RM1.00 per successful card charge or bank transaction) — https://stripe.com/en-my/pricing (checked 2026-11-26)
+- MyCC, final decision on foodpanda, 11 September 2023, Table 3 commission bands (n=5 anonymised franchised contracts) — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-26)
+
 ## Colab will train your model. It will not host it
 
 URL: https://upahje.my/en/articles/colab-hosting-ai-malaysia
@@ -3731,6 +3896,171 @@ Settle three things in writing before you pay.
 - OpenAI, API model catalogue — https://developers.openai.com/api/docs/models (checked 2026-11-19)
 
 # Bahasa Melayu
+
+## Apabila platform masih kedai yang lebih murah
+
+URL: https://upahje.my/ms/articles/apabila-platform-lebih-murah
+Checked: 2026-11-26
+
+Satu skrin checkout yang difotografkan pada 17:05, 26 November 2026, ketika memesan dari sebuah cawangan Ayam Gepuk melalui Grab, menunjukkan tiga baris. Subtotal, termasuk cukai: **RM20.90**. Fi penghantaran: **RM4.70**. Jumlah: **RM25.60**. Tiada fi perkhidmatan pada skrin itu, dan ada nota bahawa fi telah dikira pada 17:02:16.
+
+Skrin tunggal itu melemahkan versi terkuat hujah yang siri ini bina. Komisen pada pesanan itu tidak kelihatan kepada pelanggan, fi penghantaran kelihatan, dan kedua-duanya dibayar oleh pihak yang tidak pernah bersetuju dengan kad kadar. Artikel ini ialah hujah balas, dan ia menggunakan nombor yang sama seperti enam artikel sebelumnya.
+
+## Komisen membeli lima perkara, dan siri ini hanya menilai dua
+
+Artikel terdahulu menilai checkout dan khalayak. Tiga perkara dibiarkan tanpa nilai, dan setiap satunya ialah baris yang platform caj:
+
+**Penghantar.** Fi penghantaran membayar seorang manusia dengan kenderaan untuk memindahkan makanan merentas bandar pada waktu makan malam, dalam hujan, dengan kesesakan. Peniaga yang melakukannya sendiri sedang mengambil pekerja, menginsuranskan dan menghantar.
+
+**Pertikaian dan bayaran balik.** Pelanggan yang mendakwa pesanan tidak tiba bermakna pembalikan bayaran, perbualan dan keputusan reputasi. Platform menanggungnya sebagai satu proses.
+
+**Pelancaran permintaan.** Penghantar dan penemuan dikongsi merentas ribuan peniaga, jadi platform mampu menyediakan kapasiti pada 19:00 hari Jumaat yang tiada satu kedai pun mampu justifikasikan.
+
+Dua daripada lima mempunyai harga yang diterbitkan, dan yang ketiga mempunyai harga yang kelihatan pada skrin pelanggan. Dua selebihnya tanpa harga, dan artikel ini tidak akan berpura-pura sebaliknya.
+
+## Sebuah kedai dengan 40 pesanan seminggu, dikira dua cara
+
+Abstraksi lebih mudah dipertikaikan daripada sebuah kedai. Ambil satu: 40 pesanan seminggu, 173 sebulan, semuanya dihantar, bakul RM30, dan kurier yang mengenakan RM8 kerana flatnya jauh dari dapur.
+
+| Sepanjang sebulan | Di platform pada 20% | Checkout sendiri, kurier sendiri |
+| --- | --- | --- |
+| Hasil yang pelanggan bayar | RM5,190 | RM5,190 |
+| Komisen | RM1,038 | — |
+| Fi pembayaran (FPX RM1.25 × 173) | — | RM216 |
+| Kurier (RM8 × 173) | di dalam fi penghantaran | RM1,384 |
+| **Peniaga simpan** | **RM4,152** | **RM3,590** |
+
+Meninggalkan platform merugikan kedai itu **RM562 sebulan**, dan ia telah mengambil alih penghantaran, bayaran balik dan telefon yang berdering apabila pesanan lewat. Pada kurier RM5 yang boleh dicari dapur pusat bandar, kedai yang sama **RM13 sebulan lebih baik** — iaitu seri, sambil memikul lebih banyak kerja.
+
+Itulah julat tempat seluruh keputusan ini tinggal: beberapa ratus ringgit ke mana-mana arah, ditentukan oleh satu nombor yang peniaga sudah tahu, iaitu kadar kurier mereka.
+
+## Fi penghantaran dicaj kepada pelanggan, dan itu mengubah siapa yang membayar
+
+Baca skrin itu sekali lagi. RM4.70 ditambah pada bil, bukan ditolak dari bahagian peniaga. Pada pesanan itu pelanggan membayar **22.5%** di atas harga makanan, dan peniaga membayar komisen secara berasingan — antara RM3.13 dan RM5.22 pada bakul itu, bergantung pada jalur yang termaktub dalam kontrak.
+
+Jadi hasil platform pada pesanan penghantaran datang dari dua poket, bukan satu. Itulah sebabnya perbandingan dalam artikel terdahulu cenderung memihak kepada kedai sendiri: ia membandingkan komisen peniaga dengan kos penghantaran peniaga, dan secara senyap meninggalkan fi penghantaran pelanggan di luar kiraan.
+
+Letakkan semula. Pada bakul RM30:
+
+| | Checkout sendiri, kurier sendiri | Platform pada 20% |
+| --- | --- | --- |
+| Pelanggan bayar | RM30.00 + kurier RM5–8 | RM30.00 + fi penghantaran (RM4.70 pada pesanan yang diperhatikan) |
+| Pembayaran atau komisen | RM1.25 (FPX) | RM6.00 |
+| Kurier atau penghantar | RM5–8, anda uruskan | di dalam fi penghantaran |
+| Peniaga simpan | RM20.75–23.75 | RM24.00 |
+
+Pada pertengahan julat kurier, platform **satu ringgit di depan setiap pesanan** dan pelanggan di belakang dengan lebih banyak. Pada bakul RM20.90 platform lebih jauh di depan, kerana RM1.25 yang rata berhenti menjadi kecil apabila bakulnya kecil.
+
+## Fi penghantaran bergerak, dan harga anda sendiri tidak boleh
+
+Satu lagi butiran pada skrin itu, dan ia jenis yang merosakkan perbandingan yang kemas: **"Delivery fee calculated at 17:02:16."** Fi dikira bagi setiap pesanan, daripada jarak, permintaan dan bekalan penghantar, dan ia berubah mengikut waktu. Bakul yang sama pada 13:00 dan 19:30 boleh membawa fi berbeza, dan RM3.00 yang ditawarkan aplikasi sebagai potongan penghantaran ialah subsidi langganan, jadi pelanggan di sebelah anda membayar sesuatu yang lain untuk makanan yang sama.
+
+Kedai sendiri tidak patut meniru itu. Caj penghantaran rata yang anda terbitkan — katakan RM5 dalam 5 km — lebih teruk pada waktu puncak dan lebih baik pada waktu tenang, dan ia boleh disebut, sesuatu yang fi dinamik tidak boleh. Kesannya pada perbandingan ini ialah angka penghantaran platform patut dibaca sebagai median seminggu, bukan apa yang seorang pelanggan lihat sekali. Angka kami datang daripada satu skrin pada 17:05, dan ia dilabel begitu di seluruh artikel ini.
+
+## Kira balas dengan pemasaran sebagai pemboleh ubah, bukan tekaan
+
+Identiti pulang modal dari artikel aritmetik mempunyai satu istilah yang tiada siapa di Malaysia menerbitkan: kos mendapatkan satu pesanan. Kadar pengiklanan ada, kadar penukaran ada, kos pelanggan yang diperoleh tiada — bukan dari platform, bukan dari gerbang, bukan dari majlis.
+
+Jadi cetak sebagai pemboleh ubah. Selesaikan untuk pesanan sebulan, dengan pelan gerbang tahunan RM999 pada RM83.25 sebulan, fi FPX rata RM1.25 dan komisen 20%:
+
+> pesanan = 83.25 ÷ (0.20 × bakul − 1.25 − pemasaran)
+
+| Pemasaran setiap pesanan | Bakul RM20.90 | Bakul RM30 | Bakul RM50 | Bakul RM80 |
+| --- | --- | --- | --- | --- |
+| RM0 | 29 pesanan | 18 pesanan | 10 pesanan | 6 pesanan |
+| RM5 | tidak pernah | tidak pernah | 23 pesanan | 9 pesanan |
+| RM15 | tidak pernah | tidak pernah | tidak pernah | tidak pernah |
+
+Baca sel "tidak pernah" sebagai penemuan. **Pada kos pemerolehan RM5 satu pesanan, komisen 20% pada bakul RM20.90 atau RM30 mengambil kurang daripada fi pembayaran campur pemasaran**, jadi tiada jumlah pesanan yang membuat kedai sendiri menang. Pada RM15 satu pesanan, hampir tiada apa yang menang.
+
+Inilah ayat yang dielakkan enam artikel lain: pada bakul kecil dengan pemerolehan berbayar, **platform bukan mengecas anda lebih — ia menyubsidi anda.**
+
+## SST 8% yang tiada siapa tambah
+
+CHIP mencetak satu baris di bawah jadual kadarnya yang kebanyakan perbandingan tinggalkan: **"Transaction fees are subject to 8% SST."** Bayaran FPX RM1.00 ialah RM1.08 yang dicaj. Halaman Billplz tidak menunjukkan baris seumpamanya, jadi sama ada RM1.25 termasuk cukai masih belum selesai — dan pada bakul kecil bezanya bukan hiasan.
+
+Letakkan 8% itu pada RM1.25 yang jadual ini gunakan, dan fi menjadi RM1.35. Pada komisen 20%, bakul RM20.90 bergerak dari 29 pesanan ke 30, dan bakul RM30 kekal 18. SST tidak mengubah hujah; ia mengubah jawapan cukup untuk kedai yang berada pada 29 pesanan mengira semula.
+
+## Empat kedai yang patut kekal di tempatnya
+
+1. **Bawah kira-kira 25 pesanan seminggu.** Kos tetap tidak peduli volum anda. Pada 100 pesanan sebulan, pelan gerbang sahaja sudah 83 sen satu pesanan sebelum apa-apa fi dibayar.
+2. **Kedai satu produk.** Jika perniagaannya satu hidangan yang dilakukan betul, tiada keluasan menu untuk menjadikan penemuan lebih murah, dan penemuan itulah yang anda beli.
+3. **Tiada khalayak langsung.** Sifar pengikut, tiada kumpulan sembang, tiada pelanggan tetap yang menghantar mesej terus. Bahagian yang dimiliki ialah 0%, dan istilah penemuan tiada penimbang.
+4. **Kedai yang seluruh intinya jejari penghantaran.** Jika makanan hanya elok ketika suam dalam 6 km, penghantar itulah produknya.
+
+Tiada satu pun daripada ini kegagalan. Ia keadaan biasa sebuah kedai pada tahun pertama.
+
+## Empat kedai yang patut keluar
+
+1. **Pelanggan berulang melebihi separuh pesanan.** Penemuan mereka sudah selesai, dan anda membayar komisen pada pelanggan yang akan tetap menemui anda.
+2. **Banyak ambil sendiri.** Tiada penghantar untuk dibeli, tiada fi penghantaran untuk dipertikaikan, fi rata RM1.00–1.25 berbanding komisen yang membesar dengan bil.
+3. **Bakul melebihi RM80.** Komisen ialah peratus dan fi ialah rata, jadi persilangan bergerak pantas: 6 pesanan sebulan pulang modal pada pemasaran RM0, 9 pesanan pada RM5.
+4. **Khalayak yang sudah ada.** 16,000 pengikut Instagram mejamakan bukan pesanan, tetapi itulah saluran yang menjadikan istilah penemuan cukup kecil untuk diselesaikan.
+
+## Jawapan ketiga ialah yang sebenar: jalankan kedua-duanya
+
+Hampir tiada kedai patut memilih sepenuhnya satu atau sepenuhnya yang lain, dan aritmetik mengatakan begitu sebaik istilah pemasaran dimasukkan. Bentuk yang bertahan:
+
+- **Platform mengekalkan penghantaran dan pelanggan baharu**, kerana kedua-duanya benar-benar lebih murah di sana.
+- **Checkout sendiri mengambil pelanggan tetap dan ambil sendiri**, di mana komisen ialah kerugian tulen.
+- **Satu dapur, dua baris pesanan.** Itulah kos sebenar, dan ia tumpuan perhatian seorang manusia, bukan fi.
+
+Nombor yang memberitahu sama ada ia berkesan ialah bahagian pesanan yang tiba melalui saluran yang anda miliki. Di bawah separuh, platform masih melakukan kerja itu dan komisennya cara lebih murah untuk membelinya. Di atas separuh, ia kontraktor penghantaran dengan fi yang boleh dirunding.
+
+## Cara mengira bahagian yang anda miliki dalam dua minggu
+
+Peraturan separuh hanya berguna jika nombornya diukur, bukan diteka. Dua minggu sudah cukup:
+
+1. **Tandakan setiap pesanan mengikut cara ia tiba.** Platform, laman sendiri, mesej terus, pelanggan tetap, masuk sendiri. Lima kategori, satu helaian kiraan, tiada perisian.
+2. **Catat apa yang anda belanja pada saluran yang anda miliki**, termasuk jam anda sendiri pada kadar yang anda akan bayar orang lain. Saluran percuma yang memakan enam malam seminggu bukan percuma.
+3. **Bahagikan** pesanan yang dimiliki dengan jumlah, dan belanja dengan pesanan yang dimiliki. Anda kini ada dua nombor yang seluruh siri ini berpusing sekelilingnya: bahagian yang anda miliki, dan kos pemerolehan setiap pesanan yang dimiliki.
+
+Jika kos pemerolehan melebihi RM5 dan bahagiannya di bawah separuh, platform lebih murah dan aritmetik di atas mengatakan begitu. Jika bahagiannya melebihi separuh dan kosnya di bawah RM5, komisen ialah fi untuk pelanggan yang sudah mengenali anda.
+
+## Di mana siri ini betul, dan di mana ia terlalu optimistik
+
+Enam artikel berhujah satu arah. Dibaca terhadap jadual di atas, inilah yang bertahan dan yang tidak.
+
+- **"Bayaran FPX berharga RM1.25 dan komisen berharga 15–25%."** Bertahan. Kedua-duanya diterbitkan atau direkodkan, dan tiada yang berubah.
+- **"Pada penghantaran, platform berdaya saing."** Bertahan, dan itulah penemuan yang menjadikan artikel ini perlu.
+- **"Kedai sudah selesai; khalayak itulah kerjanya."** Bertahan, dengan pembetulan: khalayak bukan sekadar kerja, ia **kos yang mendarat pada baris yang sama dengan fi**, dan sebaik ia melebihi kira-kira RM5 satu pesanan, kedai sendiri berhenti menjadi lebih murah.
+- **"Seorang manusia boleh membina dan menjalankannya."** Bertahan dari segi teknikal — husnieats melakukannya — tetapi prototaip tiga hidangan bukan kedai dengan 173 pesanan sebulan. Membina murah; mengendalikan tidak.
+- **"Separuh pesanan anda dari saluran yang anda miliki ialah nombor untuk ditonton."** Bertahan, dan ia mendapat pasangan: kos pemerolehan setiap pesanan yang dimiliki. Satu tanpa yang lain ialah separuh ukuran.
+
+Itulah keseluruhan pembetulan, dinyatakan dalam satu perenggan supaya tiada siapa perlu mencarinya: kami tidak salah bahawa memiliki kedai menjadi murah, kami senyap tentang baris pemasaran, dan baris pemasaran itulah tempat kedai kecil kalah.
+
+## Apa yang akan mengubah fikiran kami
+
+Tiga artifak, setiap satu boleh diperiksa:
+
+1. **Platform yang menerbitkan kad kadar peniaga.** Setiap angka komisen dalam siri ini datang daripada keputusan pengawal selia berhubung lima kontrak tanpa nama, kerana tiada platform mencetaknya.
+2. **Angka Malaysia untuk kos pemerolehan satu pesanan**, mengikut kategori, dengan tarikh. Jadual di atas mempunyai lajur kosong sehingga ada yang mengukurnya.
+3. **Gerbang yang menggabungkan penemuan dengan pembayaran.** Jika penyedia pembayaran mula menghantar pelanggan, perkhidmatan kedua komisen mendapat pesaing dan seluruh perbandingan terbuka semula.
+
+## Pertaruhan
+
+Inilah yang kami katakan secara terus, setelah menghabiskan satu siri berhujah sebaliknya: **bagi kedai di bawah kira-kira 100 pesanan sebulan, pada bakul di bawah RM40, platform ialah kedai yang lebih murah, dan meninggalkannya untuk menjimatkan komisen ialah cara kehilangan wang secara perlahan.**
+
+Itu pertaruhan, bukan ramalan. Pada hari seorang peniaga menunjukkan kad kadar yang mengatakan sebaliknya — atau sumber Malaysia memberikan angka pemerolehan itu di bawah RM3 — kami akan menerbitkan pembetulan dan memautkannya di sini.
+
+Apa yang kami tidak akan lakukan ialah mencetak kos pelanggan yang belum kami lihat, atau menyuruh sesiapa meninggalkan saluran yang masih memenuhkan meja mereka.
+
+---
+
+**Bacaan lanjut**
+
+[Memiliki kedai bermakna mewarisi masalah penemuan](https://upahje.my/ms/articles/memiliki-kedai)
+
+[Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen)
+
+[Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri)
+
+### Sources
+
+- Billplz, harga (FPX B2C RM1.25 Basic dan RM0.75 Standard setiap transaksi, hari bekerja berikutnya; kad 1.8% dan 1.5%, T+2; pelan tahunan RM999) — https://www.billplz.com/pricing (checked 2026-11-26)
+- CHIP, harga (FPX B2C RM1.00 hari berikutnya, B2B RM2.00; kad kredit 2.0%, debit 1.0%, dua hari bekerja; DuitNow QR dalam talian 1.0%; fi tertakluk SST 8%) — https://chip-in.asia/pricing/ (checked 2026-11-26)
+- Stripe Malaysia, harga (3% + RM1.00 setiap caj kad atau transaksi bank yang berjaya) — https://stripe.com/en-my/pricing (checked 2026-11-26)
+- MyCC, keputusan akhir berhubung foodpanda, 11 September 2023, Jadual 3 jalur komisen (n=5 kontrak francais tanpa nama) — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-26)
 
 ## Aritmetik komisen di sebalik memiliki kedai sendiri
 
