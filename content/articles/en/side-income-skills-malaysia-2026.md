@@ -53,7 +53,7 @@ sources:
 
 Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing. Every band below is a count, not an average. The evidence is 11 listings on freelancing.my, posted between September and November 2026, each with its own budget in ringgit, plus one hourly-rate listing that is excluded and named below.
 
-## Who these numbers come from?
+## The numbers come from one platform public pages
 
 One platform, freelancing.my, and every figure is a budget printed on a public project listing rather than a survey answer.
 
@@ -61,7 +61,7 @@ That is a narrower base than it sounds, and the gap matters. The global marketpl
 
 Three exclusions, all deliberate. Listings advertising RM0.00 or RM1.00 are placeholders and were dropped. Listings located outside Malaysia were dropped. Commission-only posts with no stated base rate were dropped, because "salary plus commission" is not a number a reader can plan around.
 
-## Which five skills clear the bar?
+## Five skills clear the two-listing bar
 
 A skill qualified only if at least two listings with a real ringgit budget were posted for it. Five did.
 
@@ -78,7 +78,7 @@ Social media content did not qualify. It had one dated listing plus one hourly r
 ![Five skills' published per-project rates: video editing RM150 to RM2,500, graphic design RM300 to RM1,100, data entry RM50 to RM70, cold calling RM700 to RM1,000, app testing RM330 to RM600](/figures/side-income-rates.svg)
 *Published rates per project: data entry tops out at RM70 while video editing reaches RM2,500.*
 
-## What does video editing pay?
+## Video editing pays RM150 to RM2,500 a project
 
 Three listings, RM150 to RM2,500 per project, and the spread is scope rather than skill: a short-form trial batch, a full short film, and a shoot-and-edit role.
 
@@ -86,7 +86,7 @@ The lowest is RM150 for a short-form TikTok or Reels trial batch, which is a pai
 
 Getting employable: our estimate is two to four months of deliberate practice on one editing tool, longer if you have never cut to a brief. The listings ask for samples, not certificates, so a portfolio of three finished pieces matters more than a course.
 
-## What does graphic design pay?
+## Graphic design pays RM300 to RM1,100
 
 Two listings, RM300 and RM1,100 per project, and the difference is volume: a set of retail point-of-sale items against a monthly content batch.
 
@@ -94,7 +94,7 @@ RM300 covers a booth, tent cards, banners and an illustration for a retail promo
 
 Getting employable: our estimate is one to three months if you already draw or use design software, and the barrier is canva-level output versus print-ready files. Retail work asks for the second.
 
-## What does data entry pay?
+## Data entry pays RM50 to RM70 a task
 
 Two listings, RM50 and RM70 per project, and both are small one-off tasks rather than an income you can build on.
 
@@ -102,7 +102,7 @@ RM50 is a simple verification task. RM70 is for local coordinators on a purchase
 
 Getting employable: today. The barrier is not skill, it is that the work is intermittent, low-paid and competes with anyone with a browser. Treat it as a first step to a better-paying listing, not as a side income in itself.
 
-## What does cold calling pay?
+## Cold calling pays RM700 to RM1,000
 
 Two listings, RM700 and RM1,000 per project, both advertised budgets rather than agreed fees, and both likely to be part-time hours.
 
@@ -110,7 +110,7 @@ RM700 is a part-time remote sales development role advertised as no experience n
 
 Getting employable: today, with a script and a clear voice. The risk is that commission structures replace the budget after the first month, which is why the two rows are marked as advertised rather than agreed.
 
-## What does app testing pay?
+## App testing pays RM330 to RM600
 
 Two listings, RM330 and RM600 per project, and both are Malaysian-specific work: language and locale testing that a global tester cannot do.
 
@@ -118,7 +118,7 @@ RM330 is UX research on trading platforms for Malaysian testers only. RM600 is M
 
 Getting employable: days to weeks. What the listings ask for is device access and language, not a testing qualification.
 
-## What does none of this tell you?
+## One platform, one quarter, advertised budgets
 
 It tells you what clients publicly budget on one platform in one quarter, and nothing about what they pay the person they actually hire, how many hours the work takes, or how often a listing turns into ongoing work.
 

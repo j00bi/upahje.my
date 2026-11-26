@@ -38,13 +38,13 @@ sources:
 
 An AI agent runs a loop by itself: it reads a task, calls tools, looks at the result and decides the next step until the job is done. That covers repetitive work with a clear finish line. It does not cover judgement, money it is not authorised to move, or anything a customer would need explained to them by a person.
 
-## What is an agent, as opposed to a chatbot?
+## An agent acts; a chatbot answers
 
 A chatbot answers. An agent answers, then does something about it, which is why it needs tools it can call (a tool is one thing it is allowed to do, such as look up an order or send an email), a loop that continues after a tool returns, and a transcript, meaning a written record of what it did.
 
 Anthropic's own wording for the layer that runs this is an agent harness, which is the program that holds the conversation and runs the tools, defined as "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([Claude Code docs, read 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Two consequences follow for a small business: the agent can touch real systems, and the harness, not the model, decides what it is allowed to touch.
 
-## What can it do unattended?
+## Unattended work is a narrow list
 
 ![Three panels: work that runs unattended such as sorting an inbox; work the agent prepares for a human to approve such as refunds and customer messages; work that is not for an agent such as judgement calls and physical tasks](/figures/what-an-ai-agent-can-do.svg)
 *Sort the work before you choose a tool: unattended, prepared, and not agent work.*
@@ -59,7 +59,7 @@ Unattended work is work where a wrong answer is cheap to spot and cheap to undo.
 | Draft replies, reports or summaries for someone to send | A person still presses send |
 | Watch a queue and alert a human when a threshold trips | The agent escalates rather than acts |
 
-## What needs a human before it happens?
+## Approval work needs a human first
 
 Approval work is work where the cost of a wrong action is not recoverable by re-running it.
 
@@ -73,7 +73,7 @@ Approval work is work where the cost of a wrong action is not recoverable by re-
 
 So let the agent prepare and let a person approve. An agent that drafts a refund and waits for a click saves the typing and takes none of the risk. I would not run one any other way, and the vendor demos that skip the approval step are the ones to be suspicious of.
 
-## What can it not do at all?
+## Four categories stay out of reach
 
 Four categories, and no amount of prompting changes them.
 
@@ -82,7 +82,7 @@ Four categories, and no amount of prompting changes them.
 3. **Knowledge it does not have.** An agent answers from what it can reach. If your stock is in someone's head, the agent will be confidently wrong.
 4. **Guaranteed accuracy.** Every agent produces a plausible wrong answer sometimes. That is why the approval column exists.
 
-## What does it cost in ringgit?
+## Two bills, in ringgit
 
 Two bills. The smaller one gets the attention.
 
@@ -107,7 +107,7 @@ Begin with a script that reads a CSV of support emails, calls one model per row,
 - **What it costs:** at 2,000 input and 500 output tokens per row, about **RM0.00185 a row**, so a hundred rows is under 20 sen.
 - **Where it breaks first:** a model reading a CSV column will happily mis-parse an empty cell and invent a customer name. Log every input row beside its output, or you will debug the wrong half.
 
-## How do I tell a demo from something that keeps running?
+## A demo works once, in front of you
 
 A demo works once, in front of you. Something that keeps running survives a bad day. Six checks. Each answer should be a thing someone can show you.
 

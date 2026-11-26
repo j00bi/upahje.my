@@ -32,7 +32,7 @@ sources:
 
 An API is an agreed way for two pieces of software to exchange data on request, without a person copying it across by hand. For a Malaysian small business, it is the difference between a staff member retyping marketplace orders into a spreadsheet and your store passing each order straight to the courier's system.
 
-## What does an API actually do for my business?
+## An API carries one defined piece of data on request
 
 An API carries one defined piece of data between two systems, on request, in a format both sides agreed on. MDN describes it as a contract between the application offering it and whatever calls it ([MDN, checked 19 Nov 2026](https://developer.mozilla.org/en-US/docs/Glossary/API)).
 
@@ -44,7 +44,7 @@ An API carries one defined piece of data between two systems, on request, in a f
 ![Your store sends an order to the API, the API passes it to the courier, and the delivery status comes back the same way](/figures/what-is-an-api.svg)
 *One order, out through the API and back as a status.*
 
-## What is the difference between an open and a closed model API?
+## A closed model API can be called but not hosted
 
 A closed model API is one you can call but never host yourself. An open-weight model API is one whose model files you can download and run on hardware you control.
 
@@ -59,15 +59,15 @@ A closed model API is one you can call but never host yourself. An open-weight m
 
 As of 19 November 2026, Mistral's own catalogue lists all three licence shapes side by side: Mistral Small 4 and the Ministral 3 models under Apache 2.0, Z.ai GLM 5.3 and DeepSeek V4.1 Flash under MIT, and Mistral Large 4 under a vendor-specific "Mistral Ecosystem Open Weight License" ([Mistral docs, checked 19 Nov 2026](https://docs.mistral.ai/models)). Closed vendors publish a model catalogue and rates instead of weights ([OpenAI model catalogue, checked 19 Nov 2026](https://developers.openai.com/api/docs/models)).
 
-## Which one should a small business start with?
+## Start with pay-per-call
 
 Pay per call costs nothing when the volume is zero. A server costs every month whether anyone uses it. That arithmetic is why a closed API is the cheaper start for most small businesses. An open-weight model wins only once your monthly usage is high enough to beat the cost of the machine, and someone on your side can run it. For most Malaysian SMEs the second condition decides it.
 
-## What does it cost to have someone wire an API up in Malaysia?
+## No public benchmark prices integration work here
 
 No public benchmark exists for what Malaysian developers charge for API integration work as of November 2026. Quotes vary with how many endpoints you need, whether the integration writes data or only reads it, how authentication works, what should happen when a call fails, and how messy your existing data is. A price given before those five questions are answered is an estimate.
 
-## How do I price the job myself?
+## Five facts price the job before the quote
 
 Pricing starts before you ask for a quote, with five facts that decide the number.
 
@@ -77,15 +77,15 @@ Pricing starts before you ask for a quote, with five facts that decide the numbe
 4. Ask for a fixed price per integration, not an hourly estimate.
 5. Ask what happens to the code and credentials when the engagement ends.
 
-## What does the bill look like each month?
+## The monthly bill is published rates plus hosting
 
 Vendors publish their rates, so the monthly bill can be calculated rather than guessed. OpenAI's standard rate for a small current model, GPT-6 Luna, is USD 0.10 per million input tokens and USD 0.50 per million output tokens ([OpenAI pricing, checked 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). A WhatsApp FAQ bot handling 3,000 messages a month, at roughly 600 tokens in and 200 out per message, costs about USD 0.48 a month in tokens. Add hosting if the integration runs on your own server, and add the exchange rate your card charges, which is not in these figures. Maintenance belongs in this bill too, because a retired model version stops the integration until someone repairs it.
 
-## How do I know if I need an API, or just a person doing it manually?
+## A few tasks a day and cheap mistakes mean do it manually
 
 If the task happens a few times a day and a mistake is cheap to fix, do it manually. An API starts to pay when volume or the cost of an error crosses that line. No published benchmark fixes that line, so this is our judgement: it sits around the point where someone spends more than an hour a day copying, or where one missed order costs more than a month of the vendor's fee. Below that, a careful part-time staff member is cheaper and more reliable.
 
-## How do I protect myself when I pay someone to build this?
+## Settle three things in writing before paying
 
 Settle three things in writing before you pay.
 

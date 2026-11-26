@@ -36,7 +36,7 @@ sources:
 
 RM100 buys one of two things: a seat in someone's app, or a meter of tokens for software you run. Which model wins a leaderboard is a different question. At a stated 2,000-token task, RM100 of Claude Haiku 5.5 tokens is about 54,000 tasks a month, while ChatGPT Plus costs RM99.90 and includes no API key at all.
 
-## What does a subscription include?
+## A subscription sells a seat, not a meter
 
 A consumer plan sells you a seat: a login, a usage allowance and the vendor's interface. It does not hand you an API key.
 
@@ -60,7 +60,7 @@ Claude's annual rate is USD 17 a month against USD 20 monthly, which is RM69.95 
 
 Claude publishes USD 20 and we converted at 4.1145 to RM82.29. OpenAI publishes MYR 99.90 directly for Malaysia.
 
-## What do tokens cost instead?
+## Haiku 5.5 costs USD 0.10 in and USD 0.50 out per million
 
 Anthropic publishes Claude Haiku 5.5 at USD 0.10 per million input tokens and USD 0.50 per million output tokens, with the input figure qualified on the page as applying to prompts up to 100,000 tokens.
 
@@ -71,7 +71,7 @@ That is the meter. To compare it with a subscription, the article has to fix a t
 3. One task: USD 0.00045, which is RM0.00185 at 4.1145.
 4. RM100 ÷ RM0.00185 = about 54,000 tasks.
 
-## What does that mean at three usage levels?
+## Three usage levels keep the meter small
 
 The same meter cost is tiny at light use, trivial at daily use, and still small at heavy use, because text tokens are cheap and seats are priced for people rather than volume.
 
@@ -86,13 +86,13 @@ Each row is tasks × RM0.00185. A 30-day month is assumed. At heavy use you are 
 ![Six horizontal markers on a log scale from RM0.10 to RM100: token bills of RM0.28, RM1.67 and RM11.11 against seats at RM24, RM82.29 and RM99.90](/figures/rm100-month-cost.svg)
 *A month of tokens costs under RM12 at every usage level, against the cheapest paid seat at RM24.*
 
-## What if I want both a seat and a meter?
+## A seat plus a meter is two purchases
 
 Then you are buying two things, and the cheapest version is a smaller seat plus tokens rather than the largest seat.
 
 ChatGPT Go at RM24 leaves RM76 for tokens, about 41,000 tasks at the assumed size. Claude Pro at RM82.29 leaves RM17.71, about 9,500 tasks. The high tiers bundle API credits, which is useful if you want one bill, and expensive if you do not use the credits: Claude Max costs RM411.45 for USD 100 of API credits bundled inside it, which at the same rate is RM411.45 of tokens.
 
-## Where is the line?
+## The line sits near 900 tasks a month
 
 Below roughly 900 tasks a month, a seat is the better buy if a human is doing the asking, because RM24 to RM99.90 buys an interface, memory, file uploads and a vendor's support, and RM1.67 of tokens buys none of that.
 
@@ -100,7 +100,7 @@ Above roughly 6,000 tasks a month, or any time software rather than a person is 
 
 Both lines assume the 2,000-token task. They mark where the arithmetic changes sign, and nothing else.
 
-## What could we not verify?
+## Gemini plan page returned an empty body
 
 Gemini's plan pricing: the page returned an empty body to our fetcher. Cursor and Windsurf plans: not reached. DeepSeek consumer pricing: only its API page was read, and its output-token prices were below the page truncation, so its rows are absent rather than estimated. Copilot Business and Enterprise: not priced on the plans page read, which now sells Free, Pro, Pro+ and Max.
 

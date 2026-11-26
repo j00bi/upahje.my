@@ -32,13 +32,13 @@ sources:
 
 An agent harness is the runtime that runs a model's agent loop: it holds the system prompt, executes tool calls, manages context, applies permissions and supplies a working environment. Vendors use "agent harness" or just "harness". "AI harness" is not a phrase the official sources I opened use, and "agent framework" is a different thing again.
 
-## Who actually says "harness"?
+## Vendors say harness, and the package name follows
 
 Anthropic says "hosted agent harness", and the DeepSeek Harness package uses the bare word as its product noun.
 
 Anthropic's own definition is the clearest: a hosted agent harness "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([Claude Code docs, read 19 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). The installed DeepSeek Harness package uses the word the same way, as in "Harness home" for its config directory ([package README, read 19 Nov 2026](https://www.npmjs.com/package/@deepseek-ai/dsh)). Neither treats it as a metaphor.
 
-## What does the term imply, in practice?
+## The term implies four things, each a line
 
 Four things, and each one is a line rather than a walkthrough.
 
@@ -49,7 +49,7 @@ Four things, and each one is a line rather than a walkthrough.
 
 How it walks through one message, step by step, is covered in [what an agent harness does with your request](https://upahje.my/en/articles/using-the-harness). This article is about the vocabulary, not the loop.
 
-## Where does "AI harness" come from?
+## AI harness does not come from the vendors
 
 Not from the vendors I could read. Across the four official sources opened for this article, the phrase "AI harness" does not appear.
 
@@ -63,7 +63,7 @@ The method has a limit and I will state it: a search-engine query for the exact 
 | Agent framework | Library authors | A code library for building agents, not a runtime that runs one |
 | Agent workspace | OpenBot, MausBot | The product's own word for a harness plus a desktop or a machine per bot |
 
-## Why does the distinction matter when buying?
+## The distinction decides what you ask a vendor
 
 Because the words describe what the product does to your machine and your data, and a framework is not that.
 

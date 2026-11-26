@@ -38,7 +38,7 @@ sources:
 
 Five things, and the score is only one of them: the model, the agent that drove it, the settings, the score, and the cost. Read the first two before the number. The Terminal-bench row for DeepSeek reads 38.5% ± 3.8% under Claude Code, with 8.2 billion tokens, which makes it a DeepSeek model's result inside someone else's harness.
 
-## What is in a leaderboard row?
+## A leaderboard row holds five fields
 
 ![A landscape diagram with columns for model, agent, settings, score and cost. The example row is DeepSeek V4.1 Flash 1017 at max, run under Claude Code on Terminal-bench 4.1, scoring 38.5 percent plus or minus 3.8 with 8.2 billion tokens. A footer states that neither CommandCode nor OpenCode appears in the agent column](/figures/leaderboard-row-anatomy.svg)
 *Read the agent column first: it decides whose number the score is.*

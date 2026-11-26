@@ -23,7 +23,7 @@ sources: []
 
 Most Malaysian SMEs automate the wrong process first. Not because they pick badly on price, but because they pick the process that annoys the owner most, and that process is usually the one nobody has ever written down. Automating it buries the mess under a tool instead of fixing it.
 
-## Why is the worst process the wrong starting point?
+## The worst process is the wrong first build
 
 Because the thing that makes a process painful is almost never the typing. It is the exceptions.
 
@@ -49,7 +49,7 @@ Pain is a signal that the process has accumulated exceptions, and exceptions usu
 
 Automating a compensating process locks the compensation in. Now you have a tool-shaped reason not to fix the thing that caused it. The argument is sometimes made in reverse, as "automate first, fix later", and it only works if the thing you automate is the source rather than the symptom.
 
-## What should you do instead?
+## Three steps, none needing a purchase
 
 Three steps, and none of them needs a purchase.
 

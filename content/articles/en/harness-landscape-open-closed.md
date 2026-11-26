@@ -41,7 +41,7 @@ sources:
 
 The four products a reader is likely to name are two different kinds of thing. Grok Bot from xAI and Dots from OpenAI are closed, hosted products you use through someone else's service. OpenBot and MausBot are source-available projects you can run yourself, and only MausBot's main repository is open source on its own licence. OpenBot is not.
 
-## What is on the market?
+## One row per product, with the evidence level stated
 
 One row per product, with the evidence level stated, because three of these were read from official sources and one was installed here and is now gone.
 
@@ -57,7 +57,7 @@ One row per product, with the evidence level stated, because three of these were
 
 A second MausBot repository described itself as an MIT download repo and was cited in this article until 24 November 2026, when the link returned 404 and the GitHub organisation behind it no longer resolved. The main repository above is the one that can still be checked.
 
-## What do the licences actually let a business do?
+## The licences decide what a business may do
 
 This is the part worth reading twice, because "open source" and "source available" are not the same permission.
 
@@ -70,7 +70,7 @@ Closed hosted products, Grok Bot and Dots, grant neither. You get access under t
 ![Three zones: closed and hosted for Dots and Grok Bot, source available for OpenBot under PolyForm Noncommercial, open source for MausBot under Apache-2.0](/figures/harness-licence-line.svg)
 *Source available is not open source: OpenBot's licence is noncommercial, MausBot's main repo is Apache-2.0.*
 
-## Why does one name map to several projects?
+## One name maps to four unrelated projects
 
 Because "OpenBot" is at least four unrelated projects, and the one installed on this machine cannot now be identified.
 
@@ -78,13 +78,13 @@ That is not a rhetorical caveat. `nightly-labs/openbot` is the desktop agent wor
 
 "GrokBot" has a milder version of the same problem: the GitHub repositories under that name are mostly community guides and clones about xAI's product, not independent harnesses. "Dots" also collides with an unrelated agent repository.
 
-## What did we lose, and how do we know?
+## One harness is now an orphan, and the failure names it
 
 One harness that used to be installed here is now an orphan, and the failure message is the evidence.
 
 The `openmausbot` launcher is still on this machine, and running it fails with a Node `Cannot find module` error naming a payload path that no longer exists. The payload is gone, there is no systemd unit under that name, and no data directory remains. So MausBot appears in the table from its repository, not from our use of it: we ran it earlier in this project and cannot now re-verify that experience.
 
-## Which word should I use?
+## Use the vendor word when you quote the vendor
 
 "Agent harness" if you want the vendor's own term, "harness" if you are talking to someone who already knows. "AI harness" is a modifier the vendors we read do not use. The vocabulary is covered in [agent harness, AI harness, agent framework](https://upahje.my/en/articles/agent-harness-vs-ai-harness).
 

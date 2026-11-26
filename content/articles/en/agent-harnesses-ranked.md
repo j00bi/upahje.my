@@ -32,7 +32,7 @@ sources:
 
 DeepSeek Harness scores highest at 4.35 out of 5, OpenCode second at 4.15, Claude Code third at 3.70 and Codex CLI fourth at 3.45. The scores come from five weighted criteria, each scored only from observations made on this machine on 19 November 2026. Nothing below is general knowledge about these tools.
 
-## How were the scores built?
+## Five weighted criteria, built from what each tool showed
 
 Each tool was scored 1 to 5 on five criteria, and the criteria were weighted for a Malaysian SME that wants automation and cost control.
 
@@ -46,7 +46,7 @@ Each tool was scored 1 to 5 on five criteria, and the criteria were weighted for
 
 A cell scores 5 only when the observation is explicit and complete. A criterion with nothing in our notes scores "not verified" and contributes nothing, rather than averaging to a polite middle. Provider and cost control, MCP and extensibility are editorial scores anchored to the line each tool has in the table, not measured quantities: the table says a tool supports a route, not how well it does it.
 
-## What did we measure?
+## One machine, one day, four harnesses
 
 Four harnesses, one machine, one day. Version, install route, config, automation surface, MCP, provider choice, extensibility and disk footprint.
 
@@ -63,7 +63,7 @@ What that does and does not cover: all four were installed and configured on thi
 | Extensibility | plugin bundles, profile composition, skills, agent teams | `~/.claude/skills`, `--agents` JSON, subagents | `config.toml`, MCP, experimental `exec-server` | `opencode agent`, MCP, ACP server |
 | Local footprint | 3.2 GB | 116 KB | 246 MB | 62 MB |
 
-## What are the scores?
+## The ranking is arithmetic you can reproduce
 
 The ranking comes out of the arithmetic below, and the arithmetic is reproducible from the table above.
 
@@ -78,7 +78,7 @@ The ranking comes out of the arithmetic below, and the arithmetic is reproducibl
 
 Footprint was scored on a stated scale: 5 for under 100 MB, 4 for under 500 MB, 2 for under 5 GB. Non-interactive automation scores 4 rather than 5 for all four because each has one documented route and we did not test a scheduled run for any of them.
 
-## What does each tool win on?
+## Each tool wins on a different criterion
 
 DeepSeek Harness wins on provider choice, MCP and extensibility, and loses on disk.
 
@@ -96,13 +96,13 @@ Codex CLI wins on MCP, because it is the only one of the four documented here as
 
 Its automation route (`codex exec`) is solid and its footprint is mid-pack. The provider line is OpenAI-only through `login`, and `exec-server` is marked experimental, which is what puts it fourth.
 
-## What did we not verify?
+## OpenMausBot is out, and not because it lost
 
 OpenMausBot is out, and not because it lost. The binary is present but errors on launch, its global install and data directory are gone, and its systemd unit is inactive. We tested it and it could not run, so it is not scored and it is not ranked last.
 
 Not verified for any of the four: response quality, latency, token cost, reliability over a week, or behaviour under load. We measured what is in the table and nothing else. A version bump can change any cell here, which is the risk in publishing version-pinned numbers: 0.146.0 and 1.18.11 are today's values, not permanent properties.
 
-## How can I re-run this check?
+## Four commands re-run the check
 
 Four commands and a filesystem check, and you can audit every number in the tables.
 

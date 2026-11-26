@@ -20,7 +20,7 @@ changelog:
 
 A brief that keeps you from paying twice names five things before anyone quotes: inputs, outputs, failure behaviour, the acceptance test, and who owns the credentials. A freelancer who quotes without those five is guessing. You then pay for the guess twice, once to build the wrong thing and once to repair it.
 
-## What five things does a freelancer need before quoting?
+## Five facts change the quote
 
 Every one of these changes the price, which is why a quote that arrives without them is not a quote.
 
@@ -30,7 +30,7 @@ Every one of these changes the price, which is why a quote that arrives without 
 4. **The acceptance test.** The exact check that decides the job is done, agreed before work starts.
 5. **Credentials and ownership.** Whose accounts the keys belong to, where they are stored, and what happens to them at the end.
 
-## What does a brief look like?
+## The brief is one document sent to every freelancer
 
 Copy this, fill it in, and send the same document to every freelancer you ask. The point of sending one document is that you can compare quotes afterwards.
 
@@ -67,7 +67,7 @@ BUDGET
 - Excluded: [anything you do not want included]
 ```
 
-## What acceptance test should I agree up front?
+## Agree one acceptance test on real data
 
 One test, on real data, that either passes or fails without an argument.
 
@@ -75,7 +75,7 @@ The strongest version compares a known-correct result against the automated one.
 
 Agree the test before the work starts, in writing, and agree what happens if it fails. A brief with no test hands the definition of "finished" to whoever is being paid to finish it.
 
-## What goes wrong when the brief is thin?
+## Three failures repeat on thin briefs
 
 The same three things, in the same order, on almost every job.
 
@@ -83,7 +83,7 @@ The freelancer builds what is easiest to build rather than what you needed, beca
 
 None of that requires a dishonest freelancer. It requires a brief that could be read two ways, and two people reading it differently.
 
-## How do I compare two quotes on the same brief?
+## Compare line by line against the brief
 
 Compare line by line against the brief, and treat an unanswered line as a gap rather than a bonus.
 
