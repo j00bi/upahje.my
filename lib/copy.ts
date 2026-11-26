@@ -88,7 +88,9 @@ export const HOME_COPY = {
   en: {
     h1: 'Plain answers on tax, tech and tools for Malaysian small businesses.',
     sub: 'Short articles checked against LHDN, Google and vendor documentation. Every claim shows its source and the date we last checked it. In English and Bahasa Melayu.',
-    startCta: 'Start here: are you exempt from e-Invoice?',
+    startCta: 'Am I exempt from e-Invoice?',
+    kicker: 'Independent · Primary sources · Dated',
+    proof: ['Primary source, linked', 'Every figure dated', 'Limits stated, not buried'],
     browseCta: 'Browse all articles',
     sections: {
       rules: 'Rules that changed this year',
@@ -103,7 +105,9 @@ export const HOME_COPY = {
   ms: {
     h1: 'Jawapan lugas tentang cukai, teknologi dan alat untuk perniagaan kecil Malaysia.',
     sub: 'Artikel pendek yang disemak dengan LHDN, Google dan dokumentasi vendor. Setiap dakwaan memaparkan sumbernya dan tarikh semakan terakhir. Dalam bahasa Inggeris dan Bahasa Melayu.',
-    startCta: 'Mula di sini: semak pengecualian e-Invoice anda',
+    startCta: 'Adakah saya dikecualikan e-Invoice?',
+    kicker: 'Bebas · Sumber utama · Bertarikh',
+    proof: ['Sumber utama, dipautkan', 'Setiap angka bertarikh', 'Had dinyatakan, bukan disorok'],
     browseCta: 'Semua artikel',
     sections: {
       rules: 'Peraturan yang berubah tahun ini',

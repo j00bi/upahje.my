@@ -14,7 +14,9 @@ export function generateMetadata({ params }: { params: { lang: string } }): Meta
   const copy = copyFor(params.lang)
   const home = homeFor(params.lang)
   return {
-    title: `${SITE_NAME} - ${copy.tagline}`,
+    // The template already appends '| UpahJe.my'; prefixing SITE_NAME produced
+    // 'UpahJe.my - ... | UpahJe.my' in the tab and in search results.
+    title: copy.tagline,
     description: home.sub,
     alternates: { canonical: absolute(`/${params.lang}`), languages: languagesFor('') },
     ...social(params.lang, `/${params.lang}`, `${SITE_NAME} - ${copy.tagline}`, home.sub),
@@ -60,25 +62,24 @@ export default function Hub({ params }: { params: { lang: string } }) {
     <div className="ui-canvas min-h-screen">
       <TopBar lang={lang} otherHref={`/${lang === 'en' ? 'ms' : 'en'}`} />
 
-      <header className="container-editorial" style={{ paddingTop: 'var(--space-10)', paddingBottom: 'var(--space-8)' }}>
-        <h1 className="type-display" style={{ color: 'var(--ui-ink)', maxWidth: '20ch' }}>{home.h1}</h1>
-        <p className="type-body mt-5" style={{ color: 'var(--ui-body)', maxWidth: 'var(--measure)' }}>{home.sub}</p>
-        <div className="mt-7 flex flex-wrap items-center gap-3">
-          <Link
-            href={startHref}
-            className="type-small inline-flex items-center rounded-[10px] px-5 py-3"
-            style={{ background: 'var(--ui-forest)', color: 'var(--ui-paper)', fontWeight: 600 }}
-          >
+      <header className="container-editorial hero">
+        <p className="hero-kicker">{home.kicker}</p>
+        <h1 className="type-display hero-h1">{home.h1}</h1>
+        <p className="hero-sub">{home.sub}</p>
+        <div className="hero-cta">
+          <Link href={startHref} className="cta cta-primary">
             {home.startCta}
+            <span aria-hidden>→</span>
           </Link>
-          <Link
-            href={`/${lang}/articles`}
-            className="type-small inline-flex items-center rounded-[10px] px-5 py-3"
-            style={{ border: '1px solid var(--ui-rule)', color: 'var(--ui-ink)', fontWeight: 600 }}
-          >
+          <Link href={`/${lang}/articles`} className="cta cta-ghost">
             {home.browseCta}
           </Link>
         </div>
+        <ul className="hero-proof">
+          {home.proof.map((line) => (
+            <li key={line}>{line}</li>
+          ))}
+        </ul>
       </header>
 
       <main className="container-editorial" style={{ paddingBottom: 'var(--space-16)' }}>
