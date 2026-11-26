@@ -1,6 +1,6 @@
 ---
 title: "Aritmetik komisen di sebalik memiliki kedai sendiri"
-description: "Titik pulang modal ialah bilangan pesanan sebulan, bukan perasaan: empat pemboleh ubah menentukan bila memiliki kedai mengalahkan komisen marketplace."
+description: "Titik pulang modal ialah bilangan pesanan sebulan. Dengan fi FPX yang diterbitkan dan julat komisen pengawal selia, ini tempat memiliki mengalahkan menyertai."
 slug: aritmetik-komisen
 translationKey: commission-arithmetic
 format: guide
@@ -14,52 +14,61 @@ canonical: https://upahje.my/ms/articles/aritmetik-komisen
 draft: true
 changelog:
   - date: 2026-11-26
-    note: "Kerangka: aritmetik dan struktur jadual sahaja, kadar menunggu."
-sources: []
+    note: "Mula diterbitkan."
+sources:
+  - title: "Billplz, harga (FPX RM1.25 Basic dan RM0.75 Standard setiap transaksi, kad MYR 1.8% dan 1.5%, penyelesaian hari perniagaan berikutnya untuk FPX dan T+2 untuk kad, pelan tahunan RM999)"
+    url: "https://www.billplz.com/pricing"
+    checked: 2026-11-26
+  - title: "MyCC, keputusan muktamad foodpanda (Delivery Hero Malaysia), versi awam bukan sulit, bertarikh 11 September 2023, julat komisen Jadual 3"
+    url: "https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf"
+    checked: 2026-11-26
 ---
 
 # Aritmetik komisen di sebalik memiliki kedai sendiri
 
-Memiliki kedai menggantikan peratusan dengan bil tetap, jadi perbandingannya bukan pemasaran lawan pemasaran. Ia komisen yang membesar dengan setiap pesanan berbanding kos bulanan yang tidak berubah, dan jawapan jujurnya hanyalah bilangan pesanan tempat kedua-duanya bersilang.
+Angka yang paling anda perlukan ialah yang tiada siapa cetak. Tiada platform penghantaran menerbitkan komisen peniaga, jadi versi jujur keputusan ini ialah satu identiti: masukkan komisen daripada kontrak anda sendiri, fi pembayaran yang diterbitkan, kos tetap bulanan dan bakul purata anda, kemudian baca bilangan pesanan tempat memiliki mengalahkan menyertai.
 
-## Empat pemboleh ubah menentukan persilangan
+## Dua kadar diterbitkan, satu tidak
 
-Aritmetik ini memerlukan empat input, dan kedai yang tidak dapat menulis keempat-empatnya belum boleh menjawab soalan ini.
+Bahagian pembayaran diterbitkan. Billplz mengenakan RM1.25 setiap transaksi FPX pada pelan Basic percuma dan RM0.75 pada pelan Standard RM999 setahun, serta 1.8% atau 1.5% untuk kad MYR, dengan penyelesaian pada hari perniagaan berikutnya untuk FPX dan T+2 untuk kad.
 
-1. **Kos tetap bulanan memiliki**: hosting, perisian kedai, penyelenggaraan, dan sebarang langganan gerbang yang dicaj sama ada anda menjual atau tidak.
-2. **Komisen marketplace**: peratusan yang diambil platform bagi setiap pesanan, seperti yang diterbitkan.
-3. **Kos pembayaran di checkout sendiri**: kadar diskaun pedagang yang dicaj gerbang bagi setiap transaksi, seperti yang diterbitkan.
-4. **Bakul purata**: nilai satu pesanan sebelum sebarang fi diambil.
+Bahagian komisen tidak diterbitkan. Satu-satunya angka yang direkodkan pengawal selia ialah julat dalam keputusan foodpanda oleh suruhanjaya persaingan bertarikh 11 September 2023, Jadual 3: 1% hingga 5%, 10% hingga 25%, 15% hingga 20%, dan dua kali 15% hingga 25%, dengan nama peniaga disunting. Itu julat daripada satu keputusan, bukan kad kadar semasa platform, dan ia digunakan di sini sebagai tiga titik yang dilalui aritmetik ini.
 
-Dengan empat itu, bilangan pesanan titik pulang modal ialah:
+## Identiti, dengan bentuk fi yang sebenarnya terpakai
 
-`N = kos tetap bulanan / ((komisen − MDR) × bakul purata)`
+Komisen membesar dengan setiap pesanan. Fi gerbang tidak selalu begitu: FPX ialah fi tetap setiap transaksi, dan kad ialah peratusan. Jadi ada dua bentuk.
 
-Formula ini hanya berfungsi apabila komisen lebih besar daripada kos pembayaran, kerana kedai yang kadar pembayarannya lebih tinggi daripada komisen marketplace tidak pernah pulang modal pada fi semata-mata. Itu keputusan, bukan kesilapan, dan ia berbaloi diketahui sebelum apa-apa dibina.
+Untuk FPX: `N = kos tetap bulanan / (komisen × bakul − fi FPX)`
 
-## Apa yang jadual perlu tunjukkan
+Untuk kad: `N = kos tetap bulanan / (bakul × (komisen − kadar kad))`
 
-Jadual ini mempunyai satu baris bagi setiap senario dan lajur yang sama setiap kali, supaya pembaca boleh menggantikan andaian dengan angka sendiri dan melihat persilangan itu bergerak.
+Kedua-duanya menghasilkan bilangan pesanan sebulan. Kedua-duanya gagal secara jujur: jika komisen pada sesuatu bakul lebih kecil daripada fi FPX tetap, tiada bilangan pesanan yang pulang modal, dan itu keputusan yang berbaloi diketahui sebelum checkout dibina.
 
-| Senario | Kos tetap bulanan | Komisen | MDR pembayaran | Bakul purata | Pesanan titik pulang modal |
-| --- | --- | --- | --- | --- | --- |
-| Bakul rendah |  |  |  |  |  |
-| Bakul sederhana |  |  |  |  |  |
-| Bakul tinggi |  |  |  |  |  |
+## Rupa persilangan itu
 
-Sel kosong itu disengajakan: kadar tidak dimasukkan ke dalam draf ini sehingga ia membawa sumber dan tarikh semakan, dan sel yang diisi dengan kadar tanpa sumber lebih buruk daripada sel kosong.
+Kos tetap dan bakul di bawah ialah andaian yang dinyatakan supaya barisnya bergerak; gantikan RM150 sebulan dan bakul RM30 dengan angka anda sendiri dan bilangannya berubah. Lajur komisen ialah julat pengawal selia; lajur pembayaran ialah fi Billplz yang diterbitkan.
 
-## Dua kos yang formula ini tinggalkan
+| Julat komisen | FPX pada RM0.75, pesanan sebulan | FPX pada RM1.25, pesanan sebulan | Kad pada 1.8%, pesanan sebulan |
+| --- | --- | --- | --- |
+| 5% | 200 | 600 | 157 |
+| 15% | 40 | 47 | 38 |
+| 25% | 23 | 24 | 22 |
 
-Formula ini membandingkan fi. Ia tidak menilai penemuan yang dahulunya disediakan marketplace, dan ia tidak menilai masa yang dibelanjakan mengurus kedai yang tiada pengunjung.
+Baca jadual mengikut lajur, bukan baris. Pada hujung atas julat terluas pengawal selia, memiliki mengalahkan menyertai selepas kira-kira 23 pesanan sebulan; pada hujung bawah julat tersempit ia mengambil 200 pada pelan FPX termurah, dan 600 pada pelan percuma. Jurang antara 200 dan 23 itulah seluruh hujah siri ini: kadar komisen menentukan sama ada memiliki kedai ialah baki kecil atau perniagaan yang berbeza.
 
-Kedai yang mencapai bilangan titik pulang modal pada fi masih boleh rugi pada pesanan yang tidak lagi diterimanya, sebab itulah bilangan itu permulaan hujah dan bukan penghujungnya.
+## Tiga perkara yang jadual ini tidak nilaikan
 
-## Apa yang perlu dibuat dengan formula ini sebelum kadar tiba
+Pertama, penemuan. Marketplace menghantar pesanan yang anda tidak perlu cari, dan jadual ini menganggap setiap pesanan akan datang juga tanpa usaha itu.
 
-1. Tulis kos tetap bulanan anda, tanpa dibundarkan.
-2. Tulis bakul purata bulan lepas, bukan minggu terbaik anda.
-3. Minta komisen daripada platform secara bertulis, ikut kategori.
-4. Minta MDR dan terma penyelesaian daripada gerbang secara bertulis.
-5. Masukkan empat angka itu ke dalam formula dan baca bilangannya.
+Kedua, pelan tahunan. Pelan Standard RM999 berbaloi hanya melebihi jumlah tempat penjimatan RM0.50 setiap transaksi FPX menampungnya: pada 2,000 pesanan FPX setahun, penjimatannya RM1,000 dan pelan itu membayar dirinya; pada 500, ia tidak.
+
+Ketiga, masa. Kedai yang mencapai titik pulang modal pada fi masih menelan jam mengurusnya, dan tiada kadar yang diterbitkan menilai jam itu.
+
+## Apa yang perlu dibuat sebelum memutuskan
+
+1. Tulis kos tetap bulanan anda, dengan hosting, perisian dan sebarang pelan tahunan dipecahkan kepada bulan.
+2. Tulis bakul purata anda bulan lepas.
+3. Ambil komisen daripada kontrak anda sendiri, secara bertulis, ikut kategori.
+4. Masukkan angka ke dalam bentuk yang sepadan dengan gerbang anda: fi tetap untuk FPX, peratusan untuk kad.
+5. Jika bilangannya jauh melebihi pesanan sebenar anda, marketplace lebih murah; jika di bawahnya, kedai sendiri lebih murah.
 
