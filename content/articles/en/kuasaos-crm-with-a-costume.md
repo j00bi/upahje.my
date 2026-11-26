@@ -117,6 +117,8 @@ Ship any one of those and the phrase "business operating system" stops being dec
 
 That is a wager, not a prophecy, and we will publish the correction the day a vendor proves it wrong.
 
+**Right of reply.** If FunnelEvo or anyone at Kuasa wants to answer this, we will publish the reply in full, unedited, and link it from this page. Send it to husni@upahje.my.
+
 ---
 
 **Read next**

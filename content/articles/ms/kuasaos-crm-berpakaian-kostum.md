@@ -117,6 +117,8 @@ Hantar mana-mana satu daripadanya dan frasa "sistem operasi perniagaan" berhenti
 
 Itu pertaruhan, bukan ramalan, dan kami akan menerbitkan pembetulan pada hari vendor membuktikannya salah.
 
+**Hak menjawab.** Jika FunnelEvo atau sesiapa di Kuasa mahu menjawab artikel ini, kami akan menerbitkan jawapan itu sepenuhnya, tanpa suntingan, dan memautkannya dari halaman ini. Hantar ke husni@upahje.my.
+
 ---
 
 **Bacaan lanjut**
