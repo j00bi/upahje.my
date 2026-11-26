@@ -14,7 +14,10 @@ export const PII_PATTERNS = [
   { category: 'workspace-path', pattern: /(?:^|[\s(])(?:\/home\/[\w.-]+\/)?\.hermes\/[\w./-]+/g, fix: 'do not publish workspace or session directory names' },
   { category: 'uuid', pattern: /\b[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}\b/gi, fix: 'replace the identifier with a placeholder' },
   { category: 'email', pattern: /[a-z0-9._%+-]+@(?:gmail|yahoo)\.[a-z.]{2,}/gi, fix: 'remove or placeholder the address' },
-  { category: 'email', pattern: /\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b/gi, fix: 'remove or placeholder the address' },
+  // The publication's own editorial address is not personal data — it is the
+  // byline contact and the address a right of reply is sent to. Anything else
+  // is still a leak.
+  { category: 'email', pattern: /\b[a-z0-9._%+-]+@(?!upahje\.my)[a-z0-9.-]+\.[a-z]{2,}\b/gi, fix: 'remove or placeholder the address' },
   { category: 'phone', pattern: /\+60[\d\s-]{7,}/g, fix: 'remove or placeholder the phone number' },
   { category: 'api-key', pattern: /\bsk-[A-Za-z0-9_-]{8,}/g, fix: 'never publish a key; reference the env var name instead' },
   { category: 'jwt', pattern: /\beyJ[A-Za-z0-9_-]{10,}/g, fix: 'never publish a token; reference the secret name instead' },
