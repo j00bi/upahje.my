@@ -1,6 +1,6 @@
 ---
 title: "The commission arithmetic behind owning your shop"
-description: "Break-even is a number of orders a month, not a feeling: four variables decide where owning the storefront beats paying a marketplace commission."
+description: "Break-even is a number of orders a month. With the published FPX fee and the regulator's recorded commission bands, here is where owning beats joining."
 slug: commission-arithmetic
 translationKey: commission-arithmetic
 format: guide
@@ -14,52 +14,61 @@ canonical: https://upahje.my/en/articles/commission-arithmetic
 draft: true
 changelog:
   - date: 2026-11-26
-    note: "Skeleton: arithmetic and table structure only, rates pending."
-sources: []
+    note: "First published."
+sources:
+  - title: "Billplz, pricing (FPX RM1.25 Basic and RM0.75 Standard per transaction, card MYR 1.8% and 1.5%, settlement next business day for FPX and T+2 for cards, RM999 annual plan)"
+    url: "https://www.billplz.com/pricing"
+    checked: 2026-11-26
+  - title: "MyCC, final decision on foodpanda (Delivery Hero Malaysia), public non-confidential version, dated 11 September 2023, Table 3 commission bands"
+    url: "https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf"
+    checked: 2026-11-26
 ---
 
 # The commission arithmetic behind owning your shop
 
-Owning the storefront replaces a percentage with a fixed bill, so the comparison is not marketing against marketing. It is a commission that scales with every order against a monthly cost that does not, and the only honest answer is the number of orders where the two cross.
+The number you need most is the one nobody prints. Neither delivery platform publishes a merchant commission, so the honest version of this decision is an identity: put in the commission from your own contract, the published payment fee, your fixed monthly cost and your average basket, and read the order count where owning beats joining.
 
-## Four variables decide the crossing
+## Two rates are published, and one is not
 
-The arithmetic needs four inputs, and a shop that cannot write all four down cannot answer the question yet.
+The payment side is published. Billplz charges RM1.25 per FPX transaction on its free Basic plan and RM0.75 on the RM999-a-year Standard plan, and 1.8% or 1.5% for a MYR card, with settlement next business day for FPX and T+2 for cards.
 
-1. **Monthly fixed cost of owning**: hosting, the storefront software, maintenance, and any gateway subscription that is charged whether you sell or not.
-2. **Marketplace commission**: the percentage the platform keeps per order, as published.
-3. **Payment cost on your own checkout**: the merchant discount rate the gateway charges per transaction, as published.
-4. **Average basket**: what one order is worth before any fee is taken.
+The commission side is not published. The only regulator-recorded figures are the bands in the competition regulator's foodpanda decision of 11 September 2023, Table 3: 1% to 5%, 10% to 25%, 15% to 20%, and twice 15% to 25%, with merchant names redacted. Those are bands from a decision, not a platform's current rate card, and they are used here as the three points the arithmetic moves through.
 
-With those four, the break-even order count is:
+## The identity, with the fee shape that actually applies
 
-`N = fixed monthly cost / ((commission − MDR) × average basket)`
+A commission scales with every order. A gateway fee does not always: FPX is a flat fee per transaction, and a card is a percentage. So there are two forms.
 
-The formula only works when commission is larger than the payment cost, because a storefront whose payment rate is higher than the marketplace commission never breaks even on fees alone. That is a result, not a mistake, and it is worth knowing before you build anything.
+For FPX: `N = fixed monthly cost / (commission × basket − FPX fee)`
 
-## What the table has to show
+For a card: `N = fixed monthly cost / (basket × (commission − card rate))`
 
-The table has one row per scenario and the same columns every time, so a reader can replace the assumptions with their own numbers and see the crossing move.
+Both produce an order count per month. Both fail honestly: if the commission on a basket is smaller than the flat FPX fee, no order count breaks even, and that is a result worth having before you build a checkout.
 
-| Scenario | Fixed monthly cost | Commission | Payment MDR | Average basket | Break-even orders a month |
-| --- | --- | --- | --- | --- | --- |
-| Low basket |  |  |  |  |  |
-| Mid basket |  |  |  |  |  |
-| High basket |  |  |  |  |  |
+## What the crossing looks like
 
-Empty cells are deliberate: the rates are not in this draft until they carry a source and a checked date, and a filled cell with an unsourced rate is worse than a blank one.
+The fixed cost and the basket below are stated assumptions so the rows move; replace RM150 a month and a RM30 basket with your own and the counts change. The commission column is the regulator's band; the payment columns are Billplz's published fees.
 
-## Two costs the formula leaves out
+| Commission band | FPX at RM0.75, orders a month | FPX at RM1.25, orders a month | Card at 1.8%, orders a month |
+| --- | --- | --- | --- |
+| 5% | 200 | 600 | 157 |
+| 15% | 40 | 47 | 38 |
+| 25% | 23 | 24 | 22 |
 
-The formula compares fees. It does not price the discovery a marketplace was providing, and it does not price the time spent running a storefront that nobody visits.
+Read the table by column, not by row. At the top of the regulator's widest band, owning beats joining after about 23 orders a month; at the bottom of the narrowest band it takes 200 on the cheapest FPX plan, and 600 on the free one. The spread between 200 and 23 is the whole argument of this series: the commission rate decides whether owning the shop is a rounding error or a different business.
 
-A shop that reaches the break-even count on fees can still lose money on the orders it no longer receives, which is why the count is the beginning of the argument rather than the end of it.
+## Three things the table does not price
 
-## What to do with the formula before the rates arrive
+The first is discovery. A marketplace sends orders you did not have to find, and this table treats every order as if it would have arrived anyway.
 
-1. Write down your fixed monthly cost, with nothing rounded away.
-2. Write down your average basket from last month, not from your best week.
-3. Ask the platform for the commission in writing, per category.
-4. Ask the gateway for the MDR and settlement terms in writing.
-5. Put the four numbers in the formula and read the count.
+The second is the annual plan. The RM999 Standard plan is worth its fee only above a volume where the RM0.50 saving per FPX transaction covers it: at 2,000 FPX orders a year, the saving is RM1,000 and the plan pays for itself; at 500, it does not.
+
+The third is time. A storefront that reaches break-even on fees still costs the hours spent running it, and no published rate prices those.
+
+## What to do before you decide
+
+1. Write your fixed monthly cost, with hosting, software and any annual plan broken into months.
+2. Write your average basket from last month.
+3. Take the commission from your own contract, in writing, per category.
+4. Put the numbers into the form that matches your gateway: flat fee for FPX, percentage for cards.
+5. If the count is far above your actual orders, the marketplace is cheaper; if it is below, the storefront is.
 
