@@ -53,7 +53,7 @@ sources:
 
 Five skills clear a two-listing bar on the one Malaysian freelance platform whose public pages could be read: video editing, graphic design, data entry, cold calling and app testing. Every band below is a count, not an average. The evidence is 11 listings on freelancing.my, posted between September and November 2026, each with its own budget in ringgit, plus one hourly-rate listing that is excluded and named below.
 
-## The numbers come from one platform public pages
+## One platform’s public pages set the bar
 
 One platform, freelancing.my, and every figure is a budget printed on a public project listing rather than a survey answer.
 

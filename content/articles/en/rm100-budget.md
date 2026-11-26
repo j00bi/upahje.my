@@ -100,7 +100,7 @@ Above roughly 6,000 tasks a month, or any time software rather than a person is 
 
 Both lines assume the 2,000-token task. They mark where the arithmetic changes sign, and nothing else.
 
-## Gemini plan page returned an empty body
+## Gemini publishes no plan price we could read
 
 Gemini's plan pricing: the page returned an empty body to our fetcher. Cursor and Windsurf plans: not reached. DeepSeek consumer pricing: only its API page was read, and its output-token prices were below the page truncation, so its rows are absent rather than estimated. Copilot Business and Enterprise: not priced on the plans page read, which now sells Free, Pro, Pro+ and Max.
 
