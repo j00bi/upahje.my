@@ -1,5 +1,5 @@
 ---
-title: "The licence stack a kedai pays, and two fees on record"
+title: "The licence stack a kedai pays, and two councils' fee lists"
 description: "Opening costs sit in the licence stack and the fit-out, not the website. Two councils print itemised fees; the rest is a method until the counter answers."
 slug: licence-stack-kedai
 translationKey: licence-stack-kedai
@@ -31,7 +31,7 @@ sources:
     checked: 2026-11-26
 ---
 
-# The licence stack a kedai pays, and two fees on record
+# The licence stack a kedai pays, and two councils' fee lists
 
 The money in opening a kedai goes into the licence stack and the fit-out, not the website. Two councils publish itemised fees that can be read today — MBSA in Shah Alam and MBPJ in Petaling Jaya — and both are narrower than they look: one prints processing and sticker fees, the other prints signboard fees, and neither prints the annual premises licence itself.
 
@@ -71,7 +71,7 @@ A food premises licence stack in Malaysia is not one document. It is at least fi
 4. **Food handler certification** for anyone touching food, which depends on the course provider.
 5. **Halal certification**, only if you claim it, which is a separate application and a separate stack.
 
-Two of the five can be priced from published pages: business registration from SSM, and the signboard from MBPJ. For the rest, no fee could be read: the annual premises licence sits behind DBKL's e-lesen portal and MBSJ renders no fee, the food-handler course price was never read, halal was not attempted, and the annual return fee was not read. Those cells stay empty here rather than being filled from memory.
+Two of the five can be priced from published pages: business registration from SSM, and the signboard from MBPJ. For the other three, no fee could be read: the annual premises licence sits behind DBKL's e-lesen portal and MBSJ renders no fee, the food-handler course price was never read, and halal was not attempted. They carry no figure here rather than one filled from memory. SSM's annual return fee is a sixth line of its own, unread for this piece, and it is absent from the table for that reason.
 
 ## What to ask at the counter
 

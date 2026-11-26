@@ -1,5 +1,5 @@
 ---
-title: "Timbunan lesen sebuah kedai, dan dua fi yang tercatat"
+title: "Timbunan lesen kedai, dan dua majlis dengan fi tercatat"
 description: "Kos membuka kedai terletak pada timbunan lesen dan fit-out, bukan laman web. Dua majlis mencetak fi terperinci; selebihnya kaedah sehingga kaunter menjawab."
 slug: timbunan-lesen-kedai
 translationKey: licence-stack-kedai
@@ -31,7 +31,7 @@ sources:
     checked: 2026-11-26
 ---
 
-# Timbunan lesen sebuah kedai, dan dua fi yang tercatat
+# Timbunan lesen kedai, dan dua majlis dengan fi tercatat
 
 Wang untuk membuka kedai masuk ke dalam timbunan lesen dan fit-out, bukan laman web. Dua majlis menerbitkan fi terperinci yang boleh dibaca hari ini — MBSA di Shah Alam dan MBPJ di Petaling Jaya — dan kedua-duanya lebih sempit daripada kelihatan: satu mencetak fi pemprosesan dan stiker, satu lagi mencetak fi papan tanda, dan tiada satu pun mencetak lesen premis tahunan itu sendiri.
 
@@ -71,7 +71,7 @@ Timbunan lesen premis makanan di Malaysia bukan satu dokumen. Ia sekurang-kurang
 4. **Pensijilan pengendali makanan** bagi sesiapa yang menyentuh makanan, bergantung pada penyedia kursus.
 5. **Pensijilan halal**, hanya jika anda mendakwanya, iaitu permohonan dan timbunan berasingan.
 
-Dua daripada lima boleh dihargakan daripada halaman yang diterbitkan: pendaftaran perniagaan daripada SSM, dan papan tanda daripada MBPJ. Bagi selebihnya, tiada fi dapat dibaca: lesen premis tahunan berada di sebalik portal e-lesen DBKL dan MBSJ tidak memaparkan fi, harga kursus pengendali makanan tidak pernah dibaca, halal tidak dicuba, dan fi penyata tahunan tidak dibaca. Sel itu kekal kosong di sini dan bukan diisi daripada ingatan.
+Dua daripada lima boleh dihargakan daripada halaman yang diterbitkan: pendaftaran perniagaan daripada SSM, dan papan tanda daripada MBPJ. Bagi tiga yang lain, tiada fi dapat dibaca: lesen premis tahunan berada di sebalik portal e-lesen DBKL dan MBSJ tidak memaparkan fi, harga kursus pengendali makanan tidak pernah dibaca, dan halal tidak dicuba. Tiada angka dicatatkan di sini dan bukan diisi daripada ingatan. Fi penyata tahunan SSM ialah baris keenam yang tersendiri, tidak dibaca untuk artikel ini, dan sebab itu ia tiada dalam jadual.
 
 ## Apa yang perlu ditanya di kaunter
 
