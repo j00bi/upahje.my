@@ -86,11 +86,9 @@ export const copyFor = (lang: string) => COPY[lang === 'ms' ? 'ms' : 'en']
  */
 export const HOME_COPY = {
   en: {
-    h1: 'Plain answers on tax, tech and tools for Malaysian small businesses.',
+    h1: 'Tax, tech and tools for small businesses, explained plainly.',
     sub: 'Short articles checked against LHDN, Google and vendor documentation. Every claim shows its source and the date we last checked it. In English and Bahasa Melayu.',
     startCta: 'Am I exempt from e-Invoice?',
-    kicker: 'Independent · Primary sources · Dated',
-    proof: ['Primary source, linked', 'Every figure dated', 'Limits stated, not buried'],
     browseCta: 'Browse all articles',
     sections: {
       rules: 'Rules that changed this year',
@@ -103,11 +101,9 @@ export const HOME_COPY = {
     policyPath: '/editorial-policy',
   },
   ms: {
-    h1: 'Jawapan lugas tentang cukai, teknologi dan alat untuk perniagaan kecil Malaysia.',
+    h1: 'Cukai, teknologi dan alat untuk perniagaan kecil, dijelaskan lugas.',
     sub: 'Artikel pendek yang disemak dengan LHDN, Google dan dokumentasi vendor. Setiap dakwaan memaparkan sumbernya dan tarikh semakan terakhir. Dalam bahasa Inggeris dan Bahasa Melayu.',
     startCta: 'Adakah saya dikecualikan e-Invoice?',
-    kicker: 'Bebas · Sumber utama · Bertarikh',
-    proof: ['Sumber utama, dipautkan', 'Setiap angka bertarikh', 'Had dinyatakan, bukan disorok'],
     browseCta: 'Semua artikel',
     sections: {
       rules: 'Peraturan yang berubah tahun ini',

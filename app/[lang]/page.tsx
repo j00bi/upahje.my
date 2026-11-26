@@ -82,7 +82,9 @@ export default function Hub({ params }: { params: { lang: string } }) {
 
       <header className="container-editorial front-matter">
         <h1 className="front-strap">{home.h1}</h1>
-        <p className="front-kicker">{home.kicker}</p>
+        <p className="front-meta">
+          {allPublished.length} {lang === 'ms' ? 'artikel' : 'stories'} · {lang === 'ms' ? 'Inggeris dan Bahasa Melayu' : 'English and Bahasa Melayu'}
+        </p>
       </header>
 
       <main className="container-editorial" style={{ paddingBottom: 'var(--space-16)' }}>

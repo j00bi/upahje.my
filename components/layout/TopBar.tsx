@@ -18,8 +18,10 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
   const sections = [{ href: `/${lang}/topics`, label: lang === 'ms' ? 'Topik' : 'Topics' }]
   const more: { href: string; label: string }[] = []
 
+  // Language lives in the menu as two plain links. The boxed toggle read as a
+  // form control; a publication switches edition with a word, not a widget.
   const languageSwitch = (
-    <div className="inline-flex h-9 items-center overflow-hidden rounded-[8px] border" role="group" aria-label="Language" style={{ borderColor: 'var(--ui-rule)' }}>
+    <div className="flex items-center gap-3" aria-label="Language">
       {LANGUAGES.map((language) => {
         const active = language.code === lang
         return (
@@ -28,14 +30,15 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
             href={active ? `/${language.code}` : otherHref}
             hrefLang={language.htmlLang}
             aria-current={active ? 'true' : undefined}
-            className="inline-flex h-full min-w-[44px] items-center justify-center px-2 text-[13px] font-semibold tracking-[0.04em]"
+            className="text-[12px] font-semibold uppercase tracking-[0.14em]"
             style={{
               color: active ? 'var(--ui-ink)' : 'var(--ui-muted)',
+              textDecoration: 'none',
               boxShadow: active ? 'inset 0 -2px 0 var(--ui-lime)' : undefined,
-              borderLeft: language.code === LANGUAGES[1].code ? '1px solid var(--ui-rule)' : undefined,
+              paddingBottom: active ? '2px' : undefined,
             }}
           >
-            {language.code.toUpperCase()}
+            {language.code === 'en' ? 'ENG' : 'BM'}
           </Link>
         )
       })}
