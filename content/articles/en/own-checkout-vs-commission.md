@@ -43,7 +43,7 @@ Payment gateways publish their prices. We read Billplz's pricing page on 26 Nove
 | Card, non-MYR | 3.8% | 3.5% | T+2 business days |
 | Auto-deduct, MYR | 2.3% + RM1.25 | 2.0% + RM0.75 | T+2 business days |
 
-Delivery platforms do not publish merchant commission. Grab and foodpanda have no public rate card for merchants, which is why the numbers in this article come from a regulator rather than a vendor: the Malaysia Competition Commission's decision on foodpanda, dated 11 September 2023, records commission bands in its Table 3 of **1–5%, 10–25%, 15–20% and 15–25%** depending on the service.
+Delivery platforms do not publish merchant commission. Grab and foodpanda have no public rate card for merchants, which is why the numbers in this article come from a regulator rather than a vendor: the Malaysia Competition Commission's decision on foodpanda, dated 11 September 2023, records commission bands in its Table 3 of **1–5%, 10–25%, 15–20% and 15–25%** depending on the service. Those are five anonymised franchised merchant contracts (n=5), not a platform's current rate card.
 
 Those are recorded ranges from three years ago, not today's quoted rate. Any specific figure for your shop has to come from the contract someone puts in front of you — and that, on its own, tells you something about the two markets.
 
@@ -104,6 +104,16 @@ Break-even orders a month, ignoring delivery:
 > commission rate × average bill × orders = RM1.25 × orders + the cost of getting those customers yourself
 
 The left side is what the platform takes. The right side is what your own checkout costs **plus the marketing you now have to do**. That marketing term is the one everybody leaves out, and it is the reason a shop with no audience should stay on the platform until it has one.
+
+Put numbers to the four and the break-even count falls out. The table below uses a RM150 monthly cost and a RM30 average basket as stated assumptions; substitute your own and read down the columns, because a flat FPX fee and a percentage card rate diverge as the basket moves.
+
+| Commission band | FPX at RM0.75, orders a month | FPX at RM1.25, orders a month | Card at 1.8%, orders a month |
+| --- | --- | --- | --- |
+| 5% | 200 | 600 | 157 |
+| 15% | 40 | 47 | 38 |
+| 25% | 23 | 24 | 22 |
+
+Two things follow from the columns. First, the commission rate decides whether owning the shop is a rounding error or a different business: at the top of the regulator's widest band it takes about 23 orders a month, and at the bottom of the narrowest band it takes 200 on the cheapest FPX plan. Second, the RM999 Standard plan pays for itself at about 2,000 FPX orders a year, where the RM0.50 saved per transaction covers the annual fee at 1,998.
 
 ## What we would tell a shop with three dishes
 
