@@ -67,6 +67,129 @@ For a small Malaysian shop, the 9 is a test, not a policy. The evidence says it 
 - Anderson and Simester, Effects of $9 Price Endings on Retail Sales: Evidence from Field Experiments, QME 1(1):93-110, 2003 (abstract) — https://link.springer.com/article/10.1023/A:1023581927405 (checked 2026-11-24)
 - RePEc/EconPapers record with the same abstract, used to confirm the wording — https://ideas.repec.org/a/kap/qmktec/v1y2003i1p93-110.html (checked 2026-11-24)
 
+## Twelve jobs a rented GPU finishes, and three it cannot
+
+URL: https://upahje.my/en/articles/rented-gpu-jobs-malaysia
+Checked: 2026-11-26
+
+A rented GPU is a tool with one shape: it is excellent at work that starts, finishes, and stops. Everything in this article is sorted by that. If a job has a beginning and an end, renting a card for it is now cheap enough to be unremarkable. If a job has to be awake at three in the morning, renting is usually the wrong answer and an API is usually the right one.
+
+The rate, read from Vast.ai today: an RTX 5060 Ti with 16 GB of VRAM starts at USD 0.09 an hour with a median of USD 0.13, which is about 55 sen an hour at the rate we publish at. An H100 SXM is USD 1.73, about RM7.12. Every cost in this article is that rate multiplied by your time — a formula, not a quote, because your dataset is not ours.
+
+## The memory ladder, which decides what you can attempt
+
+VRAM, not price, is what rules jobs out. For models in four-bit precision, the working rule is roughly 0.6 GB per billion parameters, plus room for the context you feed in.
+
+| VRAM | What it unlocks | Representative card | Rate from |
+| --- | --- | --- | --- |
+| 8 GB | Small classifiers, OCR, transcription, embedding a document set | RTX 5060 | USD 0.09/hr |
+| 16 GB | 7B models at 4-bit, LoRA fine-tunes of small models, image generation | RTX 5060 Ti | USD 0.09/hr |
+| 24 GB | 13B at 4-bit, larger fine-tunes, video work | RTX 4090 / 3090 | USD 0.07–0.09/hr |
+| 48 GB | 34B at 4-bit, multi-GPU-free training runs | RTX 6000 class | quote by host |
+| 80 GB | 70B at 4-bit, full fine-tunes of small models | H100 | USD 1.73/hr |
+
+The jump from 16 GB to 80 GB costs nineteen times more per hour. Almost nothing a Malaysian SME needs sits on the far side of that jump.
+
+## The twelve jobs
+
+Each row is a job we would rent a card for. Time is a realistic band, not a benchmark, and the cost column is the median 16 GB rate applied to that band.
+
+| # | Job | Time | Cost at USD 0.13/hr |
+| --- | --- | --- | --- |
+| 1 | Train a small classifier or regressor on your own rows | minutes | under USD 0.05 |
+| 2 | Fine-tune a small language model on your own text (LoRA) | 1–4 hours | USD 0.13–0.52 |
+| 3 | Build embeddings for a document set, for search or answers | 10–60 min | USD 0.02–0.13 |
+| 4 | Transcribe a year of call recordings or voice notes | 1–6 hours | USD 0.13–0.78 |
+| 5 | Extract fields from invoices, receipts, delivery orders at volume | 30–120 min | USD 0.07–0.26 |
+| 6 | Generate or clean product photography at catalogue scale | 1–3 hours | USD 0.13–0.39 |
+| 7 | Caption and subtitle video, including Malay | 2–8 hours | USD 0.26–1.04 |
+| 8 | Deduplicate and normalise a messy customer or product table | 10–40 min | USD 0.02–0.09 |
+| 9 | Synthetic data to test a rule or an assistant before launch | 1–2 hours | USD 0.13–0.26 |
+| 10 | Evaluate two models against your own examples | 30–90 min | USD 0.07–0.20 |
+| 11 | Render a Blender or CAD animation across many frames | 2–12 hours | USD 0.26–1.56 |
+| 12 | Batch-process images: resize, background removal, watermark | 20–60 min | USD 0.04–0.13 |
+
+Read the right-hand column twice. Twelve jobs, and the most expensive one in the table is under two ringgit. The reason to think about this at all is not the money — it is that a card you forget to switch off bills 24 hours a day, and a card left running for a month costs USD 94, which is more than a year of the API you were avoiding.
+
+### 1. Train something small
+
+The cheapest job on the list and the one most often overcomplicated. If your data fits in a spreadsheet, the model is minutes, not hours. We trained a 1,607-row filter in **five seconds** for four cents.
+
+Worth renting when: the dataset is yours, the question is narrow, and the answer needs to be reproducible next year.
+
+### 2. Fine-tune a small language model
+
+Four-bit quantisation is what made this ordinary: a 7B model needs about 5 GB at four bits, so a 16 GB card can fine-tune a small model with room left for the optimiser state. The output is an adapter measured in tens of megabytes — ours was 73 MB.
+
+What it is for: a model that writes in your voice, classifies your categories, or answers from your documents. What it is not for: teaching a model facts it never saw. Fine-tuning changes how a model talks and what it prefers; it does not reliably install a price list.
+
+### 3. Embeddings for search
+
+Point a card at a folder of PDFs, contracts, product sheets or past quotes and produce vectors you can search. This is the cheapest useful AI job there is, and it runs in minutes on a 16 GB card. The output is small, permanent and yours.
+
+### 4. Transcription
+
+Whisper-class models transcribe reliably and handle Malay better than the free tiers of most products, and the job is embarrassingly parallel: split the audio, run the pieces, join the transcripts. A year of recordings is an afternoon.
+
+This is the job we would recommend first to almost any SME, because the input already exists — call recordings, voice notes, meeting audio — and the output is searchable text you can act on.
+
+### 5. Invoice and document extraction
+
+Malaysian businesses now generate structured e-Invoice data, but the incoming side is still PDFs, photographs of delivery orders, and supplier invoices in three languages. Extracting fields at volume is a batch job, it needs no large model, and it pays for itself the first month you stop typing.
+
+### 6 and 12. Images
+
+Product photography at catalogue scale, and bulk processing — resizing, background removal, watermarking. Both are batch, both fit on a 16 GB card, both are cheaper rented by the hour than subscribed by the month if the work is periodic rather than constant.
+
+### 7. Video
+
+Captioning and subtitling, including Malay, is the highest-value video job because it is the one that makes video searchable and accessible. It is also slow — hours, not minutes — which makes the hourly rate matter more here than anywhere else in the table.
+
+### 8 to 10. The unglamorous ones that pay
+
+Deduplicating a customer table, generating synthetic examples to test an assistant, and evaluating two models against your own cases. None of these produce anything a customer sees, and all three are why a launch does not embarrass you. They are also the jobs most often skipped, because they feel like overhead until the first wrong answer reaches a customer.
+
+### 11. Rendering
+
+Blender and CAD work is the classic GPU rental: frames are independent, the job is finite, and a card you rent for six hours beats a workstation you buy for six thousand ringgit if you render twice a year.
+
+## The three it cannot do
+
+1. **Stay awake.** A marketplace instance can be reclaimed. Anything that must answer at three in the morning needs a host that promises to be there, and that is a different product with a different bill.
+2. **Be trusted with residency.** Nothing on a marketplace tells you which country the machine sits in. For customer data under Malaysian expectations, that is a decision, not a detail.
+3. **Replace an API for small volume.** One image a day, a hundred chat messages a week, a single transcription a month: the API is cheaper, because you are paying for a card that idles between jobs.
+
+## How to price your own job
+
+Take the hourly rate, multiply by the hours you expect, then multiply by three. The first factor is published, the second is a guess, and the third is the correction everyone learns the hard way: dataset preparation, failed runs and the time you spend reading logs all bill as instance hours if you leave the machine on.
+
+Two habits cut that multiplier:
+
+- Write results after every unit of work, so a crash costs the last unit rather than the whole run.
+- End the script with a shutdown command, so a finished job cannot keep billing.
+
+## What we would do first, in Malaysia
+
+1. **Transcribe your voice notes and calls.** Existing data, immediate value, an afternoon of compute.
+2. **Extract fields from incoming invoices.** The pain is weekly and the job is batch.
+3. **Embed your documents so search works.** Small, permanent, and it makes every later assistant better.
+
+The order matters less than the first step: rent the card for a job with an end, switch it off, and look at the bill. It will be smaller than the caution that stopped you, and the second job will be easier than the first.
+
+---
+
+**Read next**
+
+[USD 0.04 of GPU time, and the dataset was the work](https://upahje.my/en/articles/rented-gpu-what-it-finishes)
+
+[The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/gpu-rental-cost-malaysia)
+
+### Sources
+
+- Vast.ai live GPU pricing, read from the pricing page — https://vast.ai/pricing (checked 2026-11-26)
+- QLoRA: Efficient Finetuning of Quantized LLMs, Dettmers et al., arXiv 2305.14314 — https://arxiv.org/abs/2305.14314 (checked 2026-11-26)
+- Robust Speech Recognition via Large-Scale Weak Supervision (Whisper), arXiv 2212.04356 — https://arxiv.org/abs/2212.04356 (checked 2026-11-26)
+
 ## USD 0.04 of GPU time, and the dataset was the work
 
 URL: https://upahje.my/en/articles/rented-gpu-what-it-finishes
@@ -2947,6 +3070,129 @@ Bagi kedai kecil Malaysia, angka 9 ialah ujian, bukan dasar. Bukti berkata ia bo
 
 - Anderson dan Simester, Effects of $9 Price Endings on Retail Sales: Evidence from Field Experiments, QME 1(1):93-110, 2003 (abstrak) — https://link.springer.com/article/10.1023/A:1023581927405 (checked 2026-11-24)
 - Rekod RePEc/EconPapers dengan abstrak yang sama, digunakan untuk mengesahkan perkataan — https://ideas.repec.org/a/kap/qmktec/v1y2003i1p93-110.html (checked 2026-11-24)
+
+## Dua belas kerja GPU sewaan siap, tiga ia tidak mampu
+
+URL: https://upahje.my/ms/articles/kerja-gpu-sewaan-malaysia
+Checked: 2026-11-26
+
+GPU sewaan ialah alat dengan satu bentuk: ia sangat baik untuk kerja yang bermula, siap, dan berhenti. Semua dalam artikel ini disusun mengikut bentuk itu. Jika kerja ada permulaan dan pengakhiran, menyewa kad untuknya kini cukup murah sehingga tidak perlu difikirkan panjang. Jika kerja perlu berjaga pada pukul tiga pagi, sewa biasanya jawapan yang salah dan API biasanya jawapan yang betul.
+
+Kadar yang dibaca dari Vast.ai hari ini: RTX 5060 Ti dengan 16 GB VRAM bermula USD 0.09 sejam, median USD 0.13, iaitu sekitar 55 sen sejam pada kadar yang kami terbitkan. H100 SXM ialah USD 1.73, kira-kira RM7.12. Setiap kos di sini ialah kadar itu didarab dengan masa anda — satu formula, bukan sebut harga, kerana set data anda bukan set data kami.
+
+## Tangga VRAM, yang menentukan apa yang boleh dicuba
+
+VRAM, bukan harga, yang menyingkirkan sesuatu kerja. Bagi model empat bit, hukum kasarnya lebih kurang 0.6 GB setiap bilion parameter, ditambah ruang untuk konteks yang disuap masuk.
+
+| VRAM | Apa yang terbuka | Kad contoh | Kadar mula |
+| --- | --- | --- | --- |
+| 8 GB | Pengelas kecil, OCR, transkripsi, embedding set dokumen | RTX 5060 | USD 0.09/j |
+| 16 GB | Model 7B pada 4-bit, fine-tune LoRA model kecil, penjanaan imej | RTX 5060 Ti | USD 0.09/j |
+| 24 GB | 13B pada 4-bit, fine-tune lebih besar, kerja video | RTX 4090 / 3090 | USD 0.07–0.09/j |
+| 48 GB | 34B pada 4-bit, larian latihan tanpa berbilang GPU | kelas RTX 6000 | ikut hos |
+| 80 GB | 70B pada 4-bit, fine-tune penuh model kecil | H100 | USD 1.73/j |
+
+Lompatan dari 16 GB ke 80 GB berharga sembilan belas kali ganda sejam. Hampir tiada keperluan PKS Malaysia yang terletak di seberang lompatan itu.
+
+## Dua belas kerja itu
+
+Setiap baris ialah kerja yang kami akan sewa kad untuknya. Masa ialah julat realistik, bukan penanda aras, dan lajur kos menggunakan kadar median 16 GB pada julat itu.
+
+| # | Kerja | Masa | Kos pada USD 0.13/j |
+| --- | --- | --- | --- |
+| 1 | Latih pengelas atau regresor kecil atas baris sendiri | minit | bawah USD 0.05 |
+| 2 | Fine-tune model bahasa kecil atas teks sendiri (LoRA) | 1–4 jam | USD 0.13–0.52 |
+| 3 | Bina embedding set dokumen untuk carian atau jawapan | 10–60 min | USD 0.02–0.13 |
+| 4 | Transkripsi setahun rakaman panggilan atau nota suara | 1–6 jam | USD 0.13–0.78 |
+| 5 | Ekstrak medan daripada invois, resit, pesanan penghantaran | 30–120 min | USD 0.07–0.26 |
+| 6 | Jana atau bersihkan foto produk pada skala katalog | 1–3 jam | USD 0.13–0.39 |
+| 7 | Sari kata dan kapsyen video, termasuk Bahasa Melayu | 2–8 jam | USD 0.26–1.04 |
+| 8 | Nyahganda dan normalkan jadual pelanggan atau produk | 10–40 min | USD 0.02–0.09 |
+| 9 | Data sintetik untuk uji peraturan atau pembantu sebelum lancar | 1–2 jam | USD 0.13–0.26 |
+| 10 | Nilai dua model terhadap contoh sendiri | 30–90 min | USD 0.07–0.20 |
+| 11 | Render animasi Blender atau CAD merentas banyak bingkai | 2–12 jam | USD 0.26–1.56 |
+| 12 | Proses kelompok imej: saiz semula, buang latar, tanda air | 20–60 min | USD 0.04–0.13 |
+
+Baca lajur kanan dua kali. Dua belas kerja, dan yang paling mahal dalam jadual pun bawah dua ringgit. Sebab untuk berfikir tentang perkara ini bukan wangnya — tetapi kad yang terlupa dimatikan dibil 24 jam sehari, dan kad yang dibiarkan hidup sebulan berharga USD 94, lebih daripada setahun API yang anda cuba elakkan.
+
+### 1. Latih sesuatu yang kecil
+
+Kerja paling murah dalam senarai dan yang paling kerap dikomplikasikan. Jika data anda muat dalam hamparan, modelnya minit, bukan jam. Kami melatih penapis 1,607 baris dalam **lima saat** dengan kos empat sen.
+
+Patut disewa apabila: set data itu milik anda, soalannya sempit, dan jawapannya perlu boleh diulang tahun depan.
+
+### 2. Fine-tune model bahasa kecil
+
+Kuantisasi empat bit yang menjadikan ini biasa: model 7B perlukan sekitar 5 GB pada empat bit, jadi kad 16 GB boleh fine-tune model kecil dengan ruang untuk keadaan pengoptimum. Hasilnya adapter bersaiz puluhan megabait — milik kami 73 MB.
+
+Kegunaannya: model yang menulis dengan nada anda, mengelaskan kategori anda, atau menjawab daripada dokumen anda. Bukan kegunaannya: mengajar fakta yang model tidak pernah lihat. Fine-tune mengubah cara model bercakap dan apa yang dipilihnya; ia tidak memasang senarai harga dengan boleh dipercayai.
+
+### 3. Embedding untuk carian
+
+Halakan kad pada folder PDF, kontrak, helaian produk atau sebut harga lama dan hasilkan vektor yang boleh dicari. Ini kerja AI berguna paling murah yang ada, dan ia selesai dalam minit pada kad 16 GB. Hasilnya kecil, kekal, dan milik anda.
+
+### 4. Transkripsi
+
+Model kelas Whisper mentranskripsi dengan boleh dipercayai dan mengendalikan Bahasa Melayu lebih baik daripada tahap percuma kebanyakan produk, dan kerjanya selari secara memalukan: pecahkan audio, jalankan kepingan, cantumkan transkrip. Setahun rakaman ialah satu petang.
+
+Ini kerja yang kami akan syorkan dahulu kepada hampir setiap PKS, kerana inputnya sudah ada — rakaman panggilan, nota suara, audio mesyuarat — dan outputnya teks boleh cari yang boleh digunakan.
+
+### 5. Pengekstrakan invois dan dokumen
+
+Perniagaan Malaysia kini menjana data e-Invoice berstruktur, tetapi bahagian masuk masih PDF, gambar pesanan penghantaran, dan invois pembekal dalam tiga bahasa. Mengekstrak medan secara pukal ialah kerja kelompok, tidak perlukan model besar, dan ia membayar balik pada bulan pertama anda berhenti menaip.
+
+### 6 dan 12. Imej
+
+Fotografi produk pada skala katalog, dan pemprosesan pukal — saiz semula, buang latar, tanda air. Kedua-duanya kelompok, kedua-duanya muat pada kad 16 GB, dan kedua-duanya lebih murah disewa ikut jam daripada dilanggan ikut bulan jika kerjanya berkala dan bukan berterusan.
+
+### 7. Video
+
+Kapsyen dan sari kata, termasuk Bahasa Melayu, ialah kerja video paling bernilai kerana ia menjadikan video boleh dicari dan boleh diakses. Ia juga lambat — jam, bukan minit — jadi kadar sejam lebih penting di sini daripada mana-mana baris lain dalam jadual.
+
+### 8 hingga 10. Yang tidak glamor tetapi membayar
+
+Nyahganda jadual pelanggan, jana contoh sintetik untuk menguji pembantu, dan nilai dua model terhadap kes sendiri. Tiada satu pun menghasilkan sesuatu yang pelanggan lihat, dan ketiga-tiganya sebab pelancaran tidak memalukan anda. Ia juga kerja yang paling kerap dilangkau, kerana terasa seperti overhed sehingga jawapan salah pertama sampai kepada pelanggan.
+
+### 11. Render
+
+Kerja Blender dan CAD ialah penyewaan GPU klasik: bingkai berdiri sendiri, kerja terbatas, dan kad yang disewa enam jam mengalahkan stesen kerja yang dibeli enam ribu ringgit jika anda render dua kali setahun.
+
+## Tiga yang ia tidak mampu
+
+1. **Berjaga sepanjang masa.** Instance marketplace boleh ditarik balik. Apa-apa yang mesti menjawab pada pukul tiga pagi perlukan hos yang berjanji hadir, dan itu produk lain dengan bil lain.
+2. **Dipercayai soal kedudukan data.** Tiada apa di marketplace memberitahu anda mesin itu di negara mana. Bagi data pelanggan di bawah jangkaan Malaysia, itu keputusan, bukan perincian.
+3. **Menggantikan API bagi volum kecil.** Satu imej sehari, seratus mesej chat seminggu, satu transkripsi sebulan: API lebih murah, kerana anda membayar kad yang terbiar antara kerja.
+
+## Cara mengira kos kerja sendiri
+
+Ambil kadar sejam, darab dengan jam yang anda jangka, kemudian darab tiga. Faktor pertama diterbitkan, kedua tekaan, dan ketiga pembetulan yang semua orang belajar cara susah: penyediaan set data, larian gagal dan masa membaca log semuanya dibil sebagai jam instance jika mesin dibiarkan hidup.
+
+Dua tabiat mengurangkan pengganda itu:
+
+- Tulis hasil selepas setiap unit kerja, supaya ranap hanya merugikan unit terakhir dan bukan seluruh larian.
+- Akhiri skrip dengan perintah tutup, supaya kerja yang selesai tidak terus dibil.
+
+## Apa yang kami akan buat dahulu, di Malaysia
+
+1. **Transkripsi nota suara dan panggilan anda.** Data sudah ada, nilai segera, satu petang pengiraan.
+2. **Ekstrak medan daripada invois masuk.** Kesakitannya mingguan dan kerjanya kelompok.
+3. **Embed dokumen anda supaya carian berfungsi.** Kecil, kekal, dan ia membaiki setiap pembantu yang dibina kemudian.
+
+Urutan kurang penting daripada langkah pertama: sewa kad untuk kerja yang ada penghujung, tutup ia, dan lihat bil. Ia akan lebih kecil daripada keraguan yang menahan anda, dan kerja kedua lebih mudah daripada yang pertama.
+
+---
+
+**Bacaan lanjut**
+
+[USD 0.04 masa GPU, dan set data itulah kerja sebenar](https://upahje.my/ms/articles/gpu-sewaan-set-data-kerja-sebenar)
+
+[H100 yang sama disewa RM11.89 sejam, atau RM7.12](https://upahje.my/ms/articles/kos-sewa-gpu-malaysia)
+
+### Sources
+
+- Harga GPU langsung Vast.ai, dibaca dari halaman harga — https://vast.ai/pricing (checked 2026-11-26)
+- QLoRA: Efficient Finetuning of Quantized LLMs, Dettmers et al., arXiv 2305.14314 — https://arxiv.org/abs/2305.14314 (checked 2026-11-26)
+- Robust Speech Recognition via Large-Scale Weak Supervision (Whisper), arXiv 2212.04356 — https://arxiv.org/abs/2212.04356 (checked 2026-11-26)
 
 ## Colab akan latih model anda. Ia tidak akan hoskan
 
