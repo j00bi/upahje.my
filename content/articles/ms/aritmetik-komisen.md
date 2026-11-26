@@ -3,15 +3,16 @@ title: "Aritmetik komisen di sebalik memiliki kedai sendiri"
 description: "Titik pulang modal ialah bilangan pesanan sebulan. Dengan fi FPX yang diterbitkan dan julat komisen pengawal selia, ini tempat memiliki mengalahkan menyertai."
 slug: aritmetik-komisen
 translationKey: commission-arithmetic
-format: guide
+format: comparison
 reader: owner
 date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+audience: publication
+cardFigure: "23 pesanan pada 25%, 600 pada 5%"
 tags: [buying-guides, kedai, komisen, malaysia]
 canonical: https://upahje.my/ms/articles/aritmetik-komisen
-draft: true
 changelog:
   - date: 2026-11-26
     note: "Mula diterbitkan."
@@ -72,3 +73,10 @@ Ketiga, masa. Kedai yang mencapai titik pulang modal pada fi masih menelan jam m
 4. Masukkan angka ke dalam bentuk yang sepadan dengan gerbang anda: fi tetap untuk FPX, peratusan untuk kad.
 5. Jika bilangannya jauh melebihi pesanan sebenar anda, marketplace lebih murah; jika di bawahnya, kedai sendiri lebih murah.
 
+---
+
+**Bacaan lanjut**
+
+[RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
+
+[Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri)

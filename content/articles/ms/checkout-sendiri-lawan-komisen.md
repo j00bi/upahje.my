@@ -92,6 +92,8 @@ Kami sendiri membina versi lebih murah bagi perkara yang sama, dan menulisnya se
 
 ## Aritmetik yang menentukan
 
+Bot kami mengerjakan aljabarnya secara berasingan dan ia diterbitkan di sini: [Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen).
+
 Tulis empat nombor:
 
 1. **Pesanan sebulan.** Ikut apa yang mesin juruwang anda kata.

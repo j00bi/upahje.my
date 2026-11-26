@@ -92,6 +92,8 @@ We built the cheaper version of the same thing ourselves, and wrote it up separa
 
 ## The arithmetic that decides it
 
+The bots worked the algebra separately and it is published here: [The commission arithmetic behind owning your shop](https://upahje.my/en/articles/commission-arithmetic).
+
 Write down four numbers:
 
 1. **Orders a month.** Ours: whatever your till says.

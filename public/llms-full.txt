@@ -4,6 +4,70 @@
 
 # English
 
+## The commission arithmetic behind owning your shop
+
+URL: https://upahje.my/en/articles/commission-arithmetic
+Checked: 2026-11-26
+
+The number you need most is the one nobody prints. Neither delivery platform publishes a merchant commission, so the honest version of this decision is an identity: put in the commission from your own contract, the published payment fee, your fixed monthly cost and your average basket, and read the order count where owning beats joining.
+
+## Two rates are published, and one is not
+
+The payment side is published. Billplz prints both FPX figures in its plan table: RM1.25 per transaction on the free Basic plan and RM0.75 on the RM999-a-year Standard plan, while its headline advertises FPX "from as low as MYR 0.75". A MYR card is 1.8% on Basic or 1.5% on Standard, with settlement next business day for FPX and T+2 for cards.
+
+The commission side is not published. The only regulator-recorded figures are the bands in the competition regulator's foodpanda decision of 11 September 2023, Table 3: 1% to 5%, 10% to 25%, 15% to 20%, and twice 15% to 25%, with merchant names redacted. Those bands come from the 11 September 2023 decision, they are five anonymised franchised merchant contracts (n=5), and they are not a platform's current rate card; they are used here as the three points the arithmetic moves through.
+
+## The identity, with the fee shape that actually applies
+
+A commission scales with every order. A gateway fee does not always: FPX is a flat fee per transaction, and a card is a percentage. So there are two forms.
+
+For FPX: `N = fixed monthly cost / (commission × basket − FPX fee)`
+
+For a card: `N = fixed monthly cost / (basket × (commission − card rate))`
+
+Both produce an order count per month. Both fail honestly: if the commission on a basket is smaller than the flat FPX fee, no order count breaks even, and that is a result worth having before you build a checkout.
+
+## What the crossing looks like
+
+The fixed cost and the basket below are stated assumptions so the rows move; replace RM150 a month and a RM30 basket with your own and the counts change. The commission column is the regulator's band; the payment columns are Billplz's published fees.
+
+| Commission band | FPX at RM0.75, orders a month | FPX at RM1.25, orders a month | Card at 1.8%, orders a month |
+| --- | --- | --- | --- |
+| 5% | 200 | 600 | 157 |
+| 15% | 40 | 47 | 38 |
+| 25% | 23 | 24 | 22 |
+
+Read the table by column, not by row. At the top of the regulator's widest band, owning beats joining after about 23 orders a month; at the bottom of the narrowest band it takes 200 on the cheapest FPX plan, and 600 on the free one. The spread between 200 and 23 is the whole argument of this series: the commission rate decides whether owning the shop is a rounding error or a different business.
+
+## Three things the table does not price
+
+The first is discovery. A marketplace sends orders you did not have to find, and this table treats every order as if it would have arrived anyway.
+
+The second is the annual plan. The RM999 Standard plan is worth its fee only above a volume where the RM0.50 saving per FPX transaction covers it: at 2,000 FPX orders a year, the saving is RM1,000 and the plan pays for itself; at 500, it does not.
+
+The third is time. A storefront that reaches break-even on fees still costs the hours spent running it, and no published rate prices those.
+
+## What to do before you decide
+
+1. Write your fixed monthly cost, with hosting, software and any annual plan broken into months.
+2. Write your average basket from last month.
+3. Take the commission from your own contract, in writing, per category.
+4. Put the numbers into the form that matches your gateway: flat fee for FPX, percentage for cards.
+5. If the count is far above your actual orders, the marketplace is cheaper; if it is below, the storefront is.
+
+---
+
+**Read next**
+
+[RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
+
+[One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront)
+
+### Sources
+
+- Billplz, pricing (plan table: FPX B2C RM1.25 on Basic and RM0.75 on Standard per transaction, while the page headline says "from as low as MYR 0.75"; card MYR 1.8% and 1.5%; settlement next business day for FPX and T+2 for cards; RM999 annual plan) — https://www.billplz.com/pricing (checked 2026-11-26)
+- MyCC, final decision on foodpanda (Delivery Hero Malaysia), public non-confidential version, dated 11 September 2023, Table 3 commission bands — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-26)
+
 ## Billed by contacts, sold as an operating system
 
 URL: https://upahje.my/en/articles/kuasaos-crm-with-a-costume
@@ -179,6 +243,8 @@ That last point is the part nobody puts in the pitch deck. The website is the ch
 We built the cheaper version of the same thing ourselves, and wrote it up separately: [One person, one kitchen](https://upahje.my/en/articles/we-built-our-own-storefront). husnieats is a one-person kitchen site with three dishes — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — and its payment flow is **a DuitNow QR code and a WhatsApp receipt**. No gateway, no commission, no platform: the fee is zero and the cost is a human checking the transfer before the kitchen starts. At three dishes and a handful of orders a day, that trade is correct. At fifty orders a day it stops being correct, because the human becomes the bottleneck.
 
 ## The arithmetic that decides it
+
+The bots worked the algebra separately and it is published here: [The commission arithmetic behind owning your shop](https://upahje.my/en/articles/commission-arithmetic).
 
 Write down four numbers:
 
@@ -3288,6 +3354,70 @@ Settle three things in writing before you pay.
 
 # Bahasa Melayu
 
+## Aritmetik komisen di sebalik memiliki kedai sendiri
+
+URL: https://upahje.my/ms/articles/aritmetik-komisen
+Checked: 2026-11-26
+
+Angka yang paling anda perlukan ialah yang tiada siapa cetak. Tiada platform penghantaran menerbitkan komisen peniaga, jadi versi jujur keputusan ini ialah satu identiti: masukkan komisen daripada kontrak anda sendiri, fi pembayaran yang diterbitkan, kos tetap bulanan dan bakul purata anda, kemudian baca bilangan pesanan tempat memiliki mengalahkan menyertai.
+
+## Dua kadar diterbitkan, satu tidak
+
+Bahagian pembayaran diterbitkan. Billplz mencetak kedua-dua angka FPX dalam jadual pelannya: RM1.25 setiap transaksi pada pelan Basic percuma dan RM0.75 pada pelan Standard RM999 setahun, manakala tajuk halamannya mengiklankan FPX "from as low as MYR 0.75". Kad MYR ialah 1.8% pada Basic atau 1.5% pada Standard, dengan penyelesaian pada hari perniagaan berikutnya untuk FPX dan T+2 untuk kad.
+
+Bahagian komisen tidak diterbitkan. Satu-satunya angka yang direkodkan pengawal selia ialah julat dalam keputusan foodpanda oleh suruhanjaya persaingan bertarikh 11 September 2023, Jadual 3: 1% hingga 5%, 10% hingga 25%, 15% hingga 20%, dan dua kali 15% hingga 25%, dengan nama peniaga disunting. Julat itu datang daripada keputusan 11 September 2023, ia lima kontrak peniaga francais tanpa nama (n=5), dan ia bukan kad kadar semasa platform; ia digunakan di sini sebagai tiga titik yang dilalui aritmetik ini.
+
+## Identiti, dengan bentuk fi yang sebenarnya terpakai
+
+Komisen membesar dengan setiap pesanan. Fi gerbang tidak selalu begitu: FPX ialah fi tetap setiap transaksi, dan kad ialah peratusan. Jadi ada dua bentuk.
+
+Untuk FPX: `N = kos tetap bulanan / (komisen × bakul − fi FPX)`
+
+Untuk kad: `N = kos tetap bulanan / (bakul × (komisen − kadar kad))`
+
+Kedua-duanya menghasilkan bilangan pesanan sebulan. Kedua-duanya gagal secara jujur: jika komisen pada sesuatu bakul lebih kecil daripada fi FPX tetap, tiada bilangan pesanan yang pulang modal, dan itu keputusan yang berbaloi diketahui sebelum checkout dibina.
+
+## Rupa persilangan itu
+
+Kos tetap dan bakul di bawah ialah andaian yang dinyatakan supaya barisnya bergerak; gantikan RM150 sebulan dan bakul RM30 dengan angka anda sendiri dan bilangannya berubah. Lajur komisen ialah julat pengawal selia; lajur pembayaran ialah fi Billplz yang diterbitkan.
+
+| Julat komisen | FPX pada RM0.75, pesanan sebulan | FPX pada RM1.25, pesanan sebulan | Kad pada 1.8%, pesanan sebulan |
+| --- | --- | --- | --- |
+| 5% | 200 | 600 | 157 |
+| 15% | 40 | 47 | 38 |
+| 25% | 23 | 24 | 22 |
+
+Baca jadual mengikut lajur, bukan baris. Pada hujung atas julat terluas pengawal selia, memiliki mengalahkan menyertai selepas kira-kira 23 pesanan sebulan; pada hujung bawah julat tersempit ia mengambil 200 pada pelan FPX termurah, dan 600 pada pelan percuma. Jurang antara 200 dan 23 itulah seluruh hujah siri ini: kadar komisen menentukan sama ada memiliki kedai ialah baki kecil atau perniagaan yang berbeza.
+
+## Tiga perkara yang jadual ini tidak nilaikan
+
+Pertama, penemuan. Marketplace menghantar pesanan yang anda tidak perlu cari, dan jadual ini menganggap setiap pesanan akan datang juga tanpa usaha itu.
+
+Kedua, pelan tahunan. Pelan Standard RM999 berbaloi hanya melebihi jumlah tempat penjimatan RM0.50 setiap transaksi FPX menampungnya: pada 2,000 pesanan FPX setahun, penjimatannya RM1,000 dan pelan itu membayar dirinya; pada 500, ia tidak.
+
+Ketiga, masa. Kedai yang mencapai titik pulang modal pada fi masih menelan jam mengurusnya, dan tiada kadar yang diterbitkan menilai jam itu.
+
+## Apa yang perlu dibuat sebelum memutuskan
+
+1. Tulis kos tetap bulanan anda, dengan hosting, perisian dan sebarang pelan tahunan dipecahkan kepada bulan.
+2. Tulis bakul purata anda bulan lepas.
+3. Ambil komisen daripada kontrak anda sendiri, secara bertulis, ikut kategori.
+4. Masukkan angka ke dalam bentuk yang sepadan dengan gerbang anda: fi tetap untuk FPX, peratusan untuk kad.
+5. Jika bilangannya jauh melebihi pesanan sebenar anda, marketplace lebih murah; jika di bawahnya, kedai sendiri lebih murah.
+
+---
+
+**Bacaan lanjut**
+
+[RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
+
+[Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri)
+
+### Sources
+
+- Billplz, harga (jadual pelan: FPX B2C RM1.25 pada Basic dan RM0.75 pada Standard setiap transaksi, manakala tajuk halaman menyebut "from as low as MYR 0.75"; kad MYR 1.8% dan 1.5%; penyelesaian hari perniagaan berikutnya untuk FPX dan T+2 untuk kad; pelan tahunan RM999) — https://www.billplz.com/pricing (checked 2026-11-26)
+- MyCC, keputusan muktamad foodpanda (Delivery Hero Malaysia), versi awam bukan sulit, bertarikh 11 September 2023, julat komisen Jadual 3 — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-26)
+
 ## RM1.25 atau 15%: kos checkout sendiri
 
 URL: https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen
@@ -3357,6 +3487,8 @@ Perkara terakhir itulah yang tiada dalam dek pembentangan. Laman web ialah check
 Kami sendiri membina versi lebih murah bagi perkara yang sama, dan menulisnya secara berasingan: [Satu orang, satu dapur](https://upahje.my/ms/articles/kami-bina-kedai-sendiri). husnieats ialah laman dapur satu orang dengan tiga hidangan — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — dan aliran bayarannya ialah **kod QR DuitNow dan resit melalui WhatsApp**. Tiada gerbang, tiada komisen, tiada platform: fi sifar dan kosnya seorang manusia memeriksa pemindahan sebelum dapur mula. Pada tiga hidangan dan segelintir pesanan sehari, pertukaran itu betul. Pada lima puluh pesanan sehari ia berhenti betul, kerana manusia itu menjadi kesesakan.
 
 ## Aritmetik yang menentukan
+
+Bot kami mengerjakan aljabarnya secara berasingan dan ia diterbitkan di sini: [Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen).
 
 Tulis empat nombor:
 

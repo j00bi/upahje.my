@@ -19,6 +19,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## English articles
 
+- [The commission arithmetic behind owning your shop](https://upahje.my/en/articles/commission-arithmetic): Break-even is a number of orders a month. With the published FPX fee and the regulator's recorded commission bands, here is where owning beats joining.
 - [Billed by contacts, sold as an operating system](https://upahje.my/en/articles/kuasaos-crm-with-a-costume): KuasaOS bills RM49 to RM499 a month by contact count. Its own footer calls it a CRM. On the pricing page, payroll, SST and e-Invoice appear zero times.
 - [RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission): An FPX payment costs RM1.25. A delivery platform takes 15 to 25% of the bill. The arithmetic that decides whether owning the shop is worth the discovery.
 - [A 9-ending works on new items. Nobody has proved the rest.](https://upahje.my/en/articles/price-endings-nine): Three American field experiments: a $9 ending raised demand in all three, strongest on new items. No effect size published, no Malaysian data, no percentage.
@@ -63,6 +64,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Bahasa Melayu articles
 
+- [Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen): Titik pulang modal ialah bilangan pesanan sebulan. Dengan fi FPX yang diterbitkan dan julat komisen pengawal selia, ini tempat memiliki mengalahkan menyertai.
 - [RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen): Bayaran FPX RM1.25. Platform penghantaran ambil 15 hingga 25% daripada bil. Aritmetik yang menentukan sama ada memiliki kedai sendiri berbaloi.
 - [USD 0.04 untuk masa GPU, dan set data itulah kerja sebenar](https://upahje.my/ms/articles/gpu-sewaan-set-data-kerja-sebenar): RTX 5060 Ti sewaan melatih penapis dagangan dalam lima saat dengan kos empat sen. Set data ambil masa lebih lama, dan itulah pelajarannya.
 - [Hujung 9 berkesan pada barang baharu](https://upahje.my/ms/articles/hujung-harga-sembilan): Tiga eksperimen lapangan Amerika: hujung $9 menaikkan permintaan dalam ketiga-tiganya, paling kuat pada barang baharu. Tiada saiz kesan, tiada data Malaysia.

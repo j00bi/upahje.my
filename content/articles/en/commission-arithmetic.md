@@ -3,15 +3,16 @@ title: "The commission arithmetic behind owning your shop"
 description: "Break-even is a number of orders a month. With the published FPX fee and the regulator's recorded commission bands, here is where owning beats joining."
 slug: commission-arithmetic
 translationKey: commission-arithmetic
-format: guide
+format: comparison
 reader: owner
 date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+audience: publication
+cardFigure: "23 orders at 25%, 600 at 5%"
 tags: [buying-guides, storefront, commission, malaysia]
 canonical: https://upahje.my/en/articles/commission-arithmetic
-draft: true
 changelog:
   - date: 2026-11-26
     note: "First published."
@@ -71,4 +72,12 @@ The third is time. A storefront that reaches break-even on fees still costs the 
 3. Take the commission from your own contract, in writing, per category.
 4. Put the numbers into the form that matches your gateway: flat fee for FPX, percentage for cards.
 5. If the count is far above your actual orders, the marketplace is cheaper; if it is below, the storefront is.
+
+---
+
+**Read next**
+
+[RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
+
+[One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront)
 
