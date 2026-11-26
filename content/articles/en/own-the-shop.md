@@ -77,6 +77,21 @@ Neither delivery platform publishes a merchant commission. The only regulator-re
 
 They are still the only numbers a reader can start from before a contract lands, so the arithmetic below uses the low, middle and high edges and lets the count move.
 
+## What a weekend storefront solves, and what it does not
+
+A storefront is not a hard build. In a weekend a shop can have a domain, a menu with prices, a checkout that takes FPX, an order notification and a receipt, and none of that requires a developer or a subscription to a platform. That is the "easy half" this series keeps naming, and it is genuinely easy.
+
+What the weekend does not produce is a person who has never heard of the shop typing the domain. The build ends with a working checkout and zero visitors, and the second condition is the one that decides whether the shop earns anything.
+
+Put plainly, the capability is a list and the non-capability is one sentence:
+
+- **You can have** a domain, a page per dish, a payment button, a confirmation, and a record of the order.
+- **You cannot get** the stranger, the search result, the recommendation or the repeat customer to arrive, because those are earned by marketing, by habit and by time.
+- **You can own** the customer list once someone orders.
+- **You cannot borrow** the platform's discovery once you leave it.
+
+A shop that reads only the first bullet will build the checkout and wonder why the phone is quiet. A shop that reads the last two understands why the arithmetic below has a marketing term in it.
+
 ## The break-even table
 
 The equation has two sides. The platform takes a percentage of the basket. Your own checkout takes the payment fee, a fixed monthly cost and — the term everybody leaves out — the marketing that now replaces the platform's discovery.
@@ -105,7 +120,7 @@ Three licence categories remain unpriced in everything read for this series: the
 
 ## Delivery is where the comparison usually turns
 
-The commission covers a rider. Your own checkout does not, so the delivery comparison is not the same as the pickup comparison. On a RM30 order, a rider at RM5.00 to RM8.00 that you arrange leaves you RM20.75 to RM23.75, against RM24.00 kept through a platform at 20%.
+The commission covers a rider. Your own checkout does not, so the delivery comparison is not the same as the pickup comparison. On a RM30 order, a rider you arrange at the RM5.00 to RM8.00 this series uses as an assumption leaves you RM20.75 to RM23.75, against RM24.00 kept through a platform at 20%, a point inside the regulator's 15% to 25% band.
 
 Five courier services were checked for this series and none publishes a per-km tariff: GrabExpress renders with only two add-on prices, RM0.80 and RM1.30, which are add-ons and not a fare; Lalamove's pricing page 404s and the fare needs its configurator; Pos Laju renders client-side; J&T and Ninja Van return 404. The radius where your own rider wins is therefore arithmetic from your own quotes, not a published rate.
 
@@ -125,6 +140,14 @@ The measure that matters is the **share of orders arriving through a channel you
 4. Put the numbers into the equation and read the order count, with the marketing term included.
 5. Get the licence stack priced before signing a lease, because the annual premises fee is not on any page read here.
 6. Count the share of your orders from a channel you own, and watch that number monthly.
+
+## The two mistakes this arithmetic prevents
+
+The first is buying a checkout for a shop with no audience. The build is cheap and the fee is a ringgit, so the purchase feels small, but the equation shows the trap: with the marketing term unfunded, the owned side's cost is a fixed bill and no orders, and the break-even count is not a number the shop can reach. The checkout is not the mistake; buying it before there is anyone to check out is.
+
+The second is staying on a platform whose commission sits below the payment fee. The table's bottom rows make it visible: at the low end of the regulator's band, the commission on a small basket can be smaller than a flat FPX fee, and then no order count breaks even on owning. In that range, the platform is genuinely cheaper and the argument for leaving it is about control and customer data, not about money.
+
+Both mistakes come from the same habit: comparing a percentage with a percentage when one side is flat, or comparing a build cost with a commission without counting the discovery the commission included.
 
 ## What is not published, and what that means
 

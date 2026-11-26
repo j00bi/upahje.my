@@ -20,6 +20,9 @@
 | 14 | "Instagram at 16K followers" | https://mejamakan.my | mejamakan.my | 2026-11-26 | source: the shop's own public profile, observed 26 November 2026 |
 | 15 | "no Malaysian rate exists for it" | - | our reading, this machine | 2026-11-26 | estimate: absence check for a published discovery cost |
 
+| 16 | "the RM5.00 to RM8.00 this series uses as an assumption" | - | - | 2026-11-26 | assumption: stated as the series assumption, not a published courier rate |
+| 17 | "at 20%, a point inside the regulator's 15% to 25% band" | https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf | MyCC | 2026-11-26 | estimate: 20% is a point chosen inside the band the decision records; the band is the sourced part |
+
 ## Sections
 
 | H2 | why this section exists |
@@ -29,7 +32,9 @@
 | What the commission is actually costing | The n=5 bands and their date |
 | The break-even table | The equation and the three-row table |
 | The licence stack comes first, and it is mostly unpriced | The council and SSM fees, and the three unpriced categories |
+| What a weekend storefront solves, and what it does not | Capability and non-capability before the arithmetic |
 | Delivery is where the comparison usually turns | The rider gap and the courier dead ends |
 | Discovery is the job you inherit | The marketing term and the mejamakan example |
 | What to do, in the order a reader meets it | Six steps in reading order |
+| The two mistakes this arithmetic prevents | The payoff: no-audience checkout, and a commission below the fee |
 | What is not published, and what that means | The absence list and why the series is method-first |

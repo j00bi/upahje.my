@@ -1,7 +1,7 @@
 ---
 title: "Memiliki kedai bermakna mewarisi masalah penemuan"
 description: "Platform menjual dua perkara: mesin tunai dan pelanggan. Mesin tunai kini satu ringgit; pelanggan tidak pernah menjadi perisian, dan itulah dagangan siri ini."
-slug: own-the-shop
+slug: memiliki-kedai
 translationKey: own-the-shop
 format: guide
 reader: owner
@@ -11,7 +11,7 @@ author: "UpahJe Desk"
 category: buying-guides
 tags: [buying-guides, kedai, komisen, penemuan, malaysia]
 cardFigure: "Satu bil menjadi tiga"
-canonical: https://upahje.my/ms/articles/own-the-shop
+canonical: https://upahje.my/ms/articles/memiliki-kedai
 draft: true
 changelog:
   - date: 2026-11-26
@@ -77,6 +77,21 @@ Tiada platform penghantaran menerbitkan komisen peniaga. Satu-satunya angka yang
 
 Ia masih satu-satunya angka tempat pembaca boleh bermula sebelum kontrak tiba, jadi aritmetik di bawah menggunakan hujung rendah, tengah dan tinggi, dan membiarkan bilangannya bergerak.
 
+## Apa yang diselesaikan kedai hujung minggu, dan apa yang tidak
+
+Kedai bukan binaan yang sukar. Dalam satu hujung minggu kedai boleh ada domain, menu dengan harga, checkout yang menerima FPX, pemberitahuan pesanan dan resit, dan tiada satu pun memerlukan pembangun atau langganan platform. Itulah "separuh yang mudah" yang siri ini sentiasa namakan, dan ia memang mudah.
+
+Apa yang hujung minggu itu tidak hasilkan ialah orang yang tidak pernah mendengar nama kedai menaip domain itu. Binaan berakhir dengan checkout yang berfungsi dan sifar pelawat, dan syarat kedua itulah yang menentukan sama ada kedai itu berpendapatan.
+
+Dinyatakan terus, keupayaannya satu senarai dan ketidakupayaannya satu ayat:
+
+- **Anda boleh ada** domain, satu halaman bagi setiap hidangan, butang bayaran, pengesahan dan rekod pesanan.
+- **Anda tidak boleh dapatkan** orang asing, hasil carian, syor atau pelanggan berulang tiba, kerana semuanya diperoleh melalui pemasaran, kebiasaan dan masa.
+- **Anda boleh miliki** senarai pelanggan sebaik sahaja seseorang memesan.
+- **Anda tidak boleh pinjam** penemuan platform sebaik sahaja anda keluar daripadanya.
+
+Kedai yang membaca hanya perkara pertama akan membina checkout dan tertanya-tanya mengapa telefon senyap. Kedai yang membaca dua yang terakhir faham mengapa aritmetik di bawah mempunyai istilah pemasaran di dalamnya.
+
 ## Jadual titik pulang modal
 
 Persamaan itu ada dua sebelah. Platform mengambil peratusan bakul. Mesin tunai anda sendiri mengambil fi bayaran, kos tetap bulanan dan — istilah yang selalu ditinggalkan — pemasaran yang kini menggantikan penemuan platform.
@@ -105,7 +120,7 @@ Tiga kategori lesen kekal tanpa harga dalam semua yang dibaca untuk siri ini: le
 
 ## Penghantaran ialah tempat perbandingan biasanya berpaling
 
-Komisen meliputi penunggang. Mesin tunai anda sendiri tidak, jadi perbandingan penghantaran bukan perbandingan ambil sendiri. Pada pesanan RM30, penunggang RM5.00 hingga RM8.00 yang anda uruskan meninggalkan RM20.75 hingga RM23.75, berbanding RM24.00 yang disimpan melalui platform pada 20%.
+Komisen meliputi penunggang. Mesin tunai anda sendiri tidak, jadi perbandingan penghantaran bukan perbandingan ambil sendiri. Pada pesanan RM30, penunggang yang anda uruskan pada RM5.00 hingga RM8.00 yang siri ini gunakan sebagai andaian meninggalkan RM20.75 hingga RM23.75, berbanding RM24.00 yang disimpan melalui platform pada 20%, satu titik dalam jalur 15% hingga 25% pengawal selia.
 
 Lima perkhidmatan kurier diperiksa untuk siri ini dan tiada satu menerbitkan tarif per-km: GrabExpress terpapar dengan hanya dua harga tambahan, RM0.80 dan RM1.30, yang merupakan tambahan dan bukan tambang; halaman harga Lalamove 404 dan tambangnya memerlukan konfigurator; Pos Laju memaparkan di sebelah klien; J&T dan Ninja Van memulangkan 404. Jejari tempat penunggang anda menang ialah aritmetik daripada sebut harga sendiri, bukan kadar yang diterbitkan.
 
@@ -125,6 +140,14 @@ Ukuran yang penting ialah **bahagian pesanan yang tiba melalui saluran yang anda
 4. Masukkan angka ke dalam persamaan dan baca bilangan pesanan, dengan istilah pemasaran disertakan.
 5. Dapatkan harga timbunan lesen sebelum menandatangani pajakan, kerana fi premis tahunan tiada pada mana-mana halaman yang dibaca di sini.
 6. Kira bahagian pesanan anda daripada saluran milik, dan perhatikan angka itu setiap bulan.
+
+## Dua kesilapan yang dihalang aritmetik ini
+
+Pertama, membeli checkout untuk kedai tanpa khalayak. Binaannya murah dan fi satu ringgit, jadi pembelian itu terasa kecil, tetapi persamaan menunjukkan perangkapnya: dengan istilah pemasaran tidak dibiayai, pihak milik menanggung bil tetap tanpa pesanan, dan bilangan pulang modal bukan angka yang boleh dicapai kedai itu. Checkout bukan kesilapan; membelinya sebelum ada orang untuk checkout ialah kesilapan.
+
+Kedua, kekal di platform yang komisennya lebih rendah daripada fi bayaran. Baris bawah jadual menjadikannya kelihatan: pada hujung rendah jalur pengawal selia, komisen pada bakul kecil boleh lebih kecil daripada fi FPX tetap, dan ketika itu tiada bilangan pesanan pulang modal pada memiliki. Dalam julat itu platform memang lebih murah, dan hujah untuk meninggalkannya ialah kawalan dan data pelanggan, bukan wang.
+
+Kedua-dua kesilapan datang daripada tabiat yang sama: membandingkan peratusan dengan peratusan sedangkan satu pihak tetap, atau membandingkan kos binaan dengan komisen tanpa mengira penemuan yang komisen itu sertakan.
 
 ## Apa yang tidak diterbitkan, dan apa maksudnya
 
