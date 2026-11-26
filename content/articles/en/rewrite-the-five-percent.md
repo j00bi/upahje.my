@@ -61,7 +61,7 @@ If every part is uniformly mediocre, there is no single hot function; there are 
 
 The last row is the common mistake: a 4-second page can be one uncompressed hero image, and no amount of Rust will touch it.
 
-## For an SME site, the answer is the 5%
+## For an SME site, the slow thing is one image, one query or one script
 
 For a Malaysian small-business site, the slow thing is almost always one image, one query, or one blocking script, and the correct response is to fix that and stop. A full port is a decision for a team with a profiling budget and a release process. For a shop with five pages and a product list, an eleven-thousand-star framework is not the constraint.
 

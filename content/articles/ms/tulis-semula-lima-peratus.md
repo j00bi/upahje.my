@@ -61,7 +61,7 @@ Jika setiap bahagian aplikasi sama-sama sederhana, fungsi panas tidak bersembuny
 
 Baris terakhir itulah yang pembeli selalu tersalah. Halaman 4 saat boleh jadi satu imej hero yang tidak dimampatkan, dan tiada jumlah Rust akan menyentuhnya.
 
-## Bagi laman PKS, jawapannya 5% itu
+## Bagi laman PKS, yang lambat ialah satu imej, satu query atau satu skrip
 
 Bagi laman perniagaan kecil Malaysia, perkara yang lambat hampir selalu satu imej, satu query, atau satu skrip yang menyekat, dan tindak balas yang betul ialah betulkan itu dan berhenti. Pindahan penuh ke Rust ialah keputusan untuk pasukan yang ada bajet profiling dan proses pelepasan. Bagi kedai dengan laman lima halaman dan senarai produk, framework sebelas ribu bintang bukanlah kekangannya.
 
