@@ -88,7 +88,7 @@ mejamakan is a lauk delivery business in KL and Selangor that runs its own site 
 
 That last point is the part nobody puts in the pitch deck. The website is the checkout. The audience is the business.
 
-Our own prototype proves the cheaper version of the same thing. husnieats is a one-person kitchen site with three dishes — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — and its payment flow is **a DuitNow QR code and a WhatsApp receipt**. No gateway, no commission, no platform: the fee is zero and the cost is a human checking the transfer before the kitchen starts. At three dishes and a handful of orders a day, that trade is correct. At fifty orders a day it stops being correct, because the human becomes the bottleneck.
+We built the cheaper version of the same thing ourselves, and wrote it up separately: [One person, one kitchen](https://upahje.my/en/articles/we-built-our-own-storefront). husnieats is a one-person kitchen site with three dishes — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — and its payment flow is **a DuitNow QR code and a WhatsApp receipt**. No gateway, no commission, no platform: the fee is zero and the cost is a human checking the transfer before the kitchen starts. At three dishes and a handful of orders a day, that trade is correct. At fifty orders a day it stops being correct, because the human becomes the bottleneck.
 
 ## The arithmetic that decides it
 

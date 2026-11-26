@@ -88,7 +88,7 @@ mejamakan ialah perniagaan penghantaran lauk di KL dan Selangor yang menjalankan
 
 Perkara terakhir itulah yang tiada dalam dek pembentangan. Laman web ialah checkout. Khalayak ialah perniagaannya.
 
-Prototaip kami membuktikan versi lebih murah bagi perkara yang sama. husnieats ialah laman dapur satu orang dengan tiga hidangan — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — dan aliran bayarannya ialah **kod QR DuitNow dan resit melalui WhatsApp**. Tiada gerbang, tiada komisen, tiada platform: fi sifar dan kosnya seorang manusia memeriksa pemindahan sebelum dapur mula. Pada tiga hidangan dan segelintir pesanan sehari, pertukaran itu betul. Pada lima puluh pesanan sehari ia berhenti betul, kerana manusia itu menjadi kesesakan.
+Kami sendiri membina versi lebih murah bagi perkara yang sama, dan menulisnya secara berasingan: [Satu orang, satu dapur](https://upahje.my/ms/articles/kami-bina-kedai-sendiri). husnieats ialah laman dapur satu orang dengan tiga hidangan — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — dan aliran bayarannya ialah **kod QR DuitNow dan resit melalui WhatsApp**. Tiada gerbang, tiada komisen, tiada platform: fi sifar dan kosnya seorang manusia memeriksa pemindahan sebelum dapur mula. Pada tiga hidangan dan segelintir pesanan sehari, pertukaran itu betul. Pada lima puluh pesanan sehari ia berhenti betul, kerana manusia itu menjadi kesesakan.
 
 ## Aritmetik yang menentukan
 

@@ -176,7 +176,7 @@ mejamakan is a lauk delivery business in KL and Selangor that runs its own site 
 
 That last point is the part nobody puts in the pitch deck. The website is the checkout. The audience is the business.
 
-Our own prototype proves the cheaper version of the same thing. husnieats is a one-person kitchen site with three dishes — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — and its payment flow is **a DuitNow QR code and a WhatsApp receipt**. No gateway, no commission, no platform: the fee is zero and the cost is a human checking the transfer before the kitchen starts. At three dishes and a handful of orders a day, that trade is correct. At fifty orders a day it stops being correct, because the human becomes the bottleneck.
+We built the cheaper version of the same thing ourselves, and wrote it up separately: [One person, one kitchen](https://upahje.my/en/articles/we-built-our-own-storefront). husnieats is a one-person kitchen site with three dishes — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — and its payment flow is **a DuitNow QR code and a WhatsApp receipt**. No gateway, no commission, no platform: the fee is zero and the cost is a human checking the transfer before the kitchen starts. At three dishes and a handful of orders a day, that trade is correct. At fifty orders a day it stops being correct, because the human becomes the bottleneck.
 
 ## The arithmetic that decides it
 
@@ -613,6 +613,88 @@ Simulate the **population**, measure the **decision**. A synthetic customer is a
 - Simulated Customers Never Walk Away: Decision Fidelity of LLM User Simulators Measured Against Real Purchase Outcomes, arXiv 2606.20708 — https://arxiv.org/abs/2606.20708 (checked 2026-11-26)
 - Twin-2K-500: A dataset for building digital twins of over 2,000 people, arXiv 2505.17479 — https://arxiv.org/abs/2505.17479 (checked 2026-11-26)
 - Out of One, Many: Using Language Models to Simulate Human Samples, Argyle et al., Political Analysis — https://arxiv.org/abs/2209.06899 (checked 2026-11-26)
+
+## One person, one kitchen: we built the storefront and ran it
+
+URL: https://upahje.my/en/articles/we-built-our-own-storefront
+Checked: 2026-11-26
+
+This is not an argument against delivery platforms. It is a demonstration of what a single person can now do without one.
+
+We had been writing about the cost of owning your own shop — commission rates, payment fees, the discovery problem — and the writing was starting to feel like advice we had not tested. So we built the thing instead. **husnieats** is a working storefront for one kitchen: three dishes, cooked to order, pickup in Section 7 or delivered by a runner, taking real orders through a site that runs on our own infrastructure.
+
+husnieats is ours; nothing else in this article is.
+
+## What it actually does
+
+Not a menu page with a WhatsApp link. A storefront with the three systems any shop needs to take money without a platform:
+
+**1. Order taking.** The menu is three dishes — Buttermilk Chicken at RM12.90, Korean Chicken at RM13.90, Teh O at RM3.50 — each with a description and an Add button. The customer chooses pickup or delivery, and the delivery price appears **before** they commit, not after.
+
+![The husnieats ordering flow: pick your food, pay by DuitNow, send the receipt on WhatsApp — three steps, no platform in between](/figures/screens/husnieats-ordering.webp)
+
+**2. Ticketing.** Every order gets a short, speakable ticket — A001 through A999, then B001 — because the kitchen board and the runner's phone both need a handle a human can shout across a room. The customer's link uses a separate random token instead, because sequential numbers are guessable and a public URL must not be.
+
+**3. Payment reconciliation.** The customer scans a DuitNow QR, pays the exact amount the order shows, and sends the receipt on WhatsApp. A human checks it, then the kitchen starts. That is the whole payment stack: one QR code, one message, one pair of eyes.
+
+Orders and deliveries are tracked as two separate states, because a pickup order has no rider to wait for. And the money is stored as integer sen, rounded to the nearest ten — the smallest amount that appears on a Malaysian bill — rather than as a decimal that drifts.
+
+![The husnieats menu at mobile width: three dishes, prices, add buttons. One kitchen, three dishes, because that is what can be cooked properly to order](/figures/screens/husnieats-menu.webp)
+
+## The fraction
+
+Here is what that replaces. A payment gateway charges **RM1.25** to collect RM30 by FPX on its free plan, or RM0.75 on a RM999-a-year plan. A card costs **1.8%**. Those are published prices, read from Billplz's page on 26 November 2026.
+
+A delivery platform takes commission. Neither Grab nor foodpanda publishes a merchant rate card, so the only recorded numbers are the bands in the Competition Commission's foodpanda decision of 11 September 2023: **1–5%, 10–25%, 15–20% and 15–25%**, depending on the service. On a RM30 order, that is between RM4.50 and RM7.50.
+
+husnieats pays **nothing per order**. There is no gateway, because the money moves bank-to-bank by QR. The cost is a person reading a receipt, which is the honest trade: at three dishes and a handful of orders a day, a human check is cheaper and more flexible than an integration. At fifty orders a day it would be the bottleneck, and the answer would be a gateway with a per-transaction fee.
+
+So the claim is narrow and testable: **order taking, ticketing and payment reconciliation can be built and run by one person, at a fraction of a commission, with nothing but a domain, a host and a phone.**
+
+## What it does not do
+
+- **No cards.** If a customer only has a card, this shop cannot take the order. That is a real limit, not a design preference.
+- **No rider network.** Delivery is arranged, not dispatched at scale.
+- **No team.** The admin is one person's dashboard, not a back office for ten staff.
+- **No automatic reconciliation.** Someone has to match the receipt to the order. The system makes that quick; it does not make it disappear.
+
+Naming these is the point. A demonstration that hides its edges is a pitch.
+
+## What it takes to do this yourself
+
+Not much, and less than most people expect:
+
+1. **A place to put it.** A domain and a host. The stack here is deliberately ordinary — a web app and a database, both self-hostable — because the point is reproducibility, not cleverness.
+2. **A way to take money.** DuitNow QR costs nothing to display and nothing to receive. A gateway is the upgrade, not the starting point.
+3. **A channel for the receipt.** WhatsApp, which your customers already use and already trust.
+4. **The discipline.** Write the order down, check the payment, mark it cooking, mark it done. Software does not remove this step; it only makes it faster.
+
+## The same idea at commercial scale
+
+husnieats is a prototype. **mejamakan** is the same shape with a business behind it: a lauk delivery operation in KL and Selangor running its own site, a curated weekly menu grouped by day, accounts on its own domain, "From RM18/meal", Monday-to-Friday delivery, and a plan customers renew — a subscription rather than a one-off order. Their own site reports 3,000+ families served.
+
+Two examples, one small and one trading: an individual can stand up a storefront, and a kitchen can run one commercially. Neither needs a marketplace in the middle to take an order.
+
+## Why this matters more than the commission argument
+
+The commission argument is arithmetic, and arithmetic can be argued with: platforms deliver customers, the fee pays for reach, and at low volume the maths often favours staying put. Fine.
+
+The demonstration is different. It says the capability is no longer the barrier. Ten years ago, taking orders online meant either a marketplace or a developer and a five-figure build. Today it means a domain, a QR code and a weekend — and the only thing left to solve is the part no software sells you, which is getting someone to walk through the door.
+
+**So: the storefront is solved. The audience is the work.**
+
+---
+
+**Read next**
+
+[RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
+
+[What a WhatsApp chatbot costs, per message](https://upahje.my/en/articles/whatsapp-chatbot-costs-malaysia)
+
+### Sources
+
+- Billplz pricing: FPX, card and auto-deduct rates, plus settlement terms — https://www.billplz.com/pricing (checked 2026-11-26)
+- MyCC decision on foodpanda, 11 September 2023, commission bands in Table 3 — https://www.mycc.gov.my/ (checked 2026-11-26)
 
 ## Colab will train your model. It will not host it
 
@@ -3272,7 +3354,7 @@ mejamakan ialah perniagaan penghantaran lauk di KL dan Selangor yang menjalankan
 
 Perkara terakhir itulah yang tiada dalam dek pembentangan. Laman web ialah checkout. Khalayak ialah perniagaannya.
 
-Prototaip kami membuktikan versi lebih murah bagi perkara yang sama. husnieats ialah laman dapur satu orang dengan tiga hidangan — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — dan aliran bayarannya ialah **kod QR DuitNow dan resit melalui WhatsApp**. Tiada gerbang, tiada komisen, tiada platform: fi sifar dan kosnya seorang manusia memeriksa pemindahan sebelum dapur mula. Pada tiga hidangan dan segelintir pesanan sehari, pertukaran itu betul. Pada lima puluh pesanan sehari ia berhenti betul, kerana manusia itu menjadi kesesakan.
+Kami sendiri membina versi lebih murah bagi perkara yang sama, dan menulisnya secara berasingan: [Satu orang, satu dapur](https://upahje.my/ms/articles/kami-bina-kedai-sendiri). husnieats ialah laman dapur satu orang dengan tiga hidangan — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — dan aliran bayarannya ialah **kod QR DuitNow dan resit melalui WhatsApp**. Tiada gerbang, tiada komisen, tiada platform: fi sifar dan kosnya seorang manusia memeriksa pemindahan sebelum dapur mula. Pada tiga hidangan dan segelintir pesanan sehari, pertukaran itu betul. Pada lima puluh pesanan sehari ia berhenti betul, kerana manusia itu menjadi kesesakan.
 
 ## Aritmetik yang menentukan
 
@@ -3483,6 +3565,88 @@ Bagi kedai kecil Malaysia, angka 9 ialah ujian, bukan dasar. Bukti berkata ia bo
 
 - Anderson dan Simester, Effects of $9 Price Endings on Retail Sales: Evidence from Field Experiments, QME 1(1):93-110, 2003 (abstrak) — https://link.springer.com/article/10.1023/A:1023581927405 (checked 2026-11-24)
 - Rekod RePEc/EconPapers dengan abstrak yang sama, digunakan untuk mengesahkan perkataan — https://ideas.repec.org/a/kap/qmktec/v1y2003i1p93-110.html (checked 2026-11-24)
+
+## Satu orang, satu dapur: kedai kami sendiri
+
+URL: https://upahje.my/ms/articles/kami-bina-kedai-sendiri
+Checked: 2026-11-26
+
+Ini bukan hujah menentang platform penghantaran. Ini demonstrasi apa yang seorang manusia kini boleh lakukan tanpanya.
+
+Kami sudah lama menulis tentang kos memiliki kedai sendiri — kadar komisen, fi pembayaran, masalah mencari pelanggan — dan tulisan itu mula terasa seperti nasihat yang belum diuji. Jadi kami bina bendanya. **husnieats** ialah kedai yang berfungsi untuk satu dapur: tiga hidangan, dimasak mengikut pesanan, ambil sendiri di Seksyen 7 atau dihantar oleh penghantar, menerima pesanan sebenar melalui laman yang berjalan atas infrastruktur kami sendiri.
+
+husnieats milik kami; tiada apa-apa lain dalam artikel ini milik kami.
+
+## Apa yang ia sebenarnya buat
+
+Bukan halaman menu dengan pautan WhatsApp. Kedai dengan tiga sistem yang setiap perniagaan perlukan untuk mengambil wang tanpa platform:
+
+**1. Mengambil pesanan.** Menunya tiga hidangan — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — setiap satu dengan penerangan dan butang Tambah. Pelanggan memilih ambil sendiri atau penghantaran, dan harga penghantaran muncul **sebelum** mereka mengesahkan, bukan selepas.
+
+![Aliran pesanan husnieats: pilih makanan, bayar dengan DuitNow, hantar resit melalui WhatsApp — tiga langkah, tiada platform di tengah](/figures/screens/husnieats-ordering.webp)
+
+**2. Tiket.** Setiap pesanan mendapat tiket pendek yang boleh disebut — A001 hingga A999, kemudian B001 — kerana papan dapur dan telefon penghantar kedua-duanya perlukan rujukan yang boleh dijerkapkan merentas bilik. Pautan pelanggan pula menggunakan token rawak berasingan, kerana nombor berturutan boleh diteka dan URL awam tidak boleh begitu.
+
+**3. Rekonsiliasi pembayaran.** Pelanggan mengimbas kod QR DuitNow, membayar jumlah tepat yang dipaparkan pesanan, dan menghantar resit melalui WhatsApp. Seorang manusia memeriksanya, kemudian dapur mula memasak. Itulah keseluruhan tindanan pembayaran: satu kod QR, satu mesej, sepasang mata.
+
+Pesanan dan penghantaran dijejak sebagai dua keadaan berasingan, kerana pesanan ambil sendiri tiada penghantar untuk ditunggu. Dan wang disimpan sebagai sen integer, dibundarkan kepada sepuluh sen terdekat — jumlah terkecil yang muncul pada bil Malaysia — bukan perpuluhan yang terhanyut.
+
+![Menu husnieats pada lebar mudah alih: tiga hidangan, harga, butang tambah. Satu dapur, tiga hidangan, kerana itulah yang boleh dimasak dengan betul mengikut pesanan](/figures/screens/husnieats-menu.webp)
+
+## Pecahan kosnya
+
+Inilah yang ia gantikan. Gerbang pembayaran mengenakan **RM1.25** untuk mengutip RM30 melalui FPX pada pelan percuma, atau RM0.75 pada pelan RM999 setahun. Kad berharga **1.8%**. Itu harga yang diterbitkan, dibaca dari halaman Billplz pada 26 November 2026.
+
+Platform penghantaran mengambil komisen. Grab dan foodpanda tidak menerbitkan kad kadar pedagang, jadi satu-satunya angka yang direkodkan ialah jalur dalam keputusan Suruhanjaya Persaingan berhubung foodpanda pada 11 September 2023: **1–5%, 10–25%, 15–20% dan 15–25%**, bergantung pada perkhidmatan. Pada pesanan RM30, itu antara RM4.50 dan RM7.50.
+
+husnieats tidak membayar **apa-apa per pesanan**. Tiada gerbang, kerana wang bergerak dari bank ke bank melalui QR. Kosnya seorang manusia membaca resit, dan itulah pertukaran yang jujur: pada tiga hidangan dan segelintir pesanan sehari, pemeriksaan manusia lebih murah dan lebih anjal daripada integrasi. Pada lima puluh pesanan sehari ia akan menjadi kesesakan, dan jawapannya ialah gerbang dengan fi per transaksi.
+
+Jadi dakwaannya sempit dan boleh diuji: **mengambil pesanan, mengeluarkan tiket dan merekonsiliasi pembayaran boleh dibina dan dijalankan oleh seorang manusia, pada sebahagian kecil daripada komisen, dengan hanya domain, hos dan telefon.**
+
+## Apa yang ia tidak buat
+
+- **Tiada kad.** Jika pelanggan hanya ada kad, kedai ini tidak dapat mengambil pesanan itu. Itu had sebenar, bukan pilihan reka bentuk.
+- **Tiada rangkaian penghantar.** Penghantaran diuruskan, bukan dihantar pada skala.
+- **Tiada pasukan.** Pentadbirannya papan pemuka seorang manusia, bukan bilik belakang untuk sepuluh kakitangan.
+- **Tiada rekonsiliasi automatik.** Seseorang perlu memadankan resit dengan pesanan. Sistem mempercepatkan; ia tidak menghilangkannya.
+
+Menyebut perkara ini ialah intinya. Demonstrasi yang menyembunyikan tepinya ialah jualan.
+
+## Apa yang diperlukan untuk buat sendiri
+
+Tidak banyak, dan kurang daripada jangkaan kebanyakan orang:
+
+1. **Tempat untuk meletakkannya.** Domain dan hos. Tindanan di sini sengaja biasa — aplikasi web dan pangkalan data, kedua-duanya boleh dihos sendiri — kerana intinya kebolehulangan, bukan kepintaran.
+2. **Cara mengambil wang.** Kod QR DuitNow tiada kos untuk dipaparkan dan tiada kos untuk menerima. Gerbang ialah peningkatan, bukan titik mula.
+3. **Saluran untuk resit.** WhatsApp, yang pelanggan anda sudah guna dan sudah percaya.
+4. **Disiplin.** Tulis pesanan, periksa bayaran, tanda sedang dimasak, tanda siap. Perisian tidak menghapuskan langkah ini; ia hanya mempercepatkannya.
+
+## Idea yang sama pada skala komersial
+
+husnieats ialah prototaip. **mejamakan** ialah bentuk yang sama dengan perniagaan di belakangnya: operasi penghantaran lauk di KL dan Selangor yang menjalankan laman sendiri, menu mingguan dikurasi mengikut hari, akaun di domain sendiri, "From RM18/meal", penghantaran Isnin hingga Jumaat, dan pelan yang diperbaharui pelanggan — langganan, bukan pesanan sekali. Laman mereka melaporkan 3,000+ keluarga telah dilayani.
+
+Dua contoh, satu kecil dan satu berniaga: seorang individu boleh menegakkan kedai, dan sebuah dapur boleh menjalankannya secara komersial. Kedua-duanya tidak perlukan marketplace di tengah untuk menerima pesanan.
+
+## Mengapa ini lebih penting daripada hujah komisen
+
+Hujah komisen ialah aritmetik, dan aritmetik boleh dibahaskan: platform membawa pelanggan, fi itu membayar jangkauan, dan pada volum rendah matematiknya sering menyebelahi kekal. Baik.
+
+Demonstrasi berbeza. Ia mengatakan keupayaan bukan lagi penghalang. Sepuluh tahun lalu, menerima pesanan dalam talian bermakna sama ada marketplace atau pembangun dan kos lima angka. Hari ini ia bermakna domain, kod QR dan satu hujung minggu — dan satu-satunya yang tinggal ialah bahagian yang tiada perisian boleh jual, iaitu membuat orang berjalan masuk ke pintu.
+
+**Jadi: kedai sudah selesai. Khalayak itulah kerjanya.**
+
+---
+
+**Bacaan lanjut**
+
+[RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
+
+[Kos chatbot WhatsApp: setiap mesej, setiap bulan](https://upahje.my/ms/articles/kos-chatbot-whatsapp-malaysia)
+
+### Sources
+
+- Harga Billplz: kadar FPX, kad dan auto-deduct, serta terma penyelesaian — https://www.billplz.com/pricing (checked 2026-11-26)
+- Keputusan MyCC berhubung foodpanda, 11 September 2023, jalur komisen dalam Jadual 3 — https://www.mycc.gov.my/ (checked 2026-11-26)
 
 ## Dua belas kerja GPU sewaan siap, tiga ia tidak mampu
 
