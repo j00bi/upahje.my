@@ -106,6 +106,8 @@ Jadual menyelesaikan bahagian fi sahaja, dengan kos bulanan RM150 dan bakul pura
 | 15% | 40 | 47 | 38 |
 | 25% | 23 | 24 | 22 |
 
+Identiti itu diterbitkan sepenuhnya dalam [RM1.25 atau 15%: kos checkout anda sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen); hub ini membawa hasilnya.
+
 Pada hujung atas jalur terluas pengawal selia, memiliki mengalahkan komisen selepas kira-kira **23 pesanan sebulan**. Pada hujung bawah jalur tersempit ia mengambil **200** pada pelan FPX termurah dan **600** pada pelan percuma. Jurang itu seluruh hujahnya: kadar komisen menentukan sama ada memiliki kedai ialah baki kecil atau perniagaan yang berbeza.
 
 Dua penambahbaikan penting. Pelan Billplz RM999 membayar dirinya pada kira-kira **2,000 pesanan FPX setahun**, tempat RM0.50 yang dijimatkan setiap transaksi menampung fi tahunan. Dan apabila komisen pada bakul lebih kecil daripada fi FPX tetap, tiada bilangan pesanan pulang modal — keputusan yang berbaloi diketahui sebelum membina checkout.
@@ -161,16 +163,15 @@ Memiliki kedai berbaloi apabila komisen tinggi, bakul besar, jejari penghantaran
 
 ---
 
-**Selebihnya siri ini**
+## Sisa siri ini
 
-[Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen)
+Enam artikel sudah diterbitkan dan satu ialah hub ini:
 
-[RM1.25 atau 15%: kos checkout anda sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
+- [Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen) menerbitkan identiti di sebalik jadual di atas.
+- [RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen) meletakkan checkout dan komisen sebelah menyebelah pada pesanan yang sama.
+- [Kedai itu mesin tunai, bukan khalayak](https://upahje.my/ms/articles/penemuan-ialah-kerjanya) ialah hujah penemuan.
+- [FPX satu ringgit; kad dua hingga tiga peratus](https://upahje.my/ms/articles/mengambil-bayaran-malaysia) menyatakan bentuk fi dan penyelesaian.
+- [Komisen Grab dan foodpanda (2026)](https://upahje.my/ms/articles/komisen-penghantaran-malaysia) ialah penemuan ketiadaan.
+- [Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri) ialah kedai berfungsi yang siri ini tulis terhadapnya.
 
-[Kedai itu mesin tunai, bukan khalayak](https://upahje.my/ms/articles/penemuan-ialah-kerjanya)
-
-[FPX satu ringgit; kad dua hingga tiga peratus](https://upahje.my/ms/articles/mengambil-bayaran-malaysia)
-
-[Komisen Grab dan foodpanda (2026)](https://upahje.my/ms/articles/komisen-penghantaran-malaysia)
-
-[Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri)
+Dua lagi sudah ditulis dan belum diterbitkan: timbunan lesen, dan jejari kurier. Kedua-duanya akan muncul di sini apabila editor meluluskannya.

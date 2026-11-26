@@ -161,16 +161,15 @@ Owning the shop is worth doing when the commission is high, the basket is large,
 
 ---
 
-**The rest of the series**
+## The rest of the series
 
-[The commission arithmetic behind owning your shop](https://upahje.my/en/articles/commission-arithmetic)
+Six pieces are published and one is this hub:
 
-[RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
+- [The commission arithmetic behind owning your shop](https://upahje.my/en/articles/commission-arithmetic) derives the identity behind the table above.
+- [RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission) puts a checkout and a commission side by side on the same order.
+- [The storefront is a checkout, not an audience](https://upahje.my/en/articles/discovery-is-the-job) is the discovery argument.
+- [FPX costs a ringgit; cards cost 2% to 3%](https://upahje.my/en/articles/taking-money-malaysia) sets out the fee shapes and settlement.
+- [Grab and foodpanda commission rates (2026)](https://upahje.my/en/articles/delivery-commission-malaysia) is the absence finding.
+- [One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront) is the working storefront this series is written against.
 
-[The storefront is a checkout, not an audience](https://upahje.my/en/articles/discovery-is-the-job)
-
-[FPX costs a ringgit; cards cost 2% to 3%](https://upahje.my/en/articles/taking-money-malaysia)
-
-[Grab and foodpanda commission rates (2026)](https://upahje.my/en/articles/delivery-commission-malaysia)
-
-[One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront)
+Two more are written and unpublished: the licence stack, and the courier radius. They will appear here when the editor clears them.
