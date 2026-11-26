@@ -26,3 +26,14 @@ Slugs never change after publication. URLs are indexed, they carry the query peo
 ## Adding a value
 
 A new `category` or topic needs three things before it ships: a route, a count in the navigation, and a redirect from any retired path it replaces. A new `format` needs a documented section order in `EDITORIAL_STYLE_GUIDE.md`, because a format nobody can define is a tag pretending to be a structure.
+
+## What the build actually enforces
+
+`category` is required frontmatter and validated in `lib/articles.mjs`: a missing or unknown value throws at build, which is why every one of the 46 units carries one. `topic` is a mapping in `data/topics.json` and can legitimately be absent — an unmapped article still publishes, it just does not appear on a topic page.
+
+Counted on 26 November 2026, on `main`: **46 translation units, 92 article files** — `buying-guides` 62, `definitions` 26, `side-income` 4. Recount with
+`grep -h "^category:" content/articles/*/*.md | sort | uniq -c` rather than trusting this paragraph; it was 32/12/2 a day earlier, which is exactly how a taxonomy document goes stale.
+
+## The trap that was here
+
+Until 26 November, `components/articles/CategoryNav.tsx` and `categoryPath()` still built `/{lang}/articles/category/{slug}` links for a route that no longer existed in `app/`; `next.config.*` 301s those URLs to `/topics/*`, and nothing imported the component. The dead code was deleted in `chore/dead-category-nav` and is recorded here because it is the shape of the mistake: a retired taxonomy that still compiles looks alive to anyone who greps `category`.
