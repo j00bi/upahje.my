@@ -16,7 +16,7 @@ changelog:
   - date: 2026-11-26
     note: "Mula diterbitkan."
 sources:
-  - title: "Billplz, harga (FPX RM1.25 Basic dan RM0.75 Standard setiap transaksi, kad MYR 1.8% dan 1.5%, penyelesaian hari perniagaan berikutnya untuk FPX dan T+2 untuk kad, pelan tahunan RM999)"
+  - title: "Billplz, harga (jadual pelan: FPX B2C RM1.25 pada Basic dan RM0.75 pada Standard setiap transaksi, manakala tajuk halaman menyebut \"from as low as MYR 0.75\"; kad MYR 1.8% dan 1.5%; penyelesaian hari perniagaan berikutnya untuk FPX dan T+2 untuk kad; pelan tahunan RM999)"
     url: "https://www.billplz.com/pricing"
     checked: 2026-11-26
   - title: "MyCC, keputusan muktamad foodpanda (Delivery Hero Malaysia), versi awam bukan sulit, bertarikh 11 September 2023, julat komisen Jadual 3"
@@ -30,7 +30,7 @@ Angka yang paling anda perlukan ialah yang tiada siapa cetak. Tiada platform pen
 
 ## Dua kadar diterbitkan, satu tidak
 
-Bahagian pembayaran diterbitkan. Billplz mengenakan RM1.25 setiap transaksi FPX pada pelan Basic percuma dan RM0.75 pada pelan Standard RM999 setahun, serta 1.8% atau 1.5% untuk kad MYR, dengan penyelesaian pada hari perniagaan berikutnya untuk FPX dan T+2 untuk kad.
+Bahagian pembayaran diterbitkan. Billplz mencetak kedua-dua angka FPX dalam jadual pelannya: RM1.25 setiap transaksi pada pelan Basic percuma dan RM0.75 pada pelan Standard RM999 setahun, manakala tajuk halamannya mengiklankan FPX "from as low as MYR 0.75". Kad MYR ialah 1.8% pada Basic atau 1.5% pada Standard, dengan penyelesaian pada hari perniagaan berikutnya untuk FPX dan T+2 untuk kad.
 
 Bahagian komisen tidak diterbitkan. Satu-satunya angka yang direkodkan pengawal selia ialah julat dalam keputusan foodpanda oleh suruhanjaya persaingan bertarikh 11 September 2023, Jadual 3: 1% hingga 5%, 10% hingga 25%, 15% hingga 20%, dan dua kali 15% hingga 25%, dengan nama peniaga disunting. Itu julat daripada satu keputusan, bukan kad kadar semasa platform, dan ia digunakan di sini sebagai tiga titik yang dilalui aritmetik ini.
 

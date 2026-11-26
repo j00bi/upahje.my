@@ -16,7 +16,7 @@ changelog:
   - date: 2026-11-26
     note: "First published."
 sources:
-  - title: "Billplz, pricing (FPX RM1.25 Basic and RM0.75 Standard per transaction, card MYR 1.8% and 1.5%, settlement next business day for FPX and T+2 for cards, RM999 annual plan)"
+  - title: "Billplz, pricing (plan table: FPX B2C RM1.25 on Basic and RM0.75 on Standard per transaction, while the page headline says \"from as low as MYR 0.75\"; card MYR 1.8% and 1.5%; settlement next business day for FPX and T+2 for cards; RM999 annual plan)"
     url: "https://www.billplz.com/pricing"
     checked: 2026-11-26
   - title: "MyCC, final decision on foodpanda (Delivery Hero Malaysia), public non-confidential version, dated 11 September 2023, Table 3 commission bands"
@@ -30,7 +30,7 @@ The number you need most is the one nobody prints. Neither delivery platform pub
 
 ## Two rates are published, and one is not
 
-The payment side is published. Billplz charges RM1.25 per FPX transaction on its free Basic plan and RM0.75 on the RM999-a-year Standard plan, and 1.8% or 1.5% for a MYR card, with settlement next business day for FPX and T+2 for cards.
+The payment side is published. Billplz prints both FPX figures in its plan table: RM1.25 per transaction on the free Basic plan and RM0.75 on the RM999-a-year Standard plan, while its headline advertises FPX "from as low as MYR 0.75". A MYR card is 1.8% on Basic or 1.5% on Standard, with settlement next business day for FPX and T+2 for cards.
 
 The commission side is not published. The only regulator-recorded figures are the bands in the competition regulator's foodpanda decision of 11 September 2023, Table 3: 1% to 5%, 10% to 25%, 15% to 20%, and twice 15% to 25%, with merchant names redacted. Those are bands from a decision, not a platform's current rate card, and they are used here as the three points the arithmetic moves through.
 
