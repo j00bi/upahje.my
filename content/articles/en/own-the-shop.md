@@ -3,16 +3,16 @@ title: "Owning the shop means inheriting the discovery problem"
 description: "A marketplace sold two things: a checkout and customers. The checkout now costs a ringgit; customers were never software, and that is the trade here."
 slug: own-the-shop
 translationKey: own-the-shop
-format: guide
+format: explainer
 reader: owner
 date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+audience: publication
 tags: [buying-guides, storefront, commission, discovery, malaysia]
 cardFigure: "One bill became three"
 canonical: https://upahje.my/en/articles/own-the-shop
-draft: true
 changelog:
   - date: 2026-11-26
     note: "First published."

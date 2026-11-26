@@ -3,16 +3,16 @@ title: "Memiliki kedai bermakna mewarisi masalah penemuan"
 description: "Platform menjual dua perkara: mesin tunai dan pelanggan. Mesin tunai kini satu ringgit; pelanggan tidak pernah menjadi perisian, dan itulah dagangan siri ini."
 slug: memiliki-kedai
 translationKey: own-the-shop
-format: guide
+format: explainer
 reader: owner
 date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+audience: publication
 tags: [buying-guides, kedai, komisen, penemuan, malaysia]
 cardFigure: "Satu bil menjadi tiga"
 canonical: https://upahje.my/ms/articles/memiliki-kedai
-draft: true
 changelog:
   - date: 2026-11-26
     note: "Mula diterbitkan."

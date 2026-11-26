@@ -56,7 +56,7 @@ MBPJ prints advertising fees. A non-illuminated signboard up to 8 m² is RM100.0
 | SSM | Trade name registration and renewal | RM60.00 a year | not a premises licence |
 | SSM | Personal name renewal | RM30.00 a year | cheaper than a trade name |
 | SSM | Each branch | RM5.00 a year | per branch |
-| SSM | Sdn Bhd incorporation | RM1,000.00 | paid-up capital fees not read |
+| SSM | Sdn Bhd incorporation | RM1,000.00 | the paid-up capital schedule is a separate table |
 | MBPJ | Administration charge | RM25.00 | mentioned in the guide |
 
 Calling either of these the licence fee is the mistake this table exists to prevent. A reader who budgets RM50 for a Shah Alam licence has budgeted the processing fee.
