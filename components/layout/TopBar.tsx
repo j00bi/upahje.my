@@ -58,28 +58,14 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
           UpahJe<span style={{ color: 'var(--ui-muted)' }}>.my</span>
         </Link>
 
-        <nav aria-label="Sections" className="hidden items-center gap-7 lg:flex">
-          {sections.map((item) => (
-            <Link key={item.href} href={item.href} className="type-small ui-link" style={{ fontWeight: 500 }}>
-              {item.label}
-            </Link>
-          ))}
-          {more.map((item) => (
-            <Link key={item.href} href={item.href} className="type-small ui-link" style={{ fontWeight: 500 }}>
-              {item.label}
-            </Link>
-          ))}
-          {languageSwitch}
-          <Link href={`/${lang}/articles`} className="type-small ui-link" style={{ color: 'var(--ui-ink)', fontWeight: 600 }}>
-            {lang === 'ms' ? 'Semua artikel' : 'All articles'}
-          </Link>
-        </nav>
-
-        <details className="relative lg:hidden">
+        {/* One hamburger at every width: the bar stays a masthead rather than
+            turning into a link farm on a wide screen. <details> keeps it
+            working with JavaScript off. */}
+        <details className="relative">
           <summary
             className="ui-focus inline-flex h-11 w-11 list-none items-center justify-center rounded-[10px] border"
-            style={{ borderColor: 'var(--ui-rule)', color: 'var(--ui-ink)' }}
-            aria-label="Open menu"
+            style={{ borderColor: 'var(--ui-rule)', color: 'var(--ui-ink)', cursor: 'pointer' }}
+            aria-label={lang === 'ms' ? 'Buka menu' : 'Open menu'}
           >
             <span aria-hidden className="flex flex-col gap-[5px]">
               <span className="block h-[1.5px] w-5" style={{ background: 'currentColor' }} />
@@ -88,11 +74,16 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
             </span>
           </summary>
           <div
-            className="absolute right-0 top-12 w-72 rounded-[10px] border p-4"
+            className="absolute right-0 top-12 z-50 w-72 rounded-[10px] border p-3 shadow-lg"
             style={{ background: 'var(--ui-surface)', borderColor: 'var(--ui-rule)' }}
           >
             <nav aria-label="Sections" className="flex flex-col">
-              {[...sections, ...more, { href: `/${lang}/articles`, label: lang === 'ms' ? 'Semua artikel' : 'All articles' }].map((item) => (
+              {[
+                ...sections,
+                ...more,
+                { href: `/${lang}/articles`, label: lang === 'ms' ? 'Semua artikel' : 'All articles' },
+                { href: `/${lang}/about`, label: lang === 'ms' ? 'Tentang' : 'About' },
+              ].map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
@@ -102,7 +93,10 @@ export default function TopBar({ lang, otherHref }: { lang: string; otherHref: s
                   {item.label}
                 </Link>
               ))}
-              <div className="mt-2 border-t pt-3" style={{ borderColor: 'var(--ui-rule)' }}>
+              <div className="mt-2 flex items-center justify-between border-t px-2 pt-3" style={{ borderColor: 'var(--ui-rule)' }}>
+                <span className="type-small" style={{ color: 'var(--ui-muted)' }}>
+                  {lang === 'ms' ? 'Edisi' : 'Edition'}
+                </span>
                 {languageSwitch}
               </div>
             </nav>
