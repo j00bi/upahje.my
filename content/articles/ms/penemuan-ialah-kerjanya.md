@@ -3,16 +3,16 @@ title: "Kedai itu mesin tunai, bukan khalayak"
 description: "Platform menjual pelanggan, bukan perisian. Memiliki kedai menjadikan penemuan kerja anda, dan itulah istilah pemasaran yang tiada dalam persamaan pulang modal."
 slug: penemuan-ialah-kerjanya
 translationKey: discovery-is-the-job
-format: guide
+format: explainer
 reader: owner
 date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+audience: publication
 tags: [buying-guides, kedai, penemuan, malaysia]
 cardFigure: "Separuh pesanan daripada saluran anda sendiri"
 canonical: https://upahje.my/ms/articles/penemuan-ialah-kerjanya
-draft: true
 changelog:
   - date: 2026-11-26
     note: "Mula diterbitkan."

@@ -3,16 +3,16 @@ title: "The storefront is a checkout, not an audience"
 description: "A platform sold you customers, not software. Owning the shop makes discovery your job, and it is the marketing term the break-even equation was missing."
 slug: discovery-is-the-job
 translationKey: discovery-is-the-job
-format: guide
+format: explainer
 reader: owner
 date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+audience: publication
 tags: [buying-guides, storefront, discovery, malaysia]
 cardFigure: "Half your orders from a channel you own"
 canonical: https://upahje.my/en/articles/discovery-is-the-job
-draft: true
 changelog:
   - date: 2026-11-26
     note: "First published."

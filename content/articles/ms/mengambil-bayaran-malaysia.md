@@ -9,10 +9,10 @@ date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+audience: publication
 tags: [buying-guides, bayaran, fpx, malaysia]
 cardFigure: "RM1.00 pada FPX berbanding 2% hingga 3% pada kad"
 canonical: https://upahje.my/ms/articles/mengambil-bayaran-malaysia
-draft: true
 changelog:
   - date: 2026-11-26
     note: "Mula diterbitkan."

@@ -9,10 +9,10 @@ date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+audience: publication
 tags: [buying-guides, payments, fpx, malaysia]
 cardFigure: "RM1.00 on FPX against 2% to 3% on a card"
 canonical: https://upahje.my/en/articles/taking-money-malaysia
-draft: true
 changelog:
   - date: 2026-11-26
     note: "First published."

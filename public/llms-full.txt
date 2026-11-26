@@ -68,6 +68,74 @@ The third is time. A storefront that reaches break-even on fees still costs the 
 - Billplz, pricing (plan table: FPX B2C RM1.25 on Basic and RM0.75 on Standard per transaction, while the page headline says "from as low as MYR 0.75"; card MYR 1.8% and 1.5%; settlement next business day for FPX and T+2 for cards; RM999 annual plan) — https://www.billplz.com/pricing (checked 2026-11-26)
 - MyCC, final decision on foodpanda (Delivery Hero Malaysia), public non-confidential version, dated 11 September 2023, Table 3 commission bands — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-26)
 
+## The storefront is a checkout, not an audience
+
+URL: https://upahje.my/en/articles/discovery-is-the-job
+Checked: 2026-11-26
+
+Owning your shop changes who takes the payment. It does not change who finds you. A platform sold two things in one invoice: the software that takes an order, and the customers who arrive without you paying for them. The software is now cheap — RM1.25 an FPX payment — and the customers were never software at all.
+
+## The commission was buying discovery
+
+Read the commission as a fee for two services. The first is a checkout, and a checkout is now a published rate. The second is a customer who opens the app already looking for food.
+
+That second service is what disappears the day you own the storefront. Nothing on your own site introduces you to someone who has never heard of you, and no gateway fee includes an audience.
+
+## The marketing term your equation was missing
+
+The break-even arithmetic has a hole in it, and the hole is marketing. Written out:
+
+`commission × basket × orders = payment fee × orders + fixed cost + marketing`
+
+Move the terms and the order count changes. A shop that ignores the marketing line solves an equation that does not apply to it.
+
+There is no published rate for that line in Malaysia. No platform, gateway or council publishes what it costs to acquire a food customer, and this article will not invent one. What it can say is where the line comes from: the channels you build yourself.
+
+## What is published, and what is not
+
+| What the platform provided | What is published | What owning costs |
+| --- | --- | --- |
+| Checkout | RM1.25 per FPX transaction on Billplz Basic, RM0.75 on Standard; cards 1.8% or 1.5% | the same fee, paid to the gateway |
+| Settlement | next business day for FPX, T+2 for cards | the same terms |
+| Discovery | nothing: commission bands from 1% to 25% recorded for five anonymised franchised merchants in a September 2023 decision (n=5) | no published rate anywhere |
+
+The third row is the one that decides the series. Everything the platform charged for except discovery can now be bought at a published price. Discovery cannot.
+
+## What an owned audience looks like when it works
+
+mejamakan, a lauk delivery business in KL and Selangor, runs its own site rather than a platform page. On 26 November 2026 its site showed a weekly menu, accounts and ordering on its own domain, "from RM18/meal", weekday delivery and a renewing plan, with Instagram at **16K followers** as the front door.
+
+That follower count is the observable part, and it is also the honest limit of this article: followers are not orders, and Instagram does not publish a conversion rate. What the example shows is where the audience lives — a channel the shop controls — not what it cost to build.
+
+## Half is the number to watch
+
+One number tells you whether the swap has worked: **the share of your orders arriving through a channel you own**. Direct messages, repeat customers, the site itself, the group chat.
+
+Below half, the platform is still doing the discovery and its commission is the cheaper way to buy customers. Above half, the platform is a delivery contractor and the commission conversation changes.
+
+## What to do this month
+
+1. Count last month's orders by channel, and put a number on the owned share.
+2. Count what you spent on the owned channels, including your own hours at a rate you would pay someone.
+3. Put both into the equation above and solve for orders.
+4. Compare that count with the count the platform needs to beat.
+5. If the owned share is below half, keep the platform and grow the channel; if above, renegotiate the commission or leave it.
+
+The shop is the easy half and the audience is the business. Anyone selling you a storefront as if it came with customers is selling the checkout and calling it a market.
+
+---
+
+**Read next**
+
+[RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
+
+[The delivery commission question, answered from the regulator](https://upahje.my/en/articles/delivery-commission-malaysia)
+
+### Sources
+
+- Billplz, pricing (FPX RM1.25 Basic and RM0.75 Standard per transaction, card 1.8% and 1.5%, settlement next business day for FPX and T+2 for cards) — https://www.billplz.com/pricing (checked 2026-11-26)
+- MyCC, final decision on foodpanda, 11 September 2023, Table 3 commission bands (n=5 anonymised franchised contracts) — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-26)
+
 ## Billed by contacts, sold as an operating system
 
 URL: https://upahje.my/en/articles/kuasaos-crm-with-a-costume
@@ -689,6 +757,75 @@ Simulate the **population**, measure the **decision**. A synthetic customer is a
 - Simulated Customers Never Walk Away: Decision Fidelity of LLM User Simulators Measured Against Real Purchase Outcomes, arXiv 2606.20708 — https://arxiv.org/abs/2606.20708 (checked 2026-11-26)
 - Twin-2K-500: A dataset for building digital twins of over 2,000 people, arXiv 2505.17479 — https://arxiv.org/abs/2505.17479 (checked 2026-11-26)
 - Out of One, Many: Using Language Models to Simulate Human Samples, Argyle et al., Political Analysis — https://arxiv.org/abs/2209.06899 (checked 2026-11-26)
+
+## FPX costs a ringgit; cards cost 2% to 3%
+
+URL: https://upahje.my/en/articles/taking-money-malaysia
+Checked: 2026-11-26
+
+Two payment methods, two shapes of cost. An FPX payment is a flat **RM1.00** at CHIP or **RM0.75** to **RM1.25** at Billplz depending on the plan, and it lands in your account the next business day. A card payment is a percentage — **2.0%** on credit at CHIP, **3% plus RM1.00** at Stripe — and it settles in **two business days**. The fee is the visible difference. The two-day gap is the one that hurts a shop with thin cash.
+
+## The fee shape decides the basket size it suits
+
+A flat fee hurts small baskets and is irrelevant on a large one. A percentage is the reverse.
+
+On a RM30 basket, CHIP's FPX fee is RM1.00, or 3.3% of the bill. Its credit-card fee is RM0.60, or 2.0%. The card is cheaper per transaction at RM30 — and then CHIP's own note applies: "Transaction fees are subject to 8% SST", which takes the card fee to about RM0.65.
+
+On a RM150 basket the relationship flips hard: FPX stays RM1.00, while the card fee is RM3.00, or RM3.24 with SST. The percentage does not care that the basket grew; it grows with it.
+
+## Settlement is a property of the method, not the gateway
+
+This is where a single "X days" figure per gateway would be wrong, because the same provider prints different terms for different methods.
+
+| Gateway | Method | Fee as printed | Settlement |
+| --- | --- | --- | --- |
+| CHIP | FPX B2C | RM1.00 | every next day |
+| CHIP | Local credit card | 2.0% | every 2 business days |
+| CHIP | Local debit card | 1.0% | every 2 business days |
+| CHIP | DuitNow QR | 1.0% | every next day |
+| Billplz | FPX B2C | RM1.25 Basic, RM0.75 Standard | next business day |
+| Billplz | Card, MYR | 1.8% Basic, 1.5% Standard | T+2 business days |
+| Stripe | Domestic cards | 3% + RM1.00 | rolling, weekly or monthly |
+| senangPay | FPX and cards | platform fee from RM199/year; MDR not published | next working day stated |
+
+Stripe's payout schedule is a setting, not a fixed term, so any article that prints "Stripe settles in two days" is wrong in a way a reader can disprove from their own dashboard.
+
+## Three gateways will not tell you their price
+
+Of the six gateways read for this piece, three publish a rate you can plan from: CHIP, Billplz and Stripe. senangPay publishes a platform fee of RM199 a year and not the per-transaction rate; iPay88's pricing page returned 404 and no public fee schedule was found; toyyibPay's pages served JavaScript shells with no fee text.
+
+Those three are quote-based. A shop comparing six gateways on price is comparing three published numbers and three sales conversations, and the piece does not rank the conversations.
+
+## What the two-day gap costs
+
+A shop taking RM1,000 a day on cards has RM2,000 in transit on any given day, and that money is not in the account when the supplier invoice arrives on the second day. On FPX the same shop has one day of transit instead.
+
+That is the cash-flow bite: not the 2% fee, which the customer effectively pays in the basket, but the gateway's payout term on cards — two business days at CHIP and Billplz, a rolling weekly or monthly schedule at Stripe.
+
+## What to do before you pick one
+
+1. Read the settlement line for each method, not the gateway headline.
+2. Ask whether the printed fee includes SST, and get the answer in writing.
+3. Work out both fee shapes on your two most common basket sizes.
+4. Count how many days of card revenue you can float without borrowing.
+5. Default to FPX where the customer's bank is on it, and treat cards as the convenience option with a cost.
+
+For a small shop, FPX is the default and cards are a service you offer at a price. The fee difference is visible and easy to argue about; the settlement difference is quiet, and it is the one that decides whether you can pay the next supplier on time.
+
+---
+
+**Read next**
+
+[RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
+
+[The delivery commission question, answered from the regulator](https://upahje.my/en/articles/delivery-commission-malaysia)
+
+### Sources
+
+- CHIP, pricing (FPX B2C RM1.00 next day; credit card 2.0%, debit 1.0%, two business days; DuitNow 1.0% next day; fees subject to 8% SST) — https://chip-in.asia/pricing/ (checked 2026-11-26)
+- Billplz, pricing (FPX RM1.25 Basic and RM0.75 Standard, next business day; card 1.8% and 1.5%, T+2 business days; RM999 annual plan) — https://www.billplz.com/pricing (checked 2026-11-26)
+- Stripe Malaysia, pricing (domestic cards 3% + RM1.00; payouts rolling, weekly or monthly) — https://stripe.com/en-my/pricing (checked 2026-11-26)
+- senangPay (platform fee from RM199 a year; per-transaction MDR not published on the page read) — https://senangpay.my (checked 2026-11-26)
 
 ## One person, one kitchen: we built the storefront and ran it
 
@@ -4029,6 +4166,75 @@ Itu pertaruhan, bukan ramalan, dan kami akan menerbitkan pembetulan pada hari ve
 - Halaman pelancaran Kuasa OS, terma tawaran dan pembilang — https://launch.kuasa.ai/ (checked 2026-11-26)
 - Changelog Kuasa OS, minggu 3 November 2026 — https://changelog.kuasa.ai/bugs-and-improvement-functions-w3-11-2026 (checked 2026-11-26)
 
+## FPX satu ringgit; kad dua hingga tiga peratus
+
+URL: https://upahje.my/ms/articles/mengambil-bayaran-malaysia
+Checked: 2026-11-26
+
+Dua kaedah bayaran, dua bentuk kos. Bayaran FPX ialah **RM1.00** tetap di CHIP atau **RM0.75** hingga **RM1.25** di Billplz bergantung pada pelan, dan ia masuk ke akaun anda pada hari perniagaan berikutnya. Bayaran kad ialah peratusan — **2.0%** untuk kad kredit di CHIP, **3% campur RM1.00** di Stripe — dan ia masuk dalam **dua hari perniagaan**. Fi itu perbezaan yang kelihatan. Jurang dua hari itulah yang menyakitkan kedai dengan tunai nipis.
+
+## Bentuk fi menentukan saiz bakul yang sesuai
+
+Fi tetap menyakitkan bakul kecil dan tidak bermakna pada bakul besar. Peratusan sebaliknya.
+
+Pada bakul RM30, fi FPX CHIP ialah RM1.00, atau 3.3% daripada bil. Fi kad kreditnya RM0.60, atau 2.0%. Kad lebih murah setiap transaksi pada RM30 — dan kemudian nota CHIP sendiri terpakai: "Transaction fees are subject to 8% SST", yang menjadikan fi kad kira-kira RM0.65.
+
+Pada bakul RM150 hubungan itu berpaling keras: FPX kekal RM1.00, manakala fi kad RM3.00, atau RM3.24 dengan SST. Peratusan itu tidak peduli bakul membesar; ia membesar bersamanya.
+
+## Penyelesaian ialah sifat kaedah, bukan gerbang
+
+Di sinilah satu angka "X hari" bagi setiap gerbang akan salah, kerana penyedia yang sama mencetak terma berbeza bagi kaedah berbeza.
+
+| Gerbang | Kaedah | Fi seperti dicetak | Penyelesaian |
+| --- | --- | --- | --- |
+| CHIP | FPX B2C | RM1.00 | setiap hari berikutnya |
+| CHIP | Kad kredit tempatan | 2.0% | setiap 2 hari perniagaan |
+| CHIP | Kad debit tempatan | 1.0% | setiap 2 hari perniagaan |
+| CHIP | DuitNow QR | 1.0% | setiap hari berikutnya |
+| Billplz | FPX B2C | RM1.25 Basic, RM0.75 Standard | hari perniagaan berikutnya |
+| Billplz | Kad MYR | 1.8% Basic, 1.5% Standard | T+2 hari perniagaan |
+| Stripe | Kad domestik | 3% + RM1.00 | bergulung, mingguan atau bulanan |
+| senangPay | FPX dan kad | fi platform dari RM199 setahun; MDR tidak diterbitkan | hari bekerja berikutnya dinyatakan |
+
+Jadual pembayaran Stripe ialah tetapan, bukan terma tetap, jadi mana-mana artikel yang mencetak "Stripe menjelaskan dalam dua hari" salah dalam cara yang boleh dibuktikan pembaca daripada papan pemukanya sendiri.
+
+## Tiga gerbang tidak memberitahu harga mereka
+
+Daripada enam gerbang yang dibaca untuk artikel ini, tiga menerbitkan kadar yang boleh dirancang: CHIP, Billplz dan Stripe. senangPay menerbitkan fi platform RM199 setahun dan bukan kadar setiap transaksi; halaman harga iPay88 memulangkan 404 dan tiada jadual fi awam ditemui; halaman toyyibPay menghidangkan cangkerang JavaScript tanpa teks fi.
+
+Ketiga-tiganya berasaskan sebut harga. Kedai yang membandingkan enam gerbang pada harga sedang membandingkan tiga angka yang diterbitkan dan tiga perbualan jualan, dan artikel ini tidak menyusun perbualan itu.
+
+## Apa kos jurang dua hari itu
+
+Kedai yang menerima RM1,000 sehari melalui kad mempunyai RM2,000 dalam perjalanan pada mana-mana hari, dan wang itu belum ada dalam akaun apabila invois pembekal tiba pada hari kedua. Pada FPX kedai yang sama mempunyai satu hari dalam perjalanan.
+
+Itulah gigitan aliran tunai: bukan fi 2% yang dibayar pelanggan dalam bakul, tetapi tempoh pembayaran keluar gerbang bayaran untuk kad — dua hari perniagaan di CHIP dan Billplz, jadual mingguan atau bulanan bergolek di Stripe.
+
+## Apa yang perlu dibuat sebelum memilih
+
+1. Baca baris penyelesaian bagi setiap kaedah, bukan tajuk gerbang.
+2. Tanya sama ada fi yang dicetak termasuk SST, dan minta jawapannya secara bertulis.
+3. Kira kedua-dua bentuk fi pada dua saiz bakul paling kerap anda.
+4. Kira berapa hari hasil kad yang mampu anda apungkan tanpa berhutang.
+5. Jadikan FPX lalai di mana bank pelanggan menyokongnya, dan anggap kad sebagai pilihan kemudahan yang ada kos.
+
+Bagi kedai kecil, FPX ialah lalai dan kad ialah perkhidmatan yang anda tawarkan pada satu harga. Perbezaan fi itu kelihatan dan mudah dihujahkan; perbezaan penyelesaian itu senyap, dan ia yang menentukan sama ada anda boleh membayar pembekal berikutnya tepat pada masanya.
+
+---
+
+**Bacaan lanjut**
+
+[RM1.25 atau 15%: kos checkout anda sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
+
+[Soalan komisen penghantaran, dijawab daripada pengawal selia](https://upahje.my/ms/articles/komisen-penghantaran-malaysia)
+
+### Sources
+
+- CHIP, harga (FPX B2C RM1.00 hari berikutnya; kad kredit 2.0%, debit 1.0%, dua hari perniagaan; DuitNow 1.0% hari berikutnya; fi tertakluk kepada SST 8%) — https://chip-in.asia/pricing/ (checked 2026-11-26)
+- Billplz, harga (FPX RM1.25 Basic dan RM0.75 Standard, hari perniagaan berikutnya; kad 1.8% dan 1.5%, T+2 hari perniagaan; pelan tahunan RM999) — https://www.billplz.com/pricing (checked 2026-11-26)
+- Stripe Malaysia, harga (kad domestik 3% + RM1.00; pembayaran keluar bergulung, mingguan atau bulanan) — https://stripe.com/en-my/pricing (checked 2026-11-26)
+- senangPay (fi platform dari RM199 setahun; MDR setiap transaksi tidak diterbitkan pada halaman yang dibaca) — https://senangpay.my (checked 2026-11-26)
+
 ## Pelanggan simulasi anda kata ya. Yang sebenar pergi.
 
 URL: https://upahje.my/ms/articles/pelanggan-simulasi-kata-ya
@@ -4131,6 +4337,74 @@ Simulasikan **populasi**, ukur **keputusan**. Pelanggan sintetik cara yang baik 
 - Simulated Customers Never Walk Away: Decision Fidelity of LLM User Simulators Measured Against Real Purchase Outcomes, arXiv 2606.20708 — https://arxiv.org/abs/2606.20708 (checked 2026-11-26)
 - Twin-2K-500: A dataset for building digital twins of over 2,000 people, arXiv 2505.17479 — https://arxiv.org/abs/2505.17479 (checked 2026-11-26)
 - Out of One, Many: Using Language Models to Simulate Human Samples, Argyle et al., Political Analysis — https://arxiv.org/abs/2209.06899 (checked 2026-11-26)
+
+## Kedai itu mesin tunai, bukan khalayak
+
+URL: https://upahje.my/ms/articles/penemuan-ialah-kerjanya
+Checked: 2026-11-26
+
+Memiliki kedai menukar siapa yang menerima bayaran. Ia tidak menukar siapa yang menemui anda. Platform menjual dua perkara dalam satu invois: perisian yang menerima pesanan, dan pelanggan yang tiba tanpa anda membayar untuk mereka. Perisian itu kini murah — RM1.25 satu pembayaran FPX — dan pelanggan itu tidak pernah menjadi perisian.
+
+## Komisen itu membeli penemuan
+
+Baca komisen sebagai fi untuk dua perkhidmatan. Yang pertama mesin tunai, dan mesin tunai kini ada kadar yang diterbitkan. Yang kedua pelanggan yang membuka aplikasi itu kerana sudah mencari makanan.
+
+Perkhidmatan kedua itulah yang hilang pada hari anda memiliki kedai. Tiada apa pada laman anda sendiri memperkenalkan anda kepada seseorang yang tidak pernah mendengar nama anda, dan tiada fi gerbang termasuk khalayak.
+
+## Istilah pemasaran yang tiada dalam persamaan
+
+Aritmetik pulang modal ada lubang, dan lubang itu pemasaran. Ditulis penuh:
+
+`komisen × bakul × pesanan = fi pembayaran × pesanan + kos tetap + pemasaran`
+
+Gerakkan istilah itu dan bilangan pesanan berubah. Kedai yang mengabaikan baris pemasaran sedang menyelesaikan persamaan yang tidak terpakai kepadanya.
+
+Tiada kadar yang diterbitkan bagi baris itu di Malaysia. Tiada platform, gerbang atau majlis menerbitkan kos mendapatkan seorang pelanggan makanan, dan artikel ini tidak akan menciptanya. Apa yang boleh dikatakan ialah dari mana baris itu datang: saluran yang anda bina sendiri.
+
+## Apa yang diterbitkan, dan apa yang tidak
+
+| Apa yang platform sediakan | Apa yang diterbitkan | Apa kos memiliki |
+| --- | --- | --- |
+| Mesin tunai | RM1.25 setiap transaksi FPX pada Billplz Basic, RM0.75 pada Standard; kad 1.8% atau 1.5% | fi sama, dibayar kepada gerbang |
+| Penyelesaian | hari perniagaan berikutnya untuk FPX, T+2 untuk kad | terma sama |
+| Penemuan | tiada: jalur komisen dari 1% hingga 25% direkodkan bagi lima peniaga francais tanpa nama dalam keputusan September 2023 (n=5) | tiada kadar diterbitkan di mana-mana |
+
+Baris ketiga itulah yang menentukan siri ini. Segala yang platform cajkan kecuali penemuan kini boleh dibeli pada harga yang diterbitkan. Penemuan tidak.
+
+## Rupa khalayak milik sendiri apabila ia berjaya
+
+mejamakan, perniagaan penghantaran lauk di KL dan Selangor, menjalankan laman sendiri dan bukan halaman platform. Pada 26 November 2026 lamannya menunjukkan menu mingguan, akaun dan pesanan pada domain sendiri, "from RM18/meal", penghantaran hari bekerja dan pelan yang diperbaharui, dengan Instagram sebagai pintu depan pada **16K pengikut**.
+
+Bilangan pengikut itu bahagian yang boleh diperhatikan, dan ia juga had jujur artikel ini: pengikut bukan pesanan, dan Instagram tidak menerbitkan kadar penukaran. Apa yang contoh itu tunjukkan ialah di mana khalayak itu tinggal — saluran yang dikawal kedai — bukan berapa kos membinanya.
+
+## Separuh ialah angka yang perlu diperhatikan
+
+Satu angka memberitahu sama ada pertukaran itu berjaya: **bahagian pesanan anda yang tiba melalui saluran yang anda miliki**. Mesej langsung, pelanggan berulang, laman itu sendiri, kumpulan sembang.
+
+Di bawah separuh, platform masih melakukan penemuan dan komisennya lebih murah untuk membeli pelanggan. Di atas separuh, platform ialah kontraktor penghantaran dan perbualan komisen berubah sepenuhnya.
+
+## Apa yang perlu dibuat bulan ini
+
+1. Kira pesanan bulan lepas mengikut saluran, dan letakkan angka pada bahagian yang dimiliki.
+2. Kira apa yang anda belanjakan pada saluran milik itu, termasuk jam anda sendiri pada kadar yang anda akan bayar kepada orang lain.
+3. Masukkan kedua-duanya ke dalam persamaan di atas dan selesaikan untuk pesanan.
+4. Bandingkan bilangan itu dengan bilangan yang platform perlu kalahkan.
+5. Jika bahagian milik di bawah separuh, kekalkan platform dan besarkan saluran; jika di atas, runding semula komisen atau tinggalkan.
+
+Kedai itu separuh yang mudah dan khalayak itu perniagaannya. Sesiapa yang menjual kedai kepada anda seolah-olah ia datang dengan pelanggan sedang menjual mesin tunai dan menamakannya pasaran.
+
+---
+
+**Bacaan lanjut**
+
+[RM1.25 atau 15%: kos checkout anda sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
+
+[Soalan komisen penghantaran, dijawab daripada pengawal selia](https://upahje.my/ms/articles/komisen-penghantaran-malaysia)
+
+### Sources
+
+- Billplz, harga (FPX RM1.25 Basic dan RM0.75 Standard setiap transaksi, kad 1.8% dan 1.5%, penyelesaian hari perniagaan berikutnya untuk FPX dan T+2 untuk kad) — https://www.billplz.com/pricing (checked 2026-11-26)
+- MyCC, keputusan muktamad foodpanda, 11 September 2023, jalur komisen Jadual 3 (n=5 kontrak francais tanpa nama) — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-26)
 
 ## Colab akan latih model anda. Ia tidak akan hoskan
 
