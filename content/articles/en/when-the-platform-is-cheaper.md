@@ -33,7 +33,7 @@ sources:
 
 # When the platform is still the cheaper shop
 
-A checkout screen photographed at 17:05 on 26 November 2026, ordering from an Ayam Gepuk branch on Grab, showed three lines. Subtotal, including tax: **RM20.90**. Delivery fee: **RM4.70**. Total: **RM25.60**. No service fee appeared on the screen, and it carried a note that the fee had been calculated at 17:02:16.
+Two checkout screens photographed within a week, one on Grab and one on Shopee Food, disagree about what dinner costs. The first, at 17:05 on 26 November 2026, ordering from an Ayam Gepuk branch on Grab, showed three lines. Subtotal, including tax: **RM20.90**. Delivery fee: **RM4.70**. Total: **RM25.60**. No service fee appeared on the screen, and it carried a note that the fee had been calculated at 17:02:16.
 
 That single screen undercuts the strongest version of the argument this series has been making. The commission on that order is invisible to the customer, the delivery fee is not, and both are paid by somebody who never agreed to a rate card. This piece is the counter-argument, and it uses the same numbers as the six pieces before it.
 
@@ -105,6 +105,26 @@ So print it as a variable. Solving for orders per month, with the RM999 annual g
 Read the "never" cells as the finding. **At a RM5 acquisition cost per order, a 20% commission on a RM20.90 or RM30 basket takes less than the payment fee plus the marketing would**, so there is no order count at which owning the checkout wins. At RM15 per order, almost nothing wins.
 
 This is the sentence the other six pieces avoided: on small baskets with paid acquisition, **the platform is not overcharging you — it is subsidising you.**
+
+## A second receipt, from the same week, pointing the other way
+
+The same week produced a second checkout screen. Shopee Food, one item, 17:02 on the clock:
+
+| Line | Amount |
+| --- | --- |
+| Item subtotal | RM14.90 |
+| Item discount | −RM1.49 |
+| Food discount voucher | −RM3.00 |
+| Delivery fee | RM0.00 |
+| **Total** | **RM10.41** |
+
+Saved: RM4.49. A driver tip was offered and declined, 19 coins could have taken another 19 sen, and a banner sold unlimited free delivery for RM1.99 a month.
+
+Put the two screens side by side and they describe different industries. Grab added **22.5%** to the food bill for delivery. Shopee took **30% off** the food bill and delivered it free. Both are the same customer, in the same city, in the same week, paying a different price for the same kind of dinner.
+
+The screen does not say who funded the RM4.49, and this article is not going to guess. What can be said is what each line looks like. A **10% item discount** reads like a promotion a merchant sets. A round **RM3.00 voucher** reads like a platform campaign. If the shop funded both, its effective take on that order was **RM4.47 on RM14.90 — 30%**, more than any commission band in the regulator's table. If the platform funded the voucher, the shop was handed a customer at a discount it could never have offered alone.
+
+Either way, this is the mechanism the break-even identity calls marketing, and it is why that line is not zero. A shop competing on price against a checkout that can print a 30% discount is not competing with software. It is competing with somebody else's advertising budget.
 
 ## The 8% SST nobody adds
 

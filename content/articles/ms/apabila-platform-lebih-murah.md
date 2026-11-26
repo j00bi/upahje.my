@@ -33,7 +33,7 @@ sources:
 
 # Apabila platform masih kedai yang lebih murah
 
-Satu skrin checkout yang difotografkan pada 17:05, 26 November 2026, ketika memesan dari sebuah cawangan Ayam Gepuk melalui Grab, menunjukkan tiga baris. Subtotal, termasuk cukai: **RM20.90**. Fi penghantaran: **RM4.70**. Jumlah: **RM25.60**. Tiada fi perkhidmatan pada skrin itu, dan ada nota bahawa fi telah dikira pada 17:02:16.
+Dua skrin checkout yang difotografkan dalam tempoh seminggu, satu di Grab dan satu di Shopee Food, tidak bersetuju tentang harga makan malam. Yang pertama, pada 17:05, 26 November 2026, ketika memesan dari sebuah cawangan Ayam Gepuk melalui Grab, menunjukkan tiga baris. Subtotal, termasuk cukai: **RM20.90**. Fi penghantaran: **RM4.70**. Jumlah: **RM25.60**. Tiada fi perkhidmatan pada skrin itu, dan ada nota bahawa fi telah dikira pada 17:02:16.
 
 Skrin tunggal itu melemahkan versi terkuat hujah yang siri ini bina. Komisen pada pesanan itu tidak kelihatan kepada pelanggan, fi penghantaran kelihatan, dan kedua-duanya dibayar oleh pihak yang tidak pernah bersetuju dengan kad kadar. Artikel ini ialah hujah balas, dan ia menggunakan nombor yang sama seperti enam artikel sebelumnya.
 
@@ -105,6 +105,26 @@ Jadi cetak sebagai pemboleh ubah. Selesaikan untuk pesanan sebulan, dengan pelan
 Baca sel "tidak pernah" sebagai penemuan. **Pada kos pemerolehan RM5 satu pesanan, komisen 20% pada bakul RM20.90 atau RM30 mengambil kurang daripada fi pembayaran campur pemasaran**, jadi tiada jumlah pesanan yang membuat kedai sendiri menang. Pada RM15 satu pesanan, hampir tiada apa yang menang.
 
 Inilah ayat yang dielakkan enam artikel lain: pada bakul kecil dengan pemerolehan berbayar, **platform bukan mengecas anda lebih — ia menyubsidi anda.**
+
+## Resit kedua, dari minggu yang sama, menunjuk arah bertentangan
+
+Minggu yang sama menghasilkan skrin checkout kedua. Shopee Food, satu item, 17:02 pada jam:
+
+| Baris | Jumlah |
+| --- | --- |
+| Subtotal item | RM14.90 |
+| Diskaun item | −RM1.49 |
+| Baucar diskaun makanan | −RM3.00 |
+| Fi penghantaran | RM0.00 |
+| **Jumlah** | **RM10.41** |
+
+Berjimat: RM4.49. Tip pemandu ditawarkan dan ditolak, 19 koin boleh mengambil 19 sen lagi, dan sepanduk menjual penghantaran percuma tanpa had pada RM1.99 sebulan.
+
+Letakkan dua skrin itu bersebelahan dan mereka menerangkan industri yang berbeza. Grab menambah **22.5%** pada bil makanan untuk penghantaran. Shopee memotong **30%** daripada bil makanan dan menghantarnya percuma. Kedua-duanya pelanggan yang sama, di bandar yang sama, dalam minggu yang sama, membayar harga berbeza untuk makan malam sejenis.
+
+Skrin itu tidak menyatakan siapa membiayai RM4.49 itu, dan artikel ini tidak akan meneka. Apa yang boleh dikatakan ialah rupa setiap baris. **Diskaun item 10%** kelihatan seperti promosi yang peniaga tetapkan. **Baucar RM3.00** yang bulat kelihatan seperti kempen platform. Jika kedai membiayai kedua-duanya, ambilan berkesannya pada pesanan itu ialah **RM4.47 daripada RM14.90 — 30%**, lebih tinggi daripada mana-mana jalur komisen dalam jadual pengawal selia. Jika platform membiayai baucar itu, kedai diberi pelanggan pada diskaun yang tidak mungkin ditawarkannya sendiri.
+
+Sama ada cara, inilah mekanisme yang identiti pulang modal panggil pemasaran, dan sebabnya baris itu bukan sifar. Kedai yang bersaing pada harga dengan checkout yang boleh mencetak diskaun 30% bukan bersaing dengan perisian. Ia bersaing dengan bajet pengiklanan orang lain.
 
 ## SST 8% yang tiada siapa tambah
 
