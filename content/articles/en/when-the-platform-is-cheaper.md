@@ -33,7 +33,7 @@ sources:
 
 # When the platform is still the cheaper shop
 
-Two checkout screens photographed within a week, one on Grab and one on Shopee Food, disagree about what dinner costs. The first, at 17:05 on 26 November 2026, ordering from an Ayam Gepuk branch on Grab, showed three lines. Subtotal, including tax: **RM20.90**. Delivery fee: **RM4.70**. Total: **RM25.60**. No service fee appeared on the screen, and it carried a note that the fee had been calculated at 17:02:16.
+Three checkout screens photographed within a week disagree about what dinner costs. The first, at 17:05 on 26 November 2026, ordering from an Ayam Gepuk branch on Grab, showed three lines. Subtotal, including tax: **RM20.90**. Delivery fee: **RM4.70**. Total: **RM25.60**. No service fee appeared on the screen, and it carried a note that the fee had been calculated at 17:02:16.
 
 That single screen undercuts the strongest version of the argument this series has been making. The commission on that order is invisible to the customer, the delivery fee is not, and both are paid by somebody who never agreed to a rate card. This piece is the counter-argument, and it uses the same numbers as the six pieces before it.
 
@@ -106,25 +106,28 @@ Read the "never" cells as the finding. **At a RM5 acquisition cost per order, a 
 
 This is the sentence the other six pieces avoided: on small baskets with paid acquisition, **the platform is not overcharging you — it is subsidising you.**
 
-## A second receipt, from the same week, pointing the other way
+## Three receipts, and the price moved 52 points
 
-The same week produced a second checkout screen. Shopee Food, one item, 17:02 on the clock:
+Within a week, three checkout screens, three platforms, three different answers to what dinner costs:
 
-| Line | Amount |
-| --- | --- |
-| Item subtotal | RM14.90 |
-| Item discount | −RM1.49 |
-| Food discount voucher | −RM3.00 |
-| Delivery fee | RM0.00 |
-| **Total** | **RM10.41** |
+| | Grab | Shopee Food | foodpanda |
+| --- | --- | --- | --- |
+| Food bill | RM20.90 | RM14.90 | RM22.00 |
+| Delivery | RM4.70 charged | free | RM5.99, waived |
+| Discount | — | RM4.49 | RM3.30 |
+| Fees | none shown | none shown | RM0.65 platform, RM0.05 tax |
+| **Customer paid** | **RM25.60** | **RM10.41** | **RM19.40** |
+| Against the food bill | **+22.5%** | **−30.1%** | **−11.8%** |
 
-Saved: RM4.49. A driver tip was offered and declined, 19 coins could have taken another 19 sen, and a banner sold unlimited free delivery for RM1.99 a month.
+That is a 52-point spread on the same kind of order in the same city in the same week. No shop sets prices that way, and no shop can: the customer-facing price here is the output of a subsidy auction between platforms, and the merchant's side of it is invisible on all three screens.
 
-Put the two screens side by side and they describe different industries. Grab added **22.5%** to the food bill for delivery. Shopee took **30% off** the food bill and delivered it free. Both are the same customer, in the same city, in the same week, paying a different price for the same kind of dinner.
+Two details are worth more than the totals.
 
-The screen does not say who funded the RM4.49, and this article is not going to guess. What can be said is what each line looks like. A **10% item discount** reads like a promotion a merchant sets. A round **RM3.00 voucher** reads like a platform campaign. If the shop funded both, its effective take on that order was **RM4.47 on RM14.90 — 30%**, more than any commission band in the regulator's table. If the platform funded the voucher, the shop was handed a customer at a discount it could never have offered alone.
+**The discounts all look like round promotions.** Shopee's item discount was 10% of its subtotal, its voucher a flat RM3.00, foodpanda's discount **exactly 15% of RM22.00**. Fifteen per cent is also the floor of the 15–25% band recorded in the regulator's foodpanda decision. That may be a coincidence of pricing psychology; the screens do not say who funds any of it, and this article does not guess. What it can say is what the arithmetic looks like if the shop funded both its discount and a 15% commission: on the foodpanda order, **RM3.30 + RM3.30 = RM6.60 on RM22.00, a 30% take** — and the customer still paid RM9.29 less than the menu price suggested.
 
-Either way, this is the mechanism the break-even identity calls marketing, and it is why that line is not zero. A shop competing on price against a checkout that can print a 30% discount is not competing with software. It is competing with somebody else's advertising budget.
+**A missing fee line is not a missing fee.** Grab's screen showed no service fee. foodpanda's showed a platform fee and a service tax as separate lines, RM0.70 together, small enough that most customers read past it. Two platforms, one of which itemises and one of which does not — and the commission, the largest number of all, is itemised by neither.
+
+None of this decides whether to stay. It decides what you are competing against. A shop comparing its own prices to a platform's price list is comparing itself to the output of an auction it cannot see.
 
 ## The 8% SST nobody adds
 

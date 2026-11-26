@@ -33,7 +33,7 @@ sources:
 
 # Apabila platform masih kedai yang lebih murah
 
-Dua skrin checkout yang difotografkan dalam tempoh seminggu, satu di Grab dan satu di Shopee Food, tidak bersetuju tentang harga makan malam. Yang pertama, pada 17:05, 26 November 2026, ketika memesan dari sebuah cawangan Ayam Gepuk melalui Grab, menunjukkan tiga baris. Subtotal, termasuk cukai: **RM20.90**. Fi penghantaran: **RM4.70**. Jumlah: **RM25.60**. Tiada fi perkhidmatan pada skrin itu, dan ada nota bahawa fi telah dikira pada 17:02:16.
+Tiga skrin checkout yang difotografkan dalam tempoh seminggu tidak bersetuju tentang harga makan malam. Yang pertama, pada 17:05, 26 November 2026, ketika memesan dari sebuah cawangan Ayam Gepuk melalui Grab, menunjukkan tiga baris. Subtotal, termasuk cukai: **RM20.90**. Fi penghantaran: **RM4.70**. Jumlah: **RM25.60**. Tiada fi perkhidmatan pada skrin itu, dan ada nota bahawa fi telah dikira pada 17:02:16.
 
 Skrin tunggal itu melemahkan versi terkuat hujah yang siri ini bina. Komisen pada pesanan itu tidak kelihatan kepada pelanggan, fi penghantaran kelihatan, dan kedua-duanya dibayar oleh pihak yang tidak pernah bersetuju dengan kad kadar. Artikel ini ialah hujah balas, dan ia menggunakan nombor yang sama seperti enam artikel sebelumnya.
 
@@ -106,25 +106,28 @@ Baca sel "tidak pernah" sebagai penemuan. **Pada kos pemerolehan RM5 satu pesana
 
 Inilah ayat yang dielakkan enam artikel lain: pada bakul kecil dengan pemerolehan berbayar, **platform bukan mengecas anda lebih — ia menyubsidi anda.**
 
-## Resit kedua, dari minggu yang sama, menunjuk arah bertentangan
+## Tiga resit, dan harganya bergerak 52 mata
 
-Minggu yang sama menghasilkan skrin checkout kedua. Shopee Food, satu item, 17:02 pada jam:
+Dalam tempoh seminggu, tiga skrin checkout, tiga platform, tiga jawapan berbeza tentang harga makan malam:
 
-| Baris | Jumlah |
-| --- | --- |
-| Subtotal item | RM14.90 |
-| Diskaun item | −RM1.49 |
-| Baucar diskaun makanan | −RM3.00 |
-| Fi penghantaran | RM0.00 |
-| **Jumlah** | **RM10.41** |
+| | Grab | Shopee Food | foodpanda |
+| --- | --- | --- | --- |
+| Bil makanan | RM20.90 | RM14.90 | RM22.00 |
+| Penghantaran | RM4.70 dicaj | percuma | RM5.99, dilepaskan |
+| Diskaun | — | RM4.49 | RM3.30 |
+| Fi | tiada dipaparkan | tiada dipaparkan | RM0.65 platform, RM0.05 cukai |
+| **Pelanggan bayar** | **RM25.60** | **RM10.41** | **RM19.40** |
+| Terhadap bil makanan | **+22.5%** | **−30.1%** | **−11.8%** |
 
-Berjimat: RM4.49. Tip pemandu ditawarkan dan ditolak, 19 koin boleh mengambil 19 sen lagi, dan sepanduk menjual penghantaran percuma tanpa had pada RM1.99 sebulan.
+Itu sebaran 52 mata pada pesanan sejenis, di bandar yang sama, dalam minggu yang sama. Tiada kedai menetapkan harga begitu, dan tiada kedai mampu: harga yang dilihat pelanggan di sini ialah hasil lelongan subsidi antara platform, dan bahagian peniaga tidak kelihatan pada ketiga-tiga skrin.
 
-Letakkan dua skrin itu bersebelahan dan mereka menerangkan industri yang berbeza. Grab menambah **22.5%** pada bil makanan untuk penghantaran. Shopee memotong **30%** daripada bil makanan dan menghantarnya percuma. Kedua-duanya pelanggan yang sama, di bandar yang sama, dalam minggu yang sama, membayar harga berbeza untuk makan malam sejenis.
+Dua butiran lebih bernilai daripada jumlahnya.
 
-Skrin itu tidak menyatakan siapa membiayai RM4.49 itu, dan artikel ini tidak akan meneka. Apa yang boleh dikatakan ialah rupa setiap baris. **Diskaun item 10%** kelihatan seperti promosi yang peniaga tetapkan. **Baucar RM3.00** yang bulat kelihatan seperti kempen platform. Jika kedai membiayai kedua-duanya, ambilan berkesannya pada pesanan itu ialah **RM4.47 daripada RM14.90 — 30%**, lebih tinggi daripada mana-mana jalur komisen dalam jadual pengawal selia. Jika platform membiayai baucar itu, kedai diberi pelanggan pada diskaun yang tidak mungkin ditawarkannya sendiri.
+**Semua diskaun kelihatan seperti promosi bulat.** Diskaun item Shopee ialah 10% daripada subtotalnya, baucarnya RM3.00 rata, diskaun foodpanda **tepat 15% daripada RM22.00**. Lima belas peratus juga lantai jalur 15–25% yang direkodkan dalam keputusan foodpanda pengawal selia. Itu mungkin kebetulan psikologi harga; skrin tidak menyatakan siapa membiayai mana-mana satu, dan artikel ini tidak meneka. Apa yang boleh dikatakan ialah rupa aritmetiknya jika kedai membiayai diskaunnya dan komisen 15%: pada pesanan foodpanda, **RM3.30 + RM3.30 = RM6.60 daripada RM22.00, ambilan 30%** — dan pelanggan masih membayar RM9.29 kurang daripada yang dicadangkan harga menu.
 
-Sama ada cara, inilah mekanisme yang identiti pulang modal panggil pemasaran, dan sebabnya baris itu bukan sifar. Kedai yang bersaing pada harga dengan checkout yang boleh mencetak diskaun 30% bukan bersaing dengan perisian. Ia bersaing dengan bajet pengiklanan orang lain.
+**Baris fi yang tiada bukan bermakna fi yang tiada.** Skrin Grab tidak menunjukkan fi perkhidmatan. Skrin foodpanda menunjukkan fi platform dan cukai perkhidmatan sebagai baris berasingan, RM0.70 bersama, cukup kecil sehingga kebanyakan pelanggan membacanya sepintas lalu. Dua platform, satu memperincikan dan satu tidak — dan komisen, nombor terbesar daripada semua, tidak diperincikan oleh kedua-duanya.
+
+Tiada satu pun daripada ini menentukan sama ada untuk kekal. Ia menentukan apa yang anda bersaing dengannya. Kedai yang membandingkan harganya sendiri dengan senarai harga platform sedang membandingkan dirinya dengan hasil lelongan yang tidak dapat dilihatnya.
 
 ## SST 8% yang tiada siapa tambah
 
