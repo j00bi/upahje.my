@@ -129,6 +129,31 @@
     },
     "delivery-commission-malaysia": {
       "topic": "operations-growth"
+    },
+    "own-the-shop": {
+      "topic": "buying",
+      "secondary": "operations-growth"
+    },
+    "own-checkout-vs-commission": {
+      "topic": "buying"
+    },
+    "commission-arithmetic": {
+      "topic": "buying"
+    },
+    "discovery-is-the-job": {
+      "topic": "operations-growth",
+      "secondary": "buying"
+    },
+    "taking-money-malaysia": {
+      "topic": "buying"
+    },
+    "we-built-our-own-storefront": {
+      "topic": "operations-growth",
+      "secondary": "buying"
+    },
+    "licence-stack-kedai": {
+      "topic": "compliance",
+      "secondary": "buying"
     }
   },
   "glossary": [

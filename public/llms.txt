@@ -6,14 +6,14 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Concept index
 
-- [Compliance](https://upahje.my/en/topics/compliance): What the rules require, what they do not, and what is unpublished. (2 articles)
-- [Pematuhan](https://upahje.my/ms/topics/compliance): Apa yang dikehendaki peraturan, apa yang tidak, dan apa yang tidak diterbitkan. (2 articles)
-- [Buying](https://upahje.my/en/topics/buying): What work costs, how to brief it, and how to compare quotes. (12 articles)
-- [Pembelian](https://upahje.my/ms/topics/buying): Kos kerja, cara menulis brief, dan cara membandingkan sebut harga. (12 articles)
+- [Compliance](https://upahje.my/en/topics/compliance): What the rules require, what they do not, and what is unpublished. (3 articles)
+- [Pematuhan](https://upahje.my/ms/topics/compliance): Apa yang dikehendaki peraturan, apa yang tidak, dan apa yang tidak diterbitkan. (3 articles)
+- [Buying](https://upahje.my/en/topics/buying): What work costs, how to brief it, and how to compare quotes. (16 articles)
+- [Pembelian](https://upahje.my/ms/topics/buying): Kos kerja, cara menulis brief, dan cara membandingkan sebut harga. (16 articles)
 - [AI and automation](https://upahje.my/en/topics/ai-automation): Agents, models and the loop that runs your request. (8 articles)
 - [AI dan automasi](https://upahje.my/ms/topics/ai-automation): Agent, model dan gelung yang menjalankan permintaan anda. (8 articles)
-- [Operations and growth](https://upahje.my/en/topics/operations-growth): How the business runs week to week, and where the duplication hides. (4 articles)
-- [Operasi dan pertumbuhan](https://upahje.my/ms/topics/operations-growth): Cara perniagaan berjalan setiap minggu, dan di mana pertindihan bersembunyi. (4 articles)
+- [Operations and growth](https://upahje.my/en/topics/operations-growth): How the business runs week to week, and where the duplication hides. (6 articles)
+- [Operasi dan pertumbuhan](https://upahje.my/ms/topics/operations-growth): Cara perniagaan berjalan setiap minggu, dan di mana pertindihan bersembunyi. (6 articles)
 - [Freelance](https://upahje.my/en/topics/freelance): Selling a skill per project, with the listings counted. (1 article)
 - [Bebas](https://upahje.my/ms/topics/freelance): Menjual kemahiran setiap projek, dengan kiraan senarai. (1 article)
 

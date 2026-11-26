@@ -9,6 +9,7 @@ date: 2026-11-26
 updated: 2026-11-26
 author: "UpahJe Desk"
 category: buying-guides
+featured: true
 audience: publication
 tags: [buying-guides, storefront, commission, discovery, malaysia]
 cardFigure: "One bill became three"
