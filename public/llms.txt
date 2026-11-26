@@ -20,6 +20,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 ## English articles
 
 - [Billed by contacts, sold as an operating system](https://upahje.my/en/articles/kuasaos-crm-with-a-costume): KuasaOS bills RM49 to RM499 a month by contact count. Its own footer calls it a CRM. On the pricing page, payroll, SST and e-Invoice appear zero times.
+- [RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission): An FPX payment costs RM1.25. A delivery platform takes 15 to 25% of the bill. The arithmetic that decides whether owning the shop is worth the discovery.
 - [A 9-ending works on new items. Nobody has proved the rest.](https://upahje.my/en/articles/price-endings-nine): Three American field experiments: a $9 ending raised demand in all three, strongest on new items. No effect size published, no Malaysian data, no percentage.
 - [Twelve jobs a rented GPU finishes, and three it cannot](https://upahje.my/en/articles/rented-gpu-jobs-malaysia): Fine-tuning, transcription, invoice extraction, product photos, embeddings, evals: what each needs in VRAM, how long it takes, what it costs.
 - [USD 0.04 of GPU time, and the dataset was the work](https://upahje.my/en/articles/rented-gpu-what-it-finishes): A rented RTX 5060 Ti trained a trade filter in five seconds for four cents. The dataset took longer to build, and that is the lesson nobody sells.
@@ -61,6 +62,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Bahasa Melayu articles
 
+- [RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen): Bayaran FPX RM1.25. Platform penghantaran ambil 15 hingga 25% daripada bil. Aritmetik yang menentukan sama ada memiliki kedai sendiri berbaloi.
 - [USD 0.04 untuk masa GPU, dan set data itulah kerja sebenar](https://upahje.my/ms/articles/gpu-sewaan-set-data-kerja-sebenar): RTX 5060 Ti sewaan melatih penapis dagangan dalam lima saat dengan kos empat sen. Set data ambil masa lebih lama, dan itulah pelajarannya.
 - [Hujung 9 berkesan pada barang baharu](https://upahje.my/ms/articles/hujung-harga-sembilan): Tiga eksperimen lapangan Amerika: hujung $9 menaikkan permintaan dalam ketiga-tiganya, paling kuat pada barang baharu. Tiada saiz kesan, tiada data Malaysia.
 - [Dua belas kerja GPU sewaan siap, tiga ia tidak mampu](https://upahje.my/ms/articles/kerja-gpu-sewaan-malaysia): Fine-tune, transkripsi, pengekstrakan invois, foto produk, embedding, eval. Berapa VRAM setiap satu, berapa lama, dan berapa kosnya pada kadar hari ini.
