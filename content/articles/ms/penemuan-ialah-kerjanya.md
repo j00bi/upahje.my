@@ -23,6 +23,12 @@ sources:
   - title: "MyCC, keputusan muktamad foodpanda, 11 September 2023, jalur komisen Jadual 3 (n=5 kontrak francais tanpa nama)"
     url: "https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf"
     checked: 2026-11-26
+  - title: "mejamakan, laman sendiri (menu mingguan, pesanan pada domain sendiri, penghantaran hari bekerja; harga menu seperti dipaparkan pada 26 November 2026)"
+    url: "https://mejamakan.my/"
+    checked: 2026-11-26
+  - title: "mejamakan di Instagram (16K pengikut seperti dipaparkan pada 26 November 2026)"
+    url: "https://www.instagram.com/mejamakan.my/"
+    checked: 2026-11-26
 ---
 
 # Kedai itu mesin tunai, bukan khalayak

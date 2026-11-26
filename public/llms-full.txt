@@ -135,6 +135,8 @@ The shop is the easy half and the audience is the business. Anyone selling you a
 
 - Billplz, pricing (FPX RM1.25 Basic and RM0.75 Standard per transaction, card 1.8% and 1.5%, settlement next business day for FPX and T+2 for cards) — https://www.billplz.com/pricing (checked 2026-11-26)
 - MyCC, final decision on foodpanda, 11 September 2023, Table 3 commission bands (n=5 anonymised franchised contracts) — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-26)
+- mejamakan, own site (weekly menu, ordering on its own domain, delivery weekdays; menu prices as displayed on 26 November 2026) — https://mejamakan.my/ (checked 2026-11-26)
+- mejamakan on Instagram (16K followers as displayed on 26 November 2026) — https://www.instagram.com/mejamakan.my/ (checked 2026-11-26)
 
 ## Billed by contacts, sold as an operating system
 
@@ -4405,6 +4407,8 @@ Kedai itu separuh yang mudah dan khalayak itu perniagaannya. Sesiapa yang menjua
 
 - Billplz, harga (FPX RM1.25 Basic dan RM0.75 Standard setiap transaksi, kad 1.8% dan 1.5%, penyelesaian hari perniagaan berikutnya untuk FPX dan T+2 untuk kad) — https://www.billplz.com/pricing (checked 2026-11-26)
 - MyCC, keputusan muktamad foodpanda, 11 September 2023, jalur komisen Jadual 3 (n=5 kontrak francais tanpa nama) — https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf (checked 2026-11-26)
+- mejamakan, laman sendiri (menu mingguan, pesanan pada domain sendiri, penghantaran hari bekerja; harga menu seperti dipaparkan pada 26 November 2026) — https://mejamakan.my/ (checked 2026-11-26)
+- mejamakan di Instagram (16K pengikut seperti dipaparkan pada 26 November 2026) — https://www.instagram.com/mejamakan.my/ (checked 2026-11-26)
 
 ## Colab akan latih model anda. Ia tidak akan hoskan
 

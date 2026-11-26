@@ -23,6 +23,12 @@ sources:
   - title: "MyCC, final decision on foodpanda, 11 September 2023, Table 3 commission bands (n=5 anonymised franchised contracts)"
     url: "https://www.mycc.gov.my/sites/default/files/pdf/decision/Foodpanda%20FD%20Public%20Non-Confidential.pdf"
     checked: 2026-11-26
+  - title: "mejamakan, own site (weekly menu, ordering on its own domain, delivery weekdays; menu prices as displayed on 26 November 2026)"
+    url: "https://mejamakan.my/"
+    checked: 2026-11-26
+  - title: "mejamakan on Instagram (16K followers as displayed on 26 November 2026)"
+    url: "https://www.instagram.com/mejamakan.my/"
+    checked: 2026-11-26
 ---
 
 # The storefront is a checkout, not an audience
