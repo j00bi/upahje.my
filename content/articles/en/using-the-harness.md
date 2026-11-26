@@ -28,7 +28,7 @@ An agent harness is the program between you and the model. It holds the conversa
 
 Everything below comes from reading the harness installed on this machine on 19 November 2026: its package metadata, and the session transcripts it writes. The installed version is 0.2.2-rc.1, which is what the package file inside the install reports. Where this page describes a flow, the record names are the ones the transcript actually contains.
 
-## What happens to one message, from typing to answer?
+## One message becomes a turn, then steps
 
 The harness records the message as a turn, then works through steps; each step can produce a tool call, and the turn ends when the model stops asking for tools.
 
@@ -48,7 +48,7 @@ The transcript for this machine contains these record types, in the order a sing
 
 The important detail for a business owner is number 7. A task that needs four tools is not one exchange with the model, it is several, because the model cannot see a tool's result until the harness has run it and sent the result back.
 
-## Where is the conversation stored?
+## Sessions live in directories under .dsh/sessions
 
 Every session is a directory under `.dsh/sessions`, named after the folder you were working in, and it holds one compressed transcript file plus a lock file.
 
@@ -56,13 +56,13 @@ The path has three parts: `~/.dsh/sessions/<workspace>/<session>/session.v4.json
 
 That is worth knowing before you paste a client's contract into a chat window. The conversation is a file on your own disk, in a folder named after your project, and it is readable with one command.
 
-## What does a tool call look like in that flow?
+## A tool call record carries turn, step and call id
 
 A tool call record carries the turn number, the step number, a call identifier, the tool name, and the arguments, and the harness, not the model, is what executes it.
 
 The `tool/call` record in the transcript has exactly these data fields: `turn`, `step`, `callId`, `name`, `arguments`. The matching `tool/result` arrives after the harness has actually done the work. So when you read that an agent "ran a command", the sequence is: the model chose the tool and the arguments, the harness executed them, and the result went back to the model in the next step.
 
-## What can I check myself?
+## Three commands check the pages claims
 
 Three commands, and you do not need to trust this page to run them.
 

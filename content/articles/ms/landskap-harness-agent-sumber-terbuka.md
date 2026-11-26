@@ -57,7 +57,7 @@ Satu baris bagi setiap produk, dengan tahap bukti dinyatakan, kerana tiga daripa
 
 Satu lagi repositori MausBot menyebut dirinya repositori muat turun MIT dan pernah dipetik dalam artikel ini sehingga 24 November 2026, apabila pautan itu memulangkan 404 dan organisasi GitHub di belakangnya tidak lagi wujud. Repositori utama di atas yang masih boleh disemak.
 
-## Apa yang sebenarnya dibenarkan oleh lesen itu kepada perniagaan?
+## "Sumber terbuka" dan "sumber tersedia" bukan kebenaran yang sama
 
 Ini bahagian yang wajar dibaca dua kali, kerana "sumber terbuka" dan "sumber tersedia" bukan kebenaran yang sama.
 
@@ -70,7 +70,7 @@ Produk tertutup yang dihoskan, Grok Bot dan Dots, tidak memberikan kedua-duanya.
 ![Tiga zon: tertutup dan dihoskan bagi Dots dan Grok Bot, sumber tersedia bagi OpenBot di bawah PolyForm Noncommercial, sumber terbuka bagi MausBot di bawah Apache-2.0](/figures/harness-licence-line-ms.svg)
 *Sumber tersedia bukan sumber terbuka: lesen OpenBot bukan komersial, repo utama MausBot Apache-2.0.*
 
-## Mengapa satu nama memetakan kepada beberapa projek?
+## "OpenBot" ialah sekurang-kurangnya empat projek berbeza
 
 Kerana "OpenBot" ialah sekurang-kurangnya empat projek tidak berkaitan, dan yang dipasang pada mesin ini tidak dapat dikenal pasti sekarang.
 
@@ -78,13 +78,13 @@ Itu bukan sekadar kaveat retorik. `nightly-labs/openbot` ialah ruang kerja agent
 
 "GrokBot" ada masalah yang lebih ringan: repositori GitHub dengan nama itu kebanyakannya panduan komuniti dan klon tentang produk xAI, bukan harness bebas. "Dots" juga bertembung dengan repositori agent yang tidak berkaitan.
 
-## Apa yang kami hilang, dan bagaimana kami tahu?
+## Satu harness kini yatim, dan mesej kegagalannya buktinya
 
 Satu harness yang pernah dipasang di sini kini yatim, dan mesej kegagalannya ialah buktinya.
 
 Pelancar `openmausbot` masih ada pada mesin ini, dan menjalankannya gagal dengan ralat Node `Cannot find module` yang menamakan laluan muatan yang sudah tiada. Muatannya hilang, tiada unit systemd dengan nama itu, dan tiada direktori data yang tinggal. Jadi MausBot muncul dalam jadual daripada repositorinya, bukan daripada penggunaan kami: kami menjalankannya lebih awal dalam projek ini dan tidak boleh mengesahkan semula pengalaman itu sekarang.
 
-## Istilah mana yang patut saya guna?
+## Guna "agent harness" dengan vendor, "harness" dengan yang tahu
 
 "Agent harness" jika anda mahu istilah vendor, "harness" jika anda bercakap dengan orang yang sudah tahu. "AI harness" ialah kata pengubah yang vendor yang kami baca tidak gunakan. Istilahnya dibincangkan dalam [agent harness, AI harness, agent framework](https://upahje.my/ms/articles/agent-harness-atau-ai-harness).
 

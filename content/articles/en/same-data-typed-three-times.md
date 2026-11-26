@@ -35,7 +35,7 @@ sources:
 
 Adoption is not the problem. In 2024, 97.2% of Malaysian establishments reported using computers, 95.3% had internet access, and 74.4% had a web presence. The duplication happens one layer back: a customer-facing system that was digitised, and a back office that was not. The same order then exists in two places, and a person reconciles it.
 
-## What do the official numbers say?
+## DOSM puts adoption near universal
 
 Three figures from DOSM's ICT and e-commerce release for establishments, data year 2024, published 2025. They measure adoption, and they measure it well.
 
@@ -47,7 +47,7 @@ Three figures from DOSM's ICT and e-commerce release for establishments, data ye
 
 Read them together and the picture is a business that already has a computer, a connection and often a website. What the release does not measure is how many separate systems those establishments run, or how much time goes into moving data between them. That absence matters, and it is the reason this article avoids a number for "hours lost".
 
-## What does the research say about how it is used?
+## The research finding is isolation, not absence
 
 Khazanah Research Institute, with MDEC, published a finding in May 2026 that describes the pattern without counting it, so it is worth quoting rather than paraphrasing: digital tools "are often implemented in isolation and used reactively, driven by immediate operational needs rather than longer-term strategic planning".
 
@@ -55,7 +55,7 @@ The same paper describes "fragmented systems where customer-facing functions are
 
 This is a think-tank finding, dated 25 May 2026, not a statistic. It says the shape of the problem, and it is careful not to put a number on it.
 
-## Where does a single order get typed three times?
+## Follow one order through three systems
 
 Follow one order. It arrives as a message, gets written into a quotation, becomes an invoice, and then a delivery order or a job sheet. Each of those documents exists in a system, and in most small businesses the systems do not talk.
 
@@ -63,7 +63,7 @@ The quotation lives in a template. The invoice is issued through accounting soft
 
 That is not a technology failure at the level DOSM measures. Every one of those tools is software. It is a fragmentation failure, exactly the pattern KRI describes, and it costs a business in rework rather than in licences.
 
-## Why does e-Invoice force the point?
+## e-Invoice checks the document at issuance
 
 Because LHDN now checks the document, not the intent, and the check happens at issuance.
 
@@ -75,7 +75,7 @@ Three rules make that concrete, all from LHDN's own validation documentation and
 
 So the invoice data has to be right once, at the source, before an automated system touches it. An automation that copies a wrong supplier code into a submitted invoice does not create a small error; it creates a correction document with its own tax treatment. We covered the filing timeline in [what e-Invoice automation covers](https://upahje.my/en/articles/what-einvoice-automation-covers); this article is about why the data behind it has to be single.
 
-## What does nobody publish?
+## Three gaps nobody publishes
 
 Three gaps, and they are worth naming because they are the numbers every vendor deck uses.
 

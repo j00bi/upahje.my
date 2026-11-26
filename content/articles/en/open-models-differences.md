@@ -44,7 +44,7 @@ sources:
 
 The licence is the difference that decides whether you can use a model in a business at all. Of the five open-weight models read for this article, two are MIT, one carries a custom Qwen licence, one carries Mistral's own open-weight licence, and one carries a Kimi licence. "Open weight" tells you the files are downloadable; it does not tell you what you may do with them.
 
-## What does each licence actually say?
+## Each licence name carries one restriction
 
 The licence name and the restriction, quoted from the model card or its licence file, not from a summary.
 
@@ -58,7 +58,7 @@ The licence name and the restriction, quoted from the model card or its licence 
 
 MIT is the permissive one: commercial use, modification and redistribution, with the notice kept. The other three are custom licences whose terms live in the repository's LICENSE file. Those files were not opened, so this article names the licences without summarising their terms. Either way, a custom licence is a document you read, not a label you assume.
 
-## What does it take to run one?
+## Size is the first wall
 
 Size is the first wall, and the hardware guidance on the cards does not give a minimum anyone can price against.
 
@@ -66,7 +66,7 @@ The cards state parameter counts of 95B activated within 2.4T for Qwen, 1T for M
 
 So this article cannot tell you what self-hosting costs. A node of GPUs is a real bill, and no card here states the minimum configuration, so any figure would be invented. What it can tell you is what renting the same model costs.
 
-## What does renting cost instead?
+## Renting is priced per token
 
 Every one of these models is also sold per token by its publisher, and the prices differ enough to matter.
 
@@ -82,13 +82,13 @@ A second host also sells DeepSeek V4.1 Flash: Mistral's API lists it at 0.30 in 
 
 The arithmetic a buyer can do from here, at 1,000 input and 500 output tokens per task: deepseek-flash off-peak costs USD 0.00015 + USD 0.0003 = USD 0.00045 a task; kimi-k3.1-pro costs USD 0.002 + USD 0.005 = USD 0.007 a task. That is about 15 times the per-task cost, and both numbers are checkable against the table above.
 
-## Which model should a Malaysian SME start with?
+## Start with the cheapest per token that permits business use
 
 The cheapest per token that the licence plainly permits business use. On the rows read here, that is DeepSeek-V4.1-Flash-1017 at MIT, rented at 0.15 in / 0.60 out off-peak, before anyone buys a GPU.
 
 That is a conditional recommendation, not a verdict: it assumes your task tolerates a Chinese vendor's API and that you do not need a custom licence review. If either condition fails, the next step is the Mistral or Qwen rows, both of which cost more per token and carry licences you must read.
 
-## What could we not verify?
+## No card states a minimum hardware configuration
 
 No card states a minimum hardware configuration, so no self-hosting cost is claimed. Kimi's hardware figures were not captured, and DeepSeek's peak input price is not published on the page read.
 

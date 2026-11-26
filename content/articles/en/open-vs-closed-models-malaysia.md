@@ -32,13 +32,13 @@ sources:
 
 An open-weight model is one you can download and run on hardware you control. A closed model is one you can only call. For most Malaysian SMEs the practical answer is still closed, because running a model in-house needs a rented GPU, someone who can operate it, and a volume high enough to matter.
 
-## What does "open-weight" actually let me do?
+## Open-weight means the files are published
 
 It means the model files are published, so you can put them on your own machine instead of calling the vendor's servers. As of 19 November 2026, Mistral's catalogue lists open-weight models under three licence shapes: Apache 2.0 for Mistral Small 4 and the Ministral 3 models, MIT for Z.ai GLM 5.3 and DeepSeek V4.1 Flash, and a vendor-specific licence for Mistral Large 4 ([Mistral docs, checked 19 Nov 2026](https://docs.mistral.ai/models)).
 
 Two things that fact does not give you: free inference, and permission to ignore the licence. Apache 2.0 is a permissive licence, but the terms are on the model page and they are what governs your use ([Mistral Small 4 page, checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
-## What does each option cost per month?
+## Per-call cost can be computed exactly
 
 The per-call side can be computed exactly, because vendors publish rates. The self-hosted side depends on GPU rental, which we could verify for one supplier only.
 
@@ -53,7 +53,7 @@ The per-call side can be computed exactly, because vendors publish rates. The se
 
 The token rates are from OpenAI's pricing page and from Mistral's own model page, both checked on 19 November 2026 ([OpenAI pricing](https://developers.openai.com/api/docs/pricing), [Mistral Small 4](https://docs.mistral.ai/models/mistral-small-4-0-26-03)). The GPU rate is DigitalOcean's list price for an HGX B300, checked the same day ([DigitalOcean GPU pricing](https://www.digitalocean.com/pricing/gpu-droplets)).
 
-## At what volume does self-hosting pay?
+## Self-hosting pays at about 36 million messages a month
 
 At a volume that no small business reaches: about 36 million messages a month, at the rates above.
 
@@ -72,7 +72,7 @@ Self-hosting keeps data in Malaysia only when the hardware is in Malaysia. Renti
 
 Mistral's own API prices Mistral Small 4 at USD 0.15 per million input tokens and USD 0.60 per million output tokens ([checked 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
-## What does running one in-house actually require?
+## Running one in-house takes five continuing jobs
 
 Five jobs, and none of them is a one-off setup.
 
@@ -84,7 +84,7 @@ Five jobs, and none of them is a one-off setup.
 
 This list is our description of the work, not a salary survey or a job specification.
 
-## What should a Malaysian SME do this quarter?
+## Call an open-weight model before running one
 
 Call an open-weight model before you try to run one. Mistral serves its own open-weight models through an API at USD 0.15 and USD 0.60 per million tokens, which gets you the licence and the model behaviour without buying a GPU or hiring anyone. Self-hosting becomes a question worth asking when your monthly token spend approaches a GPU's monthly cost, or when a data location requirement forces your hand.
 

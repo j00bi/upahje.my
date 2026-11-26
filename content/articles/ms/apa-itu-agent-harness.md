@@ -48,7 +48,7 @@ Transkrip pada mesin ini mengandungi jenis rekod ini, mengikut urutan satu pertu
 
 Perkara penting bagi pemilik perniagaan ialah nombor 7. Tugasan yang memerlukan empat tools bukan satu pertukaran dengan model, tetapi beberapa pertukaran, kerana model tidak dapat melihat hasil tool sehingga harness menjalankannya dan menghantar hasil itu kembali.
 
-## Di mana perbualan disimpan?
+## Perbualan disimpan sebagai fail transkrip dalam folder sesi
 
 Setiap sesi ialah satu direktori di bawah `.dsh/sessions`, dinamakan sempena folder kerja anda, dan ia menyimpan satu fail transkrip termampat serta satu fail lock.
 
@@ -56,13 +56,13 @@ Laluan itu ada tiga bahagian: `~/.dsh/sessions/<workspace>/<session>/session.v4.
 
 Itu wajar diketahui sebelum anda menampal kontrak pelanggan ke dalam tetingkap sembang. Perbualan itu ialah fail pada cakera anda sendiri, dalam folder yang dinamakan sempena projek anda, dan ia boleh dibaca dengan satu arahan.
 
-## Bagaimana rupa tool call dalam aliran itu?
+## Tool call membawa lima medan, dan harness yang menjalankannya
 
 Rekod tool call membawa nombor turn, nombor step, pengenal panggilan, nama tool dan argumennya, dan harness, bukan model, yang menjalankannya.
 
 Rekod `tool/call` dalam transkrip mempunyai medan data ini sahaja: `turn`, `step`, `callId`, `name`, `arguments`. Rekod `tool/result` yang sepadan tiba selepas harness benar-benar menyelesaikan kerja itu. Jadi apabila anda membaca bahawa sesuatu agent "menjalankan arahan", urutannya ialah: model memilih tool dan argumen, harness menjalankannya, dan hasilnya dihantar kembali kepada model pada step seterusnya.
 
-## Apa yang boleh saya semak sendiri?
+## Tiga arahan untuk menyemak transkrip sendiri
 
 Tiga arahan, dan anda tidak perlu mempercayai halaman ini untuk menjalankannya.
 

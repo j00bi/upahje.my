@@ -39,7 +39,7 @@ sources:
 
 Published prices for automation work in Malaysia run from RM400 for a simple process build to RM6,000-plus for autonomous task execution. Those figures and 28 more below come from six Malaysian publishers, with the publisher, unit and date on every row. Four are studios, one is an independent practitioner, and one is a freelance profile; the only per-hour figure comes from that profile. Solo freelancers usually quote per job rather than publish, so this table is published supply, not the whole market.
 
-## Who publishes these numbers, and who does not?
+## Six publishers print a rate, and the rest print nothing
 
 The figures below come from pricing pages of Malaysian automation providers and from one Malaysian freelance profile. Every row carries the date it was read: 19 November 2026 for the studio and platform pages, and 27 October 2026 for the independent practitioner's page.
 
@@ -47,7 +47,7 @@ The global marketplaces are unmeasured here. Upwork returns HTTP 403 with a Clou
 
 Two further exclusions. Every "quote on request" tier is excluded, because a quote is not a rate. Freelancer.com profiles that price in USD are excluded, even where the person is Malaysian, because the number is not a Malaysian price.
 
-## What does a published automation build cost?
+## A published build runs from RM400 to RM6,000-plus
 
 Per project, published prices run from RM400 for a simple process build at Pang Jun Han to RM6,000-plus for autonomous task execution at Autoflow Solutions. All rows carry the publisher's own unit.
 
@@ -78,7 +78,7 @@ Per project, published prices run from RM400 for a simple process build at Pang 
 ![Four publishers' published project price ranges, from RM400 at Pang Jun Han to RM6,000-plus at Autoflow Solutions](/figures/rates-project-prices.svg)
 *Published project prices by publisher: RM400 at the floor, RM6,000-plus at the ceiling.*
 
-## What does an integration cost?
+## No publisher states a per-integration price
 
 No Malaysian publisher in this set states a per-integration price, so no per-integration market rate is claimed here. What is published is subscription tiers that include connectors and API integration.
 
@@ -96,7 +96,7 @@ No Malaysian publisher in this set prices one integration. The one build price t
 | Scale tier set-up, includes booking-system integration | RM6,000 | per project | Nixlab Studio | 2026-11-19, page undated |
 | Large build linked to existing accounting or project system | RM1,600 to RM4,000 | per project | Pang Jun Han | 2026-10-27 |
 
-## Why do the same tasks carry different units?
+## The units differ because the publishers sell different things
 
 Because the publishers are selling different things: a session of someone's time, a project with a defined end, or an ongoing subscription.
 
@@ -104,7 +104,7 @@ RM400 per 4-hour session and RM1,500 per project are not competing prices. The f
 
 The dates matter for the same reason. Several pages carry no publication date, so the row date is the day the price was read, not the day it was published. A price read on 19 November 2026 may have been written in 2025 and not updated.
 
-## What changes the price of a quote?
+## Six things move a quote
 
 Six things, and each one appears in the table above as a different tier rather than a discount.
 
@@ -115,7 +115,7 @@ Six things, and each one appears in the table above as a different tier rather t
 5. Whether the build touches existing accounting or project software. That is the top of Pang Jun Han's range, RM1,600 to RM4,000.
 6. Whether you buy a session or a scope. The only per-hour figure in the set belongs to a freelance profile, not to any of the studios.
 
-## How do I compare two quotes when the units differ?
+## Compare quotes in three numbers, not in units
 
 Convert both to the same three numbers before you compare: total cost to a working system, monthly cost after launch, and what each one excludes.
 

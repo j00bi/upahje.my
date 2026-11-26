@@ -47,7 +47,7 @@ Pasaran global tidak diukur di sini. Upwork memulangkan HTTP 403 dengan sekatan 
 
 Dua lagi pengecualian. Setiap tier "sebut harga atas permintaan" dikecualikan, kerana sebut harga bukan kadar. Profil Freelancer.com yang berharga dalam USD juga dikecualikan, walaupun orangnya Malaysia, kerana angkanya bukan harga Malaysia.
 
-## Berapa kos satu pembinaan automasi yang diterbitkan?
+## Pembinaan diterbitkan bermula RM400 hingga RM6,000 lebih
 
 Mengikut projek, harga yang diterbitkan bermula dari RM400 bagi pembinaan proses mudah di Pang Jun Han hingga RM6,000 lebih bagi pelaksanaan tugasan autonomi di Autoflow Solutions. Semua baris membawa unit penerbit sendiri.
 
@@ -78,7 +78,7 @@ Mengikut projek, harga yang diterbitkan bermula dari RM400 bagi pembinaan proses
 ![Julat harga projek yang diterbitkan oleh empat penerbit, dari RM400 di Pang Jun Han hingga RM6,000 lebih di Autoflow Solutions](/figures/rates-project-prices-ms.svg)
 *Harga projek yang diterbitkan mengikut penerbit: RM400 di bawah, RM6,000 lebih di atas.*
 
-## Berapa kos satu integrasi?
+## Tiada penerbit menyatakan harga setiap integrasi
 
 Tiada penerbit Malaysia dalam set ini menyatakan harga setiap integrasi, jadi tiada kadar pasaran bagi integrasi individu didakwa di sini. Yang diterbitkan ialah tier langganan yang merangkumi penyambung dan integrasi API.
 
@@ -96,7 +96,7 @@ Had itu nyata. Satu-satunya harga pembinaan yang menamakan kerja integrasi dalam
 | Persediaan tier Scale, termasuk integrasi sistem tempahan | RM6,000 | setiap projek | Nixlab Studio | 2026-11-19, halaman tanpa tarikh |
 | Pembinaan besar berkait dengan sistem perakaunan atau projek sedia ada | RM1,600 hingga RM4,000 | setiap projek | Pang Jun Han | 2026-10-27 |
 
-## Mengapa tugasan yang sama membawa unit berbeza?
+## Unit berbeza kerana penerbit menjual perkara berbeza
 
 Kerana penerbit menjual perkara yang berbeza: satu sesi masa seseorang, satu projek dengan penghujung yang jelas, atau satu langganan berterusan.
 
@@ -104,7 +104,7 @@ RM400 setiap sesi 4 jam dan RM1,500 setiap projek bukan harga yang bersaing. Yan
 
 Tarikh penting atas sebab yang sama. Beberapa halaman tiada tarikh penerbitan, jadi tarikh baris ialah hari harga itu dibaca, bukan hari ia diterbitkan. Harga yang dibaca pada 19 November 2026 mungkin ditulis pada 2025 dan tidak dikemas kini.
 
-## Apa yang mengubah harga sesuatu sebut harga?
+## Enam perkara mengubah harga, sebagai tier dan bukan diskaun
 
 Enam perkara, dan setiap satu muncul dalam jadual di atas sebagai tier berbeza dan bukan diskaun.
 
@@ -115,7 +115,7 @@ Enam perkara, dan setiap satu muncul dalam jadual di atas sebagai tier berbeza d
 5. Sama ada pembinaan menyentuh perisian perakaunan atau projek sedia ada. Itu harga tertinggi dalam julat Pang Jun Han, RM1,600 hingga RM4,000.
 6. Sama ada anda membeli sesi atau skop. Satu-satunya kadar sejam dalam set ini milik profil freelance, bukan mana-mana studio.
 
-## Bagaimana saya membandingkan dua sebut harga yang unitnya berbeza?
+## Tukar dua sebut harga kepada tiga angka yang sama
 
 Tukar kedua-duanya kepada tiga angka yang sama sebelum membandingkan: jumlah kos sehingga sistem berjalan, kos bulanan selepas pelancaran, dan apa yang dikecualikan oleh setiap satu.
 

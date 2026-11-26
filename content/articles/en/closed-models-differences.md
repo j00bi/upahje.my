@@ -44,7 +44,7 @@ sources:
 
 What differs is not which model scores highest. Two leaderboards were reachable and are printed below with their settings, but neither is treated here as a quality ranking. What a buyer is stuck with is four documented things: the context window, the price per million tokens, whether tool calling and structured output are documented, and whether file and image input are supported.
 
-## What does each vendor document?
+## Each vendor documents only what its pages state
 
 Only what the vendor's own pages state. Where a page did not print a figure, the cell says "not captured" rather than a number.
 
@@ -67,13 +67,13 @@ The figures come from Anthropic's models overview, OpenAI's API pricing page, De
 
 Two cells need a note rather than a number. Haiku 5.5's input price is qualified on the page as applying to prompts up to 100,000 tokens. And GPT-6.2 Astra and Sol price short and long context separately, so both are printed. The capability cells are backed by the vendor documentation listed in Sources: PDF support for the Claude rows, file inputs for the GPT rows, and function calling for grok-4.7.
 
-## What does a benchmark score not tell you?
+## A benchmark score leaves the table out
 
 Almost everything in the table above. The two leaderboards further down are printed with their settings, and neither is treated as a quality verdict.
 
 SWE-bench serves its leaderboards through script rather than static text, and no dated snapshot was captured. The Aider polyglot page's visible top row carries a run directory dated 23 August 2025, which is not a snapshot of November 2026. Rather than cite either as current, this piece compares what you get and pay. A benchmark number also would not tell you the context window, the price, whether structured output is documented, or what the terms allow.
 
-## What does one task cost at these rates?
+## One worked task shows the rates
 
 Because input and output are priced separately, one worked example makes the table usable. The assumption is 100,000 input and 20,000 output tokens per task, and the rate is the printed price above.
 
@@ -86,7 +86,7 @@ That is an 80 times spread between the cheapest and most expensive row on the sa
 ![Three bars to scale: Claude Haiku 5.5 at USD 0.02, Gemini 4 Carbon at USD 0.40, Claude Fable 5.2 at USD 1.60 per task](/figures/closed-task-cost.svg)
 *The same 100,000-in, 20,000-out task costs USD 0.02 on Haiku 5.5 and USD 1.60 on Fable 5.2.*
 
-## Where is the lock-in?
+## Lock-in sits in three contract clauses
 
 Three places, and each shows up in the contract rather than the benchmark.
 
@@ -96,13 +96,13 @@ Three places, and each shows up in the contract rather than the benchmark.
 
 **Export.** There is no weights file to take with you. Moving vendors means rebuilding prompts, tools and evaluation, which is a cost no table captures.
 
-## Which vendor names drift?
+## Vendor names drift between pages
 
 The pages disagree with each other, and the table keeps the printed names rather than tidying them.
 
 OpenAI's platform documentation sells GPT-6.2 Astra and GPT-6.2 Sol, and prints the cheap model as gpt-6-luna, while its consumer page calls the family GPT-6. Gemini's marketing names differ from the API ids shown underneath them, which is why the table uses the API ids. If you are briefing a supplier, quote the API id, because that is what the documentation and billing use.
 
-## What do the benchmarks actually say?
+## Two leaderboards, readable only with their settings
 
 Two leaderboards, each readable only with its settings printed beside the number, and neither reconciling with the vendor names above.
 
@@ -123,7 +123,7 @@ The names do not reconcile, and that is a finding rather than a formatting probl
 
 A per-token price is not a per-task price. Input and output are priced separately, long context costs more on OpenAI and xAI, and Haiku 5.5's input figure is qualified by prompt length, so a model that looks cheapest per input token can cost more on a task that writes a lot. [What RM100 a month actually buys you in AI](https://upahje.my/en/articles/rm100-budget) works that arithmetic in ringgit.
 
-## What did we not measure?
+## We ran no benchmark ourselves
 
 We did not run a benchmark ourselves. We read two, with their settings, and we are not treating either as a quality verdict: there is no "smarter" and no "better at coding" here.
 

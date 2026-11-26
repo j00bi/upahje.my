@@ -26,7 +26,7 @@ Ada satu ujian sahaja, dan ia satu ayat yang boleh anda sebut dengan lantang: ap
 
 Catat tiga perubahan terakhir pada data itu dan bagaimana setiap satu berpindah. Jika ketiga-tiganya memerlukan seseorang membuka dua tetingkap dan menaip semula, anda mempunyai penyelarasan manual. Spreadsheet ialah penyelarasan manual yang baik. API ialah apa yang anda beli apabila penyalinan yang sama berlaku cukup kerap untuk menjadi kos, atau sekali terlalu kerap untuk diterima.
 
-## Bila spreadsheet menang?
+## Spreadsheet menang dalam tiga keadaan
 
 Spreadsheet ialah tool yang betul dalam tiga keadaan, dan membeli API dalam mana-mana daripadanya ialah wang yang dibuang pada masalah yang anda tidak ada.
 
@@ -34,7 +34,7 @@ Spreadsheet ialah tool yang betul dalam tiga keadaan, dan membeli API dalam mana
 2. **Satu orang memiliki data itu.** Pemilikan bersama ialah tempat spreadsheet gagal, bukan kerana teknologinya rendah. Satu pemilik yang teliti dengan spreadsheet mengalahkan integrasi separuh siap yang tiada siapa faham.
 3. **Inputnya memerlukan pertimbangan.** Jika seseorang perlu melihat mesej dan memutuskan maksudnya, tiada API boleh buat bahagian itu. Mengautomasikan pengangkutan sambil membiarkan keputusan dibuat secara manual tidak memberi anda apa-apa.
 
-## Bila ia berhenti memadai?
+## Empat tanda ia sudah berhenti memadai
 
 Empat tanda, dan mana-mana satu sudah cukup untuk anda mula melihat ke arah API.
 
@@ -43,13 +43,13 @@ Empat tanda, dan mana-mana satu sudah cukup untuk anda mula melihat ke arah API.
 3. **Kegagalan menelan kos lebih besar daripada pembaikannya.** Pesanan terlepas, tempahan berganda, invois dihantar dua kali. Apabila ini berlaku setiap bulan, kos pembaikan itu wang sebenar.
 4. **Data perlu bergerak pada waktu malam atau serentak.** Tiada orang boleh menyelaraskan pada pukul 2 pagi, dan seratus baris yang ditaip semula dengan tangan akan mengandungi kesilapan yang anda tidak akan jumpa.
 
-## Berapa kos setiap satu sebenarnya?
+## Tiada angka setara, kerana tiada penanda aras awam
 
 Bukan angka setara, kerana tiada penanda aras awam bagi kadar yang dikenakan pembangun Malaysia untuk kerja ini, dan saya tidak akan mencipta satu.
 
 Yang boleh dikatakan dengan jujur ialah bentuk bilnya. Spreadsheet menelan masa, setiap minggu, selamanya, dan menelan pembersihan selepas setiap kesilapan. API menelan kos bina sekali, yuran bulanan untuk apa-apa yang dipanggilnya, dan satu kerja penyelenggaraan setiap kali pembekal mengubah sesuatu. Kos bina itu yang kelihatan. Masa yang anda sudah belanja, dan kesilapan yang sudah berlaku, ialah yang tiada siapa masukkan dalam kiraan sehingga spreadsheet tidak lagi cukup.
 
-## Apa pilihan di tengah-tengah?
+## Banyak PKS berada di antara kedua-duanya
 
 Banyak PKS Malaysia berada di antara kedua-duanya, dan pilihan tengah itu wajar dinamakan daripada berpura-pura pilihan ini dua pilihan sahaja.
 

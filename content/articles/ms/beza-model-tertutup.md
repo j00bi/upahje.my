@@ -67,13 +67,13 @@ Angka itu datang daripada gambaran model Anthropic, halaman harga API OpenAI, ha
 
 Dua sel memerlukan nota dan bukan angka. Harga input Haiku 5.5 disyaratkan pada halaman itu untuk prompt hingga 100,000 token. Dan GPT-6.2 Astra serta Sol menilai konteks pendek dan panjang secara berasingan, jadi kedua-duanya dicetak. Sel keupayaan disokong oleh dokumentasi vendor yang disenaraikan dalam Sumber: sokongan PDF bagi baris Claude, input fail bagi baris GPT, dan function calling bagi grok-4.7.
 
-## Apa yang tidak diberitahu oleh skor penanda aras?
+## Dua papan pendahulu tidak dianggap sebagai keputusan kualiti
 
 Hampir semua yang ada dalam jadual di atas. Dua papan pendahulu di bawah dicetak dengan tetapannya, dan tiada satu pun dianggap sebagai keputusan kualiti.
 
 SWE-bench menyajikan papan pendahuluannya melalui skrip dan bukan teks statik, dan tiada petikan bertarikh dirakam. Baris teratas yang kelihatan pada halaman Aider polyglot membawa direktori larian bertarikh 23 Ogos 2025, yang bukan petikan November 2026. Daripada memetik mana-mana satu sebagai semasa, artikel ini membandingkan apa yang anda dapat dan bayar. Angka penanda aras juga tidak akan memberitahu tetingkap konteks, harga, sama ada structured output didokumenkan, atau apa yang dibenarkan oleh terma.
 
-## Berapa kos satu tugasan pada kadar ini?
+## Satu tugasan pada 100,000 input dan 20,000 output
 
 Kerana input dan output dinilai berasingan, satu contoh berkira menjadikan jadual itu boleh digunakan. Andaiannya 100,000 token input dan 20,000 token output setiap tugasan, dan kadarnya ialah harga yang dicetak di atas.
 
@@ -86,7 +86,7 @@ Itu jurang 80 kali antara baris termurah dan termahal pada tugasan yang sama, da
 ![Tiga bar mengikut skala: Claude Haiku 5.5 USD 0.02, Gemini 4 Carbon USD 0.40, Claude Fable 5.2 USD 1.60 setiap tugasan](/figures/closed-task-cost-ms.svg)
 *Tugasan 100,000 input dan 20,000 output yang sama berharga USD 0.02 pada Haiku 5.5 dan USD 1.60 pada Fable 5.2.*
 
-## Di mana terletaknya ikatan?
+## Ikatan terletak pada kontrak, bukan pada penanda aras
 
 Tiga tempat, dan setiap satu muncul dalam kontrak, bukan dalam penanda aras.
 
@@ -96,13 +96,13 @@ Tiga tempat, dan setiap satu muncul dalam kontrak, bukan dalam penanda aras.
 
 **Eksport.** Tiada fail pemberat untuk dibawa bersama. Berpindah vendor bermakna membina semula prompt, tool dan penilaian, iaitu kos yang tiada jadual dapat merakam.
 
-## Nama vendor mana yang berubah?
+## Halaman vendor tidak selaras pada nama model
 
 Halaman tidak selaras antara satu sama lain, dan jadual mengekalkan nama yang dicetak daripada merapikannya.
 
 Dokumentasi platform OpenAI menjual GPT-6.2 Astra dan GPT-6.2 Sol, serta mencetak model murah sebagai gpt-6-luna, manakala halaman penggunanya memanggil keluarga itu GPT-6. Nama pemasaran Gemini berbeza daripada id API di bawahnya, dan sebab itulah jadual menggunakan id API. Jika anda menulis brief kepada pembekal, sebut id API, kerana itulah yang digunakan oleh dokumentasi dan bil.
 
-## Apa yang sebenarnya dinyatakan oleh penanda aras?
+## Penanda aras hanya boleh dibaca dengan tetapannya dicetak
 
 Dua papan pendahulu, dan setiap satu hanya boleh dibaca dengan tetapannya dicetak di sebelah angka, dan tiada satu pun selaras dengan nama vendor di atas.
 

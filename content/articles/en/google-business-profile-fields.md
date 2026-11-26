@@ -40,7 +40,7 @@ sources:
 
 Google's own rules decide this, and they are specific. Your name must be the name customers use in the real world, you get one profile per business, and categories must describe the business rather than its keywords. Get those wrong and the profile can be restricted; get them right and the rest is filling documented fields.
 
-## What does Google check first?
+## Google checks four wording rules first
 
 Four things, and they are all wording rules rather than technical settings.
 
@@ -53,13 +53,13 @@ Four things, and they are all wording rules rather than technical settings.
 
 All four are quoted from Google's guidelines page, read 23 November 2026.
 
-## What about the address, or no address at all?
+## The address decides shopfront or service area
 
 A service-area business and a shopfront are different configurations, and Google documents both.
 
 The location resource carries `address` and `serviceArea`, and a service-area business manages areas instead of a storefront. Google's own example is delivery-only brands working from shared kitchens, which "must hide their address and add service areas to that specific brand". If you deliver and do not have a walk-in counter, running a storefront profile is the mismatch to fix first.
 
-## Which fields are worth filling this month?
+## Hours and sub-resources change what a customer sees
 
 Hours and the sub-resources Google documents, in the order they change a customer's decision.
 
@@ -74,7 +74,7 @@ Hours and the sub-resources Google documents, in the order they change a custome
 
 All of those are documented in Google's Business Profile API reference, read 23 November 2026. The API names matter even if you never write code: they are the fields the form on the website is editing.
 
-## What gets a profile suspended, and what do you do?
+## Suspension and appeal are both documented
 
 Google documents both the suspension process and the appeal, and the appeal page contains the sentence to read before anything else.
 
@@ -82,7 +82,7 @@ A suspended profile is handled through "Fix suspended or disabled profiles", whi
 
 That sentence is the whole reason to keep verification current. An appeal filed before verification is resolved is an appeal that stalls.
 
-## What could we not verify?
+## Google publishes nothing on local ranking
 
 Google publishes nothing in these pages about how profiles are ranked in local search, so this article makes no claim about ranking factors beyond the documented fields. Several help-centre IDs returned "Sorry, this page can't be found" during the pass, so only the pages Google itself links, or that the scan surfaced, are cited. There is also no published figure for how long verification or an appeal takes.
 

@@ -43,7 +43,7 @@ sources:
 
 These are three different kinds of thing, and the words matter before the prices do. `dsh` is DeepSeek Harness, the command-line harness we run here. An "arm" is one of the products tried on the same task, and this run had three: CommandCode, OpenCode and DeepSeek through `dsh`. CommandCode is a paid coding CLI. OpenCode is a free, MIT-licensed coding CLI with an optional subscription. DeepSeek is a model vendor with an API. What follows is what each publishes as a price, where those numbers have moved, and what one run showed. The benchmark half, and the reason a "CommandCode vs OpenCode" score does not exist, is a separate developer note.
 
-## What do the prices look like as published?
+## The prices as published, with one fee missing
 
 CommandCode sells monthly tiers, and every paid tier carries a processing fee with no figure attached.
 
@@ -63,7 +63,7 @@ CommandCode sells monthly tiers, and every paid tier carries a processing fee wi
 
 The processing fee is the line to ask about, because "plus processing fee" is printed on five of the tiers and the fee appears nowhere on the page in a figure or a link.
 
-## Where did the numbers drift?
+## The numbers drifted since August
 
 CommandCode's own offer has moved since August, and both versions are still quotable.
 
@@ -73,7 +73,7 @@ The lesson is that a dated figure needs its date, or it becomes a claim about to
 
 The 38.5% figure that circulates for DeepSeek belongs to Terminal-bench 4.1, where it is DeepSeek V4.1 Flash 1017 run under Claude Code, so it is a result for the model inside someone else's harness and not a result for either CLI named here, and it cannot be compared with a SWE-bench figure because the benchmark, the agent and the task set are different.
 
-## What did we run ourselves?
+## One task in one harness, not a head-to-head
 
 One task, in one harness, printed as a sidebar and not as a head-to-head: `dsh` 0.2.2-rc.1 wrote a small feature in 95.4 seconds across 10 turns and 14 tool calls, produced two files, and the project's own tests passed 3 of 3.
 

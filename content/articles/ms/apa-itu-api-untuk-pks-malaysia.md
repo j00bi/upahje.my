@@ -44,7 +44,7 @@ API menyampaikan satu maklumat yang ditetapkan antara dua sistem, apabila dimint
 ![Kedai anda menghantar pesanan kepada API, API menyalurkannya kepada kurier, dan status penghantaran kembali melalui laluan yang sama](/figures/what-is-an-api-ms.svg)
 *Satu pesanan, keluar melalui API dan kembali sebagai status.*
 
-## Apakah beza antara API model tertutup dengan API model terbuka?
+## API tertutup dipanggil; API terbuka dimuat turun dan dijalankan sendiri
 
 API model tertutup ialah API yang anda boleh panggil, tetapi modelnya tidak boleh anda jalankan sendiri. API model terbuka pula membolehkan fail model dimuat turun dan dijalankan pada perkakasan yang anda kawal.
 
@@ -59,15 +59,15 @@ API model tertutup ialah API yang anda boleh panggil, tetapi modelnya tidak bole
 
 Setakat 19 November 2026, katalog Mistral menyenaraikan ketiga-tiga bentuk lesen ini. Mistral Small 4 dan model Ministral 3 berada di bawah Apache 2.0, Z.ai GLM 5.3 dan DeepSeek V4.1 Flash di bawah MIT, dan Mistral Large 4 di bawah "Mistral Ecosystem Open Weight License" yang khusus ([dokumentasi Mistral, disemak 19 Nov 2026](https://docs.mistral.ai/models)). Pembekal tertutup pula menerbitkan katalog model dan kadar, bukan model weights ([katalog model OpenAI, disemak 19 Nov 2026](https://developers.openai.com/api/docs/models)).
 
-## Patut mula dengan model mana?
+## API tertutup lebih murah untuk permulaan kebanyakan perniagaan kecil
 
 Bayaran ikut panggilan tidak dikenakan apabila tiada penggunaan. Server pula menelan kos setiap bulan walaupun tiada siapa menggunakannya. Sebab itulah API tertutup lebih murah untuk permulaan kebanyakan perniagaan kecil. Model terbuka hanya menang apabila penggunaan bulanan cukup tinggi untuk melebihi kos mesin, dan ada orang di pihak anda yang tahu menjalankannya. Bagi kebanyakan PKS Malaysia, syarat kedua itulah yang menentukan.
 
-## Berapa kos untuk menyambungkan API di Malaysia?
+## Tiada penanda aras awam bagi kos integrasi API di Malaysia
 
 Tiada penanda aras awam bagi kadar kerja integrasi API di Malaysia setakat November 2026. Sebut harga berubah bergantung pada bilangan endpoint, sama ada integrasi menulis data atau membaca sahaja, cara pengesahan berfungsi, apa yang patut berlaku apabila panggilan gagal, dan betapa bersepahnya data sedia ada anda. Harga yang diberi sebelum lima soalan itu dijawab masih anggaran.
 
-## Bagaimana saya boleh menilai harga kerja ini sendiri?
+## Lima fakta menentukan harga sebelum sebut harga diminta
 
 Penilaian harga bermula sebelum anda minta sebut harga, dengan lima fakta yang menentukan angkanya.
 
@@ -77,15 +77,15 @@ Penilaian harga bermula sebelum anda minta sebut harga, dengan lima fakta yang m
 4. Minta harga tetap bagi setiap integrasi, bukan anggaran ikut jam.
 5. Tanya apa yang berlaku kepada kod dan credentials apabila kerja tamat.
 
-## Berapa bil bulanan selepas sistem berjalan?
+## Bil bulanan boleh dikira daripada kadar yang diterbitkan
 
 Pembekal menerbitkan kadar mereka, jadi bil bulanan boleh dikira, bukan diagak. Kadar standard OpenAI untuk model kecil semasa, GPT-6 Luna, ialah USD 0.10 setiap juta token input dan USD 0.50 setiap juta token output ([harga OpenAI, disemak 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Bot FAQ WhatsApp yang mengendalikan 3,000 mesej sebulan, kira-kira 600 token masuk dan 200 token keluar setiap mesej, menelan sekitar USD 0.48 sebulan untuk token sahaja. Jika integrasi berjalan pada server anda sendiri, tambah kos hosting. Kadar tukaran mata wang yang dikenakan oleh kad anda juga tidak termasuk dalam angka ini. Penyelenggaraan turut masuk dalam bil ini: apabila pembekal menghentikan sesuatu versi model, integrasi berhenti berfungsi sehingga ada orang membaikinya.
 
-## Bagaimana saya tahu sama ada saya perlu API atau cukup sekadar buat secara manual?
+## API berbaloi apabila kerja atau kos kesilapan melepasi garis itu
 
 Jika kerja itu berlaku beberapa kali sehari dan kesilapannya murah dibaiki, buat secara manual sahaja. API mula berbaloi apabila jumlah kerja atau kos kesilapan melepasi garis itu. Tiada penanda aras awam yang menetapkan garis itu, jadi ini penilaian kami: garisnya sekitar titik apabila seseorang membuang lebih sejam sehari untuk kerja salin-menyalin, atau apabila kerugian akibat satu pesanan yang terlepas melebihi yuran pembekal sebulan. Jika kurang daripada itu, seorang staf sambilan yang teliti lebih murah dan lebih boleh diharap.
 
-## Apa yang perlu saya tetapkan sebelum membayar seseorang untuk kerja ini?
+## Tiga perkara perlu ditetapkan secara bertulis sebelum bayaran
 
 Tetapkan tiga perkara secara bertulis sebelum bayaran.
 

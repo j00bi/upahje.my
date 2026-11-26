@@ -30,7 +30,7 @@ Setiap satu mengubah harga, dan sebab itulah sebut harga yang tiba tanpa perkara
 4. **Ujian penerimaan.** Semakan tepat yang menentukan kerja itu selesai, dipersetujui sebelum kerja bermula.
 5. **Credentials dan pemilikan.** Akaun siapa yang memiliki kunci itu, di mana ia disimpan, dan apa yang berlaku kepadanya pada akhir kerja.
 
-## Bagaimana rupa brief itu?
+## Salinan brief yang boleh diisi dan dihantar
 
 Salin ini, isikan, dan hantar dokumen yang sama kepada setiap freelancer yang anda tanya. Tujuan menghantar satu dokumen ialah supaya anda boleh membandingkan sebut harga selepas itu.
 
@@ -67,7 +67,7 @@ BAJET
 - Tidak termasuk: [apa-apa yang anda tidak mahu masukkan]
 ```
 
-## Ujian penerimaan apa yang perlu dipersetujui di awal?
+## Satu ujian pada data sebenar yang lulus atau gagal
 
 Satu ujian, pada data sebenar, yang sama ada lulus atau gagal tanpa perdebatan.
 
@@ -75,7 +75,7 @@ Versi paling kukuh membandingkan hasil yang sudah diketahui betul dengan hasil a
 
 Persetujui ujian itu sebelum kerja bermula, secara bertulis, dan persetujui apa yang berlaku jika ia gagal. Brief tanpa ujian menyerahkan takrif "selesai" kepada orang yang dibayar untuk menyelesaikannya.
 
-## Apa yang rosak apabila brief itu nipis?
+## Tiga perkara rosak pada hampir setiap kerja
 
 Tiga perkara yang sama, dalam urutan yang sama, pada hampir setiap kerja.
 
@@ -83,7 +83,7 @@ Freelancer membina apa yang paling mudah dibina dan bukan apa yang anda perlukan
 
 Tiada satu pun daripada itu memerlukan freelancer yang tidak jujur. Ia memerlukan brief yang boleh dibaca dua cara, dan dua orang yang membacanya secara berbeza.
 
-## Bagaimana saya membandingkan dua sebut harga pada brief yang sama?
+## Bandingkan baris demi baris, dan anggap jurang sebagai jurang
 
 Bandingkan baris demi baris dengan brief, dan anggap baris yang tidak dijawab sebagai jurang, bukan bonus.
 

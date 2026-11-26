@@ -29,7 +29,7 @@ A harness keeps your key outside the conversation. It reads the key from an envi
 ![A flow diagram: your app calls the harness, the harness reads the key from an environment variable or a secret store, sends it in an HTTPS request header, and the provider checks it against your account before the model answers. A second panel lists four places the key must never appear: a chat message, a committed file, a screenshot or log, and client-side code](/figures/harness-api-keys.svg)
 *The key travels with the request but belongs to the account, and four places are permanently out of bounds.*
 
-## Where does the key actually live?
+## The key lives in two places only
 
 In two places only: an environment variable that the process can read, or the harness's own credential store, which is a file on your machine.
 
@@ -37,7 +37,7 @@ Environment variables are the simplest form. In this harness a saved secret reac
 
 Either way, the key is a file or an environment, never a line in the conversation. That distinction is the whole article: the model never needs to see the key, and a harness that did put it in the prompt would be leaking it on every request.
 
-## What does the key authenticate?
+## The key authenticates the account, not the request
 
 The account, not the request. The provider looks up the key, finds the account it belongs to, and applies that account's permissions and billing to whatever the request asks for.
 
@@ -47,7 +47,7 @@ Three consequences follow, and each one changes how you handle keys.
 2. **Spend limits belong to the account.** A leaked key spends your money at the provider's rate until you notice, not until the next request ends.
 3. **The key does not say which tool asked.** The provider knows the account, not the script. So the audit trail starts with your own logs, not the provider's dashboard.
 
-## Where must the key never go?
+## Four places the key must never appear
 
 Four places, and they cover almost every real leak: a chat message, a committed file, a screenshot or log, and client-side code.
 
@@ -56,7 +56,7 @@ Four places, and they cover almost every real leak: a chat message, a committed 
 3. **A screenshot or a log.** Debug output that prints a whole request header, or a screenshot of a settings screen, carries the key without anyone intending it. Log redaction is a setting worth checking before you share output with a contractor.
 4. **Client-side code.** Anything that reaches a browser is public. A key in front-end JavaScript, a mobile app, or a static page is available to anyone who opens developer tools, regardless of how it is obfuscated.
 
-## What do I do when a key leaks?
+## Revoke first, rotate second, investigate third
 
 Revoke first, then rotate, then investigate, in that order. Revoking is the only step that stops the spend.
 
