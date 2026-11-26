@@ -3437,7 +3437,7 @@ Agent bertindak antara langkah; chatbot hanya menjawab. Bezanya ialah agent memp
 
 Anthropic menamakan lapisan yang menjalankan ini sebagai agent harness, iaitu program yang memegang perbualan dan menjalankan tool, yang "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([dokumentasi Claude Code, dibaca 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Dua akibat untuk perniagaan kecil: agent boleh menyentuh sistem sebenar, dan harness, bukan model, menentukan apa yang dibenarkannya sentuh.
 
-## Apa yang boleh dibuatnya tanpa penyeliaan?
+## Kerja tanpa penyeliaan murah dilihat dan murah diundur
 
 Kerja tanpa penyeliaan ialah kerja yang kesilapannya murah dilihat dan murah diundur.
 
@@ -3452,7 +3452,7 @@ Kerja tanpa penyeliaan ialah kerja yang kesilapannya murah dilihat dan murah diu
 | Menyediakan draf balasan, laporan atau ringkasan untuk dihantar seseorang | Manusia masih menekan butang hantar |
 | Memantau baris gilir dan memberi amaran apabila ambang dilanggar | Agent naik taraf isu, bukan bertindak sendiri |
 
-## Apa yang perlukan manusia sebelum ia berlaku?
+## Kerja kelulusan tidak pulih dengan menjalankannya semula
 
 Kerja kelulusan ialah kerja yang kos tindakan salahnya tidak pulih dengan menjalankannya semula.
 
@@ -3466,7 +3466,7 @@ Kerja kelulusan ialah kerja yang kos tindakan salahnya tidak pulih dengan menjal
 
 Jadi biarkan agent menyediakan, dan manusia meluluskan. Agent yang menyediakan bayaran balik dan menunggu klik menjimatkan penulisan tanpa mengambil risiko. Saya tidak akan menjalankannya dengan cara lain, dan demo vendor yang melangkau langkah kelulusan itu yang patut anda syak.
 
-## Apa yang tidak boleh dibuatnya sama sekali?
+## Empat kategori yang tiada prompt boleh ubah
 
 Empat kategori, dan tiada prompt boleh mengubahnya.
 
@@ -3475,7 +3475,7 @@ Empat kategori, dan tiada prompt boleh mengubahnya.
 3. **Pengetahuan yang ia tidak ada.** Agent menjawab daripada apa yang dapat dicapainya. Jika stok anda hanya ada dalam kepala seseorang, agent akan yakin dan salah.
 4. **Ketepatan yang dijamin.** Setiap agent kadangkala menghasilkan jawapan salah yang kelihatan munasabah. Sebab itulah lajur kelulusan itu wujud.
 
-## Berapa kosnya dalam ringgit?
+## Dua bil, dan yang lebih kecil yang menarik perhatian
 
 Dua bil. Yang lebih kecil itu yang dapat perhatian.
 
@@ -3500,7 +3500,7 @@ Versi paling kecil yang boleh dijalankan ialah skrip yang membaca CSV e-mel soko
 - **Berapa kosnya:** pada 2,000 token input dan 500 output setiap baris, kira-kira **RM0.00185 sebaris**, jadi seratus baris kurang daripada 20 sen.
 - **Di mana ia mula rosak:** model yang membaca lajur CSV akan tersalah tafsir sel kosong dan mencipta nama pelanggan. Log setiap baris input di sebelah outputnya, jika tidak anda akan menyahpepijat separuh yang salah.
 
-## Bagaimana saya membezakan demo daripada yang terus berjalan?
+## Demo berjalan sekali; yang terus berjalan bertahan pada hari buruk
 
 Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari yang buruk. Enam semakan. Setiap jawapan patut berupa benda yang boleh ditunjukkan.
 
@@ -3659,7 +3659,7 @@ Checked: 2026-11-23
 
 Ini tiga jenis benda berbeza, dan perkataannya penting sebelum harganya. `dsh` ialah DeepSeek Harness, harness baris arahan yang kami jalankan di sini. "Lengan" pula ialah salah satu produk yang dicuba pada tugasan yang sama, dan larian ini ada tiga: CommandCode, OpenCode dan DeepSeek melalui `dsh`. CommandCode ialah CLI pengekodan berbayar. OpenCode ialah CLI pengekodan percuma berlesen MIT dengan langganan pilihan. DeepSeek ialah vendor model dengan API. Apa yang menyusul ialah harga yang diterbitkan setiap satu, di mana angkanya sudah bergerak, dan apa yang ditunjukkan satu larian. Bahagian penanda aras, dan sebab perbandingan skor "CommandCode lawan OpenCode" tidak wujud, ialah nota pembangun yang berasingan.
 
-## Bagaimana rupa harganya seperti diterbitkan?
+## Harga tier bulanan, dengan yuran pemprosesan tanpa angka
 
 CommandCode menjual tier bulanan, dan setiap tier berbayar membawa yuran pemprosesan tanpa angka.
 
@@ -3679,7 +3679,7 @@ CommandCode menjual tier bulanan, dan setiap tier berbayar membawa yuran pempros
 
 Yuran pemprosesan ialah baris yang perlu ditanya, kerana "plus processing fee" dicetak pada lima tier dan yurannya tidak muncul di mana-mana pada halaman itu, sama ada sebagai angka atau pautan.
 
-## Di mana angkanya berubah?
+## Tawaran CommandCode sudah bergerak sejak Ogos
 
 Tawaran CommandCode sendiri sudah bergerak sejak Ogos, dan kedua-dua versi masih boleh dipetik.
 
@@ -3741,7 +3741,7 @@ Tiga angka daripada terbitan ICT dan e-dagang DOSM bagi pertubuhan, tahun data 2
 
 Baca ketiga-tiganya bersama dan gambarannya ialah perniagaan yang sudah ada komputer, sambungan dan selalunya laman web. Apa yang tidak diukur oleh terbitan itu ialah berapa banyak sistem berasingan yang dijalankan pertubuhan tersebut, atau berapa banyak masa digunakan untuk memindahkan data antara sistem itu. Ketiadaan itu penting, dan sebab itulah artikel ini mengelak daripada memberi angka "jam yang hilang".
 
-## Apa yang dikatakan kajian tentang cara ia digunakan?
+## Kajian Khazanah dan MDEC menerangkan corak, bukan mengiranya
 
 Khazanah Research Institute bersama MDEC menerbitkan penemuan pada Mei 2026 yang menerangkan coraknya tanpa mengiranya, jadi wajar dipetik dan bukan diolah: alat digital "are often implemented in isolation and used reactively, driven by immediate operational needs rather than longer-term strategic planning".
 
@@ -3749,7 +3749,7 @@ Kertas yang sama menerangkan "fragmented systems where customer-facing functions
 
 Ini penemuan think-tank, bertarikh 25 Mei 2026, bukan statistik. Ia menyatakan bentuk masalahnya, dan ia berhati-hati untuk tidak meletakkan angka padanya.
 
-## Di mana satu pesanan ditaip tiga kali?
+## Satu pesanan melalui empat dokumen dan tiga sistem
 
 Ikut satu pesanan. Ia masuk sebagai mesej, ditulis menjadi sebut harga, menjadi invois, kemudian menjadi pesanan penghantaran atau helaian kerja. Setiap dokumen itu wujud dalam satu sistem, dan dalam kebanyakan perniagaan kecil sistem itu tidak bercakap.
 
@@ -3757,7 +3757,7 @@ Sebut harga tinggal dalam templat. Invois dikeluarkan melalui perisian perakauna
 
 Itu bukan kegagalan teknologi pada tahap yang diukur DOSM. Setiap alat itu perisian. Ia kegagalan fragmentasi, tepat seperti corak yang diterangkan KRI, dan ia menelan kos dalam kerja semula dan bukan dalam lesen.
 
-## Mengapa e-Invoice memaksa perkara ini?
+## LHDN menyemak dokumen, bukan niat
 
 Kerana LHDN kini menyemak dokumen, bukan niat, dan semakan itu berlaku semasa pengeluaran.
 
@@ -3769,7 +3769,7 @@ Tiga peraturan menjadikannya konkrit, semuanya daripada dokumentasi pengesahan d
 
 Jadi data invois mesti betul sekali, di punca, sebelum sistem automatik menyentuhnya. Automasi yang menyalin kod pembekal yang salah ke dalam invois yang diserahkan tidak menghasilkan kesilapan kecil; ia menghasilkan dokumen pembetulan dengan layanan cukainya sendiri. Kami sudah liputi garis masa pemfailan dalam [apa yang diliputi automasi e-Invoice](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi); artikel ini tentang mengapa data di belakangnya mesti tunggal.
 
-## Apa yang tiada siapa terbitkan?
+## Tiga jurang yang setiap slaid vendor gunakan
 
 Tiga jurang, dan ia wajar dinamakan kerana itulah angka yang setiap slaid vendor gunakan.
 
@@ -3945,13 +3945,13 @@ Empat perkara, dan semuanya peraturan perkataan, bukan tetapan teknikal.
 
 Keempat-empatnya dipetik daripada halaman garis panduan Google, dibaca 23 November 2026.
 
-## Bagaimana pula alamat, atau tiada alamat langsung?
+## Alamat perkhidmatan dan kedai fizikal ialah dua konfigurasi
 
 Perniagaan kawasan perkhidmatan dan kedai fizikal ialah dua konfigurasi berbeza, dan Google mendokumenkan kedua-duanya.
 
 Sumber location membawa `address` dan `serviceArea`, dan perniagaan kawasan perkhidmatan mengurus kawasan dan bukan kedai. Contoh Google sendiri ialah jenama penghantaran sahaja yang beroperasi dari dapur kongsi, yang "must hide their address and add service areas to that specific brand". Jika anda menghantar dan tiada kaunter untuk pelanggan masuk, profil kedai itulah ketidakserasian yang patut dibetulkan dahulu.
 
-## Medan mana yang wajar diisi bulan ini?
+## Waktu operasi dan sub-sumber mengubah keputusan pelanggan
 
 Waktu operasi dan sub-sumber yang didokumenkan Google, mengikut urutan ia mengubah keputusan pelanggan.
 
@@ -3966,7 +3966,7 @@ Waktu operasi dan sub-sumber yang didokumenkan Google, mengikut urutan ia mengub
 
 Semua itu didokumenkan dalam rujukan API Business Profile Google, dibaca 23 November 2026. Nama API itu penting walaupun anda tidak menulis kod: itulah medan yang borang di laman web sedang sunting.
 
-## Apa yang menggantungkan profil, dan apa yang perlu dibuat?
+## Google mendokumenkan penggantungan dan rayuannya
 
 Google mendokumenkan proses penggantungan dan rayuannya, dan halaman rayuan mengandungi ayat yang perlu dibaca sebelum apa-apa.
 
@@ -3974,7 +3974,7 @@ Profil yang digantung diurus melalui "Fix suspended or disabled profiles", yang 
 
 Ayat itu sebabnya pengesahan mesti kekal semasa. Rayuan yang difailkan sebelum pengesahan selesai ialah rayuan yang tersekat.
 
-## Apa yang tidak dapat kami sahkan?
+## Google tidak menerbitkan faktor susunan selain medan
 
 Google tidak menerbitkan apa-apa pada halaman ini tentang cara profil disusun dalam carian setempat, jadi artikel ini tidak membuat dakwaan tentang faktor susunan selain medan yang didokumenkan. Beberapa ID pusat bantuan memulangkan "Sorry, this page can't be found" semasa pusingan ini, jadi hanya halaman yang Google sendiri pautkan atau yang ditemui imbasan dipetik. Tiada juga angka yang diterbitkan untuk tempoh pengesahan atau rayuan.
 
@@ -4093,7 +4093,7 @@ Anthropic menulis "hosted agent harness", dan pakej DeepSeek Harness menggunakan
 
 Takrif Anthropic yang paling jelas: hosted agent harness "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([dokumentasi Claude Code, dibaca 19 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Pakej DeepSeek Harness yang dipasang menggunakan perkataan yang sama, contohnya "Harness home" bagi direktori konfigurasinya ([README pakej, dibaca 19 Nov 2026](https://www.npmjs.com/package/@deepseek-ai/dsh)). Kedua-duanya tidak menganggapnya sebagai kiasan.
 
-## Apa yang dibawa oleh istilah itu, dalam praktik?
+## Empat ciri yang membezakan harness daripada klien sembang
 
 Empat perkara, dan setiap satu satu baris, bukan penerangan penuh.
 
@@ -4104,7 +4104,7 @@ Empat perkara, dan setiap satu satu baris, bukan penerangan penuh.
 
 Cara ia melalui satu mesej, langkah demi langkah, ada dalam [apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness). Artikel ini tentang istilah, bukan gelungnya.
 
-## Dari mana datangnya "AI harness"?
+## AI harness bukan istilah yang digunakan vendor
 
 Bukan daripada vendor yang dapat saya baca. Merentas empat sumber rasmi yang dibuka untuk artikel ini, frasa "AI harness" tidak muncul.
 
@@ -4118,7 +4118,7 @@ Kaedah ini ada hadnya dan saya nyatakan: carian enjin untuk frasa tepat itu memu
 | Agent framework | Penulis perpustakaan | Perpustakaan kod untuk membina agent, bukan runtime yang menjalankannya |
 | Agent workspace | OpenBot, MausBot | Perkataan produk itu sendiri bagi harness campur desktop atau satu mesin setiap bot |
 
-## Mengapa bezanya penting semasa membeli?
+## Perbezaan ini menentukan soalan yang anda tanya kepada vendor
 
 Kerana perkataan itu menerangkan apa yang produk lakukan kepada mesin dan data anda, dan framework bukan itu.
 
@@ -4166,7 +4166,7 @@ Transkrip pada mesin ini mengandungi jenis rekod ini, mengikut urutan satu pertu
 
 Perkara penting bagi pemilik perniagaan ialah nombor 7. Tugasan yang memerlukan empat tools bukan satu pertukaran dengan model, tetapi beberapa pertukaran, kerana model tidak dapat melihat hasil tool sehingga harness menjalankannya dan menghantar hasil itu kembali.
 
-## Di mana perbualan disimpan?
+## Perbualan disimpan sebagai fail transkrip dalam folder sesi
 
 Setiap sesi ialah satu direktori di bawah `.dsh/sessions`, dinamakan sempena folder kerja anda, dan ia menyimpan satu fail transkrip termampat serta satu fail lock.
 
@@ -4174,13 +4174,13 @@ Laluan itu ada tiga bahagian: `~/.dsh/sessions/<workspace>/<session>/session.v4.
 
 Itu wajar diketahui sebelum anda menampal kontrak pelanggan ke dalam tetingkap sembang. Perbualan itu ialah fail pada cakera anda sendiri, dalam folder yang dinamakan sempena projek anda, dan ia boleh dibaca dengan satu arahan.
 
-## Bagaimana rupa tool call dalam aliran itu?
+## Tool call membawa lima medan, dan harness yang menjalankannya
 
 Rekod tool call membawa nombor turn, nombor step, pengenal panggilan, nama tool dan argumennya, dan harness, bukan model, yang menjalankannya.
 
 Rekod `tool/call` dalam transkrip mempunyai medan data ini sahaja: `turn`, `step`, `callId`, `name`, `arguments`. Rekod `tool/result` yang sepadan tiba selepas harness benar-benar menyelesaikan kerja itu. Jadi apabila anda membaca bahawa sesuatu agent "menjalankan arahan", urutannya ialah: model memilih tool dan argumen, harness menjalankannya, dan hasilnya dihantar kembali kepada model pada step seterusnya.
 
-## Apa yang boleh saya semak sendiri?
+## Tiga arahan untuk menyemak transkrip sendiri
 
 Tiga arahan, dan anda tidak perlu mempercayai halaman ini untuk menjalankannya.
 
@@ -4218,7 +4218,7 @@ API menyampaikan satu maklumat yang ditetapkan antara dua sistem, apabila dimint
 ![Kedai anda menghantar pesanan kepada API, API menyalurkannya kepada kurier, dan status penghantaran kembali melalui laluan yang sama](/figures/what-is-an-api-ms.svg)
 *Satu pesanan, keluar melalui API dan kembali sebagai status.*
 
-## Apakah beza antara API model tertutup dengan API model terbuka?
+## API tertutup dipanggil; API terbuka dimuat turun dan dijalankan sendiri
 
 API model tertutup ialah API yang anda boleh panggil, tetapi modelnya tidak boleh anda jalankan sendiri. API model terbuka pula membolehkan fail model dimuat turun dan dijalankan pada perkakasan yang anda kawal.
 
@@ -4233,15 +4233,15 @@ API model tertutup ialah API yang anda boleh panggil, tetapi modelnya tidak bole
 
 Setakat 19 November 2026, katalog Mistral menyenaraikan ketiga-tiga bentuk lesen ini. Mistral Small 4 dan model Ministral 3 berada di bawah Apache 2.0, Z.ai GLM 5.3 dan DeepSeek V4.1 Flash di bawah MIT, dan Mistral Large 4 di bawah "Mistral Ecosystem Open Weight License" yang khusus ([dokumentasi Mistral, disemak 19 Nov 2026](https://docs.mistral.ai/models)). Pembekal tertutup pula menerbitkan katalog model dan kadar, bukan model weights ([katalog model OpenAI, disemak 19 Nov 2026](https://developers.openai.com/api/docs/models)).
 
-## Patut mula dengan model mana?
+## API tertutup lebih murah untuk permulaan kebanyakan perniagaan kecil
 
 Bayaran ikut panggilan tidak dikenakan apabila tiada penggunaan. Server pula menelan kos setiap bulan walaupun tiada siapa menggunakannya. Sebab itulah API tertutup lebih murah untuk permulaan kebanyakan perniagaan kecil. Model terbuka hanya menang apabila penggunaan bulanan cukup tinggi untuk melebihi kos mesin, dan ada orang di pihak anda yang tahu menjalankannya. Bagi kebanyakan PKS Malaysia, syarat kedua itulah yang menentukan.
 
-## Berapa kos untuk menyambungkan API di Malaysia?
+## Tiada penanda aras awam bagi kos integrasi API di Malaysia
 
 Tiada penanda aras awam bagi kadar kerja integrasi API di Malaysia setakat November 2026. Sebut harga berubah bergantung pada bilangan endpoint, sama ada integrasi menulis data atau membaca sahaja, cara pengesahan berfungsi, apa yang patut berlaku apabila panggilan gagal, dan betapa bersepahnya data sedia ada anda. Harga yang diberi sebelum lima soalan itu dijawab masih anggaran.
 
-## Bagaimana saya boleh menilai harga kerja ini sendiri?
+## Lima fakta menentukan harga sebelum sebut harga diminta
 
 Penilaian harga bermula sebelum anda minta sebut harga, dengan lima fakta yang menentukan angkanya.
 
@@ -4251,15 +4251,15 @@ Penilaian harga bermula sebelum anda minta sebut harga, dengan lima fakta yang m
 4. Minta harga tetap bagi setiap integrasi, bukan anggaran ikut jam.
 5. Tanya apa yang berlaku kepada kod dan credentials apabila kerja tamat.
 
-## Berapa bil bulanan selepas sistem berjalan?
+## Bil bulanan boleh dikira daripada kadar yang diterbitkan
 
 Pembekal menerbitkan kadar mereka, jadi bil bulanan boleh dikira, bukan diagak. Kadar standard OpenAI untuk model kecil semasa, GPT-6 Luna, ialah USD 0.10 setiap juta token input dan USD 0.50 setiap juta token output ([harga OpenAI, disemak 19 Nov 2026](https://developers.openai.com/api/docs/pricing)). Bot FAQ WhatsApp yang mengendalikan 3,000 mesej sebulan, kira-kira 600 token masuk dan 200 token keluar setiap mesej, menelan sekitar USD 0.48 sebulan untuk token sahaja. Jika integrasi berjalan pada server anda sendiri, tambah kos hosting. Kadar tukaran mata wang yang dikenakan oleh kad anda juga tidak termasuk dalam angka ini. Penyelenggaraan turut masuk dalam bil ini: apabila pembekal menghentikan sesuatu versi model, integrasi berhenti berfungsi sehingga ada orang membaikinya.
 
-## Bagaimana saya tahu sama ada saya perlu API atau cukup sekadar buat secara manual?
+## API berbaloi apabila kerja atau kos kesilapan melepasi garis itu
 
 Jika kerja itu berlaku beberapa kali sehari dan kesilapannya murah dibaiki, buat secara manual sahaja. API mula berbaloi apabila jumlah kerja atau kos kesilapan melepasi garis itu. Tiada penanda aras awam yang menetapkan garis itu, jadi ini penilaian kami: garisnya sekitar titik apabila seseorang membuang lebih sejam sehari untuk kerja salin-menyalin, atau apabila kerugian akibat satu pesanan yang terlepas melebihi yuran pembekal sebulan. Jika kurang daripada itu, seorang staf sambilan yang teliti lebih murah dan lebih boleh diharap.
 
-## Apa yang perlu saya tetapkan sebelum membayar seseorang untuk kerja ini?
+## Tiga perkara perlu ditetapkan secara bertulis sebelum bayaran
 
 Tetapkan tiga perkara secara bertulis sebelum bayaran.
 
@@ -4311,7 +4311,7 @@ Kadar tahunan Claude ialah USD 17 sebulan berbanding USD 20 bulanan, iaitu RM69.
 
 Claude menerbitkan USD 20 dan kami tukar pada 4.1145 kepada RM82.29. OpenAI menerbitkan MYR 99.90 terus untuk Malaysia.
 
-## Berapa kos token sebagai ganti?
+## Token dijual setiap juta, dengan angka input disyaratkan
 
 Anthropic menerbitkan Claude Haiku 5.5 pada USD 0.10 setiap juta token input dan USD 0.50 setiap juta token output, dengan angka input pada halaman itu disyaratkan untuk prompt hingga 100,000 token.
 
@@ -4322,7 +4322,7 @@ Jadi itulah meternya. Untuk membandingkannya dengan langganan, saya perlu meneta
 3. Satu tugasan: USD 0.00045, iaitu RM0.00185 pada 4.1145.
 4. RM100 ÷ RM0.00185 = kira-kira 54,000 tugasan.
 
-## Apa maksudnya pada tiga tahap penggunaan?
+## Kos meter kecil pada ketiga-tiga tahap penggunaan
 
 Kos meter yang sama kecil pada penggunaan ringan, tidak bermakna pada penggunaan harian, dan masih kecil pada penggunaan berat, kerana token teks murah dan tempat duduk dinilai untuk manusia dan bukan untuk jumlah.
 
@@ -4337,13 +4337,13 @@ Setiap baris ialah tugasan × RM0.00185. Bulan 30 hari diandaikan. Pada pengguna
 ![Enam penanda mendatar pada skala log dari RM0.10 hingga RM100: bil token RM0.28, RM1.67 dan RM11.11 berbanding langganan RM24, RM82.29 dan RM99.90](/figures/rm100-month-cost-ms.svg)
 *Sebulan token berharga bawah RM12 pada setiap tahap penggunaan, berbanding langganan berbayar termurah RM24.*
 
-## Bagaimana jika saya mahu kedua-duanya?
+## Paling murah: tempat duduk lebih kecil campur token
 
 Maka anda membeli dua perkara, dan versi paling murah ialah tempat duduk lebih kecil campur token, bukan tempat duduk terbesar.
 
 ChatGPT Go pada RM24 meninggalkan RM76 untuk token, kira-kira 41,000 tugasan pada saiz yang diandaikan. Claude Pro pada RM82.29 meninggalkan RM17.71, kira-kira 9,500 tugasan. Tier tinggi membundel kredit API, yang berguna jika anda mahu satu bil, dan mahal jika anda tidak menggunakan kredit itu: Claude Max berharga RM411.45 untuk kredit API bernilai USD 100 yang dibundel di dalamnya, iaitu RM411.45 juga pada kadar yang sama.
 
-## Di mana garisnya?
+## Garisnya terletak pada kira-kira 900 tugasan sebulan
 
 Di bawah kira-kira 900 tugasan sebulan, tempat duduk lebih berbaloi jika manusia yang bertanya, kerana RM24 hingga RM99.90 membeli antara muka, memori, muat naik fail dan sokongan pembekal, dan RM1.67 token tidak membeli satu pun daripada itu.
 
@@ -4351,7 +4351,7 @@ Di atas kira-kira 6,000 tugasan sebulan, atau bila-bila masa perisian dan bukan 
 
 Kedua-dua garis itu menganggap tugasan 2,000 token. Ia menandakan titik di mana aritmetik bertukar arah, dan tidak lebih daripada itu.
 
-## Apa yang tidak dapat kami sahkan?
+## Harga Gemini, Cursor, Windsurf dan DeepSeek tidak disahkan
 
 Harga pelan Gemini: halaman itu memulangkan badan kosong kepada pengambil kami. Pelan Cursor dan Windsurf: tidak dicapai. Harga pengguna DeepSeek: hanya halaman API-nya dibaca, dan harga token outputnya berada di bawah titik pemotongan halaman, jadi barisnya tiada dan bukan dianggarkan. Copilot Business dan Enterprise: tidak berharga pada halaman pelan yang dibaca, yang kini menjual Free, Pro, Pro+ dan Max.
 
@@ -4392,7 +4392,7 @@ Nama lesen dan sekatan, dipetik daripada kad model atau fail lesennya, bukan dar
 
 MIT ialah yang longgar: penggunaan komersial, pengubahsuaian dan pengedaran, dengan notis dikekalkan. Tiga lagi ialah lesen tersuai yang termanya berada dalam fail LICENSE repositori. Fail itu tidak dibuka, jadi artikel ini menamakan lesen tersebut tanpa meringkaskan termanya. Itu had yang jujur: lesen tersuai ialah dokumen yang anda baca, bukan label yang anda anggap.
 
-## Apa yang diperlukan untuk menjalankannya?
+## Saiz ialah tembok pertama, dan kad tiada minimum yang boleh dinilai
 
 Saiz ialah tembok pertama, dan panduan perkakasan pada kad tidak memberikan minimum yang boleh dinilai.
 
@@ -4400,7 +4400,7 @@ Kad menyatakan kiraan parameter 95B aktif dalam 2.4T bagi Qwen, 1T bagi Mistral 
 
 Jadi artikel ini tidak boleh memberitahu berapa kos hosting sendiri. Nod GPU ialah bil sebenar, dan tiada kad di sini menyatakan konfigurasi minimum, jadi mana-mana angka akan direka. Yang boleh diberitahu ialah kos menyewa model yang sama.
 
-## Berapa kos menyewa sebagai ganti?
+## Setiap model dijual setiap token, dan harganya berbeza
 
 Setiap model ini juga dijual setiap token oleh penerbitnya, dan harganya cukup berbeza untuk diambil kira.
 
@@ -4416,13 +4416,13 @@ Hos kedua juga menjual DeepSeek V4.1 Flash: API Mistral menyenaraikannya pada 0.
 
 Aritmetik yang boleh dibuat pembaca dari sini, pada 1,000 token input dan 500 output setiap tugasan: deepseek-flash luar puncak berharga USD 0.00015 + USD 0.0003 = USD 0.00045 setiap tugasan; kimi-k3.1-pro berharga USD 0.002 + USD 0.005 = USD 0.007 setiap tugasan. Itu kira-kira 15 kali kos setiap tugasan, dan kedua-dua angka boleh disemak terhadap jadual di atas.
 
-## Model mana yang patut dimulakan oleh PKS Malaysia?
+## DeepSeek-V4.1-Flash-1017 yang termurah setiap token di bawah MIT
 
 Yang termurah setiap token dan lesennya jelas membenarkan penggunaan perniagaan. Pada baris yang dibaca di sini, itu DeepSeek-V4.1-Flash-1017 di bawah MIT, disewa pada 0.15 masuk / 0.60 keluar luar puncak, sebelum sesiapa membeli GPU.
 
 Itu cadangan bersyarat, bukan keputusan: ia menganggap tugasan anda boleh menerima API vendor China dan anda tidak memerlukan semakan lesen tersuai. Jika mana-mana syarat gagal, langkah seterusnya ialah baris Mistral atau Qwen, kedua-duanya lebih mahal setiap token dan membawa lesen yang perlu anda baca.
 
-## Apa yang tidak dapat kami sahkan?
+## Tiada kad menyatakan konfigurasi perkakasan minimum
 
 Tiada kad menyatakan konfigurasi perkakasan minimum, jadi tiada kos hosting sendiri didakwa. Angka perkakasan Kimi tidak dirakam, dan harga input puncak DeepSeek tidak diterbitkan pada halaman yang dibaca.
 
@@ -4473,13 +4473,13 @@ Angka itu datang daripada gambaran model Anthropic, halaman harga API OpenAI, ha
 
 Dua sel memerlukan nota dan bukan angka. Harga input Haiku 5.5 disyaratkan pada halaman itu untuk prompt hingga 100,000 token. Dan GPT-6.2 Astra serta Sol menilai konteks pendek dan panjang secara berasingan, jadi kedua-duanya dicetak. Sel keupayaan disokong oleh dokumentasi vendor yang disenaraikan dalam Sumber: sokongan PDF bagi baris Claude, input fail bagi baris GPT, dan function calling bagi grok-4.7.
 
-## Apa yang tidak diberitahu oleh skor penanda aras?
+## Dua papan pendahulu tidak dianggap sebagai keputusan kualiti
 
 Hampir semua yang ada dalam jadual di atas. Dua papan pendahulu di bawah dicetak dengan tetapannya, dan tiada satu pun dianggap sebagai keputusan kualiti.
 
 SWE-bench menyajikan papan pendahuluannya melalui skrip dan bukan teks statik, dan tiada petikan bertarikh dirakam. Baris teratas yang kelihatan pada halaman Aider polyglot membawa direktori larian bertarikh 23 Ogos 2025, yang bukan petikan November 2026. Daripada memetik mana-mana satu sebagai semasa, artikel ini membandingkan apa yang anda dapat dan bayar. Angka penanda aras juga tidak akan memberitahu tetingkap konteks, harga, sama ada structured output didokumenkan, atau apa yang dibenarkan oleh terma.
 
-## Berapa kos satu tugasan pada kadar ini?
+## Satu tugasan pada 100,000 input dan 20,000 output
 
 Kerana input dan output dinilai berasingan, satu contoh berkira menjadikan jadual itu boleh digunakan. Andaiannya 100,000 token input dan 20,000 token output setiap tugasan, dan kadarnya ialah harga yang dicetak di atas.
 
@@ -4492,7 +4492,7 @@ Itu jurang 80 kali antara baris termurah dan termahal pada tugasan yang sama, da
 ![Tiga bar mengikut skala: Claude Haiku 5.5 USD 0.02, Gemini 4 Carbon USD 0.40, Claude Fable 5.2 USD 1.60 setiap tugasan](/figures/closed-task-cost-ms.svg)
 *Tugasan 100,000 input dan 20,000 output yang sama berharga USD 0.02 pada Haiku 5.5 dan USD 1.60 pada Fable 5.2.*
 
-## Di mana terletaknya ikatan?
+## Ikatan terletak pada kontrak, bukan pada penanda aras
 
 Tiga tempat, dan setiap satu muncul dalam kontrak, bukan dalam penanda aras.
 
@@ -4502,13 +4502,13 @@ Tiga tempat, dan setiap satu muncul dalam kontrak, bukan dalam penanda aras.
 
 **Eksport.** Tiada fail pemberat untuk dibawa bersama. Berpindah vendor bermakna membina semula prompt, tool dan penilaian, iaitu kos yang tiada jadual dapat merakam.
 
-## Nama vendor mana yang berubah?
+## Halaman vendor tidak selaras pada nama model
 
 Halaman tidak selaras antara satu sama lain, dan jadual mengekalkan nama yang dicetak daripada merapikannya.
 
 Dokumentasi platform OpenAI menjual GPT-6.2 Astra dan GPT-6.2 Sol, serta mencetak model murah sebagai gpt-6-luna, manakala halaman penggunanya memanggil keluarga itu GPT-6. Nama pemasaran Gemini berbeza daripada id API di bawahnya, dan sebab itulah jadual menggunakan id API. Jika anda menulis brief kepada pembekal, sebut id API, kerana itulah yang digunakan oleh dokumentasi dan bil.
 
-## Apa yang sebenarnya dinyatakan oleh penanda aras?
+## Penanda aras hanya boleh dibaca dengan tetapannya dicetak
 
 Dua papan pendahulu, dan setiap satu hanya boleh dibaca dengan tetapannya dicetak di sebelah angka, dan tiada satu pun selaras dengan nama vendor di atas.
 
@@ -4563,7 +4563,7 @@ Setiap satu mengubah harga, dan sebab itulah sebut harga yang tiba tanpa perkara
 4. **Ujian penerimaan.** Semakan tepat yang menentukan kerja itu selesai, dipersetujui sebelum kerja bermula.
 5. **Credentials dan pemilikan.** Akaun siapa yang memiliki kunci itu, di mana ia disimpan, dan apa yang berlaku kepadanya pada akhir kerja.
 
-## Bagaimana rupa brief itu?
+## Salinan brief yang boleh diisi dan dihantar
 
 Salin ini, isikan, dan hantar dokumen yang sama kepada setiap freelancer yang anda tanya. Tujuan menghantar satu dokumen ialah supaya anda boleh membandingkan sebut harga selepas itu.
 
@@ -4600,7 +4600,7 @@ BAJET
 - Tidak termasuk: [apa-apa yang anda tidak mahu masukkan]
 ```
 
-## Ujian penerimaan apa yang perlu dipersetujui di awal?
+## Satu ujian pada data sebenar yang lulus atau gagal
 
 Satu ujian, pada data sebenar, yang sama ada lulus atau gagal tanpa perdebatan.
 
@@ -4608,7 +4608,7 @@ Versi paling kukuh membandingkan hasil yang sudah diketahui betul dengan hasil a
 
 Persetujui ujian itu sebelum kerja bermula, secara bertulis, dan persetujui apa yang berlaku jika ia gagal. Brief tanpa ujian menyerahkan takrif "selesai" kepada orang yang dibayar untuk menyelesaikannya.
 
-## Apa yang rosak apabila brief itu nipis?
+## Tiga perkara rosak pada hampir setiap kerja
 
 Tiga perkara yang sama, dalam urutan yang sama, pada hampir setiap kerja.
 
@@ -4616,7 +4616,7 @@ Freelancer membina apa yang paling mudah dibina dan bukan apa yang anda perlukan
 
 Tiada satu pun daripada itu memerlukan freelancer yang tidak jujur. Ia memerlukan brief yang boleh dibaca dua cara, dan dua orang yang membacanya secara berbeza.
 
-## Bagaimana saya membandingkan dua sebut harga pada brief yang sama?
+## Bandingkan baris demi baris, dan anggap jurang sebagai jurang
 
 Bandingkan baris demi baris dengan brief, dan anggap baris yang tidak dijawab sebagai jurang, bukan bonus.
 
@@ -4651,7 +4651,7 @@ Setiap tool dinilai 1 hingga 5 pada lima kriteria, dan kriteria itu diberi wajar
 
 Sesuatu sel mendapat 5 hanya apabila pemerhatiannya jelas dan lengkap. Kriteria yang tiada dalam nota kami dilabel "tidak disahkan" dan tidak menyumbang apa-apa, bukan dirata-ratakan kepada nilai tengah yang sopan. Kawalan pembekal dan kos, MCP serta kebolehlanjutan ialah skor editorial yang berpaut pada baris setiap tool dalam jadual, bukan kuantiti yang diukur: jadual menyatakan sesuatu tool menyokong sesuatu laluan, bukan sebaik mana ia melakukannya.
 
-## Apa yang kami ukur?
+## Empat harness, satu mesin, satu hari
 
 Empat harness, satu mesin, satu hari. Versi, laluan pemasangan, konfigurasi, permukaan automasi, MCP, pilihan pembekal, kebolehlanjutan dan jejak cakera.
 
@@ -4668,7 +4668,7 @@ Apa yang diliputi dan tidak: keempat-empatnya dipasang dan dikonfigurasikan pada
 | Kebolehlanjutan | bundle plugin, komposisi profil, skills, agent teams | `~/.claude/skills`, JSON `--agents`, subagent | `config.toml`, MCP, `exec-server` eksperimen | `opencode agent`, MCP, server ACP |
 | Jejak cakera | 3.2 GB | 116 KB | 246 MB | 62 MB |
 
-## Apakah skornya?
+## Susunan itu keluar daripada kiraan yang boleh dihasilkan semula
 
 Susunan itu keluar daripada kiraan di bawah, dan kiraan itu boleh dihasilkan semula daripada jadual di atas.
 
@@ -4683,7 +4683,7 @@ Susunan itu keluar daripada kiraan di bawah, dan kiraan itu boleh dihasilkan sem
 
 Jejak cakera dinilai pada skala yang dinyatakan: 5 bagi bawah 100 MB, 4 bagi bawah 500 MB, 2 bagi bawah 5 GB. Automasi tanpa interaksi mendapat 4 dan bukan 5 bagi keempat-empatnya kerana setiap satu mempunyai satu laluan yang didokumenkan dan kami tidak menguji larian berjadual bagi mana-mana daripadanya.
 
-## Apa yang dimenangi setiap tool?
+## Setiap tool menang pada kriteria yang berbeza
 
 DeepSeek Harness menang pada pilihan pembekal, MCP dan kebolehlanjutan, dan kalah pada cakera.
 
@@ -4701,13 +4701,13 @@ Codex CLI menang pada MCP, kerana ia satu-satunya antara empat ini yang didokume
 
 Laluan automasinya (`codex exec`) kukuh dan jejak cakeranya pertengahan. Baris pembekalnya hanya OpenAI melalui `login`, dan `exec-server` ditandakan eksperimen, dan itulah yang meletakkannya di tempat keempat.
 
-## Apa yang tidak kami sahkan?
+## OpenMausBot dikeluarkan kerana gagal dilancarkan
 
 OpenMausBot dikeluarkan, dan bukan kerana ia kalah. Binarinya ada tetapi gagal dilancarkan, pemasangan global dan direktori datanya sudah tiada, dan unit systemd-nya tidak aktif. Kami mengujinya dan ia tidak dapat berjalan, jadi ia tidak dinilai dan tidak disusun paling bawah.
 
 Tidak disahkan bagi keempat-empatnya: kualiti jawapan, latency, kos token, kebolehpercayaan sepanjang minggu, atau tingkah laku di bawah beban. Kami mengukur apa yang ada dalam jadual dan tidak lebih. Naik taraf versi boleh mengubah mana-mana sel di sini, dan itulah risiko menerbitkan nombor yang terikat pada versi: 0.146.0 dan 1.18.11 ialah nilai hari ini, bukan sifat kekal.
 
-## Bagaimana saya boleh mengulang semakan ini?
+## Empat arahan untuk mengaudit setiap nombor
 
 Empat arahan dan satu semakan fail, dan anda boleh mengaudit setiap nombor dalam jadual.
 
@@ -4746,7 +4746,7 @@ Pasaran global tidak diukur di sini. Upwork memulangkan HTTP 403 dengan sekatan 
 
 Dua lagi pengecualian. Setiap tier "sebut harga atas permintaan" dikecualikan, kerana sebut harga bukan kadar. Profil Freelancer.com yang berharga dalam USD juga dikecualikan, walaupun orangnya Malaysia, kerana angkanya bukan harga Malaysia.
 
-## Berapa kos satu pembinaan automasi yang diterbitkan?
+## Pembinaan diterbitkan bermula RM400 hingga RM6,000 lebih
 
 Mengikut projek, harga yang diterbitkan bermula dari RM400 bagi pembinaan proses mudah di Pang Jun Han hingga RM6,000 lebih bagi pelaksanaan tugasan autonomi di Autoflow Solutions. Semua baris membawa unit penerbit sendiri.
 
@@ -4777,7 +4777,7 @@ Mengikut projek, harga yang diterbitkan bermula dari RM400 bagi pembinaan proses
 ![Julat harga projek yang diterbitkan oleh empat penerbit, dari RM400 di Pang Jun Han hingga RM6,000 lebih di Autoflow Solutions](/figures/rates-project-prices-ms.svg)
 *Harga projek yang diterbitkan mengikut penerbit: RM400 di bawah, RM6,000 lebih di atas.*
 
-## Berapa kos satu integrasi?
+## Tiada penerbit menyatakan harga setiap integrasi
 
 Tiada penerbit Malaysia dalam set ini menyatakan harga setiap integrasi, jadi tiada kadar pasaran bagi integrasi individu didakwa di sini. Yang diterbitkan ialah tier langganan yang merangkumi penyambung dan integrasi API.
 
@@ -4795,7 +4795,7 @@ Had itu nyata. Satu-satunya harga pembinaan yang menamakan kerja integrasi dalam
 | Persediaan tier Scale, termasuk integrasi sistem tempahan | RM6,000 | setiap projek | Nixlab Studio | 2026-11-19, halaman tanpa tarikh |
 | Pembinaan besar berkait dengan sistem perakaunan atau projek sedia ada | RM1,600 hingga RM4,000 | setiap projek | Pang Jun Han | 2026-10-27 |
 
-## Mengapa tugasan yang sama membawa unit berbeza?
+## Unit berbeza kerana penerbit menjual perkara berbeza
 
 Kerana penerbit menjual perkara yang berbeza: satu sesi masa seseorang, satu projek dengan penghujung yang jelas, atau satu langganan berterusan.
 
@@ -4803,7 +4803,7 @@ RM400 setiap sesi 4 jam dan RM1,500 setiap projek bukan harga yang bersaing. Yan
 
 Tarikh penting atas sebab yang sama. Beberapa halaman tiada tarikh penerbitan, jadi tarikh baris ialah hari harga itu dibaca, bukan hari ia diterbitkan. Harga yang dibaca pada 19 November 2026 mungkin ditulis pada 2025 dan tidak dikemas kini.
 
-## Apa yang mengubah harga sesuatu sebut harga?
+## Enam perkara mengubah harga, sebagai tier dan bukan diskaun
 
 Enam perkara, dan setiap satu muncul dalam jadual di atas sebagai tier berbeza dan bukan diskaun.
 
@@ -4814,7 +4814,7 @@ Enam perkara, dan setiap satu muncul dalam jadual di atas sebagai tier berbeza d
 5. Sama ada pembinaan menyentuh perisian perakaunan atau projek sedia ada. Itu harga tertinggi dalam julat Pang Jun Han, RM1,600 hingga RM4,000.
 6. Sama ada anda membeli sesi atau skop. Satu-satunya kadar sejam dalam set ini milik profil freelance, bukan mana-mana studio.
 
-## Bagaimana saya membandingkan dua sebut harga yang unitnya berbeza?
+## Tukar dua sebut harga kepada tiga angka yang sama
 
 Tukar kedua-duanya kepada tiga angka yang sama sebelum membandingkan: jumlah kos sehingga sistem berjalan, kos bulanan selepas pelancaran, dan apa yang dikecualikan oleh setiap satu.
 
@@ -4853,7 +4853,7 @@ Pemboleh ubah persekitaran ialah bentuk paling mudah. Dalam harness ini, rahsia 
 
 Sama ada cara, kunci itu ialah fail atau persekitaran, bukan satu baris dalam perbualan. Perbezaan itulah keseluruhan artikel ini: model tidak perlu melihat kunci itu, dan harness yang meletakkannya dalam prompt akan membocorkannya pada setiap permintaan.
 
-## Apa yang disahkan oleh kunci itu?
+## Kunci mengesahkan akaun, bukan permintaan
 
 Akaun, bukan permintaan. Pembekal mencari kunci itu, menemui akaun pemiliknya, dan menggunakan kebenaran serta bil akaun itu untuk apa sahaja yang diminta oleh permintaan tersebut.
 
@@ -4863,7 +4863,7 @@ Tiga akibat mengikutinya, dan setiap satu mengubah cara anda mengendalikan kunci
 2. **Had perbelanjaan milik akaun.** Kunci yang bocor membelanjakan wang anda pada kadar pembekal sehingga anda perasan, bukan sehingga permintaan seterusnya tamat.
 3. **Kunci itu tidak menyatakan tool mana yang bertanya.** Pembekal mengenal akaun, bukan skrip. Jadi jejak audit bermula pada log anda sendiri, bukan papan pemuka pembekal.
 
-## Di mana kunci itu tidak boleh ada?
+## Empat tempat kunci tidak boleh muncul
 
 Empat tempat, dan ia meliputi hampir setiap kebocoran sebenar: mesej sembang, fail yang di-commit, tangkapan skrin atau log, dan kod di sebelah klien.
 
@@ -4872,7 +4872,7 @@ Empat tempat, dan ia meliputi hampir setiap kebocoran sebenar: mesej sembang, fa
 3. **Tangkapan skrin atau log.** Output nyahpepijat yang mencetak keseluruhan pengepala permintaan, atau tangkapan skrin skrin tetapan, membawa kunci itu tanpa sesiapa berniat. Penapisan log ialah tetapan yang wajar disemak sebelum anda berkongsi output dengan kontraktor.
 4. **Kod di sebelah klien.** Apa sahaja yang sampai ke pelayar bersifat awam. Kunci dalam JavaScript bahagian hadapan, aplikasi mudah alih, atau halaman statik boleh didapati oleh sesiapa yang membuka alat pembangun, tidak kira bagaimana ia disamarkan.
 
-## Apa yang perlu saya buat apabila kunci bocor?
+## Batalkan dahulu, kemudian putar, kemudian siasat
 
 Batalkan dahulu, kemudian putar, kemudian siasat, mengikut urutan itu. Membatalkan ialah satu-satunya langkah yang menghentikan perbelanjaan.
 
@@ -4918,7 +4918,7 @@ Satu baris bagi setiap produk, dengan tahap bukti dinyatakan, kerana tiga daripa
 
 Satu lagi repositori MausBot menyebut dirinya repositori muat turun MIT dan pernah dipetik dalam artikel ini sehingga 24 November 2026, apabila pautan itu memulangkan 404 dan organisasi GitHub di belakangnya tidak lagi wujud. Repositori utama di atas yang masih boleh disemak.
 
-## Apa yang sebenarnya dibenarkan oleh lesen itu kepada perniagaan?
+## "Sumber terbuka" dan "sumber tersedia" bukan kebenaran yang sama
 
 Ini bahagian yang wajar dibaca dua kali, kerana "sumber terbuka" dan "sumber tersedia" bukan kebenaran yang sama.
 
@@ -4931,7 +4931,7 @@ Produk tertutup yang dihoskan, Grok Bot dan Dots, tidak memberikan kedua-duanya.
 ![Tiga zon: tertutup dan dihoskan bagi Dots dan Grok Bot, sumber tersedia bagi OpenBot di bawah PolyForm Noncommercial, sumber terbuka bagi MausBot di bawah Apache-2.0](/figures/harness-licence-line-ms.svg)
 *Sumber tersedia bukan sumber terbuka: lesen OpenBot bukan komersial, repo utama MausBot Apache-2.0.*
 
-## Mengapa satu nama memetakan kepada beberapa projek?
+## "OpenBot" ialah sekurang-kurangnya empat projek berbeza
 
 Kerana "OpenBot" ialah sekurang-kurangnya empat projek tidak berkaitan, dan yang dipasang pada mesin ini tidak dapat dikenal pasti sekarang.
 
@@ -4939,13 +4939,13 @@ Itu bukan sekadar kaveat retorik. `nightly-labs/openbot` ialah ruang kerja agent
 
 "GrokBot" ada masalah yang lebih ringan: repositori GitHub dengan nama itu kebanyakannya panduan komuniti dan klon tentang produk xAI, bukan harness bebas. "Dots" juga bertembung dengan repositori agent yang tidak berkaitan.
 
-## Apa yang kami hilang, dan bagaimana kami tahu?
+## Satu harness kini yatim, dan mesej kegagalannya buktinya
 
 Satu harness yang pernah dipasang di sini kini yatim, dan mesej kegagalannya ialah buktinya.
 
 Pelancar `openmausbot` masih ada pada mesin ini, dan menjalankannya gagal dengan ralat Node `Cannot find module` yang menamakan laluan muatan yang sudah tiada. Muatannya hilang, tiada unit systemd dengan nama itu, dan tiada direktori data yang tinggal. Jadi MausBot muncul dalam jadual daripada repositorinya, bukan daripada penggunaan kami: kami menjalankannya lebih awal dalam projek ini dan tidak boleh mengesahkan semula pengalaman itu sekarang.
 
-## Istilah mana yang patut saya guna?
+## Guna "agent harness" dengan vendor, "harness" dengan yang tahu
 
 "Agent harness" jika anda mahu istilah vendor, "harness" jika anda bercakap dengan orang yang sudah tahu. "AI harness" ialah kata pengubah yang vendor yang kami baca tidak gunakan. Istilahnya dibincangkan dalam [agent harness, AI harness, agent framework](https://upahje.my/ms/articles/agent-harness-atau-ai-harness).
 
@@ -4980,7 +4980,7 @@ Asas itu lebih sempit daripada bunyinya, dan jurangnya penting. Pasaran global t
 
 Tiga pengecualian, semuanya sengaja. Senarai yang mengiklankan RM0.00 atau RM1.00 ialah placeholder dan digugurkan. Senarai yang berlokasi di luar Malaysia digugurkan. Jawatan komisen sahaja tanpa kadar asas yang dinyatakan digugurkan, kerana "gaji campur komisen" bukan angka yang boleh dirancang oleh pembaca.
 
-## Lima kemahiran apa yang melepasi syarat itu?
+## Lima kemahiran melepasi syarat dua senarai
 
 Sesuatu kemahiran layak hanya jika sekurang-kurangnya dua senarai dengan bajet ringgit sebenar disiarkan untuknya. Lima layak.
 
@@ -4997,7 +4997,7 @@ Kandungan media sosial tidak layak. Ia hanya ada satu senarai bertarikh serta sa
 ![Kadar yang diterbitkan setiap projek bagi lima kemahiran: suntingan video RM150 hingga RM2,500, reka bentuk grafik RM300 hingga RM1,100, kemasukan data RM50 hingga RM70, panggilan jualan RM700 hingga RM1,000, ujian aplikasi RM330 hingga RM600](/figures/side-income-rates-ms.svg)
 *Kadar yang diterbitkan setiap projek: kemasukan data sehingga RM70, suntingan video hingga RM2,500.*
 
-## Berapa bayaran suntingan video?
+## Suntingan video: RM150 hingga RM2,500 setiap projek
 
 Tiga senarai, RM150 hingga RM2,500 setiap projek, dan julatnya tentang skop bukan kemahiran: satu kelompok percubaan bentuk pendek, satu filem pendek penuh, dan satu peranan merakam serta menyunting.
 
@@ -5005,7 +5005,7 @@ Yang paling rendah RM150 bagi kelompok percubaan TikTok atau Reels bentuk pendek
 
 Masa untuk layak: anggaran kami dua hingga empat bulan latihan yang terancang pada satu tool suntingan, lebih lama jika anda tidak pernah menyunting mengikut brief. Senarai itu meminta sampel, bukan sijil, jadi portfolio tiga karya siap lebih penting daripada kursus.
 
-## Berapa bayaran reka bentuk grafik?
+## Reka bentuk grafik: RM300 dan RM1,100 setiap projek
 
 Dua senarai, RM300 dan RM1,100 setiap projek, dan bezanya jumlah kerja: satu set bahan jualan runcit berbanding satu kelompok kandungan bulanan.
 
@@ -5013,7 +5013,7 @@ RM300 meliputi booth, kad meja, sepanduk dan ilustrasi untuk promosi runcit. RM1
 
 Masa untuk layak: anggaran kami satu hingga tiga bulan jika anda sudah melukis atau menggunakan perisian reka bentuk, dan halangannya ialah hasil tahap Canva berbanding fail sedia cetak. Kerja runcit meminta yang kedua.
 
-## Berapa bayaran kemasukan data?
+## Kemasukan data: RM50 dan RM70 setiap projek
 
 Dua senarai, RM50 dan RM70 setiap projek, dan kedua-duanya tugasan kecil sekali sahaja, bukan pendapatan yang boleh dibina.
 
@@ -5021,7 +5021,7 @@ RM50 ialah tugasan pengesahan mudah. RM70 ialah penyelaras tempatan bagi projek 
 
 Masa untuk layak: hari ini. Halangannya bukan kemahiran, tetapi kerja itu terputus-putus, bergaji rendah dan bersaing dengan sesiapa yang ada pelayar. Anggaplah ia langkah pertama ke senarai yang lebih baik, bukan pendapatan sampingan dengan sendirinya.
 
-## Berapa bayaran panggilan jualan?
+## Panggilan jualan: RM700 dan RM1,000, bajet diiklankan
 
 Dua senarai, RM700 dan RM1,000 setiap projek, kedua-duanya bajet yang diiklankan dan bukan yuran yang dipersetujui, dan kedua-duanya mungkin kerja sambilan.
 
@@ -5029,7 +5029,7 @@ RM700 ialah peranan pembangunan jualan jauh sambilan yang diiklankan tanpa penga
 
 Masa untuk layak: hari ini, dengan skrip dan suara yang jelas. Risikonya ialah struktur komisen menggantikan bajet selepas bulan pertama, dan sebab itulah dua baris itu ditandakan sebagai diiklankan dan bukan dipersetujui.
 
-## Berapa bayaran ujian aplikasi?
+## Ujian aplikasi: RM330 dan RM600, khusus Malaysia
 
 Dua senarai, RM330 dan RM600 setiap projek, dan kedua-duanya kerja khusus Malaysia: ujian bahasa dan lokasi yang tidak boleh dibuat oleh penguji global.
 
@@ -5037,7 +5037,7 @@ RM330 ialah kajian UX pada platform dagangan untuk penguji Malaysia sahaja. RM60
 
 Masa untuk layak: beberapa hari hingga beberapa minggu. Yang diminta oleh senarai itu ialah akses peranti dan bahasa, bukan kelayakan pengujian.
 
-## Apa yang tidak diberitahu oleh semua ini?
+## Angka ini bajet awam, bukan bayaran sebenar
 
 Ia memberitahu apa yang klien bajetkan secara awam di satu platform dalam satu suku, dan tiada apa tentang apa yang mereka bayar kepada orang yang benar-benar diupah, berapa jam kerja itu, atau berapa kerap sesuatu senarai menjadi kerja berterusan.
 
@@ -5078,7 +5078,7 @@ Menjalankan sendiri menyimpan data di Malaysia hanya apabila perkakasan itu bera
 
 API Mistral sendiri meletakkan harga Mistral Small 4 pada USD 0.15 setiap juta token input dan USD 0.60 setiap juta token output ([disemak 19 Nov 2026](https://docs.mistral.ai/models/mistral-small-4-0-26-03)).
 
-## Berapa kos setiap pilihan sebulan?
+## Bayar ikut panggilan boleh dikira; hosting bergantung sewa GPU
 
 Bahagian bayaran ikut panggilan boleh dikira tepat kerana pembekal menerbitkan kadarnya. Bahagian hosting sendiri bergantung pada sewa GPU, dan kami hanya dapat sahkan kadar seorang pembekal.
 
@@ -5093,7 +5093,7 @@ Bahagian bayaran ikut panggilan boleh dikira tepat kerana pembekal menerbitkan k
 
 Kadar token diambil daripada halaman harga OpenAI dan halaman model Mistral, kedua-duanya disemak pada 19 November 2026 ([harga OpenAI](https://developers.openai.com/api/docs/pricing), [Mistral Small 4](https://docs.mistral.ai/models/mistral-small-4-0-26-03)). Kadar GPU pula ialah harga senarai DigitalOcean bagi HGX B300, disemak pada hari yang sama ([harga GPU DigitalOcean](https://www.digitalocean.com/pricing/gpu-droplets)).
 
-## Pada jumlah penggunaan berapa hosting sendiri mula berbaloi?
+## Hosting sendiri berbaloi pada kira-kira 36 juta mesej sebulan
 
 Pada jumlah yang tiada perniagaan kecil capai: kira-kira 36 juta mesej sebulan, dengan kadar di atas.
 
@@ -5108,7 +5108,7 @@ Ada dua had yang perlu disebut jujur. Harga GPU itu ialah kadar senarai seorang 
 
 Perbandingan ini juga aritmetik, bukan keupayaan. Model yang anda jalankan sendiri tidak semestinya sekuat model tertutup yang anda bayar sebelum ini, dan jurang itulah sebab sebenar kebanyakan PKS kekal dengan bayaran ikut panggilan.
 
-## Apa yang diperlukan untuk menjalankannya sendiri?
+## Lima kerja berterusan untuk menjalankannya sendiri
 
 Lima kerja, dan tiada satu pun bersifat sekali siap.
 
@@ -5120,7 +5120,7 @@ Lima kerja, dan tiada satu pun bersifat sekali siap.
 
 Senarai ini huraian kami tentang kerja itu, bukan tinjauan gaji atau spesifikasi jawatan.
 
-## Apa yang patut PKS Malaysia buat suku ini?
+## Panggil model terbuka melalui API sebelum menjalankannya
 
 Cuba panggil model terbuka melalui API sebelum cuba menjalankannya. Mistral sendiri menyediakan model terbuka mereka melalui API pada USD 0.15 dan USD 0.60 setiap juta token, jadi anda dapat terma lesen dan tingkah laku model itu tanpa membeli GPU atau mengupah sesiapa. Soalan tentang hosting sendiri patut ditimbulkan apabila perbelanjaan token bulanan anda hampir menyamai kos bulanan GPU, atau apabila syarat lokasi data memaksa anda.
 
@@ -5150,7 +5150,7 @@ Ada satu ujian sahaja, dan ia satu ayat yang boleh anda sebut dengan lantang: ap
 
 Catat tiga perubahan terakhir pada data itu dan bagaimana setiap satu berpindah. Jika ketiga-tiganya memerlukan seseorang membuka dua tetingkap dan menaip semula, anda mempunyai penyelarasan manual. Spreadsheet ialah penyelarasan manual yang baik. API ialah apa yang anda beli apabila penyalinan yang sama berlaku cukup kerap untuk menjadi kos, atau sekali terlalu kerap untuk diterima.
 
-## Bila spreadsheet menang?
+## Spreadsheet menang dalam tiga keadaan
 
 Spreadsheet ialah tool yang betul dalam tiga keadaan, dan membeli API dalam mana-mana daripadanya ialah wang yang dibuang pada masalah yang anda tidak ada.
 
@@ -5158,7 +5158,7 @@ Spreadsheet ialah tool yang betul dalam tiga keadaan, dan membeli API dalam mana
 2. **Satu orang memiliki data itu.** Pemilikan bersama ialah tempat spreadsheet gagal, bukan kerana teknologinya rendah. Satu pemilik yang teliti dengan spreadsheet mengalahkan integrasi separuh siap yang tiada siapa faham.
 3. **Inputnya memerlukan pertimbangan.** Jika seseorang perlu melihat mesej dan memutuskan maksudnya, tiada API boleh buat bahagian itu. Mengautomasikan pengangkutan sambil membiarkan keputusan dibuat secara manual tidak memberi anda apa-apa.
 
-## Bila ia berhenti memadai?
+## Empat tanda ia sudah berhenti memadai
 
 Empat tanda, dan mana-mana satu sudah cukup untuk anda mula melihat ke arah API.
 
@@ -5167,13 +5167,13 @@ Empat tanda, dan mana-mana satu sudah cukup untuk anda mula melihat ke arah API.
 3. **Kegagalan menelan kos lebih besar daripada pembaikannya.** Pesanan terlepas, tempahan berganda, invois dihantar dua kali. Apabila ini berlaku setiap bulan, kos pembaikan itu wang sebenar.
 4. **Data perlu bergerak pada waktu malam atau serentak.** Tiada orang boleh menyelaraskan pada pukul 2 pagi, dan seratus baris yang ditaip semula dengan tangan akan mengandungi kesilapan yang anda tidak akan jumpa.
 
-## Berapa kos setiap satu sebenarnya?
+## Tiada angka setara, kerana tiada penanda aras awam
 
 Bukan angka setara, kerana tiada penanda aras awam bagi kadar yang dikenakan pembangun Malaysia untuk kerja ini, dan saya tidak akan mencipta satu.
 
 Yang boleh dikatakan dengan jujur ialah bentuk bilnya. Spreadsheet menelan masa, setiap minggu, selamanya, dan menelan pembersihan selepas setiap kesilapan. API menelan kos bina sekali, yuran bulanan untuk apa-apa yang dipanggilnya, dan satu kerja penyelenggaraan setiap kali pembekal mengubah sesuatu. Kos bina itu yang kelihatan. Masa yang anda sudah belanja, dan kesilapan yang sudah berlaku, ialah yang tiada siapa masukkan dalam kiraan sehingga spreadsheet tidak lagi cukup.
 
-## Apa pilihan di tengah-tengah?
+## Banyak PKS berada di antara kedua-duanya
 
 Banyak PKS Malaysia berada di antara kedua-duanya, dan pilihan tengah itu wajar dinamakan daripada berpura-pura pilihan ini dua pilihan sahaja.
 

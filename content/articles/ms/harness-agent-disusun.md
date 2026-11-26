@@ -46,7 +46,7 @@ Setiap tool dinilai 1 hingga 5 pada lima kriteria, dan kriteria itu diberi wajar
 
 Sesuatu sel mendapat 5 hanya apabila pemerhatiannya jelas dan lengkap. Kriteria yang tiada dalam nota kami dilabel "tidak disahkan" dan tidak menyumbang apa-apa, bukan dirata-ratakan kepada nilai tengah yang sopan. Kawalan pembekal dan kos, MCP serta kebolehlanjutan ialah skor editorial yang berpaut pada baris setiap tool dalam jadual, bukan kuantiti yang diukur: jadual menyatakan sesuatu tool menyokong sesuatu laluan, bukan sebaik mana ia melakukannya.
 
-## Apa yang kami ukur?
+## Empat harness, satu mesin, satu hari
 
 Empat harness, satu mesin, satu hari. Versi, laluan pemasangan, konfigurasi, permukaan automasi, MCP, pilihan pembekal, kebolehlanjutan dan jejak cakera.
 
@@ -63,7 +63,7 @@ Apa yang diliputi dan tidak: keempat-empatnya dipasang dan dikonfigurasikan pada
 | Kebolehlanjutan | bundle plugin, komposisi profil, skills, agent teams | `~/.claude/skills`, JSON `--agents`, subagent | `config.toml`, MCP, `exec-server` eksperimen | `opencode agent`, MCP, server ACP |
 | Jejak cakera | 3.2 GB | 116 KB | 246 MB | 62 MB |
 
-## Apakah skornya?
+## Susunan itu keluar daripada kiraan yang boleh dihasilkan semula
 
 Susunan itu keluar daripada kiraan di bawah, dan kiraan itu boleh dihasilkan semula daripada jadual di atas.
 
@@ -78,7 +78,7 @@ Susunan itu keluar daripada kiraan di bawah, dan kiraan itu boleh dihasilkan sem
 
 Jejak cakera dinilai pada skala yang dinyatakan: 5 bagi bawah 100 MB, 4 bagi bawah 500 MB, 2 bagi bawah 5 GB. Automasi tanpa interaksi mendapat 4 dan bukan 5 bagi keempat-empatnya kerana setiap satu mempunyai satu laluan yang didokumenkan dan kami tidak menguji larian berjadual bagi mana-mana daripadanya.
 
-## Apa yang dimenangi setiap tool?
+## Setiap tool menang pada kriteria yang berbeza
 
 DeepSeek Harness menang pada pilihan pembekal, MCP dan kebolehlanjutan, dan kalah pada cakera.
 
@@ -96,13 +96,13 @@ Codex CLI menang pada MCP, kerana ia satu-satunya antara empat ini yang didokume
 
 Laluan automasinya (`codex exec`) kukuh dan jejak cakeranya pertengahan. Baris pembekalnya hanya OpenAI melalui `login`, dan `exec-server` ditandakan eksperimen, dan itulah yang meletakkannya di tempat keempat.
 
-## Apa yang tidak kami sahkan?
+## OpenMausBot dikeluarkan kerana gagal dilancarkan
 
 OpenMausBot dikeluarkan, dan bukan kerana ia kalah. Binarinya ada tetapi gagal dilancarkan, pemasangan global dan direktori datanya sudah tiada, dan unit systemd-nya tidak aktif. Kami mengujinya dan ia tidak dapat berjalan, jadi ia tidak dinilai dan tidak disusun paling bawah.
 
 Tidak disahkan bagi keempat-empatnya: kualiti jawapan, latency, kos token, kebolehpercayaan sepanjang minggu, atau tingkah laku di bawah beban. Kami mengukur apa yang ada dalam jadual dan tidak lebih. Naik taraf versi boleh mengubah mana-mana sel di sini, dan itulah risiko menerbitkan nombor yang terikat pada versi: 0.146.0 dan 1.18.11 ialah nilai hari ini, bukan sifat kekal.
 
-## Bagaimana saya boleh mengulang semakan ini?
+## Empat arahan untuk mengaudit setiap nombor
 
 Empat arahan dan satu semakan fail, dan anda boleh mengaudit setiap nombor dalam jadual.
 

@@ -53,13 +53,13 @@ Empat perkara, dan semuanya peraturan perkataan, bukan tetapan teknikal.
 
 Keempat-empatnya dipetik daripada halaman garis panduan Google, dibaca 23 November 2026.
 
-## Bagaimana pula alamat, atau tiada alamat langsung?
+## Alamat perkhidmatan dan kedai fizikal ialah dua konfigurasi
 
 Perniagaan kawasan perkhidmatan dan kedai fizikal ialah dua konfigurasi berbeza, dan Google mendokumenkan kedua-duanya.
 
 Sumber location membawa `address` dan `serviceArea`, dan perniagaan kawasan perkhidmatan mengurus kawasan dan bukan kedai. Contoh Google sendiri ialah jenama penghantaran sahaja yang beroperasi dari dapur kongsi, yang "must hide their address and add service areas to that specific brand". Jika anda menghantar dan tiada kaunter untuk pelanggan masuk, profil kedai itulah ketidakserasian yang patut dibetulkan dahulu.
 
-## Medan mana yang wajar diisi bulan ini?
+## Waktu operasi dan sub-sumber mengubah keputusan pelanggan
 
 Waktu operasi dan sub-sumber yang didokumenkan Google, mengikut urutan ia mengubah keputusan pelanggan.
 
@@ -74,7 +74,7 @@ Waktu operasi dan sub-sumber yang didokumenkan Google, mengikut urutan ia mengub
 
 Semua itu didokumenkan dalam rujukan API Business Profile Google, dibaca 23 November 2026. Nama API itu penting walaupun anda tidak menulis kod: itulah medan yang borang di laman web sedang sunting.
 
-## Apa yang menggantungkan profil, dan apa yang perlu dibuat?
+## Google mendokumenkan penggantungan dan rayuannya
 
 Google mendokumenkan proses penggantungan dan rayuannya, dan halaman rayuan mengandungi ayat yang perlu dibaca sebelum apa-apa.
 
@@ -82,7 +82,7 @@ Profil yang digantung diurus melalui "Fix suspended or disabled profiles", yang 
 
 Ayat itu sebabnya pengesahan mesti kekal semasa. Rayuan yang difailkan sebelum pengesahan selesai ialah rayuan yang tersekat.
 
-## Apa yang tidak dapat kami sahkan?
+## Google tidak menerbitkan faktor susunan selain medan
 
 Google tidak menerbitkan apa-apa pada halaman ini tentang cara profil disusun dalam carian setempat, jadi artikel ini tidak membuat dakwaan tentang faktor susunan selain medan yang didokumenkan. Beberapa ID pusat bantuan memulangkan "Sorry, this page can't be found" semasa pusingan ini, jadi hanya halaman yang Google sendiri pautkan atau yang ditemui imbasan dipetik. Tiada juga angka yang diterbitkan untuk tempoh pengesahan atau rayuan.
 

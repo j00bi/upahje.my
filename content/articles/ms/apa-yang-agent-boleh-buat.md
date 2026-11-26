@@ -41,7 +41,7 @@ Agent bertindak antara langkah; chatbot hanya menjawab. Bezanya ialah agent memp
 
 Anthropic menamakan lapisan yang menjalankan ini sebagai agent harness, iaitu program yang memegang perbualan dan menjalankan tool, yang "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([dokumentasi Claude Code, dibaca 23 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Dua akibat untuk perniagaan kecil: agent boleh menyentuh sistem sebenar, dan harness, bukan model, menentukan apa yang dibenarkannya sentuh.
 
-## Apa yang boleh dibuatnya tanpa penyeliaan?
+## Kerja tanpa penyeliaan murah dilihat dan murah diundur
 
 Kerja tanpa penyeliaan ialah kerja yang kesilapannya murah dilihat dan murah diundur.
 
@@ -56,7 +56,7 @@ Kerja tanpa penyeliaan ialah kerja yang kesilapannya murah dilihat dan murah diu
 | Menyediakan draf balasan, laporan atau ringkasan untuk dihantar seseorang | Manusia masih menekan butang hantar |
 | Memantau baris gilir dan memberi amaran apabila ambang dilanggar | Agent naik taraf isu, bukan bertindak sendiri |
 
-## Apa yang perlukan manusia sebelum ia berlaku?
+## Kerja kelulusan tidak pulih dengan menjalankannya semula
 
 Kerja kelulusan ialah kerja yang kos tindakan salahnya tidak pulih dengan menjalankannya semula.
 
@@ -70,7 +70,7 @@ Kerja kelulusan ialah kerja yang kos tindakan salahnya tidak pulih dengan menjal
 
 Jadi biarkan agent menyediakan, dan manusia meluluskan. Agent yang menyediakan bayaran balik dan menunggu klik menjimatkan penulisan tanpa mengambil risiko. Saya tidak akan menjalankannya dengan cara lain, dan demo vendor yang melangkau langkah kelulusan itu yang patut anda syak.
 
-## Apa yang tidak boleh dibuatnya sama sekali?
+## Empat kategori yang tiada prompt boleh ubah
 
 Empat kategori, dan tiada prompt boleh mengubahnya.
 
@@ -79,7 +79,7 @@ Empat kategori, dan tiada prompt boleh mengubahnya.
 3. **Pengetahuan yang ia tidak ada.** Agent menjawab daripada apa yang dapat dicapainya. Jika stok anda hanya ada dalam kepala seseorang, agent akan yakin dan salah.
 4. **Ketepatan yang dijamin.** Setiap agent kadangkala menghasilkan jawapan salah yang kelihatan munasabah. Sebab itulah lajur kelulusan itu wujud.
 
-## Berapa kosnya dalam ringgit?
+## Dua bil, dan yang lebih kecil yang menarik perhatian
 
 Dua bil. Yang lebih kecil itu yang dapat perhatian.
 
@@ -104,7 +104,7 @@ Versi paling kecil yang boleh dijalankan ialah skrip yang membaca CSV e-mel soko
 - **Berapa kosnya:** pada 2,000 token input dan 500 output setiap baris, kira-kira **RM0.00185 sebaris**, jadi seratus baris kurang daripada 20 sen.
 - **Di mana ia mula rosak:** model yang membaca lajur CSV akan tersalah tafsir sel kosong dan mencipta nama pelanggan. Log setiap baris input di sebelah outputnya, jika tidak anda akan menyahpepijat separuh yang salah.
 
-## Bagaimana saya membezakan demo daripada yang terus berjalan?
+## Demo berjalan sekali; yang terus berjalan bertahan pada hari buruk
 
 Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari yang buruk. Enam semakan. Setiap jawapan patut berupa benda yang boleh ditunjukkan.
 

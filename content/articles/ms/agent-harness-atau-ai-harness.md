@@ -38,7 +38,7 @@ Anthropic menulis "hosted agent harness", dan pakej DeepSeek Harness menggunakan
 
 Takrif Anthropic yang paling jelas: hosted agent harness "runs the agent loop, with sessions in an Anthropic-managed cloud sandbox or a self-hosted sandbox on your own infrastructure" ([dokumentasi Claude Code, dibaca 19 Nov 2026](https://code.claude.com/docs/en/agent-sdk/overview)). Pakej DeepSeek Harness yang dipasang menggunakan perkataan yang sama, contohnya "Harness home" bagi direktori konfigurasinya ([README pakej, dibaca 19 Nov 2026](https://www.npmjs.com/package/@deepseek-ai/dsh)). Kedua-duanya tidak menganggapnya sebagai kiasan.
 
-## Apa yang dibawa oleh istilah itu, dalam praktik?
+## Empat ciri yang membezakan harness daripada klien sembang
 
 Empat perkara, dan setiap satu satu baris, bukan penerangan penuh.
 
@@ -49,7 +49,7 @@ Empat perkara, dan setiap satu satu baris, bukan penerangan penuh.
 
 Cara ia melalui satu mesej, langkah demi langkah, ada dalam [apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness). Artikel ini tentang istilah, bukan gelungnya.
 
-## Dari mana datangnya "AI harness"?
+## AI harness bukan istilah yang digunakan vendor
 
 Bukan daripada vendor yang dapat saya baca. Merentas empat sumber rasmi yang dibuka untuk artikel ini, frasa "AI harness" tidak muncul.
 
@@ -63,7 +63,7 @@ Kaedah ini ada hadnya dan saya nyatakan: carian enjin untuk frasa tepat itu memu
 | Agent framework | Penulis perpustakaan | Perpustakaan kod untuk membina agent, bukan runtime yang menjalankannya |
 | Agent workspace | OpenBot, MausBot | Perkataan produk itu sendiri bagi harness campur desktop atau satu mesin setiap bot |
 
-## Mengapa bezanya penting semasa membeli?
+## Perbezaan ini menentukan soalan yang anda tanya kepada vendor
 
 Kerana perkataan itu menerangkan apa yang produk lakukan kepada mesin dan data anda, dan framework bukan itu.
 

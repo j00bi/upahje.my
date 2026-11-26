@@ -47,7 +47,7 @@ Tiga angka daripada terbitan ICT dan e-dagang DOSM bagi pertubuhan, tahun data 2
 
 Baca ketiga-tiganya bersama dan gambarannya ialah perniagaan yang sudah ada komputer, sambungan dan selalunya laman web. Apa yang tidak diukur oleh terbitan itu ialah berapa banyak sistem berasingan yang dijalankan pertubuhan tersebut, atau berapa banyak masa digunakan untuk memindahkan data antara sistem itu. Ketiadaan itu penting, dan sebab itulah artikel ini mengelak daripada memberi angka "jam yang hilang".
 
-## Apa yang dikatakan kajian tentang cara ia digunakan?
+## Kajian Khazanah dan MDEC menerangkan corak, bukan mengiranya
 
 Khazanah Research Institute bersama MDEC menerbitkan penemuan pada Mei 2026 yang menerangkan coraknya tanpa mengiranya, jadi wajar dipetik dan bukan diolah: alat digital "are often implemented in isolation and used reactively, driven by immediate operational needs rather than longer-term strategic planning".
 
@@ -55,7 +55,7 @@ Kertas yang sama menerangkan "fragmented systems where customer-facing functions
 
 Ini penemuan think-tank, bertarikh 25 Mei 2026, bukan statistik. Ia menyatakan bentuk masalahnya, dan ia berhati-hati untuk tidak meletakkan angka padanya.
 
-## Di mana satu pesanan ditaip tiga kali?
+## Satu pesanan melalui empat dokumen dan tiga sistem
 
 Ikut satu pesanan. Ia masuk sebagai mesej, ditulis menjadi sebut harga, menjadi invois, kemudian menjadi pesanan penghantaran atau helaian kerja. Setiap dokumen itu wujud dalam satu sistem, dan dalam kebanyakan perniagaan kecil sistem itu tidak bercakap.
 
@@ -63,7 +63,7 @@ Sebut harga tinggal dalam templat. Invois dikeluarkan melalui perisian perakauna
 
 Itu bukan kegagalan teknologi pada tahap yang diukur DOSM. Setiap alat itu perisian. Ia kegagalan fragmentasi, tepat seperti corak yang diterangkan KRI, dan ia menelan kos dalam kerja semula dan bukan dalam lesen.
 
-## Mengapa e-Invoice memaksa perkara ini?
+## LHDN menyemak dokumen, bukan niat
 
 Kerana LHDN kini menyemak dokumen, bukan niat, dan semakan itu berlaku semasa pengeluaran.
 
@@ -75,7 +75,7 @@ Tiga peraturan menjadikannya konkrit, semuanya daripada dokumentasi pengesahan d
 
 Jadi data invois mesti betul sekali, di punca, sebelum sistem automatik menyentuhnya. Automasi yang menyalin kod pembekal yang salah ke dalam invois yang diserahkan tidak menghasilkan kesilapan kecil; ia menghasilkan dokumen pembetulan dengan layanan cukainya sendiri. Kami sudah liputi garis masa pemfailan dalam [apa yang diliputi automasi e-Invoice](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi); artikel ini tentang mengapa data di belakangnya mesti tunggal.
 
-## Apa yang tiada siapa terbitkan?
+## Tiga jurang yang setiap slaid vendor gunakan
 
 Tiga jurang, dan ia wajar dinamakan kerana itulah angka yang setiap slaid vendor gunakan.
 
