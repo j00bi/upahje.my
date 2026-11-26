@@ -12,7 +12,6 @@ category: buying-guides
 tags: [e-invoice, myinvois, lhdn, compliance]
 canonical: https://upahje.my/en/articles/what-einvoice-automation-covers
 draft: false
-featured: true
 regulatory: true
 changelog:
   - date: 2026-11-23
