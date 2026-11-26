@@ -38,7 +38,7 @@ sources:
 
 Lima perkhidmatan penghantaran diperiksa untuk artikel ini, dan tiada satu pun menerbitkan tarif per kilometer yang boleh dirancang oleh kedai. GrabExpress terpapar tetapi tidak mencetak tambang, hanya dua harga tambahan; halaman harga Lalamove 404 dan tambangnya berada dalam konfigurator; Pos Laju memaparkan tarifnya di sebelah klien; J&T dan Ninja Van memulangkan 404 pada halaman yang dicuba. Jejari tempat penunggang sendiri mengalahkan kurier bukan angka yang diterbitkan — ia aritmetik yang anda jalankan pada sebut harga sendiri.
 
-## Apa yang lima halaman itu sebenarnya terbitkan
+## Lima halaman, dua harga tambahan, tiada tarif
 
 Jadual ini merekodkan apa yang dicetak setiap perkhidmatan, dan satu lajur untuk apa ia, kerana kelima-limanya perkhidmatan penghantaran dan bukan yang lain — tiada pengawal selia, tiada majlis, tiada agensi dalam lajur yang sama.
 
@@ -52,7 +52,7 @@ Jadual ini merekodkan apa yang dicetak setiap perkhidmatan, dan satu lajur untuk
 
 Dua angka GrabExpress itu harga tambahan, bukan tambang: itulah yang dicetak halaman itu, dan memanggilnya harga penghantaran ialah dakwaan berlebihan yang jadual ini wujud untuk menghalangnya.
 
-## Mengapa tarif per-km tidak akan menyelesaikannya juga
+## Tarif per-km juga tidak akan menyelesaikannya
 
 Walaupun salah satu daripada lima mencetak kad kadar, ia kadar bagi model mereka: fi asas, jalur jarak dan jadual tambahan. Kos penunggang anda sendiri berbentuk lain — gaji bulanan, motosikal atau kereta, insurans, bahan api dan jam penunggang itu menunggu tanpa pesanan.
 

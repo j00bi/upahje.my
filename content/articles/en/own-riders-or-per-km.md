@@ -38,7 +38,7 @@ sources:
 
 Five delivery services were checked for this piece, and not one of them publishes a per-kilometre tariff a shop can plan from. GrabExpress renders but prints no fare, only two add-on prices; Lalamove's pricing page 404s and the fare lives in a configurator; Pos Laju renders its tariff client-side; J&T and Ninja Van return 404 on the pages tried. The radius where your own rider beats a courier is therefore not a published number — it is arithmetic you run on your own quotes.
 
-## What the five pages actually publish
+## Five pages, two add-on prices, no tariff
 
 The table records what each service printed, and one column for what it is, because these five are delivery services and nothing else — no regulator, no council, no agency sits in the same column.
 
@@ -52,7 +52,7 @@ The table records what each service printed, and one column for what it is, beca
 
 The two GrabExpress figures are add-ons, not a fare: that is what the page prints, and calling them a delivery price would be the overclaim this table exists to prevent.
 
-## Why a per-km tariff would not settle it anyway
+## A per-km tariff would not settle it either
 
 Even if one of the five printed a rate card, it would be a rate for their model: a base fee, a distance band and a surcharge schedule. Your own rider's cost is a different shape — a monthly wage, a bike or a car, insurance, fuel and the hours that rider spends idle between orders.
 
