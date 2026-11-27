@@ -92,4 +92,4 @@ Call an open-weight model before you try to run one. Mistral serves its own open
 
 [What an API costs to wire up in Malaysia](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
 
-[More on APIs and models](https://upahje.my/en/articles/category/definitions)
+[More on APIs and models](https://upahje.my/en/glossary)

@@ -126,4 +126,4 @@ Two further limits. The two cold-calling rows are advertised budgets, which a cl
 
 **Read next**
 
-[More on side-income work](https://upahje.my/en/articles/category/side-income)
+[More on side-income work](https://upahje.my/en/topics/freelance)

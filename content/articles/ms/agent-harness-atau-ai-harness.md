@@ -73,5 +73,5 @@ Framework ialah sesuatu yang diimport oleh pembangun; ia tidak memberikan persek
 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
-[Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang agent harness](https://upahje.my/ms/glossary)
 

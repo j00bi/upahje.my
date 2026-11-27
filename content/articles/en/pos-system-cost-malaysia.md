@@ -83,4 +83,4 @@ Pay for the e-invoice route, not the till. A POS that takes money but leaves the
 
 [What a first hire costs, line by line](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)

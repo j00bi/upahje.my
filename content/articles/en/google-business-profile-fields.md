@@ -103,5 +103,5 @@ You need the guidelines page, your own profile, and a spare hour. The cost is th
 
 [What an AI agent can and cannot do for a Malaysian SME](https://upahje.my/en/articles/what-an-ai-agent-can-do)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)
 

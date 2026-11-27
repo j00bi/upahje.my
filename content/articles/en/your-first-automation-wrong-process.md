@@ -69,5 +69,5 @@ And there is a real cost to waiting. Two weeks of tracking is two weeks of the p
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)
 

@@ -96,5 +96,5 @@ Tiada kad menyatakan konfigurasi perkakasan minimum, jadi tiada kos hosting send
 
 [Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)
 
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
 

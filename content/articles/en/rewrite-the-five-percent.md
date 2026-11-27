@@ -89,4 +89,4 @@ If your slowness is one function, take the small port. If it is everywhere, pric
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)

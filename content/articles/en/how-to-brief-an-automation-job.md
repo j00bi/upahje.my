@@ -95,4 +95,4 @@ Then ask both to walk you through the acceptance test. The one who can describe 
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)

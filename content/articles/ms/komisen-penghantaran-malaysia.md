@@ -87,4 +87,4 @@ Platform yang enggan meletakkan kadarnya di sebelah bakul yang sudah dikira memb
 
 [Kos kerja automasi di Malaysia: harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/topics/buying)

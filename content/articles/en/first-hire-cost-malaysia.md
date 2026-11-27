@@ -98,4 +98,4 @@ The salary is the smaller number in this decision. A business that budgets RM3,0
 
 [Where the same data gets typed three times](https://upahje.my/en/articles/same-data-typed-three-times)
 
-[More definitions, explained plainly](https://upahje.my/en/articles/category/definitions)
+[More definitions, explained plainly](https://upahje.my/en/glossary)

@@ -126,4 +126,4 @@ Dua lagi had. Dua baris panggilan jualan ialah bajet yang diiklankan, yang boleh
 
 **Baca seterusnya**
 
-[Lagi tentang pendapatan sampingan](https://upahje.my/ms/articles/category/side-income)
+[Lagi tentang pendapatan sampingan](https://upahje.my/ms/topics/freelance)

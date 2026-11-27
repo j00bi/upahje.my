@@ -117,4 +117,4 @@ Pembeli yang mementingkan kos boleh mengira semula pemberatnya. Menaikkan penyed
 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)

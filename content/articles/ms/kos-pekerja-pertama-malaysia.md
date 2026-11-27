@@ -98,4 +98,4 @@ Gaji ialah angka yang lebih kecil dalam keputusan ini. Perniagaan yang membajet 
 
 [Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali)
 
-[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/articles/category/definitions)
+[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)

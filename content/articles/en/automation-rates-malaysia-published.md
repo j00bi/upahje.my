@@ -125,4 +125,4 @@ A RM400 session and a RM1,500 project both look small next to a RM6,000 build, a
 
 [How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/how-to-brief-an-automation-job)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)

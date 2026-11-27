@@ -92,5 +92,5 @@ Pelancar `openmausbot` masih ada pada mesin ini, dan menjalankannya gagal dengan
 
 [Agent harness, AI harness, agent framework: apa maksud istilah ini](https://upahje.my/ms/articles/agent-harness-atau-ai-harness)
 
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
 

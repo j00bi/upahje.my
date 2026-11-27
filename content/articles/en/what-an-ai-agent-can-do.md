@@ -122,5 +122,5 @@ A demo works once, in front of you. Something that keeps running survives a bad 
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on APIs and models](https://upahje.my/en/articles/category/definitions)
+[More on APIs and models](https://upahje.my/en/glossary)
 

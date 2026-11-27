@@ -106,5 +106,5 @@ Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya ialah 
 
 [Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 

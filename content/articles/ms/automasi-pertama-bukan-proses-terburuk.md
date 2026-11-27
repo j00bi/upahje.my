@@ -69,5 +69,5 @@ Dan ada kos sebenar untuk menunggu. Dua minggu penjejakan bermakna dua minggu la
 
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 

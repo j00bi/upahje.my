@@ -83,4 +83,4 @@ Bayar untuk laluan e-invoice, bukan untuk mesin tunai. POS yang menerima wang te
 
 [Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
-[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/topics/buying)

@@ -106,5 +106,5 @@ You need the document, the person who handles it, and an hour. The cost is that 
 
 [What e-Invoice automation covers, and what stays with a person](https://upahje.my/en/articles/what-einvoice-automation-covers)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)
 

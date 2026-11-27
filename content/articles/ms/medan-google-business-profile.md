@@ -103,5 +103,5 @@ Anda perlukan halaman garis panduan, profil anda sendiri, dan sejam lapang. Kosn
 
 [Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 

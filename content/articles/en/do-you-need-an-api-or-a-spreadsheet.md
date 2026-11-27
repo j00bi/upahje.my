@@ -59,4 +59,4 @@ Exporting a CSV and importing it into the other tool is still a copy step, but a
 
 [What an API costs to wire up in Malaysia](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
 
-[More on APIs and models](https://upahje.my/en/articles/category/definitions)
+[More on APIs and models](https://upahje.my/en/glossary)

@@ -74,4 +74,4 @@ Tiga arahan, dan anda tidak perlu mempercayai halaman ini untuk menjalankannya.
 
 [Di mana kunci API diletakkan dalam harness, dan di mana ia tidak boleh ada](https://upahje.my/ms/articles/kunci-api-dalam-harness)
 
-[Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang agent harness](https://upahje.my/ms/glossary)

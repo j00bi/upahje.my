@@ -73,5 +73,5 @@ A framework is something a developer imports; it does not give you a running env
 
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
-[More on agent harnesses](https://upahje.my/en/articles/category/definitions)
+[More on agent harnesses](https://upahje.my/en/glossary)
 

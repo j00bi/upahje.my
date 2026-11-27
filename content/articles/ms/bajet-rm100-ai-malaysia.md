@@ -110,5 +110,5 @@ Dua papan pendahulu penanda aras juga tidak dirakam untuk artikel ini, dan artik
 
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 

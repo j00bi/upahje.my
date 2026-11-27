@@ -96,4 +96,4 @@ The cheapest mistake here is paying for a year of clips you never post.
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)

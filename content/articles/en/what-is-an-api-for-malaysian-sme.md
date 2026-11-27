@@ -97,4 +97,4 @@ Settle three things in writing before you pay.
 
 [Open or closed models, and which to start with](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
 
-[More on APIs and models](https://upahje.my/en/articles/category/definitions)
+[More on APIs and models](https://upahje.my/en/glossary)

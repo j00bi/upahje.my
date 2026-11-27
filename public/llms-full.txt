@@ -1911,7 +1911,7 @@ Pay for the e-invoice route, not the till. A POS that takes money but leaves the
 
 [What a first hire costs, line by line](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -2192,7 +2192,7 @@ A platform that will not put the rate beside a worked basket is telling you some
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -2265,7 +2265,7 @@ The salary is the smaller number in this decision. A business that budgets RM3,0
 
 [Where the same data gets typed three times](https://upahje.my/en/articles/same-data-typed-three-times)
 
-[More definitions, explained plainly](https://upahje.my/en/articles/category/definitions)
+[More definitions, explained plainly](https://upahje.my/en/glossary)
 
 ### Sources
 
@@ -2344,7 +2344,7 @@ The cheapest mistake here is paying for a year of clips you never post.
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -2493,7 +2493,7 @@ You need the guidelines page, your own profile, and a spare hour. The cost is th
 
 [What an AI agent can and cannot do for a Malaysian SME](https://upahje.my/en/articles/what-an-ai-agent-can-do)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -2617,7 +2617,7 @@ If your slowness is one function, take the small port. If it is everywhere, pric
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -2702,7 +2702,7 @@ You need the document, the person who handles it, and an hour. The cost is that 
 
 [What e-Invoice automation covers, and what stays with a person](https://upahje.my/en/articles/what-einvoice-automation-covers)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -2803,7 +2803,7 @@ A demo works once, in front of you. Something that keeps running survives a bad 
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on APIs and models](https://upahje.my/en/articles/category/definitions)
+[More on APIs and models](https://upahje.my/en/glossary)
 
 ### Sources
 
@@ -3054,7 +3054,7 @@ And there is a real cost to waiting. Two weeks of tracking is two weeks of the p
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)
 
 ## Agent harness, AI harness, agent framework: what they mean
 
@@ -3104,7 +3104,7 @@ A framework is something a developer imports; it does not give you a running env
 
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
-[More on agent harnesses](https://upahje.my/en/articles/category/definitions)
+[More on agent harnesses](https://upahje.my/en/glossary)
 
 ### Sources
 
@@ -3205,7 +3205,7 @@ Cost-heavy buyers can rerun the weighting. Raising provider and cost control to 
 
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -3307,7 +3307,7 @@ A RM400 session and a RM1,500 project both look small next to a RM6,000 build, a
 
 [How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/how-to-brief-an-automation-job)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -3467,7 +3467,7 @@ Exporting a CSV and importing it into the other tool is still a copy step, but a
 
 [What an API costs to wire up in Malaysia](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
 
-[More on APIs and models](https://upahje.my/en/articles/category/definitions)
+[More on APIs and models](https://upahje.my/en/glossary)
 
 ## Where an API key goes in a harness, and where never
 
@@ -3522,7 +3522,7 @@ The order matters more than the thoroughness. Teams that rotate first and revoke
 
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -3587,7 +3587,7 @@ The `openmausbot` launcher is still on this machine, and running it fails with a
 
 [Agent harness, AI harness, agent framework: what the words mean](https://upahje.my/en/articles/agent-harness-vs-ai-harness)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -3681,7 +3681,7 @@ Then ask both to walk you through the acceptance test. The one who can describe 
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)
 
 ## Open weights, four licence types: what each model allows
 
@@ -3742,7 +3742,7 @@ No card states a minimum hardware configuration, so no self-hosting cost is clai
 
 [Open or closed models: what a Malaysian SME can actually run in-house](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -3822,7 +3822,7 @@ Call an open-weight model before you try to run one. Mistral serves its own open
 
 [What an API costs to wire up in Malaysia](https://upahje.my/en/articles/what-is-an-api-for-malaysian-sme)
 
-[More on APIs and models](https://upahje.my/en/articles/category/definitions)
+[More on APIs and models](https://upahje.my/en/glossary)
 
 ### Sources
 
@@ -3912,7 +3912,7 @@ Two benchmark leaderboards were also not captured for this piece, and this artic
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying automation](https://upahje.my/en/articles/category/buying-guides)
+[More on buying automation](https://upahje.my/en/topics/buying)
 
 ### Sources
 
@@ -4002,7 +4002,7 @@ Two further limits. The two cold-calling rows are advertised budgets, which a cl
 
 **Read next**
 
-[More on side-income work](https://upahje.my/en/articles/category/side-income)
+[More on side-income work](https://upahje.my/en/topics/freelance)
 
 ### Sources
 
@@ -4073,7 +4073,7 @@ Three commands, and you do not need to trust this page to run them.
 
 [Where an API key goes in a harness, and where it must never go](https://upahje.my/en/articles/harness-api-keys)
 
-[More on agent harnesses](https://upahje.my/en/articles/category/definitions)
+[More on agent harnesses](https://upahje.my/en/glossary)
 
 ### Sources
 
@@ -4152,7 +4152,7 @@ Settle three things in writing before you pay.
 
 [Open or closed models, and which to start with](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
 
-[More on APIs and models](https://upahje.my/en/articles/category/definitions)
+[More on APIs and models](https://upahje.my/en/glossary)
 
 ### Sources
 
@@ -6073,7 +6073,7 @@ Bayar untuk laluan e-invoice, bukan untuk mesin tunai. POS yang menerima wang te
 
 [Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
-[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -6360,7 +6360,7 @@ Kesilapan paling murah di sini ialah membayar setahun klip yang tidak pernah dis
 
 [Kos kerja automasi di Malaysia: harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -6428,7 +6428,7 @@ Platform yang enggan meletakkan kadarnya di sebelah bakul yang sudah dikira memb
 
 [Kos kerja automasi di Malaysia: harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/articles/category/buying-guides)
+[Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -6501,7 +6501,7 @@ Gaji ialah angka yang lebih kecil dalam keputusan ini. Perniagaan yang membajet 
 
 [Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/data-sama-ditaip-tiga-kali)
 
-[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/articles/category/definitions)
+[Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
 
 ### Sources
 
@@ -6649,7 +6649,7 @@ Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari ya
 
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang API dan model](https://upahje.my/ms/glossary)
 
 ### Sources
 
@@ -6784,7 +6784,7 @@ Dan ada kos sebenar untuk menunggu. Dua minggu penjejakan bermakna dua minggu la
 
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
 ## CommandCode, OpenCode, DeepSeek: bukan jenis alat yang sama
 
@@ -6934,7 +6934,7 @@ Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya ialah 
 
 [Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -7129,7 +7129,7 @@ Anda perlukan halaman garis panduan, profil anda sendiri, dan sejam lapang. Kosn
 
 [Apa yang AI agent boleh dan tidak boleh buat untuk PKS Malaysia](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -7207,7 +7207,7 @@ Jika kelambatan anda satu fungsi, ambil pindahan kecil. Jika ia di merata tempat
 
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -7262,7 +7262,7 @@ Framework ialah sesuatu yang diimport oleh pembangun; ia tidak memberikan persek
 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
-[Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang agent harness](https://upahje.my/ms/glossary)
 
 ### Sources
 
@@ -7326,7 +7326,7 @@ Tiga arahan, dan anda tidak perlu mempercayai halaman ini untuk menjalankannya.
 
 [Di mana kunci API diletakkan dalam harness, dan di mana ia tidak boleh ada](https://upahje.my/ms/articles/kunci-api-dalam-harness)
 
-[Lagi tentang agent harness](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang agent harness](https://upahje.my/ms/glossary)
 
 ### Sources
 
@@ -7405,7 +7405,7 @@ Tetapkan tiga perkara secara bertulis sebelum bayaran.
 
 [Model terbuka atau tertutup, dan mana yang patut dimulakan](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)
 
-[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang API dan model](https://upahje.my/ms/glossary)
 
 ### Sources
 
@@ -7495,7 +7495,7 @@ Dua papan pendahulu penanda aras juga tidak dirakam untuk artikel ini, dan artik
 
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -7564,7 +7564,7 @@ Tiada kad menyatakan konfigurasi perkakasan minimum, jadi tiada kos hosting send
 
 [Model terbuka atau tertutup: apa yang mampu dijalankan sendiri oleh PKS Malaysia](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)
 
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -7762,7 +7762,7 @@ Kemudian minta kedua-duanya menerangkan ujian penerimaan. Yang boleh menerangkan
 
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
 ## Empat CLI agent pada satu mesin: apa yang kami uji
 
@@ -7856,7 +7856,7 @@ Pembeli yang mementingkan kos boleh mengira semula pemberatnya. Menaikkan penyed
 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -7958,7 +7958,7 @@ Sesi RM400 dan projek RM1,500 kedua-duanya kelihatan kecil berbanding pembinaan 
 
 [Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -8022,7 +8022,7 @@ Urutannya lebih penting daripada ketelitiannya. Pasukan yang memutar dahulu dan 
 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -8087,7 +8087,7 @@ Pelancar `openmausbot` masih ada pada mesin ini, dan menjalankannya gagal dengan
 
 [Agent harness, AI harness, agent framework: apa maksud istilah ini](https://upahje.my/ms/articles/agent-harness-atau-ai-harness)
 
-[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
 
 ### Sources
 
@@ -8179,7 +8179,7 @@ Dua lagi had. Dua baris panggilan jualan ialah bajet yang diiklankan, yang boleh
 
 **Baca seterusnya**
 
-[Lagi tentang pendapatan sampingan](https://upahje.my/ms/articles/category/side-income)
+[Lagi tentang pendapatan sampingan](https://upahje.my/ms/topics/freelance)
 
 ### Sources
 
@@ -8262,7 +8262,7 @@ Cuba panggil model terbuka melalui API sebelum cuba menjalankannya. Mistral send
 
 [Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
 
-[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang API dan model](https://upahje.my/ms/glossary)
 
 ### Sources
 
@@ -8317,4 +8317,4 @@ Eksport CSV dan import ke tool lain masih satu langkah salin, tetapi lebih panta
 
 [Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
 
-[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang API dan model](https://upahje.my/ms/glossary)

@@ -89,4 +89,4 @@ A platform that will not put the rate beside a worked basket is telling you some
 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)

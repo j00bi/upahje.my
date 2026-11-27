@@ -96,5 +96,5 @@ No card states a minimum hardware configuration, so no self-hosting cost is clai
 
 [Open or closed models: what a Malaysian SME can actually run in-house](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
 

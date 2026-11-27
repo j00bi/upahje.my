@@ -92,5 +92,5 @@ The `openmausbot` launcher is still on this machine, and running it fails with a
 
 [Agent harness, AI harness, agent framework: what the words mean](https://upahje.my/en/articles/agent-harness-vs-ai-harness)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)
 

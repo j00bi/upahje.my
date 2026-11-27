@@ -125,4 +125,4 @@ Sesi RM400 dan projek RM1,500 kedua-duanya kelihatan kecil berbanding pembinaan 
 
 [Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi)
 
-[Lagi tentang membeli automasi](https://upahje.my/ms/articles/category/buying-guides)
+[Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)

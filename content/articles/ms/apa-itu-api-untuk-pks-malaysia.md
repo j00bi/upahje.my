@@ -97,4 +97,4 @@ Tetapkan tiga perkara secara bertulis sebelum bayaran.
 
 [Model terbuka atau tertutup, dan mana yang patut dimulakan](https://upahje.my/ms/articles/model-terbuka-atau-tertutup-pks-malaysia)
 
-[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang API dan model](https://upahje.my/ms/glossary)

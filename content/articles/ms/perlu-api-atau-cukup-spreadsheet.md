@@ -59,4 +59,4 @@ Eksport CSV dan import ke tool lain masih satu langkah salin, tetapi lebih panta
 
 [Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
 
-[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang API dan model](https://upahje.my/ms/glossary)

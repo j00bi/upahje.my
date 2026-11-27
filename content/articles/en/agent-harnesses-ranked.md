@@ -117,4 +117,4 @@ Cost-heavy buyers can rerun the weighting. Raising provider and cost control to 
 
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
-[More on buying and choosing tools](https://upahje.my/en/articles/category/buying-guides)
+[More on buying and choosing tools](https://upahje.my/en/topics/buying)

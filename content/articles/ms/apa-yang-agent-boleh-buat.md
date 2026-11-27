@@ -119,5 +119,5 @@ Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari ya
 
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
-[Lagi tentang API dan model](https://upahje.my/ms/articles/category/definitions)
+[Lagi tentang API dan model](https://upahje.my/ms/glossary)
 
