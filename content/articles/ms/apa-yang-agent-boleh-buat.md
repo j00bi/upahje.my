@@ -121,3 +121,4 @@ Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari ya
 
 [Lagi tentang API dan model](https://upahje.my/ms/glossary)
 
+[Apa yang AI agent boleh buat untuk PKS](https://upahje.my/ms/articles/pelanggan-simulasi-kata-ya)

@@ -108,3 +108,8 @@ You need the document, the person who handles it, and an hour. The cost is that 
 
 [More on buying automation](https://upahje.my/en/topics/buying)
 
+[Where the same data gets typed three times](https://upahje.my/en/articles/do-you-need-an-api-or-a-spreadsheet)
+
+[Where the same data gets typed three times](https://upahje.my/en/articles/pos-system-cost-malaysia)
+
+[Where the same data gets typed three times](https://upahje.my/en/articles/your-first-automation-wrong-process)

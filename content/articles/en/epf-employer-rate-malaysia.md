@@ -97,3 +97,5 @@ The 12-versus-13 question is the easy half. The half that costs money is the sch
 [What a first hire costs, line by line](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
 [More definitions, explained plainly](https://upahje.my/en/glossary)
+
+[EPF employer: 12% or 13%, and RM5,000 is the line](https://upahje.my/en/articles/sst-threshold-eleven-months)

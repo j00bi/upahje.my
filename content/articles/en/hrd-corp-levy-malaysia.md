@@ -80,3 +80,5 @@ The levy is small enough to ignore and large enough to notice at the ten-employe
 [SOCSO stops at RM6,000](https://upahje.my/en/articles/socso-employer-rate-malaysia)
 
 [More definitions, explained plainly](https://upahje.my/en/glossary)
+
+[HRD Corp levy: 1%, 0.5%, or none](https://upahje.my/en/articles/sst-threshold-eleven-months)

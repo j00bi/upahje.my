@@ -87,3 +87,7 @@ The confusion is not technical, it is about what a notebook is for. Colab sells 
 [The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/gpu-rental-cost-malaysia)
 
 [More definitions, explained plainly](https://upahje.my/en/glossary)
+
+[Colab will train your model. It will not host it](https://upahje.my/en/articles/self-hosted-clipping)
+
+[Colab will train your model. It will not host it](https://upahje.my/en/articles/trading-bot-reality-malaysia)

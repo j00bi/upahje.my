@@ -73,3 +73,5 @@ Urutannya lebih penting daripada ketelitiannya. Pasukan yang memutar dahulu dan 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
+
+[Di mana kunci API diletakkan dalam harness, dan di mana tidak](https://upahje.my/ms/articles/landskap-harness-agent-sumber-terbuka)

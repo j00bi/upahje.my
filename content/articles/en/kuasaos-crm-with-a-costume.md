@@ -124,3 +124,5 @@ That is a wager, not a prophecy, and we will publish the correction the day a ve
 [What a WhatsApp chatbot costs, per message](https://upahje.my/en/articles/whatsapp-chatbot-costs-malaysia)
 
 [Twelve jobs a rented GPU finishes, and three it cannot](https://upahje.my/en/articles/rented-gpu-jobs-malaysia)
+
+[Billed by contacts, sold as an operating system](https://upahje.my/en/articles/pos-system-cost-malaysia)

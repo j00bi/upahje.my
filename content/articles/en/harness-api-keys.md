@@ -73,3 +73,5 @@ The order matters more than the thoroughness. Teams that rotate first and revoke
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
 [More on buying and choosing tools](https://upahje.my/en/topics/buying)
+
+[Where an API key goes in a harness, and where it must never go](https://upahje.my/en/articles/harness-landscape-open-closed)

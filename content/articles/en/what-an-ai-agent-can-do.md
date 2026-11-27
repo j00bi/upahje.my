@@ -124,3 +124,4 @@ A demo works once, in front of you. Something that keeps running survives a bad 
 
 [More on APIs and models](https://upahje.my/en/glossary)
 
+[What an AI agent can and cannot do for a small business](https://upahje.my/en/articles/simulated-customer-says-yes)

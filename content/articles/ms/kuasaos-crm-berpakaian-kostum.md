@@ -124,3 +124,5 @@ Itu pertaruhan, bukan ramalan, dan kami akan menerbitkan pembetulan pada hari ve
 [Kos chatbot WhatsApp: setiap mesej, setiap bulan](https://upahje.my/ms/articles/kos-chatbot-whatsapp-malaysia)
 
 [Dua belas kerja GPU sewaan siap, tiga ia tidak mampu](https://upahje.my/ms/articles/kerja-gpu-sewaan-malaysia)
+
+[Dibil ikut kenalan, dijual sebagai sistem operasi](https://upahje.my/ms/articles/kos-sistem-pos-malaysia)

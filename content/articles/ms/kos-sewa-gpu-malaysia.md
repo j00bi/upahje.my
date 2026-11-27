@@ -92,3 +92,9 @@ Angka ringgit yang penting bagi perniagaan Malaysia bukan kadar sejam, tetapi ko
 [Apa yang ejen AI boleh buat untuk perniagaan kecil](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat)
 
 [Lebih banyak panduan pembelian, dengan harga dalam ringgit](https://upahje.my/ms/glossary)
+
+**Baca seterusnya**
+
+[H100 yang sama disewa RM11.89 sejam, atau RM7.12](https://upahje.my/ms/articles/klip-video-sendiri)
+
+[H100 yang sama disewa RM11.89 sejam, atau RM7.12](https://upahje.my/ms/articles/laptop-lama-jadi-pelayan-malaysia)

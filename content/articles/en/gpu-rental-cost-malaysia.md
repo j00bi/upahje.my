@@ -92,3 +92,7 @@ The ringgit figure that matters for a Malaysian business is not the hourly rate,
 [What an AI agent can do for a small business](https://upahje.my/en/articles/what-an-ai-agent-can-do)
 
 [More buying guides, with prices in ringgit](https://upahje.my/en/glossary)
+
+[The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/self-hosted-clipping)
+
+[The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/spare-laptop-home-server-malaysia)

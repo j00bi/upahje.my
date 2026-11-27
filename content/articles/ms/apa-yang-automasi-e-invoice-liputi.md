@@ -71,7 +71,7 @@ Baca dua baris terakhir sebagai penggunaan, bukan pematuhan. Seorang pembayar cu
 
 Bagi sesiapa di atas ambang, penyerahan disemak oleh lapan pengesah sebelum diterima: struktur (UBL 2.1 bagi invois), medan teras, tandatangan, kesahihan pembayar cukai, dokumen rujukan, kod, pendua dan mata wang. Semakan pendua mencari dokumen yang dihantar baru-baru ini yang serupa atau sama, dan semakan pembayar cukai menguji kesahihan pada tarikh pengeluaran.
 
-Itu penting untuk kualiti data, bukan untuk pilihan perisian. Jika data invois salah semasa dikeluarkan, pengesahan menangkapnya, dan laluan pembetulan bukan suntingan. Pembeli boleh menolak dan penjual boleh membatalkan dalam 72 jam selepas pengesahan; selepas itu pembetulan memerlukan e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
+Itu penting untuk kualiti data, bukan untuk pilihan perisian; [berapa kos POS setiap bulan](https://upahje.my/ms/articles/kos-sistem-pos-malaysia) ialah hujah berasingan daripada sama ada invoisnya sah. Jika data invois salah semasa dikeluarkan, pengesahan menangkapnya, dan laluan pembetulan bukan suntingan. Pembeli boleh menolak dan penjual boleh membatalkan dalam 72 jam selepas pengesahan; selepas itu pembetulan memerlukan e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
 
 ## Penalti disebut, jumlahnya tidak diterbitkan
 

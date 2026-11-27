@@ -122,3 +122,7 @@ Cost-heavy buyers can rerun the weighting. Raising provider and cost control to 
 [Where the closed models actually differ](https://upahje.my/en/articles/closed-models-differences)
 
 [What a harness API key actually buys](https://upahje.my/en/articles/harness-api-keys)
+
+[Four coding-agent CLIs on one machine: what we tested](https://upahje.my/en/articles/leaderboard-row-anatomy)
+
+[Four coding-agent CLIs on one machine: what we tested](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers)

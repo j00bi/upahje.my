@@ -97,3 +97,5 @@ Soalan 12 lawan 13 ialah separuh yang mudah. Separuh yang menelan wang ialah jad
 [Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
 [Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
+
+[EPF majikan: 12% atau 13%, dan RM5,000 garisnya](https://upahje.my/ms/articles/ambang-sst-sebelas-bulan)

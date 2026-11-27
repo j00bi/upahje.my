@@ -96,3 +96,9 @@ Kemudian minta kedua-duanya menerangkan ujian penerimaan. Yang boleh menerangkan
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
+
+[Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/tulis-semula-lima-peratus)
+
+[Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026)
+
+[Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk)

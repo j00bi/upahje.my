@@ -122,3 +122,7 @@ Pembeli yang mementingkan kos boleh mengira semula pemberatnya. Menaikkan penyed
 [Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)
 
 [Apa sebenarnya yang dibeli kunci API harness](https://upahje.my/ms/articles/kunci-api-dalam-harness)
+
+[Empat CLI agent pada satu mesin: apa yang kami uji](https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu)
+
+[Empat CLI agent pada satu mesin: apa yang kami uji](https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka)

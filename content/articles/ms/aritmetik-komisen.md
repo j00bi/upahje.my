@@ -80,3 +80,5 @@ Ketiga, masa. Kedai yang mencapai titik pulang modal pada fi masih menelan jam m
 [RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
 
 [Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri)
+
+[Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/hujung-harga-sembilan)

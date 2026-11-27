@@ -126,3 +126,7 @@ Sesi RM400 dan projek RM1,500 kedua-duanya kelihatan kecil berbanding pembinaan 
 [Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/cara-tulis-brief-kerja-automasi)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
+
+[Kos kerja automasi: 30 harga diterbitkan](https://upahje.my/ms/articles/tulis-semula-lima-peratus)
+
+[Kos kerja automasi: 30 harga diterbitkan](https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026)

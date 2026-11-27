@@ -141,3 +141,5 @@ The order matters less than the first step: rent the card for a job with an end,
 [USD 0.04 of GPU time, and the dataset was the work](https://upahje.my/en/articles/rented-gpu-what-it-finishes)
 
 [The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/gpu-rental-cost-malaysia)
+
+[Twelve jobs a rented GPU finishes, and three it cannot](https://upahje.my/en/articles/trading-bot-reality-malaysia)

@@ -94,3 +94,5 @@ Kedai itu separuh yang mudah dan khalayak itu perniagaannya. Sesiapa yang menjua
 **Baca seterusnya**
 
 [Medan Google Business Profile yang menentukan panggilan](https://upahje.my/ms/articles/medan-google-business-profile)
+
+[Kedai itu mesin tunai, bukan khalayak](https://upahje.my/ms/articles/pelanggan-simulasi-kata-ya)

@@ -141,3 +141,5 @@ Urutan kurang penting daripada langkah pertama: sewa kad untuk kerja yang ada pe
 [USD 0.04 masa GPU, dan set data itulah kerja sebenar](https://upahje.my/ms/articles/gpu-sewaan-set-data-kerja-sebenar)
 
 [H100 yang sama disewa RM11.89 sejam, atau RM7.12](https://upahje.my/ms/articles/kos-sewa-gpu-malaysia)
+
+[Dua belas kerja GPU sewaan siap, tiga ia tidak mampu](https://upahje.my/ms/articles/realiti-bot-dagangan-malaysia)

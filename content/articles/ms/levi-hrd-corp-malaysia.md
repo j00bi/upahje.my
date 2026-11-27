@@ -80,3 +80,5 @@ Levi ini cukup kecil untuk diabaikan dan cukup besar untuk terasa pada garisan s
 [SOCSO berhenti pada RM6,000](https://upahje.my/ms/articles/kadar-socso-majikan-malaysia)
 
 [Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
+
+[Levi HRD Corp: 1%, 0.5%, atau tiada](https://upahje.my/ms/articles/ambang-sst-sebelas-bulan)

@@ -100,3 +100,7 @@ Settle three things in writing before you pay.
 [More on APIs and models](https://upahje.my/en/glossary)
 
 [What a harness API key actually buys](https://upahje.my/en/articles/harness-api-keys)
+
+[Which fits your volume: an API or a spreadsheet](https://upahje.my/en/articles/do-you-need-an-api-or-a-spreadsheet)
+
+[The licence decides what you may do with open weights](https://upahje.my/en/articles/open-models-differences)

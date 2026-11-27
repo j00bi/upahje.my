@@ -134,3 +134,5 @@ Kedai dengan satu menu ialah kedai yang membayar komisen secara tidak kelihatan.
 [Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen)
 
 [RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
+
+[Harga satu hidangan, dua menu](https://upahje.my/ms/articles/hujung-harga-sembilan)

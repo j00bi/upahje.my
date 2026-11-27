@@ -190,6 +190,8 @@ The third is time. A storefront that reaches break-even on fees still costs the 
 
 [One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront)
 
+[The commission arithmetic behind owning your shop](https://upahje.my/en/articles/price-endings-nine)
+
 ### Sources
 
 - Billplz, pricing (plan table: FPX B2C RM1.25 on Basic and RM0.75 on Standard per transaction, while the page headline says "from as low as MYR 0.75"; card MYR 1.8% and 1.5%; settlement next business day for FPX and T+2 for cards; RM999 annual plan) — https://www.billplz.com/pricing (checked 2026-11-26)
@@ -259,6 +261,8 @@ The shop is the easy half and the audience is the business. Anyone selling you a
 [The delivery commission question, answered from the regulator](https://upahje.my/en/articles/delivery-commission-malaysia)
 
 [The Google Business Profile fields that decide the call](https://upahje.my/en/articles/google-business-profile-fields)
+
+[The storefront is a checkout, not an audience](https://upahje.my/en/articles/simulated-customer-says-yes)
 
 ### Sources
 
@@ -366,6 +370,8 @@ That is a wager, not a prophecy, and we will publish the correction the day a ve
 [What a WhatsApp chatbot costs, per message](https://upahje.my/en/articles/whatsapp-chatbot-costs-malaysia)
 
 [Twelve jobs a rented GPU finishes, and three it cannot](https://upahje.my/en/articles/rented-gpu-jobs-malaysia)
+
+[Billed by contacts, sold as an operating system](https://upahje.my/en/articles/pos-system-cost-malaysia)
 
 ### Sources
 
@@ -895,6 +901,8 @@ A shop with one menu is a shop paying commission invisibly. Two menus and a stat
 
 [RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
 
+[Pricing the same dish twice](https://upahje.my/en/articles/price-endings-nine)
+
 ### Sources
 
 - Billplz, pricing (FPX B2C RM1.25 Basic and RM0.75 Standard per transaction; card 1.8% and 1.5%; RM999 annual plan) — https://www.billplz.com/pricing (checked 2026-11-26)
@@ -1017,6 +1025,8 @@ The order matters less than the first step: rent the card for a job with an end,
 [USD 0.04 of GPU time, and the dataset was the work](https://upahje.my/en/articles/rented-gpu-what-it-finishes)
 
 [The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/gpu-rental-cost-malaysia)
+
+[Twelve jobs a rented GPU finishes, and three it cannot](https://upahje.my/en/articles/trading-bot-reality-malaysia)
 
 ### Sources
 
@@ -1641,6 +1651,10 @@ The confusion is not technical, it is about what a notebook is for. Colab sells 
 
 [More definitions, explained plainly](https://upahje.my/en/glossary)
 
+[Colab will train your model. It will not host it](https://upahje.my/en/articles/self-hosted-clipping)
+
+[Colab will train your model. It will not host it](https://upahje.my/en/articles/trading-bot-reality-malaysia)
+
 ### Sources
 
 - Google Colaboratory FAQ (free access to GPUs and TPUs, notebooks run at most 12 hours, restricted activities including file hosting, media serving, SSH shells and remote desktops on free runtimes) — https://research.google.com/colaboratory/faq.html (checked 2026-11-25)
@@ -1719,6 +1733,8 @@ The 12-versus-13 question is the easy half. The half that costs money is the sch
 
 [More definitions, explained plainly](https://upahje.my/en/glossary)
 
+[EPF employer: 12% or 13%, and RM5,000 is the line](https://upahje.my/en/articles/sst-threshold-eleven-months)
+
 ### Sources
 
 - KWSP, employer mandatory contribution (13% and 12% bands, employee 11%, Third Schedule, 15th-of-the-month payment, Part E) — https://www.kwsp.gov.my/en/employer/responsibilities/mandatory-contribution (checked 2026-11-24)
@@ -1793,6 +1809,10 @@ The ringgit figure that matters for a Malaysian business is not the hourly rate,
 
 [More buying guides, with prices in ringgit](https://upahje.my/en/glossary)
 
+[The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/self-hosted-clipping)
+
+[The same H100 rents for RM11.89 an hour, or RM7.12](https://upahje.my/en/articles/spare-laptop-home-server-malaysia)
+
 ### Sources
 
 - Runpod, GPU cloud pricing (H100 PCIe USD 2.89/hr, H100 SXM USD 4.39/hr, H100 NVL USD 3.19/hr, B200 USD 7.99/hr, RTX A5000 USD 0.27/hr) — https://www.runpod.io/pricing (checked 2026-11-25)
@@ -1857,6 +1877,8 @@ The levy is small enough to ignore and large enough to notice at the ten-employe
 [SOCSO stops at RM6,000](https://upahje.my/en/articles/socso-employer-rate-malaysia)
 
 [More definitions, explained plainly](https://upahje.my/en/glossary)
+
+[HRD Corp levy: 1%, 0.5%, or none](https://upahje.my/en/articles/sst-threshold-eleven-months)
 
 ### Sources
 
@@ -2716,6 +2738,12 @@ You need the document, the person who handles it, and an hour. The cost is that 
 
 [More on buying automation](https://upahje.my/en/topics/buying)
 
+[Where the same data gets typed three times](https://upahje.my/en/articles/do-you-need-an-api-or-a-spreadsheet)
+
+[Where the same data gets typed three times](https://upahje.my/en/articles/pos-system-cost-malaysia)
+
+[Where the same data gets typed three times](https://upahje.my/en/articles/your-first-automation-wrong-process)
+
 ### Sources
 
 - DOSM, usage of ICT and e-commerce by establishment, 2025 release (data year 2024) — https://www.dosm.gov.my/portal-main/release-content/usage-of-ict-and-e-commerce-by-establishment2025 (checked 2026-11-23)
@@ -2817,6 +2845,8 @@ A demo works once, in front of you. Something that keeps running survives a bad 
 
 [More on APIs and models](https://upahje.my/en/glossary)
 
+[What an AI agent can and cannot do for a small business](https://upahje.my/en/articles/simulated-customer-says-yes)
+
 ### Sources
 
 - Anthropic, Agent SDK overview (agent harness definition) — https://code.claude.com/docs/en/agent-sdk/overview (checked 2026-11-23)
@@ -2865,7 +2895,7 @@ Read the last two rows as adoption, not compliance. A taxpayer can be registered
 
 For anyone above the threshold, the submission is checked by eight validators before it is accepted: structure (UBL 2.1 for invoices), core fields, signature, taxpayer validity, referenced documents, codes, duplicates and currency. The duplicate check looks for documents submitted recently that are similar or identical, and the taxpayer check tests validity at the date of issuance.
 
-That matters for data quality rather than for software choice. If the invoice data is wrong at the moment of issuance, the validation catches it, and the correction path is not an edit. A buyer may reject and a seller may cancel within 72 hours of validation; after that, a correction requires a new e-Invoice in the form of a credit, debit or refund note.
+That matters for data quality rather than for software choice; [what a POS costs each month](https://upahje.my/en/articles/pos-system-cost-malaysia) is a separate argument from whether its invoices validate. If the invoice data is wrong at the moment of issuance, the validation catches it, and the correction path is not an edit. A buyer may reject and a seller may cancel within 72 hours of validation; after that, a correction requires a new e-Invoice in the form of a credit, debit or refund note.
 
 ## The penalty is cited, and the amount is not published
 
@@ -3223,6 +3253,10 @@ Cost-heavy buyers can rerun the weighting. Raising provider and cost control to 
 
 [What a harness API key actually buys](https://upahje.my/en/articles/harness-api-keys)
 
+[Four coding-agent CLIs on one machine: what we tested](https://upahje.my/en/articles/leaderboard-row-anatomy)
+
+[Four coding-agent CLIs on one machine: what we tested](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers)
+
 ### Sources
 
 - DeepSeek Harness package metadata (@deepseek-ai/dsh 0.2.2-rc.1) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
@@ -3325,6 +3359,10 @@ A RM400 session and a RM1,500 project both look small next to a RM6,000 build, a
 
 [More on buying automation](https://upahje.my/en/topics/buying)
 
+[Automation work: 30 published prices](https://upahje.my/en/articles/rewrite-the-five-percent)
+
+[Automation work: 30 published prices](https://upahje.my/en/articles/side-income-skills-malaysia-2026)
+
 ### Sources
 
 - KodeSME, automation pricing — https://kodesme.klyihao.com/ (checked 2026-11-19)
@@ -3339,7 +3377,7 @@ A RM400 session and a RM1,500 project both look small next to a RM6,000 build, a
 URL: https://upahje.my/en/articles/closed-models-differences
 Checked: 2026-11-19
 
-What differs is not which model scores highest. Two leaderboards were reachable and are printed below with their settings, but neither is treated here as a quality ranking. What a buyer is stuck with is four documented things: the context window, the price per million tokens, whether tool calling and structured output are documented, and whether file and image input are supported.
+What differs is not which model scores highest. Two [leaderboards were reachable and are printed below](https://upahje.my/en/articles/leaderboard-row-anatomy) with their settings, but neither is treated here as a quality ranking. What a buyer is stuck with is four documented things: the context window, the price per million tokens, whether tool calling and structured output are documented, and whether file and image input are supported.
 
 ## Each vendor documents only what its pages state
 
@@ -3540,6 +3578,8 @@ The order matters more than the thoroughness. Teams that rotate first and revoke
 
 [More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
+[Where an API key goes in a harness, and where it must never go](https://upahje.my/en/articles/harness-landscape-open-closed)
+
 ### Sources
 
 - DeepSeek Harness package metadata (credential storage behaviour observed on this machine) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
@@ -3701,6 +3741,12 @@ Then ask both to walk you through the acceptance test. The one who can describe 
 
 [More on buying automation](https://upahje.my/en/topics/buying)
 
+[How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/rewrite-the-five-percent)
+
+[How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/side-income-skills-malaysia-2026)
+
+[How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/your-first-automation-wrong-process)
+
 ## Open weights, four licence types: what each model allows
 
 URL: https://upahje.my/en/articles/open-models-differences
@@ -3843,6 +3889,10 @@ Call an open-weight model before you try to run one. Mistral serves its own open
 [More on APIs and models](https://upahje.my/en/glossary)
 
 [Where the closed models actually differ](https://upahje.my/en/articles/closed-models-differences)
+
+[Open or closed models: what an SME can actually run in-house](https://upahje.my/en/articles/open-models-differences)
+
+[Open or closed models: what an SME can actually run in-house](https://upahje.my/en/articles/spare-laptop-home-server-malaysia)
 
 ### Sources
 
@@ -4097,6 +4147,10 @@ Three commands, and you do not need to trust this page to run them.
 
 [More on agent harnesses](https://upahje.my/en/glossary)
 
+[What an agent harness is, and what it does with your request](https://upahje.my/en/articles/harness-landscape-open-closed)
+
+[What an agent harness is, and what it does with your request](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers)
+
 ### Sources
 
 - DeepSeek Harness package metadata (@deepseek-ai/dsh 0.2.2-rc.1, installed on this machine) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
@@ -4177,6 +4231,10 @@ Settle three things in writing before you pay.
 [More on APIs and models](https://upahje.my/en/glossary)
 
 [What a harness API key actually buys](https://upahje.my/en/articles/harness-api-keys)
+
+[Which fits your volume: an API or a spreadsheet](https://upahje.my/en/articles/do-you-need-an-api-or-a-spreadsheet)
+
+[The licence decides what you may do with open weights](https://upahje.my/en/articles/open-models-differences)
 
 ### Sources
 
@@ -4565,6 +4623,8 @@ Ketiga, masa. Kedai yang mencapai titik pulang modal pada fi masih menelan jam m
 
 [Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri)
 
+[Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/hujung-harga-sembilan)
+
 ### Sources
 
 - Billplz, harga (jadual pelan: FPX B2C RM1.25 pada Basic dan RM0.75 pada Standard setiap transaksi, manakala tajuk halaman menyebut "from as low as MYR 0.75"; kad MYR 1.8% dan 1.5%; penyelesaian hari perniagaan berikutnya untuk FPX dan T+2 untuk kad; pelan tahunan RM999) — https://www.billplz.com/pricing (checked 2026-11-26)
@@ -4907,6 +4967,8 @@ Kedai dengan satu menu ialah kedai yang membayar komisen secara tidak kelihatan.
 
 [RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
 
+[Harga satu hidangan, dua menu](https://upahje.my/ms/articles/hujung-harga-sembilan)
+
 ### Sources
 
 - Billplz, harga (FPX B2C RM1.25 Basic dan RM0.75 Standard setiap transaksi; kad 1.8% dan 1.5%; pelan tahunan RM999) — https://www.billplz.com/pricing (checked 2026-11-26)
@@ -5175,6 +5237,8 @@ Urutan kurang penting daripada langkah pertama: sewa kad untuk kerja yang ada pe
 
 [H100 yang sama disewa RM11.89 sejam, atau RM7.12](https://upahje.my/ms/articles/kos-sewa-gpu-malaysia)
 
+[Dua belas kerja GPU sewaan siap, tiga ia tidak mampu](https://upahje.my/ms/articles/realiti-bot-dagangan-malaysia)
+
 ### Sources
 
 - Harga GPU langsung Vast.ai, dibaca dari halaman harga — https://vast.ai/pricing (checked 2026-11-26)
@@ -5280,6 +5344,8 @@ Itu pertaruhan, bukan ramalan, dan kami akan menerbitkan pembetulan pada hari ve
 [Kos chatbot WhatsApp: setiap mesej, setiap bulan](https://upahje.my/ms/articles/kos-chatbot-whatsapp-malaysia)
 
 [Dua belas kerja GPU sewaan siap, tiga ia tidak mampu](https://upahje.my/ms/articles/kerja-gpu-sewaan-malaysia)
+
+[Dibil ikut kenalan, dijual sebagai sistem operasi](https://upahje.my/ms/articles/kos-sistem-pos-malaysia)
 
 ### Sources
 
@@ -5681,6 +5747,8 @@ Kedai itu separuh yang mudah dan khalayak itu perniagaannya. Sesiapa yang menjua
 
 [Medan Google Business Profile yang menentukan panggilan](https://upahje.my/ms/articles/medan-google-business-profile)
 
+[Kedai itu mesin tunai, bukan khalayak](https://upahje.my/ms/articles/pelanggan-simulasi-kata-ya)
+
 ### Sources
 
 - Billplz, harga (FPX RM1.25 Basic dan RM0.75 Standard setiap transaksi, kad 1.8% dan 1.5%, penyelesaian hari perniagaan berikutnya untuk FPX dan T+2 untuk kad) — https://www.billplz.com/pricing (checked 2026-11-26)
@@ -5828,6 +5896,12 @@ Kekeliruan ini bukan teknikal, ia tentang untuk apa sebuah notebook. Colab menju
 
 [Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
 
+**Baca seterusnya**
+
+[Colab akan latih model anda. Ia tidak akan hoskan](https://upahje.my/ms/articles/klip-video-sendiri)
+
+[Colab akan latih model anda. Ia tidak akan hoskan](https://upahje.my/ms/articles/realiti-bot-dagangan-malaysia)
+
 ### Sources
 
 - Google Colaboratory FAQ (akses percuma GPU dan TPU, notebook berjalan paling lama 12 jam, aktiviti terhad termasuk hosting fail, penyajian media, SSH dan desktop jauh pada runtime percuma) — https://research.google.com/colaboratory/faq.html (checked 2026-11-25)
@@ -5905,6 +5979,8 @@ Soalan 12 lawan 13 ialah separuh yang mudah. Separuh yang menelan wang ialah jad
 [Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
 [Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
+
+[EPF majikan: 12% atau 13%, dan RM5,000 garisnya](https://upahje.my/ms/articles/ambang-sst-sebelas-bulan)
 
 ### Sources
 
@@ -6046,6 +6122,12 @@ Angka ringgit yang penting bagi perniagaan Malaysia bukan kadar sejam, tetapi ko
 [Apa yang ejen AI boleh buat untuk perniagaan kecil](https://upahje.my/ms/articles/apa-yang-agent-boleh-buat)
 
 [Lebih banyak panduan pembelian, dengan harga dalam ringgit](https://upahje.my/ms/glossary)
+
+**Baca seterusnya**
+
+[H100 yang sama disewa RM11.89 sejam, atau RM7.12](https://upahje.my/ms/articles/klip-video-sendiri)
+
+[H100 yang sama disewa RM11.89 sejam, atau RM7.12](https://upahje.my/ms/articles/laptop-lama-jadi-pelayan-malaysia)
 
 ### Sources
 
@@ -6263,6 +6345,8 @@ Levi ini cukup kecil untuk diabaikan dan cukup besar untuk terasa pada garisan s
 [SOCSO berhenti pada RM6,000](https://upahje.my/ms/articles/kadar-socso-majikan-malaysia)
 
 [Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
+
+[Levi HRD Corp: 1%, 0.5%, atau tiada](https://upahje.my/ms/articles/ambang-sst-sebelas-bulan)
 
 ### Sources
 
@@ -6693,6 +6777,8 @@ Demo berjalan sekali, di hadapan anda. Yang terus berjalan bertahan pada hari ya
 
 [Lagi tentang API dan model](https://upahje.my/ms/glossary)
 
+[Apa yang AI agent boleh buat untuk PKS](https://upahje.my/ms/articles/pelanggan-simulasi-kata-ya)
+
 ### Sources
 
 - Anthropic, gambaran Agent SDK (takrif agent harness) — https://code.claude.com/docs/en/agent-sdk/overview (checked 2026-11-23)
@@ -6740,7 +6826,7 @@ Baca dua baris terakhir sebagai penggunaan, bukan pematuhan. Seorang pembayar cu
 
 Bagi sesiapa di atas ambang, penyerahan disemak oleh lapan pengesah sebelum diterima: struktur (UBL 2.1 bagi invois), medan teras, tandatangan, kesahihan pembayar cukai, dokumen rujukan, kod, pendua dan mata wang. Semakan pendua mencari dokumen yang dihantar baru-baru ini yang serupa atau sama, dan semakan pembayar cukai menguji kesahihan pada tarikh pengeluaran.
 
-Itu penting untuk kualiti data, bukan untuk pilihan perisian. Jika data invois salah semasa dikeluarkan, pengesahan menangkapnya, dan laluan pembetulan bukan suntingan. Pembeli boleh menolak dan penjual boleh membatalkan dalam 72 jam selepas pengesahan; selepas itu pembetulan memerlukan e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
+Itu penting untuk kualiti data, bukan untuk pilihan perisian; [berapa kos POS setiap bulan](https://upahje.my/ms/articles/kos-sistem-pos-malaysia) ialah hujah berasingan daripada sama ada invoisnya sah. Jika data invois salah semasa dikeluarkan, pengesahan menangkapnya, dan laluan pembetulan bukan suntingan. Pembeli boleh menolak dan penjual boleh membatalkan dalam 72 jam selepas pengesahan; selepas itu pembetulan memerlukan e-Invoice baharu dalam bentuk nota kredit, debit atau bayaran balik.
 
 ## Penalti disebut, jumlahnya tidak diterbitkan
 
@@ -6977,6 +7063,12 @@ Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya ialah 
 [Apa yang diliputi automasi e-Invoice, dan apa yang kekal dengan manusia](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
+
+[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet)
+
+[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/kos-sistem-pos-malaysia)
+
+[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk)
 
 ### Sources
 
@@ -7370,6 +7462,10 @@ Tiga arahan, dan anda tidak perlu mempercayai halaman ini untuk menjalankannya.
 
 [Lagi tentang agent harness](https://upahje.my/ms/glossary)
 
+[Apa itu agent harness, dan apa yang ia buat dengan permintaan anda](https://upahje.my/ms/articles/landskap-harness-agent-sumber-terbuka)
+
+[Apa itu agent harness, dan apa yang ia buat dengan permintaan anda](https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka)
+
 ### Sources
 
 - Metadata pakej DeepSeek Harness (@deepseek-ai/dsh 0.2.2-rc.1, dipasang pada mesin ini) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
@@ -7450,6 +7546,10 @@ Tetapkan tiga perkara secara bertulis sebelum bayaran.
 [Lagi tentang API dan model](https://upahje.my/ms/glossary)
 
 [Apa sebenarnya yang dibeli kunci API harness](https://upahje.my/ms/articles/kunci-api-dalam-harness)
+
+[API atau spreadsheet: pilih ikut jumlah](https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet)
+
+[Lesen yang menentukan apa anda boleh buat dengan pemberat terbuka](https://upahje.my/ms/articles/beza-model-terbuka)
 
 ### Sources
 
@@ -7628,7 +7728,7 @@ Tiada kad menyatakan konfigurasi perkakasan minimum, jadi tiada kos hosting send
 URL: https://upahje.my/ms/articles/beza-model-tertutup
 Checked: 2026-11-19
 
-Yang berbeza bukan model mana yang mendapat skor tertinggi. Dua papan pendahulu dapat dicapai dan dicetak di bawah dengan tetapannya, tetapi tiada satu pun dianggap sebagai susunan kualiti di sini. Yang mengikat pembeli ialah empat perkara yang didokumenkan: tetingkap konteks, harga setiap juta token, sama ada tool calling dan structured output didokumenkan, serta sama ada input fail dan imej disokong.
+Yang berbeza bukan model mana yang mendapat skor tertinggi. Dua [papan pendahulu dapat dicapai dan dicetak di bawah](https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu) dengan tetapannya, tetapi tiada satu pun dianggap sebagai susunan kualiti di sini. Yang mengikat pembeli ialah empat perkara yang didokumenkan: tetingkap konteks, harga setiap juta token, sama ada tool calling dan structured output didokumenkan, serta sama ada input fail dan imej disokong.
 
 ## Apa yang didokumenkan oleh setiap vendor?
 
@@ -7810,6 +7910,12 @@ Kemudian minta kedua-duanya menerangkan ujian penerimaan. Yang boleh menerangkan
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
+[Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/tulis-semula-lima-peratus)
+
+[Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026)
+
+[Cara menulis brief kerja automasi supaya tidak bayar dua kali](https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk)
+
 ## Empat CLI agent pada satu mesin: apa yang kami uji
 
 URL: https://upahje.my/ms/articles/harness-agent-disusun
@@ -7907,6 +8013,10 @@ Pembeli yang mementingkan kos boleh mengira semula pemberatnya. Menaikkan penyed
 [Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)
 
 [Apa sebenarnya yang dibeli kunci API harness](https://upahje.my/ms/articles/kunci-api-dalam-harness)
+
+[Empat CLI agent pada satu mesin: apa yang kami uji](https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu)
+
+[Empat CLI agent pada satu mesin: apa yang kami uji](https://upahje.my/ms/articles/commandcode-opencode-deepseek-angka)
 
 ### Sources
 
@@ -8010,6 +8120,10 @@ Sesi RM400 dan projek RM1,500 kedua-duanya kelihatan kecil berbanding pembinaan 
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
+[Kos kerja automasi: 30 harga diterbitkan](https://upahje.my/ms/articles/tulis-semula-lima-peratus)
+
+[Kos kerja automasi: 30 harga diterbitkan](https://upahje.my/ms/articles/lima-kemahiran-pendapatan-sampingan-2026)
+
 ### Sources
 
 - KodeSME, harga automasi — https://kodesme.klyihao.com/ (checked 2026-11-19)
@@ -8073,6 +8187,8 @@ Urutannya lebih penting daripada ketelitiannya. Pasukan yang memutar dahulu dan 
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
+
+[Di mana kunci API diletakkan dalam harness, dan di mana tidak](https://upahje.my/ms/articles/landskap-harness-agent-sumber-terbuka)
 
 ### Sources
 
@@ -8317,6 +8433,10 @@ Cuba panggil model terbuka melalui API sebelum cuba menjalankannya. Mistral send
 [Lagi tentang API dan model](https://upahje.my/ms/glossary)
 
 [Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)
+
+[Model terbuka atau tertutup: apa PKS boleh jalankan di dalam](https://upahje.my/ms/articles/beza-model-terbuka)
+
+[Model terbuka atau tertutup: apa PKS boleh jalankan di dalam](https://upahje.my/ms/articles/laptop-lama-jadi-pelayan-malaysia)
 
 ### Sources
 

@@ -96,3 +96,9 @@ Then ask both to walk you through the acceptance test. The one who can describe 
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
 [More on buying automation](https://upahje.my/en/topics/buying)
+
+[How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/rewrite-the-five-percent)
+
+[How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/side-income-skills-malaysia-2026)
+
+[How to brief an automation job so you don't pay twice](https://upahje.my/en/articles/your-first-automation-wrong-process)

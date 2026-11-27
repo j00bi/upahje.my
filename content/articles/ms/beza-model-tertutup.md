@@ -42,7 +42,7 @@ sources:
 
 # Claude, ChatGPT, Gemini dan Grok: apa yang berbeza
 
-Yang berbeza bukan model mana yang mendapat skor tertinggi. Dua papan pendahulu dapat dicapai dan dicetak di bawah dengan tetapannya, tetapi tiada satu pun dianggap sebagai susunan kualiti di sini. Yang mengikat pembeli ialah empat perkara yang didokumenkan: tetingkap konteks, harga setiap juta token, sama ada tool calling dan structured output didokumenkan, serta sama ada input fail dan imej disokong.
+Yang berbeza bukan model mana yang mendapat skor tertinggi. Dua [papan pendahulu dapat dicapai dan dicetak di bawah](https://upahje.my/ms/articles/anatomi-baris-papan-pendahulu) dengan tetapannya, tetapi tiada satu pun dianggap sebagai susunan kualiti di sini. Yang mengikat pembeli ialah empat perkara yang didokumenkan: tetingkap konteks, harga setiap juta token, sama ada tool calling dan structured output didokumenkan, serta sama ada input fail dan imej disokong.
 
 ## Apa yang didokumenkan oleh setiap vendor?
 

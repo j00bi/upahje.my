@@ -87,3 +87,9 @@ Kekeliruan ini bukan teknikal, ia tentang untuk apa sebuah notebook. Colab menju
 [H100 yang sama disewa RM11.89 sejam, atau RM7.12](https://upahje.my/ms/articles/kos-sewa-gpu-malaysia)
 
 [Lebih banyak definisi, dijelaskan dengan mudah](https://upahje.my/ms/glossary)
+
+**Baca seterusnya**
+
+[Colab akan latih model anda. Ia tidak akan hoskan](https://upahje.my/ms/articles/klip-video-sendiri)
+
+[Colab akan latih model anda. Ia tidak akan hoskan](https://upahje.my/ms/articles/realiti-bot-dagangan-malaysia)

@@ -134,3 +134,5 @@ A shop with one menu is a shop paying commission invisibly. Two menus and a stat
 [The commission arithmetic behind owning your shop](https://upahje.my/en/articles/commission-arithmetic)
 
 [RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
+
+[Pricing the same dish twice](https://upahje.my/en/articles/price-endings-nine)

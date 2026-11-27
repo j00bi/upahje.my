@@ -75,3 +75,7 @@ Three commands, and you do not need to trust this page to run them.
 [Where an API key goes in a harness, and where it must never go](https://upahje.my/en/articles/harness-api-keys)
 
 [More on agent harnesses](https://upahje.my/en/glossary)
+
+[What an agent harness is, and what it does with your request](https://upahje.my/en/articles/harness-landscape-open-closed)
+
+[What an agent harness is, and what it does with your request](https://upahje.my/en/articles/commandcode-opencode-deepseek-numbers)

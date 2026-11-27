@@ -92,3 +92,5 @@ The shop is the easy half and the audience is the business. Anyone selling you a
 [The delivery commission question, answered from the regulator](https://upahje.my/en/articles/delivery-commission-malaysia)
 
 [The Google Business Profile fields that decide the call](https://upahje.my/en/articles/google-business-profile-fields)
+
+[The storefront is a checkout, not an audience](https://upahje.my/en/articles/simulated-customer-says-yes)

@@ -100,3 +100,7 @@ Tetapkan tiga perkara secara bertulis sebelum bayaran.
 [Lagi tentang API dan model](https://upahje.my/ms/glossary)
 
 [Apa sebenarnya yang dibeli kunci API harness](https://upahje.my/ms/articles/kunci-api-dalam-harness)
+
+[API atau spreadsheet: pilih ikut jumlah](https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet)
+
+[Lesen yang menentukan apa anda boleh buat dengan pemberat terbuka](https://upahje.my/ms/articles/beza-model-terbuka)

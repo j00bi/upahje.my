@@ -71,7 +71,7 @@ Read the last two rows as adoption, not compliance. A taxpayer can be registered
 
 For anyone above the threshold, the submission is checked by eight validators before it is accepted: structure (UBL 2.1 for invoices), core fields, signature, taxpayer validity, referenced documents, codes, duplicates and currency. The duplicate check looks for documents submitted recently that are similar or identical, and the taxpayer check tests validity at the date of issuance.
 
-That matters for data quality rather than for software choice. If the invoice data is wrong at the moment of issuance, the validation catches it, and the correction path is not an edit. A buyer may reject and a seller may cancel within 72 hours of validation; after that, a correction requires a new e-Invoice in the form of a credit, debit or refund note.
+That matters for data quality rather than for software choice; [what a POS costs each month](https://upahje.my/en/articles/pos-system-cost-malaysia) is a separate argument from whether its invoices validate. If the invoice data is wrong at the moment of issuance, the validation catches it, and the correction path is not an edit. A buyer may reject and a seller may cancel within 72 hours of validation; after that, a correction requires a new e-Invoice in the form of a credit, debit or refund note.
 
 ## The penalty is cited, and the amount is not published
 

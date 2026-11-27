@@ -108,3 +108,8 @@ Anda perlukan dokumen itu, orang yang mengendalikannya, dan sejam. Kosnya ialah 
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
+[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/perlu-api-atau-cukup-spreadsheet)
+
+[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/kos-sistem-pos-malaysia)
+
+[Di mana data yang sama ditaip tiga kali](https://upahje.my/ms/articles/automasi-pertama-bukan-proses-terburuk)

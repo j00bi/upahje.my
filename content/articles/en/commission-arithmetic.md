@@ -81,3 +81,4 @@ The third is time. A storefront that reaches break-even on fees still costs the 
 
 [One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront)
 
+[The commission arithmetic behind owning your shop](https://upahje.my/en/articles/price-endings-nine)
