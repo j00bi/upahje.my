@@ -27,6 +27,11 @@ const nextConfig = {
     }
     return [
       { source: '/', destination: '/en', permanent: true },
+      // A published piece the editor rejected. Nothing on the site linked to it,
+      // so the only incoming traffic is a shared link: send it to the closest
+      // article that still exists rather than to a 404.
+      { source: '/en/articles/empty-reply-length-finish', destination: '/en/articles/rm100-budget', permanent: true },
+      { source: '/ms/articles/balasan-kosong-penamat-length', destination: '/ms/articles/bajet-rm100-ai-malaysia', permanent: true },
       ...Object.entries(legacy).flatMap(([oldSlug, target]) => {
         const path = target === 'glossary' ? 'glossary' : `topics/${target}`
         return [
