@@ -131,6 +131,80 @@ e-Invoice is a separate obligation with a separate trigger, and the [RM3 million
 - RMCD, FAQ - service tax (threshold determination by the historical and future methods; 8% and 6% rates; RM1,500,000 for cafeteria food services) — https://mysst.customs.gov.my/faq-services-tax/ (checked 2026-11-27)
 - RMCD, Registering Business (sales tax registration when the sales value of taxable goods exceeds RM500,000 over a 12-month period) — https://mysst.customs.gov.my/registering-business/ (checked 2026-11-27)
 
+## Test one order on your phone before you send the link
+
+URL: https://upahje.my/en/articles/test-one-order-before-launch
+Checked: 2026-11-27
+
+One product, one delivery option, one payment method: that is **one** route to test, not twenty. If the item is **RM35** and delivery is **RM8**, the buyer should see **RM43** before paying, and your order record should say the same thing afterwards.
+
+The point is not to test every order you might ever receive. It is to answer one question before a customer asks it: when someone orders, will they know it went through, and will you know whether to pack it?
+
+## Write the expected total down first
+
+Pick the combination you expect your first real customers to use, then write the numbers on paper: item price, any discount, delivery charge, final total. Write down what you expect to see afterwards too — where the buyer's confirmation appears, where the order reaches you, and what tells you it is ready to fulfil.
+
+Having the total written down is what makes the test a test. Without it you are admiring the screens instead of comparing them against something independent.
+
+If the payment provider offers a test mode, use it — with one caveat that people get wrong. A test-mode payment checks the flow, and it does **not** prove that real money will settle into your account. Stripe documents it plainly: test transactions don't move funds. Keep a note of which mode you used, so you never read a passing test as a working cash flow.
+
+## Place the order from a phone, signed out
+
+Open the storefront on a phone while signed out of the seller account. Start from the link you would actually share with a customer, not from an admin preview.
+
+Complete checkout without switching to your dashboard to fill in something a customer cannot see. Before you submit, check three things:
+
+- **Item and quantity are right**, and if the product has options, the chosen size, flavour or colour is still visible.
+- **Handover details are complete.** For delivery, the buyer can enter an address you can use. For pickup, the buyer can tell where to go and whether to wait for a message.
+- **The total matches your note.** If you wrote RM43 and the screen says RM35 or RM51, stop and find out why before testing anything else.
+
+Then stay on the buyer side for a moment. Can you tell whether the order was received, whether payment is complete or still due, and what happens next? If the shop promises an email or a message, check that it arrives and that it says the same thing as the confirmation screen. Keep the order reference — you need it in the next step.
+
+## Find the order where you will actually work
+
+Open whatever you really use on a busy day: a dashboard, an inbox, a WhatsApp thread, a spreadsheet. Find the order without going back to the buyer's screen.
+
+Match the reference, item and quantity, total, and handover details. Then ask the question that decides whether the shop works: **could you hand this order to someone else to fulfil without first messaging the buyer for missing information?**
+
+## Order received is not payment confirmed
+
+These are two different facts and shopping carts love to blur them.
+
+If you take payment upfront, check the system you rely on for payment confirmation and verify that the status belongs to **this** order — not to the previous one. If you take payment on pickup or delivery, make sure the order says plainly that payment is still due and when it should be collected.
+
+The settlement timing makes this sharper than it sounds. FPX settles next business day; a card payment settles in two business days at [CHIP and Billplz](https://upahje.my/en/articles/taking-money-malaysia). An order can sit in your inbox looking paid while the money is still in transit, and a refund issued on the same day behaves differently again.
+
+You do not need to dispatch a parcel. Stop once you can state the next action without hesitating: pack it, get it ready for pickup, or wait for payment.
+
+## Six checks decide whether the test passed
+
+- [ ] A buyer completed checkout on a phone without help.
+- [ ] Item, quantity and final total matched what you wrote down.
+- [ ] The buyer could tell the order was received and what happens next.
+- [ ] You found the same order where you normally work.
+- [ ] You could tell a confirmed payment from one still pending or due later.
+- [ ] You had enough information to fulfil without chasing the buyer.
+
+If one fails, fix it and run that route again from the phone. Editing the wording in an admin screen is not the same as seeing it on a new order.
+
+If all six pass, write down exactly what you tested: the product, the payment method, and the delivery or pickup option. A passing pickup order says nothing about delivery charges, and a passing test-mode payment says nothing about live settlement. The checklist keeps its value the next time you change a payment method, a delivery charge or a confirmation message — because the failure you are trying to avoid is the customer who finds the change before you do.
+
+---
+
+**Read next**
+
+[One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront)
+
+[FPX costs a ringgit; cards cost 2% to 3%](https://upahje.my/en/articles/taking-money-malaysia)
+
+[RM1.25 or 15%: what own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
+
+### Sources
+
+- Stripe, testing (test transactions do not move funds; test cards simulate declines, 3DS and disputes) — https://docs.stripe.com/testing (checked 2026-11-27)
+- CHIP, pricing (FPX settles next business day; card payments two business days; DuitNow next day) — https://chip-in.asia/pricing/ (checked 2026-11-26)
+- Billplz, pricing (FPX next business day; card payments T+2 business days) — https://www.billplz.com/pricing (checked 2026-11-26)
+
 ## The commission arithmetic behind owning your shop
 
 URL: https://upahje.my/en/articles/commission-arithmetic
@@ -4371,6 +4445,80 @@ Di bawah RM3 juta, catatan itu pembelaan anda, dan ia perlu diuji semula apabila
 
 - LHDN, Garis masa pelaksanaan e-Invois (jadual pelaksanaan dan klausa pelepasan, halaman dikemas kini 30 Ogos 2026) — https://www.hasil.gov.my/e-invois/pelaksanaan-e-invois-di-malaysia/garis-masa-pelaksanaan-e-invois/ (checked 2026-11-27)
 - LHDN, garis masa pelaksanaan e-Invoice, versi bahasa Inggeris notis yang sama (menyatakan pelepasan RM3,000,000 dan tarikh kemas kini 30 Ogos 2026) — https://www.hasil.gov.my/en/e-invois/pelaksanaan-e-invois-di-malaysia/garis-masa-pelaksanaan-e-invois/ (checked 2026-11-27)
+
+## Uji satu pesanan di telefon sebelum anda kongsi pautan
+
+URL: https://upahje.my/ms/articles/uji-satu-pesanan-sebelum-lancar
+Checked: 2026-11-27
+
+Satu produk, satu pilihan penghantaran, satu kaedah bayaran: itu **satu** laluan untuk diuji, bukan dua puluh. Jika barang **RM35** dan penghantaran **RM8**, pembeli sepatutnya melihat **RM43** sebelum membayar, dan rekod pesanan anda sepatutnya berkata perkara yang sama selepas itu.
+
+Tujuannya bukan menguji setiap pesanan yang mungkin diterima. Ia menjawab satu soalan sebelum pelanggan bertanya: apabila seseorang membuat pesanan, adakah dia tahu ia berjaya, dan adakah anda tahu sama ada perlu dibungkus?
+
+## Tulis jumlah yang dijangka dahulu
+
+Pilih kombinasi yang anda jangka pelanggan pertama akan guna, kemudian tulis angkanya: harga barang, sebarang diskaun, caj penghantaran, jumlah akhir. Tulis juga apa yang anda jangka lihat selepas itu — di mana pengesahan pembeli muncul, di mana pesanan sampai kepada anda, dan apa yang menandakan ia sedia dipenuhi.
+
+Jumlah yang sudah ditulis itulah yang menjadikan ini ujian. Tanpanya, anda hanya memuji skrin, bukan membandingkannya dengan sesuatu yang bebas.
+
+Jika penyedia bayaran menyediakan mod ujian, gunakannya — dengan satu amaran yang kerap disalah faham. Bayaran mod ujian menguji aliran, dan ia **tidak** membuktikan wang sebenar akan masuk ke akaun anda. Stripe menyatakannya dengan jelas: transaksi ujian tidak memindahkan dana. Catat mod mana yang anda gunakan, supaya ujian yang lulus tidak dibaca sebagai aliran tunai yang berfungsi.
+
+## Buat pesanan dari telefon, tanpa log masuk
+
+Buka kedai di telefon sambil log keluar daripada akaun penjual. Mulakan dari pautan yang anda benar-benar akan kongsi dengan pelanggan, bukan dari pratonton admin.
+
+Selesaikan checkout tanpa berpindah ke papan pemuka untuk mengisi sesuatu yang pelanggan tidak nampak. Sebelum menghantar, semak tiga perkara:
+
+- **Barang dan kuantiti betul**, dan jika produk mempunyai pilihan, saiz, perisa atau warna yang dipilih masih kelihatan.
+- **Butiran penyerahan lengkap.** Untuk penghantaran, pembeli boleh memasukkan alamat yang boleh anda guna. Untuk ambil sendiri, pembeli tahu ke mana hendak pergi dan sama ada perlu menunggu mesej.
+- **Jumlah sepadan dengan catatan anda.** Jika anda tulis RM43 dan skrin menunjukkan RM35 atau RM51, berhenti dan cari puncanya sebelum menguji perkara lain.
+
+Kemudian duduk di sisi pembeli seketika. Bolehkah anda tahu sama ada pesanan diterima, sama ada bayaran selesai atau masih tertunggak, dan apa yang berlaku seterusnya? Jika kedai menjanjikan e-mel atau mesej, pastikan ia tiba dan menyatakan perkara yang sama seperti skrin pengesahan. Simpan rujukan pesanan — anda perlukannya pada langkah seterusnya.
+
+## Cari pesanan itu di tempat anda benar-benar bekerja
+
+Buka apa yang anda gunakan pada hari sibuk: papan pemuka, peti masuk, benang WhatsApp, spreadsheet. Cari pesanan itu tanpa kembali ke skrin pembeli.
+
+Padankan rujukan, barang dan kuantiti, jumlah, serta butiran penyerahan. Kemudian tanya soalan yang menentukan sama ada kedai ini berfungsi: **bolehkah anda serahkan pesanan ini kepada orang lain untuk dipenuhi tanpa perlu menghantar mesej kepada pembeli untuk maklumat yang tiada?**
+
+## Pesanan diterima bukan bayaran disahkan
+
+Ini dua fakta berbeza dan troli beli-belah suka mengaburkannya.
+
+Jika anda menerima bayaran di hadapan, semak sistem yang anda percayai untuk pengesahan bayaran dan pastikan status itu milik pesanan **ini** — bukan pesanan sebelumnya. Jika anda menerima bayaran semasa ambil sendiri atau penghantaran, pastikan pesanan menyatakan dengan jelas bahawa bayaran masih tertunggak dan bila ia perlu dikutip.
+
+Masa penyelesaian menjadikan ini lebih tajam daripada bunyinya. FPX dijelaskan hari bekerja berikutnya; bayaran kad dijelaskan dalam dua hari bekerja di [CHIP dan Billplz](https://upahje.my/ms/articles/mengambil-bayaran-malaysia). Pesanan boleh duduk di peti masuk anda kelihatan sudah dibayar sedangkan wangnya masih dalam perjalanan, dan bayaran balik yang dibuat pada hari sama berkelakuan lain lagi.
+
+Anda tidak perlu menghantar bungkusan. Berhenti apabila anda boleh menyatakan tindakan seterusnya tanpa teragak-agak: bungkus, sediakan untuk diambil, atau tunggu bayaran.
+
+## Enam semakan menentukan sama ada ujian ini lulus
+
+- [ ] Pembeli menyelesaikan checkout di telefon tanpa bantuan.
+- [ ] Barang, kuantiti dan jumlah akhir sepadan dengan catatan anda.
+- [ ] Pembeli tahu pesanan diterima dan apa yang berlaku seterusnya.
+- [ ] Anda menemui pesanan yang sama di tempat anda biasa bekerja.
+- [ ] Anda boleh bezakan bayaran yang disahkan daripada yang masih tertunggak.
+- [ ] Anda mempunyai maklumat yang cukup untuk memenuhi pesanan tanpa mengejar pembeli.
+
+Jika satu gagal, betulkan dan jalankan semula laluan itu dari telefon. Mengedit perkataan di skrin admin bukan sama dengan melihatnya pada pesanan baharu.
+
+Jika keenam-enamnya lulus, catat dengan tepat apa yang diuji: produk, kaedah bayaran, dan pilihan penghantaran atau ambil sendiri. Pesanan ambil sendiri yang lulus tidak berkata apa-apa tentang caj penghantaran, dan bayaran mod ujian yang lulus tidak berkata apa-apa tentang penyelesaian sebenar. Senarai semak ini kekal berguna setiap kali anda menukar kaedah bayaran, caj penghantaran atau mesej pengesahan — kerana kegagalan yang anda cuba elakkan ialah pelanggan yang menemui perubahan itu sebelum anda.
+
+---
+
+**Bacaan lanjut**
+
+[Satu orang, satu dapur: kami bina kedai sendiri dan menjalankannya](https://upahje.my/ms/articles/kami-bina-kedai-sendiri)
+
+[FPX berharga seringgit; kad berharga 2% hingga 3%](https://upahje.my/ms/articles/mengambil-bayaran-malaysia)
+
+[RM1.25 atau 15%: kos checkout sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
+
+### Sources
+
+- Stripe, testing (transaksi ujian tidak memindahkan dana; kad ujian mensimulasikan penolakan, 3DS dan pertikaian) — https://docs.stripe.com/testing (checked 2026-11-27)
+- CHIP, harga (FPX dijelaskan hari bekerja berikutnya; kad dua hari bekerja; DuitNow hari berikutnya) — https://chip-in.asia/pricing/ (checked 2026-11-26)
+- Billplz, harga (FPX hari bekerja berikutnya; kad T+2 hari bekerja) — https://www.billplz.com/pricing (checked 2026-11-26)
 
 ## Apabila platform masih kedai yang lebih murah
 
