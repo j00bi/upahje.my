@@ -90,3 +90,5 @@ The shop is the easy half and the audience is the business. Anyone selling you a
 [RM1.25 or 15%: what your own checkout costs](https://upahje.my/en/articles/own-checkout-vs-commission)
 
 [The delivery commission question, answered from the regulator](https://upahje.my/en/articles/delivery-commission-malaysia)
+
+[The Google Business Profile fields that decide the call](https://upahje.my/en/articles/google-business-profile-fields)

@@ -93,3 +93,5 @@ Cuba panggil model terbuka melalui API sebelum cuba menjalankannya. Mistral send
 [Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
 
 [Lagi tentang API dan model](https://upahje.my/ms/glossary)
+
+[Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)

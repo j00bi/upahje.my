@@ -180,3 +180,9 @@ Six pieces are published and one is this hub:
 - [One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront) is the working storefront this series is written against.
 
 Two more are written and unpublished: the licence stack, and the courier radius. They will appear here when the editor clears them.
+
+**Read next**
+
+[The licence stack under the kedai](https://upahje.my/en/articles/licence-stack-kedai)
+
+[Pricing the same dish twice](https://upahje.my/en/articles/pricing-the-same-dish-twice)

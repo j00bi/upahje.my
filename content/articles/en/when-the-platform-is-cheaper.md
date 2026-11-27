@@ -208,3 +208,5 @@ What we will not do is print a cost per customer we have not seen, or tell anyon
 [The commission arithmetic behind owning your shop](https://upahje.my/en/articles/commission-arithmetic)
 
 [One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront)
+
+[Pricing the same dish twice](https://upahje.my/en/articles/pricing-the-same-dish-twice)

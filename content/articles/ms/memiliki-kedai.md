@@ -180,3 +180,9 @@ Enam artikel sudah diterbitkan dan satu ialah hub ini:
 - [Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri) ialah kedai berfungsi yang siri ini tulis terhadapnya.
 
 Dua lagi sudah ditulis dan belum diterbitkan: timbunan lesen, dan jejari kurier. Kedua-duanya akan muncul di sini apabila editor meluluskannya.
+
+**Baca seterusnya**
+
+[Timbunan lesen di bawah kedai](https://upahje.my/ms/articles/timbunan-lesen-kedai)
+
+[Harga satu hidangan, dua menu](https://upahje.my/ms/articles/harga-satu-hidangan-dua-menu)

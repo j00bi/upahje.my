@@ -258,6 +258,8 @@ The shop is the easy half and the audience is the business. Anyone selling you a
 
 [The delivery commission question, answered from the regulator](https://upahje.my/en/articles/delivery-commission-malaysia)
 
+[The Google Business Profile fields that decide the call](https://upahje.my/en/articles/google-business-profile-fields)
+
 ### Sources
 
 - Billplz, pricing (FPX RM1.25 Basic and RM0.75 Standard per transaction, card 1.8% and 1.5%, settlement next business day for FPX and T+2 for cards) — https://www.billplz.com/pricing (checked 2026-11-26)
@@ -701,6 +703,12 @@ Six pieces are published and one is this hub:
 - [One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront) is the working storefront this series is written against.
 
 Two more are written and unpublished: the licence stack, and the courier radius. They will appear here when the editor clears them.
+
+**Read next**
+
+[The licence stack under the kedai](https://upahje.my/en/articles/licence-stack-kedai)
+
+[Pricing the same dish twice](https://upahje.my/en/articles/pricing-the-same-dish-twice)
 
 ### Sources
 
@@ -1564,6 +1572,8 @@ What we will not do is print a cost per customer we have not seen, or tell anyon
 
 [One person, one kitchen: we built the storefront and ran it](https://upahje.my/en/articles/we-built-our-own-storefront)
 
+[Pricing the same dish twice](https://upahje.my/en/articles/pricing-the-same-dish-twice)
+
 ### Sources
 
 - Billplz, pricing (FPX B2C RM1.25 Basic and RM0.75 Standard per transaction, next business day; card 1.8% and 1.5%, T+2; RM999 annual plan) — https://www.billplz.com/pricing (checked 2026-11-26)
@@ -1912,6 +1922,8 @@ Pay for the e-invoice route, not the till. A POS that takes money but leaves the
 [What a first hire costs, line by line](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
 [More on buying and choosing tools](https://upahje.my/en/topics/buying)
+
+[KuasaOS is a CRM with a costume](https://upahje.my/en/articles/kuasaos-crm-with-a-costume)
 
 ### Sources
 
@@ -3207,6 +3219,10 @@ Cost-heavy buyers can rerun the weighting. Raising provider and cost control to 
 
 [More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
+[Where the closed models actually differ](https://upahje.my/en/articles/closed-models-differences)
+
+[What a harness API key actually buys](https://upahje.my/en/articles/harness-api-keys)
+
 ### Sources
 
 - DeepSeek Harness package metadata (@deepseek-ai/dsh 0.2.2-rc.1) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
@@ -3589,6 +3605,8 @@ The `openmausbot` launcher is still on this machine, and running it fails with a
 
 [More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
+[Where the closed models actually differ](https://upahje.my/en/articles/closed-models-differences)
+
 ### Sources
 
 - nightly-labs/openbot, repository metadata and licence file (PolyForm Noncommercial 1.0.0) — https://github.com/nightly-labs/openbot (checked 2026-11-19)
@@ -3824,6 +3842,8 @@ Call an open-weight model before you try to run one. Mistral serves its own open
 
 [More on APIs and models](https://upahje.my/en/glossary)
 
+[Where the closed models actually differ](https://upahje.my/en/articles/closed-models-differences)
+
 ### Sources
 
 - Mistral AI, Mistral Small 4 model page (parameters, licence, API price) — https://docs.mistral.ai/models/mistral-small-4-0-26-03 (checked 2026-11-19)
@@ -3913,6 +3933,8 @@ Two benchmark leaderboards were also not captured for this piece, and this artic
 [What automation work costs in Malaysia, from published rates](https://upahje.my/en/articles/automation-rates-malaysia-published)
 
 [More on buying automation](https://upahje.my/en/topics/buying)
+
+[Where the closed models actually differ](https://upahje.my/en/articles/closed-models-differences)
 
 ### Sources
 
@@ -4153,6 +4175,8 @@ Settle three things in writing before you pay.
 [Open or closed models, and which to start with](https://upahje.my/en/articles/open-vs-closed-models-malaysia)
 
 [More on APIs and models](https://upahje.my/en/glossary)
+
+[What a harness API key actually buys](https://upahje.my/en/articles/harness-api-keys)
 
 ### Sources
 
@@ -4470,6 +4494,10 @@ Apa yang kami tidak akan lakukan ialah mencetak kos pelanggan yang belum kami li
 [Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen)
 
 [Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri)
+
+**Baca seterusnya**
+
+[Harga satu hidangan, dua menu](https://upahje.my/ms/articles/harga-satu-hidangan-dua-menu)
 
 ### Sources
 
@@ -5396,6 +5424,12 @@ Enam artikel sudah diterbitkan dan satu ialah hub ini:
 
 Dua lagi sudah ditulis dan belum diterbitkan: timbunan lesen, dan jejari kurier. Kedua-duanya akan muncul di sini apabila editor meluluskannya.
 
+**Baca seterusnya**
+
+[Timbunan lesen di bawah kedai](https://upahje.my/ms/articles/timbunan-lesen-kedai)
+
+[Harga satu hidangan, dua menu](https://upahje.my/ms/articles/harga-satu-hidangan-dua-menu)
+
 ### Sources
 
 - Billplz, harga (FPX RM1.25 Basic dan RM0.75 Standard setiap transaksi, hari perniagaan berikutnya; kad 1.8% dan 1.5%, T+2; pelan tahunan RM999) — https://www.billplz.com/pricing (checked 2026-11-26)
@@ -5642,6 +5676,10 @@ Kedai itu separuh yang mudah dan khalayak itu perniagaannya. Sesiapa yang menjua
 [RM1.25 atau 15%: kos checkout anda sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
 
 [Soalan komisen penghantaran, dijawab daripada pengawal selia](https://upahje.my/ms/articles/komisen-penghantaran-malaysia)
+
+**Baca seterusnya**
+
+[Medan Google Business Profile yang menentukan panggilan](https://upahje.my/ms/articles/medan-google-business-profile)
 
 ### Sources
 
@@ -6074,6 +6112,10 @@ Bayar untuk laluan e-invoice, bukan untuk mesin tunai. POS yang menerima wang te
 [Apa kos pekerja pertama, baris demi baris](https://upahje.my/en/articles/first-hire-cost-malaysia)
 
 [Lebih lanjut tentang membeli dan memilih alat](https://upahje.my/ms/topics/buying)
+
+**Baca seterusnya**
+
+[KuasaOS ialah CRM bersalut](https://upahje.my/ms/articles/kuasaos-crm-berpakaian-kostum)
 
 ### Sources
 
@@ -7407,6 +7449,8 @@ Tetapkan tiga perkara secara bertulis sebelum bayaran.
 
 [Lagi tentang API dan model](https://upahje.my/ms/glossary)
 
+[Apa sebenarnya yang dibeli kunci API harness](https://upahje.my/ms/articles/kunci-api-dalam-harness)
+
 ### Sources
 
 - MDN Web Docs, glosari API — https://developer.mozilla.org/en-US/docs/Glossary/API (checked 2026-11-19)
@@ -7496,6 +7540,8 @@ Dua papan pendahulu penanda aras juga tidak dirakam untuk artikel ini, dan artik
 [Kos kerja automasi di Malaysia, daripada harga yang diterbitkan](https://upahje.my/ms/articles/kos-automasi-malaysia-harga-diterbitkan)
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
+
+[Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)
 
 ### Sources
 
@@ -7858,6 +7904,10 @@ Pembeli yang mementingkan kos boleh mengira semula pemberatnya. Menaikkan penyed
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
 
+[Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)
+
+[Apa sebenarnya yang dibeli kunci API harness](https://upahje.my/ms/articles/kunci-api-dalam-harness)
+
 ### Sources
 
 - Metadata pakej DeepSeek Harness (@deepseek-ai/dsh 0.2.2-rc.1) — https://www.npmjs.com/package/@deepseek-ai/dsh (checked 2026-11-19)
@@ -8089,6 +8139,8 @@ Pelancar `openmausbot` masih ada pada mesin ini, dan menjalankannya gagal dengan
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
 
+[Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)
+
 ### Sources
 
 - nightly-labs/openbot, metadata repositori dan fail lesen (PolyForm Noncommercial 1.0.0) — https://github.com/nightly-labs/openbot (checked 2026-11-19)
@@ -8263,6 +8315,8 @@ Cuba panggil model terbuka melalui API sebelum cuba menjalankannya. Mistral send
 [Kos menyambungkan API di Malaysia](https://upahje.my/ms/articles/apa-itu-api-untuk-pks-malaysia)
 
 [Lagi tentang API dan model](https://upahje.my/ms/glossary)
+
+[Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)
 
 ### Sources
 

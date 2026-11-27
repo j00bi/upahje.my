@@ -208,3 +208,7 @@ Apa yang kami tidak akan lakukan ialah mencetak kos pelanggan yang belum kami li
 [Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen)
 
 [Satu orang, satu dapur: kedai kami sendiri](https://upahje.my/ms/articles/kami-bina-kedai-sendiri)
+
+**Baca seterusnya**
+
+[Harga satu hidangan, dua menu](https://upahje.my/ms/articles/harga-satu-hidangan-dua-menu)

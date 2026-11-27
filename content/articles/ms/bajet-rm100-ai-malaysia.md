@@ -112,3 +112,4 @@ Dua papan pendahulu penanda aras juga tidak dirakam untuk artikel ini, dan artik
 
 [Lagi tentang membeli automasi](https://upahje.my/ms/topics/buying)
 
+[Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)

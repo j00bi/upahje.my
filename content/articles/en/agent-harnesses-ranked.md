@@ -118,3 +118,7 @@ Cost-heavy buyers can rerun the weighting. Raising provider and cost control to 
 [What an agent harness does with your request](https://upahje.my/en/articles/using-the-harness)
 
 [More on buying and choosing tools](https://upahje.my/en/topics/buying)
+
+[Where the closed models actually differ](https://upahje.my/en/articles/closed-models-differences)
+
+[What a harness API key actually buys](https://upahje.my/en/articles/harness-api-keys)

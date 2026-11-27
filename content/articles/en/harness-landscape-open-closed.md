@@ -94,3 +94,4 @@ The `openmausbot` launcher is still on this machine, and running it fails with a
 
 [More on buying and choosing tools](https://upahje.my/en/topics/buying)
 
+[Where the closed models actually differ](https://upahje.my/en/articles/closed-models-differences)

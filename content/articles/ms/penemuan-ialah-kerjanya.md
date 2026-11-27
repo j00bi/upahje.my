@@ -90,3 +90,7 @@ Kedai itu separuh yang mudah dan khalayak itu perniagaannya. Sesiapa yang menjua
 [RM1.25 atau 15%: kos checkout anda sendiri](https://upahje.my/ms/articles/checkout-sendiri-lawan-komisen)
 
 [Soalan komisen penghantaran, dijawab daripada pengawal selia](https://upahje.my/ms/articles/komisen-penghantaran-malaysia)
+
+**Baca seterusnya**
+
+[Medan Google Business Profile yang menentukan panggilan](https://upahje.my/ms/articles/medan-google-business-profile)

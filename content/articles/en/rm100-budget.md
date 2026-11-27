@@ -112,3 +112,4 @@ Two benchmark leaderboards were also not captured for this piece, and this artic
 
 [More on buying automation](https://upahje.my/en/topics/buying)
 
+[Where the closed models actually differ](https://upahje.my/en/articles/closed-models-differences)

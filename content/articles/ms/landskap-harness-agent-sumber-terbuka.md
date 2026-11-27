@@ -94,3 +94,4 @@ Pelancar `openmausbot` masih ada pada mesin ini, dan menjalankannya gagal dengan
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
 
+[Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)

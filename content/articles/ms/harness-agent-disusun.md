@@ -118,3 +118,7 @@ Pembeli yang mementingkan kos boleh mengira semula pemberatnya. Menaikkan penyed
 [Apa yang agent harness lakukan dengan permintaan anda](https://upahje.my/ms/articles/apa-itu-agent-harness)
 
 [Lagi tentang membeli dan memilih tool](https://upahje.my/ms/topics/buying)
+
+[Di mana model tertutup sebenarnya berbeza](https://upahje.my/ms/articles/beza-model-tertutup)
+
+[Apa sebenarnya yang dibeli kunci API harness](https://upahje.my/ms/articles/kunci-api-dalam-harness)
