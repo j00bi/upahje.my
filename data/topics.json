@@ -166,6 +166,10 @@
     "e-invoice-exemption-rm3-million": {
       "topic": "compliance",
       "secondary": "buying"
+    },
+    "sst-threshold-eleven-months": {
+      "topic": "compliance",
+      "secondary": "freelance"
     }
   },
   "glossary": [

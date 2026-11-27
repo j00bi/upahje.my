@@ -64,6 +64,73 @@ Below RM3 million, that note is your defence, and it should be re-tested as turn
 - LHDN, Garis masa pelaksanaan e-Invois (implementation timeline and the exemption clause, page updated 30 August 2026) — https://www.hasil.gov.my/e-invois/pelaksanaan-e-invois-di-malaysia/garis-masa-pelaksanaan-e-invois/ (checked 2026-11-27)
 - LHDN, e-Invoice implementation timeline, English rendering of the same notice (states the RM3,000,000 exemption and the 30 August 2026 update date) — https://www.hasil.gov.my/en/e-invois/pelaksanaan-e-invois-di-malaysia/garis-masa-pelaksanaan-e-invois/ (checked 2026-11-27)
 
+## SST counts the last eleven months, not the tax year
+
+URL: https://upahje.my/en/articles/sst-threshold-eleven-months
+Checked: 2026-11-27
+
+Service tax is **8%**, or **6%** for food and beverage, logistics, telecommunications and parking, and **RM25 per credit or charge card**. The registration threshold is not measured on your financial year. It is measured on a window of eleven months plus this one, or this one plus the eleven after it.
+
+That single mechanic decides whether a growing shop has a compliance date this year or next, and it is the part most owners get wrong: they check the year-end accounts and conclude they are under the line, when the line is tested monthly against a moving twelve-month total.
+
+## The two methods, as RMCD states them
+
+The Customs FAQ sets out both, and they are not interchangeable:
+
+**Historical method** — the value of taxable services for any month, plus the value for the eleven months before it. Their example: July 2024 combined with August 2023 through June 2024.
+
+**Future method** — the value for any month, plus the eleven months after it. Their example: July 2024 through June 2025.
+
+The historical method is the one that matters for a shop already trading: it tells you, month by month, whether your trailing twelve months has crossed the threshold. The future method exists for cases where the forward book is known — a contract signed, a pipeline committed.
+
+## What the official pages state, and what they leave out
+
+Read on 27 November 2026, these are the figures the Customs pages actually print:
+
+| What | Figure | Where it applies |
+| --- | --- | --- |
+| Service tax rate | 8% on taxable services generally | Service tax |
+| Reduced rate | 6% for F&B, logistics, telecommunications, parking | Service tax |
+| Credit and charge cards | RM25 per card | Service tax |
+| Cafeteria food services | Taxed when sales value exceeds RM1,500,000 | Service tax |
+| Sales tax registration | When taxable goods sales exceed RM500,000 over 12 months | Sales tax |
+
+What they do **not** print, on the pages we read, is the general service-tax registration threshold — the number that applies to a consultant, a contractor, a repair shop or a software business. Several secondary sources say RM500,000; that is the sales-tax figure appearing in the same breath, and we are not going to carry it across a category boundary on somebody's blog.
+
+So this article states the mechanic, which is verified, and refuses the number, which is not. If you need the threshold for your specific service category today, the answer is in the industry guide for that category, and it has to be read, not assumed.
+
+## Why the window matters more than the number
+
+A rolling test changes the decision in a way an annual test does not.
+
+A shop doing RM40,000 a month in taxable services is at RM480,000 on a trailing twelve months — under a RM500,000 line, and comfortably so, until the month it is not. Add one good month at RM70,000 and the trailing total becomes RM510,000. The obligation attaches from the crossing, not from the next financial year, and the invoice you issue in that month is the one that should have carried tax.
+
+That is the failure mode: not a shop that ignored the rules, but a shop that checked once, in the wrong month, against the wrong window.
+
+## Run the eleven-month total before you register anything
+
+1. **Total your taxable services month by month**, for the last twelve months. If your accounting software reports quarterly, get the monthly numbers out of it — the quarterly figure cannot answer a rolling question.
+2. **Add the current month to the eleven before it.** That is the historical method, and it is the number that decides registration.
+3. **Watch the trend, not just the total.** Three months of growth at 10% moves a shop from safe to in-scope inside one window.
+4. **If you cross it, register through MySST**, and treat the crossing month's invoices as the ones to review first.
+
+e-Invoice is a separate obligation with a separate trigger, and the [RM3 million turnover exemption](https://upahje.my/en/articles/e-invoice-exemption-rm3-million) has nothing to do with this test. A shop can be under the e-Invoice exemption and over the service-tax threshold at the same time, which is exactly the kind of overlap that gets missed when the two are treated as one compliance calendar.
+
+---
+
+**Read next**
+
+[e-Invoice exemption is RM3 million, not RM1 million](https://upahje.my/en/articles/e-invoice-exemption-rm3-million)
+
+[What e-Invoice automation covers](https://upahje.my/en/articles/what-einvoice-automation-covers)
+
+[The real cost of your first hire](https://upahje.my/en/articles/first-hire-cost-malaysia)
+
+### Sources
+
+- RMCD, FAQ - service tax (threshold determination by the historical and future methods; 8% and 6% rates; RM1,500,000 for cafeteria food services) — https://mysst.customs.gov.my/faq-services-tax/ (checked 2026-11-27)
+- RMCD, Registering Business (sales tax registration when the sales value of taxable goods exceeds RM500,000 over a 12-month period) — https://mysst.customs.gov.my/registering-business/ (checked 2026-11-27)
+
 ## The commission arithmetic behind owning your shop
 
 URL: https://upahje.my/en/articles/commission-arithmetic
@@ -4095,6 +4162,73 @@ Settle three things in writing before you pay.
 - OpenAI, API model catalogue — https://developers.openai.com/api/docs/models (checked 2026-11-19)
 
 # Bahasa Melayu
+
+## SST dikira sebelas bulan lalu, bukan tahun cukai
+
+URL: https://upahje.my/ms/articles/ambang-sst-sebelas-bulan
+Checked: 2026-11-27
+
+Cukai perkhidmatan ialah **8%**, atau **6%** bagi makanan dan minuman, logistik, telekomunikasi dan parkir, serta **RM25 bagi setiap kad kredit atau caj**. Ambang pendaftaran tidak diukur pada tahun kewangan anda. Ia diukur pada tetingkap sebelas bulan campur bulan ini, atau bulan ini campur sebelas bulan selepasnya.
+
+Mekanik tunggal itu menentukan sama ada kedai yang sedang berkembang mempunyai tarikh pematuhan tahun ini atau tahun depan, dan itulah bahagian yang paling kerap disalah faham: pemilik menyemak akaun hujung tahun dan menyimpulkan mereka di bawah garis, sedangkan garis itu diuji setiap bulan terhadap jumlah dua belas bulan yang bergerak.
+
+## Dua kaedah, seperti yang dinyatakan RMCD
+
+FAQ Kastam menyenaraikan kedua-duanya, dan ia tidak boleh ditukar ganti:
+
+**Kaedah historis** — nilai perkhidmatan bercukai bagi mana-mana bulan, campur nilai bagi sebelas bulan sebelumnya. Contoh mereka: Julai 2024 digabungkan dengan Ogos 2023 hingga Jun 2024.
+
+**Kaedah masa hadapan** — nilai bagi mana-mana bulan, campur sebelas bulan selepasnya. Contoh mereka: Julai 2024 hingga Jun 2025.
+
+Kaedah historis ialah yang penting bagi kedai yang sudah beroperasi: ia memberitahu anda, bulan demi bulan, sama ada dua belas bulan bergulir anda telah melepasi ambang. Kaedah masa hadapan wujud untuk keadaan di mana buku hadapan sudah diketahui — kontrak ditandatangani, saluran paip komited.
+
+## Apa yang halaman rasmi nyatakan, dan apa yang ditinggalkan
+
+Dibaca pada 27 November 2026, ini angka yang sebenarnya dicetak oleh halaman Kastam:
+
+| Perkara | Angka | Di mana ia terpakai |
+| --- | --- | --- |
+| Kadar cukai perkhidmatan | 8% pada perkhidmatan bercukai secara umum | Cukai perkhidmatan |
+| Kadar dikurangkan | 6% bagi F&B, logistik, telekomunikasi, parkir | Cukai perkhidmatan |
+| Kad kredit dan caj | RM25 setiap kad | Cukai perkhidmatan |
+| Perkhidmatan makanan kafeteria | Dicukai apabila nilai jualan melebihi RM1,500,000 | Cukai perkhidmatan |
+| Pendaftaran cukai jualan | Apabila jualan barang bercukai melebihi RM500,000 dalam 12 bulan | Cukai jualan |
+
+Apa yang **tidak** dicetak, pada halaman yang kami baca, ialah ambang pendaftaran cukai perkhidmatan yang umum — angka yang terpakai kepada perunding, kontraktor, kedai pembaikan atau perniagaan perisian. Beberapa sumber sekunder menyebut RM500,000; itu angka cukai jualan yang muncul dalam nafas yang sama, dan kami tidak akan membawanya merentas sempadan kategori berdasarkan blog orang lain.
+
+Jadi artikel ini menyatakan mekaniknya, yang telah disahkan, dan menolak angkanya, yang belum. Jika anda perlukan ambang bagi kategori perkhidmatan anda hari ini, jawapannya ada dalam garis panduan industri bagi kategori itu, dan ia perlu dibaca, bukan diandaikan.
+
+## Mengapa tetingkap lebih penting daripada angka
+
+Ujian bergulir mengubah keputusan dengan cara ujian tahunan tidak.
+
+Kedai yang berbuat RM40,000 sebulan dalam perkhidmatan bercukai berada pada RM480,000 bagi dua belas bulan bergulir — di bawah garis RM500,000, dan selesa begitu, sehingga tiba bulan ia tidak lagi. Tambah satu bulan baik pada RM70,000 dan jumlah bergulir menjadi RM510,000. Kewajipan bermula dari persilangan itu, bukan dari tahun kewangan berikutnya, dan invois yang anda keluarkan pada bulan itu ialah invois yang sepatutnya membawa cukai.
+
+Itulah mod kegagalan: bukan kedai yang mengabaikan peraturan, tetapi kedai yang menyemak sekali, pada bulan yang salah, terhadap tetingkap yang salah.
+
+## Kira jumlah sebelas bulan sebelum mendaftar apa-apa
+
+1. **Jumlahkan perkhidmatan bercukai anda bulan demi bulan**, untuk dua belas bulan lalu. Jika perisian perakaunan anda melaporkan setiap suku tahun, keluarkan angka bulanannya — angka suku tahun tidak boleh menjawab soalan bergulir.
+2. **Tambah bulan semasa pada sebelas bulan sebelumnya.** Itulah kaedah historis, dan itulah angka yang menentukan pendaftaran.
+3. **Perhatikan arah aliran, bukan hanya jumlah.** Tiga bulan pertumbuhan 10% memindahkan kedai daripada selamat kepada dalam skop dalam satu tetingkap.
+4. **Jika anda melepasinya, daftar melalui MySST**, dan anggap invois bulan persilangan sebagai yang pertama untuk disemak.
+
+e-Invois ialah kewajipan berasingan dengan pencetus berasingan, dan [pelepasan perolehan RM3 juta](https://upahje.my/ms/articles/pelepasan-e-invois-rm3-juta) tiada kaitan dengan ujian ini. Sebuah kedai boleh berada di bawah pelepasan e-Invois dan melepasi ambang cukai perkhidmatan pada masa yang sama, iaitu tepat jenis pertindihan yang terlepas apabila kedua-duanya dianggap satu kalendar pematuhan.
+
+---
+
+**Bacaan lanjut**
+
+[Pelepasan e-Invois ialah RM3 juta, bukan RM1 juta](https://upahje.my/ms/articles/pelepasan-e-invois-rm3-juta)
+
+[Apa yang diliputi automasi e-Invois](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi)
+
+[Kos sebenar pekerja pertama anda](https://upahje.my/ms/articles/kos-pekerja-pertama-malaysia)
+
+### Sources
+
+- RMCD, FAQ - cukai perkhidmatan (penentuan ambang melalui kaedah historis dan masa hadapan; kadar 8% dan 6%; RM1,500,000 bagi perkhidmatan makanan kafeteria) — https://mysst.customs.gov.my/faq-services-tax/ (checked 2026-11-27)
+- RMCD, Registering Business (pendaftaran cukai jualan apabila nilai jualan barang bercukai melebihi RM500,000 dalam tempoh 12 bulan) — https://mysst.customs.gov.my/registering-business/ (checked 2026-11-27)
 
 ## Pelepasan e-Invois ialah RM3 juta, bukan RM1 juta
 
