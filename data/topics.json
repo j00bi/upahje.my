@@ -178,6 +178,10 @@
     "sst-threshold-per-category": {
       "topic": "compliance",
       "secondary": "freelance"
+    },
+    "empty-reply-length-finish": {
+      "topic": "ai-automation",
+      "secondary": "buying"
     }
   },
   "glossary": [
