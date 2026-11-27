@@ -40,7 +40,7 @@ The constraint is that a model cannot learn an edge that is not in the data it w
 
 A policy that outputs the same action for every input has found the lowest-variance policy available. In a market series where most timesteps look alike, that is often the rational move: the reward signal barely distinguishes one action from another, so the gradient settles on the safest constant.
 
-The fix is not a bigger network or a longer run. It is either a reward that separates good decisions from bad ones at the resolution you actually trade at, or an acceptance that the signal is too thin for a learned policy and a rule belongs there instead. Both answers are cheaper than another GPU and both are harder to accept.
+The fix is either a reward that separates good decisions from bad ones at the resolution you actually trade at, or an acceptance that the signal is too thin for a learned policy and a rule belongs there instead. A bigger network does neither. Both answers are cheaper than another GPU and both are harder to accept.
 
 ## The part that did work was arithmetic
 
@@ -57,11 +57,11 @@ A backtest is not evidence. These are the gates used before a strategy was allow
 3. **At least 20 trades**, because ten trades is an anecdote with a chart.
 4. **Survival across the whole window**, including the months the strategy did nothing.
 
-Add decay measurement — how long an edge lasted, not just whether it appeared — and a strategy that passes all four is still only a candidate. Paper trading comes next, and it is not optional, because slippage and fills are where backtests die.
+Add decay measurement (how long an edge lasted, not just whether it appeared) and a strategy that passes all four is still only a candidate. Paper trading comes next, and it is not optional, because slippage and fills are where backtests die.
 
 ## What this costs a small operator
 
-The honest budget for a bot that might work is not the subscription. It is the months of data work before the first trade: getting clean price series, modelling fees at the venue you will actually use, and writing the validation harness that stops you deploying the version that looked good in March.
+The honest budget for a bot that might work is the months of data work before the first trade, not the subscription: getting clean price series, modelling fees at the venue you will actually use, and writing the validation harness that stops you deploying the version that looked good in March.
 
 Most projects skip that and buy the model instead. That is why they end with a chart that goes up in the past and a live account that does not.
 
@@ -73,7 +73,7 @@ Most projects skip that and buy the model instead. That is why they end with a c
 4. Write the four gates down before you see the numbers, so you cannot move them afterwards.
 5. Paper trade for a month, and record fills rather than prices.
 
-The bot is the easy part to build and the easiest part to be wrong about. The work that decides whether it makes money happens before a single order is sent, in a spreadsheet most people skip because it is not as interesting as the training loop.
+The bot is the easy part to build and the easiest part to be wrong about. The work that decides whether it makes money happens before a single order is sent, in a spreadsheet that is less interesting than the training loop, and skipped for exactly that reason.
 
 ---
 

@@ -55,7 +55,7 @@ The job was a filter, not a model that trades. A set of nine strategies had alre
 
 Sixteen features per trade. Identity as embeddings, so the model learns symbol and strategy behaviour instead of being told. A two-layer network, 64 wide, no attention, no pretraining, no billion parameters.
 
-Trained on the card in five seconds. Cross-validated five ways, out-of-sample AUC 0.6021 — per fold 0.53, 0.66, 0.63, 0.60, 0.53. Not a good model in absolute terms. Good enough to act as a filter, which is what it was asked to be:
+Trained on the card in five seconds. Cross-validated five ways, out-of-sample AUC 0.6021, per fold 0.53, 0.66, 0.63, 0.60, 0.53. Not a good model in absolute terms. Good enough to act as a filter, which is what it was asked to be:
 
 | Filter threshold | Trades kept | Win rate | Mean return | Sharpe per trade | Annualised |
 | --- | --- | --- | --- | --- | --- |
@@ -66,11 +66,11 @@ Trained on the card in five seconds. Cross-validated five ways, out-of-sample AU
 
 At 0.40 the filter drops a third of the trades and the annualised figure rises from 2.64 to 3.51. At 0.60 the per-trade numbers look best and the annualised figure collapses, because there is nothing left to trade. That shape is the whole argument against optimising for accuracy: a filter that is right more often can still make less money.
 
-And the first model tried was a transformer, which overfitted immediately on 1,607 rows. The architecture was chosen by the size of the dataset, not by what was fashionable. Five seconds of compute is not the constraint here — 1,607 examples is.
+And the first model tried was a transformer, which overfitted immediately on 1,607 rows. The architecture was chosen by the size of the dataset, not by what was fashionable. Five seconds of compute is not the constraint here. 1,607 examples is.
 
 ## Job two: sweep, and know when to stop
 
-The second job is the one that eats money: trying configurations. A sweep script scoped **324** combinations — model width, depth, sequence length, forecast horizon, seeds — over ten chronological folds, up to 200 epochs each, effective batch 512 through 256 with gradient accumulation, mixed precision to fit a small card.
+The second job is the one that eats money: trying configurations. A sweep script scoped **324** combinations (model width, depth, sequence length, forecast horizon, seeds) over ten chronological folds, up to 200 epochs each, effective batch 512 through 256 with gradient accumulation, mixed precision to fit a small card.
 
 Twenty-two finished. The instance was destroyed deliberately to stop paying for storage, and that decision is the part worth copying. The results were not nothing:
 
@@ -83,13 +83,13 @@ Twenty-two finished. The instance was destroyed deliberately to stop paying for 
 | Test accuracy | 0.7495 |
 | Test AUC | 0.8212 |
 
-Three findings came out of 22 runs rather than 324. Small models won: `d_model` above 64 added overfit risk, not signal. A twelve-hour horizon beat twenty-four and forty-eight, because the further out you predict the more noise you are asking the model to memorise. And the result was stable across seeds — the same configuration with seeds 42, 123 and 7777 gave AUCs between 0.814 and 0.821, which is what tells you the number is a property of the data rather than of one lucky initialisation.
+Three findings came out of 22 runs rather than 324. Small models won: `d_model` above 64 added overfit risk, not signal. A twelve-hour horizon beat twenty-four and forty-eight, because the further out you predict the more noise you are asking the model to memorise. And the result was stable across seeds, the same configuration with seeds 42, 123 and 7777 gave AUCs between 0.814 and 0.821, which is what tells you the number is a property of the data rather than of one lucky initialisation.
 
 The infrastructure that made stopping safe is unglamorous and worth a paragraph. The driver script set up the environment, pulled the code, logged `nvidia-smi` every sixty seconds, wrote results after every completed configuration so a crash resumed rather than restarted, and ended by shutting the instance down itself. A full sweep was scoped at about two days; the quick three-configuration check at about two hours. The stop command is what turns a two-day plan into a two-hour decision.
 
 ## Job three: fine-tune on your own text
 
-The third job is the one a small business actually has. Not training from scratch — teaching a small model your own words. A four-bit quantised 1.5-billion-parameter model, fine-tuned with QLoRA on trade annotations, produced a 73 MB adapter file. That is the entire deliverable: not a model, a 73 MB delta that sits on top of a base model you did not pay to train.
+The third job is the one a small business actually has. Not training from scratch, teaching a small model your own words. A four-bit quantised 1.5-billion-parameter model, fine-tuned with QLoRA on trade annotations, produced a 73 MB adapter file. That is the entire deliverable: not a model, a 73 MB delta that sits on top of a base model you did not pay to train.
 
 The economics are why this is now ordinary. Quantising the base model to four bits, which is what QLoRA does, is what makes a 1.5B model fit alongside its own gradients on a consumer card. The method is published and the tooling is free.
 
@@ -114,7 +114,7 @@ If the requirement is a model that answers at three in the morning, an API price
 | Sweep, 22 of 324 configurations | instance hours, plus storage | not itemised here |
 | LoRA adapter, 73 MB | one session | not itemised here |
 
-Four cents is about sixteen sen at the rate we publish at, 4.1155 ringgit to the dollar on 24 November 2026. It is not the cost of training a trading model. It is the cost of one experiment against a dataset that already existed, on a card rented by the minute, and the honest version of the claim is the narrow one.
+Four cents is about sixteen sen at the rate we publish at, 4.1155 ringgit to the dollar on 24 November 2026. That four cents buys one experiment against a dataset that already existed, on a card rented by the minute. Training a trading model is a different bill, and the honest version of the claim is the narrow one.
 
 ## What to do first
 

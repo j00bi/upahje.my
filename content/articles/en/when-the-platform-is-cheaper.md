@@ -61,13 +61,13 @@ The abstraction is easier to argue with than a shop. Take one: 40 orders a week,
 | Couriers (RM8 × 173) | inside the delivery fee | RM1,384 |
 | **Merchant keeps** | **RM4,152** | **RM3,590** |
 
-Leaving costs that shop **RM562 a month**, and it has taken on the dispatch, the refunds and the phone that rings when an order is late. At the RM5 courier a city centre kitchen can find, the same shop is **RM13 a month better off** — which is to say, level, and carrying more work for the privilege.
+Leaving costs that shop **RM562 a month**, and it has taken on the dispatch, the refunds and the phone that rings when an order is late. At the RM5 courier a city centre kitchen can find, the same shop is **RM13 a month better off**, which is to say, level, and carrying more work for the privilege.
 
 That is the range the whole decision lives in: a few hundred ringgit either way, decided by one number the owner already knows, which is what their courier charges.
 
 ## The delivery fee is charged to the customer, and that changes who pays
 
-Read the screen again. The RM4.70 is added to the bill, not deducted from the merchant's side. On that order the customer paid **22.5%** on top of the food, and the merchant paid commission separately — between RM3.13 and RM5.22 on that basket, depending on which band a contract falls into.
+Read the screen again. The RM4.70 is added to the bill, not deducted from the merchant's side. On that order the customer paid **22.5%** on top of the food, and the merchant paid commission separately, between RM3.13 and RM5.22 on that basket, depending on which band a contract falls into.
 
 So the platform's revenue on a delivery order comes from two pockets, not one. That is why the comparison in the earlier pieces flatters an owned storefront: it compares the merchant's commission against the merchant's own delivery cost, and quietly leaves the customer's delivery fee out of the account.
 
@@ -86,11 +86,11 @@ At the middle of the courier range the platform is **a ringgit ahead per order**
 
 One more detail on that screen, and it is the kind that ruins a tidy comparison: **"Delivery fee calculated at 17:02:16."** The fee is computed per order, from distance, demand and rider supply, and it changes as the evening does. The same basket at 13:00 and at 19:30 can carry different fees, and the RM3.00 the app offers off delivery is a subscription subsidy, so the customer next to you paid something else for the same food.
 
-An owned shop should not imitate that. A flat delivery charge you publish — say RM5 within 5 km — is worse at surge and better in the quiet hour, and it is quotable, which the dynamic fee is not. The consequence for this comparison is that the platform's delivery number should be read as a median over a week, not as what one customer saw once. Ours came from a single screen at 17:05, and it is labelled that way everywhere in this piece.
+An owned shop should not imitate that. A flat delivery charge you publish (say RM5 within 5 km) is worse at surge and better in the quiet hour, and it is quotable, which the dynamic fee is not. The consequence for this comparison is that the platform's delivery number should be read as a median over a week, not as what one customer saw once. Ours came from a single screen at 17:05, and it is labelled that way everywhere in this piece.
 
 ## Run the counter with marketing as a variable, not a guess
 
-The break-even identity from the arithmetic piece has one term nobody in Malaysia publishes: what it costs to acquire an order. Advertising rates exist, conversion rates exist, cost per acquired customer does not — not from a platform, not from a gateway, not from a council.
+The break-even identity from the arithmetic piece has one term nobody in Malaysia publishes: what it costs to acquire an order. Advertising rates exist, conversion rates exist, cost per acquired customer does not, not from a platform, not from a gateway, not from a council.
 
 So print it as a variable. Solving for orders per month, with the RM999 annual gateway plan at RM83.25 a month, a flat FPX fee of RM1.25 and a 20% commission:
 
@@ -104,7 +104,7 @@ So print it as a variable. Solving for orders per month, with the RM999 annual g
 
 Read the "never" cells as the finding. **At a RM5 acquisition cost per order, a 20% commission on a RM20.90 or RM30 basket takes less than the payment fee plus the marketing would**, so there is no order count at which owning the checkout wins. At RM15 per order, almost nothing wins.
 
-This is the sentence the other six pieces avoided: on small baskets with paid acquisition, **the platform is not overcharging you — it is subsidising you.**
+This is the sentence the other six pieces avoided: on small baskets with paid acquisition, **the platform is not overcharging you, it is subsidising you.**
 
 ## Three receipts, and the price moved 52 points
 
@@ -123,15 +123,15 @@ That is a 52-point spread on the same kind of order in the same city in the same
 
 Two details are worth more than the totals.
 
-**The discounts all look like round promotions.** Shopee's item discount was 10% of its subtotal, its voucher a flat RM3.00, foodpanda's discount **exactly 15% of RM22.00**. Fifteen per cent is also the floor of the 15–25% band recorded in the regulator's foodpanda decision. That may be a coincidence of pricing psychology; the screens do not say who funds any of it, and this article does not guess. What it can say is what the arithmetic looks like if the shop funded both its discount and a 15% commission: on the foodpanda order, **RM3.30 + RM3.30 = RM6.60 on RM22.00, a 30% take** — and the customer still paid RM9.29 less than the menu price suggested.
+**The discounts all look like round promotions.** Shopee's item discount was 10% of its subtotal, its voucher a flat RM3.00, foodpanda's discount **exactly 15% of RM22.00**. Fifteen per cent is also the floor of the 15–25% band recorded in the regulator's foodpanda decision. That may be a coincidence of pricing psychology; the screens do not say who funds any of it, and this article does not guess. What it can say is what the arithmetic looks like if the shop funded both its discount and a 15% commission: on the foodpanda order, **RM3.30 + RM3.30 = RM6.60 on RM22.00, a 30% take**, and the customer still paid RM9.29 less than the menu price suggested.
 
-**A missing fee line is not a missing fee.** Grab's screen showed no service fee. foodpanda's showed a platform fee and a service tax as separate lines, RM0.70 together, small enough that most customers read past it. Two platforms, one of which itemises and one of which does not — and the commission, the largest number of all, is itemised by neither.
+**A missing fee line is not a missing fee.** Grab's screen showed no service fee. foodpanda's showed a platform fee and a service tax as separate lines, RM0.70 together, small enough that most customers read past it. Two platforms, one of which itemises and one of which does not, and the commission, the largest number of all, is itemised by neither.
 
 None of this decides whether to stay. It decides what you are competing against. A shop comparing its own prices to a platform's price list is comparing itself to the output of an auction it cannot see.
 
 ## The 8% SST nobody adds
 
-CHIP prints one line under its rate table that most comparisons drop: **"Transaction fees are subject to 8% SST."** An FPX payment at RM1.00 is RM1.08 charged. Billplz's page shows no such line, so whether RM1.25 includes tax is unresolved — and on a small basket the difference is not decorative.
+CHIP prints one line under its rate table that most comparisons drop: **"Transaction fees are subject to 8% SST."** An FPX payment at RM1.00 is RM1.08 charged. Billplz's page shows no such line, so whether RM1.25 includes tax is unresolved, and on a small basket the difference is not decorative.
 
 Put the 8% on the RM1.25 this table uses and the fee becomes RM1.35. At a 20% commission the RM20.90 basket moves from 29 orders to 30, and the RM30 basket stays at 18. The SST does not change the argument; it does change the answer enough that a shop sitting on 29 orders should count again.
 
@@ -178,7 +178,7 @@ Six pieces argued one direction. Read against the table above, here is what surv
 - **"An FPX payment costs RM1.25 and a commission costs 15–25%."** Survives. Both are published or recorded, and neither has moved.
 - **"At delivery the platform is competitive."** Survives, and it was the finding that made this piece necessary.
 - **"The storefront is solved; the audience is the work."** Survives, with a correction: the audience is not just work, it is **a cost that lands on the same line as the fee**, and once it exceeds about RM5 an order the storefront stops being cheaper.
-- **"One person can build and run this."** Survives technically — husnieats did — but a prototype with three dishes is not a shop at 173 orders a month. The build is cheap; the operating is not.
+- **"One person can build and run this."** Survives technically (husnieats did) but a prototype with three dishes is not a shop at 173 orders a month. The build is cheap; the operating is not.
 - **"Half your orders from a channel you own is the number to watch."** Survives, and it gains a partner: the acquisition cost per owned order. One without the other is half a measurement.
 
 That is the whole correction, stated in one paragraph so nobody has to hunt for it: we were not wrong that owning the shop got cheap, we were quiet about the marketing line, and the marketing line is where small shops lose.
@@ -195,7 +195,7 @@ Three artefacts, each checkable:
 
 Here is what we will say plainly, having spent a series arguing the other way: **for a shop under about 100 orders a month, on baskets under RM40, the platform is the cheaper shop, and leaving it to save the commission is a way to lose money slowly.**
 
-That is a wager, not a prophecy. The day a merchant shows us a rate card that says otherwise — or a Malaysian source gives that acquisition number and it comes in under RM3 — we will publish the correction and link it here.
+That is a wager, not a prophecy. The day a merchant shows us a rate card that says otherwise, or a Malaysian source gives that acquisition number and it comes in under RM3, we will publish the correction and link it here.
 
 What we will not do is print a cost per customer we have not seen, or tell anyone to leave a channel that is still filling their tables.
 

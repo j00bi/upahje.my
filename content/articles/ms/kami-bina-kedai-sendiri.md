@@ -29,7 +29,7 @@ sources:
 
 Ini bukan hujah menentang platform penghantaran. Ini demonstrasi apa yang seorang manusia kini boleh lakukan tanpanya.
 
-Kami sudah lama menulis tentang kos memiliki kedai sendiri — kadar komisen, fi pembayaran, masalah mencari pelanggan — dan tulisan itu mula terasa seperti nasihat yang belum diuji. Jadi kami bina bendanya. **husnieats** ialah kedai yang berfungsi untuk satu dapur: tiga hidangan, dimasak mengikut pesanan, ambil sendiri di Seksyen 7 atau dihantar oleh penghantar, menerima pesanan sebenar melalui laman yang berjalan atas infrastruktur kami sendiri.
+Kami sudah lama menulis tentang kos memiliki kedai sendiri (kadar komisen, fi pembayaran, masalah mencari pelanggan) dan tulisan itu mula terasa seperti nasihat yang belum diuji. Jadi kami bina bendanya. **husnieats** ialah kedai yang berfungsi untuk satu dapur: tiga hidangan, dimasak mengikut pesanan, ambil sendiri di Seksyen 7 atau dihantar oleh penghantar, menerima pesanan sebenar melalui laman yang berjalan atas infrastruktur kami sendiri.
 
 husnieats milik kami; tiada apa-apa lain dalam artikel ini milik kami.
 
@@ -37,15 +37,15 @@ husnieats milik kami; tiada apa-apa lain dalam artikel ini milik kami.
 
 Bukan halaman menu dengan pautan WhatsApp. Kedai dengan tiga sistem yang setiap perniagaan perlukan untuk mengambil wang tanpa platform:
 
-**1. Mengambil pesanan.** Menunya tiga hidangan — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — setiap satu dengan penerangan dan butang Tambah. Pelanggan memilih ambil sendiri atau penghantaran, dan harga penghantaran muncul **sebelum** mereka mengesahkan, bukan selepas.
+**1. Mengambil pesanan.** Menunya tiga hidangan. Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50, setiap satu dengan penerangan dan butang Tambah. Pelanggan memilih ambil sendiri atau penghantaran, dan harga penghantaran muncul **sebelum** mereka mengesahkan, bukan selepas.
 
-![Aliran pesanan husnieats: pilih makanan, bayar dengan DuitNow, hantar resit melalui WhatsApp — tiga langkah, tiada platform di tengah](/figures/screens/husnieats-ordering.webp)
+![Aliran pesanan husnieats: pilih makanan, bayar dengan DuitNow, hantar resit melalui WhatsApp, tiga langkah, tiada platform di tengah](/figures/screens/husnieats-ordering.webp)
 
-**2. Tiket.** Setiap pesanan mendapat tiket pendek yang boleh disebut — A001 hingga A999, kemudian B001 — kerana papan dapur dan telefon penghantar kedua-duanya perlukan rujukan yang boleh dijerkapkan merentas bilik. Pautan pelanggan pula menggunakan token rawak berasingan, kerana nombor berturutan boleh diteka dan URL awam tidak boleh begitu.
+**2. Tiket.** Setiap pesanan mendapat tiket pendek yang boleh disebut (A001 hingga A999, kemudian B001) kerana papan dapur dan telefon penghantar kedua-duanya perlukan rujukan yang boleh dijerkapkan merentas bilik. Pautan pelanggan pula menggunakan token rawak berasingan, kerana nombor berturutan boleh diteka dan URL awam tidak boleh begitu.
 
 **3. Rekonsiliasi pembayaran.** Pelanggan mengimbas kod QR DuitNow, membayar jumlah tepat yang dipaparkan pesanan, dan menghantar resit melalui WhatsApp. Seorang manusia memeriksanya, kemudian dapur mula memasak. Itulah keseluruhan tindanan pembayaran: satu kod QR, satu mesej, sepasang mata.
 
-Pesanan dan penghantaran dijejak sebagai dua keadaan berasingan, kerana pesanan ambil sendiri tiada penghantar untuk ditunggu. Dan wang disimpan sebagai sen integer, dibundarkan kepada sepuluh sen terdekat — jumlah terkecil yang muncul pada bil Malaysia — bukan perpuluhan yang terhanyut.
+Pesanan dan penghantaran dijejak sebagai dua keadaan berasingan, kerana pesanan ambil sendiri tiada penghantar untuk ditunggu. Dan wang disimpan sebagai sen integer, dibundarkan kepada sepuluh sen terdekat (jumlah terkecil yang muncul pada bil Malaysia) bukan perpuluhan yang terhanyut.
 
 ![Menu husnieats pada lebar mudah alih: tiga hidangan, harga, butang tambah. Satu dapur, tiga hidangan, kerana itulah yang boleh dimasak dengan betul mengikut pesanan](/figures/screens/husnieats-menu.webp)
 
@@ -70,16 +70,16 @@ Menyebut perkara ini ialah intinya. Demonstrasi yang menyembunyikan tepinya iala
 
 ## Apa yang diperlukan untuk buat sendiri
 
-Tidak banyak, dan kurang daripada jangkaan kebanyakan orang:
+Tidak banyak. Empat perkara, tiada satu pun luar biasa:
 
-1. **Tempat untuk meletakkannya.** Domain dan hos. Tindanan di sini sengaja biasa — aplikasi web dan pangkalan data, kedua-duanya boleh dihos sendiri — kerana intinya kebolehulangan, bukan kepintaran.
+1. **Tempat untuk meletakkannya.** Domain dan hos. Tindanan di sini sengaja biasa, aplikasi web dan pangkalan data, kedua-duanya boleh dihos sendiri, kerana intinya kebolehulangan, bukan kepintaran.
 2. **Cara mengambil wang.** Kod QR DuitNow tiada kos untuk dipaparkan dan tiada kos untuk menerima. Gerbang ialah peningkatan, bukan titik mula.
 3. **Saluran untuk resit.** WhatsApp, yang pelanggan anda sudah guna dan sudah percaya.
 4. **Disiplin.** Tulis pesanan, periksa bayaran, tanda sedang dimasak, tanda siap. Perisian tidak menghapuskan langkah ini; ia hanya mempercepatkannya.
 
 ## Idea yang sama pada skala komersial
 
-husnieats ialah prototaip. **mejamakan** ialah bentuk yang sama dengan perniagaan di belakangnya: operasi penghantaran lauk di KL dan Selangor yang menjalankan laman sendiri, menu mingguan dikurasi mengikut hari, akaun di domain sendiri, "From RM18/meal", penghantaran Isnin hingga Jumaat, dan pelan yang diperbaharui pelanggan — langganan, bukan pesanan sekali. Laman mereka melaporkan 3,000+ keluarga telah dilayani.
+husnieats ialah prototaip. **mejamakan** ialah bentuk yang sama dengan perniagaan di belakangnya: operasi penghantaran lauk di KL dan Selangor yang menjalankan laman sendiri, menu mingguan dikurasi mengikut hari, akaun di domain sendiri, "From RM18/meal", penghantaran Isnin hingga Jumaat, dan pelan yang diperbaharui pelanggan, langganan, bukan pesanan sekali. Laman mereka melaporkan 3,000+ keluarga telah dilayani.
 
 Dua contoh, satu kecil dan satu berniaga: seorang individu boleh menegakkan kedai, dan sebuah dapur boleh menjalankannya secara komersial. Kedua-duanya tidak perlukan marketplace di tengah untuk menerima pesanan.
 
@@ -87,7 +87,7 @@ Dua contoh, satu kecil dan satu berniaga: seorang individu boleh menegakkan keda
 
 Hujah komisen ialah aritmetik, dan aritmetik boleh dibahaskan: platform membawa pelanggan, fi itu membayar jangkauan, dan pada volum rendah matematiknya sering menyebelahi kekal. Baik.
 
-Demonstrasi berbeza. Ia mengatakan keupayaan bukan lagi penghalang. Sepuluh tahun lalu, menerima pesanan dalam talian bermakna sama ada marketplace atau pembangun dan kos lima angka. Hari ini ia bermakna domain, kod QR dan satu hujung minggu — dan satu-satunya yang tinggal ialah bahagian yang tiada perisian boleh jual, iaitu membuat orang berjalan masuk ke pintu.
+Demonstrasi berbeza. Ia mengatakan keupayaan bukan lagi penghalang. Sepuluh tahun lalu, menerima pesanan dalam talian bermakna sama ada marketplace atau pembangun dan kos lima angka. Hari ini ia bermakna domain, kod QR dan satu hujung minggu, dan satu-satunya yang tinggal ialah bahagian yang tiada perisian boleh jual, iaitu membuat orang berjalan masuk ke pintu.
 
 **Jadi: kedai sudah selesai. Khalayak itulah kerjanya.**
 

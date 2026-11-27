@@ -57,7 +57,7 @@ Itulah dagangan siri ini, dan ia bukan slogan pada mana-mana arah. Memiliki keda
 
 Dua perkhidmatan berada dalam satu komisen. Yang pertama mesin tunai: borang pesanan, bayaran, resit. Yang kedua penemuan: senarai tempat orang yang lapar dan tidak pernah mendengar nama anda boleh menemuinya, membandingkannya dan memesan.
 
-Hanya yang pertama boleh dibeli pada harga yang diterbitkan hari ini. Bayaran FPX berharga RM1.00 di CHIP atau RM0.75 hingga RM1.25 di Billplz bergantung pada pelan, dan ia masuk pada hari perniagaan berikutnya. Bayaran kad berharga peratusan — 2.0% di CHIP, 3% campur RM1.00 di Stripe — dan masuk dalam dua hari perniagaan di CHIP dan Billplz, tetapi Stripe membayar keluar mengikut tetapan bergulir, mingguan atau bulanan, dengan CHIP mencatat fi transaksinya tertakluk SST 8%.
+Hanya yang pertama boleh dibeli pada harga yang diterbitkan hari ini. Bayaran FPX berharga RM1.00 di CHIP atau RM0.75 hingga RM1.25 di Billplz bergantung pada pelan, dan ia masuk pada hari perniagaan berikutnya. Bayaran kad berharga peratusan (2.0% di CHIP, 3% campur RM1.00 di Stripe) dan masuk dalam dua hari perniagaan di CHIP dan Billplz, tetapi Stripe membayar keluar mengikut tetapan bergulir, mingguan atau bulanan, dengan CHIP mencatat fi transaksinya tertakluk SST 8%.
 
 Penemuan tiada harga yang diterbitkan di mana-mana halaman yang dibaca untuk siri ini. Tiada platform, gerbang atau majlis mencetak kos mendapatkan seorang pelanggan makanan, dan artikel ini tidak akan menciptanya.
 
@@ -76,7 +76,7 @@ Fi tetap dan peratusan bergerak pada arah bertentangan apabila bakul membesar. F
 
 Pada bakul RM30, fi FPX CHIP ialah RM1.00 dan fi kadnya RM0.60 sebelum SST, kira-kira RM0.65 dengannya. Kad lebih murah setiap transaksi pada bakul itu. Pada bakul RM150, FPX kekal RM1.00 dan fi kad RM3.00, atau RM3.24 dengan SST. Fi tetap berhenti bermakna; peratusan tidak.
 
-Penyelesaian ialah sifat kaedah, bukan gerbang. Penyedia yang sama mencetak hari berikutnya untuk FPX dan dua hari perniagaan untuk kad, dan jadual pembayaran Stripe ialah tetapan — bergulung, mingguan atau bulanan — bukan terma. Kedai yang merancang aliran tunai daripada angka "X hari" sedang merancang daripada baris yang salah.
+Penyelesaian ialah sifat kaedah, bukan gerbang. Penyedia yang sama mencetak hari berikutnya untuk FPX dan dua hari perniagaan untuk kad, dan jadual pembayaran Stripe ialah tetapan (bergulung, mingguan atau bulanan) bukan terma. Kedai yang merancang aliran tunai daripada angka "X hari" sedang merancang daripada baris yang salah.
 
 ## Komisen satu-satunya angka yang tiada siapa terbitkan
 
@@ -101,7 +101,7 @@ Kedai yang membaca hanya perkara pertama akan membina checkout dan tertanya-tany
 
 ## Jadual titik pulang modal
 
-Persamaan itu ada dua sebelah. Platform mengambil peratusan bakul. Mesin tunai anda sendiri mengambil fi bayaran, kos tetap bulanan dan — istilah yang selalu ditinggalkan — pemasaran yang kini menggantikan penemuan platform.
+Persamaan itu ada dua sebelah. Platform mengambil peratusan bakul. Mesin tunai anda sendiri mengambil fi bayaran, kos tetap bulanan dan (istilah yang selalu ditinggalkan) pemasaran yang kini menggantikan penemuan platform.
 
 `komisen × bakul × pesanan = fi bayaran × pesanan + kos tetap + pemasaran`
 
@@ -115,13 +115,13 @@ Jadual menyelesaikan bahagian fi sahaja, dengan kos bulanan RM150 dan bakul pura
 
 Pada hujung atas jalur terluas pengawal selia, memiliki mengalahkan komisen selepas kira-kira **23 pesanan sebulan**. Pada hujung bawah jalur tersempit ia mengambil **200** pada pelan FPX termurah dan **600** pada pelan percuma. Jurang itu seluruh hujahnya: kadar komisen menentukan sama ada memiliki kedai ialah baki kecil atau perniagaan yang berbeza.
 
-Dua penambahbaikan penting. Pelan Billplz RM999 membayar dirinya pada kira-kira **2,000 pesanan FPX setahun**, tempat RM0.50 yang dijimatkan setiap transaksi menampung fi tahunan. Dan apabila komisen pada bakul lebih kecil daripada fi FPX tetap, tiada bilangan pesanan pulang modal — keputusan yang berbaloi diketahui sebelum membina checkout.
+Dua penambahbaikan penting. Pelan Billplz RM999 membayar dirinya pada kira-kira **2,000 pesanan FPX setahun**, tempat RM0.50 yang dijimatkan setiap transaksi menampung fi tahunan. Dan apabila komisen pada bakul lebih kecil daripada fi FPX tetap, tiada bilangan pesanan pulang modal, keputusan yang berbaloi diketahui sebelum membina checkout.
 
 Identiti di sebalik baris ini diterbitkan dalam [Aritmetik komisen di sebalik memiliki kedai sendiri](https://upahje.my/ms/articles/aritmetik-komisen): halaman ini menyatakan hasilnya, halaman itu menunjukkan algebranya.
 
 ## Timbunan lesen datang dahulu, dan kebanyakannya tiada harga
 
-Sebelum aritmetik fi, ada bil pembukaan. Dua majlis mencetak fi terperinci, dan kedua-duanya lebih sempit daripada sangkaan pembaca. MBSA mencetak pemprosesan permohonan RM50.00 untuk perniagaan dan RM100.00 untuk perindustrian, plet lesen RM7.00 dan stiker RM5.00 — tiada satu pun lesen premis tahunan. MBPJ mencetak fi papan tanda: RM100.00 setahun tidak berlampu sehingga 8 m², RM10.00 bagi setiap meter persegi tambahan, RM150.00 berlampu dengan RM15.00 tambahan, RM200.00 untuk iklan jenis logo, RM20.00 setiap unit logo tambahan, dan caj pentadbiran RM25.00.
+Sebelum aritmetik fi, ada bil pembukaan. Dua majlis mencetak fi terperinci, dan kedua-duanya lebih sempit daripada sangkaan pembaca. MBSA mencetak pemprosesan permohonan RM50.00 untuk perniagaan dan RM100.00 untuk perindustrian, plet lesen RM7.00 dan stiker RM5.00, tiada satu pun lesen premis tahunan. MBPJ mencetak fi papan tanda: RM100.00 setahun tidak berlampu sehingga 8 m², RM10.00 bagi setiap meter persegi tambahan, RM150.00 berlampu dengan RM15.00 tambahan, RM200.00 untuk iklan jenis logo, RM20.00 setiap unit logo tambahan, dan caj pentadbiran RM25.00.
 
 Pendaftaran perniagaan ialah bahagian lain yang berharga: RM60 setahun bagi nama dagang, RM30 bagi nama sendiri, RM5 setiap cawangan, atau RM1,000 untuk memperbadankan Sdn Bhd.
 

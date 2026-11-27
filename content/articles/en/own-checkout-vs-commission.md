@@ -27,9 +27,9 @@ sources:
 
 # RM1.25 or 15%: what your own checkout costs
 
-Two shops sell the same RM30 plate. One takes the order on its own site and pays **RM1.25** to collect the money. The other takes the order through a delivery platform that takes **15% to 25%** of the bill — between RM4.50 and RM7.50.
+Two shops sell the same RM30 plate. One takes the order on its own site and pays **RM1.25** to collect the money. The other takes the order through a delivery platform that takes **15% to 25%** of the bill, between RM4.50 and RM7.50.
 
-That gap is the whole argument for owning your own shop, and it is the reason the argument is more complicated than it sounds. Because the platform is not only charging you for payments. It is charging you for customers.
+That gap is the whole argument for owning your own shop, and it is the reason the argument is more complicated than it sounds. Because the platform charges you twice: once for payments, and once for customers.
 
 ## The two rates, from the pages that print them
 
@@ -45,7 +45,7 @@ Payment gateways publish their prices. We read Billplz's pricing page on 26 Nove
 
 Delivery platforms do not publish merchant commission. Grab and foodpanda have no public rate card for merchants, which is why the numbers in this article come from a regulator rather than a vendor: the Malaysia Competition Commission's decision on foodpanda, dated 11 September 2023, records commission bands in its Table 3 of **1–5%, 10–25%, 15–20% and 15–25%** depending on the service. Those are five anonymised franchised merchant contracts (n=5), not a platform's current rate card.
 
-Those are recorded ranges from three years ago, not today's quoted rate. Any specific figure for your shop has to come from the contract someone puts in front of you — and that, on its own, tells you something about the two markets.
+Those are recorded ranges from three years ago, not today's quoted rate. Any specific figure for your shop has to come from the contract someone puts in front of you, and that, on its own, tells you something about the two markets.
 
 ## The same order, costed twice
 
@@ -58,7 +58,7 @@ One RM30 order, no delivery:
 | You keep | RM28.75 | RM25.50 | RM22.50 |
 | Cost as a share | 4.2% | 15% | 25% |
 
-At 15%, the platform costs **3.6 times** what an FPX payment costs. At 25%, **six times**. Over a hundred orders a month that is the difference between RM2,875 and RM2,250 kept — RM625 a month, RM7,500 a year, on a shop doing RM3,000 of revenue a month.
+At 15%, the platform costs **3.6 times** what an FPX payment costs. At 25%, **six times**. Over a hundred orders a month that is the difference between RM2,875 and RM2,250 kept. RM625 a month, RM7,500 a year, on a shop doing RM3,000 of revenue a month.
 
 Now the same order delivered, because this is where the comparison usually gets dishonest. A platform's commission covers a rider. Your own checkout does not:
 
@@ -77,10 +77,10 @@ Now the same order delivered, because this is where the comparison usually gets 
 
 mejamakan is a lauk delivery business in KL and Selangor that runs its own site instead of a platform page. What is publicly observable on 26 November 2026:
 
-- A curated **weekly menu**, dishes grouped by day, tagged protein and vegetables, with rice as an add-on
+- **A curated weekly menu**, dishes grouped by day, tagged protein and vegetables, with rice as an add-on
 - **Accounts and ordering on their own domain**, not a redirect to a marketplace
 - **"From RM18/meal"** shown before checkout
-- **Delivery Monday to Friday**, and a plan you **renew** — a subscription, not a one-off order
+- **Delivery Monday to Friday**, and a plan you **renew**, a subscription, not a one-off order
 - **"3,000+ families served"**, their own figure, quoted as theirs
 - Instagram as the front door: 16K followers, which is where the traffic comes from
 
@@ -88,7 +88,7 @@ mejamakan is a lauk delivery business in KL and Selangor that runs its own site 
 
 That last point is the part nobody puts in the pitch deck. The website is the checkout. The audience is the business.
 
-We built the cheaper version of the same thing ourselves, and wrote it up separately: [One person, one kitchen](https://upahje.my/en/articles/we-built-our-own-storefront). husnieats is a one-person kitchen site with three dishes — Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50 — and its payment flow is **a DuitNow QR code and a WhatsApp receipt**. No gateway, no commission, no platform: the fee is zero and the cost is a human checking the transfer before the kitchen starts. At three dishes and a handful of orders a day, that trade is correct. At fifty orders a day it stops being correct, because the human becomes the bottleneck.
+We built the cheaper version of the same thing ourselves, and wrote it up separately: [One person, one kitchen](https://upahje.my/en/articles/we-built-our-own-storefront). husnieats is a one-person kitchen site with three dishes. Buttermilk Chicken RM12.90, Korean Chicken RM13.90, Teh O RM3.50, and its payment flow is **a DuitNow QR code and a WhatsApp receipt**. No gateway, no commission, no platform: the fee is zero and the cost is a human checking the transfer before the kitchen starts. At three dishes and a handful of orders a day, that trade is correct. At fifty orders a day it stops being correct, because the human becomes the bottleneck.
 
 ## The arithmetic that decides it
 
@@ -99,7 +99,7 @@ Write down four numbers:
 1. **Orders a month.** Ours: whatever your till says.
 2. **Average bill.** Higher bills make percentage commission hurt more; lower bills make per-transaction fees hurt more.
 3. **Commission rate** from your actual contract, not a blog.
-4. **Your payment cost** — RM1.25 an order on FPX, or 1.8% on cards.
+4. **Your payment cost**. RM1.25 an order on FPX, or 1.8% on cards.
 
 Break-even orders a month, ignoring delivery:
 
@@ -119,7 +119,7 @@ Two things follow from the columns. First, the commission rate decides whether o
 
 ## What we would tell a shop with three dishes
 
-Stay on the platform for delivery, because the rider is the expensive part and they buy it in bulk. Put your own checkout in front of the customers who already know you — the ones who order every week, who message you directly, who would rather pay RM1.25 of fees than see you lose RM7.50 of margin.
+Stay on the platform for delivery, because the rider is the expensive part and they buy it in bulk. Put your own checkout in front of the customers who already know you, the ones who order every week, who message you directly, who would rather pay RM1.25 of fees than see you lose RM7.50 of margin.
 
 Then watch one number: **how many of your orders arrive through a channel you own**. When that share passes half, the platform is a delivery contractor rather than a shopfront, and the commission conversation changes completely.
 

@@ -57,7 +57,7 @@ Backtest bukan bukti. Ini pintu yang digunakan sebelum strategi dibenarkan melep
 3. **Sekurang-kurangnya 20 dagangan**, kerana sepuluh dagangan ialah anekdot dengan carta.
 4. **Bertahan sepanjang tetingkap**, termasuk bulan-bulan strategi itu tidak berbuat apa-apa.
 
-Tambah pengukuran susutan — berapa lama kelebihan itu bertahan, bukan sekadar sama ada ia muncul — dan strategi yang lulus keempat-empatnya masih hanya calon. Dagangan kertas datang selepas itu, dan ia bukan pilihan, kerana gelinciran dan pengisian ialah tempat backtest mati.
+Tambah pengukuran susutan, berapa lama kelebihan itu bertahan, bukan sekadar sama ada ia muncul, dan strategi yang lulus keempat-empatnya masih hanya calon. Dagangan kertas datang selepas itu, dan ia bukan pilihan, kerana gelinciran dan pengisian ialah tempat backtest mati.
 
 ## Apa kosnya kepada pengendali kecil
 
@@ -73,7 +73,7 @@ Kebanyakan projek melangkau itu dan membeli model sebagai gantinya. Itulah sebab
 4. Tulis keempat-empat pintu sebelum anda melihat angka, supaya anda tidak boleh mengalihkannya kemudian.
 5. Dagang kertas selama sebulan, dan rekod pengisian dan bukan harga.
 
-Bot itu bahagian mudah untuk dibina dan paling mudah untuk disalah anggap. Kerja yang menentukan sama ada ia menjana wang berlaku sebelum satu pesanan pun dihantar, dalam hamparan yang kebanyakan orang langkau kerana ia tidak seseronok gelung latihan.
+Bot itu bahagian mudah untuk dibina dan paling mudah untuk disalah anggap. Kerja yang menentukan sama ada ia menjana wang berlaku sebelum satu pesanan pun dihantar, dalam hamparan yang kurang menyeronokkan daripada gelung latihan, dan dilangkau kerana itu.
 
 ---
 

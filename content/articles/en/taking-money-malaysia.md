@@ -33,13 +33,13 @@ sources:
 
 # FPX costs a ringgit; cards cost 2% to 3%
 
-Two payment methods, two shapes of cost. An FPX payment is a flat **RM1.00** at CHIP or **RM0.75** to **RM1.25** at Billplz depending on the plan, and it lands in your account the next business day. A card payment is a percentage — **2.0%** on credit at CHIP, **3% plus RM1.00** at Stripe — and it settles in **two business days**. The fee is the visible difference. The two-day gap is the one that hurts a shop with thin cash.
+Two payment methods, two shapes of cost. An FPX payment is a flat **RM1.00** at CHIP or **RM0.75** to **RM1.25** at Billplz depending on the plan, and it lands in your account the next business day. A card payment is a percentage (**2.0%** on credit at CHIP, **3% plus RM1.00** at Stripe) and it settles in **two business days**. The fee is the visible difference. The two-day gap is the one that hurts a shop with thin cash.
 
 ## The fee shape decides the basket size it suits
 
 A flat fee hurts small baskets and is irrelevant on a large one. A percentage is the reverse.
 
-On a RM30 basket, CHIP's FPX fee is RM1.00, or 3.3% of the bill. Its credit-card fee is RM0.60, or 2.0%. The card is cheaper per transaction at RM30 — and then CHIP's own note applies: "Transaction fees are subject to 8% SST", which takes the card fee to about RM0.65.
+On a RM30 basket, CHIP's FPX fee is RM1.00, or 3.3% of the bill. Its credit-card fee is RM0.60, or 2.0%. The card is cheaper per transaction at RM30, and then CHIP's own note applies: "Transaction fees are subject to 8% SST", which takes the card fee to about RM0.65.
 
 On a RM150 basket the relationship flips hard: FPX stays RM1.00, while the card fee is RM3.00, or RM3.24 with SST. The percentage does not care that the basket grew; it grows with it.
 
@@ -70,7 +70,7 @@ Those three are quote-based. A shop comparing six gateways on price is comparing
 
 A shop taking RM1,000 a day on cards has RM2,000 in transit on any given day, and that money is not in the account when the supplier invoice arrives on the second day. On FPX the same shop has one day of transit instead.
 
-That is the cash-flow bite: not the 2% fee, which the customer effectively pays in the basket, but the gateway's payout term on cards — two business days at CHIP and Billplz, a rolling weekly or monthly schedule at Stripe.
+That is the cash-flow bite: not the 2% fee, which the customer effectively pays in the basket, but the gateway's payout term on cards, two business days at CHIP and Billplz, a rolling weekly or monthly schedule at Stripe.
 
 ## What to do before you pick one
 

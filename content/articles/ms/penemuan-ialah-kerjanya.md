@@ -33,7 +33,7 @@ sources:
 
 # Kedai itu mesin tunai, bukan khalayak
 
-Memiliki kedai menukar siapa yang menerima bayaran. Ia tidak menukar siapa yang menemui anda. Platform menjual dua perkara dalam satu invois: perisian yang menerima pesanan, dan pelanggan yang tiba tanpa anda membayar untuk mereka. Perisian itu kini murah — RM1.25 satu pembayaran FPX — dan pelanggan itu tidak pernah menjadi perisian.
+Memiliki kedai menukar siapa yang menerima bayaran, bukan siapa yang menemui anda. Platform menjual dua perkara dalam satu invois: perisian yang menerima pesanan, dan pelanggan yang tiba tanpa anda membayar untuk mereka. Perisian itu kini murah (RM1.25 satu pembayaran FPX) dan pelanggan itu tidak pernah menjadi perisian.
 
 ## Komisen itu membeli penemuan
 
@@ -65,7 +65,7 @@ Baris ketiga itulah yang menentukan siri ini. Segala yang platform cajkan kecual
 
 mejamakan, perniagaan penghantaran lauk di KL dan Selangor, menjalankan laman sendiri dan bukan halaman platform. Pada 26 November 2026 lamannya menunjukkan menu mingguan, akaun dan pesanan pada domain sendiri, "from RM18/meal", penghantaran hari bekerja dan pelan yang diperbaharui, dengan Instagram sebagai pintu depan pada **16K pengikut**.
 
-Bilangan pengikut itu bahagian yang boleh diperhatikan, dan ia juga had jujur artikel ini: pengikut bukan pesanan, dan Instagram tidak menerbitkan kadar penukaran. Apa yang contoh itu tunjukkan ialah di mana khalayak itu tinggal — saluran yang dikawal kedai — bukan berapa kos membinanya.
+Bilangan pengikut itu bahagian yang boleh diperhatikan, dan ia juga had jujur artikel ini: pengikut bukan pesanan, dan Instagram tidak menerbitkan kadar penukaran. Apa yang contoh itu tunjukkan ialah di mana khalayak itu tinggal (saluran yang dikawal kedai) bukan berapa kos membinanya.
 
 ## Separuh ialah angka yang perlu diperhatikan
 

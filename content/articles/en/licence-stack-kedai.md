@@ -33,7 +33,7 @@ sources:
 
 # The licence stack a kedai pays, and two councils' fee lists
 
-The money in opening a kedai goes into the licence stack and the fit-out, not the website. Two councils publish itemised fees that can be read today — MBSA in Shah Alam and MBPJ in Petaling Jaya — and both are narrower than they look: one prints processing and sticker fees, the other prints signboard fees, and neither prints the annual premises licence itself.
+The money in opening a kedai goes into the licence stack and the fit-out, not the website. Two councils publish itemised fees that can be read today (MBSA in Shah Alam and MBPJ in Petaling Jaya) and both are narrower than they look: one prints processing and sticker fees, the other prints signboard fees, and neither prints the annual premises licence itself.
 
 ## Two councils print two kinds of fee
 
@@ -63,7 +63,7 @@ Calling either of these the licence fee is the mistake this table exists to prev
 
 ## Two parts carry a published fee, and three do not
 
-A food premises licence stack in Malaysia is not one document. It is at least five, and the business registration is the one part you can price from a published fee before you talk to anyone:
+A food premises licence stack in Malaysia runs to at least five documents, and the business registration is the one part you can price from a published fee before you talk to anyone:
 
 1. **Business registration** with SSM: RM60 a year for a trade name, RM30 for a personal name, RM5 per branch, or RM1,000 to incorporate a Sdn Bhd.
 2. **Premises licence** from the council, which depends on the premises type, the floor area and the kitchen.

@@ -27,7 +27,7 @@ sources:
 
 # A 9-ending works on new items. Nobody has proved the rest.
 
-A 9 at the end of a price tag is the most common pricing move in Malaysian retail and the least tested one. The best evidence is three American field experiments published in 2003: the $9 ending "increased demand in all three experiments", the lift was strongest on items the retailer had not sold before, and the authors note it weakens once a sale sticker is already doing the work. No effect size is published. No Malaysian experiment exists. So the honest reading is narrow — it can move a new item, and nobody knows by how much.
+A 9 at the end of a price tag is the most common pricing move in Malaysian retail and the least tested one. The best evidence is three American field experiments published in 2003: the $9 ending "increased demand in all three experiments", the lift was strongest on items the retailer had not sold before, and the authors note it weakens once a sale sticker is already doing the work. No effect size is published. No Malaysian experiment exists. So the honest reading is narrow, it can move a new item, and nobody knows by how much.
 
 ## What the three experiments found
 

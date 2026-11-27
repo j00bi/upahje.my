@@ -36,11 +36,11 @@ Tujuannya bukan menguji setiap pesanan yang mungkin diterima. Ia menjawab satu s
 
 ## Tulis jumlah yang dijangka dahulu
 
-Pilih kombinasi yang anda jangka pelanggan pertama akan guna, kemudian tulis angkanya: harga barang, sebarang diskaun, caj penghantaran, jumlah akhir. Tulis juga apa yang anda jangka lihat selepas itu — di mana pengesahan pembeli muncul, di mana pesanan sampai kepada anda, dan apa yang menandakan ia sedia dipenuhi.
+Pilih kombinasi yang anda jangka pelanggan pertama akan guna, kemudian tulis angkanya: harga barang, sebarang diskaun, caj penghantaran, jumlah akhir. Tulis juga apa yang anda jangka lihat selepas itu, di mana pengesahan pembeli muncul, di mana pesanan sampai kepada anda, dan apa yang menandakan ia sedia dipenuhi.
 
 Jumlah yang sudah ditulis itulah yang menjadikan ini ujian. Tanpanya, anda hanya memuji skrin, bukan membandingkannya dengan sesuatu yang bebas.
 
-Jika penyedia bayaran menyediakan mod ujian, gunakannya — dengan satu amaran yang kerap disalah faham. Bayaran mod ujian menguji aliran, dan ia **tidak** membuktikan wang sebenar akan masuk ke akaun anda. Stripe menyatakannya dengan jelas: transaksi ujian tidak memindahkan dana. Catat mod mana yang anda gunakan, supaya ujian yang lulus tidak dibaca sebagai aliran tunai yang berfungsi.
+Jika penyedia bayaran menyediakan mod ujian, gunakannya, dengan satu amaran yang kerap disalah faham. Bayaran mod ujian menguji aliran, dan ia **tidak** membuktikan wang sebenar akan masuk ke akaun anda. Stripe menyatakannya dengan jelas: transaksi ujian tidak memindahkan dana. Catat mod mana yang anda gunakan, supaya ujian yang lulus tidak dibaca sebagai aliran tunai yang berfungsi.
 
 ## Buat pesanan dari telefon, tanpa log masuk
 
@@ -52,7 +52,7 @@ Selesaikan checkout tanpa berpindah ke papan pemuka untuk mengisi sesuatu yang p
 - **Butiran penyerahan lengkap.** Untuk penghantaran, pembeli boleh memasukkan alamat yang boleh anda guna. Untuk ambil sendiri, pembeli tahu ke mana hendak pergi dan sama ada perlu menunggu mesej.
 - **Jumlah sepadan dengan catatan anda.** Jika anda tulis RM43 dan skrin menunjukkan RM35 atau RM51, berhenti dan cari puncanya sebelum menguji perkara lain.
 
-Kemudian duduk di sisi pembeli seketika. Bolehkah anda tahu sama ada pesanan diterima, sama ada bayaran selesai atau masih tertunggak, dan apa yang berlaku seterusnya? Jika kedai menjanjikan e-mel atau mesej, pastikan ia tiba dan menyatakan perkara yang sama seperti skrin pengesahan. Simpan rujukan pesanan — anda perlukannya pada langkah seterusnya.
+Kemudian duduk di sisi pembeli seketika. Bolehkah anda tahu sama ada pesanan diterima, sama ada bayaran selesai atau masih tertunggak, dan apa yang berlaku seterusnya? Jika kedai menjanjikan e-mel atau mesej, pastikan ia tiba dan menyatakan perkara yang sama seperti skrin pengesahan. Simpan rujukan pesanan, anda perlukannya pada langkah seterusnya.
 
 ## Cari pesanan itu di tempat anda benar-benar bekerja
 
@@ -64,7 +64,7 @@ Padankan rujukan, barang dan kuantiti, jumlah, serta butiran penyerahan. Kemudia
 
 Ini dua fakta berbeza dan troli beli-belah suka mengaburkannya.
 
-Jika anda menerima bayaran di hadapan, semak sistem yang anda percayai untuk pengesahan bayaran dan pastikan status itu milik pesanan **ini** — bukan pesanan sebelumnya. Jika anda menerima bayaran semasa ambil sendiri atau penghantaran, pastikan pesanan menyatakan dengan jelas bahawa bayaran masih tertunggak dan bila ia perlu dikutip.
+Jika anda menerima bayaran di hadapan, semak sistem yang anda percayai untuk pengesahan bayaran dan pastikan status itu milik pesanan **ini**, bukan pesanan sebelumnya. Jika anda menerima bayaran semasa ambil sendiri atau penghantaran, pastikan pesanan menyatakan dengan jelas bahawa bayaran masih tertunggak dan bila ia perlu dikutip.
 
 Masa penyelesaian menjadikan ini lebih tajam daripada bunyinya. FPX dijelaskan hari bekerja berikutnya; bayaran kad dijelaskan dalam dua hari bekerja di [CHIP dan Billplz](https://upahje.my/ms/articles/mengambil-bayaran-malaysia). Pesanan boleh duduk di peti masuk anda kelihatan sudah dibayar sedangkan wangnya masih dalam perjalanan, dan bayaran balik yang dibuat pada hari sama berkelakuan lain lagi.
 
@@ -81,7 +81,7 @@ Anda tidak perlu menghantar bungkusan. Berhenti apabila anda boleh menyatakan ti
 
 Jika satu gagal, betulkan dan jalankan semula laluan itu dari telefon. Mengedit perkataan di skrin admin bukan sama dengan melihatnya pada pesanan baharu.
 
-Jika keenam-enamnya lulus, catat dengan tepat apa yang diuji: produk, kaedah bayaran, dan pilihan penghantaran atau ambil sendiri. Pesanan ambil sendiri yang lulus tidak berkata apa-apa tentang caj penghantaran, dan bayaran mod ujian yang lulus tidak berkata apa-apa tentang penyelesaian sebenar. Senarai semak ini kekal berguna setiap kali anda menukar kaedah bayaran, caj penghantaran atau mesej pengesahan — kerana kegagalan yang anda cuba elakkan ialah pelanggan yang menemui perubahan itu sebelum anda.
+Jika keenam-enamnya lulus, catat dengan tepat apa yang diuji: produk, kaedah bayaran, dan pilihan penghantaran atau ambil sendiri. Pesanan ambil sendiri yang lulus tidak berkata apa-apa tentang caj penghantaran, dan bayaran mod ujian yang lulus tidak berkata apa-apa tentang penyelesaian sebenar. Senarai semak ini kekal berguna setiap kali anda menukar kaedah bayaran, caj penghantaran atau mesej pengesahan, kerana kegagalan yang anda cuba elakkan ialah pelanggan yang menemui perubahan itu sebelum anda.
 
 ---
 

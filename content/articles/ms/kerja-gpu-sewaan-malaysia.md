@@ -32,7 +32,7 @@ sources:
 
 GPU sewaan ialah alat dengan satu bentuk: ia sangat baik untuk kerja yang bermula, siap, dan berhenti. Semua dalam artikel ini disusun mengikut bentuk itu. Jika kerja ada permulaan dan pengakhiran, menyewa kad untuknya kini cukup murah sehingga tidak perlu difikirkan panjang. Jika kerja perlu berjaga pada pukul tiga pagi, sewa biasanya jawapan yang salah dan API biasanya jawapan yang betul.
 
-Kadar yang dibaca dari Vast.ai hari ini: RTX 5060 Ti dengan 16 GB VRAM bermula USD 0.09 sejam, median USD 0.13, iaitu sekitar 55 sen sejam pada kadar yang kami terbitkan. H100 SXM ialah USD 1.73, kira-kira RM7.12. Setiap kos di sini ialah kadar itu didarab dengan masa anda — satu formula, bukan sebut harga, kerana set data anda bukan set data kami.
+Kadar yang dibaca dari Vast.ai hari ini: RTX 5060 Ti dengan 16 GB VRAM bermula USD 0.09 sejam, median USD 0.13, iaitu sekitar 55 sen sejam pada kadar yang kami terbitkan. H100 SXM ialah USD 1.73, kira-kira RM7.12. Setiap kos di sini ialah kadar itu didarab dengan masa anda, satu formula, bukan sebut harga, kerana set data anda bukan set data kami.
 
 ## Tangga VRAM, yang menentukan apa yang boleh dicuba
 
@@ -67,7 +67,7 @@ Setiap baris ialah kerja yang kami akan sewa kad untuknya. Masa ialah julat real
 | 11 | Render animasi Blender atau CAD merentas banyak bingkai | 2–12 jam | USD 0.26–1.56 |
 | 12 | Proses kelompok imej: saiz semula, buang latar, tanda air | 20–60 min | USD 0.04–0.13 |
 
-Baca lajur kanan dua kali. Dua belas kerja, dan yang paling mahal dalam jadual pun bawah dua ringgit. Sebab untuk berfikir tentang perkara ini bukan wangnya — tetapi kad yang terlupa dimatikan dibil 24 jam sehari, dan kad yang dibiarkan hidup sebulan berharga USD 94, lebih daripada setahun API yang anda cuba elakkan.
+Baca lajur kanan dua kali. Dua belas kerja, dan yang paling mahal dalam jadual pun bawah dua ringgit. Sebab untuk berfikir tentang perkara ini bukan wangnya, tetapi kad yang terlupa dimatikan dibil 24 jam sehari, dan kad yang dibiarkan hidup sebulan berharga USD 94, lebih daripada setahun API yang anda cuba elakkan.
 
 ### 1. Latih sesuatu yang kecil
 
@@ -77,7 +77,7 @@ Patut disewa apabila: set data itu milik anda, soalannya sempit, dan jawapannya 
 
 ### 2. Fine-tune model bahasa kecil
 
-Kuantisasi empat bit yang menjadikan ini biasa: model 7B perlukan sekitar 5 GB pada empat bit, jadi kad 16 GB boleh fine-tune model kecil dengan ruang untuk keadaan pengoptimum. Hasilnya adapter bersaiz puluhan megabait — milik kami 73 MB.
+Kuantisasi empat bit yang menjadikan ini biasa: model 7B perlukan sekitar 5 GB pada empat bit, jadi kad 16 GB boleh fine-tune model kecil dengan ruang untuk keadaan pengoptimum. Hasilnya adapter bersaiz puluhan megabait, milik kami 73 MB.
 
 Kegunaannya: model yang menulis dengan nada anda, mengelaskan kategori anda, atau menjawab daripada dokumen anda. Bukan kegunaannya: mengajar fakta yang model tidak pernah lihat. Fine-tune mengubah cara model bercakap dan apa yang dipilihnya; ia tidak memasang senarai harga dengan boleh dipercayai.
 
@@ -89,7 +89,7 @@ Halakan kad pada folder PDF, kontrak, helaian produk atau sebut harga lama dan h
 
 Model kelas Whisper mentranskripsi dengan boleh dipercayai dan mengendalikan Bahasa Melayu lebih baik daripada tahap percuma kebanyakan produk, dan kerjanya selari secara memalukan: pecahkan audio, jalankan kepingan, cantumkan transkrip. Setahun rakaman ialah satu petang.
 
-Ini kerja yang kami akan syorkan dahulu kepada hampir setiap PKS, kerana inputnya sudah ada — rakaman panggilan, nota suara, audio mesyuarat — dan outputnya teks boleh cari yang boleh digunakan.
+Ini kerja yang kami akan syorkan dahulu kepada hampir setiap PKS, kerana inputnya sudah ada (rakaman panggilan, nota suara, audio mesyuarat) dan outputnya teks boleh cari yang boleh digunakan.
 
 ### 5. Pengekstrakan invois dan dokumen
 
@@ -97,11 +97,11 @@ Perniagaan Malaysia kini menjana data e-Invoice berstruktur, tetapi bahagian mas
 
 ### 6 dan 12. Imej
 
-Fotografi produk pada skala katalog, dan pemprosesan pukal — saiz semula, buang latar, tanda air. Kedua-duanya kelompok, kedua-duanya muat pada kad 16 GB, dan kedua-duanya lebih murah disewa ikut jam daripada dilanggan ikut bulan jika kerjanya berkala dan bukan berterusan.
+Fotografi produk pada skala katalog, dan pemprosesan pukal, saiz semula, buang latar, tanda air. Kedua-duanya kelompok, kedua-duanya muat pada kad 16 GB, dan kedua-duanya lebih murah disewa ikut jam daripada dilanggan ikut bulan jika kerjanya berkala dan bukan berterusan.
 
 ### 7. Video
 
-Kapsyen dan sari kata, termasuk Bahasa Melayu, ialah kerja video paling bernilai kerana ia menjadikan video boleh dicari dan boleh diakses. Ia juga lambat — jam, bukan minit — jadi kadar sejam lebih penting di sini daripada mana-mana baris lain dalam jadual.
+Kapsyen dan sari kata, termasuk Bahasa Melayu, ialah kerja video paling bernilai kerana ia menjadikan video boleh dicari dan boleh diakses. Ia juga lambat (jam, bukan minit) jadi kadar sejam lebih penting di sini daripada mana-mana baris lain dalam jadual.
 
 ### 8 hingga 10. Yang tidak glamor tetapi membayar
 

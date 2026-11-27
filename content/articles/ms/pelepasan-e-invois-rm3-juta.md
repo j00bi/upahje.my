@@ -44,10 +44,10 @@ Kami tidak akan meneka mana-mana daripada empat itu. Di mana pihak berkuasa cuka
 
 Dua kedai menjelaskan perkara ini lebih pantas daripada definisi:
 
-- **Lima pekerja, perolehan RM4 juta** — dalam skop. Saiz gaji tidak relevan; hasilnya melepasi garis.
-- **Dua puluh pekerja, perolehan RM2.5 juta** — dikecualikan. Dua kali ganda orang, separuh hasil, tiada kewajipan.
+- **Lima pekerja, perolehan RM4 juta**, dalam skop. Saiz gaji tidak relevan; hasilnya melepasi garis.
+- **Dua puluh pekerja, perolehan RM2.5 juta**, dikecualikan. Dua kali ganda orang, separuh hasil, tiada kewajipan.
 
-Itulah sebabnya pelepasan ini kerap disalah guna. Bilangan pekerja ialah apa yang pemilik nampak daripada slip gaji sendiri, jadi itulah yang dijadikan asas. Ia juga memberitahu anda tentang set kewajipan yang berbeza sepenuhnya: [kadar caruman EPF majikan](https://upahje.my/ms/articles/kadar-caruman-epf-majikan), [kadar SOCSO majikan](https://upahje.my/ms/articles/kadar-socso-majikan-malaysia) dan [levi HRD Corp](https://upahje.my/ms/articles/levi-hrd-corp-malaysia) semuanya bermula daripada pengambilan pekerja. e-Invois bermula daripada perolehan. Dua kalendar, dua pencetus, dan mencampurkan kedua-duanya menghasilkan keputusan salah pada kedua-dua arah — kedai kecil membeli perisian yang tidak diperlukan, atau kedai besar yang tidak pernah mendaftar.
+Itulah sebabnya pelepasan ini kerap disalah guna. Bilangan pekerja ialah apa yang pemilik nampak daripada slip gaji sendiri, jadi itulah yang dijadikan asas. Ia juga memberitahu anda tentang set kewajipan yang berbeza sepenuhnya: [kadar caruman EPF majikan](https://upahje.my/ms/articles/kadar-caruman-epf-majikan), [kadar SOCSO majikan](https://upahje.my/ms/articles/kadar-socso-majikan-malaysia) dan [levi HRD Corp](https://upahje.my/ms/articles/levi-hrd-corp-malaysia) semuanya bermula daripada pengambilan pekerja. e-Invois bermula daripada perolehan. Dua kalendar, dua pencetus, dan mencampurkan kedua-duanya menghasilkan keputusan salah pada kedua-dua arah, kedai kecil membeli perisian yang tidak diperlukan, atau kedai besar yang tidak pernah mendaftar.
 
 ## Jalur pelaksanaan, dan di mana garisnya kini
 
@@ -66,7 +66,7 @@ Baca dua baris terakhir bersama-sama dan kedudukan praktikalnya muncul: perniaga
 
 **Pandangan kami, dinyatakan sekali:** perkara paling bernilai yang boleh dibuat seorang pengusaha tunggal minggu ini ialah menjalankan ujian RM3 juta pada buku sendiri dan mencatat di sebelah mana garis itu mereka berada, berserta tarikh semakan. Bukan pada ingatan rakan, bukan pada artikel yang diterbitkan dua tahun lalu.
 
-Di bawah RM3 juta, catatan itu pembelaan anda, dan ia perlu diuji semula apabila perolehan menghampiri ambang. Pada atau melebihi RM3 juta, keputusan bukan lagi tentang ambang — ia tentang skop, dan [apa yang sebenarnya diliputi automasi e-Invois](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi) ialah perkara seterusnya untuk dibaca.
+Di bawah RM3 juta, catatan itu pembelaan anda, dan ia perlu diuji semula apabila perolehan menghampiri ambang. Pada atau melebihi RM3 juta, keputusan bukan lagi tentang ambang, ia tentang skop, dan [apa yang sebenarnya diliputi automasi e-Invois](https://upahje.my/ms/articles/apa-yang-automasi-e-invoice-liputi) ialah perkara seterusnya untuk dibaca.
 
 ---
 

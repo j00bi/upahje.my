@@ -57,7 +57,7 @@ That is the trade this series weighs, and it is not a slogan in either direction
 
 Two services sit inside one commission. The first is a checkout: an order form, a payment, a receipt. The second is discovery: a listing where a hungry person who has never heard of you can find you, compare you and order.
 
-Only the first can be bought at a published price today. An FPX payment costs RM1.00 at CHIP or RM0.75 to RM1.25 at Billplz depending on the plan, and it settles next business day. A card payment costs a percentage — 2.0% at CHIP, 3% plus RM1.00 at Stripe — and settles in two business days at CHIP and Billplz, though Stripe pays out on a rolling, weekly or monthly setting, with CHIP noting that its transaction fees carry 8% SST.
+Only the first can be bought at a published price today. An FPX payment costs RM1.00 at CHIP or RM0.75 to RM1.25 at Billplz depending on the plan, and it settles next business day. A card payment costs a percentage (2.0% at CHIP, 3% plus RM1.00 at Stripe) and settles in two business days at CHIP and Billplz, though Stripe pays out on a rolling, weekly or monthly setting, with CHIP noting that its transaction fees carry 8% SST.
 
 Discovery has no published price anywhere in the pages read for this series. No platform, gateway or council prints what it costs to acquire a food customer, and this article will not invent one.
 
@@ -76,7 +76,7 @@ A flat fee and a percentage behave in opposite directions as the basket grows. T
 
 On a RM30 basket, CHIP's FPX fee is RM1.00 and its card fee is RM0.60 before SST, about RM0.65 with it. The card is cheaper per transaction at that basket. On a RM150 basket, FPX stays at RM1.00 and the card fee is RM3.00, RM3.24 with SST. The flat fee stops mattering; the percentage does not.
 
-Settlement is a property of the method, not the gateway. The same provider prints next-day for FPX and two business days for cards, and Stripe's payout is a setting — rolling, weekly or monthly — rather than a term. A shop that plans cash flow from a headline "X days" figure is planning from the wrong line.
+Settlement is a property of the method, not the gateway. The same provider prints next-day for FPX and two business days for cards, and Stripe's payout is a setting (rolling, weekly or monthly) rather than a term. A shop that plans cash flow from a headline "X days" figure is planning from the wrong line.
 
 ## The commission is the only number nobody prints
 
@@ -101,7 +101,7 @@ A shop that reads only the first bullet will build the checkout and wonder why t
 
 ## The break-even table
 
-The equation has two sides. The platform takes a percentage of the basket. Your own checkout takes the payment fee, a fixed monthly cost and — the term everybody leaves out — the marketing that now replaces the platform's discovery.
+The equation has two sides. The platform takes a percentage of the basket. Your own checkout takes the payment fee, a fixed monthly cost and (the term everybody leaves out) the marketing that now replaces the platform's discovery.
 
 `commission × basket × orders = payment fee × orders + fixed cost + marketing`
 
@@ -115,13 +115,13 @@ The table solves the fee side only, with a RM150 monthly cost and a RM30 average
 
 At the top of the regulator's widest band, owning beats the commission after about **23 orders a month**. At the bottom of the narrowest band it takes **200** on the cheapest FPX plan and **600** on the free one. That spread is the whole argument: the commission rate decides whether owning the shop is a rounding error or a different business.
 
-Two refinements matter. The RM999 Billplz plan pays for itself at about **2,000 FPX orders a year**, where the RM0.50 saved per transaction covers the annual fee. And when the commission on a basket is smaller than the flat FPX fee, no order count breaks even — a result worth having before building a checkout.
+Two refinements matter. The RM999 Billplz plan pays for itself at about **2,000 FPX orders a year**, where the RM0.50 saved per transaction covers the annual fee. And when the commission on a basket is smaller than the flat FPX fee, no order count breaks even, a result worth having before building a checkout.
 
 The identity behind these rows is derived in [The commission arithmetic behind owning your shop](https://upahje.my/en/articles/commission-arithmetic): this page states the result, that one shows the algebra.
 
 ## The licence stack comes first, and it is mostly unpriced
 
-Before the fee arithmetic, there is an opening bill. Two councils print itemised fees, and both are narrower than readers assume. MBSA prints application processing at RM50.00 for a business and RM100.00 for industrial, a licence plate at RM7.00 and a sticker at RM5.00 — none of which is the annual premises licence. MBPJ prints signboard fees: RM100.00 a year non-illuminated up to 8 m², RM10.00 for each extra square metre, RM150.00 illuminated with RM15.00 extra, RM200.00 for a logo-type advertisement, RM20.00 per additional logo unit, and a RM25.00 administration charge.
+Before the fee arithmetic, there is an opening bill. Two councils print itemised fees, and both are narrower than readers assume. MBSA prints application processing at RM50.00 for a business and RM100.00 for industrial, a licence plate at RM7.00 and a sticker at RM5.00, none of which is the annual premises licence. MBPJ prints signboard fees: RM100.00 a year non-illuminated up to 8 m², RM10.00 for each extra square metre, RM150.00 illuminated with RM15.00 extra, RM200.00 for a logo-type advertisement, RM20.00 per additional logo unit, and a RM25.00 administration charge.
 
 Business registration is the other priced part: RM60 a year for a trade name, RM30 for a personal name, RM5 per branch, or RM1,000 to incorporate a Sdn Bhd.
 

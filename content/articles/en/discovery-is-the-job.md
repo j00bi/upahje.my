@@ -33,7 +33,7 @@ sources:
 
 # The storefront is a checkout, not an audience
 
-Owning your shop changes who takes the payment. It does not change who finds you. A platform sold two things in one invoice: the software that takes an order, and the customers who arrive without you paying for them. The software is now cheap — RM1.25 an FPX payment — and the customers were never software at all.
+Owning your shop changes who takes the payment. It does not change who finds you. A platform sold two things in one invoice: the software that takes an order, and the customers who arrive without you paying for them. The software is now cheap (RM1.25 an FPX payment) and the customers were never software at all.
 
 ## The commission was buying discovery
 
@@ -65,7 +65,7 @@ The third row is the one that decides the series. Everything the platform charge
 
 mejamakan, a lauk delivery business in KL and Selangor, runs its own site rather than a platform page. On 26 November 2026 its site showed a weekly menu, accounts and ordering on its own domain, "from RM18/meal", weekday delivery and a renewing plan, with Instagram at **16K followers** as the front door.
 
-That follower count is the observable part, and it is also the honest limit of this article: followers are not orders, and Instagram does not publish a conversion rate. What the example shows is where the audience lives — a channel the shop controls — not what it cost to build.
+That follower count is the observable part, and it is also the honest limit of this article: followers are not orders, and Instagram does not publish a conversion rate. What the example shows is where the audience lives (a channel the shop controls) not what it cost to build.
 
 ## Half is the number to watch
 

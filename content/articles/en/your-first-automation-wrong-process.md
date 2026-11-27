@@ -45,7 +45,7 @@ Start with something boring. A weekly export that a junior copies between two sy
 
 ## Argument three: the worst process is often the wrong process
 
-Pain is a signal that the process has accumulated exceptions, and exceptions usually mean the process is compensating for something upstream. The invoice mismatch is not an invoicing problem. It is a receiving problem, or a supplier problem, or a quoting problem.
+Pain is a signal that the process has accumulated exceptions, and exceptions usually mean the process is compensating for something upstream. An invoice mismatch is a receiving, supplier or quoting problem that surfaces at the invoice.
 
 Automating a compensating process locks the compensation in. Now you have a tool-shaped reason not to fix the thing that caused it. The argument is sometimes made in reverse, as "automate first, fix later", and it only works if the thing you automate is the source rather than the symptom.
 

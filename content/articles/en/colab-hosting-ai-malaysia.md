@@ -35,7 +35,7 @@ sources:
 
 The question usually arrives as "how do I host my AI on Colab", and the honest answer is that hosting is the one thing Colab's terms single out. Google's FAQ lists file hosting, media serving and "other web service offerings not related to interactive compute" among the activities disallowed on managed runtimes. A free runtime also blocks remote control: SSH shells and remote desktops, and bypassing the notebook interface to work mainly through a web UI.
 
-That is not a loophole to be worked around with a tunnel. It is the shape of the product.
+A tunnel routes around the notebook interface, not around the product's shape: the free runtime blocks remote control by design.
 
 ## What the free tier actually gives you
 
@@ -68,7 +68,7 @@ The pattern that stays inside the rules: train and tune on Colab, write checkpoi
 | Runpod, per hour | A GPU you start and stop; billed per second | USD 0.27/hr for an RTX A5000, about RM1.11 |
 | A local machine | Your own hardware behind a tunnel | hardware plus electricity |
 
-The free Spaces tier is the part most people miss: a small model with a modest request rate does not need a GPU at all, and a permanent URL costs nothing while it does. The RM37.04 for PRO is roughly three hours of an H100 PCIe on a rented platform, which puts the trade in plain terms: a month of hosting against an afternoon of training.
+The free Spaces tier covers a small model with a modest request rate, which needs no GPU at all, and a permanent URL costs nothing while it does. The RM37.04 for PRO is roughly three hours of an H100 PCIe on a rented platform, which puts the trade in plain terms: a month of hosting against an afternoon of training.
 
 ## A workflow that stays inside the rules
 

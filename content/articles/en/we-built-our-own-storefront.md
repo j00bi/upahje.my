@@ -29,7 +29,7 @@ sources:
 
 This is not an argument against delivery platforms. It is a demonstration of what a single person can now do without one.
 
-We had been writing about the cost of owning your own shop — commission rates, payment fees, the discovery problem — and the writing was starting to feel like advice we had not tested. So we built the thing instead. **husnieats** is a working storefront for one kitchen: three dishes, cooked to order, pickup in Section 7 or delivered by a runner, taking real orders through a site that runs on our own infrastructure.
+We had been writing about the cost of owning your own shop (commission rates, payment fees, the discovery problem) and the writing was starting to feel like advice we had not tested. So we built the thing instead. **husnieats** is a working storefront for one kitchen: three dishes, cooked to order, pickup in Section 7 or delivered by a runner, taking real orders through a site that runs on our own infrastructure.
 
 husnieats is ours; nothing else in this article is.
 
@@ -37,15 +37,15 @@ husnieats is ours; nothing else in this article is.
 
 Not a menu page with a WhatsApp link. A storefront with the three systems any shop needs to take money without a platform:
 
-**1. Order taking.** The menu is three dishes — Buttermilk Chicken at RM12.90, Korean Chicken at RM13.90, Teh O at RM3.50 — each with a description and an Add button. The customer chooses pickup or delivery, and the delivery price appears **before** they commit, not after.
+**1. Order taking.** The menu is three dishes. Buttermilk Chicken at RM12.90, Korean Chicken at RM13.90, Teh O at RM3.50, each with a description and an Add button. The customer chooses pickup or delivery, and the delivery price appears **before** they commit, not after.
 
-![The husnieats ordering flow: pick your food, pay by DuitNow, send the receipt on WhatsApp — three steps, no platform in between](/figures/screens/husnieats-ordering.webp)
+![The husnieats ordering flow: pick your food, pay by DuitNow, send the receipt on WhatsApp, three steps, no platform in between](/figures/screens/husnieats-ordering.webp)
 
-**2. Ticketing.** Every order gets a short, speakable ticket — A001 through A999, then B001 — because the kitchen board and the runner's phone both need a handle a human can shout across a room. The customer's link uses a separate random token instead, because sequential numbers are guessable and a public URL must not be.
+**2. Ticketing.** Every order gets a short, speakable ticket (A001 through A999, then B001) because the kitchen board and the runner's phone both need a handle a human can shout across a room. The customer's link uses a separate random token instead, because sequential numbers are guessable and a public URL must not be.
 
 **3. Payment reconciliation.** The customer scans a DuitNow QR, pays the exact amount the order shows, and sends the receipt on WhatsApp. A human checks it, then the kitchen starts. That is the whole payment stack: one QR code, one message, one pair of eyes.
 
-Orders and deliveries are tracked as two separate states, because a pickup order has no rider to wait for. And the money is stored as integer sen, rounded to the nearest ten — the smallest amount that appears on a Malaysian bill — rather than as a decimal that drifts.
+Orders and deliveries are tracked as two separate states, because a pickup order has no rider to wait for. And the money is stored as integer sen, rounded to the nearest ten (the smallest amount that appears on a Malaysian bill) rather than as a decimal that drifts.
 
 ![The husnieats menu at mobile width: three dishes, prices, add buttons. One kitchen, three dishes, because that is what can be cooked properly to order](/figures/screens/husnieats-menu.webp)
 
@@ -70,16 +70,16 @@ Naming these is the point. A demonstration that hides its edges is a pitch.
 
 ## What it takes to do this yourself
 
-Not much, and less than most people expect:
+Not much. Four items, none of them exotic:
 
-1. **A place to put it.** A domain and a host. The stack here is deliberately ordinary — a web app and a database, both self-hostable — because the point is reproducibility, not cleverness.
+1. **A place to put it.** A domain and a host. The stack here is deliberately ordinary (a web app and a database, both self-hostable) because the point is reproducibility, not cleverness.
 2. **A way to take money.** DuitNow QR costs nothing to display and nothing to receive. A gateway is the upgrade, not the starting point.
 3. **A channel for the receipt.** WhatsApp, which your customers already use and already trust.
 4. **The discipline.** Write the order down, check the payment, mark it cooking, mark it done. Software does not remove this step; it only makes it faster.
 
 ## The same idea at commercial scale
 
-husnieats is a prototype. **mejamakan** is the same shape with a business behind it: a lauk delivery operation in KL and Selangor running its own site, a curated weekly menu grouped by day, accounts on its own domain, "From RM18/meal", Monday-to-Friday delivery, and a plan customers renew — a subscription rather than a one-off order. Their own site reports 3,000+ families served.
+husnieats is a prototype. **mejamakan** is the same shape with a business behind it: a lauk delivery operation in KL and Selangor running its own site, a curated weekly menu grouped by day, accounts on its own domain, "From RM18/meal", Monday-to-Friday delivery, and a plan customers renew, a subscription rather than a one-off order. Their own site reports 3,000+ families served.
 
 Two examples, one small and one trading: an individual can stand up a storefront, and a kitchen can run one commercially. Neither needs a marketplace in the middle to take an order.
 
@@ -87,7 +87,7 @@ Two examples, one small and one trading: an individual can stand up a storefront
 
 The commission argument is arithmetic, and arithmetic can be argued with: platforms deliver customers, the fee pays for reach, and at low volume the maths often favours staying put. Fine.
 
-The demonstration is different. It says the capability is no longer the barrier. Ten years ago, taking orders online meant either a marketplace or a developer and a five-figure build. Today it means a domain, a QR code and a weekend — and the only thing left to solve is the part no software sells you, which is getting someone to walk through the door.
+The demonstration is different. It says the capability is no longer the barrier. Ten years ago, taking orders online meant either a marketplace or a developer and a five-figure build. Today it means a domain, a QR code and a weekend, and the only thing left to solve is the part no software sells you, which is getting someone to walk through the door.
 
 **So: the storefront is solved. The audience is the work.**
 

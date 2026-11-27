@@ -18,7 +18,7 @@ changelog:
 
 # API or spreadsheet: which fits your volume
 
-A spreadsheet wins when the volume is small and one person owns the data. An API wins when two systems must stay in sync without a human copying between them. The deciding question is not the size of your business. It is whether a copy step still exists, and what it costs when that step goes wrong.
+A spreadsheet wins when the volume is small and one person owns the data. An API wins when two systems must stay in sync without a human copying between them. The size of the business does not decide it. Whether a copy step still exists decides it, along with what that step costs when it goes wrong.
 
 ## One sentence decides it, and it is what happens in the window
 

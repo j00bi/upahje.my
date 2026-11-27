@@ -68,7 +68,7 @@ Corak yang kekal dalam peraturan: latih dan tala di Colab, tulis checkpoint ke D
 | Runpod, setiap jam | GPU yang anda mula dan hentikan; dibil mengikut saat | USD 0.27/jam untuk RTX A5000, kira-kira RM1.11 |
 | Mesin sendiri | Perkakasan anda di sebalik terowong | perkakasan campur elektrik |
 
-Tier Spaces percuma ialah bahagian yang paling ramai terlepas: model kecil dengan kadar permintaan sederhana langsung tidak perlukan GPU, dan URL kekal berharga kosong selagi itu keadaannya. RM37.04 untuk PRO ialah kira-kira tiga jam H100 PCIe di platform sewaan, yang meletakkan pertukaran itu dalam istilah biasa: sebulan hosting berbanding satu petang latihan.
+Tier Spaces percuma menampung model kecil dengan kadar permintaan sederhana, yang langsung tidak perlukan GPU, dan URL kekal berharga kosong selagi itu keadaannya. RM37.04 untuk PRO ialah kira-kira tiga jam H100 PCIe di platform sewaan, yang meletakkan pertukaran itu dalam istilah biasa: sebulan hosting berbanding satu petang latihan.
 
 ## Aliran kerja yang kekal dalam peraturan
 

@@ -36,11 +36,11 @@ The point is not to test every order you might ever receive. It is to answer one
 
 ## Write the expected total down first
 
-Pick the combination you expect your first real customers to use, then write the numbers on paper: item price, any discount, delivery charge, final total. Write down what you expect to see afterwards too — where the buyer's confirmation appears, where the order reaches you, and what tells you it is ready to fulfil.
+Pick the combination you expect your first real customers to use, then write the numbers on paper: item price, any discount, delivery charge, final total. Write down what you expect to see afterwards too, where the buyer's confirmation appears, where the order reaches you, and what tells you it is ready to fulfil.
 
 Having the total written down is what makes the test a test. Without it you are admiring the screens instead of comparing them against something independent.
 
-If the payment provider offers a test mode, use it — with one caveat that people get wrong. A test-mode payment checks the flow, and it does **not** prove that real money will settle into your account. Stripe documents it plainly: test transactions don't move funds. Keep a note of which mode you used, so you never read a passing test as a working cash flow.
+If the payment provider offers a test mode, use it, with one caveat that people get wrong. A test-mode payment checks the flow, and it does **not** prove that real money will settle into your account. Stripe documents it plainly: test transactions don't move funds. Keep a note of which mode you used, so you never read a passing test as a working cash flow.
 
 ## Place the order from a phone, signed out
 
@@ -52,7 +52,7 @@ Complete checkout without switching to your dashboard to fill in something a cus
 - **Handover details are complete.** For delivery, the buyer can enter an address you can use. For pickup, the buyer can tell where to go and whether to wait for a message.
 - **The total matches your note.** If you wrote RM43 and the screen says RM35 or RM51, stop and find out why before testing anything else.
 
-Then stay on the buyer side for a moment. Can you tell whether the order was received, whether payment is complete or still due, and what happens next? If the shop promises an email or a message, check that it arrives and that it says the same thing as the confirmation screen. Keep the order reference — you need it in the next step.
+Then stay on the buyer side for a moment. Can you tell whether the order was received, whether payment is complete or still due, and what happens next? If the shop promises an email or a message, check that it arrives and that it says the same thing as the confirmation screen. Keep the order reference, you need it in the next step.
 
 ## Find the order where you will actually work
 
@@ -64,7 +64,7 @@ Match the reference, item and quantity, total, and handover details. Then ask th
 
 These are two different facts and shopping carts love to blur them.
 
-If you take payment upfront, check the system you rely on for payment confirmation and verify that the status belongs to **this** order — not to the previous one. If you take payment on pickup or delivery, make sure the order says plainly that payment is still due and when it should be collected.
+If you take payment upfront, check the system you rely on for payment confirmation and verify that the status belongs to **this** order, not to the previous one. If you take payment on pickup or delivery, make sure the order says plainly that payment is still due and when it should be collected.
 
 The settlement timing makes this sharper than it sounds. FPX settles next business day; a card payment settles in two business days at [CHIP and Billplz](https://upahje.my/en/articles/taking-money-malaysia). An order can sit in your inbox looking paid while the money is still in transit, and a refund issued on the same day behaves differently again.
 
@@ -81,7 +81,7 @@ You do not need to dispatch a parcel. Stop once you can state the next action wi
 
 If one fails, fix it and run that route again from the phone. Editing the wording in an admin screen is not the same as seeing it on a new order.
 
-If all six pass, write down exactly what you tested: the product, the payment method, and the delivery or pickup option. A passing pickup order says nothing about delivery charges, and a passing test-mode payment says nothing about live settlement. The checklist keeps its value the next time you change a payment method, a delivery charge or a confirmation message — because the failure you are trying to avoid is the customer who finds the change before you do.
+If all six pass, write down exactly what you tested: the product, the payment method, and the delivery or pickup option. A passing pickup order says nothing about delivery charges, and a passing test-mode payment says nothing about live settlement. The checklist keeps its value the next time you change a payment method, a delivery charge or a confirmation message, because the failure you are trying to avoid is the customer who finds the change before you do.
 
 ---
 

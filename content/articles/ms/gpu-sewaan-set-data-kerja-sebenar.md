@@ -55,7 +55,7 @@ Kerjanya ialah penapis, bukan model yang berdagang. Sembilan strategi sudah meng
 
 Enam belas ciri setiap dagangan. Identiti sebagai embedding, supaya model belajar tingkah laku simbol dan strategi dan bukan diberitahu. Rangkaian dua lapis, lebar 64, tanpa attention, tanpa prapelatihan, tanpa berbilion parameter.
 
-Dilatih pada kad itu dalam lima saat. Disahkan silang lima kali, AUC luar sampel 0.6021 — setiap lipatan 0.53, 0.66, 0.63, 0.60, 0.53. Bukan model yang baik secara mutlak. Cukup baik untuk bertindak sebagai penapis, dan itulah yang diminta:
+Dilatih pada kad itu dalam lima saat. Disahkan silang lima kali, AUC luar sampel 0.6021, setiap lipatan 0.53, 0.66, 0.63, 0.60, 0.53. Bukan model yang baik secara mutlak. Cukup baik untuk bertindak sebagai penapis, dan itulah yang diminta:
 
 | Ambang penapis | Dagangan dikekalkan | Kadar menang | Pulangan purata | Sharpe setiap dagangan | Tahunan |
 | --- | --- | --- | --- | --- | --- |
@@ -66,11 +66,11 @@ Dilatih pada kad itu dalam lima saat. Disahkan silang lima kali, AUC luar sampel
 
 Pada 0.40 penapis membuang satu pertiga dagangan dan angka tahunan naik daripada 2.64 ke 3.51. Pada 0.60 angka setiap dagangan nampak terbaik sementara angka tahunan runtuh, kerana tiada lagi yang boleh didagangkan. Bentuk itulah hujah menentang mengejar ketepatan: penapis yang lebih kerap betul masih boleh menjana wang lebih sedikit.
 
-Dan model pertama yang dicuba ialah transformer, yang terus overfit pada 1,607 baris. Seni bina dipilih mengikut saiz set data, bukan mengikut apa yang sedang popular. Lima saat pengiraan bukan kekangan di sini — 1,607 contoh itulah kekangan.
+Dan model pertama yang dicuba ialah transformer, yang terus overfit pada 1,607 baris. Seni bina dipilih mengikut saiz set data, bukan mengikut apa yang sedang popular. Lima saat pengiraan bukan kekangan di sini. 1,607 contoh itulah kekangan.
 
 ## Kerja dua: sapu, dan tahu bila berhenti
 
-Kerja kedua yang menelan wang: mencuba konfigurasi. Skrip sapuan merangkumi **324** kombinasi — lebar model, kedalaman, panjang jujukan, horizon ramalan, seed — merentas sepuluh lipatan kronologi, sehingga 200 epoch setiap satu, batch efektif 512 melalui 256 dengan pengumpulan gradien, dan ketepatan bercampur supaya muat pada kad kecil.
+Kerja kedua yang menelan wang: mencuba konfigurasi. Skrip sapuan merangkumi **324** kombinasi, lebar model, kedalaman, panjang jujukan, horizon ramalan, seed, merentas sepuluh lipatan kronologi, sehingga 200 epoch setiap satu, batch efektif 512 melalui 256 dengan pengumpulan gradien, dan ketepatan bercampur supaya muat pada kad kecil.
 
 Dua puluh dua selesai. Instance dimusnahkan dengan sengaja untuk berhenti membayar storan, dan keputusan itu bahagian yang patut ditiru. Hasilnya bukan sifar:
 
@@ -83,13 +83,13 @@ Dua puluh dua selesai. Instance dimusnahkan dengan sengaja untuk berhenti membay
 | Ketepatan ujian | 0.7495 |
 | AUC ujian | 0.8212 |
 
-Tiga penemuan keluar daripada 22 larian, bukan 324. Model kecil menang: `d_model` melebihi 64 menambah risiko overfit, bukan isyarat. Horizon dua belas jam mengalahkan dua puluh empat dan empat puluh lapan, kerana semakin jauh ramalan semakin banyak bunyi yang dipaksa dihafal. Dan hasilnya stabil merentas seed — konfigurasi sama dengan seed 42, 123 dan 7777 memberi AUC antara 0.814 dan 0.821, dan itulah yang memberitahu bahawa angka itu sifat data, bukan satu permulaan yang bertuah.
+Tiga penemuan keluar daripada 22 larian, bukan 324. Model kecil menang: `d_model` melebihi 64 menambah risiko overfit, bukan isyarat. Horizon dua belas jam mengalahkan dua puluh empat dan empat puluh lapan, kerana semakin jauh ramalan semakin banyak bunyi yang dipaksa dihafal. Dan hasilnya stabil merentas seed, konfigurasi sama dengan seed 42, 123 dan 7777 memberi AUC antara 0.814 dan 0.821, dan itulah yang memberitahu bahawa angka itu sifat data, bukan satu permulaan yang bertuah.
 
 Infrastruktur yang membolehkan berhenti dengan selamat tidak glamor tetapi perlu disebut. Skrip pemandu menyediakan persekitaran, menarik kod, merekod `nvidia-smi` setiap enam puluh saat, menulis hasil selepas setiap konfigurasi selesai supaya ranap bermula semula dari titik terakhir dan bukan dari awal, dan menutup instance sendiri di hujungnya. Sapuan penuh dianggarkan dua hari; semakan tiga konfigurasi kira-kira dua jam. Perintah berhenti itulah yang menukar pelan dua hari menjadi keputusan dua jam.
 
 ## Kerja tiga: fine-tune atas teks sendiri
 
-Kerja ketiga ialah kerja yang perniagaan kecil benar-benar ada. Bukan melatih dari kosong — mengajar model kecil perkataan sendiri. Model 1.5 bilion parameter dikuantisasi empat bit, di-fine-tune dengan QLoRA atas anotasi dagangan, menghasilkan fail adapter 73 MB. Itulah keseluruhan hasilnya: bukan model, tetapi delta 73 MB yang duduk di atas model asas yang tidak perlu dilatih sendiri.
+Kerja ketiga ialah kerja yang perniagaan kecil benar-benar ada. Bukan melatih dari kosong, mengajar model kecil perkataan sendiri. Model 1.5 bilion parameter dikuantisasi empat bit, di-fine-tune dengan QLoRA atas anotasi dagangan, menghasilkan fail adapter 73 MB. Itulah keseluruhan hasilnya: bukan model, tetapi delta 73 MB yang duduk di atas model asas yang tidak perlu dilatih sendiri.
 
 Ekonominya sebabnya kerja ini kini biasa. Mengkuantisasi model asas kepada empat bit, iaitu apa yang QLoRA lakukan, membolehkan model 1.5B muat bersama gradiennya pada kad pengguna. Kaedahnya diterbitkan dan alatnya percuma.
 

@@ -36,11 +36,11 @@ sources:
 
 # Own riders or per-km couriers: the radius where it breaks
 
-Five delivery services were checked for this piece, and not one of them publishes a per-kilometre tariff a shop can plan from. GrabExpress renders but prints no fare, only two add-on prices; Lalamove's pricing page 404s and the fare lives in a configurator; Pos Laju renders its tariff client-side; J&T and Ninja Van return 404 on the pages tried. The radius where your own rider beats a courier is therefore not a published number — it is arithmetic you run on your own quotes.
+Five delivery services were checked for this piece, and not one of them publishes a per-kilometre tariff a shop can plan from. GrabExpress renders but prints no fare, only two add-on prices; Lalamove's pricing page 404s and the fare lives in a configurator; Pos Laju renders its tariff client-side; J&T and Ninja Van return 404 on the pages tried. The radius where your own rider beats a courier is therefore not a published number, it is arithmetic you run on your own quotes.
 
 ## Five pages, two add-on prices, no tariff
 
-The table records what each service printed, and one column for what it is, because these five are delivery services and nothing else — no regulator, no council, no agency sits in the same column.
+The table records what each service printed, and one column for what it is, because these five are delivery services and nothing else, no regulator, no council, no agency sits in the same column.
 
 | Service | What the page published | Figure |
 | --- | --- | --- |
@@ -54,13 +54,13 @@ The two GrabExpress figures are add-ons, not a fare: that is what the page print
 
 ## A per-km tariff would not settle it either
 
-Even if one of the five printed a rate card, it would be a rate for their model: a base fee, a distance band and a surcharge schedule. Your own rider's cost is a different shape — a monthly wage, a bike or a car, insurance, fuel and the hours that rider spends idle between orders.
+Even if one of the five printed a rate card, it would be a rate for their model: a base fee, a distance band and a surcharge schedule. Your own rider's cost is a different shape, a monthly wage, a bike or a car, insurance, fuel and the hours that rider spends idle between orders.
 
-So the comparison is not per kilometre against per kilometre. It is **cost per delivery** against **cost per delivery**, and each side is built from different units.
+So the comparison that matters is **cost per delivery** against **cost per delivery**, not per kilometre against per kilometre, and each side is built from different units.
 
 ## The two lines to write down
 
-For a courier, the line is the quote at the distance you actually deliver over. Ask each service for a quote at three distances — your shortest, your median and your furthest — and write the three numbers down.
+For a courier, the line is the quote at the distance you actually deliver over. Ask each service for a quote at three distances (your shortest, your median and your furthest) and write the three numbers down.
 
 For an own rider, the line is:
 

@@ -61,13 +61,13 @@ Abstraksi lebih mudah dipertikaikan daripada sebuah kedai. Ambil satu: 40 pesana
 | Kurier (RM8 × 173) | di dalam fi penghantaran | RM1,384 |
 | **Peniaga simpan** | **RM4,152** | **RM3,590** |
 
-Meninggalkan platform merugikan kedai itu **RM562 sebulan**, dan ia telah mengambil alih penghantaran, bayaran balik dan telefon yang berdering apabila pesanan lewat. Pada kurier RM5 yang boleh dicari dapur pusat bandar, kedai yang sama **RM13 sebulan lebih baik** — iaitu seri, sambil memikul lebih banyak kerja.
+Meninggalkan platform merugikan kedai itu **RM562 sebulan**, dan ia telah mengambil alih penghantaran, bayaran balik dan telefon yang berdering apabila pesanan lewat. Pada kurier RM5 yang boleh dicari dapur pusat bandar, kedai yang sama **RM13 sebulan lebih baik**, iaitu seri, sambil memikul lebih banyak kerja.
 
 Itulah julat tempat seluruh keputusan ini tinggal: beberapa ratus ringgit ke mana-mana arah, ditentukan oleh satu nombor yang peniaga sudah tahu, iaitu kadar kurier mereka.
 
 ## Fi penghantaran dicaj kepada pelanggan, dan itu mengubah siapa yang membayar
 
-Baca skrin itu sekali lagi. RM4.70 ditambah pada bil, bukan ditolak dari bahagian peniaga. Pada pesanan itu pelanggan membayar **22.5%** di atas harga makanan, dan peniaga membayar komisen secara berasingan — antara RM3.13 dan RM5.22 pada bakul itu, bergantung pada jalur yang termaktub dalam kontrak.
+Baca skrin itu sekali lagi. RM4.70 ditambah pada bil, bukan ditolak dari bahagian peniaga. Pada pesanan itu pelanggan membayar **22.5%** di atas harga makanan, dan peniaga membayar komisen secara berasingan, antara RM3.13 dan RM5.22 pada bakul itu, bergantung pada jalur yang termaktub dalam kontrak.
 
 Jadi hasil platform pada pesanan penghantaran datang dari dua poket, bukan satu. Itulah sebabnya perbandingan dalam artikel terdahulu cenderung memihak kepada kedai sendiri: ia membandingkan komisen peniaga dengan kos penghantaran peniaga, dan secara senyap meninggalkan fi penghantaran pelanggan di luar kiraan.
 
@@ -86,11 +86,11 @@ Pada pertengahan julat kurier, platform **satu ringgit di depan setiap pesanan**
 
 Satu lagi butiran pada skrin itu, dan ia jenis yang merosakkan perbandingan yang kemas: **"Delivery fee calculated at 17:02:16."** Fi dikira bagi setiap pesanan, daripada jarak, permintaan dan bekalan penghantar, dan ia berubah mengikut waktu. Bakul yang sama pada 13:00 dan 19:30 boleh membawa fi berbeza, dan RM3.00 yang ditawarkan aplikasi sebagai potongan penghantaran ialah subsidi langganan, jadi pelanggan di sebelah anda membayar sesuatu yang lain untuk makanan yang sama.
 
-Kedai sendiri tidak patut meniru itu. Caj penghantaran rata yang anda terbitkan — katakan RM5 dalam 5 km — lebih teruk pada waktu puncak dan lebih baik pada waktu tenang, dan ia boleh disebut, sesuatu yang fi dinamik tidak boleh. Kesannya pada perbandingan ini ialah angka penghantaran platform patut dibaca sebagai median seminggu, bukan apa yang seorang pelanggan lihat sekali. Angka kami datang daripada satu skrin pada 17:05, dan ia dilabel begitu di seluruh artikel ini.
+Kedai sendiri tidak patut meniru itu. Caj penghantaran rata yang anda terbitkan (katakan RM5 dalam 5 km) lebih teruk pada waktu puncak dan lebih baik pada waktu tenang, dan ia boleh disebut, sesuatu yang fi dinamik tidak boleh. Kesannya pada perbandingan ini ialah angka penghantaran platform patut dibaca sebagai median seminggu, bukan apa yang seorang pelanggan lihat sekali. Angka kami datang daripada satu skrin pada 17:05, dan ia dilabel begitu di seluruh artikel ini.
 
 ## Kira balas dengan pemasaran sebagai pemboleh ubah, bukan tekaan
 
-Identiti pulang modal dari artikel aritmetik mempunyai satu istilah yang tiada siapa di Malaysia menerbitkan: kos mendapatkan satu pesanan. Kadar pengiklanan ada, kadar penukaran ada, kos pelanggan yang diperoleh tiada — bukan dari platform, bukan dari gerbang, bukan dari majlis.
+Identiti pulang modal dari artikel aritmetik mempunyai satu istilah yang tiada siapa di Malaysia menerbitkan: kos mendapatkan satu pesanan. Kadar pengiklanan ada, kadar penukaran ada, kos pelanggan yang diperoleh tiada, bukan dari platform, bukan dari gerbang, bukan dari majlis.
 
 Jadi cetak sebagai pemboleh ubah. Selesaikan untuk pesanan sebulan, dengan pelan gerbang tahunan RM999 pada RM83.25 sebulan, fi FPX rata RM1.25 dan komisen 20%:
 
@@ -104,7 +104,7 @@ Jadi cetak sebagai pemboleh ubah. Selesaikan untuk pesanan sebulan, dengan pelan
 
 Baca sel "tidak pernah" sebagai penemuan. **Pada kos pemerolehan RM5 satu pesanan, komisen 20% pada bakul RM20.90 atau RM30 mengambil kurang daripada fi pembayaran campur pemasaran**, jadi tiada jumlah pesanan yang membuat kedai sendiri menang. Pada RM15 satu pesanan, hampir tiada apa yang menang.
 
-Inilah ayat yang dielakkan enam artikel lain: pada bakul kecil dengan pemerolehan berbayar, **platform bukan mengecas anda lebih — ia menyubsidi anda.**
+Inilah ayat yang dielakkan enam artikel lain: pada bakul kecil dengan pemerolehan berbayar, **platform bukan mengecas anda lebih, ia menyubsidi anda.**
 
 ## Tiga resit, dan harganya bergerak 52 mata
 
@@ -123,15 +123,15 @@ Itu sebaran 52 mata pada pesanan sejenis, di bandar yang sama, dalam minggu yang
 
 Dua butiran lebih bernilai daripada jumlahnya.
 
-**Semua diskaun kelihatan seperti promosi bulat.** Diskaun item Shopee ialah 10% daripada subtotalnya, baucarnya RM3.00 rata, diskaun foodpanda **tepat 15% daripada RM22.00**. Lima belas peratus juga lantai jalur 15–25% yang direkodkan dalam keputusan foodpanda pengawal selia. Itu mungkin kebetulan psikologi harga; skrin tidak menyatakan siapa membiayai mana-mana satu, dan artikel ini tidak meneka. Apa yang boleh dikatakan ialah rupa aritmetiknya jika kedai membiayai diskaunnya dan komisen 15%: pada pesanan foodpanda, **RM3.30 + RM3.30 = RM6.60 daripada RM22.00, ambilan 30%** — dan pelanggan masih membayar RM9.29 kurang daripada yang dicadangkan harga menu.
+**Semua diskaun kelihatan seperti promosi bulat.** Diskaun item Shopee ialah 10% daripada subtotalnya, baucarnya RM3.00 rata, diskaun foodpanda **tepat 15% daripada RM22.00**. Lima belas peratus juga lantai jalur 15–25% yang direkodkan dalam keputusan foodpanda pengawal selia. Itu mungkin kebetulan psikologi harga; skrin tidak menyatakan siapa membiayai mana-mana satu, dan artikel ini tidak meneka. Apa yang boleh dikatakan ialah rupa aritmetiknya jika kedai membiayai diskaunnya dan komisen 15%: pada pesanan foodpanda, **RM3.30 + RM3.30 = RM6.60 daripada RM22.00, ambilan 30%**, dan pelanggan masih membayar RM9.29 kurang daripada yang dicadangkan harga menu.
 
-**Baris fi yang tiada bukan bermakna fi yang tiada.** Skrin Grab tidak menunjukkan fi perkhidmatan. Skrin foodpanda menunjukkan fi platform dan cukai perkhidmatan sebagai baris berasingan, RM0.70 bersama, cukup kecil sehingga kebanyakan pelanggan membacanya sepintas lalu. Dua platform, satu memperincikan dan satu tidak — dan komisen, nombor terbesar daripada semua, tidak diperincikan oleh kedua-duanya.
+**Baris fi yang tiada bukan bermakna fi yang tiada.** Skrin Grab tidak menunjukkan fi perkhidmatan. Skrin foodpanda menunjukkan fi platform dan cukai perkhidmatan sebagai baris berasingan, RM0.70 bersama, cukup kecil sehingga kebanyakan pelanggan membacanya sepintas lalu. Dua platform, satu memperincikan dan satu tidak, dan komisen, nombor terbesar daripada semua, tidak diperincikan oleh kedua-duanya.
 
 Tiada satu pun daripada ini menentukan sama ada untuk kekal. Ia menentukan apa yang anda bersaing dengannya. Kedai yang membandingkan harganya sendiri dengan senarai harga platform sedang membandingkan dirinya dengan hasil lelongan yang tidak dapat dilihatnya.
 
 ## SST 8% yang tiada siapa tambah
 
-CHIP mencetak satu baris di bawah jadual kadarnya yang kebanyakan perbandingan tinggalkan: **"Transaction fees are subject to 8% SST."** Bayaran FPX RM1.00 ialah RM1.08 yang dicaj. Halaman Billplz tidak menunjukkan baris seumpamanya, jadi sama ada RM1.25 termasuk cukai masih belum selesai — dan pada bakul kecil bezanya bukan hiasan.
+CHIP mencetak satu baris di bawah jadual kadarnya yang kebanyakan perbandingan tinggalkan: **"Transaction fees are subject to 8% SST."** Bayaran FPX RM1.00 ialah RM1.08 yang dicaj. Halaman Billplz tidak menunjukkan baris seumpamanya, jadi sama ada RM1.25 termasuk cukai masih belum selesai, dan pada bakul kecil bezanya bukan hiasan.
 
 Letakkan 8% itu pada RM1.25 yang jadual ini gunakan, dan fi menjadi RM1.35. Pada komisen 20%, bakul RM20.90 bergerak dari 29 pesanan ke 30, dan bakul RM30 kekal 18. SST tidak mengubah hujah; ia mengubah jawapan cukup untuk kedai yang berada pada 29 pesanan mengira semula.
 
@@ -178,7 +178,7 @@ Enam artikel berhujah satu arah. Dibaca terhadap jadual di atas, inilah yang ber
 - **"Bayaran FPX berharga RM1.25 dan komisen berharga 15–25%."** Bertahan. Kedua-duanya diterbitkan atau direkodkan, dan tiada yang berubah.
 - **"Pada penghantaran, platform berdaya saing."** Bertahan, dan itulah penemuan yang menjadikan artikel ini perlu.
 - **"Kedai sudah selesai; khalayak itulah kerjanya."** Bertahan, dengan pembetulan: khalayak bukan sekadar kerja, ia **kos yang mendarat pada baris yang sama dengan fi**, dan sebaik ia melebihi kira-kira RM5 satu pesanan, kedai sendiri berhenti menjadi lebih murah.
-- **"Seorang manusia boleh membina dan menjalankannya."** Bertahan dari segi teknikal — husnieats melakukannya — tetapi prototaip tiga hidangan bukan kedai dengan 173 pesanan sebulan. Membina murah; mengendalikan tidak.
+- **"Seorang manusia boleh membina dan menjalankannya."** Bertahan dari segi teknikal (husnieats melakukannya) tetapi prototaip tiga hidangan bukan kedai dengan 173 pesanan sebulan. Membina murah; mengendalikan tidak.
 - **"Separuh pesanan anda dari saluran yang anda miliki ialah nombor untuk ditonton."** Bertahan, dan ia mendapat pasangan: kos pemerolehan setiap pesanan yang dimiliki. Satu tanpa yang lain ialah separuh ukuran.
 
 Itulah keseluruhan pembetulan, dinyatakan dalam satu perenggan supaya tiada siapa perlu mencarinya: kami tidak salah bahawa memiliki kedai menjadi murah, kami senyap tentang baris pemasaran, dan baris pemasaran itulah tempat kedai kecil kalah.
@@ -195,7 +195,7 @@ Tiga artifak, setiap satu boleh diperiksa:
 
 Inilah yang kami katakan secara terus, setelah menghabiskan satu siri berhujah sebaliknya: **bagi kedai di bawah kira-kira 100 pesanan sebulan, pada bakul di bawah RM40, platform ialah kedai yang lebih murah, dan meninggalkannya untuk menjimatkan komisen ialah cara kehilangan wang secara perlahan.**
 
-Itu pertaruhan, bukan ramalan. Pada hari seorang peniaga menunjukkan kad kadar yang mengatakan sebaliknya — atau sumber Malaysia memberikan angka pemerolehan itu di bawah RM3 — kami akan menerbitkan pembetulan dan memautkannya di sini.
+Itu pertaruhan, bukan ramalan. Pada hari seorang peniaga menunjukkan kad kadar yang mengatakan sebaliknya, atau sumber Malaysia memberikan angka pemerolehan itu di bawah RM3, kami akan menerbitkan pembetulan dan memautkannya di sini.
 
 Apa yang kami tidak akan lakukan ialah mencetak kos pelanggan yang belum kami lihat, atau menyuruh sesiapa meninggalkan saluran yang masih memenuhkan meja mereka.
 

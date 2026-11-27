@@ -36,11 +36,11 @@ sources:
 
 # Kurier per-km lawan penunggang sendiri: jejari patahnya
 
-Lima perkhidmatan penghantaran diperiksa untuk artikel ini, dan tiada satu pun menerbitkan tarif per kilometer yang boleh dirancang oleh kedai. GrabExpress terpapar tetapi tidak mencetak tambang, hanya dua harga tambahan; halaman harga Lalamove 404 dan tambangnya berada dalam konfigurator; Pos Laju memaparkan tarifnya di sebelah klien; J&T dan Ninja Van memulangkan 404 pada halaman yang dicuba. Jejari tempat penunggang sendiri mengalahkan kurier bukan angka yang diterbitkan — ia aritmetik yang anda jalankan pada sebut harga sendiri.
+Lima perkhidmatan penghantaran diperiksa untuk artikel ini, dan tiada satu pun menerbitkan tarif per kilometer yang boleh dirancang oleh kedai. GrabExpress terpapar tetapi tidak mencetak tambang, hanya dua harga tambahan; halaman harga Lalamove 404 dan tambangnya berada dalam konfigurator; Pos Laju memaparkan tarifnya di sebelah klien; J&T dan Ninja Van memulangkan 404 pada halaman yang dicuba. Jejari tempat penunggang sendiri mengalahkan kurier bukan angka yang diterbitkan, ia aritmetik yang anda jalankan pada sebut harga sendiri.
 
 ## Lima halaman, dua harga tambahan, tiada tarif
 
-Jadual ini merekodkan apa yang dicetak setiap perkhidmatan, dan satu lajur untuk apa ia, kerana kelima-limanya perkhidmatan penghantaran dan bukan yang lain — tiada pengawal selia, tiada majlis, tiada agensi dalam lajur yang sama.
+Jadual ini merekodkan apa yang dicetak setiap perkhidmatan, dan satu lajur untuk apa ia, kerana kelima-limanya perkhidmatan penghantaran dan bukan yang lain, tiada pengawal selia, tiada majlis, tiada agensi dalam lajur yang sama.
 
 | Perkhidmatan | Apa yang halaman terbitkan | Angka |
 | --- | --- | --- |
@@ -54,13 +54,13 @@ Dua angka GrabExpress itu harga tambahan, bukan tambang: itulah yang dicetak hal
 
 ## Tarif per-km juga tidak akan menyelesaikannya
 
-Walaupun salah satu daripada lima mencetak kad kadar, ia kadar bagi model mereka: fi asas, jalur jarak dan jadual tambahan. Kos penunggang anda sendiri berbentuk lain — gaji bulanan, motosikal atau kereta, insurans, bahan api dan jam penunggang itu menunggu tanpa pesanan.
+Walaupun salah satu daripada lima mencetak kad kadar, ia kadar bagi model mereka: fi asas, jalur jarak dan jadual tambahan. Kos penunggang anda sendiri berbentuk lain, gaji bulanan, motosikal atau kereta, insurans, bahan api dan jam penunggang itu menunggu tanpa pesanan.
 
 Jadi perbandingannya bukan per kilometer lawan per kilometer. Ia **kos setiap penghantaran** lawan **kos setiap penghantaran**, dan setiap pihak dibina daripada unit berbeza.
 
 ## Dua baris yang perlu ditulis
 
-Bagi kurier, barisnya ialah sebut harga pada jarak yang anda benar-benar hantar. Minta setiap perkhidmatan memberi sebut harga pada tiga jarak — terpendek, median dan terjauh anda — dan tulis tiga angka itu.
+Bagi kurier, barisnya ialah sebut harga pada jarak yang anda benar-benar hantar. Minta setiap perkhidmatan memberi sebut harga pada tiga jarak (terpendek, median dan terjauh anda) dan tulis tiga angka itu.
 
 Bagi penunggang sendiri, barisnya:
 

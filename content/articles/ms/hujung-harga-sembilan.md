@@ -26,7 +26,7 @@ sources:
 ---
 
 # Hujung 9 berkesan pada barang baharu
-Harga berhujung 9 ialah gerakan penetapan harga paling biasa dalam runcit Malaysia, dan yang paling kurang diuji. Bukti terbaiknya tiga eksperimen lapangan Amerika yang diterbitkan pada 2003: hujung $9 "increased demand in all three experiments", kenaikannya paling kuat pada barang yang peniaga belum pernah jual, dan penulis sendiri mencatat ia melemah apabila tanda jualan sudah menarik perhatian. Tiada saiz kesan diterbitkan. Tiada eksperimen Malaysia. Jadi bacaan yang jujur itu sempit — ia boleh menggerakkan barang baharu, dan tiada siapa tahu berapa banyak.
+Harga berhujung 9 ialah gerakan penetapan harga paling biasa dalam runcit Malaysia, dan yang paling kurang diuji. Bukti terbaiknya tiga eksperimen lapangan Amerika yang diterbitkan pada 2003: hujung $9 "increased demand in all three experiments", kenaikannya paling kuat pada barang yang peniaga belum pernah jual, dan penulis sendiri mencatat ia melemah apabila tanda jualan sudah menarik perhatian. Tiada saiz kesan diterbitkan. Tiada eksperimen Malaysia. Jadi bacaan yang jujur itu sempit, ia boleh menggerakkan barang baharu, dan tiada siapa tahu berapa banyak.
 
 ## Apa yang tiga eksperimen itu dapati
 

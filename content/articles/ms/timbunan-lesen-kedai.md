@@ -33,7 +33,7 @@ sources:
 
 # Timbunan lesen kedai, dan dua majlis dengan fi tercatat
 
-Wang untuk membuka kedai masuk ke dalam timbunan lesen dan fit-out, bukan laman web. Dua majlis menerbitkan fi terperinci yang boleh dibaca hari ini — MBSA di Shah Alam dan MBPJ di Petaling Jaya — dan kedua-duanya lebih sempit daripada kelihatan: satu mencetak fi pemprosesan dan stiker, satu lagi mencetak fi papan tanda, dan tiada satu pun mencetak lesen premis tahunan itu sendiri.
+Wang untuk membuka kedai masuk ke dalam timbunan lesen dan fit-out, bukan laman web. Dua majlis menerbitkan fi terperinci yang boleh dibaca hari ini (MBSA di Shah Alam dan MBPJ di Petaling Jaya) dan kedua-duanya lebih sempit daripada kelihatan: satu mencetak fi pemprosesan dan stiker, satu lagi mencetak fi papan tanda, dan tiada satu pun mencetak lesen premis tahunan itu sendiri.
 
 ## Dua majlis mencetak dua jenis fi
 

@@ -41,7 +41,7 @@ Neither Grab nor foodpanda prints a merchant commission on any page a business c
 
 Grab's Malaysian merchant page sells the programme and prints no rate: the word commission does not appear in the served text, and there is no rate card on the page. foodpanda's merchant page returned HTTP 403 to this client, so its rate is not readable at all.
 
-That matters because the common sentence in Malaysian guides, that GrabFood takes a certain percentage, is not a published rate. It is a merchant's contract, a vendor's estimate, or folklore, and none of those can be checked by a reader deciding whether to sign.
+That matters because the common sentence in Malaysian guides, that GrabFood takes a certain percentage, is never published. It comes from a merchant's contract, a vendor's estimate, or folklore, and none of those can be checked by a reader deciding whether to sign.
 
 ## The regulator's numbers are bands, and the names are redacted
 

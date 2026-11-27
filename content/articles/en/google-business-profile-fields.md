@@ -63,14 +63,14 @@ The location resource carries `address` and `serviceArea`, and a service-area bu
 
 Hours and the sub-resources Google documents, in the order they change a customer's decision.
 
-1. **Regular hours** — `regularHours` on the location resource. Wrong hours generate the one-star review that says "closed when it says open".
-2. **Special hours** — `specialHours`, for public holidays and the week you close for a family event. Malaysia has enough public holidays that leaving this empty guarantees at least one wrong visit.
-3. **More hours** — `moreHours`, for departments or services inside the same premises, such as a workshop counter with different hours from the retail floor.
-4. **Attributes** — managed as a sub-resource through `getAttributes` / `updateAttributes`. This is where "parking available" and "wheelchair accessible" belong, not in the category.
-5. **Photos and media** — `accounts.locations.media`, with content governed by Google's prohibited-content policy.
-6. **Posts** — `accounts.locations.localPosts`, useful for offers with an expiry rather than permanent information.
-7. **Q&A** — `accounts.locations.questions` with `answers`, which is the field most businesses leave for strangers to fill.
-8. **Review replies** — `accounts.locations.reviews`, the API surface for what customers actually read.
+1. **Regular hours**, `regularHours` on the location resource. Wrong hours generate the one-star review that says "closed when it says open".
+2. **Special hours**, `specialHours`, for public holidays and the week you close for a family event. Malaysia has enough public holidays that leaving this empty guarantees at least one wrong visit.
+3. **More hours**, `moreHours`, for departments or services inside the same premises, such as a workshop counter with different hours from the retail floor.
+4. **Attributes**, managed as a sub-resource through `getAttributes` / `updateAttributes`. This is where "parking available" and "wheelchair accessible" belong, not in the category.
+5. **Photos and media**, `accounts.locations.media`, with content governed by Google's prohibited-content policy.
+6. **Posts**, `accounts.locations.localPosts`, useful for offers with an expiry rather than permanent information.
+7. **Q&A**, `accounts.locations.questions` with `answers`, which is the field most businesses leave for strangers to fill.
+8. **Review replies**, `accounts.locations.reviews`, the API surface for what customers actually read.
 
 All of those are documented in Google's Business Profile API reference, read 23 November 2026. The API names matter even if you never write code: they are the fields the form on the website is editing.
 

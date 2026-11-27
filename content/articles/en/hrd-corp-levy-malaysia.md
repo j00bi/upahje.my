@@ -57,7 +57,7 @@ Annualised, the step from nine to ten is RM1,980 in levy alone at that average w
 
 ## Registration runs on Form 1, and review is 30 days
 
-A company at ten Malaysian employees or more fills Form 1 — the page words the threshold as "more than 10" while the levy itself starts at ten — and the page states that the application is reviewed by officers within 30 days. That review window is the only timing the page prints, so treat 30 days as a review period rather than a deadline you can plan a payroll around.
+A company at ten Malaysian employees or more fills Form 1, the page words the threshold as "more than 10" while the levy itself starts at ten, and the page states that the application is reviewed by officers within 30 days. That review window is the only timing the page prints, so treat 30 days as a review period rather than a deadline you can plan a payroll around.
 
 ## No due date is printed
 

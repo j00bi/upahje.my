@@ -81,7 +81,7 @@ The same meter cost is tiny at light use, trivial at daily use, and still small 
 | Daily | 30 | 900 | 1.67 |
 | Heavy | 200 | 6,000 | 11.11 |
 
-Each row is tasks × RM0.00185. A 30-day month is assumed. At heavy use you are spending about RM11 a month on tokens, which leaves RM89 of the RM100 unspent, and that is the arithmetic that decides the question for most people.
+Each row is tasks × RM0.00185. A 30-day month is assumed. At heavy use you are spending about RM11 a month on tokens, which leaves RM89 of the RM100 unspent. That arithmetic settles the question.
 
 ![Six horizontal markers on a log scale from RM0.10 to RM100: token bills of RM0.28, RM1.67 and RM11.11 against seats at RM24, RM82.29 and RM99.90](/figures/rm100-month-cost.svg)
 *A month of tokens costs under RM12 at every usage level, against the cheapest paid seat at RM24.*

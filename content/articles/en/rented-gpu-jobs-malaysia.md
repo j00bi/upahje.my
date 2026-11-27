@@ -32,7 +32,7 @@ sources:
 
 A rented GPU is a tool with one shape: it is excellent at work that starts, finishes, and stops. Everything in this article is sorted by that. If a job has a beginning and an end, renting a card for it is now cheap enough to be unremarkable. If a job has to be awake at three in the morning, renting is usually the wrong answer and an API is usually the right one.
 
-The rate, read from Vast.ai today: an RTX 5060 Ti with 16 GB of VRAM starts at USD 0.09 an hour with a median of USD 0.13, which is about 55 sen an hour at the rate we publish at. An H100 SXM is USD 1.73, about RM7.12. Every cost in this article is that rate multiplied by your time — a formula, not a quote, because your dataset is not ours.
+The rate, read from Vast.ai today: an RTX 5060 Ti with 16 GB of VRAM starts at USD 0.09 an hour with a median of USD 0.13, which is about 55 sen an hour at the rate we publish at. An H100 SXM is USD 1.73, about RM7.12. Every cost in this article is that rate multiplied by your time, a formula, not a quote, because your dataset is not ours.
 
 ## The memory ladder, which decides what you can attempt
 
@@ -67,7 +67,7 @@ Each row is a job we would rent a card for. Time is a realistic band, not a benc
 | 11 | Render a Blender or CAD animation across many frames | 2–12 hours | USD 0.26–1.56 |
 | 12 | Batch-process images: resize, background removal, watermark | 20–60 min | USD 0.04–0.13 |
 
-Read the right-hand column twice. Twelve jobs, and the most expensive one in the table is under two ringgit. The reason to think about this at all is not the money — it is that a card you forget to switch off bills 24 hours a day, and a card left running for a month costs USD 94, which is more than a year of the API you were avoiding.
+Read the right-hand column twice. Twelve jobs, and the most expensive one in the table is under two ringgit. The reason to think about this at all is not the money, it is that a card you forget to switch off bills 24 hours a day, and a card left running for a month costs USD 94, which is more than a year of the API you were avoiding.
 
 ### 1. Train something small
 
@@ -77,7 +77,7 @@ Worth renting when: the dataset is yours, the question is narrow, and the answer
 
 ### 2. Fine-tune a small language model
 
-Four-bit quantisation is what made this ordinary: a 7B model needs about 5 GB at four bits, so a 16 GB card can fine-tune a small model with room left for the optimiser state. The output is an adapter measured in tens of megabytes — ours was 73 MB.
+Four-bit quantisation is what made this ordinary: a 7B model needs about 5 GB at four bits, so a 16 GB card can fine-tune a small model with room left for the optimiser state. The output is an adapter measured in tens of megabytes, ours was 73 MB.
 
 What it is for: a model that writes in your voice, classifies your categories, or answers from your documents. What it is not for: teaching a model facts it never saw. Fine-tuning changes how a model talks and what it prefers; it does not reliably install a price list.
 
@@ -89,7 +89,7 @@ Point a card at a folder of PDFs, contracts, product sheets or past quotes and p
 
 Whisper-class models transcribe reliably and handle Malay better than the free tiers of most products, and the job is embarrassingly parallel: split the audio, run the pieces, join the transcripts. A year of recordings is an afternoon.
 
-This is the job we would recommend first to almost any SME, because the input already exists — call recordings, voice notes, meeting audio — and the output is searchable text you can act on.
+This is the job we would recommend first to almost any SME, because the input already exists (call recordings, voice notes, meeting audio) and the output is searchable text you can act on.
 
 ### 5. Invoice and document extraction
 
@@ -97,11 +97,11 @@ Malaysian businesses now generate structured e-Invoice data, but the incoming si
 
 ### 6 and 12. Images
 
-Product photography at catalogue scale, and bulk processing — resizing, background removal, watermarking. Both are batch, both fit on a 16 GB card, both are cheaper rented by the hour than subscribed by the month if the work is periodic rather than constant.
+Product photography at catalogue scale, and bulk processing, resizing, background removal, watermarking. Both are batch, both fit on a 16 GB card, both are cheaper rented by the hour than subscribed by the month if the work is periodic rather than constant.
 
 ### 7. Video
 
-Captioning and subtitling, including Malay, is the highest-value video job because it is the one that makes video searchable and accessible. It is also slow — hours, not minutes — which makes the hourly rate matter more here than anywhere else in the table.
+Captioning and subtitling, including Malay, is the highest-value video job because it is the one that makes video searchable and accessible. It is also slow (hours, not minutes) which makes the hourly rate matter more here than anywhere else in the table.
 
 ### 8 to 10. The unglamorous ones that pay
 

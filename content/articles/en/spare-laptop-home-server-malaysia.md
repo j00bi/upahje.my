@@ -44,7 +44,7 @@ A plug-in power meter costs about RM30 at any hardware shop, and it converts the
 
 ## The arithmetic, with assumptions stated
 
-Take 20 watts at idle — a plausible figure for a laptop serving one lightweight service — and a domestic rate of 45 sen per kWh. Both are assumptions, and you should replace both with your own.
+Take 20 watts at idle, a plausible figure for a laptop serving one lightweight service, and a domestic rate of 45 sen per kWh. Both are assumptions, and you should replace both with your own.
 
 - 20 W for 24 hours is 480 Wh, or 0.48 kWh a day.
 - At 45 sen, that is about 21.6 sen a day.

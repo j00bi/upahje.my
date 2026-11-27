@@ -44,7 +44,7 @@ Meter kuasa plug-in berharga kira-kira RM30 di mana-mana kedai perkakasan, dan i
 
 ## Aritmetik, dengan andaian dinyatakan
 
-Ambil 20 watt semasa melahu — angka munasabah bagi laptop yang menyajikan satu perkhidmatan ringan — dan kadar domestik 45 sen setiap kWh. Kedua-duanya andaian, dan anda patut menggantikan keduanya dengan angka sendiri.
+Ambil 20 watt semasa melahu, angka munasabah bagi laptop yang menyajikan satu perkhidmatan ringan, dan kadar domestik 45 sen setiap kWh. Kedua-duanya andaian, dan anda patut menggantikan keduanya dengan angka sendiri.
 
 - 20 W selama 24 jam ialah 480 Wh, atau 0.48 kWh sehari.
 - Pada 45 sen, itu kira-kira 21.6 sen sehari.

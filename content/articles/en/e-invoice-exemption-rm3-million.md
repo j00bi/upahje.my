@@ -44,10 +44,10 @@ We are not going to guess at any of the four. Where the tax authority is silent,
 
 Two shops make the point faster than a definition:
 
-- **Five staff, RM4 million turnover** — in scope. The payroll size is irrelevant; the revenue is over the line.
-- **Twenty staff, RM2.5 million turnover** — exempt. Twice the people, half the revenue, no obligation.
+- **Five staff, RM4 million turnover**, in scope. The payroll size is irrelevant; the revenue is over the line.
+- **Twenty staff, RM2.5 million turnover**, exempt. Twice the people, half the revenue, no obligation.
 
-That is why the exemption is routinely misapplied. Headcount is what an owner can see from their own payroll, so it is what they reason from. It also tells you about a different set of obligations entirely: the [EPF employer rate](https://upahje.my/en/articles/epf-employer-rate-malaysia), the [SOCSO employer rate](https://upahje.my/en/articles/socso-employer-rate-malaysia) and the [HRD Corp levy](https://upahje.my/en/articles/hrd-corp-levy-malaysia) all attach from hiring. e-Invoice attaches from turnover. Two calendars, two triggers, and conflating them produces wrong decisions in both directions — a small shop buying software it does not need, or a large one that never registered.
+That is why the exemption is routinely misapplied. Headcount is what an owner can see from their own payroll, so it is what they reason from. It also tells you about a different set of obligations entirely: the [EPF employer rate](https://upahje.my/en/articles/epf-employer-rate-malaysia), the [SOCSO employer rate](https://upahje.my/en/articles/socso-employer-rate-malaysia) and the [HRD Corp levy](https://upahje.my/en/articles/hrd-corp-levy-malaysia) all attach from hiring. e-Invoice attaches from turnover. Two calendars, two triggers, and conflating them produces wrong decisions in both directions, a small shop buying software it does not need, or a large one that never registered.
 
 ## The phase bands, and where the line now sits
 
@@ -66,7 +66,7 @@ Read the last two rows together and the practical position appears: a business a
 
 **Our opinion, stated once:** the most valuable thing a sole operator can do this week is run the RM3 million test on their own books and write down which side of the line they are on, with the date they checked. Not on a colleague's recollection, not on an article published two years ago.
 
-Below RM3 million, that note is your defence, and it should be re-tested as turnover approaches the threshold. At or above RM3 million, the decision is no longer about the threshold — it is about scope, and [what e-Invoice automation actually covers](https://upahje.my/en/articles/what-einvoice-automation-covers) is the next thing to read.
+Below RM3 million, that note is your defence, and it should be re-tested as turnover approaches the threshold. At or above RM3 million, the decision is no longer about the threshold, it is about scope, and [what e-Invoice automation actually covers](https://upahje.my/en/articles/what-einvoice-automation-covers) is the next thing to read.
 
 ---
 

@@ -63,14 +63,14 @@ Sumber location membawa `address` dan `serviceArea`, dan perniagaan kawasan perk
 
 Waktu operasi dan sub-sumber yang didokumenkan Google, mengikut urutan ia mengubah keputusan pelanggan.
 
-1. **Waktu biasa** — `regularHours` pada sumber location. Waktu yang salah menghasilkan ulasan bintang satu yang berbunyi "tutup sedangkan kata buka".
-2. **Waktu khas** — `specialHours`, untuk cuti umum dan minggu anda tutup kerana urusan keluarga. Malaysia ada cuti umum yang cukup banyak, jadi membiarkan medan ini kosong menjamin sekurang-kurangnya satu kunjungan yang tersalah.
-3. **Waktu tambahan** — `moreHours`, untuk jabatan atau perkhidmatan dalam premis yang sama, seperti kaunter workshop yang waktunya berbeza daripada ruang jualan.
-4. **Atribut** — diurus sebagai sub-sumber melalui `getAttributes` / `updateAttributes`. Di sinilah "ada parkir" dan "boleh masuk kerusi roda" diletakkan, bukan dalam kategori.
-5. **Foto dan media** — `accounts.locations.media`, dengan kandungan tertakluk kepada polisi kandungan larangan Google.
-6. **Post** — `accounts.locations.localPosts`, berguna untuk tawaran yang ada tarikh luput dan bukan maklumat kekal.
-7. **Soal jawab** — `accounts.locations.questions` dengan `answers`, iaitu medan yang paling banyak dibiarkan diisi orang lain.
-8. **Balasan ulasan** — `accounts.locations.reviews`, permukaan API bagi apa yang pelanggan sebenarnya baca.
+1. **Waktu biasa**, `regularHours` pada sumber location. Waktu yang salah menghasilkan ulasan bintang satu yang berbunyi "tutup sedangkan kata buka".
+2. **Waktu khas**, `specialHours`, untuk cuti umum dan minggu anda tutup kerana urusan keluarga. Malaysia ada cuti umum yang cukup banyak, jadi membiarkan medan ini kosong menjamin sekurang-kurangnya satu kunjungan yang tersalah.
+3. **Waktu tambahan**, `moreHours`, untuk jabatan atau perkhidmatan dalam premis yang sama, seperti kaunter workshop yang waktunya berbeza daripada ruang jualan.
+4. **Atribut**, diurus sebagai sub-sumber melalui `getAttributes` / `updateAttributes`. Di sinilah "ada parkir" dan "boleh masuk kerusi roda" diletakkan, bukan dalam kategori.
+5. **Foto dan media**, `accounts.locations.media`, dengan kandungan tertakluk kepada polisi kandungan larangan Google.
+6. **Post**, `accounts.locations.localPosts`, berguna untuk tawaran yang ada tarikh luput dan bukan maklumat kekal.
+7. **Soal jawab**, `accounts.locations.questions` dengan `answers`, iaitu medan yang paling banyak dibiarkan diisi orang lain.
+8. **Balasan ulasan**, `accounts.locations.reviews`, permukaan API bagi apa yang pelanggan sebenarnya baca.
 
 Semua itu didokumenkan dalam rujukan API Business Profile Google, dibaca 23 November 2026. Nama API itu penting walaupun anda tidak menulis kod: itulah medan yang borang di laman web sedang sunting.
 
