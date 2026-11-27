@@ -6,8 +6,8 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Concept index
 
-- [Compliance](https://upahje.my/en/topics/compliance): What the rules require, what they do not, and what is unpublished. (5 articles)
-- [Pematuhan](https://upahje.my/ms/topics/compliance): Apa yang dikehendaki peraturan, apa yang tidak, dan apa yang tidak diterbitkan. (5 articles)
+- [Compliance](https://upahje.my/en/topics/compliance): What the rules require, what they do not, and what is unpublished. (6 articles)
+- [Pematuhan](https://upahje.my/ms/topics/compliance): Apa yang dikehendaki peraturan, apa yang tidak, dan apa yang tidak diterbitkan. (6 articles)
 - [Buying](https://upahje.my/en/topics/buying): What work costs, how to brief it, and how to compare quotes. (18 articles)
 - [Pembelian](https://upahje.my/ms/topics/buying): Kos kerja, cara menulis brief, dan cara membandingkan sebut harga. (18 articles)
 - [AI and automation](https://upahje.my/en/topics/ai-automation): Agents, models and the loop that runs your request. (8 articles)
@@ -21,6 +21,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 - [e-Invoice exemption is RM3 million, not RM1 million](https://upahje.my/en/articles/e-invoice-exemption-rm3-million): LHDN's 30 August 2026 update puts the e-Invoice exemption at RM3 million of annual income or sales. The RM1 million figure still in circulation is superseded.
 - [SST counts the last eleven months, not the tax year](https://upahje.my/en/articles/sst-threshold-eleven-months): RMCD measures the registration threshold on a rolling window: this month plus the eleven before it. A shop under the line in January can be over it in July.
+- [The SST threshold is per category, not one number](https://upahje.my/en/articles/sst-threshold-per-category): RM500,000 covers IT, consultancy, repair and advertising. Food is RM1,500,000, finance RM1,000,000. The figure sits in a column, not a headline.
 - [Test one order on your phone before you send the link](https://upahje.my/en/articles/test-one-order-before-launch): RM35 item plus RM8 delivery is RM43. Place that order as a signed-out buyer, then find it where you actually work. Six checks decide if the shop is ready.
 - [The commission arithmetic behind owning your shop](https://upahje.my/en/articles/commission-arithmetic): Break-even is a number of orders a month. With the published FPX fee and the regulator's recorded commission bands, here is where owning beats joining.
 - [The storefront is a checkout, not an audience](https://upahje.my/en/articles/discovery-is-the-job): A platform sold you customers, not software. Owning the shop makes discovery your job, and it is the marketing term the break-even equation was missing.
@@ -73,6 +74,7 @@ This site publishes short, citable articles. Every claim links to a source; ever
 
 ## Bahasa Melayu articles
 
+- [Ambang SST mengikut kategori, bukan satu angka](https://upahje.my/ms/articles/ambang-sst-mengikut-kategori): RM500,000 meliputi IT, perundingan, pembaikan dan pengiklanan. Makanan RM1,500,000, kewangan RM1,000,000. Angkanya dalam lajur, bukan tajuk berita.
 - [SST dikira sebelas bulan lalu, bukan tahun cukai](https://upahje.my/ms/articles/ambang-sst-sebelas-bulan): RMCD mengukur ambang pada tetingkap bergulir: bulan ini campur sebelas sebelumnya. Kedai yang di bawah garis pada Januari boleh melepasinya pada Julai.
 - [Pelepasan e-Invois ialah RM3 juta, bukan RM1 juta](https://upahje.my/ms/articles/pelepasan-e-invois-rm3-juta): Kemas kini LHDN 30 Ogos 2026 meletakkan pelepasan e-Invois pada RM3 juta pendapatan tahunan. Angka RM1 juta yang masih tersebar sudah tidak terpakai.
 - [Uji satu pesanan di telefon sebelum anda kongsi pautan](https://upahje.my/ms/articles/uji-satu-pesanan-sebelum-lancar): Barang RM35 campur penghantaran RM8 ialah RM43. Buat pesanan itu sebagai pembeli tanpa log masuk, kemudian cari pesanan sama di tempat anda benar-benar bekerja.
